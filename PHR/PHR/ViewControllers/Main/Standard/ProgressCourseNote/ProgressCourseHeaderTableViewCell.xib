@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Aileron-Regular.otf">
+            <string>Aileron-Regular</string>
+            <string>Aileron-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="progressHeaderCell" id="KGk-i7-Jjw" customClass="ProgressCourseHeaderTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="39.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M6e-o7-oCz">
+                        <rect key="frame" x="8" y="10" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="SiK-FB-IJt"/>
+                            <constraint firstAttribute="width" constant="20" id="rB3-0r-Xs9"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WfQ-Zm-ZkE">
+                        <rect key="frame" x="38" y="9" width="120" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="PC3-xc-w6X"/>
+                            <constraint firstAttribute="height" constant="20" id="ufb-mI-o9T"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Aileron-Regular" family="Aileron" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qvC-TV-vb7">
+                        <rect key="frame" x="280" y="5" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="gqj-G0-MgM"/>
+                            <constraint firstAttribute="width" constant="30" id="xRP-PP-xDa"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8D-57-dTN">
+                        <rect key="frame" x="244" y="12" width="33" height="16"/>
+                        <fontDescription key="fontDescription" name="Aileron-Regular" family="Aileron" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="qvC-TV-vb7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="2TR-Av-eWg"/>
+                    <constraint firstItem="M6e-o7-oCz" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="3j2-Z7-eTg"/>
+                    <constraint firstItem="WfQ-Zm-ZkE" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="5LZ-xY-m9R"/>
+                    <constraint firstItem="qvC-TV-vb7" firstAttribute="centerY" secondItem="B8D-57-dTN" secondAttribute="centerY" id="6v5-2B-CNW"/>
+                    <constraint firstItem="M6e-o7-oCz" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="BsD-6t-rgG"/>
+                    <constraint firstItem="M6e-o7-oCz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="P46-vp-5Pd"/>
+                    <constraint firstItem="M6e-o7-oCz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="RX9-zl-6xh"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="qvC-TV-vb7" secondAttribute="trailing" constant="2" id="UVj-as-hwx"/>
+                    <constraint firstItem="WfQ-Zm-ZkE" firstAttribute="leading" secondItem="M6e-o7-oCz" secondAttribute="trailing" constant="10" id="aaG-NH-zCT"/>
+                    <constraint firstItem="qvC-TV-vb7" firstAttribute="leading" secondItem="B8D-57-dTN" secondAttribute="trailing" constant="3" id="biF-vU-BiH"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="BsD-6t-rgG"/>
+                        <exclude reference="P46-vp-5Pd"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="imageArrowDown" destination="qvC-TV-vb7" id="8QB-ru-KnS"/>
+                <outlet property="imageType" destination="M6e-o7-oCz" id="9pm-aM-6TQ"/>
+                <outlet property="labelDateTime" destination="B8D-57-dTN" id="pcV-Th-0BQ"/>
+                <outlet property="labelType" destination="WfQ-Zm-ZkE" id="TOq-97-et6"/>
+            </connections>
+            <point key="canvasLocation" x="281" y="352"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,755 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Plan Docoment for Home Care</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/pikaday.js"></script>
+	<script type="text/javascript" src="js/datepicker.js"></script>
+	<!-- <script type="text/javascript" src="js/jquery-1.9.1.js"></script> -->
+	<!-- <script type="text/javascript" src="js/handlebars-1.0.rc.2.js"></script>  -->
+	
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/handlebars.min.js"></script>	
+	<script type="text/javascript" src="js/common.js"></script>
+	
+    <style>
+    body {
+        font-size: 15px;
+    }
+    
+    hr {
+        border-width: 0;
+        height: 1px;
+        background-color: #ccc;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    
+    .wrapper {
+        width: 820px;
+        margin-top: 0;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 0;
+    }
+    
+    .page-title {
+        font-size: 40px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .text-center {
+        text-align: center;
+    }
+    
+    .text-right {
+        text-align: right;
+    }
+    
+    .uppercase {
+        text-transform: uppercase;
+    }
+    
+    .table {
+        border-spacing: 0;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    .table .td-title {
+        width: 200px;
+        padding-right: 20px;
+    }
+    
+    .table .td-content {
+        width: 600px;
+    }
+    
+    .table tr th {
+        text-align: left;
+        vertical-align: top;
+    }
+    
+    .table tr td {
+        vertical-align: top;
+    }
+    
+    .table tr.row > td,
+    .table tr.row > th {
+        padding-bottom: 20px;
+    }
+    
+    .label {
+        margin-top: 3px;
+        margin-bottom: 7px;
+    }
+    
+    .input {
+        border-width: 1px;
+        border-style: solid;
+        border-color: #ccc;
+        padding-top: 7px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-bottom: 7px;
+    }
+    
+    .input:focus {
+        border-color: #666;
+    }
+    
+    .input:disabled {
+        background-color: #f5f5f5;
+        color: #666;
+    }
+    
+    .table .td-content .input-block {
+        width: 574px;
+    }
+    select.input {
+        padding-left: 11px;
+        padding-right: 11px;
+    }
+    
+    .table .td-content .select-block {
+        width: 100%;
+    }
+    
+    select.input option {
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+    
+    .box {
+        background-color: #f5f5f5;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-width: 1px;
+        border-style: dashed;
+        border-color: #ccc;
+    }
+    
+    .button {
+        font-size: 18px;
+        background-color: #2a75a9;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
+        color: #fff;
+        border-width: 0;
+        cursor: pointer;
+    }
+    
+    .note {
+        color: #666;
+    }
+    .pika-single {
+        z-index: 9999;
+        display: block;
+        position: relative;
+        color: #333;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-bottom-color: #bbb;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    /*
+    clear child float (pika-lendar), using the famous micro clearfix hack
+    http://nicolasgallagher.com/micro-clearfix-hack/
+    */
+    .pika-single:before,
+    .pika-single:after {
+        content: " ";
+        display: table;
+    }
+    .pika-single:after { clear: both }
+    .pika-single { *zoom: 1 }
+
+    .pika-single.is-hidden {
+        display: none;
+    }
+
+    .pika-single.is-bound {
+        position: absolute;
+        box-shadow: 0 5px 15px -5px rgba(0,0,0,.5);
+    }
+
+    .pika-lendar {
+        float: left;
+        width: 240px;
+        margin: 8px;
+    }
+
+    .pika-title {
+        position: relative;
+        text-align: center;
+    }
+
+    .pika-label {
+        display: inline-block;
+        *display: inline;
+        position: relative;
+        z-index: 9999;
+        overflow: hidden;
+        margin: 0;
+        padding: 5px 3px;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: bold;
+        background-color: #fff;
+    }
+    .pika-title select {
+        cursor: pointer;
+        position: absolute;
+        z-index: 9998;
+        margin: 0;
+        left: 0;
+        top: 5px;
+        filter: alpha(opacity=0);
+        opacity: 0;
+    }
+
+    .pika-prev,
+    .pika-next {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        outline: none;
+        border: 0;
+        padding: 0;
+        width: 20px;
+        height: 30px;
+        /* hide text using text-indent trick, using width value (it Is enough) */
+        text-indent: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        background-color: transparent;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 75% 75%;
+        opacity: .5;
+        *position: absolute;
+        *top: 0;
+    }
+
+    .pika-prev:hover,
+    .pika-next:hover {
+        opacity: 1;
+    }
+
+    .pika-prev,
+    .is-rtl .pika-next {
+        float: left;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAUklEQVR42u3VMQoAIBADQf8Pgj+OD9hG2CtONJB2ymQkKe0HbwAP0xucDiQWARITIDEBEnMgMQ8S8+AqBIl6kKgHiXqQqAeJepBo/z38J/U0uAHlaBkBl9I4GwAAAABJRU5ErkJggg==');
+        *left: 0;
+    }
+
+    .pika-next,
+    .is-rtl .pika-prev {
+        float: right;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAU0lEQVR42u3VOwoAMAgE0dwfAnNjU26bYkBCFGwfiL9VVWoO+BJ4Gf3gtsEKKoFBNTCoCAYVwaAiGNQGMUHMkjGbgjk2mIONuXo0nC8XnCf1JXgArVIZAQh5TKYAAAAASUVORK5CYII=');
+        *right: 0;
+    }
+
+    .pika-prev.is-disabled,
+    .pika-next.is-disabled {
+        cursor: default;
+        opacity: .2;
+    }
+
+    .pika-select {
+        display: inline-block;
+        *display: inline;
+    }
+
+    .pika-table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 0;
+    }
+
+    .pika-table th,
+    .pika-table td {
+        width: 14.285714285714286%;
+        padding: 0;
+    }
+
+    .pika-table th {
+        color: #999;
+        font-size: 12px;
+        line-height: 25px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .pika-button {
+        cursor: pointer;
+        display: block;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        outline: none;
+        border: 0;
+        margin: 0;
+        width: 100%;
+        padding: 5px;
+        color: #666;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: right;
+        background: #f5f5f5;
+    }
+
+    .pika-week {
+        font-size: 11px;
+        color: #999;
+    }
+
+    .is-today .pika-button {
+        color: #33aaff;
+        font-weight: bold;
+    }
+
+    .is-selected .pika-button {
+        color: #fff;
+        font-weight: bold;
+        background: #33aaff;
+        box-shadow: inset 0 1px 3px #178fe5;
+        border-radius: 3px;
+    }
+
+    .is-inrange .pika-button {
+        background: #D5E9F7;
+    }
+
+    .is-startrange .pika-button {
+        color: #fff;
+        background: #6CB31D;
+        box-shadow: none;
+        border-radius: 3px;
+    }
+
+    .is-endrange .pika-button {
+        color: #fff;
+        background: #33aaff;
+        box-shadow: none;
+        border-radius: 3px;
+    }
+
+    .is-disabled .pika-button {
+        pointer-events: none;
+        cursor: default;
+        color: #999;
+        opacity: .3;
+    }
+
+    .pika-button:hover {
+        color: #fff;
+        background: #ff8000;
+        box-shadow: none;
+        border-radius: 3px;
+    }
+
+    /* styling for abbr */
+    .pika-table abbr {
+        border-bottom: none;
+        cursor: help;
+    }
+	#abc{
+		display:none;
+	}
+    </style>
+</head>
+
+<body>
+<input type="button" value="Test" onclick="bindTemplateDataTest1();"></input>
+<script>
+
+function getFormData(){
+	return JSON.stringify($('form').serializeObject());
+}
+</script>
+<form action="" method="post">
+		<div id="data-template">
+		</div>
+</form>
+	<div id="abc">
+<script id="some-template" type="text/x-handlebars-template">
+    <div class="wrapper">
+        <h1 class="page-title text-center">在宅医療計画書</h1>
+        <p class="text-center">
+            今後の訪問診療については以下の通りに計画的に実施させていただきます。
+            <br> なお、ご質問、ご相談等ございましたらご遠慮なくお尋ねください。
+        </p>
+        <p>&nbsp;</p>
+        <hr>
+        <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+            <tr class="row">
+                <th class="td-title">
+                    <div class="label">&nbsp;</div>
+                </th>
+                <td class="td-content">
+                    <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td>
+                          <div class="label">作成日</div>
+                          <input id="make-date" name="make-date" type="text" value="{{make-date}}" class="input date-picker" style="width: 266px" />
+                        </td>
+                        <td style="width: 14px">&nbsp;</td>
+                        <td>
+                          <div class="label">有効期間</div>
+                          <input id="valid-date" name="valid-date" type="text" value="{{valid-date}}" class="input date-picker" style="width: 266px" />
+                        </td>
+                      </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+            <tr class="row">
+                <th class="td-title">
+                    <div class="label">患者氏名</div>
+                </th>
+                <td class="td-content">
+                    <input type="text" name="PatientName" value="{{PatientName}}" class="input input-block" disabled="disabled" style="width: 534px;display: inline-block;" />
+                    <div style="width: 30px;text-align: right;display: inline-block;">様</div>
+                </td>
+            </tr>
+            <tr class="row">
+                <th class="td-title">
+                    <div class="label">ID</div>
+                </th>
+                <td class="td-content">
+                    <input type="text" name="PatientId" value="{{PatientId}}" class="input input-block" disabled="disabled" />
+                </td>
+            </tr>
+            <tr class="row">
+                <th class="td-title">
+                    <div class="label">主たる病名</div>
+                </th>
+                <td class="td-content">
+                    <input type="text" name="SangName" value="{{SangName}}" class="input input-block" disabled="disabled" />
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+            <tr class="row">
+                <th class="td-title">
+                    <div class="label">訪問診療予定日</div>
+                </th>
+                <td class="td-content">
+                    <input type="text" name="VisitingClinic" value="{{VisitingClinic}}" class="input input-block" />
+                </td>
+            </tr>
+            <tr class="row">
+                <th class="td-title">
+                    <div class="label">服薬に係る留意事項</div>
+                </th>
+                <td class="td-content">
+                    <input type="text" name="ConsiderationsMedication" value="{{ConsiderationsMedication}}" class="input input-block" />
+                </td>
+            </tr>
+            <tr class="row">
+                <th class="td-title">
+                    <div class="label">寝たきり度</div>
+                </th>
+                <td class="td-content">
+                    <select name="optionKind1" id="optionKind1" class="input select-block">
+					{{#select optionKind1}}	                                    
+                        <option value="(J) 一部自立 何らかの障害を有するが、日常生活はほぼ自立しており地力で外出する。">(J) 一部自立 何らかの障害を有するが、日常生活はほぼ自立しており地力で外出する。</option>
+                        <option value="(A) 準寝たきり 屋内での生活は概ね自立しているが、介助なしには外出しない。">(A) 準寝たきり 屋内での生活は概ね自立しているが、介助なしには外出しない。</option>
+                        <option value="(B) 寝たきり1 屋内での生活は何らかの介護を要し、日中もベッドの上の生活が主体であるが座位を保つ。">(B) 寝たきり1 屋内での生活は何らかの介護を要し、日中もベッドの上の生活が主体であるが座位を保つ。</option>
+                        <option value="(C) 寝たきり2 1日中ベッドの上で過ごし、排泄、食事、着替において介助を要する。">(C) 寝たきり2 1日中ベッドの上で過ごし、排泄、食事、着替において介助を要する。</option>
+					{{/select}}
+                    </select>
+                </td>
+            </tr>
+            <tr class="row">
+                <th class="td-title">
+                    <div class="label">日常生活活動(ADL)の状況</div>
+                </th>
+                <td class="td-content">
+                    <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td>
+                          移動
+                        </td>
+                        <td>
+                          <select class="input select-block">
+                            <option>---</option>
+                            <option>自立</option>
+                            <option>一部介助</option>
+                            <option>全面介助</option>
+                          </select>
+                        </td>
+                        <td style="width: 20px;">&nbsp;</td>
+                        <td>
+                          排泄
+                        </td>
+                        <td>
+                          <select class="input select-block">
+                            <option>---</option>
+                            <option>自立</option>
+                            <option>一部介助</option>
+                            <option>全面介助</option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="5">&nbsp;</td>
+                      </tr> 
+                      <tr>
+                        <td>
+                          着替え
+                        </td>
+                        <td>
+                          <select class="input select-block">
+                            <option>---</option>
+                            <option>自立</option>
+                            <option>一部介助</option>
+                            <option>全面介助</option>
+                          </select>
+                        </td>
+                        <td style="width: 20px;">&nbsp;</td>
+                        <td>
+                          食事
+                        </td>
+                        <td>
+                          <select class="input select-block">
+                            <option>---</option>
+                            <option>自立</option>
+                            <option>一部介助</option>
+                            <option>全面介助</option>
+                          </select>
+                        </td>
+                      </tr> 
+                      <tr>
+                        <td colspan="5">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          入浴
+                        </td>
+                        <td>
+                          <select class="input select-block">
+                            <option>---</option>
+                            <option>自立</option>
+                            <option>一部介助</option>
+                            <option>全面介助</option>
+                          </select>
+                        </td>
+                        <td style="width: 20px;">&nbsp;</td>
+                        <td>
+                          整容
+                        </td>
+                        <td>
+                          <select class="input select-block">
+                            <option>---</option>
+                            <option>自立</option>
+                            <option>一部介助</option>
+                            <option>全面介助</option>
+                          </select>
+                        </td>
+                      </tr>  
+                    </table>
+                </td>
+            </tr>
+            <tr class="row">
+                <th class="td-title">
+                    <div class="label">要介護認定の状況</div>
+                </th>
+                <td class="td-content">
+                    <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td>
+                                <div class="label"><input type="radio" name="radioxx" value="自立" {{{setChecked '自立' radioxx}}} />自立</div>
+                            </td>
+                            <td style="width: 30px;">&nbsp;<td>
+                            <td>
+                                <div class="label"><input type="radio" name="radioxx" value="要支援" {{{setChecked '要支援' radioxx}}}/>要支援</div>
+                                <select class="input select-block">
+                                    <option>---</option>
+                                    <option>要支援1</option>
+                                    <option>要支援2</option>
+                                </select>
+                            </td>
+                            <td style="width: 30px;">&nbsp;<td>
+                            <td>
+                                <div class="label"><input type="radio" name="radioxx" value="経過的要介護" {{{setChecked '経過的要介護' radioxx}}} />経過的要介護</div>
+                                <select class="input select-block">
+                                    <option>---</option>
+                                    <option>要介護1</option>
+                                    <option>要介護2</option>
+                                    <option>要介護3</option>
+                                    <option>要介護4</option>
+                                    <option>要介護5</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="row">
+                <th class="td-title">
+                    <div class="label">訪問診療計画</div>
+                </th>
+                <td class="td-content">
+                    <input type="text" value="" class="input input-block" />
+                </td>
+            </tr>
+            <tr>
+                <th class="td-title">
+                    <div class="label">最近の寝たきり度、ADL状況、認知症度の変化</div>
+                </th>
+                <td class="td-content">
+                    <input type="text" value="" class="input input-block" />
+                </td>
+            </tr>
+            <tr class="row">
+                <th class="td-title">
+                    <div class="label">必要と考える保健福祉サービスの内容</div>
+                </th>
+                <td class="td-content">
+                    <div class="label">以下の項目から選択</div>
+                    <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td>
+                                <div class="label">
+                                    <input type="checkbox" name="checkbox-x1" checked="checked" value="ABC" /> 訪問看護</div>
+                            </td>
+                            <td>
+                                <div class="label">
+                                    <input type="checkbox" name="checkbox-x2" /> 訪問入浴介護</div>
+                            </td>
+                            <td>
+                                <div class="label">
+                                    <input type="checkbox" name="checkbox-x3" /> 通所リハビリ</div>
+                            </td>
+                            <td>
+                                <div class="label">
+                                    <input type="checkbox" name="checkbox-x4" /> 短期入所</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="label">
+                                    <input type="checkbox" name="checkbox-x5" /> 訪問介護</div>
+                            </td>
+                            <td>
+                                <div class="label">
+                                    <input type="checkbox" name="checkbox-x6" /> 福祉用具貸与</div>
+                            </td>
+                            <td>
+                                <div class="label">
+                                    <input type="checkbox" name="checkbox-x7" /> 通所介護</div>
+                            </td>
+                            <td>
+                                <div class="label">
+                                    <input type="checkbox" name="checkbox-x8" /> 訪問栄養指導</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="label">
+                                    <input type="checkbox" name="checkbox-x9" /> 訪問薬剤指導</div>
+                            </td>
+                            <td>
+                                <div class="label">
+                                    <input type="checkbox" name="checkbox-x10" /> 訪問診療</div>
+                            </td>
+                            <td>
+                                <div class="label">
+                                    <input type="checkbox" name="checkbox-x11" /> その他（自由記載）</div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="row">
+                <th class="td-title">
+                    <div class="label">看護必要度</div>
+                </th>
+                <td class="td-content">
+                    <div class="label">以下の項目から選択</div>
+                    <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td>
+                                <label class="label">
+                                    <input type="checkbox" name="checkbox-y1" /> 自立</label>
+                            </td>
+                            <td>
+                                <label class="label">
+                                    <input type="checkbox" name="checkbox-y2" /> 見守り</label>
+                            </td>
+                            <td>
+                                <label class="label">
+                                    <input type="checkbox" name="checkbox-y3" /> 介助（食事、排泄、起居、入浴、歩行</label>
+                            </td>
+                            <td>
+                                <label class="label">
+                                    <input type="checkbox" name="checkbox-y4" /> その他（自由記載）</label>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr class="row">
+                <th class="td-title">
+                    <div class="label">緊急時の連絡先
+                        <br>不在時の対応法</div>
+                </th>
+                <td class="td-content">
+                    <input type="text" value="" class="input input-block" />
+                </td>
+            </tr>
+            <tr class="row">
+                <th class="td-title">
+                    <div class="label">その他</div>
+                </th>
+                <td class="td-content">
+                    <input type="text" value="" class="input input-block" />
+                </td>
+            </tr>
+            <tr class="row">
+                <th class="td-title">
+                    <div class="label">同意欄</div>
+                </th>
+                <td class="td-content">                      
+                    <div class="box">
+                        <p>上記、訪問診療の計画の内容について説明を受け、居宅での療養を行っていただくことに同意いたします。</p>
+                        <p>
+                            患者氏名＿＿＿＿＿＿＿＿　　家族氏名（代表者）＿＿＿＿＿＿＿＿
+                            <br>
+                            <span class="note">※患者ご本人がサインできない場合は、家族氏名欄に記載してください。</span>
+                        </p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+            <tr>
+                <th class="td-title">&nbsp;</th>
+                <td class="td-content">
+                    <button type="submit" class="button">提出します</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+	</script>
+	</div>
+</body>
+
+</html>
+
+

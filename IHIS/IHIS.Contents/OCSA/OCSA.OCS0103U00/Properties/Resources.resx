@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FWKCOMMON_CODE_NAME_TEXT" xml:space="preserve">
+    <value>コード名称</value>
+  </data>
+  <data name="FWKCOMMON_CODE_TEXT" xml:space="preserve">
+    <value>コード</value>
+  </data>
+  <data name="FWKCOMMON_CREATED_COMPANY_NAME_TEXT" xml:space="preserve">
+    <value>製造会社名</value>
+  </data>
+  <data name="FWKCOMMON_HOT_CODE_TEXT" xml:space="preserve">
+    <value>基準番号(ＨＯＴコード)</value>
+  </data>
+  <data name="FWKCOMMON_PACK_DANUI_SURYANG_TEXT" xml:space="preserve">
+    <value>包装単位数</value>
+  </data>
+  <data name="FWKCOMMON_PACK_TOTAL_SURYANG_TEXT" xml:space="preserve">
+    <value>包装総量数</value>
+  </data>
+  <data name="FWKCOMMON_SALE_NAME_TEXT" xml:space="preserve">
+    <value>販売名</value>
+  </data>
+  <data name="FWKCOMMON_SALED_COMPANY_NAME_TEXT" xml:space="preserve">
+    <value>販売会社名</value>
+  </data>
+  <data name="FWKCOMMON_SG_CODE_TEXT" xml:space="preserve">
+    <value>点数コード</value>
+  </data>
+  <data name="FWKCOMMON_YAK_KIJUN_CODE_TEXT" xml:space="preserve">
+    <value>薬価基準コード</value>
+  </data>
+  <data name="FWKCOMMON_YJ_CODE_TEXT" xml:space="preserve">
+    <value>個別医薬品コード</value>
+  </data>
+  <data name="LBBOGYONGCODE_1_TEXT" xml:space="preserve">
+    <value>注射方法</value>
+  </data>
+  <data name="LBBOGYONGCODE_2_TEXT" xml:space="preserve">
+    <value>服用コード</value>
+  </data>
+  <data name="LBBOGYONGCODE_3_TEXT" xml:space="preserve">
+    <value>速度</value>
+  </data>
+  <data name="MSG001_CAP" xml:space="preserve">
+    <value>オーダチェック</value>
+  </data>
+  <data name="MSG002_MSG" xml:space="preserve">
+    <value>行:オーダコードが入力されていません。確認して下さい。</value>
+  </data>
+  <data name="MSG003_MSG" xml:space="preserve">
+    <value>行:オーダ名称が入力されていません。確認して下さい。</value>
+  </data>
+  <data name="MSG004_MSG" xml:space="preserve">
+    <value>行:基本検体コードを入力して下さい。</value>
+  </data>
+  <data name="MSG005_MSG" xml:space="preserve">
+    <value>行:材料コードを入力して下さい。</value>
+  </data>
+  <data name="MSG006_MSG" xml:space="preserve">
+    <value>行:点数コードを入力して下さい。</value>
+  </data>
+  <data name="MSG007_MSG" xml:space="preserve">
+    <value>オーダマスタを入力にデータ漏れがありますので以下を確認して下さい。
+==================================================================</value>
+  </data>
+  <data name="MSG008_MSG" xml:space="preserve">
+    <value>行:換算単位が入力されていません。確認して下さい。</value>
+  </data>
+  <data name="MSG009_MSG" xml:space="preserve">
+    <value>行:会係数が入力されていません。確認して下さい。</value>
+  </data>
+  <data name="MSG010_MSG" xml:space="preserve">
+    <value>行:在庫数が入力されていません。確認して下さい。</value>
+  </data>
+  <data name="MSG011_MSG" xml:space="preserve">
+    <value>換算数量入力にデータ漏れがありますので以下を確認して下さい。
+==================================================================</value>
+  </data>
+  <data name="MSG012_MSG" xml:space="preserve">
+    <value>行:外来伝達部署を入力して下さい。</value>
+  </data>
+  <data name="MSG013_MSG" xml:space="preserve">
+    <value>行:入院伝達部署を入力して下さい。</value>
+  </data>
+  <data name="MSG014_MSG" xml:space="preserve">
+    <value>行:移動部署を入力して下さい。</value>
+  </data>
+  <data name="MSG015_MSG" xml:space="preserve">
+    <value>伝達部署入力にデータ漏れがありますので以下を確認して下さい。
+==================================================================</value>
+  </data>
+  <data name="MSG016_MSG" xml:space="preserve">
+    <value>行:検体コードが入力されていません。確認して下さい。</value>
+  </data>
+  <data name="MSG017_MSG" xml:space="preserve">
+    <value>検体入力にデータ漏れがありますので以下を確認して下さい。
+==================================================================</value>
+  </data>
+  <data name="MSG018_CAP" xml:space="preserve">
+    <value>保存失敗</value>
+  </data>
+  <data name="MSG018_MSG" xml:space="preserve">
+    <value>オーダ別伝達部署保存に失敗しました。=&gt;</value>
+  </data>
+  <data name="MSG019_MSG" xml:space="preserve">
+    <value>オーダ別使用検体保存に失敗しました。 =&gt;</value>
+  </data>
+  <data name="MSG020_MSG" xml:space="preserve">
+    <value>オーダ別換算数量保存に失敗しました。 =&gt;</value>
+  </data>
+  <data name="MSG021_MSG" xml:space="preserve">
+    <value>オーダマスタ保存に失敗しました。 =&gt;</value>
+  </data>
+  <data name="MSG022_CAP" xml:space="preserve">
+    <value>保存完了</value>
+  </data>
+  <data name="MSG022_MSG" xml:space="preserve">
+    <value>保存が完了しました。</value>
+  </data>
+  <data name="MSG023_CAP" xml:space="preserve">
+    <value>注意</value>
+  </data>
+  <data name="MSG023_MSG" xml:space="preserve">
+    <value>換算数量が登録されているため削除できません。
+まず換算数量を削除してください。</value>
+  </data>
+  <data name="MSG024_MSG" xml:space="preserve">
+    <value>オーダ別伝達部署が登録されているため削除できません。
+まずオーダ別伝達部署を削除してください。</value>
+  </data>
+  <data name="MSG025_MSG" xml:space="preserve">
+    <value>検体コードが登録されているため削除できません。
+まず検体コードを削除してください。</value>
+  </data>
+  <data name="MSG026_MSG" xml:space="preserve">
+    <value>全体</value>
+  </data>
+  <data name="MSG027_CAP" xml:space="preserve">
+    <value>コード確認</value>
+  </data>
+  <data name="MSG027_MSG" xml:space="preserve">
+    <value>コードが正確ではありません｡ 確認して下さい｡</value>
+  </data>
+  <data name="MSG028_MSG" xml:space="preserve">
+    <value>外来伝達コードが正確ではありません｡ 確認して下さい｡</value>
+  </data>
+  <data name="MSG029_MSG" xml:space="preserve">
+    <value>入院伝達コードが正確ではありません｡ 確認して下さい｡</value>
+  </data>
+  <data name="MSG030_CAP" xml:space="preserve">
+    <value>点数コード確認</value>
+  </data>
+  <data name="MSG030_MSG" xml:space="preserve">
+    <value>点数コードが正確ではありません｡確認して下さい｡</value>
+  </data>
+  <data name="MSG031_CAP" xml:space="preserve">
+    <value>材料コード確認</value>
+  </data>
+  <data name="MSG031_MSG" xml:space="preserve">
+    <value>材料コードが正確ではありません｡確認して下さい｡</value>
+  </data>
+  <data name="MSG032_MSG" xml:space="preserve">
+    <value>コードが正確ではありません。確認して下さい。</value>
+  </data>
+  <data name="MSG033_CAP" xml:space="preserve">
+    <value>外来伝達コード確認</value>
+  </data>
+  <data name="MSG033_MSG" xml:space="preserve">
+    <value>外来伝達コードが正確ではありません｡</value>
+  </data>
+  <data name="MSG034_CAP" xml:space="preserve">
+    <value>入院伝達コード確認</value>
+  </data>
+  <data name="MSG034_MSG" xml:space="preserve">
+    <value>入院伝達コードが正確ではありません｡</value>
+  </data>
+  <data name="MSG035_CAP" xml:space="preserve">
+    <value>データ確認</value>
+  </data>
+  <data name="MSG035_MSG" xml:space="preserve">
+    <value>既に登録されているオーダです。</value>
+  </data>
+  <data name="MSG036_MSG" xml:space="preserve">
+    <value>既に登録されているオーダ単位です。</value>
+  </data>
+  <data name="MSG037_MSG" xml:space="preserve">
+    <value>既に登録されている伝達部署です。</value>
+  </data>
+  <data name="MSG039_CAP" xml:space="preserve">
+    <value>薬品マスター</value>
+  </data>
+  <data name="MSG039_MSG" xml:space="preserve">
+    <value>内服・外用薬､注射薬のみ画面が開けます｡</value>
+  </data>
+  <data name="MSG040_MSG" xml:space="preserve">
+    <value>換算基準に削除されたデータがあります。
+削除しますか？</value>
+  </data>
+  <data name="MSG041_MSG" xml:space="preserve">
+    <value>換算基準に修正されたデータがあります。
+保存しますか？</value>
+  </data>
+  <data name="MSG042_MSG" xml:space="preserve">
+    <value>オーダ別伝達部署に削除されたデータがあります。
+削除しますか？</value>
+  </data>
+  <data name="MSG043_MSG" xml:space="preserve">
+    <value>オーダ別伝達部署に修正されたデータがあります。
+保存しますか？</value>
+  </data>
+  <data name="MSG044_MSG" xml:space="preserve">
+    <value>検体コードに削除されたデータがあります。
+削除しますか？</value>
+  </data>
+  <data name="MSG045_MSG" xml:space="preserve">
+    <value>検体コードに修正されたデータがあります。
+保存しますか？</value>
+  </data>
+  <data name="MSG046_MSG" xml:space="preserve">
+    <value>行:外来伝達コードを入力して下さい。</value>
+  </data>
+  <data name="MSG047_MSG" xml:space="preserve">
+    <value>行:入院伝達コードを入力して下さい。</value>
+  </data>
+  <data name="MSG048_MSG" xml:space="preserve">
+    <value>行:オーダ伝票コードコードを入力して下さい。</value>
+  </data>
+  <data name="MSG049_MSG" xml:space="preserve">
+    <value>保存が失敗しました.</value>
+  </data>
+  <data name="MSG050_MSG" xml:space="preserve">
+    <value>治験コードを入力してください</value>
+  </data>
+  <data name="MSG051_MSG" xml:space="preserve">
+    <value>治験コードが存在しません</value>
+  </data>
+  <data name="VALIDATING_OBJECT_NAME_1_TEXT" xml:space="preserve">
+    <value>オーダ伝票</value>
+  </data>
+  <data name="VALIDATING_OBJECT_NAME_2_TEXT" xml:space="preserve">
+    <value>外来伝達</value>
+  </data>
+  <data name="VALIDATING_OBJECT_NAME_3_TEXT" xml:space="preserve">
+    <value>入院伝達</value>
+  </data>
+  <data name="VALIDATING_OBJECT_NAME_4_TEXT" xml:space="preserve">
+    <value>移動部署</value>
+  </data>
+  <data name="VALIDATING_OBJECT_NAME_5_TEXT" xml:space="preserve">
+    <value>服用</value>
+  </data>
+  <data name="VALIDATING_OBJECT_NAME_6_TEXT" xml:space="preserve">
+    <value>基本検体</value>
+  </data>
+  <data name="VALIDATING_OBJECT_NAME_7_TEXT" xml:space="preserve">
+    <value>患者状態</value>
+  </data>
+  <data name="MSG038_MSG" xml:space="preserve">
+    <value>既に登録している検体コードです｡</value>
+  </data>
+  <data name="MSG052_MSG" xml:space="preserve">
+    <value>このアクションは時間がかかりますが、続けますか？</value>
+  </data>
+  <data name="MSG053_MSG" xml:space="preserve">
+    <value>このオーダが会計システムにマッピングしない</value>
+  </data>
+  <data name="Cap053_CAP" xml:space="preserve">
+    <value>注意</value>
+  </data>
+  <data name="MSG054_CAP" xml:space="preserve">
+    <value>注意</value>
+  </data>
+  <data name="MSG054_MSG" xml:space="preserve">
+    <value>現在検体検査・手術・放射線・生理検査のみ共通オーダに対応いたしております。 </value>
+  </data>
+</root>

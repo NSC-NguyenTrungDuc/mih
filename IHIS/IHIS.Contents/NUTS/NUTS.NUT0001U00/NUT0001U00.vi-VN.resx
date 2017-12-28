@@ -1,0 +1,866 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnSindanmei.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="btnSindanmei.Text" xml:space="preserve">
+    <value>Bệnh nhân chấn thương bệnh</value>
+  </data>
+  <data name="xEditGridCell110.HeaderText" xml:space="preserve">
+    <value>Ngày tạo</value>
+  </data>
+  <data name="xEditGridCell111.HeaderText" xml:space="preserve">
+    <value>ID người dùng</value>
+  </data>
+  <data name="xEditGridCell112.HeaderText" xml:space="preserve">
+    <value>Ngày cập nhật</value>
+  </data>
+  <data name="xEditGridCell113.HeaderText" xml:space="preserve">
+    <value>Mã bệnh viện</value>
+  </data>
+  <data name="xEditGridCell114.HeaderText" xml:space="preserve">
+    <value>Khóa cơ bản bảng</value>
+  </data>
+  <data name="xEditGridCell150.HeaderText" xml:space="preserve">
+    <value>Phân loại dữ liệu</value>
+  </data>
+  <data name="xEditGridCell115.HeaderText" xml:space="preserve">
+    <value>Khóa yêu cầu</value>
+  </data>
+  <data name="xEditGridCell117.HeaderText" xml:space="preserve">
+    <value>Phân loại trong ngoài viện</value>
+  </data>
+  <data name="xEditGridCell121.HeaderText" xml:space="preserve">
+    <value>Mã tên chấn thương bệnh</value>
+  </data>
+  <data name="xEditGridCell125.HeaderText" xml:space="preserve">
+    <value>Tên chấn thương bệnh hiển thị</value>
+  </data>
+  <data name="xEditGridCell122.HeaderText" xml:space="preserve">
+    <value>Ngày phát triệu chứng</value>
+  </data>
+  <data name="xEditGridCell123.HeaderText" xml:space="preserve">
+    <value>Ngày chẩn đoán</value>
+  </data>
+  <data name="xEditGridCell124.HeaderText" xml:space="preserve">
+    <value>Tên tự chỉnh sửa</value>
+  </data>
+  <data name="xEditGridCell146.HeaderText" xml:space="preserve">
+    <value>Tên đuôi từ</value>
+  </data>
+  <data name="xEditGridCell147.HeaderText" xml:space="preserve">
+    <value>Tên chấn thương bệnh</value>
+  </data>
+  <data name="grdNUT0002.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+  <data name="grbSindanmei.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="grbSindanmei.Text" xml:space="preserve">
+    <value>Tên bệnh</value>
+  </data>
+  <data name="patBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="lblGwa.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xFlatLabel7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xFlatLabel7.Text" xml:space="preserve">
+    <value>Khoa khám:
+</value>
+  </data>
+  <data name="rbtSaikai.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="rbtSaikai.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 17</value>
+  </data>
+  <data name="rbtSaikai.Text" xml:space="preserve">
+    <value>Chỉ dẫn lại</value>
+  </data>
+  <data name="rbtSyokai.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="rbtSyokai.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 17</value>
+  </data>
+  <data name="rbtSyokai.Text" xml:space="preserve">
+    <value>Chỉ dẫn lần đầu</value>
+  </data>
+  <data name="xLabel30.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel30.Text" xml:space="preserve">
+    <value>Chiều cao</value>
+  </data>
+  <data name="txtHeight.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel29.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel29.Text" xml:space="preserve">
+    <value>Cân nặng</value>
+  </data>
+  <data name="txtWeight.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="dptReserDate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel1.Text" xml:space="preserve">
+    <value>Ngày hẹn
+</value>
+  </data>
+  <data name="txtBMI.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="rbtDrink_n.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="rbtDrink_n.Text" xml:space="preserve">
+    <value>Không thể</value>
+  </data>
+  <data name="rbtDrink_y.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="rbtDrink_y.Text" xml:space="preserve">
+    <value>Có thể</value>
+  </data>
+  <data name="rbtSport_n.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="rbtSport_n.Text" xml:space="preserve">
+    <value>Không thể</value>
+  </data>
+  <data name="rbtSport_y.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="rbtSport_y.Text" xml:space="preserve">
+    <value>Có thể</value>
+  </data>
+  <data name="xFlatLabel14.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xFlatLabel15.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xFlatLabel16.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xFlatLabel17.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xFlatLabel21.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xFlatLabel18.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xFlatLabel19.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xFlatLabel4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xFlatLabel9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xFlatLabel20.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xFlatLabel10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xFlatLabel13.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xFlatLabel11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xFlatLabel12.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="txtAlb.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel22.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="txtBun.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel23.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="txtGammagt.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel24.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="txtAlt_gpt.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel25.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="txtAst_got.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel26.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel26.Text" xml:space="preserve">
+    <value>γGT
+</value>
+  </data>
+  <data name="txtCre.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel27.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel28.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="txtHb.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="txtFbs.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel21.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel21.Text" xml:space="preserve">
+    <value>B・P
+</value>
+  </data>
+  <data name="txtA1c.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel20.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="txtLdl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel19.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="txtHdl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel18.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="tchTg.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel17.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="txtTch.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel16.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel15.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="txtBp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="grbKensachi.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="grbKensachi.Text" xml:space="preserve">
+    <value>Chỉ số xét nghiệm</value>
+  </data>
+  <data name="xFlatLabel8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xFlatLabel6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xFlatLabel5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xFlatLabel3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xFlatLabel2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xFlatLabel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="txtProtein.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="txtFat.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="txtWater.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="txtSalt.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="txtSugar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="txtPs.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="txtEnergy.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel14.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel14.Text" xml:space="preserve">
+    <value>Chất đạm</value>
+  </data>
+  <data name="xLabel13.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel13.Text" xml:space="preserve">
+    <value>Mỡ</value>
+  </data>
+  <data name="xLabel12.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel12.Text" xml:space="preserve">
+    <value>Độ ẩm</value>
+  </data>
+  <data name="xLabel11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel11.Text" xml:space="preserve">
+    <value>Muối</value>
+  </data>
+  <data name="xLabel10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel10.Text" xml:space="preserve">
+    <value>Chất đường
+</value>
+  </data>
+  <data name="xLabel9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel9.Text" xml:space="preserve">
+    <value>P/S hóa</value>
+  </data>
+  <data name="xLabel8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel8.Text" xml:space="preserve">
+    <value>Dị ứng</value>
+  </data>
+  <data name="grbSidoueiyouryou.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="grbSidoueiyouryou.Text" xml:space="preserve">
+    <value>Lượng dinh dưỡng chỉ thị</value>
+  </data>
+  <data name="xFlatLabel39.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="txtTargetWeight.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="txtSijijikou.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="grbSijijikou.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="grbSijijikou.Text" xml:space="preserve">
+    <value>Mục chỉ thị</value>
+  </data>
+  <data name="xLabel5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel5.Text" xml:space="preserve">
+    <value>Đồ uống</value>
+  </data>
+  <data name="xLabel4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel4.Text" xml:space="preserve">
+    <value>Phân tải vận động
+</value>
+  </data>
+  <data name="xLabel3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel3.Text" xml:space="preserve">
+    <value>Cân nặng mục tiêu</value>
+  </data>
+  <data name="xEditGridCell1.HeaderText" xml:space="preserve">
+    <value>Ngày tạo</value>
+  </data>
+  <data name="xEditGridCell2.HeaderText" xml:space="preserve">
+    <value>ID người dùng
+</value>
+  </data>
+  <data name="xEditGridCell3.HeaderText" xml:space="preserve">
+    <value>Ngày cập nhật
+</value>
+  </data>
+  <data name="xEditGridCell4.HeaderText" xml:space="preserve">
+    <value>Mã bệnh viện
+</value>
+  </data>
+  <data name="xEditGridCell5.HeaderText" xml:space="preserve">
+    <value>Khóa cơ bản bảng
+</value>
+  </data>
+  <data name="xEditGridCell6.HeaderText" xml:space="preserve">
+    <value>Phân loại dữ liệu
+</value>
+  </data>
+  <data name="xEditGridCell7.HeaderText" xml:space="preserve">
+    <value>Khóa yêu cầu
+</value>
+  </data>
+  <data name="xEditGridCell8.HeaderText" xml:space="preserve">
+    <value>Phân loại trong ngoài viện
+</value>
+  </data>
+  <data name="xEditGridCell9.HeaderText" xml:space="preserve">
+    <value>Mã danh mục
+</value>
+  </data>
+  <data name="xEditGridCell10.HeaderText" xml:space="preserve">
+    <value>Tên danh mục</value>
+  </data>
+  <data name="xEditGridCell11.HeaderText" xml:space="preserve">
+    <value>Ngày yêu cầu</value>
+  </data>
+  <data name="xEditGridCell13.HeaderText" xml:space="preserve">
+    <value>Mã số bệnh nhân</value>
+  </data>
+  <data name="xEditGridCell14.HeaderText" xml:space="preserve">
+    <value>Khoa khám </value>
+  </data>
+  <data name="xEditGridCell15.HeaderText" xml:space="preserve">
+    <value>Bác sỹ chẩn đoán</value>
+  </data>
+  <data name="xEditGridCell16.HeaderText" xml:space="preserve">
+    <value>Chỉ số thể trạng</value>
+  </data>
+  <data name="xEditGridCell17.HeaderText" xml:space="preserve">
+    <value>Danh mục chỉ dẫn</value>
+  </data>
+  <data name="xEditGridCell18.HeaderText" xml:space="preserve">
+    <value>Cân nặng mục tiêu</value>
+  </data>
+  <data name="xEditGridCell19.HeaderText" xml:space="preserve">
+    <value>Tải vận động</value>
+  </data>
+  <data name="xEditGridCell20.HeaderText" xml:space="preserve">
+    <value>Uống rượu
+</value>
+  </data>
+  <data name="xEditGridCell21.HeaderText" xml:space="preserve">
+    <value>Dị ứng
+</value>
+  </data>
+  <data name="xEditGridCell22.HeaderText" xml:space="preserve">
+    <value>Chất đạm
+</value>
+  </data>
+  <data name="xEditGridCell24.HeaderText" xml:space="preserve">
+    <value>Mỡ
+</value>
+  </data>
+  <data name="xEditGridCell25.HeaderText" xml:space="preserve">
+    <value>P/S hóa
+</value>
+  </data>
+  <data name="xEditGridCell26.HeaderText" xml:space="preserve">
+    <value>Chất đường
+</value>
+  </data>
+  <data name="xEditGridCell27.HeaderText" xml:space="preserve">
+    <value>Muối
+</value>
+  </data>
+  <data name="xEditGridCell28.HeaderText" xml:space="preserve">
+    <value>Độ ẩm
+</value>
+  </data>
+  <data name="xEditGridCell29.HeaderText" xml:space="preserve">
+    <value>B・P
+</value>
+  </data>
+  <data name="xEditGridCell30.HeaderText" xml:space="preserve">
+    <value>Đường máu trung bình
+</value>
+  </data>
+  <data name="xEditGridCell33.HeaderText" xml:space="preserve">
+    <value>Neutral chất béo (triglyceride)
+</value>
+  </data>
+  <data name="xEditGridCell34.HeaderText" xml:space="preserve">
+    <value>Mật độ cao lipoprotein
+</value>
+  </data>
+  <data name="xEditGridCell35.HeaderText" xml:space="preserve">
+    <value>Trọng lượng riênglipoprotein thấp
+</value>
+  </data>
+  <data name="xEditGridCell36.HeaderText" xml:space="preserve">
+    <value>Huyết sắc tố
+</value>
+  </data>
+  <data name="xEditGridCell37.HeaderText" xml:space="preserve">
+    <value>albumin</value>
+  </data>
+  <data name="xEditGridCell38.HeaderText" xml:space="preserve">
+    <value>Ni tơ máu
+</value>
+  </data>
+  <data name="xEditGridCell39.HeaderText" xml:space="preserve">
+    <value>creatinine</value>
+  </data>
+  <data name="xEditGridCell40.HeaderText" xml:space="preserve">
+    <value>Kiểm tra chức năng gan 1
+</value>
+  </data>
+  <data name="xEditGridCell41.HeaderText" xml:space="preserve">
+    <value>Kiểm tra chức năng gan 2</value>
+  </data>
+  <data name="xEditGridCell42.HeaderText" xml:space="preserve">
+    <value>Kiểm tra chức năng gan 3</value>
+  </data>
+  <data name="xEditGridCell43.HeaderText" xml:space="preserve">
+    <value>Hướng dẫn dinh dưỡng
+</value>
+  </data>
+  <data name="xEditGridCell44.HeaderText" xml:space="preserve">
+    <value>Tên hướng dẫn dinh dưỡng
+</value>
+  </data>
+  <data name="xEditGridCell45.HeaderText" xml:space="preserve">
+    <value>Nội dung chỉ thị
+</value>
+  </data>
+  <data name="xEditGridCell46.HeaderText" xml:space="preserve">
+    <value>Ngày thực hiện
+</value>
+  </data>
+  <data name="xEditGridCell47.HeaderText" xml:space="preserve">
+    <value>Nhắn tới bác sỹ
+</value>
+  </data>
+  <data name="xEditGridCell12.HeaderText" xml:space="preserve">
+    <value>Trọng lượng</value>
+  </data>
+  <data name="xEditGridCell48.HeaderText" xml:space="preserve">
+    <value>Chiều cao
+</value>
+  </data>
+  <data name="xEditGridCell49.HeaderText" xml:space="preserve">
+    <value>Phân loại lần đầu
+</value>
+  </data>
+  <data name="xEditGridCell50.HeaderText" xml:space="preserve">
+    <value>Ngày hẹn
+</value>
+  </data>
+  <data name="grdNUT0001.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+  <data name="btnList.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="btnList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>328, 34</value>
+  </data>
+  <data name="dpkActing_date.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel6.Text" xml:space="preserve">
+    <value>Ngày thực hiện</value>
+  </data>
+  <data name="xLabel7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xLabel7.Text" xml:space="preserve">
+    <value>Hưỡng dẫn tên dinh dưỡng
+</value>
+  </data>
+  <data name="txtNutritionist.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="txtNutritionist_name.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="grbIsihenoDengon.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="grbIsihenoDengon.Text" xml:space="preserve">
+    <value>Nhắn tới bác sỹ</value>
+  </data>
+  <data name="grbSidounaiyou.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="grbSidounaiyou.Text" xml:space="preserve">
+    <value>Nội dung chỉ thị</value>
+  </data>
+  <data name="imageListPopupMenu.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABE
+        FAAAAk1TRnQBSQFMAgEBCAEAAfgBAwH4AQMBEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
+        AwABMAMAAQEBAAEgBgABMP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wDnAAPIAf8DyAH/
+        A8gB/wPIAf8DyAH/A8gB/wPIAf8DyAH/KgABzAH/AoEBzAH/HAACgQL/AgABzAH/iAABigKBAf8BigKB
+        Af8BigKBAf8BigKBAf8BigKBAf8BigKBAf8BigKBAf8BigKBAf8DyAH/KQABgQHMAf8BAAGBAcwB/wKB
+        AcwB/xQAAoEBzAH/AgABzAH/AoEC/xwAA90B/wPdAf8D3QH/A90B/wPdAf8D3QH/KAAD3QH/A90B/wPd
+        Af8D3QH/A90B/wPdAf8UAAHqAbcBjwL/AfcB8AL/AfcB8AL/AfcB8AL/AfcB8AL/AfcB8AL/AfcB8AH/
+        AYoCgQH/A8gB/ygAApkC/wEAAYEBzAH/AQABgQHMAf8CgQHMAf8MAAKBAcwB/wIAAcwB/wKBAv8cAAHM
+        AZkBgQH/AcwBmQGBAf8BzAGZAYEB/wHMAZkBgQH/AcwBmQGBAf8BzAGZAYEB/wHMAZkBgQH/A90B/yAA
+        AcwBmQGBAf8BzAGZAYEB/wHMAZkBgQH/AcwBmQGBAf8BzAGZAYEB/wHMAZkBgQH/AcwBmQGBAf8D3QH/
+        EAAB6gG3AY8B/wHqAbcBjwH/AeoBtwGPAf8B6gG3AY8B/wHqAbcBjwH/AeoBtwGPAf8B6gG3AY8B/wGK
+        AoEB/zAAAcYB1gHvAf8CgQHMAf8BAAGBAcwB/wKBAcwB/wQAAoEBzAH/AQABgQHMAf8CgQL/HAABzAGZ
+        AYEB/wPMAf8DwAH/A8AB/wGZAswB/wGZAswB/wOyAf8DwAH/AcwBmQGBAf8D3QH/GAABzAGZAYEB/wPM
+        Af8DwAH/A8AB/wGZAswB/wGZAswB/wOyAf8DwAH/AcwBmQGBAf8D3QH/GgAB/gH/AgAB/gH/EAADyAH/
+        A8gB/wPIAf8DyAH/A8gB/wPIAf8DyAH/FAACzAL/AoEC/wEAAYEBzAH/AQABgQHMAf8BAAGBAcwB/wKB
+        Av8gAAHMAZkBgQH/A+MB/wPXAf8D1wH/AcwBgQEAAf8DzAH/A8wB/wPMAf8BzAGZAYEB/wPdAf8YAAHM
+        AZkBgQH/A+MB/wPXAf8D1wH/A8wB/wPMAf8DzAH/A8wB/wHMAZkBgQH/A90B/xYAAf4B/wIAAf4B/wIA
+        Af4B/wIAAf4B/wgAAYoCgQH/AYoCgQH/AYoCgQH/AYoCgQH/AYoCgQH/AYoCgQH/AYoCgQH/A8gB/xwA
+        AoEC/wEAAYEBzAH/AoEC/yQAAcwBmQGBAf8D8QH/A/EB/wPqAf8BzAGBAQAB/wPqAf8D4wH/A9cB/wHM
+        AZkBgQH/A90B/xgAAcwBmQGBAf8D8QH/A/EB/wPqAf8D6gH/A+oB/wPjAf8D1wH/AcwBmQGBAf8D3QH/
+        FgAB/gH/AgAB/gH/AgAB/gH/AgAB/gH/CAAB6gG3AY8C/wH3AfAC/wH3AfAC/wH3AfAC/wH3AfAC/wH3
+        AfAB/wGKAoEB/wPIAf8YAAKZAv8BAAGBAv8BAAGBAv8BAAGBAv8BmQHMAv8gAAHMAZkBgQH/A/EB/wHM
+        AYEBAAH/AcwBgQEAAf8BzAGBAQAB/wHMAYEBAAH/AcwBgQEAAf8D1wH/AcwBmQGBAf8D3QH/GAABzAGZ
+        AYEB/wPxAf8BAAGBAv8BAAGBAv8BAAGBAv8BAAGBAv8BAAGBAv8D1wH/AcwBmQGBAf8D3QH/GgAB/gH/
+        AgAB/gH/DAAB6gG3AY8B/wHqAbcBjwH/AeoBtwGPAf8B6gG3AY8B/wHqAbcBjwH/AeoBtwGPAf8BigKB
+        Af8YAAGBAZkC/wEAAYEC/wEAAYEC/wKBAv8CgQL/AQABgQL/AZkBzAL/HAABzAGZAYEB/wPxAf8D8QH/
+        A/EB/wHMAYEBAAH/A/EB/wPxAf8D4wH/AcwBmQGBAf8D3QH/GAABzAGZAYEB/wPxAf8D8QH/A/EB/wPx
+        Af8D8QH/A/EB/wPjAf8BzAGZAYEB/wPdAf8QAAPIAf8DyAH/A8gB/wPIAf8DyAH/A8gB/wPIAf8DyAH/
+        LAACgQL/AQABgQL/AQABgQL/AoEC/wgAAoEC/wEAAYEC/wKZAv8YAAHMAZkBgQ3/AcwBgQEACf8D8QH/
+        AcwBmQGBAf8D3QH/GAABzAGZAYEZ/wPxAf8BzAGZAYEB/wPdAf8MAAGKAoEB/wGKAoEB/wGKAoEB/wGK
+        AoEB/wGKAoEB/wGKAoEB/wGKAoEB/wGKAoEB/wPIAf8oAAKBAv8BAAGBAv8BAAGBAv8BgQGZAv8QAAGB
+        AZkC/wEAAYEC/xgAAcwBmQGBHf8BzAGZAYEB/xwAAcwBmQGBHf8BzAGZAYEB/xAAAeoBtwGPAf8B/AHQ
+        AaEB/wH8AdABoQH/AfwB0AGhAf8B/AHQAaEB/wH8AdABoQH/AfwB0AGhAf8BigKBAf8DyAH/KQABgQL/
+        AQABgQL/AYEBmQL/OAABzAGZAYEB/wHMAZkBgQH/AcwBmQGBAf8BzAGZAYEB/wHMAZkBgQH/AcwBmQGB
+        Af8BzAGZAYEB/yQAAcwBmQGBAf8BzAGZAYEB/wHMAZkBgQH/AcwBmQGBAf8BzAGZAYEB/wHMAZkBgQH/
+        AcwBmQGBAf8UAAHqAbcBjwH/AYoCgQH/AYoCgQH/AYoCgQH/AYoCgQH/AYoCgQH/AYoCgQH/AYoCgQH/
+        A8gB/9wAAeoBtwGPAv8B9wHwAv8B9wHwAv8B9wHwAv8B9wHwAv8B9wHwAv8B9wHwAf8BigKBAf8DyAH/
+        3AAB6gG3AY8B/wHqAbcBjwH/AeoBtwGPAf8B6gG3AY8B/wHqAbcBjwH/AeoBtwGPAf8B6gG3AY8B/wGK
+        AoEB//8AtQADzAH/A8wB/wPMAf8DzAH/A8wB/wPMAf8DzAH/A8wB/wPMAf8DzAH/HAADzAH/A8wB/wPM
+        Af8DzAH/A8wB/wPMAf8DzAH/A8wB/wPMAf+UAAKZAYEB/wKZAYEB/wKZAYEB/wKZAYEB/wKZAYEB/wKZ
+        AYEB/wKZAYEB/wKZAYEB/wKZAYEB/wOBAf8DzAH/DAADzAH/A8wB/wPMAf8DgQH/A4EB/wOBAf8DgQH/
+        A4EB/wOBAf8DgQH/A4EB/wOBAf8DzAH/HAADhgH/dAAB/wHMAZkC/wHsAcwC/wHsAcwC/wHsAcwB/wHw
+        AcoBpgH/AfABygGmAf8B8AHKAaYB/wHwAcoBpgH/AfABygGmAf8DhgH/A8wB/wgAA8wB/wKBAZkB/wKB
+        AZkB/wKBAZkB/wHwAcoBpgb/AewBzAH/AfABygGmAf8B8AHKAaYB/wHwAcoBpgH/AfABygGmAf8B8AHK
+        AaYB/wOBAf8DzAH/GAABgQIAAf8DhgH/A4YB/zQABP84AAH/AcwBmQ3/AfABygGmAf8B8AHKAaYB/wHw
+        AcoBpgH/AfABygGmAf8B8AHKAaYB/wOGAf8DzAH/CAABgQGZAcwB/wGBAcwC/wGBAcwC/wGBAcwC/wHw
+        AcoBpgb/AcwBmQL/AcwBmQL/AcwBmQL/AcwBmQL/AcwBmQH/AfABygGmAf8DgQH/A8wB/xUAAYEBAAH/
+        AQABgQEAAf8BgQIAAf8DhgH/A4YB/ywAA8AB/wPABf8oAAOyAf8DsgH/A7IC/wHMAZkG/wHsAcwC/wHs
+        AcwC/wHsAcwC/wHsAcwB/wHwAcoBpgH/AfABygGmAf8B8AHKAaYB/wOGAf8DzAH/CAABgQGZAcwB/wHM
+        A/8BgQHMAv8BgQHMAv8B8AHKAaYG/wHsAcwC/wHsAcwC/wHsAcwB/wHwAcoBpgH/AfABygGmAf8B8AHK
+        AaYB/wOBAf8DzAH/EQAB/wEAAf8BAAGBAQAB/wEAAYEBAAH/AQABgQEAAf8BgQIAAf8DhgH/A4YB/yQA
+        A4YB/wPAAf8DwAH/A8AF/yQAAf8BzAGZAf8B8AHKAaYB/wLMAZkC/wHMAZkS/wHsAcwB/wHwAcoBpgH/
+        AfABygGmAf8B8AHKAaYB/wOGAf8DzAH/CAABgQGZAcwB/wHMA/8BgQHMAv8BgQHMAv8B8AHKAaYG/wHM
+        AZkC/wHMAZkC/wHMAZkC/wHMAZkC/wHMAZkB/wHwAcoBpgH/A4EB/wPMAf8RAAH/AQAB/wEAAYEBAAH/
+        AQABgQEAAf8BAAGBAQAB/wEAAYEBAAH/AYECAAH/A4YB/wOGAf8gAAOGAf8DwAH/A8AB/wPAAf8DwAX/
+        IAAB/wHMAZkC/wHsAcwC/wHsAcwC/wHMAZkG/wHsAcwC/wHsAcwC/wHsAcwC/wHsAcwC/wHsAcwC/wHs
+        AcwC/wHsAcwB/wOGAf8DzAH/CAABgQGZAcwB/wHMA/8BgQP/AYEBzAL/AfABygGmBv8B7AHMAv8B7AHM
+        Av8B7AHMAv8B7AHMAv8B7AHMAf8B8AHKAaYB/wOBAf8DzAH/EQAB/wEAAf8BAAGBAQAB/wEAAYEBAAH/
+        AQAB/wEAAf8BAAGBAQAB/wEAAYEBAAH/AYECAAH/A4YB/wOGAf8cAAOGAf8DwAH/A8AB/wOGAf8DwAH/
+        A8AF/xwAAf8BzAGZAv8B7AHMAv8BzAGZAv8BzAGZFv8B7AHMAv8B7AHMAv8B7AHMAf8DhgH/A8wB/wgA
+        AYEBmQHMAf8BzAP/AZkD/wGBA/8B8AHKAaYG/wHMAZkC/wHMAZkC/wHMAZkC/wHMAZkC/wHMAZkB/wHw
+        AcoBpgH/A4EB/wPMAf8RAAH/AQAB/wEAAYEBAAH/AQABgQEAAf8DhgH/AQAB/wEAAf8BAAGBAQAB/wEA
+        AYEBAAH/AYECAAH/A4YB/wOGAf8YAAOGAf8DwAH/A8AB/wQAA4YB/wPAAf8DwAX/GAAB/wHMAZkB/wPx
+        Av8B7AHMAv8BzAGZBv8B7AHMAv8B7AHMAv8B7AHMAv8B7AHMAv8B7AHMAv8B7AHMAv8B7AHMAf8DhgH/
+        A8wB/wgAAYEBmQHMAf8BzAP/AZkD/wGBA/8B8AHKAaYd/wOBAf8DzAH/EQAB/wEAAf8BAAGBAQAB/wEA
+        AYEBAAH/A4YB/wUAAf8BAAH/AQABgQEAAf8BAAGBAQAB/wGBAgAB/wOGAf8DhgH/FAADhgH/A8AB/wPA
+        Af8IAAOGAf8DwAH/A8AF/xQAAf8BzAGZAv8B7AHMAf8B8AHKAaYC/wHMAZkW/wGZAYEC/wGZAYEC/wGZ
+        AYEB/wOGAf8DzAH/CAABgQGZAcwB/wHMA/8BmQP/AYED/wHwAcoBphb/AZkBgQL/AZkBgQH/AZkCgQH/
+        A8wB/xUAAf8BAAH/AQAB/wEAAf8NAAH/AQAB/wEAAYEBAAH/AQABgQEAAf8BgQIAAf8DhgH/GAADhgH/
+        A4YB/wwAA4YB/wPAAf8DwAX/EAAB/wHMAZkK/wHMAZkW/wGZAYEB/wHwAcoBpgH/A4YB/wPMAf8MAAGB
+        AZkBzAH/AfAB+wL/AZkD/wGZA/8B8AHKAaYW/wGZAYEB/wGZAoEB/wPMAf8xAAH/AQAB/wEAAYEBAAH/
+        AYECAAH/A4YB/zAAA4YB/wPABf8QAAH/AcwBmQL/AewBzAH/AfABygGmAv8BzAGZFv8BmQGBAf8DhgH/
+        A8wB/xAAAYEBmQHMAf8B8AH7Av8BzAP/AZkD/wHwAcoBpgH/AfABygGmAf8B8AHKAaYB/wHwAcoBpgH/
+        AfABygGmAf8B8AHKAaYB/wGZAoEB/wOBAf8DzAH/NQAB/wEAAf8BAAGBAQAB/zgAA4YB/wOGAf8QAAH/
+        AcwBmQr/AcwBmQL/AcwBmQL/AcwBmQL/AcwBmQL/AcwBmQL/AcwBmQH/A4YB/wPMAf8UAAGBAZkBzAH/
+        AfAB+wL/AcYB1gHvAf8BmQLMAf8BmQLMAf8BmQLMAf8BmQLMAf8BmQLMAf8BmQLMAf8BzAP/AYEBzAL/
+        A4EB/wPMAf+MAAH/AcwBmRb/AZkBgQL/AZkBgQH/A4YB/wPMAf8YAAGBAZkBzAH/AfAB+wL/A8AB/wPA
+        Af8DwAH/A8AB/wPAAf8DwAH/A8AB/wHMA/8BgQHMAv8DgQH/A8wB/4wAAf8BzAGZFv8BmQGBAf8DhgH/
+        A8wB/yAAAYEBmQHMAf8BgQGZAcwB/wPMDf8DzAH/AYECzAH/AYECzAH/AYECzAH/A8AB/5AAAf8BzAGZ
+        Av8BzAGZAv8BzAGZAv8BzAGZAv8BzAGZAv8BzAGZAf8DhgH/A8wB/ywAA8AB/wPAAf8DwAH/A8AB/wPA
+        Af8cAAFCAU0BPgcAAT4DAAEoAwABQAMAATADAAEBAQABAQUAAYABARYAA/+BAA7/AYABfwHnAfME/wEA
+        AX8C4wH4AR8B+AEfAQABfwHhAccB8AEPAfABDwEAAf8B8AGPAeABBwHgAQcB5wGAAfgBHwHgAQcB4AEH
+        AcMBAAH+AT8B4AEHAeABBwHDAQAB/AEfAeABBwHgAQcB5wEBAfgBDwHgAQcB4AEHAYABfwHwAccB4AEH
+        AeABBwEAAX8B4QHnAeABDwHgAQ8BAAF/AeMB/wHwAR8B8AEfAQABfwb/AQABfwb/AQAN/wH4AQEB/AEB
+        BP8B8AEBAcABAQH9A/8B8AEBAYABAQH4Af8B+wH/AfABAQGAAQEB8AF/AfEB/wGAAQEBgAEBAeABPwHg
+        Af8BgAEBAYABAQHgAR8B4AF/AYABAQGAAQEB4AEPAeABPwGAAQEBgAEBAeABBwHiAR8BgAEBAYABAQHh
+        AQMB4wEPAYABAQGAAQEB8wGDAfMBhwGAAQMBgAEDAf8BwwH/AccBgAEHAYABAwH/AecB/wHnAYABDwGA
+        AQME/wGAAR8BgAEDBP8BgAE/AcABBwT/AYABfwHwAX8L
+</value>
+  </data>
+  <data name="layIraisyo.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+</root>

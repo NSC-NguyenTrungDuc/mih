@@ -1,0 +1,367 @@
+option java_package = "nta.med.kcck.api.rpc.proto";
+
+option java_outer_classname = "PatientModelProto";
+
+message PatientDetail {
+    optional string patient_name 		= 1;
+    optional string disease_name 		= 2;
+    optional int32 status 		 		= 3;
+    optional string last_go_hospital 	= 4;
+    optional int32 patient_age 			= 5;
+    optional string patient_sex 		= 6;
+    optional string patient_email 		= 7;
+    optional string patient_tel 		= 8;
+    optional string status_of_disease 	= 9;
+}
+
+message PatientProfile {
+    optional string bunho = 1;
+    optional string suname = 2;
+    optional string sex = 3;
+    optional string birth = 4;
+    optional string zip_code1 = 5;
+    optional string zip_code2 = 6;
+    optional string address1 = 7;
+    optional string address2 = 8;
+    optional string tel = 9;
+    optional string tel1 = 10;
+    optional string type = 11;
+    optional string tel_hp = 12;
+    optional string email = 13;
+    optional string gubun_name = 14;
+    optional string dong_name = 15;
+    optional string suname2 = 16;
+    optional string age = 17;
+    optional string tel_type = 18;
+    optional string tel_type2 = 19;
+    optional string tel_type3 = 20;
+    optional string delete_yn = 21;
+    optional string pace_maker_yn = 22;
+    optional string self_pace_maker = 23;
+    optional string patient_type = 24;
+    optional string retrieve_yn = 25;
+    optional string iu_gubun = 26;
+    optional string ref_id = 27;
+    optional string pass = 28;
+}
+
+message SyncPatient {
+    optional string bunho = 1;
+    optional string suname = 2;
+    optional string sex = 3;
+    optional string birth = 4;
+    optional string zip_code1 = 5;
+    optional string zip_code2 = 6;
+    optional string address1 = 7;
+    optional string address2 = 8;
+    optional string tel = 9;
+    optional string tel1 = 10;
+    optional string type = 11;
+    optional string tel_hp = 12;
+    optional string email = 13;
+    optional string gubun_name = 14;
+    optional string dong_name = 15;
+    optional string suname2 = 16;
+    optional string age = 17;
+    optional string tel_type = 18;
+    optional string tel_type2 = 19;
+    optional string tel_type3 = 20;
+    optional string delete_yn = 21;
+    optional string pace_maker_yn = 22;
+    optional string self_pace_maker = 23;
+    optional string patient_type = 24;
+    optional string retrieve_yn = 25;
+    optional string iu_gubun = 26;
+    optional string ref_id = 27;
+    optional string pass = 28;
+}
+
+message PublicInsurance {
+    optional string start_date = 1;
+    optional string bunho = 2;
+    optional string suname = 3;
+    optional string gubun1 = 4;
+    optional string gubun_name1 = 5;
+    optional string johap = 6;
+    optional string johap_name = 7;
+    optional string tel = 8;
+    optional string gaein = 9;
+    optional string gaein_no = 10;
+    optional string bonin_gubun = 11;
+    optional string bonin_gubun_name = 12;
+    optional string piname = 13;
+    optional string last_check_date = 14;
+    optional string end_date = 15;
+    optional string johap_gubun = 16;
+    optional string old_gubun = 17;
+    optional string retrieve_yn = 18;
+    optional string old_start_date = 19;
+    optional string chuiduk_date = 20;
+    optional string end_yn = 21;
+    optional string data_row_state = 22;
+}
+
+message PrivateInsurance {
+    optional string start_date = 1;
+    optional string bunho = 2;
+    optional string budamja_bunho = 3;
+    optional string gongbi_code = 4;
+    optional string sugubja_bunho = 5;
+    optional string end_date = 6;
+    optional string remark = 7;
+    optional string last_check_date = 8;
+    optional string gongbi_name = 9;
+    optional string retrieve_yn = 10;
+    optional string old_start_date = 11;
+    optional string end_yn = 12;
+    optional string data_row_state = 13;
+}
+
+message SyncExamination {
+    optional string department_code = 1;
+    optional string department_name = 2;
+    optional string doctor_code = 3;
+    optional string doctor_name = 4;
+    optional string exam_status = 5;
+    optional string reception_no = 6;
+    optional string insur_code = 7;
+    optional string insur_name = 8;
+    required string patient_code = 9;
+    optional string coming_date = 10;
+    optional string pkout1001 = 11;
+    optional string reception_time = 12;
+    optional string coming_status = 13;
+    optional string coming_type = 14;
+    optional string sunnab_status = 15;
+    optional string fkinp1001 = 16;
+    optional string reception_type = 17;
+    optional string inp_trans_status = 18;
+    optional string bigo = 19;
+    optional string insur_code1 = 20;
+    optional string insur_code2 = 21;
+    optional string insur_code3 = 22;
+    optional string insur_code4 = 23;
+    optional string priority1 = 24;
+    optional string priority2 = 25;
+    optional string priority3 = 26;
+    optional string priority4 = 27;
+    optional string sujin_no = 28;
+    optional string wonyoi_order_status = 29;
+    optional string reser_status = 30;
+    optional string button = 31;
+    optional string check_coming = 32;
+    optional string arrive_time = 33;
+    optional string group_key = 34;
+    optional string cont_key = 35;
+    optional string data_row_state = 36;
+    optional string deleted_row_table = 37;
+    optional string sys_id = 38;
+    optional string upd_id = 39;
+    optional ReceptionInfo reception = 40;
+    optional string modify_flg = 41;
+	optional string has_appointment = 42;
+	optional string recept_ref_id = 43;
+}
+
+message ReceptionInfo {
+    optional string hosp_code = 1;
+    optional string fkout1001 = 2;
+    optional string orca_reception_id = 3;
+    optional string gwa = 4;
+    optional string doctor = 5;
+    optional string order_time = 6;
+    optional string app_time = 7;
+    optional string regist_time = 8;
+    optional string perform_time = 9;
+    optional string io_flag = 10;
+    optional string time_clazz = 11;
+    optional string bund_num = 12;
+    optional string clazz_code = 13;
+    optional string sub_code = 14;
+    optional string act_code = 15;
+    optional string active_flg = 16;
+    optional string sys_id = 17;
+    optional string udp_id = 18;
+    optional string created = 19;
+    optional string updated = 20;
+}
+
+message PatientDiseaseInfo{
+        optional string id = 1;
+        optional string datetime_record = 2;
+        optional string disease = 3;
+}
+
+message PatientMedicineInfo{
+		optional string id = 1;
+		optional string datetime_record = 2;
+		optional string prescription_name = 3;
+		optional string medicine_name = 4;
+		optional string dose = 5;
+		optional string unit_code = 6;
+		optional string unit = 7;
+		optional string frequency = 8;
+		optional string days = 9;
+		optional string dosage = 10;
+		optional string medicine_method = 11;
+		optional string neawon_key = 12;
+		optional string hangmog_code = 13;
+}
+
+message AcceptInformation {
+    optional string patient_code = 1;
+    optional string acceptance_date = 2;
+    optional string acceptance_time = 3;
+    optional string acceptance_id = 4;
+    optional string department_code = 5;
+    optional string physician_code = 6;
+    optional string medical_information = 7;
+    optional string insurance_code = 8;
+    optional string reception_type = 9;
+    optional string data_row_state = 10;
+    optional string reservation_code = 11;
+    optional string department_name = 12;
+}
+
+//[START] SYNC DISEASE
+message SyncDisease {
+    optional string datetime_record			= 1;
+ 	optional string disease_start_date		= 2;
+	optional string disease_end_date		= 3;					
+	optional string disease_outcome			= 4;						
+	optional int64 sync_id 					= 5;		
+	optional string disease					= 6;
+	optional string hosp_name				= 7;						
+	optional string created					= 8;					
+	optional string updated					= 9;
+	optional bool is_delete					= 10;
+}
+//[END] SYNC DISEASE
+
+//[START] PATIENT_EVENT SYNC MEDICINE
+message SyncPrescription {
+    optional string datetime_record			= 1;
+ 	optional string prescription_name		= 2;					
+	optional int64 sync_id 					= 3;
+}
+
+message SyncDrug {
+    optional string datetime_record			= 1;
+ 	optional string prescription_name		= 2;				
+	optional int64 medicine_id 				= 3;
+	optional string medicine_name			= 4;
+	optional string dose					= 5;
+	optional string unit_code				= 6;
+	optional string unit					= 7;
+	optional string frequency				= 8;
+	optional string days					= 9;
+	optional string note					= 10;
+	optional string medicine_method			= 11;
+	optional string hosp_name				= 12;
+	optional string created					= 13;
+	optional string updated					= 14;	
+ 	optional int64 prescription_id 			= 15;
+	optional string presciption_created		= 16;
+	optional string presciption_updated		= 17;
+}
+//[END] PATIENT_EVENT SYNC MEDICINE
+
+//[START] PATIENT_EVENT SYNC VITALS
+message SyncHeight {
+	optional int64 sync_id 					= 1;
+    optional string datetime_record			= 2;
+	optional string height					= 3;
+	optional string created					= 4;		
+	optional string updated					= 5;
+	optional bool is_delete					= 6;
+}		
+
+message SyncWeight {
+	optional int64 sync_id 					= 1;
+    optional string datetime_record			= 2;
+	optional string weight					= 3;
+	optional string created					= 4;		
+	optional string updated					= 5;
+	optional bool is_delete					= 6;
+}
+
+message SyncTemperature {
+	optional int64 sync_id 					= 1;
+    optional string datetime_record			= 2;
+	optional string temperature				= 3;
+	optional string created					= 4;		
+	optional string updated					= 5;
+	optional bool is_delete					= 6;
+}
+
+message SyncHeartRate {
+	optional int64 sync_id 					= 1;
+    optional string datetime_record			= 2;
+	optional string heart_rate				= 3;
+	optional string created					= 4;		
+	optional string updated					= 5;
+	optional bool is_delete					= 6;
+}
+
+message SyncRespirationRate {
+	optional int64 sync_id 					= 1;
+    optional string datetime_record			= 2;
+	optional string respiration_rate		= 3;
+	optional string created					= 4;		
+	optional string updated					= 5;
+	optional bool is_delete					= 6;
+}
+
+message SyncBloodPressure {
+	optional int64 sync_id 					= 1;
+    optional string datetime_record			= 2;
+	optional string low_blood_pressure		= 3;
+	optional string high_blood_pressure		= 4;
+	optional string created					= 5;		
+	optional string updated					= 6;
+	optional bool is_delete					= 7;
+}
+//[END] PATIENT_EVENT SYNC VITALS
+
+message SyncReservation
+{
+	optional string bunho               	= 1;
+	optional string gwa                 	= 2;
+	optional string jinryo_pre_date     	= 3;
+	optional string jinryo_pre_time     	= 4;
+	optional string doctor              	= 5;
+	optional string input_gubun         	= 6;
+	optional string pkout1001           	= 7;
+	optional string reser_comment       	= 8;
+	optional string reser_gubun         	= 9;
+	optional string gubun               	= 10;
+	optional string jubsu_no            	= 11;
+	optional string chojae              	= 12;
+	optional string changgu             	= 13;
+	optional string res_gubun           	= 14;
+	optional string newrow              	= 15;
+	optional string row_state           	= 16;
+    optional string patient_name 			= 17;
+    optional string patient_name_furigana 	= 18;
+    optional string phone 					= 19;
+    optional string email 					= 20;
+    optional string birth 					= 21;
+    optional string sex 					= 22;
+}
+
+message WaitingPatientInfo
+{
+    optional string reservation_code        = 1;
+    optional string examination_date        =2;
+    optional string examination_time        =3;
+    optional string department_code         =4;
+    optional string department_name         =5;
+    optional string patient_name            =6;
+    optional string patient_code            =7;
+    optional string patient_name_kana       =8;
+    optional string doctor_code             =9;
+    optional string doctor_name             =10;
+    optional string sys_id                  =11;
+    optional string recept_time             =12;
+    optional string nawon_yn                 =13;
+}

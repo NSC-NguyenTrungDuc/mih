@@ -1,0 +1,36 @@
+using System;
+using IHIS.CloudConnector.Contracts.Models.System;
+using System.Collections.Generic;
+using ProtoBuf;
+
+namespace IHIS.CloudConnector.Contracts.Arguments.System
+{
+    [Serializable]
+    public class OcsEMRLoadComboInputTabArgs : IContractArgs
+    {
+        protected bool Equals(OcsEMRLoadComboInputTabArgs other)
+        {
+            return true;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((OcsEMRLoadComboInputTabArgs) obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return 0;
+        }
+
+        public OcsEMRLoadComboInputTabArgs() { }
+
+        public IExtensible GetRequestInstance()
+        {
+            return new IHIS.CloudConnector.Messaging.OcsEMRLoadComboInputTabRequest();
+        }
+    }
+}

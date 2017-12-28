@@ -1,0 +1,592 @@
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "SchsModelProto";
+
+// SchsSCH0201Q01ReserListItemInfo
+message SchsSCH0201Q01ReserListItemInfo {
+    optional string pksch0201 = 1;
+    optional string in_out_gubun = 2;
+    optional string fkocs = 3;
+    optional string bunho = 4;
+    optional string gwa = 5;
+    optional string gumsaja = 6;
+    optional string hangmog_code = 7;
+    optional string jundal_table = 8;
+    optional string jundal_part = 9;
+    optional string reser_date = 10;
+    optional string reser_time = 11;
+    optional string input_date = 12;
+    optional string input_id = 13;
+    optional string suname = 14;
+    optional string reser_yn = 15;
+    optional string cancel_yn = 16;        
+    optional string acting_date = 17;
+    optional string hope_date = 18;
+    optional string comments = 19;
+    optional string hangmog_name = 20;
+    optional string jundal_part_name = 21;
+    optional string gwa_name = 22;        
+    optional string ho_dong1 = 23;
+    optional string sex = 24;
+    optional string age = 25;
+    optional string birth = 26;
+    optional string input_gwa = 27;
+    optional string doctor_name = 28;
+    optional string upd_name = 29;
+    optional string portable_yn = 30;        
+}
+
+//SchsSCH0201Q02ReserList02ItemInfo
+message SchsSCH0201Q02ReserList02ItemInfo {
+    optional string pksch0201 = 1;
+    optional string in_out_gubun = 2;
+    optional string fkocs = 3;
+    optional string bunho = 4;
+    optional string gwa = 5;
+    optional string gumsaja = 6;
+    optional string hangmog_code = 7;
+    optional string jundal_table = 8;
+    optional string jundal_part = 9;
+    optional string reser_date = 10;
+    optional string reser_time = 11;
+    optional string input_date = 12;
+    optional string input_id = 13;
+    optional string suname = 14;
+    optional string reser_yn = 15;
+    optional string cancel_yn = 16;        
+    optional string acting_date = 17;
+    optional string hope_date = 18;
+    optional string comments = 19;
+    optional string hangmog_name = 20;        
+    optional string gwa_name = 22;                
+    optional string upd_name = 23;        
+}
+
+
+//SchsSCH0201Q02ReserList03ItemInfo
+message SchsSCH0201Q02ReserList03ItemInfo {            
+    optional string reser_date = 1;
+    optional string suname = 2;
+    optional string in_out_gubun = 3;
+    optional string bunho = 4;
+    optional string acting_date = 5;
+    optional string comments = 6;
+    optional string jundal_part_name = 7;
+    optional string gwa_name = 8;        
+    optional string upd_name = 9;
+    optional string cont_key = 10;               
+}
+
+
+//SchsSCH0201Q04PrartListItemInfo
+message SchsSCH0201Q04PrartListItemInfo{
+	optional string jundal_table = 1;
+	optional string jundal_part = 2;
+	optional string jundal_part_name = 3;
+}
+
+
+// SchsSCH0201Q04GetMonthReserListInfo
+message SchsSCH0201Q04GetMonthReserListInfo{
+	optional string holi_day = 1;
+	optional string reser_cnt = 2;
+	optional string inwon_cnt = 3;
+}
+
+
+//SchsSCH0201Q04ReserTimeListInfo
+message SchsSCH0201Q04ReserTimeListInfo{
+	optional string hangmog_code = 1;
+	optional string hangmog_name = 2;
+	optional string reser_date = 3;
+	optional string reser_time = 4;
+	optional string suname = 5;
+	optional string input_id = 6;
+	optional string in_out_gubun = 7;
+	optional string input_gwa = 8;
+	optional string sex = 9;
+	optional string age = 10;
+	optional string acting_date = 11;
+	optional string comments = 12;
+	optional string bunho = 13;
+	optional string doctor = 14;
+	optional string upd_name = 15;
+}
+
+
+//Outpatient inspection order list
+message SCH0201Q12OutpatientInspectionOrderListItemInfo {
+    optional string kizyun_date = 1;
+    optional string gwa = 2;
+    optional string gwa_name = 3;
+    optional string doctor = 4;
+    optional string doctor_name = 5;
+    optional string hangmog_code = 6;
+    optional string hangmog_name = 7;
+    optional string jundal_table = 8;
+    optional string jundal_part = 9;
+    optional string jundal_part_name = 10;
+    optional string reser_time = 11;
+    optional string reser_yn = 12;
+    optional string act_yn = 13;
+    optional string order_date = 14;
+    optional string pksch = 15;
+}
+
+message SCH0201Q12DistinctDoctorNameListInfo {
+    optional string doctor_name = 1;
+        
+}
+
+//Combo Gumsa List
+message ComboGumsaListItemInfo {
+    required string code = 1;
+    required string code_name = 2;
+    required string seq = 3;
+}
+
+
+//Combo GumsaPart List
+message ComboGumsaPartListItemInfo {
+        required string code = 1;
+        required string code_name = 2;
+}
+
+// ----- [START] SchsSCH0201U99 -----
+
+//Grd Order List
+message SchsSCH0201U99GrdOrderListInfo {
+    optional string hangmog_code = 1;
+    optional string hangmog_name = 2;
+    optional string jundal_table = 3;
+    optional string jundal_part = 4;
+    optional string jundal_part_name = 5;
+    optional string pksch0201 = 6;
+    optional string bunho = 7;
+    optional string suname = 8;
+    optional string gwa = 9;
+    optional string gwa_name = 10;
+    optional string doctor = 11;
+    optional string doctor_name = 12;
+    optional string order_date = 13;
+    optional string emergency = 14;
+    optional string reser_date = 15;      
+    optional string reser_time = 16;
+    optional string order_remark = 17;
+    optional string reser_yn = 18;
+    optional string pkout1001 = 19;
+    optional string group_ser = 20;
+    optional string out_hosp_code = 21;
+
+}
+
+message SchsSCH0201U99DateScheduleItemInfo{
+	optional string dayofmon = 1;
+	optional string check_yn = 2;
+	optional string inwon = 3;
+    optional string outwon = 4;
+}
+
+//Grd Time List
+message SchsSCH0201U99GrdTimeListInfo {
+    optional string from_time = 1;
+    optional string bunho = 2;
+    optional string suname = 3;
+    optional string hangmog_name = 4;
+    optional string doctor_name = 5;
+    optional string input_date = 6;
+    optional string order_date = 7;
+    optional string reser_date = 8;
+    optional string pksch0201 = 9;
+    optional string out_hosp_code = 10;
+    optional string yoyang_name = 11;
+}
+
+//Reser List
+message SchsSCH0201U99ReserListInfo {
+    optional string naewon_date = 1;
+    optional string jinryo_pre_time = 2;
+    optional string gwa_name = 3;
+    optional string doctor_name = 4;
+}
+
+//Layout Time List
+message SchsSCH0201U99LayoutTimeListInfo {
+   optional string reser_date  = 1;
+   optional string from_time  = 2;
+   optional string bunho  = 3;
+   optional string suname  = 4;
+   optional string hangmog_code  = 5;
+   optional string hangmog_name  = 6;
+   optional string gwa = 7;
+   optional string doctor_name  = 8;
+   optional string act_yn  = 9;
+}
+
+
+//Layout Common
+message SchsSCH0201U99LayoutCommonListInfo {
+	optional string doctor_name = 1;
+	optional string reser_yn = 2;
+}
+
+message SCH0201U99BookingDetailInfo
+{
+        optional string bunho                   = 1;
+        optional string suname                  = 2;
+        optional string birth                   = 3;
+        optional string sex                     = 4;
+        optional string hosp_code               = 5;
+        optional string yoyang_name             = 6;
+        optional string tel                     = 7;                                        
+        optional string reser_date              = 8;
+        optional string reser_time              = 9;
+        optional string booking_date            = 10;
+        optional string link_patient_flg        = 11;
+        optional string out_hosp_code           = 12;
+        optional string hangmog_code            = 13;
+        optional string link_emr_flg            = 14;
+}
+
+// Request info
+message SCH0201U99EMRLinkInfo
+{
+        optional string bunho                                  = 1;
+        optional string hosp_code_link                         = 2;
+}
+
+// ----- [END] SchsSCH0201U99 -----
+
+message SCH0109U00GrdMasterInfo{
+    optional string code_type = 1;
+    optional string code_type_name = 2;
+    optional string data_row_state = 3;
+}
+
+message SCH0109U00GrdDetailInfo{
+    optional string code_type = 1;
+    optional string code = 2;
+    optional string code_name = 3;
+    optional string code_name2 = 4;
+    optional string code2 = 5;
+    optional string data_row_state = 6;
+}
+
+message SCH0201Q05LayReserListInfo{
+    optional string pksch0201 = 1;
+    optional string in_out_gubun = 2;
+    optional string fkocs = 3;
+    optional string bunho = 4;
+    optional string gwa = 5;
+    optional string gumsaja = 6;
+    optional string hangmog_code = 7;
+    optional string jundal_table = 8;
+    optional string jundal_part = 9;
+    optional string reser_date = 10;
+    optional string reser_time = 11;
+    optional string input_date = 12;
+    optional string input_id = 13;
+    optional string suname = 14;
+    optional string reser_yn = 15;
+    optional string cancel_yn = 16;
+    optional string acting_date = 17;
+    optional string hope_date = 18;
+    optional string comments = 19;
+    optional string hangmog_name = 20;
+    optional string jundal_part_name = 21;
+    optional string gwa_name = 22;
+    optional string ho_dong1 = 23;
+    optional string sex = 24;
+    optional string age = 25;
+    optional string birth = 26;
+    optional string input_gwa = 27;
+    optional string doctor_name = 28;
+    optional string upd_name = 29;
+}
+
+message SCH3001U00GrdJukyongDateInfo{
+    optional string jukyong_date = 1;
+    optional string jundal_table = 2;
+    optional string jundal_part = 3;
+    optional string gumsaja = 4;
+    optional string old_jukyong_date = 5;
+    optional string mon_day = 6;
+    optional string tue_day = 7;
+    optional string wed_day = 8;
+    optional string thu_day = 9;
+    optional string fri_day = 10;
+    optional string sta_day = 11;
+    optional string sun_day = 12;
+    optional string data_row_state = 13;
+}
+
+message SCH3001U00GrdSCH0001Info{
+    optional string jundal_table = 1;
+    optional string jundal_part = 2;
+    optional string gumsaja = 3;
+    optional string gumsaja_name = 4;
+    optional string jundal_part_name = 5;
+    optional string gwa_gubun = 6;
+    optional string gumsa_time = 7;
+    optional string data_row_state = 8;
+}
+
+message SCH3001U00GrdSCH0002Info{
+    optional string jundal_table = 1;
+    optional string jundal_part = 2;
+    optional string gumsaja = 3;
+    optional string hangmog_code = 4;
+    optional string hangmog_name = 5;
+    optional string gumsa_time = 6;
+    optional string data_row_state = 7;
+}
+
+message SCH3001U00GrdSCH3000Info{
+    optional string jukyong_date = 1;
+    optional string jundal_table = 2;
+    optional string jundal_part = 3;
+    optional string gumsaja = 4;
+    optional string yoil_gubun = 5; 
+    optional string start_time = 6;
+    optional string end_time = 7;
+    optional string iwon = 8;
+    optional string add_iwon = 9;
+    optional string out_hosp_slot = 10;
+    optional string data_row_state = 11;
+}
+
+message SCH3001U00GrdSCH3100Info{
+    optional string jundal_table = 1;
+    optional string jundal_part = 2;
+    optional string gumsaja = 3;
+    optional string reser_date = 4;
+    optional string reser_yn = 5;
+    optional string data_row_state = 7;        
+}
+
+message SCH3001U00GrdSCH3101Info{
+    optional string jundal_table = 1;
+    optional string jundal_part = 2;
+    optional string gumsaja = 3;
+    optional string reser_date = 4;
+    optional string start_time = 5;
+    optional string end_time = 6;
+    optional string iwon = 7;
+    optional string add_iwon = 8;
+    optional string data_row_state = 9;    
+}
+
+message SCH3001U00XSavePerformerCase1Info{
+    optional string user_id = 1;
+    optional string jundal_table = 2;
+    optional string jundal_part = 3;
+    optional string gumsaja = 4;
+    optional string jundal_part_name = 5;
+    optional string gwa_gubun = 6;
+    optional string gumsa_time = 7;
+    optional string data_row_state = 8;
+}
+
+message SCH3001U00XSavePerformerCase2Info{
+     optional string user_id = 1;
+     optional string jukyong_date = 2;
+     optional string jundal_table = 3;
+     optional string jundal_part = 4;
+     optional string gumsaja = 5;
+     optional string yoil_gubun = 6;
+     optional string start_time = 7;
+     optional string end_time = 8;
+     optional string inwon = 9;
+     optional string add_inwon = 10;
+     optional string data_row_state = 11;
+}
+
+message SCH3001U00XSavePerformerCase3Info{
+     optional string user_id = 1;
+     optional string jundal_table = 2;
+     optional string jundal_part = 3;
+     optional string gumsaja = 4;
+     optional string hangmog_code = 5;
+     optional string hangmog_name = 6;
+     optional string gumsa_time = 7; 
+     optional string data_row_state = 8;
+}
+
+message SCH3001U00XSavePerformerCase4Info{
+     optional string user_id = 1;
+     optional string jundal_table = 2;
+     optional string jundal_part = 3;
+     optional string gumsaja = 4;    
+     optional string reser_date = 5; 
+     optional string reser_yn = 6;
+     optional string data_row_state = 7;
+}
+
+message SCH3001U00XSavePerformerCase5Info{
+     optional string user_id = 1;
+     optional string jundal_table = 2;
+     optional string jundal_part = 3;
+     optional string gumsaja = 4;    
+     optional string reser_date = 5; 
+     optional string start_time = 6; 
+     optional string end_time = 7;   
+     optional string inwon = 8;      
+     optional string add_inwon = 9; 
+     optional string data_row_state = 10;         
+}
+
+message SCH3001U00XSavePerformerCase6Info{
+     optional string user_id = 1;
+     optional string jukyong_date = 2;
+     optional string old_jukyong_date = 3;
+     optional string jundal_table = 4;
+     optional string jundal_part = 5;
+     optional string gumsaja = 6;
+     optional string data_row_state = 7;
+}
+
+message SCH3001U00XSavePerformerCase7Info{
+	optional string user_id = 1;
+	optional string jukyong_date = 2;
+	optional string jundal_table = 3;
+	optional string jundal_part = 4;
+	optional string gumsaja = 5;
+	optional string start_time = 6;
+	optional string end_time = 7;
+	optional string inwon = 8;
+	optional string add_inwon = 9;
+}
+
+message SCH0201Q12GrdListItemInfo
+{
+    optional string kizyun_date = 1;
+    optional string gwa = 2;
+    optional string gwa_name = 3;
+    optional string doctor = 4;
+    optional string doctor_name = 5;
+    optional string hangmog_code = 6;
+    optional string hangmog_name = 7;
+    optional string jundal_table = 8;
+    optional string jundal_part = 9;
+    optional string jundal_part_name = 10;
+    optional string reser_time = 11;
+    optional string reser_yn = 12;
+    optional string act_yn = 13;
+    optional string order_date = 14;
+    optional string pksch = 15;
+}
+
+message SCH0201Q12UpdateReserData {
+    optional string pkinj1002 = 1;
+    optional string fksch0201 = 2;
+    optional string reser_time = 3;
+}
+
+// [START] SCH0201U1
+
+message SCH0201U10GrdOrderItemInfo {
+	optional string pkkey = 1;
+	optional string gubun = 2;
+	optional string gwa = 3;
+	optional string gwa_name = 4;
+	optional string doctor = 5;
+	optional string doctor_name = 6;
+	optional string hangmog_code = 7;
+	optional string hangmog_name = 8;
+	optional string reser_time = 9;
+	optional string seq = 10;
+	optional string sort = 11;
+}
+
+// [END] SCH0201U1
+
+// [START] SCH0109U01
+message SCH0109U01GrdMasterInfo
+{
+	optional string code_type            = 1;
+	optional string code_type_name       = 2;
+	optional string admin_gubun          = 3;
+	optional string remark               = 4;
+	optional string row_state            = 5;
+}
+message SCH0109U01GrdDetailInfo
+{
+	optional string code_type          = 1;
+	optional string code               = 2;
+	optional string code_name          = 3;
+	optional string code_name2         = 4;
+	optional string code2              = 5;
+	optional string seq                = 6;
+	optional string row_state          = 7;
+}
+// [END] SCH0109U01
+
+// [START] SCH0201U10
+message SCH0201U10GrdOrderListInfo{
+	optional string pkkey = 1;
+	optional string gubun = 2;
+	optional string gwa = 3;
+	optional string gwa_name = 4;
+	optional string doctor = 5;
+	optional string doctor_name = 6;
+	optional string hangmog_code = 7;
+	optional string hangmog_name = 8;
+	optional string reser_time = 9;
+	optional string seq = 10;
+	optional string sort = 11;
+}
+message SCH0201U10LayReserInfo{
+	optional string gwa = 1;
+	optional string gwa_name = 2;
+	optional string bunho = 3;
+	optional string suname = 4;
+	optional string reser_date = 5;
+	optional string hangmog_name = 6;
+	optional string reser_time = 7;
+	optional string move_name = 8;
+	optional string reser_day = 9;
+	optional string age = 10;
+	optional string birth = 11;
+	optional string suname2 = 12;
+	optional string jundal_part = 13;
+	optional string reser_move_name = 14;
+	optional string hangmog_code = 15;
+	optional string jundal_table = 16;
+	optional string hope_date = 17;
+	optional string seq = 18;
+	optional string sort = 19;
+}
+// [END] SCH0201U10
+
+
+// [START] SCH0201U00
+message SCH0201U99BookingInfo {
+    optional string bunho_link = 1;
+    optional string hangmog_name = 2;
+    optional string reser_date = 3;
+    optional string reser_time = 4;
+    optional string move_comment = 5;                
+}
+// [END] SCH0201U00// [END] SCH0201U10
+
+message Schs0201U99InsertResultInfo
+{
+    optional string doctor  = 1;
+    optional string gwa   = 2;
+    optional string fkout1001  = 3;
+    optional string hosp_code    = 4;
+    optional string bunho    = 5;
+}
+
+message Schs0201U99CheckORCAEnvInfoInfo
+{
+ optional string if_code_gwa     =1;
+ optional string if_code_doctor  =2;
+ optional string orca_ip         =3;
+ optional string orca_user       =4;
+ optional string orca_password   =5;
+ optional string acc_type        =6;
+}
+message SCH0201U99ListFkschInfo {
+    optional string fkshc = 1;
+}
+

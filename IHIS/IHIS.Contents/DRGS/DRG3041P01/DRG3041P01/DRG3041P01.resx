@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="ImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="grdChulgoList.QuerySQL" xml:space="preserve">
+    <value>SELECT DISTINCT
+       B.BUNHO
+      ,A.JUBSU_DATE                       JUBSU_DATE
+      ,A.DRG_BUNHO                        DRG_BUNHO
+      ,A.SERIAL_V                         SERIAL_V
+      ,A.CHULGO_DATE                      CHULGO_DATE
+      ,A.CHULGO_TIME                      CHULGO_TIME
+      ,A.CHULGO_ID                        CHULGO_ID
+      ,A.IPGO_DATE                        IPGO_DATE
+      ,A.IPGO_TIME                        IPGO_TIME
+      ,A.IPGO_ID                          IPGO_ID
+      ,A.ACTING_DATE                      ACTING_DATE
+      ,A.ACTING_TIME                      ACTING_TIME
+      ,A.ACTING_ID                        ACTING_ID
+      ,A.HO_DONG                          HO_DONG
+      ,A.HO_CODE                          HO_CODE
+      ,FN_ADM_LOAD_USER_NAME(A.CHULGO_ID) CHULGO_ID_NAME
+      ,FN_ADM_LOAD_USER_NAME(A.IPGO_ID)   IPGO_ID_NAME
+      ,FN_ADM_LOAD_USER_NAME(A.ACTING_ID) ACTING_ID_NAME
+      ,C.SUNAME                           SUNAME
+      ,A.CHULGO_ALL_YN                    CHULGO_ALL_YN
+      ,B.MAGAM_GUBUN                      MAGAM_GUBUN
+     , A.SEQ                              SEQ
+      ,TO_CHAR(A.CHULGO_DATE , 'YYYYMMDD')||A.CHULGO_TIME 
+  FROM OUT0101 C
+      ,DRG3010 B
+      ,DRG3041 A
+ WHERE A.HOSP_CODE     = :f_hosp_code
+   AND A.CHULGO_DATE   = :f_chulgo_date 
+   AND A.BUNHO         LIKE NVL(:f_bunho,'%')
+   AND A.HO_DONG  LIKE :f_ho_dong ||'%'
+   AND B.JUBSU_DATE    = A.JUBSU_DATE
+   AND B.DRG_BUNHO     = A.DRG_BUNHO
+   AND B.HOSP_CODE     = A.HOSP_CODE
+   AND C.BUNHO         = B.BUNHO
+   AND C.HOSP_CODE     = B.HOSP_CODE
+ ORDER BY DRG_BUNHO
+        , SERIAL_V
+        , SEQ</value>
+  </data>
+  <data name="cbxBuseo.UserSQL" xml:space="preserve">
+    <value>SELECT '%'     BUSEO_CODE
+     , '全体'  BUSEO_NAME
+  FROM DUAL
+UNION
+SELECT A.BUSEO_CODE
+      ,A.BUSEO_NAME
+  FROM VW_GWA_NAME A
+ WHERE A.HOSP_CODE = FN_ADM_LOAD_HOSP_CODE()
+   AND TRUNC(SYSDATE) BETWEEN A.START_DATE AND A.END_DATE
+   AND A.BUSEO_GUBUN = '2'
+   ORDER BY BUSEO_CODE</value>
+  </data>
+  <data name="grdChulgoJUSAOrder.QuerySQL" xml:space="preserve">
+    <value>SELECT A.ORDER_DATE            ORDER_DATE
+      ,A.MIX_GROUP             MIX_GROUP
+      ,A.JAERYO_CODE           JAERYO_CODE
+      ,B.JAERYO_NAME           JAERYO_NAME
+      ,A.ORD_SURYANG           ORD_SURYANG
+      ,A.DV_TIME               DV_TIME
+      ,A.DV                    DV
+      ,A.NALSU                 NALSU
+      ,A.ORDER_DANUI           ORDER_DANUI
+      ,FN_OCS_LOAD_CODE_NAME('ORD_DANUI', A.ORDER_DANUI) DANUI_NAME
+      ,A.BOGYONG_CODE          BOGYONG_CODE
+      ,A.BOGYONG_CODE || ' ' || FN_OCS_LOAD_CODE_NAME('JUSA_SPD_GUBUN',NVL(A.JUSA_SPD_GUBUN,'0'))     BOGYONG_NAME
+      ,A.POWDER_YN             POWDER_YN
+      ,A.REMARK || ' ' || FN_DRG_LOAD_DRG0120_PATTERN('I', A.FKOCS2003)    REMARK
+      ,A.DV_1                  DV_1
+      ,A.DV_2                  DV_2
+      ,A.DV_3                  DV_3
+      ,A.DV_4                  DV_4
+      ,A.DV_5                  DV_5
+      ,A.HUBAL_CHANGE_YN       HUBAL_CHANGE_YN
+      ,A.PHARMACY              PHARMACY
+      ,A.DRG_PACK_YN           DRG_PACK_YN
+      , FN_OCS_LOAD_CODE_NAME('JUSA',NVL(A.JUSA,'0'))     JUSA_NAME 
+      ,D.SUNAME                SUNAME
+      ,A.DRG_BUNHO             DRG_BUNHO
+      ,A.JUBSU_DATE            JUBSU_DATE
+      ,A.BUNHO                 BUNHO
+      ,A.HO_DONG               HO_DONG
+     , A.DC_YN                 DC_YN        
+     , A.FKOCS2003             FKOCS2003 --30
+     , A.FKINP1001             FKINP1001 
+     , A.GROUP_SER             GROUP_SER
+     , LTRIM(TO_CHAR(A.DRG_BUNHO, '0000'))||TO_CHAR(A.ORDER_DATE,'YYYYMMDD')
+       ||LTRIM(TO_CHAR(A.GROUP_SER, '0000'))||NVL(A.MIX_GROUP, ' ')||LTRIM(TO_CHAR(A.FKOCS2003))
+  FROM DRG3011 E,
+       OUT0101 D,
+       DRG0120 C,
+       INV0110 B,
+       DRG3010 A
+ WHERE A.HOSP_CODE            = :f_hosp_code
+   AND A.JUBSU_DATE           = :f_jubsu_date
+   AND A.DRG_BUNHO            = :f_drg_bunho
+   AND A.BUNRYU1              = ('4')
+   AND B.HOSP_CODE            = A.HOSP_CODE
+   AND B.JAERYO_CODE          = A.JAERYO_CODE
+   AND C.HOSP_CODE         (+)= A.HOSP_CODE
+   AND C.BOGYONG_CODE      (+)= A.BOGYONG_CODE
+   AND D.HOSP_CODE            = A.HOSP_CODE
+   AND D.BUNHO                = A.BUNHO
+   AND E.HOSP_CODE            = A.HOSP_CODE
+   AND E.BUNHO                = A.BUNHO
+   AND E.FKOCS2003            = A.FKOCS2003 
+   AND E.GROUP_SER            = :f_serial_v
+ ORDER BY 33</value>
+  </data>
+  <data name="grdMagamOrder.QuerySQL" xml:space="preserve">
+    <value>SELECT A.ORDER_DATE            ORDER_DATE
+      ,A.MIX_GROUP             MIX_GROUP
+      ,A.JAERYO_CODE           JAERYO_CODE
+      ,B.JAERYO_NAME                                     JAERYO_NAME
+      ,A.ORD_SURYANG           ORD_SURYANG
+      ,A.DV_TIME               DV_TIME
+      ,A.DV                    DV
+      ,A.NALSU                 NALSU
+      ,A.ORDER_DANUI           ORDER_DANUI
+      ,FN_OCS_LOAD_CODE_NAME('ORD_DANUI', A.ORDER_DANUI) DANUI_NAME
+      ,A.BOGYONG_CODE          BOGYONG_CODE
+      ,C.BOGYONG_NAME          BOGYONG_NAME
+      ,A.POWDER_YN             POWDER_YN
+      ,A.REMARK || ' ' || FN_DRG_LOAD_DRG0120_PATTERN('I', A.FKOCS2003)    REMARK
+      ,A.DV_1                  DV_1
+      ,A.DV_2                  DV_2
+      ,A.DV_3                  DV_3
+      ,A.DV_4                  DV_4
+      ,A.DV_5                  DV_5
+      ,A.HUBAL_CHANGE_YN       HUBAL_CHANGE_YN
+      ,A.PHARMACY              PHARMACY
+      ,A.DRG_PACK_YN           DRG_PACK_YN
+      ,A.JUSA                  JUSA
+      ,D.SUNAME                SUNAME
+      ,A.DRG_BUNHO             DRG_BUNHO
+      ,A.JUBSU_DATE            JUBSU_DATE
+      ,A.BUNHO                 BUNHO
+      ,A.HO_DONG               HO_DONG         
+      ,LTRIM(TO_CHAR(A.DRG_BUNHO, '0000'))||TO_CHAR(A.ORDER_DATE,'yyyymmdd')
+  FROM OUT0101 D,
+       DRG0120 C,
+       INV0110 B,
+       DRG3010 A
+ WHERE A.JUBSU_DATE           = :f_jubsu_date
+   AND A.DRG_BUNHO            = :f_drg_bunho
+   AND A.HOSP_CODE            = :f_hosp_code
+   AND A.BUNRYU1              IN ('1','6')
+   AND B.JAERYO_CODE          = A.JAERYO_CODE
+   AND B.HOSP_CODE            = A.HOSP_CODE
+   AND C.BOGYONG_CODE      (+)= A.BOGYONG_CODE
+   AND C.HOSP_CODE         (+)= A.HOSP_CODE
+   AND D.BUNHO                = A.BUNHO
+   AND D.HOSP_CODE            = A.HOSP_CODE
+UNION ALL
+SELECT A.ORDER_DATE            ORDER_DATE
+      ,A.MIX_GROUP             MIX_GROUP
+      ,A.JAERYO_CODE           JAERYO_CODE
+      ,B.JAERYO_NAME           JAERYO_NAME
+      ,A.ORD_SURYANG           ORD_SURYANG
+      ,A.DV_TIME               DV_TIME
+      ,A.DV                    DV
+      ,A.NALSU                 NALSU
+      ,A.ORDER_DANUI           ORDER_DANUI
+      ,FN_OCS_LOAD_CODE_NAME('ORD_DANUI', A.ORDER_DANUI) DANUI_NAME
+      ,A.BOGYONG_CODE          BOGYONG_CODE
+      ,A.BOGYONG_CODE || ' ' || FN_OCS_LOAD_CODE_NAME('JUSA_SPD_GUBUN',NVL(A.JUSA_SPD_GUBUN,'0'))     BOGYONG_NAME
+      ,A.POWDER_YN             POWDER_YN
+      ,A.REMARK || ' ' || FN_DRG_LOAD_DRG0120_PATTERN('I', A.FKOCS2003)    REMARK
+      ,A.DV_1                  DV_1
+      ,A.DV_2                  DV_2
+      ,A.DV_3                  DV_3
+      ,A.DV_4                  DV_4
+      ,A.DV_5                  DV_5
+      ,A.HUBAL_CHANGE_YN       HUBAL_CHANGE_YN
+      ,A.PHARMACY              PHARMACY
+      ,A.DRG_PACK_YN           DRG_PACK_YN
+      ,A.JUSA                  JUSA
+      ,D.SUNAME                SUNAME
+      ,A.DRG_BUNHO             DRG_BUNHO
+      ,A.JUBSU_DATE            JUBSU_DATE
+      ,A.BUNHO                 BUNHO
+      ,A.HO_DONG               HO_DONG
+      ,LTRIM(TO_CHAR(A.DRG_BUNHO, '0000'))||TO_CHAR(A.ORDER_DATE,'yyyymmdd')
+  FROM OUT0101 D,
+       DRG0120 C,
+       INV0110 B,
+       DRG3010 A
+ WHERE A.JUBSU_DATE           = :f_jubsu_date
+   AND A.DRG_BUNHO            = :f_drg_bunho
+   AND A.HOSP_CODE            = :f_hosp_code
+   AND A.BUNRYU1              = ('4')
+   AND B.JAERYO_CODE          = A.JAERYO_CODE
+   AND B.HOSP_CODE            = A.HOSP_CODE
+   AND C.BOGYONG_CODE      (+)= A.BOGYONG_CODE
+   AND C.HOSP_CODE         (+)= A.HOSP_CODE
+   AND D.BUNHO                = A.BUNHO
+   AND D.HOSP_CODE            = A.HOSP_CODE
+ ORDER BY 29</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnCancel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhEAAQAIMPABRJpQJlzSmH4TuW6xl52Qtt0kql8lix+kqk8xp62TuW6kuk8ymI4mK5/xl62f//
+        /yH/C05FVFNDQVBFMi4wAwEBAAAh+QQBAAAPACwAAAAAEAAQAAAIXwAfCBwIoKBBAAMTEnRQIEAAhAoV
+        Amj4MGJCAAQoQrQIQECCghU5DmAAsSBHAwo2WnwA4AAClRwbHFgw4CBMljYHCCAQciXLnT1XdiRwU6LO
+        ohcN1PQpsKUBpAQNrgwIADs=
+</value>
+  </data>
+  <metadata name="imageListMixGroup.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>121, 17</value>
+  </metadata>
+  <data name="imageListMixGroup.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAy
+        GQAAAk1TRnQBSQFMAgEBFAEAAUQBAwFEAQMBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        AwABQAMAAWADAAEBAQABCAYAARgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
+        AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
+        AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
+        AWYDAAGZAwABzAIAATMDAAIzAgABMwFmAgABMwGZAgABMwHMAgABMwH/AgABZgMAAWYBMwIAAmYCAAFm
+        AZkCAAFmAcwCAAFmAf8CAAGZAwABmQEzAgABmQFmAgACmQIAAZkBzAIAAZkB/wIAAcwDAAHMATMCAAHM
+        AWYCAAHMAZkCAALMAgABzAH/AgAB/wFmAgAB/wGZAgAB/wHMAQABMwH/AgAB/wEAATMBAAEzAQABZgEA
+        ATMBAAGZAQABMwEAAcwBAAEzAQAB/wEAAf8BMwIAAzMBAAIzAWYBAAIzAZkBAAIzAcwBAAIzAf8BAAEz
+        AWYCAAEzAWYBMwEAATMCZgEAATMBZgGZAQABMwFmAcwBAAEzAWYB/wEAATMBmQIAATMBmQEzAQABMwGZ
+        AWYBAAEzApkBAAEzAZkBzAEAATMBmQH/AQABMwHMAgABMwHMATMBAAEzAcwBZgEAATMBzAGZAQABMwLM
+        AQABMwHMAf8BAAEzAf8BMwEAATMB/wFmAQABMwH/AZkBAAEzAf8BzAEAATMC/wEAAWYDAAFmAQABMwEA
+        AWYBAAFmAQABZgEAAZkBAAFmAQABzAEAAWYBAAH/AQABZgEzAgABZgIzAQABZgEzAWYBAAFmATMBmQEA
+        AWYBMwHMAQABZgEzAf8BAAJmAgACZgEzAQADZgEAAmYBmQEAAmYBzAEAAWYBmQIAAWYBmQEzAQABZgGZ
+        AWYBAAFmApkBAAFmAZkBzAEAAWYBmQH/AQABZgHMAgABZgHMATMBAAFmAcwBmQEAAWYCzAEAAWYBzAH/
+        AQABZgH/AgABZgH/ATMBAAFmAf8BmQEAAWYB/wHMAQABzAEAAf8BAAH/AQABzAEAApkCAAGZATMBmQEA
+        AZkBAAGZAQABmQEAAcwBAAGZAwABmQIzAQABmQEAAWYBAAGZATMBzAEAAZkBAAH/AQABmQFmAgABmQFm
+        ATMBAAGZATMBZgEAAZkBZgGZAQABmQFmAcwBAAGZATMB/wEAApkBMwEAApkBZgEAA5kBAAKZAcwBAAKZ
+        Af8BAAGZAcwCAAGZAcwBMwEAAWYBzAFmAQABmQHMAZkBAAGZAswBAAGZAcwB/wEAAZkB/wIAAZkB/wEz
+        AQABmQHMAWYBAAGZAf8BmQEAAZkB/wHMAQABmQL/AQABzAMAAZkBAAEzAQABzAEAAWYBAAHMAQABmQEA
+        AcwBAAHMAQABmQEzAgABzAIzAQABzAEzAWYBAAHMATMBmQEAAcwBMwHMAQABzAEzAf8BAAHMAWYCAAHM
+        AWYBMwEAAZkCZgEAAcwBZgGZAQABzAFmAcwBAAGZAWYB/wEAAcwBmQIAAcwBmQEzAQABzAGZAWYBAAHM
+        ApkBAAHMAZkBzAEAAcwBmQH/AQACzAIAAswBMwEAAswBZgEAAswBmQEAA8wBAALMAf8BAAHMAf8CAAHM
+        Af8BMwEAAZkB/wFmAQABzAH/AZkBAAHMAf8BzAEAAcwC/wEAAcwBAAEzAQAB/wEAAWYBAAH/AQABmQEA
+        AcwBMwIAAf8CMwEAAf8BMwFmAQAB/wEzAZkBAAH/ATMBzAEAAf8BMwH/AQAB/wFmAgAB/wFmATMBAAHM
+        AmYBAAH/AWYBmQEAAf8BZgHMAQABzAFmAf8BAAH/AZkCAAH/AZkBMwEAAf8BmQFmAQAB/wKZAQAB/wGZ
+        AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
+        AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
+        AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
+        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD//8A/wD/AP8ACgAGhQGh
+        CAABxAehCAABogeFCQABxwSmAqEHAAGGAWYBSgNRAkoBZgGGBgABhgfrARIBhgYAAYYGJAIjAWYGAAGm
+        AYYFTwFJAWUBpgUAAYYBUQJYBFkBWAFRAUoBZgQAAacBHAKZBJoBmQEcAW0BhgQAAYYCKwYsASsBIwFm
+        BAABhgFxB1YBTwFJAaYDAAGnAVgJWQFSAUoBhgIAAacBHAGZCJoBHAFtAYYCAAGiAisILAErASMBZgIA
+        AccBlwJWBpcBVgFQAUkBpgIAAa4LWQFRAWYBoQEADJoBHAHqAaEBAAwsASsBIwGFAQABiwGXAVYIlwFW
+        AU8BZgGhAQABegtZAVgBUQGGAQAMmgGZAXMBpwEAAVMMLAEqAaIBAAyXAVYBSQHHAQABegxZAVEBhgEA
+        DZoBcwGnAQABUwEyCywBKgGiAQABeAuXAVYBTwGmAQABegxZAVEBhgEADZoBHAGnAQABUwEyCywBKgGi
+        AQACeAqXAVYBUAGmAQABegxZAVEBhgEADZoBHAGnAQABUwEyCywBKgGiAQACeAqXAVYBUAGmAQABegxZ
+        AVEBhgEADZoBHAGnAQABUwEyCywBKgGiAQABmAF4CpcBVgFQAccBAAGaAXoLWQFSAYYBAAEaDJoBHAGn
+        AQACUwssASsBogEAAZgBfQqXAVYBlwHHAQABpwF6C1kBrgIAAhoLmgGTAacBAAF6AXUBMgosASsBhgEA
+        AacBngF4CpcBiwIAAacBmQF6CVkBWAGMAgABpwG8ARoKmgGoAgABpwGTAXUBMggsAU0BjAIAAacBuwGe
+        AXgHlwF4AZcBpwMAAacBGgGgAnoEWQJ6AYwEAAGnAfABGgiaAc8EAAGnAZMBdQdTATIBjAQAAacBuwGf
+        AZ4GeAGYAacFAAKnBaABmgGuAacGAAGnARsBwwUaAZoBpwYAAacBmgZ6AXUBhgYAAqcCCAOfAZgBrQGn
+        SAAHoQkAB6EIAAihCAAIoQcAAqcCzwKvAc8BrgKnBgAChgFnBGgBZwKGBgABpweMAWcBogYAAacBrgWL
+        A4YFAAGnAa8BtgHXBNgBtgGvAYYBpwQAAacBbgKOBLEBjgFuAWcBhgQAAacBggewAYIBZwGiBAABpwLP
+        Bq8BzwKGAwABpwG2AdcI2AG2Aa4BpwIAAacBbwmxAY4BZwGGAgABxAGCCbABggFnAaICAAGnAc8BrwjW
+        Ac8ChgIAAagL2AGvAacBoQEAAagLsQFvAYYBoQEADLABggGMAaEBAAHvAbUK1gHPAYYBoQEAAdcL2AG2
+        Ac8BoQEAAZQBFgqxAY4BaAHEAQANsAGCAcQBAAzWAa8BzwGhAQAB3gzYAa8BpwEAAZQMsQFuAcQBAA2w
+        AYIBxAEADdYBzwGhAQAC3gvYAa8BpwEAAZQMsQFuAcQBAA2wAYIBxAEADdYBzwGhAQAC3gvYAa8BpwEA
+        AZQMsQFuAcQBAA2wAYIBxAEADdYBzwGhAQAC3gvYAbUBpwEAApQLsQFuAcQBAA2wAYIBxAEAAdcM1gHP
+        AaEBAAHdAd4L2AG2AacBAAG3AZQLsQFvAcQBAAG2DLABggHEAQAB1wzWAc8BoQEAAacC3grYAagCAAGn
+        AbcBlAqxAYwCAAG3AbYMsAHEAQAB8AHXC9YBtQGnAQABpwHdAt4H2AHeAdcBpwIAAacBtgG3AZQGsQEW
+        ArEBqAIAAacCtgqwAagCAAGnAQkB1wnWAbUBpwMAAacB3QjeAd0BpwQAAacBtgG3CJQBqAQAAacCtgiw
+        AagEAAGnAQkB3QjWAacFAAKnAfMF3gHPAacGAAKnBb0BtwGoAacGAAGnAb0GtwG2AacGAAGnAfIG3QG8
+        AadIAAaFAaEIAAiFCAAIoQgACIUHAAGiAWABRARFAUQCYAYAAYYBSgYpARUBZgYAAYYH6gETAYYGAAGi
+        B0QBFQEEBQABogFFAkYERwFGAUUBRAFgBAABhgFLB1IBSwEpAWYEAAGnAesB7AbtAesBEwGGBAABogFE
+        AUUFaAFFAUQBFQEEAwABogJGCEcBRgFEAWACAAGGAVEJUgFRASkBZgIAAacB7AHtB5MBHAHsARIBhgIA
+        AcQBRQFoB28BbgFFARUBBAIAAYwLRwFGAWABoQEADFIBUQFKAYUBAAGTARwJkwEcAewBEwGhAQABbwFu
+        CW8BbgFFARUBhQEAARcLRwFGAUUBogEAAVgMUgFKAYUBAAyTAe0BbQGhAQAMbwFoAUQBhQEAAeMMRwFF
+        AaIBAAFYDFIBSwGGAQAMkwEcAesBoQEADG8BbgFEAYUBAAHjDEcBRQGiAQABWAxSAUsBhgEADJMBHAHr
+        AaEBAAxvAW4BRAGFAQAB4wxHAUUBogEAAVgMUgFLAYYBAAyTARwB6wGhAQAMbwFuAUQBhQEAAeMBFwtH
+        AUUBogEAAXkMUgFLAYYBAAyTARwB6wHEAQAMbwFuAUQBhQEAARYBFwtHAUYBogEAAXkBWAtSAVEBhgEA
+        AQcLkwEcAewBpwEAAZMLbwFuAUUBogEAAacBFgEXCkcBBQIAAZkBeQxSAYYBAAEaAQcLkwFuAacBAAKT
+        C28BRQHEAQABpwGTARYBFwlHAYcCAAGnAZkBeQpSAYYCAAGnAgcKkwGnAgABpwG2AZMJbwFuAYYDAAGn
+        AZMBFgHjBxcBhwQAAacBmQF6CFgBjAQAAacCBwiTAacEAAGnAbYBkwhvAYYFAAKnBZQBFgGMAcQGAAGn
+        ARoFmgF6AXkBhgYAAacBGga8AZMBpwYAAacBGgeTAadIAAbHAaEJAAehCQAHoQkABoUBoQgAAacFkAGL
+        AaYHAALHBYoDpgYAB8cBpgLHBgAChgVKARIBZgGGBQABpwGtAbMCugLbAboBuQGzAaYBxwQAAccBiwKt
+        BLMBrQGLAqYEAALHAawGzQHHAaYBxwQAAYYBbgJvBHQBbwFuARMBZgQAAa0BugLbBOgB2wG6AbMBpgMA
+        AccKswGLAqYCAAHHAawJzQGsAaYBxwIAAacCbwh1AW8BRAGGAgABrQPbBugB2wG6AbMBpgGhAQABxwuz
+        AYsBpgGhAQABxwvNAscBoQEAAYwBdAp1AW4BZgGhAQAB6AHbCegB2wG5AYsBxwEADLMBrQGKAaEBAAHO
+        DM0BxwGhAQAMdQFvAUsBogEADOgBugGzAccBAAG0DLMBiwGhAQAB1AzNAccBoQEAAZQLdQF0AUsBxAEA
+        AeEL6AHbAbMBxwEAAbQMswGLAaEBAAHUDM0BxwGhAQABlAt1AXQBSwHEAQAB4QvoAdsBswHHAQABtAyz
+        AYsBoQEAAdQMzQHHAaEBAAGUC3UBdAFLAcQBAAHhC+gB2wG5AccBAAG6DLMBrQHHAQAB1AHOC80BxwGh
+        AQABlAt1AXQBbgHEAQAC4QroAdsBuQHHAQABuwG0C7MBrQHHAQAB1QHUC80BrAGhAQABmgx1AW8BxAEA
+        AacC4QnoAdsBrQIAAacBuguzAccCAAGnAdUBzgrNAccCAAGnAZoLdQGMAwABzwLhCOgB1AMAAacB3AG6
+        CrMBxwIAAacC1QHOCc0BxwIAAacBtgGUCXUBdAGMAwABpwHPARkC4QToAeECrQQAAacBCQHcAbQFswK0
+        AacEAAGnAdYB1QHUBs4B1AHHBAABpwEHAZoBlAd1AYwGAAGnAhkE4QGtBwACpwIJBLsBrQGnBgACpwHc
+        BdUBpwHHBgACpwG9BZoBqAGnSAAGhQGhCQAGhQGhCQAHoQkAB6EHAAGmAWUGSQJlBgABhgFmBiIBZgFl
+        BgABxwGmBmsCpgcAAccBrAOtAawBigGmBgABpgJJBk8BSQENAWUEAAGGAikFAwIpASIBZQQAAccBigEG
+        BZACBgFlAaYEAAHHAawCswTUAbMBrQGmAccDAAGmAUkJTwFJAQ0BZQIAAYYBKQkDASkBIgFlAgABxwqQ
+        AQYBZQGmAwABxwHUB9oB1AGtAaYDAAGGC08BSQFlAaEBAAFmCwMBKQFmAaEBAAHHC5ABBgGmAaEBAAHH
+        AdQJ2gHUAa0BxwGhAQANTwFJAYUBAAFRDAMBKAGFAQABswyQAWsBoQEAAdQL2gGzAYoBoQEAAXIMTwFJ
+        AYUBAAFRDAMBKQGFAQABuQyQAQYBoQEADNoB1AGtAaEBAAFyDE8BSQGFAQABUQwDASkBhQEAAbkMkAEG
+        AaEBAAHbDNoBswHHAQABcgxPAUkBhQEAAVEMAwEpAYUBAAG5DJABBgGhAQAB2wzaAbMBxwEAAXIMTwFJ
+        AYUBAAJRCwMBKQGFAQABugyQAQYBxwEAAtsL2gGzAccBAAGXAXILTwFJAaYBAAF4AVELAwEpAaYBAAK6
+        DJABxwEAAdwB2wvaAbMBxwEAAacBlwtPAaYCAAGnAXMBUQoDAWYCAAGnAboLkAHHAgABpwHcAdsJ2gHU
+        AccCAAGnAfcBlwpPAaYCAAGnARwBcwFRCQMBhgIAAacBuwG6CpABxwMAAc4B3AHbCNoB1AQAAacB9wGY
+        AXIFTwFyAVABhgQAAacBHAF5CFEBhgQAAacCuwG6BZABuQGzAccEAAGnAeYB3APbAdoD2wHOAccFAAKn
+        BpgBiwHHBgACpwGZARwEeQGGAacGAAKnBbsBugGtAccHAAGnBdwB2wGtRAABQgFNAT4HAAE+AwABKAMA
+        AUADAAFgAwABAQEAAQEGAAEDFgAD/4EAAfgBDwHwAQ8B8AEPAfgBDwHgAQcB4AEHAeABBwHgAQcBwAED
+        AcABAwHAAQMBwAEDAYABAQGAAQEBgAEBAYABAQGAAQABgAEAAYABAAGAAQABgAEAAYABAAGAAQABgAEA
+        AYABAAGAAQABgAEAAYABAAGAAQABgAEAAYABAAGAAQABgAEAAYABAAGAAQABgAEAAYABAAGAAQABgAEA
+        AYABAAGAAQABgAEAAYABAAGAAQABgAEBAYABAAGAAQABgAEBAYABAQGAAQEBgAEBAYABAQHAAQMBwAED
+        AcABAwHAAQMB4AEHAeABBwHgAQcB4AEHCP8B+AEPAfgBDwHwAQ8B8AEPAeABBwHgAQcB4AEHAeABBwHA
+        AQMBwAEDAcABAwHAAQMBgAEBAYABAQGAAQEBgAEBAYABAAGAAQABgAEAAYABAAGAAQABgAEAAYABAAGA
+        AQABgAEAAYABAAGAAQABgAEAAYABAAGAAQABgAEAAYABAAGAAQABgAEAAYABAAGAAQABgAEAAYABAAGA
+        AQABgAEAAYABAAGAAQABgAEAAYABAAGAAQEBgAEBAYABAAGAAQABgAEBAYABAQGAAQEBgAEBAcABAwHA
+        AQMBwAEDAcABAwHgAQcB4AEHAeABBwHgAQcI/wH4AQ8B8AEPAfABDwHwAQ8B4AEHAeABBwHgAQcB4AEH
+        AcABAwHAAQMBwAEDAcABAwGAAQEBgAEBAYABAQGAAQEBgAEAAYABAAGAAQABgAEAAYABAAGAAQABgAEA
+        AYABAAGAAQABgAEAAYABAAGAAQABgAEAAYABAAGAAQABgAEAAYABAAGAAQABgAEAAYABAAGAAQABgAEA
+        AYABAAGAAQABgAEAAYABAAGAAQABgAEAAYABAQGAAQABgAEAAYABAAGAAQEBgAEBAYABAQGAAQEBwAED
+        AcABAwHAAQMBwAEDAeABBwHgAQcB4AEHAeABBwj/AfgBDwH4AQ8B+AEPAfgBDwHwAQ8B4AEHAeABBwHg
+        AQcBwAEDAcABAwHAAQMBwAEDAcABAwGAAQEBgAEBAYABAQGAAQABgAEAAYABAAGAAQABgAEAAYABAAGA
+        AQABgAEAAYABAAGAAQABgAEAAYABAAGAAQABgAEAAYABAAGAAQABgAEAAYABAAGAAQABgAEAAYABAAGA
+        AQABgAEAAYABAAGAAQABgAEAAYABAAGAAQABgAEBAYABAQGAAQEBgAEBAcABAwGAAQEBgAEBAYABAQHA
+        AQMBwAEDAcABAwHAAQMB8AEPAeABBwHgAQcB4AEHCP8B+AEPAfgBDwH4AQ8B+AEPAeABBwHgAQcB4AEH
+        AfABDwHAAQMBwAEDAcABAwHAAQMBgAEBAYABAQGAAQEBwAEDAYABAAGAAQABgAEAAYABAAGAAQABgAEA
+        AYABAAGAAQABgAEAAYABAAGAAQABgAEAAYABAAGAAQABgAEAAYABAAGAAQABgAEAAYABAAGAAQABgAEA
+        AYABAAGAAQABgAEAAYABAAGAAQABgAEAAYABAAGAAQEBgAEBAYABAQGAAQEBgAEBAYABAQGAAQEBwAED
+        AcABAwHAAQMBwAEDAcABAwHgAQcB4AEHAeABBwHwAQ8I/ws=
+</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>32</value>
+  </metadata>
+</root>

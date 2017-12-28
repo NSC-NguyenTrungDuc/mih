@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <DebugType>
+    </DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AF7635AF-3438-4410-AF44-71509B15C4F3}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>NURO.OUT0101U02</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>IHIS.NURO</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CsvHelper, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ihis\NURO\CsvHelper.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v11.1.Core, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ihis\OCSO\DevExpress.Charts.v11.1.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ihis\OCSO\DevExpress.Data.v11.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v11.1.Core, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ihis\OCSO\DevExpress.PivotGrid.v11.1.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ihis\OCSO\DevExpress.Printing.v11.1.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v11.1.Core, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ihis\OCSO\DevExpress.RichEdit.v11.1.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ihis\OCSO\DevExpress.Utils.v11.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v11.1, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ihis\OCSO\DevExpress.XtraCharts.v11.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ihis\OCSO\DevExpress.XtraEditors.v11.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v11.1, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ihis\OCSO\DevExpress.XtraPivotGrid.v11.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.1, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ihis\OCSO\DevExpress.XtraReports.v11.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v11.1, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ihis\OCSO\DevExpress.XtraRichEdit.v11.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.BizObjects, Version=1.0.5686.25217, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ihis\IHIS.BizObjects.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.CloudConnector, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ihis\IHIS.CloudConnector.dll</HintPath>
+    </Reference>
+    <Reference Include="IHIS.Controls, Version=1.0.5686.26042, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ihis\IHIS.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.DbControls, Version=1.0.5686.25215, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ihis\IHIS.DbControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.Forms, Version=1.0.5686.26043, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ihis\IHIS.Forms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.Service, Version=1.0.5686.26041, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ihis\IHIS.Service.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.Win32, Version=1.0.5686.26042, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ihis\IHIS.Win32.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.CloudConnector">
+      <HintPath>C:\IHISIHIS.CloudConnector.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.ComFunc">
+      <HintPath>C:\IHIS\IHIS.ComFunc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.X.Magic, Version=1.0.5686.26041, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ihis\IHIS.X.Magic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ihis\Ionic.Zip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NURO.Lib, Version=1.0.5812.25375, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ihis\NURO\NURO.Lib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="protobuf-net, Version=2.0.0.668, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\protobuf-net.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataFile.cs" />
+    <Compile Include="FormErr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormErr.Designer.cs">
+      <DependentUpon>FormErr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExportPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExportPatient.Designer.cs">
+      <DependentUpon>FormExportPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportPatient.Designer.cs">
+      <DependentUpon>FormImportPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OUT0101U02.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.en.Designer.cs">
+      <DependentUpon>Resources.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowPWD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowPWD.Designer.cs">
+      <DependentUpon>ShowPWD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraRpPrintPatient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraRpPrintPatient.Designer.cs">
+      <DependentUpon>XtraRpPrintPatient.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormErr.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormErr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormErr.ja-JP.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormErr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormErr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormErr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormErr.vi-VN.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormErr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExportPatient.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormExportPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExportPatient.ja-JP.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormExportPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExportPatient.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormExportPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExportPatient.vi-VN.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormExportPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportPatient.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormImportPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportPatient.ja-JP.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormImportPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportPatient.resx">
+      <DependentUpon>FormImportPatient.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportPatient.vi-VN.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormImportPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OUT0101U02.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OUT0101U02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OUT0101U02.ja-JP.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OUT0101U02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OUT0101U02.resx">
+      <DependentUpon>OUT0101U02.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OUT0101U02.vi-VN.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OUT0101U02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.en.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ja-JP.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.vi-VN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowPWD.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShowPWD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowPWD.ja-JP.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShowPWD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowPWD.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShowPWD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowPWD.vi-VN.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShowPWD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraRpPrintPatient.en.resx">
+      <DependentUpon>XtraRpPrintPatient.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraRpPrintPatient.ja-JP.resx">
+      <DependentUpon>XtraRpPrintPatient.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraRpPrintPatient.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>XtraRpPrintPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraRpPrintPatient.vi-VN.resx">
+      <DependentUpon>XtraRpPrintPatient.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>$(SolutionDir)..\IHISContentsBuild.bat PRE  $(SolutionDir)..\ $(TargetDir) $(SolutionName) $(TargetFileName)</PreBuildEvent>
+    <PostBuildEvent>$(SolutionDir)..\IHISContentsBuild.bat POST  $(SolutionDir)..\ $(TargetDir) $(SolutionName) $(TargetFileName)</PostBuildEvent>
+  </PropertyGroup>
+</Project>

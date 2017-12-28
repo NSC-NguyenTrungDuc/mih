@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="cboMasterType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 21</value>
+  </data>
+  <data name="btnList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 34</value>
+  </data>
+  <data name="cboMasterType.UserSQL" xml:space="preserve">
+    <value>-- Get request target code
+SELECT B.CODE
+     , B.CODE_NAME
+  FROM CPL0109 B
+     , CPL0108 A
+ WHERE A.HOSP_CODE = FN_ADM_LOAD_HOSP_CODE()
+   AND A.CODE_TYPE = '06'
+   --
+   AND B.HOSP_CODE = A.HOSP_CODE
+   AND B.CODE_TYPE = A.CODE_TYPE
+ ORDER BY
+       B.CODE</value>
+  </data>
+  <data name="&gt;&gt;xLabel1.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="&gt;&gt;progBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtWorkSheet.Name" xml:space="preserve">
+    <value>txtWorkSheet</value>
+  </data>
+  <data name="&gt;&gt;lbFileDirectory.Name" xml:space="preserve">
+    <value>lbFileDirectory</value>
+  </data>
+  <data name="&gt;&gt;xPanel5.Parent" xml:space="preserve">
+    <value>xPanel1</value>
+  </data>
+  <data name="&gt;&gt;cboMasterType.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="&gt;&gt;btnSearchFile.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="xLabel1.Text" xml:space="preserve">
+    <value>マスタ種類</value>
+  </data>
+  <data name="txtFileText.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="&gt;&gt;xComboItem4.Type" xml:space="preserve">
+    <value>IHIS.Framework.XComboItem, IHIS.Controls, Version=1.0.6206.24376, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="lbFileDirectory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 32</value>
+  </data>
+  <data name="cboMasterType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>289, 7</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dataGridView.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;xComboItem3.Name" xml:space="preserve">
+    <value>xComboItem3</value>
+  </data>
+  <data name="xComboItem6.DisplayItem" xml:space="preserve">
+    <value>Medis master</value>
+  </data>
+  <data name="xPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="progBar.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="openFileDialog.Filter" xml:space="preserve">
+    <value>Excel File|*.xls;*.xlsx|모든 파일|*.*</value>
+  </data>
+  <data name="&gt;&gt;txtFileText.Name" xml:space="preserve">
+    <value>txtFileText</value>
+  </data>
+  <data name="&gt;&gt;xLabel3.Type" xml:space="preserve">
+    <value>IHIS.Framework.XLabel, IHIS.Controls, Version=1.0.6206.24376, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="lbFileDirectory.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>IHIS.Framework.XScreen, IHIS.Forms, Version=1.0.6206.24380, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="xLabel3.Text" xml:space="preserve">
+    <value>処理日付</value>
+  </data>
+  <data name="txtFileDirectory.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog.Name" xml:space="preserve">
+    <value>openFileDialog</value>
+  </data>
+  <data name="&gt;&gt;txtFileText.Parent" xml:space="preserve">
+    <value>xPanel5</value>
+  </data>
+  <data name="xLabel3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="btnSearchFile.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="txtWorkSheet.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="xLabel2.Text" xml:space="preserve">
+    <value>緊急</value>
+  </data>
+  <data name="txtWorkSheet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>740, 32</value>
+  </data>
+  <data name="xPanel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1268, 537</value>
+  </data>
+  <data name="xPanel3.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;xPanel3.Parent" xml:space="preserve">
+    <value>xPanel1</value>
+  </data>
+  <data name="xPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1268, 63</value>
+  </data>
+  <data name="&gt;&gt;xLabel2.Type" xml:space="preserve">
+    <value>IHIS.Framework.XLabel, IHIS.Controls, Version=1.0.6206.24376, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btnList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1010, 1</value>
+  </data>
+  <data name="&gt;&gt;lbFileDirectory.Type" xml:space="preserve">
+    <value>IHIS.Framework.XLabel, IHIS.Controls, Version=1.0.6206.24376, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ImageList.Name" xml:space="preserve">
+    <value>ImageList</value>
+  </data>
+  <data name="&gt;&gt;xComboItem6.Type" xml:space="preserve">
+    <value>IHIS.Framework.XComboItem, IHIS.Controls, Version=1.0.6206.24376, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtFileDirectory.Type" xml:space="preserve">
+    <value>IHIS.Framework.XTextBox, IHIS.Controls, Version=1.0.6206.24376, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="lbWorkSheet.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="btnList.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ckbEm.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;xPanel2.Parent" xml:space="preserve">
+    <value>xPanel1</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>CPLMASTERUPLOADER</value>
+  </data>
+  <data name="&gt;&gt;xLabel1.Type" xml:space="preserve">
+    <value>IHIS.Framework.XLabel, IHIS.Controls, Version=1.0.6206.24376, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="cboMasterType.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+  <data name="&gt;&gt;xPanel5.Type" xml:space="preserve">
+    <value>IHIS.Framework.XPanel, IHIS.Controls, Version=1.0.6206.24376, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="lbWorkSheet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>639, 32</value>
+  </data>
+  <data name="&gt;&gt;progBar.Parent" xml:space="preserve">
+    <value>xPanel3</value>
+  </data>
+  <data name="&gt;&gt;btnList.Name" xml:space="preserve">
+    <value>btnList</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnSearchFile.Text" xml:space="preserve">
+    <value>ファイル検索</value>
+  </data>
+  <data name="&gt;&gt;xLabel2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="xLabel3.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;xPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="xPanel5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;txtWorkSheet.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="lbFileDirectory.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="cboMasterType.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="lbFileDirectory.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtFileDirectory.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xPanel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 600</value>
+  </data>
+  <data name="&gt;&gt;xLabel1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;progBar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cboMasterType.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xPanel5.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="xComboItem1.DisplayItem" xml:space="preserve">
+    <value>Analyte code</value>
+  </data>
+  <data name="&gt;&gt;txtFileDirectory.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="txtWorkSheet.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="btnSearchFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 23</value>
+  </data>
+  <data name="&gt;&gt;txtFileDirectory.Name" xml:space="preserve">
+    <value>txtFileDirectory</value>
+  </data>
+  <data name="&gt;&gt;ImageList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="xPanel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 63</value>
+  </data>
+  <data name="&gt;&gt;xPanel3.Type" xml:space="preserve">
+    <value>IHIS.Framework.XPanel, IHIS.Controls, Version=1.0.6206.24376, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbFileDirectory.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="dtpProcDate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="&gt;&gt;btnSearchFile.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="xComboItem3.DisplayItem" xml:space="preserve">
+    <value>Specimen code</value>
+  </data>
+  <data name="btnSearchFile.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="progBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 7</value>
+  </data>
+  <data name="dtpProcDate.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="xPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="dtpProcDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 21</value>
+  </data>
+  <data name="&gt;&gt;dataGridView.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtWorkSheet.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;xPanel2.Type" xml:space="preserve">
+    <value>IHIS.Framework.XPanel, IHIS.Controls, Version=1.0.6206.24376, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtFileText.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtWorkSheet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 21</value>
+  </data>
+  <data name="&gt;&gt;xComboItem1.Name" xml:space="preserve">
+    <value>xComboItem1</value>
+  </data>
+  <data name="&gt;&gt;dtpProcDate.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="txtFileText.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Both</value>
+  </data>
+  <data name="&gt;&gt;dataGridView.Name" xml:space="preserve">
+    <value>dataGridView</value>
+  </data>
+  <data name="lbFileDirectory.Text" xml:space="preserve">
+    <value>FILE経路</value>
+  </data>
+  <data name="xPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dtpProcDate.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;btnSearchFile.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButton, IHIS.Controls, Version=1.0.6206.24376, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="xPanel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;cboMasterType.Name" xml:space="preserve">
+    <value>cboMasterType</value>
+  </data>
+  <data name="&gt;&gt;xComboItem3.Type" xml:space="preserve">
+    <value>IHIS.Framework.XComboItem, IHIS.Controls, Version=1.0.6206.24376, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="lbFileDirectory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 20</value>
+  </data>
+  <data name="&gt;&gt;xComboItem2.Name" xml:space="preserve">
+    <value>xComboItem2</value>
+  </data>
+  <data name="xLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 7</value>
+  </data>
+  <data name="&gt;&gt;cboMasterType.Type" xml:space="preserve">
+    <value>IHIS.Framework.XDictComboBox, IHIS.DbControls, Version=1.0.6206.24378, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xPanel5.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbWorkSheet.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;btnSearchFile.Name" xml:space="preserve">
+    <value>btnSearchFile</value>
+  </data>
+  <data name="&gt;&gt;txtFileDirectory.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="&gt;&gt;lbFileDirectory.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="txtFileDirectory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>92, 32</value>
+  </data>
+  <data name="xPanel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1280, 650</value>
+  </data>
+  <data name="xComboItem2.DisplayItem" xml:space="preserve">
+    <value>Identification code</value>
+  </data>
+  <data name="xPanel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1268, 38</value>
+  </data>
+  <data name="txtFileText.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="xLabel3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;btnList.Parent" xml:space="preserve">
+    <value>xPanel3</value>
+  </data>
+  <data name="xPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cboMasterType.MaxDropDownItems" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="lbWorkSheet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 20</value>
+  </data>
+  <data name="xLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 20</value>
+  </data>
+  <data name="&gt;&gt;xComboItem4.Name" xml:space="preserve">
+    <value>xComboItem4</value>
+  </data>
+  <data name="&gt;&gt;ckbEm.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="&gt;&gt;xPanel5.Name" xml:space="preserve">
+    <value>xPanel5</value>
+  </data>
+  <data name="xPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1270, 640</value>
+  </data>
+  <data name="&gt;&gt;lbWorkSheet.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="&gt;&gt;xPanel3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell17.Name" xml:space="preserve">
+    <value>xEditGridCell17</value>
+  </data>
+  <data name="&gt;&gt;xLabel3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="xLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1184, 10</value>
+  </data>
+  <data name="&gt;&gt;xLabel3.Name" xml:space="preserve">
+    <value>xLabel3</value>
+  </data>
+  <data name="&gt;&gt;ckbEm.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="progBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>945, 23</value>
+  </data>
+  <data name="&gt;&gt;xComboItem5.Name" xml:space="preserve">
+    <value>xComboItem5</value>
+  </data>
+  <data name="&gt;&gt;txtWorkSheet.Type" xml:space="preserve">
+    <value>IHIS.Framework.XTextBox, IHIS.Controls, Version=1.0.6206.24376, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtFileText.Type" xml:space="preserve">
+    <value>IHIS.Framework.XTextBox, IHIS.Controls, Version=1.0.6206.24376, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="txtFileText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>218, 158</value>
+  </data>
+  <data name="xComboItem5.DisplayItem" xml:space="preserve">
+    <value>Result general code</value>
+  </data>
+  <data name="&gt;&gt;xPanel2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="txtFileDirectory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>451, 21</value>
+  </data>
+  <data name="lbWorkSheet.Text" xml:space="preserve">
+    <value>シート名</value>
+  </data>
+  <data name="dataGridView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1266, 535</value>
+  </data>
+  <data name="ckbEm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 11</value>
+  </data>
+  <data name="btnSearchFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>543, 31</value>
+  </data>
+  <data name="&gt;&gt;lbWorkSheet.Name" xml:space="preserve">
+    <value>lbWorkSheet</value>
+  </data>
+  <data name="ckbEm.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;xComboItem6.Name" xml:space="preserve">
+    <value>xComboItem6</value>
+  </data>
+  <data name="&gt;&gt;xPanel1.Type" xml:space="preserve">
+    <value>IHIS.Framework.XPanel, IHIS.Controls, Version=1.0.6206.24376, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="progBar.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;xLabel2.Name" xml:space="preserve">
+    <value>xLabel2</value>
+  </data>
+  <data name="&gt;&gt;xPanel3.Name" xml:space="preserve">
+    <value>xPanel3</value>
+  </data>
+  <data name="ckbEm.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1170, 17</value>
+  </data>
+  <data name="xLabel2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnList.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="dataGridView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;lbWorkSheet.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btnList.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButtonList, IHIS.BizObjects, Version=1.0.6206.24383, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xComboItem4.DisplayItem" xml:space="preserve">
+    <value>Methodology code</value>
+  </data>
+  <data name="xLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 21</value>
+  </data>
+  <data name="xLabel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="&gt;&gt;progBar.Name" xml:space="preserve">
+    <value>progBar</value>
+  </data>
+  <data name="&gt;&gt;xLabel1.Name" xml:space="preserve">
+    <value>xLabel1</value>
+  </data>
+  <data name="&gt;&gt;xPanel2.Name" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="txtFileText.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="ckbEm.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="&gt;&gt;dtpProcDate.Name" xml:space="preserve">
+    <value>dtpProcDate</value>
+  </data>
+  <data name="dtpProcDate.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;lbWorkSheet.Type" xml:space="preserve">
+    <value>IHIS.Framework.XLabel, IHIS.Controls, Version=1.0.6206.24376, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xComboItem1.Type" xml:space="preserve">
+    <value>IHIS.Framework.XComboItem, IHIS.Controls, Version=1.0.6206.24376, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xPanel1.Name" xml:space="preserve">
+    <value>xPanel1</value>
+  </data>
+  <data name="lbWorkSheet.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 5</value>
+  </data>
+  <data name="dataGridView.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;xComboItem5.Type" xml:space="preserve">
+    <value>IHIS.Framework.XComboItem, IHIS.Controls, Version=1.0.6206.24376, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ckbEm.Type" xml:space="preserve">
+    <value>IHIS.Framework.XCheckBox, IHIS.Controls, Version=1.0.6206.24376, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="xLabel2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="&gt;&gt;xLabel3.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="dtpProcDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>92, 7</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell17.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.6206.24378, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dataGridView.Parent" xml:space="preserve">
+    <value>xPanel5</value>
+  </data>
+  <data name="&gt;&gt;ckbEm.Name" xml:space="preserve">
+    <value>ckbEm</value>
+  </data>
+  <data name="ckbEm.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="xLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;xComboItem2.Type" xml:space="preserve">
+    <value>IHIS.Framework.XComboItem, IHIS.Controls, Version=1.0.6206.24376, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dataGridView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="xLabel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 7</value>
+  </data>
+  <data name="&gt;&gt;dtpProcDate.Type" xml:space="preserve">
+    <value>IHIS.Framework.XDatePicker, IHIS.Controls, Version=1.0.6206.24376, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xLabel2.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="&gt;&gt;btnList.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtFileText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1036, 350</value>
+  </data>
+  <data name="xLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="xLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 25</value>
+  </data>
+  <data name="xLabel1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>49</value>
+  </metadata>
+  <metadata name="ImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="openFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>121, 17</value>
+  </metadata>
+</root>

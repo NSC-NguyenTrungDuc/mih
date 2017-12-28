@@ -1,0 +1,33 @@
+option java_package = "nta.med.service.orca.proto";
+option java_outer_classname = "ShunouModelProto";
+
+message PatientInformation {
+    required string patient_id = 1;
+    required string whole_name = 2;
+    required string whole_name_in_kana = 3;
+    required string birth_date = 4;
+    required string sex = 5;
+}
+
+message IncomeInformationDetail {
+	required string requested_amount = 1;
+	required string paid_amount = 2;
+	required string response_date = 3;
+	required string status = 4;
+	required string payment_method = 5;
+}
+
+message IncomeInformation {
+	required string invoice_number = 1;
+	required string department_name = 2;
+	required string department_code = 3;
+	required string insuarance = 4;					
+	required string percent_of_payment = 5;			
+	required string order_date = 6;					
+	required string date_of_examination = 7; 		
+	required string status = 8;
+	required string requested_amount = 9;			
+	required string paid_amount = 10;				
+	repeated IncomeInformationDetail income_information_detail = 11;
+}
+

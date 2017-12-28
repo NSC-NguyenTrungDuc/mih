@@ -1,0 +1,127 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2DF45858-6096-440D-AABC-1E7FE260525D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IHIS.OCSO</RootNamespace>
+    <AssemblyName>OCSO.OCS1003Q08</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IHIS.BizObjects, Version=1.0.4157.29235, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\IHIS\bin\IHIS.BizObjects.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.Controls, Version=1.0.4157.29230, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\IHIS\bin\IHIS.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.DbControls, Version=1.0.4157.29232, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\IHIS\bin\IHIS.DbControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.Forms, Version=1.0.4270.16628, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\IHIS\bin\IHIS.Forms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.Service, Version=1.0.4157.29228, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\IHIS\bin\IHIS.Service.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.Win32, Version=1.0.4157.29228, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\IHIS\bin\IHIS.Win32.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.CloudConnector"><HintPath>C:\IHISIHIS.CloudConnector.dll</HintPath><Private>False</Private></Reference>
+<Reference Include="IHIS.ComFunc">
+<HintPath>C:\IHIS\IHIS.ComFunc.dll</HintPath><Private>False</Private></Reference> <Reference Include="IHIS.X.Magic, Version=1.0.2510.24895, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\IHIS\bin\IHIS.X.Magic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="OCS.Lib.CommonForms, Version=1.0.4122.36717, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\IHIS\OCSO\OCS.Lib.CommonForms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="OCS.Lib.HangmogInfo, Version=1.0.4276.30378, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\IHIS\OCSO\OCS.Lib.HangmogInfo.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="OCS.Lib.InputControl, Version=1.0.4081.28532, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\IHIS\OCSO\OCS.Lib.InputControl.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="OCS.Lib.OrderBiz, Version=1.0.4277.18523, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\IHIS\OCSO\OCS.Lib.OrderBiz.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="OCS.Lib.OrderFunc, Version=1.0.4276.32991, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\IHIS\OCSO\OCS.Lib.OrderFunc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="OCS.Lib.OrderVariables, Version=1.0.4038.26084, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\IHIS\OCSO\OCS.Lib.OrderVariables.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OCS1003Q08.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="OCS1003Q08.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OCS1003Q08.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)" c:\IHIS\OCSO\.</PostBuildEvent>
+  </PropertyGroup>
+</Project>

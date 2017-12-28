@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Aileron-Regular.otf">
+            <string>Aileron-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AcceptCallingViewController">
+            <connections>
+                <outlet property="btnAccept" destination="NeB-Sl-Y7G" id="D7A-so-hR8"/>
+                <outlet property="btnReject" destination="qgz-bO-gfJ" id="DJ7-Vi-apa"/>
+                <outlet property="labelCallFrom" destination="38F-AM-CB1" id="p93-Y5-Xux"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewAccept" destination="kE0-9e-qUf" id="jvx-dq-Egw"/>
+                <outlet property="viewReject" destination="eWU-oS-EZg" id="1ig-m4-HpQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38F-AM-CB1">
+                    <rect key="frame" x="15" y="288" width="570" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="R2b-zI-0dF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Aileron-Regular" family="Aileron" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UIR-tJ-23V">
+                    <rect key="frame" x="0.0" y="500" width="600" height="70"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eWU-oS-EZg">
+                            <rect key="frame" x="132" y="2" width="66" height="66"/>
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="66" id="k3H-Kt-SgH"/>
+                                <constraint firstAttribute="width" constant="66" id="njR-3T-lJr"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kE0-9e-qUf">
+                            <rect key="frame" x="403" y="2" width="66" height="66"/>
+                            <color key="backgroundColor" red="0.40784313729999999" green="0.85098039219999999" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="66" id="rCT-Bz-Dk8"/>
+                                <constraint firstAttribute="width" constant="66" id="sna-0P-f3M"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeB-Sl-Y7G">
+                            <rect key="frame" x="141.5" y="11.5" width="47" height="47"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="47" id="Fwm-uO-Qud"/>
+                                <constraint firstAttribute="width" constant="47" id="mj4-k0-8Pc"/>
+                            </constraints>
+                            <state key="normal" image="ic_phone_decline"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgz-bO-gfJ">
+                            <rect key="frame" x="418.5" y="17.5" width="35" height="35"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="tsN-g8-89o"/>
+                                <constraint firstAttribute="height" constant="35" id="vdT-8Q-sF1"/>
+                            </constraints>
+                            <state key="normal" image="ic_call_receiver"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOL-i5-9R2">
+                            <rect key="frame" x="130" y="0.0" width="70" height="70"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="5c3-KA-Bh0"/>
+                                <constraint firstAttribute="height" constant="70" id="ZCM-kz-Si9"/>
+                            </constraints>
+                            <connections>
+                                <action selector="onClickBtnDecline:" destination="-1" eventType="touchUpInside" id="2bh-LS-fbC"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gN-ac-04r">
+                            <rect key="frame" x="401" y="0.0" width="70" height="70"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="GWR-g0-ZYR"/>
+                                <constraint firstAttribute="width" constant="70" id="MZd-V1-w2y"/>
+                            </constraints>
+                            <connections>
+                                <action selector="onClickBtnAcceptCalling:" destination="-1" eventType="touchUpInside" id="FMF-1p-cUS"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="NeB-Sl-Y7G" firstAttribute="centerX" secondItem="UIR-tJ-23V" secondAttribute="centerX" multiplier="0.55" id="QQq-Jb-aSi"/>
+                        <constraint firstItem="bOL-i5-9R2" firstAttribute="centerX" secondItem="eWU-oS-EZg" secondAttribute="centerX" id="R2I-Oe-kla"/>
+                        <constraint firstItem="eWU-oS-EZg" firstAttribute="centerY" secondItem="NeB-Sl-Y7G" secondAttribute="centerY" id="Rau-FK-k3B"/>
+                        <constraint firstItem="eWU-oS-EZg" firstAttribute="centerX" secondItem="NeB-Sl-Y7G" secondAttribute="centerX" id="V6u-4z-mgK"/>
+                        <constraint firstItem="bOL-i5-9R2" firstAttribute="centerY" secondItem="eWU-oS-EZg" secondAttribute="centerY" id="WEs-jN-RHw"/>
+                        <constraint firstItem="9gN-ac-04r" firstAttribute="centerX" secondItem="kE0-9e-qUf" secondAttribute="centerX" id="WwQ-MP-Fd2"/>
+                        <constraint firstAttribute="height" constant="70" id="Xe1-21-CaJ"/>
+                        <constraint firstItem="NeB-Sl-Y7G" firstAttribute="centerY" secondItem="UIR-tJ-23V" secondAttribute="centerY" id="ZGf-vv-31D"/>
+                        <constraint firstItem="kE0-9e-qUf" firstAttribute="centerX" secondItem="qgz-bO-gfJ" secondAttribute="centerX" id="aFv-dy-P5b"/>
+                        <constraint firstItem="kE0-9e-qUf" firstAttribute="centerY" secondItem="qgz-bO-gfJ" secondAttribute="centerY" id="aqo-Mf-ndL"/>
+                        <constraint firstItem="qgz-bO-gfJ" firstAttribute="centerY" secondItem="UIR-tJ-23V" secondAttribute="centerY" id="vUe-mh-Edk"/>
+                        <constraint firstItem="qgz-bO-gfJ" firstAttribute="centerX" secondItem="UIR-tJ-23V" secondAttribute="centerX" multiplier="1.45" constant="1" id="viM-Yf-W1M"/>
+                        <constraint firstItem="eWU-oS-EZg" firstAttribute="baseline" secondItem="NeB-Sl-Y7G" secondAttribute="baseline" id="w2p-k8-YMd"/>
+                        <constraint firstItem="9gN-ac-04r" firstAttribute="centerY" secondItem="kE0-9e-qUf" secondAttribute="centerY" id="zJD-a4-42Q"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="w2p-k8-YMd"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="38F-AM-CB1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="1Ek-Ic-HKy"/>
+                <constraint firstItem="UIR-tJ-23V" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Bps-c1-etM"/>
+                <constraint firstItem="38F-AM-CB1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kEl-ON-Jy3"/>
+                <constraint firstItem="38F-AM-CB1" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="lxe-IG-FjC"/>
+                <constraint firstAttribute="trailing" secondItem="38F-AM-CB1" secondAttribute="trailing" constant="15" id="rlS-8O-vl4"/>
+                <constraint firstAttribute="bottom" secondItem="UIR-tJ-23V" secondAttribute="bottom" constant="30" id="usw-Ie-OFm"/>
+                <constraint firstAttribute="trailing" secondItem="UIR-tJ-23V" secondAttribute="trailing" id="zQg-g1-Vzm"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_call_receiver" width="192" height="192"/>
+        <image name="ic_phone_decline" width="40" height="17"/>
+    </resources>
+</document>

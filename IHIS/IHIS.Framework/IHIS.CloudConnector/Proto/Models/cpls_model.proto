@@ -1,0 +1,1287 @@
+option java_package = "nta.med.service.orca.proto";
+option java_outer_classname = "CplsModelProto";
+
+// --- [START] CPL0108U00 ---
+message CPL0108U00InitGrdDetailListItemInfo{
+	optional string code_type = 1;
+	optional string code = 2;
+	optional string code_name = 3;
+	optional string code_name_re = 4;
+	optional string system_gubun = 5;
+	optional string code_value = 6;
+}
+
+message CPL0108U00InitGrdMasterListItemInfo{
+	optional string code_type = 1;
+	optional string code_type_name = 2;
+}
+
+// --- [END] CPL0108U00 ---
+
+
+// --- [START] CPL0104U00 ---
+
+message CPL0104U00GrdDetailListItemInfo{
+	optional string hangmog_code = 1;
+	optional string specimen_code = 2;
+	optional string emergency = 3;
+	optional string sex = 4;
+	optional string nai_from = 5;
+	optional string nai_to = 6;
+	optional string from_age = 7;
+	optional string to_age = 8;
+	optional string from_standard = 9;
+	optional string to_standard = 10;
+	
+}
+
+message CPL0104U00GrdMasterListItemInfo{
+	optional string hangmog_code = 1;
+	optional string specimen_code = 2;
+	optional string code_name = 3;
+	optional string emergency = 4;
+	optional string gumsa_name = 5;
+}
+
+// --- [END] CPL0104U00 ---
+
+
+
+// --- [START] CPL2010R01 ---
+
+message CPL2010R01LaySpecimenListItemInfo{
+	optional string specimen_ser = 1;
+	optional string bunho = 2;
+	optional string suname = 3;
+	optional string doctor_name = 4;
+	optional string specimen_no = 5;
+	optional string specimen_name = 6;
+	optional string tube_name = 7;
+	optional string tube_count = 8;
+	optional string ho_dong_name = 9;
+	optional string reser_date = 10;
+	optional string cont_key = 11;
+	
+}
+
+// --- [END] CPL2010R01 ---
+
+
+// --- [START] CPL2010U00 ---
+
+message CPL2010U00ChangeTimeGrdSpecimenListItemInfo{
+	optional string pkcpl2010 = 1;
+	optional string sunab_yn = 2;
+	optional string jubsu_flag = 3;
+	optional string slip_name = 4;
+	optional string hangmog_code = 5;
+	optional string gumsa_name = 6;
+	optional string specimen_code = 7;
+	optional string specimen_name = 8;
+	optional string emergency = 9;
+	optional string tube_name = 10;
+	optional string specimen_ser = 11;
+	optional string comment_ju_code = 12;
+	optional string fkocs1003 = 13;
+	optional string group_gubun = 14;
+	optional string part_jubsu_flag = 15;
+	optional string gum_jubsu_flag = 16;
+	optional string dummy = 17;
+	optional string modify_yn = 18;
+	optional string modify_yn_1 = 19;
+	optional string jundal_gubun = 20;
+	optional string jubsuja = 21;
+	optional string order_date = 22;
+	optional string bunho = 23;
+	optional string jubsu_date = 24;
+	optional string jubsu_time = 25;
+	optional string order_time = 26;
+	
+}
+
+message CPL2010U00FwkPaListItemInfo{
+	optional string bunho = 1;
+	optional string suname = 2;
+	optional string in_out_gubun = 3;
+	optional string fn_bas_load_gwa_name = 4;
+	optional string order_time = 5;
+	optional string today_yn = 6;
+	optional string reser_yn = 7;
+}
+
+message CPL2010U00GrdOrderListItemInfo{
+	optional string order_date = 1;
+	optional string order_time = 2;
+	optional string gwa_name = 3;
+	optional string in_out_gubun = 4;
+	optional string doctor_name = 5;
+	optional string jubsu_date = 6;
+	optional string jubsu_time = 7;
+	optional string after_act_yn = 8;
+	optional string bunho = 9;
+	optional string gwa = 10;
+	optional string gubun = 11;
+	optional string doctor = 12;
+	optional string reser_date = 13;
+	optional string jubsuja = 14;
+	optional string jubsuja_name = 15;
+	optional string group_ser = 16;
+	optional string key = 17;
+	
+}
+
+message CPL2010U00GrdTubeListItemInfo{
+	optional string tube_code = 1;
+	optional string tube_name = 2;
+	optional string cnt = 3;
+}
+
+message CPL2010U00LayBarcodeTempListItemInfo{
+	optional string jundal_gubun = 1;
+	optional string jundal_gubun_name = 2;
+	optional string specimen_code = 3;
+	optional string specimen_name = 4;
+	optional string tube_code = 5;
+	optional string tube_name = 6;
+	optional string in_out_gubun = 7;
+	optional string specimen_ser = 8;
+	optional string bunho = 9;
+	optional string suname = 10;
+	optional string gwa_name = 11;
+	optional string danger_yn = 12;
+	optional string specimen_ser_ba = 13;
+	optional string jangbi_code = 14;
+	optional string jangbi_name = 15;
+	optional string gumsa_name_re = 16;
+	optional string tube_count = 17;
+	optional string tube_max_amt = 18;
+	optional string tube_numbering = 19;
+}
+
+message CPL2010U00LayChkNameListItemInfo{
+	optional string suname = 1;
+	optional string order_date1 = 2;
+	optional string order_date2 = 3;
+	optional string code_name = 4;
+	
+}
+
+message CPL2010U00MlayConstantInfoListItemInfo{
+	optional string code = 1;
+	optional string code_name = 2;
+	optional string code_value = 3;
+	
+}
+
+message CPL2010U00GrdSpecimenListItemInfo{
+	optional string pkcpl2010 = 1;
+	optional string sunab_yn = 2;
+	optional string jubsu_flag = 3;
+	optional string slip_name = 4;
+	optional string hangmog_code = 5;
+	optional string gumsa_name = 6;
+	optional string specimen_code = 7;
+	optional string specimen_name = 8;
+	optional string emergency = 9;
+	optional string tube_code = 10;
+	optional string tube_name = 11;
+	optional string specimen_ser = 12;
+	optional string comment_ju_code = 13;
+	optional string fkocs1003 = 14;
+	optional string group_gubun = 15;
+	optional string part_jubsu_flag = 16;
+	optional string gum_jubsu_flag = 17;
+	optional string dummy = 18;
+	optional string modify_yn = 19;
+	optional string modify_yn_1 = 20;
+	optional string jundal_gubun = 21;
+	optional string jundal_gubun_name = 22;
+	optional string jubsuja = 23;
+	optional string order_date = 24;
+	optional string bunho = 25;
+	optional string jubsu_date = 26;
+	optional string jubsu_time = 27;
+	optional string order_time = 28;
+	optional string group_hangmog = 29;
+	optional string spcial_name = 30;
+	optional string can_yn = 31;
+	optional string barcode = 32;
+	optional string barcode_name = 33;
+	optional string doc_comment = 34;
+	optional string uitak_code = 35;
+	optional string middle_result = 36;
+	
+}
+
+message CPL2010U00GrdPaListItemInfo{
+	optional string bunho = 1;
+	optional string suname = 2;
+	optional string in_out_gubun = 3;
+	optional string gwa_name = 4;
+	optional string reser_yn = 5;
+	optional string doctor = 6;
+	optional string doctor_name = 7;
+	optional string kijun_date = 8;
+	optional string emergency_yn = 9;
+	optional string naewon_time = 10;
+	
+}
+
+message CPL2010U00OrderCancelGrdOrderListItemInfo{
+	optional string fkocs1003 = 1;
+	optional string hangmog_code = 2;
+	optional string gumsa_name = 3;
+	optional string specimen_code = 4;
+	optional string specimen_name = 5;
+	optional string specimen_ser = 6;
+	optional string pkcpl2010 = 7;
+	
+}
+
+message CPL2010U00PaqryGrdPaListItemInfo{
+	optional string bunho = 1;
+	optional string suname = 2;
+	optional string in_out_gubun = 3;
+	optional string gwa_name = 4;
+	optional string order_time = 5;
+	optional string today_yn = 6;
+	optional string reser_yn = 7;
+	optional string doctor_name = 8;	
+}
+
+// --- [END] CPL2010U00 ---
+
+// --- [START] CPL3010U00 ---
+
+message CPL3010U00DsvUrineListItemInfo{
+	optional string pkcpl1000 = 1;
+	optional string urine_ryang = 2;
+	optional string height = 3;
+	optional string weight = 4;
+	optional string stability_yn = 5;
+	optional string specimen_ser = 6;
+}
+
+message CPL3010U00GrdGumListItemInfo{
+	optional string specimen_ser = 1;
+	optional string fkcpl2010 = 2;
+	optional string gumsa_name = 3;
+	optional string jangbi_name = 4;
+	optional string cpl_result = 5;
+	optional string specimen_name = 6;
+	optional string hangmog_code = 7;
+	optional string part_jubsuja = 8;
+	optional string sub_jubsu_yn = 9;
+	optional string spcial_name = 10;
+	optional string fkocs = 11;
+	optional string confirm_yn = 12;
+}
+
+message CPL3010U00GrdPartListItemInfo{
+	optional string lab_no = 1;
+	optional string specimen_ser = 2;
+	optional string bunho = 3;
+	optional string suname2 = 4;
+	optional string fn_bas_load_gwa_name = 5;
+	optional string ho_dong = 6;
+	optional string part_jubsu_date = 7;
+	optional string part_jubsu_time = 8;
+	optional string part_jubsuja = 9;
+	optional string jubsuja = 10;
+	optional string remark = 11;
+	optional string part_jubsu_flag = 12;
+	optional string fkocs = 13;
+	optional string in_out_gubun = 14;
+	optional string doctor_name = 15;
+	optional string tube_name = 16;
+	optional string emergency = 17;
+	optional string sunab_yn = 18;
+	optional string result_yn = 19;
+	optional string label_one_more = 20;
+}
+
+message CPL3010U00LayBarCodeTempListItemInfo{
+	optional string jundal_gubun = 1;
+	optional string jundal_gubun_name = 2;
+	optional string specimen_code = 3;
+	optional string specimen_name = 4;
+	optional string tube_code = 5;
+	optional string tube_name = 6;
+	optional string in_out_gubun = 7;
+	optional string specimen_ser = 8;
+	optional string bunho = 9;
+	optional string suname = 10;
+	optional string gwa_name = 11;
+	optional string danger_yn = 12;
+	optional string specimen_ser_ba = 13;
+	optional string jangbi_code = 14;
+	optional string jangbi_name = 15;
+	optional string gumsa_name_re = 16;
+	optional string tube_count = 17;
+	optional string tube_max_amt = 18;
+	optional string tube_numbering = 19;
+	optional string hangmog_code = 20;
+}
+
+message CPL3010U00LayBarCodeTemp2ListItemInfo{
+	optional string jundal_gubun = 1;
+	optional string jundal_gubun_name = 2;
+	optional string specimen_code = 3;
+	optional string specimen_name = 4;
+	optional string tube_code = 5;
+	optional string tube_name = 6;
+	optional string in_out_gubun = 7;
+	optional string specimen_ser = 8;
+	optional string bunho = 9;
+	optional string suname = 10;
+	optional string uitak_name = 11;
+	optional string danger_yn = 12;
+	optional string specimen_ser_ba = 13;
+	optional string jangbi_name = 14;
+	optional string gumsa_name_re = 15;
+	optional string tube_amt = 16;
+	optional string tube_numbering = 17;
+}
+
+message CPL3010U00LaySpecimenInfoListItemInfo{
+	optional string bunho = 1;
+	optional string suname = 2;
+	optional string sex = 3;
+	optional string birth = 4;
+	optional string gwa_name = 5;
+	optional string doctor_name = 6;
+	optional string ho_dong_name = 7;
+	optional string ho_code = 8;
+	optional string order_date = 9;
+	optional string jubsu_date = 10;
+	optional string part_jubsu_date = 11;
+	optional string jubsu_time = 12;
+	optional string part_jubsu_time = 13;
+	optional string jubsuja = 14;
+	optional string in_out_gubun = 15;
+	optional string jundal_gubun = 16;
+	optional string specimen_code = 17;
+	optional string specimen_name = 18;
+	optional string tat1 = 19;
+	optional string tat2 = 20;
+	optional string age = 21;
+	optional string 0_value = 22;
+}
+
+// --- [END] CPL3010U00 ---
+
+
+// --- [START] CPL0000U00 ---
+message CPL0000Q00LayJungboListItemInfo{
+        optional string order_date = 1;
+        optional string order_time = 2;
+        optional string jubsu_date = 3;
+        optional string jubsu_time = 4;
+        optional string part_jubsu_date = 5;
+        optional string part_jubsu_time = 6;
+        optional string result_date = 7;
+        optional string result_time = 8;
+        optional string specimen_ser = 9;
+        optional string specimen_code = 10;
+        optional string specimen_name = 11;
+        optional string note = 12;
+        optional string gwa_name = 13;
+        optional string doctor_name = 14;
+        optional string comment = 15;
+        optional string fix_note = 16;
+        optional string hangmog_comment = 17;
+        optional string pa_comment = 18;
+}
+
+message CPL0000Q00LaySigeyulTempListItemInfo{
+        optional string hangmog_code = 1;
+        optional string specimen_code = 2;
+        optional string specimen_name = 3;
+        optional string gumsa_name = 4;
+}
+
+message CPL0000Q00LaySubHangmogListItemInfo{
+        optional string gumsa_name = 1;
+        optional string result_date = 2;
+        optional string cpl_result = 3;
+}
+
+message CPL0000Q00LayOrderListItemInfo{
+        optional string order_date = 1;
+        optional string gwa = 2;
+        optional string doctor = 3;
+        optional string gwa_name = 4;
+        optional string doctor_name = 5;
+        optional string in_out_gubun = 6;
+}
+
+message CPL0000Q00LayResultListTempListItemInfo{
+        optional string sort_a = 1;
+        optional string sort_b = 2;
+        optional string sort_c = 3;
+        optional string sort_d = 4;
+        optional string fkcpl2010 = 5;
+        optional string hangmog_code = 6;
+        optional string specimen_code = 7;
+        optional string specimen_name = 8;
+        optional string gumsa_name = 9;
+        optional string emergency = 10;
+        optional string source_gumsa = 11;
+        optional string cpl_result = 12;
+        optional string result_date = 13;
+        optional string result_time = 14;
+        optional string result_form = 15;
+        optional string confirm_date = 16;
+        optional string standard_yn = 17;
+        optional string from_standard = 18;
+        optional string to_standard = 19;
+        optional string standard = 20;
+        optional string panic_yn = 21;
+        optional string delta_yn = 22;
+        optional string before_result = 23;
+        optional string danui = 24;
+        optional string danui_name = 25;
+        optional string bunho = 26;
+        optional string gwa = 27;
+        optional string doctor = 28;
+        optional string gubun = 29;
+        optional string ho_dong = 30;
+        optional string ho_code = 31;
+        optional string jundal_gubun = 32;
+        optional string slip_code = 33;
+        optional string specimen_ser = 34;
+        optional string order_date = 35;
+        optional string order_time = 36;
+        optional string jubsu_date = 37;
+        optional string jubsu_time = 38;
+        optional string part_jubsu_date = 39;
+        optional string part_jubsu_time = 40;
+        optional string modify_yn = 41;
+        optional string modify_yn_1 = 42;
+        optional string pkcpl3020 = 43;
+        optional string gwa_name = 44;
+        optional string doctor_name = 45;
+        optional string group_hangmog = 46;
+        optional string part_jubsuja = 47;
+        optional string gumsaja = 48;
+        optional string suname = 49;
+        optional string age = 50;
+        optional string sex = 51;
+        optional string fix_note = 52;
+        optional string note = 53;
+        optional string jangbi_code = 54;
+        optional string srl_code = 55;
+        optional string image_yn = 56;
+        optional string fkocs = 57;
+        optional string jundal_gubun_name = 58;
+        optional string comments_yn = 59;
+}
+
+message CPL0000Q00ResultListQuerySelect1ListItemInfo{
+        optional string serial = 1;
+        optional string kyun_result = 2;
+        optional string kyun_code = 3;
+        optional string mic_name = 4;
+        optional string mic_result = 5;
+}
+
+message CPL0000Q00ResultListQuerySelect2ListItemInfo{
+        optional string anti_seq = 1;
+        optional string anti_name = 2;
+        optional string mic_name = 3;
+        optional string mic_result = 4;
+}
+
+message CPL0000Q00SelectOUT0101ListItemInfo{
+        optional string bunho = 1;
+        optional string suname = 2;
+        optional string birth = 3;
+        optional string sex = 4;
+        optional string age = 5;
+}
+
+message CPL0000Q00GetSigeyulDataSelect1ListItemInfo{
+        optional string jubsu_date = 1;
+        optional string jubsu_time = 2;
+        optional string jubsu_time2 = 3;
+}
+
+message CPL0000Q00GetSigeyulDataSelect2ListItemInfo{
+        optional string cpl_result = 1;
+        optional string standard_yn = 2;
+        optional string gumsa_name = 3;
+        optional string from_standard = 4;
+        optional string to_standard = 5;
+}
+// --- [END] CPL0000U00 ---
+
+
+// --- [START] CPL0106U00 ---
+
+message CPL0106U00FwkGumsaListItemInfo{
+	optional string hangmog_code = 1;
+	optional string specimen_code = 2;
+	optional string specimen_name = 3;
+	optional string emergency = 4;
+	optional string gumsa_name = 5;
+}
+
+message CPL0106U00GrdListItemInfo{
+        optional string group_gubun_a = 1;
+        optional string hangmog_code = 2;
+        optional string specimen_code = 3;
+        optional string emergency = 4;
+        optional string sub_hangmog_code = 5;
+        optional string sub_specimen_code = 6;
+        optional string specimen_name = 7;
+        optional string sub_emergency = 8;
+        optional string gumsa_name = 9;
+        optional string continue_yn = 10;
+        optional string group_gubun_b = 11;
+        optional string sg_code = 12;
+}
+
+message CPL0106U00GrdGroupListItemInfo{
+	optional string group_gubun = 1;
+	optional string hangmog_code = 2;
+	optional string specimen_code = 3;
+	optional string emergency = 4;
+	optional string gumsa_name = 5;
+	optional string jundal_gubun = 6;
+	optional string specimen_name = 7;
+	optional string jundal_name = 8;
+}
+
+
+
+// --- [END] CPL0106U00 ---
+
+
+
+// --- [START] CPL3010U01 ---
+
+message CPL3010U01GrdHangmogListItemInfo{
+	optional string recode_gubun = 1;
+	optional string center_code = 2;
+	optional string request_key = 3;
+	optional string hospital_code = 4;
+	optional string hangmog_code = 5;
+	optional string san_code = 6;
+	optional string specimen_code = 7;
+	optional string emergency = 8;
+	optional string empty = 9;
+	optional string specimen_ser = 10;
+	optional string jundal_gubun_name = 11;
+	optional string gumsa_name = 12;
+	optional string specimen_name = 13;
+	
+}
+
+message CPL3010U01GrdResultListItemInfo{
+	optional string recode_gubun = 1;
+	optional string center_code = 2;
+	optional string request_key = 3;
+	optional string hangmog_code = 4;
+	optional string srl_code = 5;
+	optional string specimen_code = 6;
+	optional string emergency = 7;
+	optional string empty = 8;
+	optional string specimen_ser = 9;
+	optional string jundal_gubun_name = 10;
+	optional string lab_no = 11;
+	optional string cpl_result = 12;
+	optional string standard_yn = 13;
+	optional string comments = 14;
+	optional string vitros = 15;
+	optional string result_yn = 16;
+	optional string gumsa_name = 17;
+	optional string specimen_name = 18;
+}
+
+message CPL3010U01LaySpecimenInfoListItemInfo{
+	optional string bunho = 1;
+	optional string suname = 2;
+	optional string sex = 3;
+	optional string birth = 4;
+	optional string gwa = 5;
+	optional string doctor_name1 = 6;
+	optional string ho_dong = 7;
+	optional string ho_code = 8;
+	optional string order_date = 9;
+	optional string jubsu_date = 10;
+	optional string part_jubsu_date = 11;
+	optional string jubsu_time = 12;
+	optional string part_jubsu_time = 13;
+	optional string jubsuja = 14;
+	optional string in_out_gubun = 15;
+	optional string jundal_gubun = 16;
+	optional string specimen_code = 17;
+	optional string specimen_name = 18;
+	optional string tat1 = 19;
+	optional string tat2 = 20;
+	optional string age = 21;
+	optional string doctor_name2 = 22;
+}
+
+message CPL3010U01MaxInfoListItemInfo{
+	optional string specimen_ser = 1;
+	optional string part_jubsu_date = 2;
+	optional string part_jubsu_time = 3;
+}
+
+message CPL3010U01LayPrint2ListItemInfo{
+	optional string part_jubsu_date = 1;
+	optional string bunho = 2;
+	optional string suname2 = 3;
+	optional string hangmog_code = 4;
+	optional string fn_cpl_gumsa_nm = 5;
+	optional string decode = 6;
+	optional string fn_bas_load_doctor_name = 7;
+	optional string sex = 8;
+	optional string fn_bas_load_age = 9;
+	optional string specimen_ser = 10;
+	optional string nyo_ryang = 11;
+	optional string nyo_danui = 12;
+	optional string emergency = 13;
+}
+
+message CPL3010U01GrdPaListItemInfo{
+	optional string recode_gubun = 1;
+	optional string center_code = 2;
+	optional string request_key = 3;
+	optional string hospital_code = 4;
+	optional string gwa_name = 5;
+	optional string ho_dong_name = 6;
+	optional string in_out_gubun = 7;
+	optional string doctor_name = 8;
+	optional string bunho = 9;
+	optional string jinryo_card = 10;
+	optional string suname2 = 11;
+	optional string sex = 12;
+	optional string age_gubun = 13;
+	optional string age = 14;
+	optional string birth_gubun = 15;
+	optional string birth = 16;
+	optional string jubsu_date = 17;
+	optional string jubsu_time = 18;
+	optional string hangmog_cnt = 19;
+	optional string height = 20;
+	optional string weight = 21;
+	optional string nyo_ryang = 22;
+	optional string nyo_danui = 23;
+	optional string pregnancy_jusu = 24;
+	optional string dialysis = 25;
+	optional string emergency = 26;
+	optional string comments = 27;
+	optional string empty = 28;
+	optional string n_value = 29;
+	optional string send_yn = 30;
+}
+
+// --- [END] CPL3010U01 ---
+
+
+// --- [START] CPL3020U00 ---
+
+message CPL3020U00DsvNoteListItemInfo{
+	optional string jundal_part = 1;
+	optional string specimen_ser = 2;
+	optional string note = 3;
+	optional string code = 4;
+	optional string etc_comment = 5;
+}
+
+message CPL3020U00GrdPaListItemInfo{
+	optional string lab_no = 1;
+	optional string suname = 2;
+	optional string specimen_ser = 3;
+	optional string lab_sort = 4;
+	optional string part_jubsu_date = 5;
+	optional string jundal_gubun = 6;
+	optional string gubun = 7;
+	optional string result_yn = 8;
+	optional string confirm_yn = 9;
+}
+
+message CPL3020U00GrdResultListItemInfo{
+	optional string pkcpl3020 = 1;
+	optional string gumsa_name = 2;
+	optional string standard_yn = 3;
+	optional string cpl_result = 4;
+	optional string confirm_yn = 5;
+	optional string before_result = 6;
+	optional string panic_yn = 7;
+	optional string delta_yn = 8;
+	optional string danui_name = 9;
+	optional string standard = 10;
+	optional string comments = 11;
+	optional string fkocs = 12;
+	optional string fkcpl2010 = 13;
+	optional string lab_no = 14;
+	optional string hangmog_code = 15;
+	optional string specimen_code = 16;
+	optional string emergency = 17;
+	optional string gumsaja = 18;
+	optional string bunho = 19;
+	optional string result_date = 20;
+	optional string specimen_ser = 21;
+	optional string result_form = 22;
+	optional string source_gumsa = 23;
+	optional string group_gubun = 24;
+	optional string group_hangmog = 25;
+	optional string display_yn = 26;
+	optional string key_value = 27;
+}
+
+message CPL3020U00PrCplSpecimenInfoResultListItemInfo{
+	optional string bunho = 1;
+	optional string suname = 2;
+	optional string sex = 3;
+	optional string birth = 4;
+	optional string sujumin1 = 5;
+	optional string sujumin2 = 6;
+	optional string gwa = 7;
+	optional string doctor_name = 8;
+	optional string ho_dong = 9;
+	optional string ho_code = 10;
+	optional string order_date = 11;
+	optional string jubsu_date = 12;
+	optional string part_jubsu_date = 13;
+	optional string jubsu_time = 14;
+	optional string part_jubsu_time = 15;
+	optional string jubsuja = 16;
+	optional string in_out_gubun = 17;
+	optional string jundal_gubun = 18;
+	optional string specimen_code = 19;
+	optional string specimen_name = 20;
+	optional string tat1 = 21;
+	optional string tat2 = 22;
+	optional string age = 23;
+	optional string switch = 24;
+}
+
+message CPL3020U00PrOcsoChkResultMsgListItemInfo{
+	optional string ip_value = 1;
+	optional string text_value = 2;
+	optional string err_flag = 3;
+}
+
+message CPL3020U00GetSpecimenInfoListItemInfo{
+	optional string gwa_name = 1;
+	optional string ho_dong_name = 2;
+}
+
+message CPL3020U00SelectInOutGubunListItemInfo{
+	optional string in_out_gubun = 1;
+	optional string fkocs = 2;
+}
+
+message CPL3020U00SelectFromStandardListItemInfo{
+	optional string from_standard = 1;
+	optional string to_standard = 2;
+	optional string specimen_code = 3;
+	optional string emergency = 4;
+	optional string order_date = 5;
+}
+
+message CPL3020U00ResultInsertLaySayuListItemInfo{
+	optional string lab_no = 1;
+	optional string specimen_code = 2;
+	optional string emergency = 3;
+	optional string passward = 4;
+	optional string gumsaja = 5;
+	optional string dummy = 6;
+	optional string ref_comment = 7;
+	optional string hangmog_code = 8;
+	optional string before_gumsaja = 9;
+	optional string before_result = 10;
+	optional string cancel_date = 11;
+	optional string cancel_time = 12;
+	optional string empty_value = 13;
+}
+
+// --- [END] CPL3020U00 ---
+
+
+// --- [START] CPL3020U02 ---
+
+message CPL3020U02DsvNoteListItemInfo{
+	optional string jundal_part = 1;
+	optional string specimen_ser = 2;
+	optional string note = 3;
+	optional string code = 4;
+	optional string etc_comment = 5;
+}
+
+message CPL3020U02GrdPaListItemInfo{
+	optional string lab_no = 1;
+	optional string suname = 2;
+	optional string specimen_ser = 3;
+	optional string lab_sort = 4;
+	optional string part_jubsu_date = 5;
+	optional string jundal_gubun = 6;
+	optional string gubun = 7;
+	optional string result_yn = 8;
+	optional string confirm_yn = 9;
+}
+
+message CPL3020U02GrdResultListItemInfo{
+	optional string pkcpl3020 = 1;
+	optional string gumsa_name = 2;
+	optional string standard_yn = 3;
+	optional string cpl_result = 4;
+	optional string confirm_yn = 5;
+	optional string before_result = 6;
+	optional string panic_yn = 7;
+	optional string delta_yn = 8;
+	optional string danui_name = 9;
+	optional string standard = 10;
+	optional string comments = 11;
+	optional string fkocs = 12;
+	optional string fkcpl2010 = 13;
+	optional string lab_no = 14;
+	optional string hangmog_code = 15;
+	optional string specimen_code = 16;
+	optional string emergency = 17;
+	optional string gumsaja = 18;
+	optional string bunho = 19;
+	optional string result_date = 20;
+	optional string specimen_ser = 21;
+	optional string result_form = 22;
+	optional string source_gumsa = 23;
+	optional string group_gubun = 24;
+	optional string group_hangmog = 25;
+	optional string display_yn = 26;
+	optional string key_value = 27;
+}
+
+message CPL3020U02GetSpecimenInfoSelectListItemInfo{
+	optional string gwa_name = 1;
+	optional string ho_dong_name = 2;
+}
+
+message CPL3020U02ExecuteSelectInOutGubunListItemInfo{
+	optional string in_out_gubun = 1;
+	optional string fkocs = 2;
+}
+
+message CPL3020U02RESULTINSERTLaySayuListItemInfo{
+	optional string lab_no = 1;
+	optional string specimen_code = 2;
+	optional string emergency = 3;
+	optional string passward = 4;
+	optional string gumsaja = 5;
+	optional string dummy = 6;
+	optional string ref_comment = 7;
+	optional string hangmog_code = 8;
+	optional string before_gumsaja = 9;
+	optional string before_result = 10;
+	optional string cancel_date = 11;
+	optional string cancel_time = 12;
+	optional string empty_value = 13;
+}
+
+message CPL3020U02RESULTMAPGrdIDListItemInfo{
+	optional string result_date = 1;
+	optional string proc_time = 2;
+	optional string sample_id = 3;
+	optional string specimen_ser = 4;
+	optional string patient_id = 5;
+}
+
+message CPL3020U02RESULTMAPGrdResultListItemInfo{
+	optional string result_code = 1;
+	optional string hangmog_code = 2;
+	optional string gumsa_name = 3;
+	optional string result_val = 4;
+}
+
+message CPL3020U02RESULTUPDATEGrdUpdateSayuListItemInfo{
+	optional string lab_no = 1;
+	optional string specimen_code = 2;
+	optional string emergency = 3;
+	optional string passward = 4;
+	optional string gumsaja = 5;
+	optional string dummy = 6;
+	optional string ref_comment = 7;
+	optional string hangmog_code = 8;
+	optional string before_gumsaja = 9;
+	optional string before_result = 10;
+	optional string cancel_date = 11;
+	optional string cancel_time = 12;
+	optional string empty_value = 13;
+}
+
+message CPL3020U02GrdPaItemInfo{
+        optional string lab_no = 1;
+        optional string suname = 2;
+        optional string specimen_ser = 3;
+        optional string lab_sort = 4;
+        optional string part_jubsu_date = 5;
+        optional string jundal_gubun = 6;
+        optional string gubun = 7;
+        optional string result_yn = 8;
+        optional string confirm_yn = 9;
+        optional string data_row_state = 10;
+}
+
+message CPL3020U02GrdResultItemInfo{
+        optional string pkcpl3020 = 1;
+        optional string gumsa_name = 2;
+        optional string standard_yn = 3;
+        optional string cpl_result = 4;
+        optional string confirm_yn = 5;
+        optional string before_result = 6;
+        optional string panic_yn = 7;
+        optional string delta_yn = 8;
+        optional string danui_name = 9;
+        optional string standard = 10;
+        optional string comments = 11;
+        optional string fkocs = 12;
+        optional string fkcpl2010 = 13;
+        optional string lab_no = 14;
+        optional string hangmog_code = 15;
+        optional string specimen_code = 16;
+        optional string emergency = 17;
+        optional string gumsaja = 18;
+        optional string bunho = 19;
+        optional string result_date = 20;
+        optional string specimen_ser = 21;
+        optional string result_form = 22;
+        optional string source_gumsa = 23;
+        optional string group_gubun = 24;
+        optional string group_hangmog = 25;
+        optional string display_yn = 26;
+        optional string key = 27;
+        optional string data_row_state = 28;
+}
+
+// --- [END] CPL3020U02 ---
+
+// --- [Start] CPL0101U00 ---
+message CPL0101U00InitListItemInfo
+{
+	optional string jukyong_date = 1                 ;
+	optional string hangmog_code = 2                 ;
+	optional string specimen_code = 3                ;
+	optional string specimen_name = 4                ;
+	optional string emergency= 5                     ;
+	optional string default_yn = 6                   ;
+	optional string jundal_gubun = 7                 ;
+	optional string jundal_name = 8                  ;
+	optional string danui = 9                        ;
+	optional string danui_name = 10                  ;
+	optional string tube_code = 11                   ;
+	optional string tube_name= 12                    ;
+	optional string uitak_code = 13                  ;
+	optional string uitak_name= 14                   ;
+	optional string sutak_code = 15                  ;
+	optional string sutak_name= 16                   ;
+	optional string slip_code = 17                   ;
+	optional string slip_name = 18                   ;
+	optional string jangbi_code = 19                 ;
+	optional string jangbi_name = 20                 ;
+	optional string jangbi_out_code = 21             ;
+	optional string jangbi_code2 = 22                ;
+	optional string jangbi_name2 = 23                ;
+	optional string jangbi_out_code2 = 24            ;
+	optional string jangbi_code3 = 25                ;
+	optional string jangbi_name3 =  26               ;
+	optional string jangbi_out_code3 = 27            ;
+	optional string group_gubun = 28                 ;
+	optional string gumsa_name_re = 29               ;
+	optional string barcode = 30                     ;
+	optional string gumsa_name= 31                   ;
+	optional string default_result = 32              ;
+	optional string medical_jundal = 33              ;
+	optional string comment_ju_code = 34             ;
+	optional string serial = 35                      ;
+	optional string chubang_yn = 36                  ;
+	optional string result_yn = 37                   ;
+	optional string result_form = 38                 ;
+	optional string tong_gubun = 39                  ;
+	optional string specimen_amt = 40                ;
+	optional string old_slip_code = 41               ;
+	optional string detail_info = 42                 ;
+	optional string display_yn = 43                  ;
+	optional string jundal_gubun_name = 44           ;
+	optional string spcial_name = 45                 ;
+	optional string tong_serial = 46                 ;
+	optional string point = 47                       ;
+	optional string point2 = 48                      ;
+	optional string point3 = 49                      ;
+	optional string out_tube = 50                    ;
+	optional string out_tube2 = 51                   ;
+	optional string hangmog_mark_name = 52           ;
+	optional string middle_result = 53               ;
+	optional string user_gubun  = 54                 ;
+	optional string data_row_state = 55;
+} 
+
+// --- [End] CPL0101U00 ---
+
+// --- [Start] CPL3010U00 ---
+message CPL3010U00DsvUrineListItemInfo {
+    optional string pkcpl1000 = 1;
+    optional string urine_ryang = 2;
+    optional string height = 3;
+    optional string weight = 4;
+    optional string stability_yn = 5;
+    optional string specimen_ser = 6;
+}
+message CPL3010U00GrdGumListItemInfo
+{
+	optional string specimen_ser = 1;
+	optional string fkcpl2010 = 2;
+	optional string gumsa_name = 3;
+	optional string jangbi_name = 4;
+	optional string cpl_result = 5;
+	optional string specimen_name = 6;
+	optional string hangmog_code = 7;
+	optional string part_jubsuja = 8;
+	optional string sub_jubsu_yn = 9;
+	optional string spcial_name = 10;
+	optional string fkocs = 11;
+	optional string confirm_yn = 12;
+	optional string data_row_state = 13;
+}
+
+message CPL3010U00GrdPartListItemInfo{
+    optional string lab_no = 1;
+    optional string specimen_ser = 2;
+    optional string bunho = 3;
+    optional string suname2 = 4;
+    optional string fn_bas_load_gwa_name = 5;
+    optional string ho_dong = 6;
+    optional string part_jubsu_date = 7;
+    optional string part_jubsu_time = 8;
+    optional string part_jubsuja = 9;
+    optional string jubsuja = 10;
+    optional string remark = 11;
+    optional string part_jubsu_flag = 12;
+    optional string fkocs = 13;
+    optional string in_out_gubun = 14;
+    optional string doctor_name = 15;
+    optional string tube_name = 16;
+    optional string emergency = 17;
+    optional string sunab_yn = 18;
+    optional string result_yn = 19;
+    optional string label_one_more = 20;
+	optional string data_row_state = 21;
+}
+
+message CPL3010U00LayBarCodeTempListItemInfo{
+    optional string jundal_gubun = 1;
+    optional string jundal_gubun_name = 2;
+    optional string specimen_code = 3;
+    optional string specimen_name = 4;
+    optional string tube_code = 5;
+    optional string tube_name = 6;
+    optional string in_out_gubun = 7;
+    optional string specimen_ser = 8;
+    optional string bunho = 9;
+    optional string suname = 10;
+    optional string gwa_name = 11;
+    optional string danger_yn = 12;
+    optional string specimen_ser_ba = 13;
+    optional string jangbi_code = 14;
+    optional string jangbi_name = 15;
+    optional string gumsa_name_re = 16;
+    optional string tube_count = 17;
+    optional string tube_max_amt = 18;
+    optional string tube_numbering = 19;
+    optional string hangmog_code = 20;
+}
+
+message CPL3010U00LayBarCodeTemp2ListItemInfo{
+    optional string jundal_gubun = 1;
+    optional string jundal_gubun_name = 2;
+    optional string specimen_code = 3;
+    optional string specimen_name = 4;
+    optional string tube_code = 5;
+    optional string tube_name = 6;
+    optional string in_out_gubun = 7;
+    optional string specimen_ser = 8;
+    optional string bunho = 9;
+    optional string suname = 10;
+    optional string uitak_name = 11;
+    optional string danger_yn = 12;
+    optional string specimen_ser_ba = 13;
+    optional string jangbi_name = 14;
+    optional string gumsa_name_re = 15;
+    optional string tube_amt = 16;
+    optional string tube_numbering = 17;
+}
+
+message CPL3010U00LaySpecimenInfoListItemInfo{
+    optional string bunho = 1;
+    optional string suname = 2;
+    optional string sex = 3;
+    optional string birth = 4;
+    optional string gwa_name = 5;
+    optional string doctor_name = 6;
+    optional string ho_dong_name = 7;
+    optional string ho_code = 8;
+    optional string order_date = 9;
+    optional string jubsu_date = 10;
+    optional string part_jubsu_date = 11;
+    optional string jubsu_time = 12;
+    optional string part_jubsu_time = 13;
+    optional string jubsuja = 14;
+    optional string in_out_gubun = 15;
+    optional string jundal_gubun = 16;
+    optional string specimen_code = 17;
+    optional string specimen_name = 18;
+    optional string tat1 = 19;
+    optional string tat2 = 20;
+    optional string age = 21;       
+}
+
+message CPL3010U00LayUrineInfo {
+    optional string user_id = 1;
+    optional string urine_ryang = 2;
+    optional string stability_yn = 3;
+    optional string specimen_ser = 4;
+    optional string pkcpl1000 = 5;
+}
+
+// --- [End] CPL3010U00 --
+
+// --- [Start] CPL3020U00 --
+message CPL3020U00CplSpecimenInfo{
+        optional string bunho = 1;
+        optional string suname = 2;
+        optional string sex = 3;
+        optional string birth = 4;
+        optional string sujumin1 = 5;
+        optional string sujumin2 = 6;
+        optional string gwa = 7;
+        optional string doctor_name = 8;
+        optional string ho_dong = 9;
+        optional string ho_code = 10;
+        optional string order_date = 11;
+        optional string jubsu_date = 12;
+        optional string part_jubsu_date = 13;
+        optional string jubsu_time = 14;
+        optional string part_jubsu_time = 15;
+        optional string jubsuja = 16;
+        optional string in_out_gubun = 17;
+        optional string jundal_gubun = 18;
+        optional string specimen_code = 19;
+        optional string specimen_name = 20;
+        optional string tat1 = 21;
+        optional string tat2 = 22;
+        optional string age = 23;
+        optional string switch_value = 24;
+}
+
+message CPL3020U00DsvNoteListItemInfo {
+	optional string jundal_part = 1;
+	optional string specimen_ser = 2;
+	optional string note = 3;
+	optional string code = 4;
+	optional string etc_comment = 5;
+}
+
+message CPL3020U00GrdPaListItemInfo {
+        optional string lab_no = 1;
+        optional string suname = 2;
+        optional string specimen_ser = 3;
+        optional string lab_sort = 4;
+        optional string part_jubsu_date = 5;
+        optional string jundal_gubun = 6;
+        optional string gubun = 7;
+        optional string result_yn = 8;
+        optional string confirm_yn = 9;
+}
+
+message CPL3020U00GrdResultListItemInfo {
+	optional string pkcpl3020 = 1;
+	optional string gumsa_name = 2;
+	optional string standard_yn = 3;
+	optional string cpl_result = 4;
+	optional string confirm_yn = 5;
+	optional string before_result = 6;
+	optional string panic_yn = 7;
+	optional string delta_yn = 8;
+	optional string danui_name = 9;
+	optional string standard = 10;
+	optional string comments = 11;
+	optional string fkocs = 12;
+	optional string fkcpl2010 = 13;
+	optional string lab_no = 14;
+	optional string hangmog_code = 15;
+	optional string specimen_code = 16;
+	optional string emergency = 17;
+	optional string gumsaja = 18;
+	optional string bunho = 19;
+	optional string result_date = 20;
+	optional string specimen_ser = 21;
+	optional string result_form = 22;
+	optional string source_gumsa = 23;
+	optional string group_gubun = 24;
+	optional string group_hangmog = 25;
+	optional string display_yn = 26;
+	optional string key_value = 27;
+	optional string data_row_state = 28;
+}
+
+message CPL3020U00PrOcsoChkResultMsgListItemInfo{
+	optional string ip_value = 1;
+	optional string text_value = 2;
+	optional string err_flag = 3;
+}
+
+message MultiResultViewLayPaInfo {
+	optional string suname = 1;
+	optional string suname2 = 2;
+	optional string sex = 3;
+	optional string year_age = 4;
+	optional string month_age = 5;
+	optional string gubun = 6;
+	optional string adm_dict_nm = 7;
+	optional string birth = 8;
+	optional string tel = 9;
+	optional string tel1 = 10;
+	optional string tel_hp = 11;
+	optional string email = 12;
+	optional string zip_code1 = 13;
+	optional string zip_code2 = 14;
+	optional string address1 = 15;
+	optional string address2 = 16;
+	optional string inp_jaewon_check = 17;
+}
+
+message MultiResultViewGrdSigeyulInfo {
+	optional string bunho = 1;
+	optional string hangmog_code = 2;
+	optional string gumsa_name = 3;
+}
+message MultiResultViewLaySigeyulInfo{
+	optional string gumsa_name = 1;
+	optional string from_standard = 2;
+	optional string to_standard = 3;
+	optional string standard_yn_1 = 4;
+	optional string result_1 = 5;
+	optional string result_date1 = 6;
+	optional string standard_yn_2 = 7;
+	optional string result_2 = 8;
+	optional string result_date2 = 9;
+	optional string standard_yn_3 = 10;
+	optional string result_3 = 11;
+	optional string result_date3 = 12;
+	optional string standard_yn_4 = 13;
+	optional string result_4 = 14;
+	optional string result_date4 = 15;
+	optional string standard_yn_5 = 16;
+	optional string result_5 = 17;
+	optional string result_date5 = 18;
+	optional string standard_yn_6 = 19;
+	optional string result_6 = 20;
+	optional string result_date6 = 21;
+	optional string standard_yn_7 = 22;
+	optional string result_7 = 23;
+	optional string result_date7 = 24;
+}
+
+// --- [End] CPL3020U00 --

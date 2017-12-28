@@ -1,0 +1,56 @@
+﻿<div class="sign-overlay"></div>
+<div class="signpanel"></div>
+
+<div class="panel signin">
+    <div class="panel-heading">
+        <h3 class="header_login">
+            <translate>Medical Interview System</translate>
+        </h3>
+        <h1><img width="200" ng-src="{{vm.hospitalObj.data.logo}}"/></h1>
+        <h4 class="panel-title">
+            <translate>Welcome! Please sign in.</translate>
+        </h4>
+    </div>
+    <div class="col-sm-10 col-sm-offset-1">
+        <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }"
+             ng-if="flash" ng-bind="flash.message"></div>'
+        <img id="loadingIcon" ng-if="vm.dataLoading" src="images/loading_728.gif" alt="Loading...">
+    </div>
+    <div class="panel-body">
+        <form name="form" ng-submit="vm.login()" role="form">
+            <div class="form-group mb10">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input type="text" class="form-control" name="username" id="username" placeholder="{{'Username' | translate}}" ng-model="vm.username" title="{{'Please fill out this field.' || translate}}" required/>
+                    <!--<span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Username is required</span>-->
+                </div>
+            </div>
+            <div class="form-group nomargin" ng-class="{'has-error': form.password.$dirty && form.password.$error.required }">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="{{'Password' | translate}}" ng-model="vm.password" title="{{'Please fill out this field.' || translate}}" required/>
+                    <!--<span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>-->
+                </div>
+            </div>
+            <div class="remember clearfix">
+                <!--<div class="toggle-wrapper pull-left">
+                  <div class="toggle toggle-light info"></div>
+                </div>
+                <input type="checkbox" checked class="remember_me hide">
+                <span><translate>Remember account</translate></span>-->
+            </div>
+            <div class="form-group">
+                <button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-success btn-quirk btn-block">
+                    <translate>Login</translate>
+                </button>
+                <!--<img ng-if="vm.dataLoading"-->
+                     <!--src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>-->
+            </div>
+        </form>
+    </div>
+</div><!-- panel -->
+<script>
+    $(document).ready(function () {
+        $('body').addClass('signwrapper');
+    });
+</script>

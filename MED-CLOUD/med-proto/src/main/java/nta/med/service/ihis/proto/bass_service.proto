@@ -1,0 +1,1295 @@
+import "rpc.proto";
+import "bass_model.proto";
+import "common_model.proto";
+
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "BassServiceProto";
+option (version) = "1.0.0";
+option (service) = "bass";
+//---Common Upadate Reponse
+
+// ----[START] BAS0270U00
+message BAS0270U00FwkDoctorRequest {
+    optional string find1 = 1;
+}
+message BAS0270U00FwkDoctorResponse {
+    repeated BAS0270U00FwdDoctorInfo fwk_list = 1;
+}
+message BAS0270U00FwkDoctorGradeRequest {
+    optional string find1 = 1;
+    optional string code = 2;
+}
+message BAS0270U00FwkDoctorGradeResponse {
+    repeated ComboListItemInfo fwk_list = 1;
+}
+message BAS0270U00FwkGwaRequest {
+    optional string find1 = 1;
+    optional string code = 2;
+    optional string buseo_ymd = 3;
+}
+message BAS0270U00FwkGwaResponse {
+    repeated ComboListItemInfo fwk_list = 1;
+}
+
+message BAS0270U00GrdBAS0271Request {
+	optional string doctor_ymd = 1;
+	optional string doctor_name = 2;
+	optional string hosp_code = 3;
+}
+message BAS0270U00GrdBAS0271Response {
+	repeated BAS0270U00GrdBAS0271Info grdBAS0271 = 1;
+}
+
+message BAS0270U00GrdBAS0272Request {
+	optional string doctor_ymd = 1;
+	optional string doctor = 2;
+	optional string hosp_code = 3;
+}
+message BAS0270U00GrdBAS0272Response {
+	repeated BAS0270U00GrdBAS0272Info grdBAS0272 = 1;
+}
+
+message BAS0270U00LayDoctorNameRequest {
+	optional string doctor = 1;
+	optional string doctor_ymd = 2;
+	optional string hosp_code = 3;
+}
+
+message BAS0270U00LayDoctorNameResponse {
+	repeated DataStringListItemInfo doctor_name = 1;
+}
+
+message BAS0270U00LayDoctorGradeRequest {
+	optional string code = 1;
+	optional string hosp_code = 2;
+}
+
+message BAS0270U00LayDoctorGradeResponse {
+	repeated DataStringListItemInfo code_name = 1;
+}
+
+message BAS0270U00LayGwaRequest {
+	optional string gwa = 1;
+	optional string buseo_ymd = 2;
+	optional string hosp_code = 3;
+}
+
+message BAS0270U00LayGwaResponse {
+	repeated DataStringListItemInfo gwa_name = 1;
+}
+
+message BAS0270U00LayDupCheckRequest {
+	optional string doctor = 1;
+	optional string doctor_ymd = 2;
+	optional string hosp_code = 3;
+}
+
+message BAS0270U00LayDupCheckResponse {
+	repeated DataStringListItemInfo y = 1;
+}
+
+message BAS0270U00ExecuteRequest {
+	repeated BAS0270U00GrdBAS0271Info grdBAS0271Info = 1;
+	repeated BAS0270U00GrdBAS0272Info grdBAS0272Info = 2;
+	optional string user_id = 3; 
+	optional string hosp_code = 4; 
+}
+
+// ----[END] BAS0270
+
+// ----[START] BAS0101U00 ------
+message BAS0101U00PrBasGridColumnChangedRequest{
+	optional string master_check = 1;
+	optional string code_type = 2;
+	optional string col_id = 3;
+	optional string error = 4;   
+}
+message BAS0101U00PrBasGridColumnChangedResponse{
+	optional BAS0101U00PrBasGridColumnChangedItemInfo grd_master = 1;
+}
+
+message BAS0101U00ExecuteRequest{
+    optional string user_id = 1;
+    repeated BAS0101U00GrdMasterItemInfo master_input_list = 2;
+    repeated BAS0101U00grdDetailItemInfo detail_input_list = 3;
+}
+
+message  BAS0101U00grdDetailRequest{
+	optional string code_type = 1;
+}
+message  BAS0101U00grdDetailResponse{
+	repeated BAS0101U00grdDetailItemInfo grd_detail = 1;
+}
+message BAS0101U00grdMasterRequest{
+	optional string code_type = 1;
+}
+message BAS0101U00grdMasterResponse{
+	repeated BAS0101U00GrdMasterItemInfo  grd_master = 1;
+}
+// ----[END]   BAS0101U00 ------
+
+
+
+// ----[START]   BAS0123U00 ------
+message BAS0123U00FwkZipCodeRequest {
+	optional string code = 1;
+	optional string find_1 = 2;
+}
+
+message BAS0123U00FwkZipCodeResponse {
+	repeated BAS0123U00FwkZipCodeInfo info = 1;
+}
+
+message BAS0123U00GrdBAS0123Request {
+	optional string code = 1;
+}
+
+message BAS0123U00GrdBAS0123Response {
+	repeated BAS0123U00GrdBAS0123Info info = 1;
+}
+
+message BAS0123U00LayTonggyeCodeRequest {
+	optional string code_type = 1;
+	optional string code = 2;
+}
+
+message BAS0123U00LayTonggyeCodeResponse {
+	repeated ComboListItemInfo info = 1;
+}
+message BAS0123U00LayZipCodeRequest {
+	optional string code = 1;
+}
+
+message BAS0123U00LayZipCodeResponse {
+	optional string info = 1;
+}
+
+// ----[END]   BAS0123U00 ------
+
+//-----[START] BAS0001U00------
+
+message  BAS0001U00CboHospJinGubunRequest{
+	optional string hosp_code = 1;
+}
+message BAS0001U00ControlDataValidatingRequest{
+	optional string zip_code1 = 1;
+	optional string zip_code2 = 2;
+	optional string ctl_name = 3;
+}
+message BAS0001U00ControlDataValidatingResponse{
+	optional string lay_com =1;
+}
+message BAS0001U00FbxDodobuHyeunFindClickRequest{
+	optional string code_type = 1;
+	optional string find1 = 2;
+	optional string hosp_code = 3;
+}
+message BAS0001U00FbxDodobuHyeunDataValidatingRequest{
+	optional string code_type = 1;
+	optional string code= 2;
+	optional string hosp_code = 3;
+}
+message BAS0001U00FbxDodobuHyeunDataValidatingResponse{
+	repeated BAS0001U00FbxDodobuHyeunDataValidatingInfo fbx_dodob_hyeun_validating = 1;
+}
+message BAS0001U00grdDetailRequest{
+	optional string code_type = 1;
+	optional string hosp_code = 2;
+}
+message BAS0001U00grdDetailResponse{
+	repeated BAS0001U00grdDetailItemInfo grd_detail = 1;
+	optional string user_id = 2;
+}
+message BAS0001U00grdMasterRequest{
+	optional string code_type =1;
+	optional string hosp_code = 2;
+}
+message BAS0001U00grdMasterResponse{
+	repeated ComboListItemInfo grd_master = 1;
+}
+
+//-----[END] BAS0001U00-------
+
+//-----[START]BAS0210U00------
+message BAS0210U00layDupCheckRequest{
+	optional string code = 1;
+}
+message BAS0210U00layDupCheckResponse{
+	optional string lay_dup_check = 1;
+}
+message BAS0210U00DupCheckRequest{
+	optional string gubun =1;
+	optional string start_date =2;
+}
+message BAS0210U00DupCheckResponse{
+	optional string dup_check =1;
+}
+message BAS0210U00grdBAS0210GridColumnChangedRequest{
+	optional string code =1;
+	optional string col_name =2;
+}
+message BAS0210U00grdBAS0210GridColumnChangedResponse{
+	repeated BAS0210U00grdBAS0210GridColumnChangedItemInfo grid_column_changed =1;
+}
+message BAS0210U00fbxDataValidatingRequest{
+	optional string code_type=1;
+	optional string code =2;
+	optional string control_name = 3;
+}
+message BAS0210U00fbxDataValidatingResponse{
+	optional string code_name =1;
+}
+
+message BAS0210U00fwkCommonRequest{
+	optional string find =1;
+}
+message BAS0210U00fwkCommonResponse{
+	repeated ComboListItemInfo fwk_common =1;
+}
+message BAS0210U00grdBAS0210Request{
+	optional string gubun_code =1;
+	optional string start_date=2;
+}
+message BAS0210U00grdBAS0210Response{
+	repeated BAS0210U00grdBAS0210ItemInfo grd_bas0210 =1;
+}
+//-----[END]BAS0210U00--------
+
+//-----[START]BAS0203U00------
+message BAS0230U00GrdBas0230Request{
+    optional string start_ymd = 1;
+}
+
+message BAS0230U00GrdBas0230Response{
+    repeated BAS0230U00GrdBAS0230Info grd_bas0230_info = 1;
+}
+
+message BAS0230U00GrdBas0230SaveLayoutRequest {
+	repeated BAS0230U00GrdBAS0230Info item_info = 1;
+	optional string user_id = 2;
+}
+
+//-----[END]BAS0230U00--------
+
+// -------[START] BAS0260U00 -------
+
+message Bas0260U00grdBuseoInitRequest{
+	optional string start_date = 1;
+	optional string hosp_code = 2;
+}
+
+message Bas0260U00grdBuseoInitResponse{
+	repeated BAS0260GrdBuseoListItemInfo  grd_init = 1;
+}
+
+message Bas0260U00LayDupCheckRequest{
+	optional string code = 1;
+	optional string start_date = 2;
+	optional string hosp_code = 3;
+}
+
+message Bas0260U00LayDupCheckResponse{
+	optional string lay_dup_result = 1;
+}
+
+message Bas0260U00fwkBuseoGubunRequest{
+	optional string hosp_code = 1;
+}
+
+message Bas0260U00xEditGridCell19Request{
+	optional string hosp_code = 1;
+}
+
+message Bas0260U00TransactionalRequest{
+	repeated BAS0260GrdBuseoListItemInfo  grd_buseo_list = 1;
+	optional string user_id = 2;
+	optional string hosp_code = 3;
+}
+
+
+// -------[END] BAS0260U00 -------
+
+// -------[START] BAS0110U00------
+message BAS0110U00FwkCommonRequest{
+	optional string find1 = 1;
+} 
+
+message BAS0110U00FwkCommonResponse{
+	repeated ComboListItemInfo list_info = 1;
+} 
+
+message BAS0110U00GrdJohapRequest{
+	optional string johap_gubun = 1;
+	optional string johap = 2;
+	optional string start_date = 3;
+} 
+
+message BAS0110U00GrdJohapResponse{
+	repeated BAS0110U00GrdJohapListItemInfo list_grd_johap = 1;
+} 
+
+message BAS0110U00getCodeNameRequest{
+	optional string code = 1;
+} 
+
+message BAS0110U00CodeNameResponse{
+	optional string code_name = 1;
+} 
+
+
+message BAS0110U00LayZipCode2Request{
+	optional string zip_code_1 = 1;
+	optional string zip_code_2 = 2;
+} 
+
+message BAS0110U00LayZipCode2Response{
+	optional string zip_name = 1;
+} 
+
+message BAS0110U00GrdJohapGubunRequest{
+	optional string code = 1;
+	optional string zip_code_1  = 2;
+	optional string zip_code_2  = 3;
+	optional string col_name = 4;
+} 
+
+message BAS0110U00GrdJohapGubunResponse{
+	optional string result = 1;
+} 
+
+message BAS0110U00LayDupCheckRequest{
+	optional string gubun = 1;
+	optional string start_date = 2;
+	optional string johap = 3;
+} 
+
+message BAS0110U00LayDupCheckResponse{
+	optional string lay_chk = 1;
+} 
+
+message BAS0110U00TransactionalRequest{
+	repeated BAS0110U00GrdJohapListItemInfo list_info = 1;
+	optional string user_id = 2;
+} 
+
+
+// -------[END] BAS0110U00------
+
+// ---- [START] IFS0004U01 ----
+message IFS0004U01TransactionalRequest{
+    repeated IFS0004U01grdDetailtListItemInfo list_detail = 1;
+    repeated IFS0004U01grdMasterListItemInfo list_master = 2;
+    optional string user_id = 3;
+}
+
+message IFS0004U01grdDetailtRequest{
+	optional string cur_ymd = 1;
+	optional string nu_gubun = 2;
+	optional string nu_code = 3;
+	optional string nu_ymd = 4;
+}
+
+message IFS0004U01grdDetailtResponse{
+	repeated IFS0004U01grdDetailtListItemInfo grd_list = 1;
+}
+
+message IFS0004U01grdMasterRequest{
+	optional string nu_gubun = 1;
+	optional string nu_ymd = 2;
+}
+
+message IFS0004U01grdMasterResponse{
+	repeated IFS0004U01grdMasterListItemInfo grd_list = 1;
+}
+// ---- [END] IFS0004U01 ----
+
+// ----- [START] IFS003U03 ---
+message IFS003U03TransactionalRequest{
+    repeated IFS003U03GridIfs003ListItemInfo list_info = 1;
+    optional string user_id = 2;
+}
+// ----- [END] IFS003U03 ---
+
+message BAS0001U00GrdBAS0001Request {
+	optional string hosp_code = 1;
+
+}
+
+message BAS0001U00GrdBAS0001Response{
+    repeated BAS0001U00GrdBAS0001Info item_info = 1;
+}
+
+message BAS0001U00ExecuteRequest {
+	repeated BAS0001U00GrdBAS0001Info item_info = 1;
+	optional string user_id = 2;
+	optional string hosp_code = 3;
+}
+
+message BAS0123U00SaveLayoutRequest{
+    repeated BAS0123U00GrdBAS0123Info item_info = 1;
+    optional string user_id = 2;
+}
+
+message BAS0210U00SaveLayoutRequest{
+    repeated BAS0210U00grdBAS0210ItemInfo item_info =1;
+	optional string user_id = 2;
+}
+
+// -----[START][BAS0310U00] - Manage point master----
+message BAS0310U00layGroupGubunCheckRequest{
+    optional string sg_code = 1;
+}
+message BAS0310U00layGroupGubunCheckResponse{
+    optional string count = 1;
+}
+
+message BAS0310U00GrdListRequest{
+	optional string bun_code = 1;
+	optional string a_text = 2;
+	optional string page_number = 3;
+	optional string offset = 4;
+}
+
+
+message BAS0310U00GrdListResponse{
+	repeated BAS0310U00GrdListItemInfo list_info = 1;
+}
+
+message BAS0310U00PostLoadRequest{
+	optional string code_type = 1;
+}
+
+message BAS0310U00MakeFindWorker2Request{
+	optional string find = 1;
+}
+
+message BAS0310U00MakeFindWorker3Request{
+	optional string find = 1;
+}
+
+message BAS0310U00MakeFindWorker4Request{
+	optional string code_type = 1;
+}
+
+message BAS0310U00MakeFindWorker5Request{
+	optional string find = 1;
+}
+
+message BAS0310U00MakeFindWorkerFbxMarumeGubunRequest{
+	optional string find = 1;
+	optional string code_type = 2;
+}
+
+message BAS0310U00FbxBunCodeDataValidatingRequest{
+	optional string bun_code = 1;
+	optional string code = 2;
+	optional string col_name = 3;
+}
+
+message BAS0310U00FbxBunCodeDataValidatingResponse{
+	optional string fbx_bun_code = 1;
+}
+
+message BAS0310U00TransactionalRequest{
+	repeated BAS0310U00GrdListItemInfo list_input_info = 1;
+	optional string user_id = 2;
+}
+
+
+//[START] IFS0001U00
+message IFS0001U00FindBoxInitRequest
+{
+	optional string code = 1;
+}
+
+message IFS0001U00FindBoxRequest
+{
+	optional string find1 = 1;
+}
+
+message IFS0001U00FindBoxValidateRequest
+{
+	optional string code_type = 1;
+	optional string code_name =  2;
+}
+
+message IFS0001U00GrdMasterRequest
+{
+	optional string code_type = 1;
+	optional string acct_type = 2;
+}
+message IFS0001U00GrdMasterResponse
+{
+	repeated IFS0001U00GrdMasterInfo grd_mst_item = 1;
+}
+message IFS0001U00GrdDetailRequest
+{
+	optional string code_type = 1;
+	optional string acct_type = 2;
+	optional string page_number = 3;
+	optional string offset = 4;
+}
+message IFS0001U00GrdDetailResponse
+{
+	repeated IFS0001U00GrdDetailInfo grd_detail_item = 1;
+}
+message IFS0001U00PrCheckDupRequest
+{
+	optional string master_check         = 1;
+	optional string code_type            = 2;
+	optional string code                 = 3;
+}
+message IFS0001U00PrCheckDupResponse
+{
+	optional string dup_yn = 1;
+}
+message IFS0001U00SaveLayoutRequest
+{
+	optional string user_id = 1;
+	repeated IFS0001U00GrdMasterInfo grd_mst_item = 2; 
+	repeated IFS0001U00GrdDetailInfo grd_detail_item = 3; 
+}
+//[END] IFS0001U00
+
+
+
+
+
+// [START] BAS0311Q01
+message BAS0311Q01GrdBAS0311Request{
+    optional string search_word = 1;
+	optional string nu_group = 2;
+	optional string page_number = 3;
+	optional string offset = 4;
+}
+
+message BAS0311Q01GrdBAS0311Response{
+    repeated BAS0311Q01GrdBAS0311Info item_info = 1;
+}
+// [END] BAS0311Q01
+
+//[START] BAS0101U04
+message BAS0101U04GrdDetailRequest {
+	optional string code_type = 1;
+}
+
+message BAS0101U04GrdDetailResponse{
+    repeated BAS0101U04GrdDetailInfo grd_detail_info = 1;
+}
+
+message BAS0101U04GrdMasterRequest {
+        optional string code_type = 1;
+        optional string page_number = 2;
+        optional string offset = 3;
+}
+
+message BAS0101U04GrdMasterResponse {
+	repeated BAS0101U04GrdMasterInfo grd_master_item = 1;
+}
+
+message BAS0101U04SaveLayoutRequest {
+	repeated BAS0101U04GrdDetailInfo grd_detail_info = 1;
+	repeated BAS0101U04GrdMasterInfo grd_master_info = 2;
+	optional string user_id = 3;
+}
+
+message BAS0101U04GrdMasterGridColumnChangedRequest {
+	optional string master_check = 1;
+	optional string code_type = 2;
+	optional string col_id = 3;
+}
+
+message BAS0101U04GrdMasterGridColumnChangedResponse {
+	optional string io_error = 1;
+	optional string dup_yn = 2;
+}
+//[END] BAS0101U04
+
+//[START] IFS0003U01
+message IFS0003U01FwkCommonRequest
+{
+	optional string code_type      = 1;
+	optional string find1          = 2;
+}
+message IFS0003U01GrdIFS0003Request
+{
+	optional string map_gubun             = 1;
+	optional string map_gubun_ymd         = 2;
+}
+message IFS0003U01GrdIFS0003Response
+{
+	repeated IFS0003U01GrdIFS0003Info grd_ifs_item = 1;
+}
+message IFS0003U01LayDupCheckRequest
+{
+	optional string map_gubun             = 1;
+	optional string map_gubun_ymd         = 2;
+}
+message IFS0003U01StringResponse
+{
+	optional string str_res = 1;
+}
+message IFS0003U01FbxSearchGubunDataValidatingRequest
+{
+	optional string code_type             = 1;
+	optional string code                  = 2;
+}
+message IFS0003U01GrdIFS0003GridFindClickRequest
+{
+	optional string map_gubun = 1;
+}
+message IFS0003U01GrdIFS0003GridColumnChangedRequest
+{
+	optional string col_name = 1;
+	optional string map_gubun = 2;
+	optional string code = 3;
+}
+message IFS0003U01SaveLayoutRequest
+{
+	optional string user_id = 1;
+	repeated IFS0003U01GrdIFS0003Info grd_ifs_item = 2;
+}
+message IFS0003U01SaveLayoutResponse
+{
+	required bool result = 1;
+	optional string map_gubun = 2;
+	optional string map_gubun_ymd = 3;
+}
+//[END] IFS0003U01
+//[END] BAS0101U04
+
+// ---- [START] IFS0003U00------
+message IFS0003U00LayDupCheckRequest{
+	optional string map_gubun = 1;
+	optional string map_gubun_ymd = 2;
+}
+
+message IFS0003U00LayDupCheckResponse{
+	optional string y_value = 1;
+}
+
+
+message IFS0003U00FbxSearchGubunRequest{
+	optional string code_type = 1;
+	optional string code = 2;
+}
+
+message IFS0003U00FbxSearchGubunResponse{
+	optional string code_name = 1;
+}
+
+message IFS0003U00GridColumnChangeRequest{
+	optional string code = 1;
+	optional string map_gubun = 2;
+	optional string col_name = 3;
+}
+
+message IFS0003U00GridColumnChangeResponse{
+	optional string result = 1;
+}
+
+message IFS0003U00GrdIFS0003Request{
+	optional string map_gubun = 1;
+	optional string map_gubun_ymd = 2;
+	optional string code = 3;
+	optional string acct_type = 4;
+	optional string page_number = 5;
+	optional string offset = 6;
+}
+
+message IFS0003U00GrdIFS0003Response{
+	repeated IFS0003U00GrdIFS0003Info grd_list = 1;
+}
+
+message IFS0003U00GridFindClickRequest{
+	optional string code_type = 1;
+	optional string find1 = 2;
+	optional string map_gubun = 3;
+	optional string col_name = 4;
+	optional string page_number = 5;
+    optional string offset = 6;
+}
+
+message IFS0003U00GridFindClickResponse{
+	repeated ComboListItemInfo cbo_list = 1;
+}
+
+message IFS0003U00SaveLayoutRequest{
+	optional string user_id = 1;
+	repeated IFS0003U00GrdIFS0003Info input_list = 2;
+}
+// ---- [END] IFS0003U00------
+
+// ------ [START] ComBiz ----------
+
+message ComBizLoadIFS0001InfoRequest{
+	optional string code_type = 1;
+}
+
+message ComBizLoadIFS0001InfoResponse{
+	repeated ComBizLoadIFS0001Info info_list = 1;
+}
+
+message ComBizLoadIFS0002InfoRequest{
+	optional string code_type = 1;
+	optional string code = 2;
+}
+
+message ComBizLoadIFS0002InfoResponse{
+	repeated ComBizLoadIFS0002Info info_list = 1;
+}
+
+message ComBizGetFindWorkerRequest{
+	optional string col_name = 1;
+	optional string argu1 = 2;
+	optional string find1 = 3;
+}
+
+message ComBizGetFindWorkerResponse{
+	repeated ComBizGetFindWorkerInfo info_list = 1;
+}
+
+message ComBizLoadColumnCodeNameRequest{
+	optional string col_name = 1;
+	optional string argu1 = 2;
+	optional string argu2 = 3;
+}
+
+message ComBizLoadColumnCodeNameResponse{
+	optional string value = 1;
+}
+
+message ComBizLoadComboDataSourceRequest{
+	optional string col_name = 1;
+	optional string argu1 = 2;
+	optional string argu2 = 3;
+}
+
+message ComBizLoadComboDataSourceResponse{
+	repeated ComboListItemInfo list_info = 1;
+}
+// ------ [END] ComBiz ----------
+
+//[START] BAS0110Q00
+message BAS0110Q00GrdBAS0110Request{
+	optional string johap_gubun = 1;
+	optional string search_gubun = 2;
+	optional string search_word = 3;
+}
+message BAS0110Q00GrdBAS0110Response{
+	repeated BAS0110Q00GrdBAS0110ItemInfo grd_bas0110_item_info = 1;
+}
+//[END] BAS0110Q00
+
+//[START] BAS0203U00
+message BAS0203U00FwkBunCodeRequest
+{
+	optional string hosp_code         = 1;
+	optional string find1             = 2;
+	optional string jy_date           = 3;
+}
+message BAS0203U00FwkSymyaGubunRequest
+{
+	optional string hosp_code         = 1;
+	optional string find1             = 2;
+}
+message BAS0203U00GrdBAS0203Request
+{
+	optional string hosp_code               = 1;
+	optional string jy_date                 = 2;
+	optional string symya_gubun             = 3;
+}
+message BAS0203U00GrdBAS0203Response
+{
+	repeated BAS0203U00GrdBAS0203Info grd_bas0203_item = 1;
+}
+message BAS0203U00LayDupCheckRequest
+{
+	optional string hosp_code               = 1;
+	optional string symya_gubun             = 2;
+	optional string bun_code                = 3;
+	optional string sg_code                 = 4;
+	optional string jy_date                 = 5;
+	optional string from_time               = 6;
+}
+message BAS0203U00StringResponse
+{
+	optional string res_str = 1;
+}
+message BAS0203U00LaySgCodeRequest
+{
+	optional string hosp_code               = 1;
+	optional string sg_ymd                  = 2;
+	optional string sg_code                 = 3;
+}
+
+message BAS0203U00LaySgCodeResponse
+{
+	repeated DataStringListItemInfo lay_sg_code_item = 1;
+}
+message BAS0203U00CboYoilGubunRequest
+{
+	optional string hosp_code = 1;
+}
+message BAS0203U00LaySymyaGubunRequest
+{
+	optional string hosp_code               = 1;
+	optional string code                    = 2;
+}
+message BAS0203U00LayBunCodeRequest
+{
+	optional string code = 1;
+	optional string hosp_code = 2;
+}
+message BAS0203U00SaveLayoutRequest
+{
+	optional string user_id = 1;
+	optional string hosp_code = 2;
+	repeated BAS0203U00GrdBAS0203Info grd_bas0203_item = 3;
+}
+//[END] BAS0203U00
+
+//[START] BAS0311U00
+message BAS0311U00GridListRequest{
+	optional string f_hosp_code = 1;
+	optional string f_sg_code = 2;
+}
+message BAS0311U00GridListResponse{
+	repeated BAS0311U00GridListItemInfo dt = 1;
+}
+//[END] BAS0311U00
+
+//[START] BAS0111U00
+message BAS0111U00VzvJohapRequest{
+	optional string f_hosp_code = 1;
+	optional string f_johap = 2;
+	optional string f_start_date = 3;
+}
+message BAS0111U00VzvZipCodeRequest{
+	optional string f_hosp_code = 1;
+	optional string f_zip1 = 2;
+	optional string f_zip2 = 3;
+}
+message BAS0111U00LayVzvResponse{
+	repeated BAS0111U00LayVzvItemInfo dt = 1;
+}
+message BAS0111U00GrdBas0111Request{
+	optional string f_hosp_code = 1;
+	optional string f_johap_gubun = 2;
+	optional string f_johap = 3;
+}
+message BAS0111U00GrdBas0111Response{
+	repeated BAS0111U00GrdBas0111ItemInfo dt = 1;
+}
+message BAS0111U00GrdMasterRequest{
+	optional string f_hosp_code = 1;
+	optional string f_johap_gubun = 2;
+	optional string f_johap = 3;
+	optional string f_naewon_date = 4;
+}
+message BAS0111U00GrdMasterResponse{
+	repeated BAS0111U00GrdMasterItemInfo dt = 1;
+}
+message BAS0111U00LayGetJohapRequest{
+	optional string f_hosp_code = 1;
+	optional string f_gubun = 2;
+	optional string f_naewon_date = 3;
+}
+message BAS0111U00LayGetJohapResponse{
+	repeated BAS0111U00LayVzvItemInfo dt = 1;
+}
+message BAS0111U00VzvZipCodeResponse{
+	repeated BAS0111U00LayVzvItemInfo dt = 1;
+}
+message BAS0111U00VzvJohapResponse{
+	repeated BAS0111U00LayVzvItemInfo dt = 1;
+}
+message BAS0111U00SaveLayoutRequest{
+	optional string q_user_id = 1;
+	optional string f_hosp_code = 2;
+	repeated BAS0111U00GrdBas0111ItemInfo grdItem = 3;
+}
+message BAS0111U00SaveLayoutResponse
+{
+	required bool result = 1;
+	optional string johap_gubun = 2;
+	optional string johap = 3;
+	optional string gaein = 4;
+	optional string err_flag = 5;
+}
+//[END] BAS0111U00
+
+//[START] BAS0310P01
+message BAS0310P01GrdDrugMasterRequest{
+}
+
+message BAS0310P01GrdDrugMasterResponse{
+	repeated BAS0310P01GrdDrugMasterInfo dt = 1;
+}
+
+message BAS0310P01GrdGenDrgMapRequest{
+}
+
+message BAS0310P01GrdGenDrgMapResponse{
+	repeated BAS0310P01GrdGenDrgMapInfo dt = 1;
+}
+
+message BAS0310P01GrdGenDrgMasterRequest{
+}
+
+message BAS0310P01GrdGenDrgMasterResponse{
+	repeated BAS0310P01GrdGenDrgMasterInfo dt = 1;
+}
+
+message BAS0310P01GrdJinryoMasterRequest{
+}
+
+message BAS0310P01GrdJinryoMasterResponse{
+	repeated BAS0310P01GrdJinryoMasterInfo dt = 1;
+}
+
+message BAS0310P01GrdJojeMasterRequest{
+}
+
+message BAS0310P01GrdJojeMasterResponse{
+	repeated BAS0310P01GrdJojeMasterInfo dt = 1;
+}
+
+message BAS0310P01GrdSangMasterRequest{
+}
+
+message BAS0310P01GrdSangMasterResponse{
+	repeated BAS0310P01GrdSangMasterInfo dt = 1;
+}
+
+message BAS0310P01GrdSusikMasterRequest{
+}
+
+message BAS0310P01GrdSusikMasterResponse{
+	repeated BAS0310P01GrdSusikMasterInfo dt = 1;
+}
+
+message BAS0310P01GrdTokuteiMasterRequest{
+}
+
+message BAS0310P01GrdTokuteiMasterResponse{
+	repeated BAS0310P01GrdTokuteiMasterInfo dt = 1;
+}
+
+message BAS0310P01GrdYjCodeRequest{
+}
+
+message BAS0310P01GrdYjCodeResponse{
+	repeated BAS0310P01GrdYjCodeInfo dt = 1;
+}
+
+message BAS0310P01GrdSaveLayRequest{
+	optional string table_name = 1;
+	optional string current_type = 2;
+	optional string user_id = 3;
+	repeated BAS0310P01GrdJinryoMasterInfo dt = 4;
+}
+
+message BAS0310P01ProcessRequest{
+	optional string update_proc_name = 1;
+	optional string proc_gubun = 2;
+	optional string user_id = 3;
+}
+
+message BAS0310P01GrdDrgSakuraRequest{
+}
+
+message BAS0310P01GrdDrgSakuraResponse{
+	repeated BAS0310P01GrdDrgSakuraInfo dt = 1;
+}
+//[END] BAS0310P01
+
+//[START] BAS0212U00
+message BAS0212U00ComboListItemRequest{
+}
+message BAS0212U00ComboListItemResponse {
+	repeated BAS0212U00ComboListItemInfo combo_item = 1;
+}
+message BAS0212U00ListItemRequest {
+	
+	optional string code = 1;
+	optional string start_date = 2;
+}
+message BAS0212U00CListItemResponse {
+	
+	repeated BAS0212U00ListItemRequestInfo combo_name = 1;
+}
+message BAS0212U00TransactionalRequest {
+	repeated BAS0212U00GrdItemInfo grd_init = 1;   
+	optional string user_id = 2;         
+}
+message BAS0212U00fwkGongbiCodeRequest {
+	
+	optional string find1 = 1;
+	optional string start_date = 2;
+}
+message BAS0212U00fwkGongbiCodeResponse {
+	repeated BAS0212U00fwkGongbiCodeInfo fwk = 1;
+}
+message BAS0212U00GrdItemRequest {
+	
+	optional string gongbi_code = 1;
+	optional string start_date = 2;
+}
+message BAS0212U00GrdItemResponse {
+	repeated BAS0212U00GrdItemInfo grd_init = 1;
+}
+message BAS0212U00LaydupCheckRequest {
+	
+	optional string code = 1;
+	optional string start_date = 2;             
+}
+message BAS0212U00LaydupCheckResponse {
+	optional string lay_dup_result = 1;
+}
+//[END] BAS0212U00
+
+//[START] HOTCODEMASTER
+message HOTCODEMASTERGetGrdListRequest
+{
+	optional string hot_code     = 1;
+	optional string hangmog_name = 2;
+	optional string offset       = 3;
+    optional string page_number  = 4;
+}
+message HOTCODEMASTERGetGrdListResponse
+{
+	repeated HOTCODEMASTERGetGrdListInfo grd_list_item = 1;
+}
+message HOTCODEMASTERSaveLayoutRequest
+{
+	optional string user_id                          = 1;
+	optional string hosp_code                        = 2;
+	optional string truncate_yn                      = 3;
+	repeated HOTCODEMASTERGetGrdListInfo layout_item = 4;
+}
+message HOTCODEMASTERSaveOCS0103Request
+{
+	optional string hosp_code = 1;
+	optional string user_id   = 2;
+}
+message BAS2015U00MasterDataRequest
+{
+	required KinkiType kinki_type   = 1;
+	optional bytes data             = 2;
+	optional ActionType action_type = 3;
+	optional string user_id         = 4;
+}
+message BAS2015U00MasterDataResponse
+{
+	required KinkiType kinki_type = 1;
+	optional bytes data           = 2;
+	optional string msg           = 3;
+	required bool result          = 4;
+
+}
+//[END] HOTCODEMASTER
+
+//[START] GET DEPARTMENT
+message Bas0260GetDepartmentRequest
+{
+	required string hosp_code           = 1;                        
+	optional string locale	            = 2;
+}
+message Bas0260GetDepartmentResponse
+{
+	repeated Bas0260DepartmetnInfo list_department = 1;
+}
+//[END] GET DEPARTMENT
+
+//[START][MBS] Update default schedule of DEPARTMENT
+message Bas0260UpdateDepartmentRequest
+{
+	required string hosp_code           = 1;                        
+	optional string locale	            = 2;
+	repeated Bas0260DepartmetnInfo list_department = 3;
+}
+//[END][MBS] Update default schedule of DEPARTMENT
+
+//[START] AC02
+message	CreatePatientSurveyRequest
+{
+	optional string hospCode = 1;
+}
+
+message	CreatePatientSurveyResponse
+{
+	repeated CreatePatientSurveyInfo item = 1;
+}
+//[END] AC02
+
+//[START] BAS0260U01
+message LoadGrdBAS0260U01Request
+{
+    optional string language = 1;
+    optional string buseo_name = 2;
+    optional string gwa_name = 3;
+    optional string active_flg = 4;
+    optional string buseo_gubun = 5;
+}
+message LoadGrdBAS0260U01Response
+{
+	repeated LoadGrdBAS0260U01Info list_info = 1;
+}
+
+message LoadCbxLanguageRequest
+{
+    optional string property_code = 1;
+    optional string active_flg = 2;
+}
+message LoadCbxLanguageResponse
+{
+    repeated LoadCbxLanguageInfo list_info = 1;
+}
+
+message SaveGrdBas0260U01Request
+{
+   repeated LoadGrdBAS0260U01Info list_info = 1;
+}
+
+message Bas0260U01LoadDepartmentTypeRequest
+{
+	optional string hosp_code = 1;
+	optional string code_type = 2;
+	optional string language  = 3;
+}
+message Bas0260U01LoadDepartmentTypeResponse
+{
+	repeated LoadDepartmentTypeInfo list_info = 1;
+}
+
+//[END] BAS0260U01
+
+message Bass0260U00DepartmentRequest
+{
+        optional string  gwa_name=  1;
+        optional string  buseo_gubun = 2;  
+}
+message Bass0260U00DepartmentResponse
+{
+        repeated Bass0260U00DepartmentInfo item_info = 1;
+}
+
+// MIH
+message BAS0250U00CboListRequest {
+
+}
+
+message BAS0250U00CboListResponse {
+	repeated ComboListItemInfo cbo_ho_status 	= 1;
+	repeated ComboListItemInfo cbo_ho_sex 		= 2;
+	repeated ComboListItemInfo cbo_ho_gubun 	= 3;
+	repeated ComboListItemInfo xedit_grid_cell 	= 4;
+}
+
+message BAS0250U00GrdBAS0253Request {
+	optional string ho_dong 	= 1;
+	optional string ho_code 	= 2;
+	optional string page_number = 3;
+	optional string offset 		= 4;
+}
+
+message BAS0250U00GrdBAS0253Response {
+    repeated BAS0250U00GrdBAS0253Info grd_list = 1;
+}
+
+message BAS0250U00GrdHoCodeListRequest {
+	optional string ho_dong 		= 1;
+	optional string jukyong_date 	= 2;
+	optional string page_number 	= 3;
+	optional string offset 			= 4;
+}
+
+message BAS0250U00GrdHoCodeListResponse {
+    repeated BAS0250U00GrdHoCodeListInfo grd_list = 1;
+}
+
+message BAS0250U00FindboxFindClickRequest {
+	optional string start_date = 1;
+	optional string jukyong_date = 2;
+	optional string control_name = 3;
+	optional string find_1 = 4;
+}
+
+message BAS0250U00FindboxFindClickResponse {
+    repeated ComboListItemInfo fb_list = 1;
+}
+
+message BAS0250U00FbxHoMainGwaValidatingRequest {
+    optional string gwa = 1;
+    optional string buseo_ymd = 2;
+}
+
+message BAS0250U00FbxHoMainGwaValidatingResponse {
+    optional string gwa_name = 1;
+}
+
+message BAS0250U00SaveLayoutRequest {
+	repeated BAS0250U00GrdBAS0253Info grd_bas0253 = 1;
+	repeated BAS0250U00GrdHoCodeListInfo grd_ho_code = 2;
+	optional string user_id = 3;
+}
+
+message BAS0250U00FbxHoGradeValidatingRequest {
+        optional string ho_grade = 1;
+        optional string ho_grade_ymd = 2;
+}
+
+message BAS0250U00FbxHoGradeValidatingResponse {
+        optional string ho_grade_name = 1;
+}
+
+message BAS0250Q00grdBAS0260Request { 
+   	optional string hosp_code 		= 1;
+   	optional string buseo_ymd 		= 2;
+   	optional string gumjin_hodong 	= 3;
+   	optional string offset 			= 4;
+   	optional string page_number 	= 5;
+}
+message BAS0250Q00grdBAS0260Response { 
+   	repeated ComboListItemInfo grd_master_item 	= 1;
+}
+message BAS0250Q00grdHOBEDRequest { 
+   	optional string hosp_code 			= 1;
+   	optional string ho_dong 			= 2;
+   	optional string ho_code_ymd 		= 3;
+   	optional string gumjin_hodong_yn 	= 4;
+}
+message BAS0250Q00grdHOBEDResponse { 
+   	repeated BAS0250Q00grdHOBEDInfo grd_master_item 	= 1;
+}
+message BAS0250Q00layBedStatusRequest { 
+   	optional string hosp_code 			= 1;
+   	optional string ho_code_ymd 		= 2;
+   	optional string ho_dong 			= 3;
+}
+message BAS0250Q00layBedStatusResponse { 
+   	repeated BAS0250Q00layBedStatusInfo lay_item 	= 1;
+}
+message BAS0250Q00layJaewonListRequest { 
+   	optional string hosp_code 			= 1;
+   	optional string ho_dong 			= 2;
+}
+message BAS0250Q00layJaewonListResponse { 
+   	repeated BAS0250Q00layJaewonListInfo lay_item 	= 1;
+}
+message BAS0250Q00layReserBedRequest { 
+   	optional string hosp_code 			= 1;
+   	optional string ho_dong 			= 2;
+}
+message BAS0250Q00layReserBedResponse { 
+   	repeated BAS0250Q00layReserBedInfo lay_item 	= 1;
+}
+message BAS0250Q00layMaxBedNoRequest { 
+   	optional string hosp_code 			= 1;
+   	optional string ho_dong 			= 2;
+   	optional string ho_code_ymd 		= 3;
+}
+message BAS0250Q00layMaxBedNoResponse { 
+   	repeated DataStringListItemInfo lay_item 	= 1;
+}

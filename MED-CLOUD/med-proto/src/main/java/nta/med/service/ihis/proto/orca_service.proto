@@ -1,0 +1,87 @@
+import "rpc.proto";
+import "orca_model.proto";
+
+option java_package = "nta.med.service.orca.proto";
+option java_outer_classname = "OrcaServiceProto";
+option (version) = "1.0.0";
+option (service) = "orca";
+
+//[START] ORCALib
+message ORCALibGetClaimPatientRequest
+{
+	optional string hosp_code             = 1;
+	optional string fkoif1101             = 2;
+}
+message ORCALibGetClaimPatientResponse
+{
+	repeated ORCALibGetClaimPatientInfo pat_item = 1;
+}
+message ORCALibAcquisitionRequest
+{
+	optional string hosp_code                  = 1;
+	optional string fkoif1101                  = 2;
+}
+message ORCALibAcquisitionResponse
+{
+	repeated ORCALibAcquisitionInfo acq_item = 1;
+}
+message ORCALibGetClaimInsuredRequest
+{
+	optional string hosp_code               = 1;
+	optional string fkoif1101               = 2;
+}
+message ORCALibGetClaimInsuredResponse
+{
+	repeated ORCALibGetClaimInsuredInfo claim_ins_item = 1;
+}
+message ORCALibGetClaimOrderRequest
+{
+	optional string hosp_code                     = 1;
+	optional string fkoif1101                     = 2;
+}
+message ORCALibGetClaimOrderResponse
+{
+	repeated ORCALibGetClaimOrderInfo claim_order_item = 1;
+}
+message ORCALibGetClaimDiagnosisRequest
+{
+	optional string hosp_code             = 1;
+    optional string fkoif1101             = 2;
+}
+message ORCALibGetClaimDiagnosisResponse
+{
+	repeated ORCALibGetClaimDiagnosisInfo claim_diagnosis_item = 1;
+	required bool result                                       = 2;
+}
+message ORCALibGetClaimInfoRequest
+{
+	optional string hosp_code = 1;
+	optional string fkoif1101 = 2;
+}
+message ORCALibGetClaimInfoResponse
+{
+	repeated ORCALibGetDocInfo doc_item                   = 1;
+	repeated ORCALibGetClaimPatientInfo patient_item      = 2;
+	repeated ORCALibAcquisitionInfo acquis_item           = 3;
+	repeated ORCALibGetClaimInsuredInfo insurance_item    = 4;
+	repeated ORCALibGetClaimOrderInfo claim_order_item    = 5;
+	repeated ORCALibGetClaimDiagnosisInfo diagnosis_item  = 6;
+}
+//[END] ORCALib
+
+message ORCATransferOrdersRequest
+{
+	optional string bunho                                         = 1;
+	optional string hosp_code                                     = 2;
+	optional string pkout_1001                                    = 3;
+	repeated ORCATransferOrdersLstSgCodeInfo sg_code_item         = 4;
+}
+message ORCATransferOrdersResponse
+{
+	optional ORCATransferOrdersHeaderInfo header_item                           = 1;
+	repeated ORCATransferOrdersHealthInsuranceInfo health_ins_item              = 2;
+	repeated ORCATransferOrdersDiseaseInfo disease_item                         = 3;
+	repeated ORCATransferOrdersClaimExaminationFeeInfo claim_exam_item          = 4;
+	repeated ORCATransferOrdersClaimOrdersFeeInfo claim_orders_item             = 5;
+	repeated ORCATransferOrdersErrMsgInfo err_msg_item                          = 6;
+}

@@ -1,0 +1,671 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ADDRESS1_TEXT" xml:space="preserve">
+    <value>Address 1</value>
+  </data>
+  <data name="ADDRESS2_TEXT" xml:space="preserve">
+    <value>Address 2</value>
+  </data>
+  <data name="AGE_TEXT" xml:space="preserve">
+    <value>나이</value>
+  </data>
+  <data name="BIRTH_TEXT" xml:space="preserve">
+    <value>Date of birth</value>
+  </data>
+  <data name="BONIN_GUBUN_NAME_TEXT" xml:space="preserve">
+    <value>Relationships people</value>
+  </data>
+  <data name="BONIN_GUBUN_TEXT" xml:space="preserve">
+    <value>relation</value>
+  </data>
+  <data name="BUNHO_DUPLICATE_MSG" xml:space="preserve">
+    <value>Patient code has been already registered. {0} will be used instead.</value>
+  </data>
+  <data name="BUNHO_EXISTS" xml:space="preserve">
+    <value>Already the same patient number is saved. Please enter a different patient number.</value>
+  </data>
+  <data name="BUNHO_NOT_EXIST_MSG" xml:space="preserve">
+    <value>No this patients.</value>
+  </data>
+  <data name="BUNHO_OVERLOAD_MSG" xml:space="preserve">
+    <value>Overload sequence ID.</value>
+  </data>
+  <data name="BUNHO_TEXT" xml:space="preserve">
+    <value>Patient numbers</value>
+  </data>
+  <data name="BUNHO_TYPE_TEXT" xml:space="preserve">
+    <value>Bunho type</value>
+  </data>
+  <data name="CAN_NOT_DELETE_INSURANCE_MGS" xml:space="preserve">
+    <value>You cannot delete insurance information on accounting system.</value>
+  </data>
+  <data name="CAP_002" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="CAP_003" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="CAP_0031" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="CAP_ERROR" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Caption17" xml:space="preserve">
+    <value>Save failed</value>
+  </data>
+  <data name="caption20" xml:space="preserve">
+    <value>Patient number</value>
+  </data>
+  <data name="caption24_Jp" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="caption24_Ko" xml:space="preserve">
+    <value>Presence information change</value>
+  </data>
+  <data name="CheckBillingType" xml:space="preserve">
+    <value>Please choose the accounting classification!</value>
+  </data>
+  <data name="CHUIDUK_DATE_TEXT" xml:space="preserve">
+    <value>Chuiduk date</value>
+  </data>
+  <data name="COMMENT_TEXT" xml:space="preserve">
+    <value>Notices</value>
+  </data>
+  <data name="DefaultJapanPeriod" xml:space="preserve">
+    <value>Showa</value>
+  </data>
+  <data name="DELETE_YN_TEXT" xml:space="preserve">
+    <value>Whether deleted</value>
+  </data>
+  <data name="DONG_NAME_TEXT" xml:space="preserve">
+    <value>The name Dong</value>
+  </data>
+  <data name="EMAIL_TEXT" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="END_YN_TEXT" xml:space="preserve">
+    <value>End yn</value>
+  </data>
+  <data name="fbxGaeinCode" xml:space="preserve">
+    <value>Symbol</value>
+  </data>
+  <data name="GAEIN_NO_TEXT" xml:space="preserve">
+    <value>Personal Number</value>
+  </data>
+  <data name="GAEIN_TEXT" xml:space="preserve">
+    <value>Personal preferences</value>
+  </data>
+  <data name="gongbi_code" xml:space="preserve">
+    <value>Public expense code</value>
+  </data>
+  <data name="gongbi_name" xml:space="preserve">
+    <value>Public expense name</value>
+  </data>
+  <data name="GONGBI_TEXT" xml:space="preserve">
+    <value>Public expense name</value>
+  </data>
+  <data name="gubun" xml:space="preserve">
+    <value>Insurance division</value>
+  </data>
+  <data name="gubun_name" xml:space="preserve">
+    <value>Insurance name</value>
+  </data>
+  <data name="GUBUN_NAME_TEXT" xml:space="preserve">
+    <value>Insurance nickname species</value>
+  </data>
+  <data name="GUBUN_NAME1_TEXT" xml:space="preserve">
+    <value>Do not name species</value>
+  </data>
+  <data name="GUBUN_TEXT" xml:space="preserve">
+    <value>Insurance type</value>
+  </data>
+  <data name="IU_GUBUN_TEXT" xml:space="preserve">
+    <value>iu_gubun</value>
+  </data>
+  <data name="JOHAP_GUBUN_TEXT" xml:space="preserve">
+    <value>Combined nine minutes</value>
+  </data>
+  <data name="JOHAP_NAME_TEXT" xml:space="preserve">
+    <value>Name of insurer</value>
+  </data>
+  <data name="JOHAP_TEXT" xml:space="preserve">
+    <value>The insurer code</value>
+  </data>
+  <data name="LABEL1_TEXT" xml:space="preserve">
+    <value>Year old</value>
+  </data>
+  <data name="LABEL11" xml:space="preserve">
+    <value>Street address</value>
+  </data>
+  <data name="LABEL12_TEXT" xml:space="preserve">
+    <value>Contact 1</value>
+  </data>
+  <data name="LABEL13_TEXT" xml:space="preserve">
+    <value>Contact 3</value>
+  </data>
+  <data name="LABEL14_TEXT" xml:space="preserve">
+    <value>E-Mail</value>
+  </data>
+  <data name="LABEL15_TEXT" xml:space="preserve">
+    <value>The final date confirmed</value>
+  </data>
+  <data name="LABEL18_TEXT" xml:space="preserve">
+    <value>Our hospital pacemaker</value>
+  </data>
+  <data name="LABEL2_TEXT" xml:space="preserve">
+    <value>Name 1</value>
+  </data>
+  <data name="LABEL20_TEXT" xml:space="preserve">
+    <value>The insured's name</value>
+  </data>
+  <data name="LABEL21_TEXT" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="LABEL26_TEXT" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="LABEL27_TEXT" xml:space="preserve">
+    <value>Principal classification</value>
+  </data>
+  <data name="LABEL28" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="LABEL29_TEXT" xml:space="preserve">
+    <value>symbol</value>
+  </data>
+  <data name="LABEL3_TEXT" xml:space="preserve">
+    <value>Basic information</value>
+  </data>
+  <data name="LABEL30_TEXT" xml:space="preserve">
+    <value>Insurance's number</value>
+  </data>
+  <data name="LABEL31_TEXT" xml:space="preserve">
+    <value>Insurance type</value>
+  </data>
+  <data name="LABEL32_TEXT" xml:space="preserve">
+    <value>expiration date</value>
+  </data>
+  <data name="LABEL33_TEXT" xml:space="preserve">
+    <value>Start date</value>
+  </data>
+  <data name="LABEL34_TEXT" xml:space="preserve">
+    <value>Insurance Information</value>
+  </data>
+  <data name="LABEL35_TEXT" xml:space="preserve">
+    <value>Acquisition date</value>
+  </data>
+  <data name="LABEL36_TEXT" xml:space="preserve">
+    <value>Public expense information</value>
+  </data>
+  <data name="LABEL38_TEXT" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="LABEL4_TEXT" xml:space="preserve">
+    <value>Pacemaker fitted</value>
+  </data>
+  <data name="LABEL42_TEXT" xml:space="preserve">
+    <value>Recipient number</value>
+  </data>
+  <data name="LABEL43_TEXT" xml:space="preserve">
+    <value>Burden's number</value>
+  </data>
+  <data name="LABEL44_TEXT" xml:space="preserve">
+    <value>Public expense code</value>
+  </data>
+  <data name="LABEL47_TEXT" xml:space="preserve">
+    <value>Application date</value>
+  </data>
+  <data name="LABEL5_TEXT" xml:space="preserve">
+    <value>Patient classification</value>
+  </data>
+  <data name="LABEL52_TEXT" xml:space="preserve">
+    <value>Contact 2</value>
+  </data>
+  <data name="LABEL53_TEXT" xml:space="preserve">
+    <value>Enable classification</value>
+  </data>
+  <data name="LABEL6_TEXT" xml:space="preserve">
+    <value>Patient number</value>
+  </data>
+  <data name="LABEL7_TEXT" xml:space="preserve">
+    <value>Name (Chinese characters)</value>
+  </data>
+  <data name="LABEL8_TEXT" xml:space="preserve">
+    <value>Patient Notices</value>
+  </data>
+  <data name="LABEL9_TEXT" xml:space="preserve">
+    <value>Birthday</value>
+  </data>
+  <data name="LAST_CHECK_DATE_TEXT" xml:space="preserve">
+    <value>One final check</value>
+  </data>
+  <data name="MessageExportSuccessfully" xml:space="preserve">
+    <value>Export file successfully</value>
+  </data>
+  <data name="MessageSelectOne" xml:space="preserve">
+    <value>Please selected data to export</value>
+  </data>
+  <data name="MessageStartDateEndDate" xml:space="preserve">
+    <value>The start date must be less than the end date</value>
+  </data>
+  <data name="MSG_001" xml:space="preserve">
+    <value>I can not find the appropriate data.</value>
+  </data>
+  <data name="MSG_002" xml:space="preserve">
+    <value>Please enter a date of birth correctly.</value>
+  </data>
+  <data name="MSG_CONFIRM_AUTO_GEN" xml:space="preserve">
+    <value>Patient code already exist. System will now create a new one.</value>
+  </data>
+  <data name="MSG_CONFIRM_UPLOAD" xml:space="preserve">
+    <value>Do you want to save data?</value>
+  </data>
+  <data name="MSG_CSV_BAD_COLUMN" xml:space="preserve">
+    <value>CSV column format is not correct.</value>
+  </data>
+  <data name="MSG_DUPLICATE" xml:space="preserve">
+    <value>{0} is duplicated</value>
+  </data>
+  <data name="MSG_FORMAT_DATE" xml:space="preserve">
+    <value>{0} format must be (1)</value>
+  </data>
+  <data name="MSG_FORMAT_SEX" xml:space="preserve">
+    <value>Sex must be F or M.</value>
+  </data>
+  <data name="MSG_GENPASS" xml:space="preserve">
+    <value>Gen password success</value>
+  </data>
+  <data name="MSG_GENPASS_CAP" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="MSG_GENPASS_FAIL" xml:space="preserve">
+    <value>Gen password failure</value>
+  </data>
+  <data name="MSG_IMPORT_FAIL" xml:space="preserve">
+    <value>Import failed.</value>
+  </data>
+  <data name="MSG_IMPORT_SUCCESS" xml:space="preserve">
+    <value>Import succeeded.</value>
+  </data>
+  <data name="MSG_INPUTSPACE" xml:space="preserve">
+    <value>Please input a space between your first name and last name.</value>
+  </data>
+  <data name="MSG_MAX_LEN" xml:space="preserve">
+    <value>{0} must be less than or equal {1} characters.</value>
+  </data>
+  <data name="MSG_NOT_CSV" xml:space="preserve">
+    <value>File upload must be csv format.</value>
+  </data>
+  <data name="MSG_NOT_SELECTED" xml:space="preserve">
+    <value>Please select column to upload.</value>
+  </data>
+  <data name="MSG_ORCA" xml:space="preserve">
+    <value>テスト患者さんを登録したい場合、ORCAから登録してください。</value>
+  </data>
+  <data name="MSG_ORCA_CAP" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="MSG_PHONE_ERR" xml:space="preserve">
+    <value>Please enter the phone number correctly.</value>
+  </data>
+  <data name="MSG_REQUIRED" xml:space="preserve">
+    <value>{0} is required.</value>
+  </data>
+  <data name="MSG_REQUIRED_FILE" xml:space="preserve">
+    <value>Please select a file to upload.</value>
+  </data>
+  <data name="NO_CBO_TEXT" xml:space="preserve">
+    <value>Effectiveness</value>
+  </data>
+  <data name="OLD_GUBUN_TEXT" xml:space="preserve">
+    <value>old_gubun</value>
+  </data>
+  <data name="OLD_START_DATE_TEXT" xml:space="preserve">
+    <value>old_start_date</value>
+  </data>
+  <data name="PACE_MAKER_YN_TEXT" xml:space="preserve">
+    <value>pace_maker_yn</value>
+  </data>
+  <data name="PI_NAME_TEXT" xml:space="preserve">
+    <value>Insured patients</value>
+  </data>
+  <data name="REG_BTN_TEXT" xml:space="preserve">
+    <value>Registration</value>
+  </data>
+  <data name="RETRIEVE_YN_TEXT" xml:space="preserve">
+    <value>Whether or not re-query</value>
+  </data>
+  <data name="RETRIEVE_YN1_TEXT" xml:space="preserve">
+    <value>retrieve_yn</value>
+  </data>
+  <data name="SELF_PACE_MAKER_TEXT" xml:space="preserve">
+    <value>self_pace_maker</value>
+  </data>
+  <data name="SER_TEXT" xml:space="preserve">
+    <value>turn</value>
+  </data>
+  <data name="SEX_TEXT" xml:space="preserve">
+    <value>gender</value>
+  </data>
+  <data name="SU_NAME_TEXT" xml:space="preserve">
+    <value>Patient people</value>
+  </data>
+  <data name="SU_NAME2_TEXT" xml:space="preserve">
+    <value>Heading 2</value>
+  </data>
+  <data name="TEL_GUBUN_TEXT" xml:space="preserve">
+    <value>Telephone nine minutes</value>
+  </data>
+  <data name="TEL_GUBUN2_TEXT" xml:space="preserve">
+    <value>Telephone Category 2</value>
+  </data>
+  <data name="TEL_GUBUN3_TEXT" xml:space="preserve">
+    <value>Telephone Category 3</value>
+  </data>
+  <data name="TEL_HP_TEXT" xml:space="preserve">
+    <value>cellphone</value>
+  </data>
+  <data name="TEL_TEXT" xml:space="preserve">
+    <value>C Phone Number</value>
+  </data>
+  <data name="TEL1_TEXT" xml:space="preserve">
+    <value>Phone 1</value>
+  </data>
+  <data name="TEL2_TEXT" xml:space="preserve">
+    <value>Insurer calls</value>
+  </data>
+  <data name="TXT_HOTEN" xml:space="preserve">
+    <value>Full name</value>
+  </data>
+  <data name="TXT_LINE" xml:space="preserve">
+    <value>Line {0}: </value>
+  </data>
+  <data name="TXT_PROCESS" xml:space="preserve">
+    <value>Do</value>
+  </data>
+  <data name="TXT_ROW_NUM" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="VALID_SEX" xml:space="preserve">
+    <value>F|M|Male|Female|Man|Woman</value>
+  </data>
+  <data name="XMessageBox1_JP" xml:space="preserve">
+    <value>The same patient exists. please confirm.</value>
+  </data>
+  <data name="XMessageBox1_Ko" xml:space="preserve">
+    <value>The same patient exists. Please confirm.</value>
+  </data>
+  <data name="XMessageBox10_Jp" xml:space="preserve">
+    <value>Please enter the insurance start date.</value>
+  </data>
+  <data name="XMessageBox10_Ko" xml:space="preserve">
+    <value>Please enter a date.</value>
+  </data>
+  <data name="XMessageBox11_Jp" xml:space="preserve">
+    <value>Insurance Information</value>
+  </data>
+  <data name="XMessageBox11_Ko" xml:space="preserve">
+    <value>Insurance Information</value>
+  </data>
+  <data name="XMessageBox12_Jp" xml:space="preserve">
+    <value>Please enter the public expense code.</value>
+  </data>
+  <data name="XMessageBox12_Ko" xml:space="preserve">
+    <value>Please enter the code learning</value>
+  </data>
+  <data name="XMessageBox13_Jp" xml:space="preserve">
+    <value>Please enter the public expense effective date.</value>
+  </data>
+  <data name="XMessageBox13_Ko" xml:space="preserve">
+    <value>Please enter the effective date.</value>
+  </data>
+  <data name="XMessageBox14_Jp" xml:space="preserve">
+    <value>Public expense information</value>
+  </data>
+  <data name="XMessageBox14_Ko" xml:space="preserve">
+    <value>Azeotropic information</value>
+  </data>
+  <data name="XMessageBox15_Jp" xml:space="preserve">
+    <value>Postal code is not valid. please confirm.</value>
+  </data>
+  <data name="XMessageBox15_Ko" xml:space="preserve">
+    <value>The postal code is not correct. Please confirm.</value>
+  </data>
+  <data name="XMessageBox16_Jp" xml:space="preserve">
+    <value>Insurance's number is not valid.</value>
+  </data>
+  <data name="XMessageBox16_Ko" xml:space="preserve">
+    <value>The insurer number was incorrect.</value>
+  </data>
+  <data name="XMessageBox17" xml:space="preserve">
+    <value>Save failed.</value>
+  </data>
+  <data name="XMessageBox18_Jp" xml:space="preserve">
+    <value>Save has been completed.</value>
+  </data>
+  <data name="XMessageBox18_Ko" xml:space="preserve">
+    <value>It was stored properly.</value>
+  </data>
+  <data name="XMessageBox19_Jp" xml:space="preserve">
+    <value>Storage completion</value>
+  </data>
+  <data name="XMessageBox19_Ko" xml:space="preserve">
+    <value>Saved</value>
+  </data>
+  <data name="XMessageBox2_Jp" xml:space="preserve">
+    <value>Are you sure you want to add new 患患 business?</value>
+  </data>
+  <data name="XMessageBox2_Ko" xml:space="preserve">
+    <value>Do you want to register as a new patient patient?</value>
+  </data>
+  <data name="XMessageBox20_Jp" xml:space="preserve">
+    <value>Not a patient number has been registered. Do you want a new patient registration?</value>
+  </data>
+  <data name="XMessageBox20_Ko" xml:space="preserve">
+    <value>This does not exist in the target patient number input. Do you want to register a new patient?</value>
+  </data>
+  <data name="XMessageBox21_Jp" xml:space="preserve">
+    <value>Please enter the date of the start date previously to the acquisition date.</value>
+  </data>
+  <data name="XMessageBox21_Ko" xml:space="preserve">
+    <value>The acquisition will not be in the future than the start date.</value>
+  </data>
+  <data name="XMessageBox22_Jp" xml:space="preserve">
+    <value>Please enter a date after the acquisition date is the start date.</value>
+  </data>
+  <data name="XMessageBox22_Ko" xml:space="preserve">
+    <value>Date must be greater than the date of acquisition</value>
+  </data>
+  <data name="XMessageBox23" xml:space="preserve">
+    <value>Please the expiration date by entering the date of the later start date.</value>
+  </data>
+  <data name="XMessageBox24_Jp" xml:space="preserve">
+    <value>There are unsaved data. Then do you proceed to save?
+
+"Yes": to save "No": Do not store "Cancel": Cancel</value>
+  </data>
+  <data name="XMessageBox24_Ko" xml:space="preserve">
+    <value>The presence information has changed. Do you want to close the screen?</value>
+  </data>
+  <data name="XMessageBox25" xml:space="preserve">
+    <value>Already the same patient number exists. please confirm.</value>
+  </data>
+  <data name="XMessageBox26" xml:space="preserve">
+    <value>It is patient number that has not been registered. please confirm.</value>
+  </data>
+  <data name="XMessageBox27" xml:space="preserve">
+    <value>The same type of insurance will exist in the same acquisition date. please confirm.</value>
+  </data>
+  <data name="XMessageBox28" xml:space="preserve">
+    <value>The same public expense exists in the same acquisition date. please confirm.</value>
+  </data>
+  <data name="XMessageBox3_Jp" xml:space="preserve">
+    <value>Please enter a patient number.</value>
+  </data>
+  <data name="XMessageBox3_Ko" xml:space="preserve">
+    <value>The number of patients has not been granted.</value>
+  </data>
+  <data name="XMessageBox4_Jp" xml:space="preserve">
+    <value>Please enter the patient's name.</value>
+  </data>
+  <data name="XMessageBox4_Ko" xml:space="preserve">
+    <value>Please enter the patient's name.</value>
+  </data>
+  <data name="XMessageBox5_Jp" xml:space="preserve">
+    <value>Please enter the patient's date of birth.</value>
+  </data>
+  <data name="XMessageBox5_ko" xml:space="preserve">
+    <value>Please enter your date of birth.</value>
+  </data>
+  <data name="XMessageBox6_Jp" xml:space="preserve">
+    <value>Please enter the gender.</value>
+  </data>
+  <data name="XMessageBox6_Ko" xml:space="preserve">
+    <value>Please enter your gender.</value>
+  </data>
+  <data name="XMessageBox7_Jp" xml:space="preserve">
+    <value>Patient information</value>
+  </data>
+  <data name="XMessageBox7_Ko" xml:space="preserve">
+    <value>Patient Information</value>
+  </data>
+  <data name="XMessageBox8_Jp" xml:space="preserve">
+    <value>Are you sure that you want to delete the patient information?</value>
+  </data>
+  <data name="XMessageBox8_Ko" xml:space="preserve">
+    <value>Are you sure you want to delete patient information?</value>
+  </data>
+  <data name="XMessageBox9_Jp" xml:space="preserve">
+    <value>Please enter the type of insurance.</value>
+  </data>
+  <data name="XMessageBox9_Ko" xml:space="preserve">
+    <value>Please enter the type of insurance.</value>
+  </data>
+  <data name="YES_CBO_TEXT" xml:space="preserve">
+    <value>Invalid</value>
+  </data>
+  <data name="ZIP_CODE1_TEXT" xml:space="preserve">
+    <value>Zip 1</value>
+  </data>
+  <data name="ZIP_CODE2_TEXT" xml:space="preserve">
+    <value>Postal 2</value>
+  </data>
+</root>

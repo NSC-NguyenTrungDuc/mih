@@ -1,0 +1,56 @@
+package nta.med.service.ihis.handler.inps;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.CollectionUtils;
+import org.springframework.util.StringUtils;
+import org.vertx.java.core.Vertx;
+
+import nta.med.core.infrastructure.socket.handler.ScreenHandler;
+import nta.med.core.utils.BeanUtils;
+import nta.med.core.utils.CommonUtils;
+import nta.med.data.dao.medi.inp.Inp1001Repository;
+import nta.med.data.model.ihis.inps.INP1001U01EtcIpwongrdHistoryInfo;
+import nta.med.service.ihis.proto.InpsModelProto;
+import nta.med.service.ihis.proto.InpsServiceProto;
+import nta.med.service.ihis.proto.InpsServiceProto.INP1001U01EtcIpwongrdHistoryRequest;
+import nta.med.service.ihis.proto.InpsServiceProto.INP1001U01EtcIpwongrdHistoryResponse;
+
+@Service
+@Scope("prototype")
+public class INP1001U01EtcIpwongrdHistoryHandler extends
+		ScreenHandler<InpsServiceProto.INP1001U01EtcIpwongrdHistoryRequest, InpsServiceProto.INP1001U01EtcIpwongrdHistoryResponse> {
+
+	@Resource
+	private Inp1001Repository inp1001Repository;
+	
+	@Override
+	@Transactional(readOnly=true)
+	public INP1001U01EtcIpwongrdHistoryResponse handle(Vertx vertx, String clientId, String sessionId, long contextId,
+			INP1001U01EtcIpwongrdHistoryRequest request) throws Exception {
+		InpsServiceProto.INP1001U01EtcIpwongrdHistoryResponse.Builder response = InpsServiceProto.INP1001U01EtcIpwongrdHistoryResponse.newBuilder();
+		String hospCode = getHospitalCode(vertx, sessionId);
+		String language = getLanguage(vertx, sessionId);
+		Integer offset = StringUtils.isEmpty(request.getOffset()) ? null : CommonUtils.parseInteger(request.getOffset());
+		Integer startNum = StringUtils.isEmpty(request.getOffset()) || StringUtils.isEmpty(request.getPageNumber()) ? null
+				: CommonUtils.getStartNumberPaging(request.getPageNumber(), request.getOffset());
+		
+		List<INP1001U01EtcIpwongrdHistoryInfo> listInfo = inp1001Repository.getINP1001U01EtcIpwongrdHistoryInfo(hospCode, request.getBunho(), startNum, offset);
+		if(CollectionUtils.isEmpty(listInfo)){
+			return response.build();
+		}
+		
+		for (INP1001U01EtcIpwongrdHistoryInfo info : listInfo) {
+			InpsModelProto.INP1001U01EtcIpwongrdHistoryInfo.Builder infoProto = InpsModelProto.INP1001U01EtcIpwongrdHistoryInfo.newBuilder();
+			BeanUtils.copyProperties(info, infoProto, language);
+			response.addGrdMasterItem(infoProto);
+		}
+		
+		return response.build();
+	}	
+}

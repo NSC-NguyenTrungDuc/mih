@@ -1,0 +1,55 @@
+<data>
+    <acceptreq type="record">
+        <Patient_ID type="string">$rq.patientID</Patient_ID>
+        #if($rq.acceptanceDate)
+        	<Acceptance_Date type="string">$rq.acceptanceDate</Acceptance_Date>
+        #end
+        #if($rq.acceptanceTime)
+        	<Acceptance_Time type="string">$rq.acceptanceTime</Acceptance_Time>
+        #end
+        #if($rq.acceptanceId)
+        	<Acceptance_Id type="string">$rq.acceptanceId</Acceptance_Id>
+        #end
+        #if($rq.departmentCode)
+        	<Department_Code type="string">$rq.departmentCode</Department_Code>
+        #end
+        #if($rq.physicianCode)
+        	<Physician_Code type="string">$rq.physicianCode</Physician_Code>
+        #end
+        #if($rq.medicalInformation)
+        	<Medical_Information type="string">$rq.medicalInformation</Medical_Information>
+        #end
+        
+        #if($rq.healthIns)
+        	<HealthInsurance_Information type="record">
+        		<Insurance_Combination_Number type="string"></Insurance_Combination_Number>
+        		#if($rq.healthIns.insuranceProviderClass)
+                	<InsuranceProvider_Class type="string">$rq.healthIns.insuranceProviderClass</InsuranceProvider_Class>
+        		#end
+        		#if($rq.healthIns.insuranceProviderNumber)
+                	<InsuranceProvider_Number type="string">$rq.healthIns.insuranceProviderNumber</InsuranceProvider_Number>
+                #end
+                #if($rq.healthIns.insuranceProviderWholeName)
+                	<InsuranceProvider_WholeName type="string">$rq.healthIns.insuranceProviderWholeName</InsuranceProvider_WholeName>
+                #end
+                #if($rq.healthIns.healthInsuredPersonSymbol)
+                	<HealthInsuredPerson_Symbol type="string">$rq.healthIns.healthInsuredPersonSymbol</HealthInsuredPerson_Symbol>
+                #end
+                #if($rq.healthIns.healthInsuredPersonNumber)
+                	<HealthInsuredPerson_Number type="string">$rq.healthIns.healthInsuredPersonNumber</HealthInsuredPerson_Number>
+                #end
+                <HealthInsuredPerson_Continuation type="string"></HealthInsuredPerson_Continuation>
+                <HealthInsuredPerson_Assistance type="string"></HealthInsuredPerson_Assistance>
+                <RelationToInsuredPerson type="string"></RelationToInsuredPerson>
+                <HealthInsuredPerson_WholeName type="string"></HealthInsuredPerson_WholeName>
+                #if($rq.healthIns.certificateStartDate)
+                	<Certificate_StartDate type="string">$rq.healthIns.certificateStartDate</Certificate_StartDate>
+                #end
+                #if($rq.healthIns.certificateExpiredDate)
+                	<Certificate_ExpiredDate type="string">$rq.healthIns.certificateExpiredDate</Certificate_ExpiredDate>
+                #end
+        	</HealthInsurance_Information>
+        #end
+        
+    </acceptreq>
+</data>

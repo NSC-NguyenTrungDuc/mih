@@ -1,0 +1,27 @@
+option java_package = "nta.med.service.orca.proto";
+option java_outer_classname = "ClisModelProto";
+
+// --- [START] CLIS2015U02 ---
+message CLIS2015U02GrdStatusInfo
+{
+	optional string protocol_id = 1;
+	optional string status_id = 2;
+	optional string status_name = 3;
+	optional string sort_no = 4;
+	optional string display_flg = 5;
+	optional string row_state = 6;
+}
+
+message CLIS2015U02GrdProtocolInfo
+{
+    optional string protocol_id = 1;
+	optional string protocol_code = 2;
+	optional string protocol_name = 3;
+	optional string from_date = 4;
+	optional string to_date = 5;
+	optional string protocol_status = 6;
+	optional string description = 7;
+	optional string row_state = 8;
+}
+
+// --- [End] CLIS2015U02 --

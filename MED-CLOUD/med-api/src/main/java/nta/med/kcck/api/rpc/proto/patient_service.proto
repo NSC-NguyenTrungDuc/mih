@@ -1,0 +1,237 @@
+import "rpc.proto";
+import "patient_model.proto";
+
+option java_package = "nta.med.kcck.api.rpc.proto";
+option java_outer_classname = "PatientServiceProto";
+
+option (version) = "1.0.0";
+option (service) = "patient";
+
+message SearchPatientRequest {
+	optional string hosp_code 					= 1;
+    optional string disease_name 				= 2;
+    optional string status_of_disease			= 3;
+    optional string from_lastest_go_hospital	= 4;
+    optional string to_lastest_go_hospital		= 5;
+    optional int32 from_patient_age				= 6;
+    optional int32 to_patient_age				= 7;
+    optional string patient_sex					= 8;
+    optional string order_field					= 9;
+    optional string order_value	 				= 10;
+    optional int32 page_size 					= 11;
+    optional int32 page_index 					= 12;
+    optional string patient_contact				= 13;
+}
+message GetPatientRequest {
+    required string hosp_code = 1;
+    required string patient_code = 2;
+}
+message GetPatientResponse {
+    optional string patient_code = 1;
+    optional string patient_name_kanji = 2;
+    optional string patient_name_kana = 3;
+    optional string patient_tel = 4;
+    optional string patient_email = 5;
+    optional string patient_sex = 6;
+    optional string patient_birthday= 7;
+    optional string patient_pwd= 8;
+}
+message SearchPatientResponse {
+    required int64 total_records 			= 1;
+    required int32 page_size 				= 2;
+    required int32 page_index 				= 3;
+    repeated PatientDetail patient_details  = 4;
+}
+
+message SyncPatientRequest {
+    repeated SyncPatient patients = 1;
+    repeated PublicInsurance publicInsurances = 2;
+    repeated PrivateInsurance privateInsurances = 3;
+    required string doctor_id = 4;
+    optional string hosp_code = 5;
+    required TraceRoute route = 6;
+    enum TraceRoute { ORCA = 0; MISA = 1; OTHER = 99; }
+}
+
+message SyncPatientResponse{
+    required Result result = 1;
+    enum Result { SUCCESS = 0; INVALID = 1; INTERNAL_ERROR = 99; }
+}
+
+message SyncReservationRequest
+{
+	optional string user_id                           = 1;
+	repeated SyncReservation reservation 			  = 2;
+	optional string hosp_code_link                    = 3;
+	optional bool tab_is_all                          = 4;
+	optional bool is_mss_request 					  = 5;
+	optional bool is_ext_accounting					  = 6;
+	optional string hosp_code						  = 7;
+	required TraceRoute route 						  = 8;
+    enum TraceRoute { ORCA = 0; MISA = 1; OTHER = 99; }
+}
+message SyncReservationResponse
+{
+	required Result result = 1;
+    enum Result { SUCCESS = 0; INVALID = 1; INTERNAL_ERROR = 99; }
+}
+
+message SyncExaminationRequest {
+    repeated SyncExamination exam_info = 1;
+    required string hosp_code = 2;
+    required TraceRoute route = 3;
+    enum TraceRoute { ORCA = 0; MISA = 1; OTHER = 99; }
+}
+
+message SyncExaminationResponse {
+    required Result result = 1;
+    enum Result { SUCCESS = 0; INVALID = 1; INTERNAL_ERROR = 99; }
+}
+
+message SubscribePatientEventRequest {
+    optional int64 event_id = 1;
+}
+
+message SubscribePatientEventResponse {
+    required Result result = 1;
+    repeated PatientEvent events = 2;
+    enum Result { SUCCESS = 0; HAS_SUBSCRIBED = 1; INTERNAL_ERROR = 99; }
+}
+
+message PatientEvent {
+    required int64 id 												= 1;
+    required string type 											= 2;
+    required int64 timestamp 										= 3;
+    optional string hosp_code 										= 4;
+    required string patient_code 									= 5;
+    optional PatientProfile profile 								= 6;
+    repeated PublicInsurance public_insurance 						= 7;
+    repeated PrivateInsurance private_insurance 					= 8;
+    optional AcceptInformation accept_info 							= 9;
+    repeated SyncDisease disease_info 								= 10;
+    repeated SyncPrescription prescription_info 					= 11;
+	repeated SyncDrug drug_info 									= 12;
+	repeated SyncWeight patient_weight_info 						= 13;
+	repeated SyncTemperature patient_temperature_info 				= 14;
+	repeated SyncHeartRate patient_heart_rate_info 					= 15;
+	repeated SyncRespirationRate patient_respiration_rate_info 		= 16;
+	repeated SyncBloodPressure patient_blood_pressure_info 			= 17;
+	repeated SyncHeight patient_height_info 						= 18;
+	optional bool deleted_all_prescription 							= 19;
+	optional bool deleted_all_drug 									= 20;
+}
+
+message CreatePatientRequest {
+    required int64 id = 1;
+    optional string hosp_code = 2;
+    optional PatientProfile profile = 3;
+    repeated PublicInsurance public_insurance = 4;
+    repeated PrivateInsurance private_insurance = 5;
+    optional string mod_key = 6;
+}
+
+message CreatePatientResponse {
+    required int64 id = 1;
+    required string hosp_code = 2;
+    optional string new_patient_code = 3;
+    required Result result = 4;
+    optional string message_code = 5;
+    enum Result { SUCCESS = 0; SERVICE_TIMEOUT = 1; SERVICE_UNAVAILABLE = 2; INTERNAL_ERROR = 99; }
+}
+
+message SaveExaminationRequest {
+    required int64 id = 1;
+    required string hosp_code = 2;
+    required AcceptInformation exam_info = 3;
+}
+
+message SaveExaminationResponse {
+    required int64 id 				= 1;
+    required string hosp_code 		= 2;
+    optional string message_code 	= 3;
+    optional string message_detail 	= 4;
+    optional string ref_id 			= 5;
+    required Result result 			= 6;
+    enum Result { SUCCESS = 0; FAIL = 1; INTERNAL_ERROR = 99; }
+}
+
+message VerifyPatientAccountRequest {
+	optional string username = 1;
+	optional string password = 2;
+	optional string hosp_code = 3;
+}
+
+message VerifyPatientAccountResponse {
+	optional string hosp_code = 1;
+	optional string hosp_name = 2;
+	optional string patient_code = 3;
+	required bool verify_result = 4;
+}
+
+message GetPatientDiseaseRequest{
+        optional string patient_code = 1;
+        optional string hosp_code = 2;
+}
+
+message GetPatientDiseaseResponse{
+        repeated PatientDiseaseInfo patient_disease = 1;
+        optional string hosp_name = 2;
+}
+
+message GetPatientMedicineRequest{
+        optional string patient_code = 1;
+        optional string hosp_code = 2;
+}
+
+message GetPatientMedicineResponse{
+        repeated PatientMedicineInfo patient_medicine = 1;
+        optional string hosp_name = 2;
+}
+
+message GetWaitingPatientRequest{
+    optional string doctor_code    = 1;
+    required string examination_date = 2;
+    optional string examination_situation = 3;
+    required string hosp_code  = 4   ;
+    repeated string patient_code = 5;
+    optional string department_code = 6;
+    required string locale = 7;
+
+}
+
+message GetWaitingPatientResponse{
+
+    repeated WaitingPatientInfo waiting_patients = 1;
+
+}
+message UserEvent {
+
+    optional string dob     = 1;
+    optional string address = 2;
+    optional string email   = 3;
+    optional string name    = 4;
+    optional string nameFurigana  = 5;
+    optional string password     = 6;
+    optional string phone_number  = 7;
+    optional string sex    = 8;
+    optional string hospital_code  = 9 ;
+    optional string patient_code  =  10;
+    optional string facebook_id = 11;
+    required Action action = 12;
+    enum Action {REGISTER = 0; UPDATE_INFOMATION = 1; CHANGE_PASS = 3; FOGOT_PASS = 4; }
+}
+message SubscribeUserEventRequest {
+    optional int64 event_id = 1;
+}
+
+message SubscribeUserEventResponse {
+    required Result result = 1;
+    repeated UserEvent events = 2;
+    enum Result { SUCCESS = 0; HAS_SUBSCRIBED = 1; INTERNAL_ERROR = 99; }
+}
+message SyncAccountRequest{
+    required UserEvent userEvent = 1;
+}
+message SyncAccountResponse{
+    required string result = 1;
+}

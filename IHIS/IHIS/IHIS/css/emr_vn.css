@@ -1,0 +1,138 @@
+body{
+	font-size:  10.75pt;
+	    font-family: Arial;
+	    background: rgb(204,204,204);
+}
+img{max-width: 100%;display: block;}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+page[size="A4"],
+page[size="A4"][layout="portrait"] {  
+  width: 21cm;
+  height: 29.7cm; 
+}
+page[size="A4"][layout="landscape"] {
+  width: 29.7cm;
+  height: 21cm;  
+}
+.billing{
+	width: 793.700787px;
+	margin: 0 auto 20px;
+	background: #fff;
+	padding: 0.5cm 1cm;
+}
+.pull-left{
+	float: left;
+}
+.pull-right{
+	float: right;
+}
+.tbl_table{width: 100%; border-collapse: collapse; margin-top: 10px;}
+.tbl_table td,.tbl_table th{
+	border: 1px solid #000;
+	padding: 5px 20px;
+}
+.total{width: 100%;}
+.center{text-align: center;}
+h1 {
+    margin: 20px 0;
+    display: inline-block;
+    width: 100%;
+}
+h4{margin-bottom: 0px; font-size: 16px;}
+.headeremr td{
+  padding: 3px 10px 5px 0;
+}
+.erm2{padding-left: 40px;}
+.list-img{
+  width: 100%;
+  display: inline-block;
+  margin: 10px 0 0;
+}
+.list-img .row{margin: 0 -10px;}
+.list-img .row .col-md-3{
+  width: 25%;
+  float: left;
+  padding: 0 10px;
+  
+}
+.list-img .row .col-md-3 .desc{
+  border-bottom: 1px solid #000;
+ padding: 5px 5px;
+ height: 30px;
+ text-align:center;
+}
+.ct-img {
+    border: 1px solid #000;
+    height: 135px;
+    overflow: hidden;
+    margin-bottom: 15px;
+	text-align:center;
+}
+.ct-img img{
+	height:135px;
+	width:auto;
+	display: initial;
+}
+.total{width: auto; margin-top: 20px;}
+.total td{padding: 5px 20px}
+.total td:first-child{text-transform: uppercase;}
+.total .child td:first-child{text-transform: none; padding-left: 40px;}
+.total td:last-child{padding-left: 40px;}
+.total td:last-child{  word-break: break-all;}
+.total .child td{text-align: left; padding-left: 60px;}
+.listcout p{padding-left: 25px; margin: 5px 0;}
+.prescription{
+  width: 100%;
+  display: inline-block;
+  padding: 0 25px;
+}
+.prescription table{border-collapse: collapse;width: 100%; margin-top: 5px;}
+.prescription table td,.prescription table th{
+  border: 1px solid #000;
+  padding: 5px 8px;
+  text-align: left;
+}
+.prescription table td:first-child{text-align: center;}
+.bottom{
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+.bottom p{margin: 20px 0 3px;}
+.bottom p.signature{margin: 0}
+.footer{padding-top: 70px; text-align: center;}
+@media print {
+  body, page {
+    margin: 0;
+    padding: 0;
+    box-shadow: 0;
+    -webkit-print-color-adjust: exact;
+  }
+  page {
+    page-break-after: always;
+  }
+
+  @page {
+    size: auto;   /* auto is the initial value */
+    margin: 0.5cm 0 0.5cm;  /* this affects the margin in the printer settings */
+  }
+
+}
+@media print {
+    footer {page-break-after: always;}
+}
+    table { page-break-inside:auto }
+    tr    { page-break-inside:avoid; page-break-after:auto }
+    thead { display:table-header-group }
+    tfoot { display:table-footer-group }
+    @media all {
+  .page-break { display: inline-block; width:100%;  }
+}
+
+@media print {
+  .page-break { display: inline-block; width:100%; page-break-before: always;}
+}

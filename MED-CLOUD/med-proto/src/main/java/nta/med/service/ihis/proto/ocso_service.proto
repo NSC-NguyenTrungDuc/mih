@@ -1,0 +1,1744 @@
+import "rpc.proto";
+import "ocso_model.proto";
+import "common_model.proto";
+import "orca_service.proto";
+import "system_service.proto";
+
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "OcsoServiceProto";
+option (version) = "1.0.0";
+option (service) = "ocso";
+
+message OcsoOCS1003P01GridOutSangRequest{
+    required string bunho = 1;
+    required string gwa = 2;
+    required string naewon_date = 3;
+}
+
+message OcsoOCS1003P01GridOutSangResponse{
+    repeated OcsoOCS1003P01GridOutSangInfo grid_out_sang_item = 1;
+}
+
+message OcsoOCS1003P01GridPatientListRequest{
+    required string naewon_date = 1;
+    required string naewon_yn = 2;
+    required string reser_yn = 3;
+    required string doctor_mode_yn = 4;
+    required string doctor = 5;
+    required string bunho = 6;
+}
+
+message OcsoOCS1003P01GridPatientListResponse{
+    repeated OcsoOCS1003P01GridPatientListInfo grid_patient_list_item = 1;
+}
+
+message OcsoOCS1003P01GridReserOrderListRequest
+{
+    required string bunho = 1;
+    required string naewon_date = 2;
+}
+
+message OcsoOCS1003P01GridReserOrderListResponse
+{
+    repeated OcsoOCS1003P01GridReserOrderListInfo grid_reser_order_list = 1;
+}
+
+message OcsoOCS1003P01LayoutQueryRequest
+{
+    required string bunho = 1;
+    required string fkout1001 = 2;
+    required string query_gubun = 3;
+    required string input_gubun = 4;
+}
+
+
+message OcsoOCS1003P01LayoutQueryResponse
+{
+    repeated OcsoOCS1003P01LayoutQueryInfo layout_item = 1;
+}
+
+message OcsoOCS1003P01OutOrderEndTempRequest
+{
+    required string fkout1001 = 1;
+    required string order_date = 2;
+    required string io_flag = 3;
+}
+
+message OcsoOCS1003P01OutOrderEndTempResponse
+{
+    optional string io_flag_result = 1;
+}
+
+message OcsoOCS1003P01UpdateDcYnRequest
+{
+    required string io_gubun = 1;      
+    required string source_pk_ocs = 2; 
+    required string io_flag = 3;
+}
+
+message OcsoOCS1003P01UpdateDcYnResponse
+{
+    optional string io_flag_result = 1;
+}
+
+message OcsoOCS1003P01BasLoadGwaNameRequest
+{
+    optional string gwa = 1;
+    optional string buseo_ymd = 2;
+}
+
+message OcsoOCS1003P01BasLoadGwaNameResponse
+{
+	optional string gwa_name = 1;
+}
+
+
+message OcsoOCS1003P01LayJinryoGwaRequest
+{
+        
+}
+
+message OcsoOCS1003P01LayJinryoGwaResponse
+{
+        repeated OcsoOCS1003P01LayJinryoGwaInfo lay_jinryo_gwa_item = 1;
+}
+
+message OcsoOCS1003P01UpdateJubsuRequest
+{
+    required string naewon_yn = 1;
+    required string pk_naewon_key = 2;
+}
+
+message OcsoOCS1003P01CheckXRequest
+{
+    required string action_doctor = 1;
+    required string bunho = 2;
+    required string naewon_key = 3;
+}
+
+message OcsoOCS1003P01CheckXResponse
+{
+    optional string x_value = 1;
+}
+
+message OcsoOCS1003P01GetChuciRequest
+{
+    required string code_type = 1;
+    required string value_point = 2;
+}
+
+message OcsoOCS1003P01GetChuciResponse
+{
+    repeated OcsoOCS1003P01GetChuciInfo chuci_item = 1;
+}
+
+message OcsoOCS1003P01UpdateDoctorRequest
+{
+    required string doctor = 1;
+    required string gwa = 2;
+    required string pk_naewon = 3;
+}
+
+message OcsoOCS1003P01CheckYRequest
+{
+    required string naewon_key = 1;
+}
+
+message OcsoOCS1003P01CheckYResponse
+{
+    optional string naewon_key_value = 1;
+}
+
+message OcsoOCS1003P01CheckIsSameNameYnRequest
+{
+    required string naewon_date= 1;
+    required string gwa= 2;
+    required string naewon_yn= 3;
+    required string reser_yn= 4;
+    required string doctor_mode_yn= 5;
+    required string doctor= 6;
+    required string bunho = 7;
+}
+
+message OcsoOCS1003P01CheckIsSameNameYnResponse
+{
+    optional string value_check = 1;
+}
+
+message OcsoOCS1003P01GetGubunRequest
+{
+    required string code_type = 1;
+    required string code = 2;
+}
+
+message OcsoOCS1003P01GetGubunResponse
+{
+    repeated OcsoOCS1003P01GetGubunInfo gubun_item = 1;
+}
+
+message OcsoOCS1003P01CheckFkOcsRequest
+{
+    required string fk_ocs = 1;
+}
+
+message OcsoOCS1003P01CheckFkOcsResponse
+{
+    optional string fk_ocs = 1;
+}
+
+message OcsoOCS1003P01GetCodeNameRequest
+{        
+    required string code_type  = 1;
+    required string code  = 2;
+}
+
+message OcsoOCS1003P01GetCodeNameResponse
+{        
+    optional string code_name  = 1;
+}
+
+message OcsoOCS1003P01CheckUsedSangRequest
+{
+    required string fk_out_sang  = 1;
+    required string data_kubun = 2;
+}
+
+message OcsoOCS1003P01CheckUsedSangResponse
+{
+	optional string result = 1;
+}
+
+
+message OcsoOCS1003P01GetPkSeq1Request
+{
+    required string bunho = 1;
+    required string gwa = 2;
+    required string io_gubun = 3;
+}
+
+message OcsoOCS1003P01GetPkSeqResponse
+{
+    optional string pk_seq_value = 1 ;
+}
+
+message OcsoOCS1003P01GetPkSeq2Request
+{
+    required string bunho = 1;
+}
+
+message OcsoOCS1003P01SangDupCheckRequest
+{
+    required string hosp_code  = 1;
+    required string io_gubun  = 2;
+    required string gwa  = 3;
+    required string bunho  = 4;
+    required string fkinp1001  = 5;
+    required string sang_code  = 6;
+    required string sang_name  = 7;
+    required string post_modifier_name  = 8;
+    required string pre_modifier_name  = 9;
+    required string sang_start_date  = 10;
+    required string sang_end_date  = 11;
+    required string sang_jindan_date  = 12;
+    required string data_gubun  = 13;
+    required string ju_sang_yn = 14;
+}
+
+
+message OcsoOCS1003P01SangDupCheckResponse
+{        
+    optional string reuslt_sang = 1;
+}
+
+message OcsoOCS1003P01InsertOutSangRequest
+{
+    optional string sys_id  = 1;
+    required string bunho = 2;
+    required string gwa = 3;
+    required string io_gubun = 4;
+    required string pk_seq = 5;
+    optional string naewon_date = 6;
+    optional string doctor = 7;
+    optional string naewon_type = 8;
+    optional string jubsu_no = 9;
+    optional string last_naewon_date = 10;
+    optional string last_doctor = 11;
+    optional string last_naewon_type = 12;
+    optional string last_jubsu_no = 13;
+    optional string fkinp1001 = 14;
+    required string input_id = 15;
+    required string ser = 16;
+    required string sang_code = 17;
+    optional string ju_sang_yn = 18;
+    optional string sang_name = 19;
+    required string sang_start_date = 20;
+    optional string sang_end_date = 21;
+    optional string sang_end_sayu = 22;
+    optional string pre_modifier1 = 23;
+    optional string pre_modifier2 = 24;
+    optional string pre_modifier3 = 25;
+    optional string pre_modifier4 = 26;
+    optional string pre_modifier5 = 27;
+    optional string pre_modifier6 = 28;
+    optional string pre_modifier7 = 29;
+    optional string pre_modifier8 = 30;
+    optional string pre_modifier9 = 31;
+    optional string pre_modifier10 = 32;
+    optional string pre_modifier_name = 33;
+    optional string post_modifier1 = 34;
+    optional string post_modifier2 = 35;
+    optional string post_modifier3 = 36;
+    optional string post_modifier4 = 37;
+    optional string post_modifier5 = 38;
+    optional string post_modifier6 = 39;
+    optional string post_modifier7 = 40;
+    optional string post_modifier8 = 41;
+    optional string post_modifier9 = 42;
+    optional string post_modifier10 = 43;
+    optional string post_modifier_name = 44;
+    optional string hosp_code = 45;
+    optional string upd_id = 46;
+    optional string fkout1001 = 47;
+    optional string sang_jindan_date = 48;
+    optional string data_gubun = 49;
+}
+
+message OcsoOCS1003P01CheckDataSendYnRequest
+{
+     required string hosp_code = 1;
+     required string bunho = 2;
+     required string gw = 3;
+     required string io_gubun = 4;
+     required string pk_seq = 5;
+}
+
+message OcsoOCS1003P01CheckDataSendYnResponse
+{
+    optional string result_check = 1;
+}
+
+message OcsoOCS1003P01DeleteFromOutsangRequest
+{
+    required string bunho  = 1;
+    required string gwa  = 2;
+    required string io_gubun = 3; 
+    required string pk_seq = 4;
+} 
+
+message OcsoOCS1003P01DeleteFromOCS1003Request
+{
+    required string pkocskey = 1;
+}
+
+message OcsoOCS1003P01GetOcsKeySeqRequest
+{
+}
+
+message OcsoOCS1003P01GetOcsKeySeqResponse
+{
+	optional string ocs_key_value = 1;
+}
+
+message OcsoOCS1003P01GetMaxOcs1003SeqRequest
+{
+    required string fkout1001 = 1;
+}
+
+message OcsoOCS1003P01GetMaxOcs1003SeqResponse
+{
+optional string ocs_key_value = 1;
+}
+
+message OcsoOCS1003P01InsertDataOCS1003Request
+{
+    optional string  sys_date  = 1;
+    optional string  sys_id  = 2;
+    optional string  upd_date  = 3;
+    optional string  upd_id  = 4;
+    required string  hosp_code  = 5;
+    required string  pkocs1003  = 6;
+    required string  bunho  = 7;
+    required string  order_date  = 8;
+    required string  gwa  = 9;
+    required string  doctor  = 10;
+    required string  naewon_type  = 11;
+    required string  input_id  = 12;
+    required string  input_part  = 13;
+    required string  input_gubun  = 14;
+    required string  seq  = 15;
+    required string  hangmog_code  = 16;
+    required string  group_ser  = 17;
+    required string  slip_code  = 18;
+    required string  nday_yn  = 19;
+    required string  order_gubun  = 20;
+    required string  specimen_code  = 21;
+    required string  suryang  = 22;
+    optional string  ord_danui  = 23;
+    required string  dv_time  = 24;
+    required string  dv  = 25;
+    required string  nalsu  = 26;
+    optional string  jusa  = 27;
+    optional string  bogyong_code  = 28;
+    optional string  emergency  = 29;
+    optional string  jaeryo_jundal_yn  = 30;
+    optional string  jundal_table  = 31;
+    optional string  jundal_part  = 32;
+    optional string  move_part  = 33;
+    optional string  muhyo  = 34;
+    optional string  portable_yn  = 35;
+    optional string  anti_cancer_yn  = 36;
+    optional string  pay  = 37;
+    optional string  reser_date  = 38;
+    optional string  reser_time  = 39;
+    optional string  dc_yn  = 40;
+    optional string  dc_gubun  = 41;
+    optional string  bannab_yn  = 42;
+    optional string  bannab_confirm  = 43;
+    optional string  act_doctor  = 44;
+    optional string  act_gwa  = 45;
+    optional string  act_buseo  = 46;
+    optional string  ocs_flag  = 47;
+    optional string  sg_code  = 48;
+    optional string  sg_ymd  = 49;
+    optional string  io_gubun  = 50;
+    optional string  after_act_yn  = 51;
+    optional string  bichi_yn  = 52;
+    optional string  drg_bunho  = 53;
+    optional string  sub_susul  = 54;
+    optional string  wonyoi_order_yn  = 55;
+    optional string  sutak_yn  = 56;
+    optional string  powder_yn  = 57;
+    optional string  hope_date  = 58;
+    optional string  hope_time  = 59;
+    required string  dv_1  = 60;
+    required string  dv_2  = 61;
+    required string  dv_3  = 62;
+    required string  dv_4  = 63;
+    optional string  mix_group  = 64;
+    optional string  order_remark  = 65;
+    optional string  nurse_remark  = 66;
+    optional string  bom_occur_yn  = 67;
+    required string  bom_source_key  = 68;
+    optional string  display_yn  = 69;
+    optional string  nurse_confirm_user  = 70;
+    optional string  nurse_confirm_date  = 71;
+    optional string  nurse_confirm_time  = 72;
+    optional string  tel_yn  = 73;
+    optional string  dangil_gumsa_order_yn  = 74;
+    optional string  dangil_gumsa_result_yn  = 75;
+    optional string  home_care_yn  = 76;
+    optional string  regular_yn  = 77;
+    optional string  input_tab  = 78;
+    optional string  hubal_change_yn  = 79;
+    optional string  pharmacy  = 80;
+    optional string  jusa_spd_gubun  = 81;
+    optional string  drg_pack_yn  = 82;
+    optional string  sort_fkocskey  = 83;
+    optional string  fkout1001  = 84;
+    optional string  imsi_drug_yn  = 85;
+    optional string  general_disp_yn  = 86;
+    optional string  dv_5  = 87;
+    optional string  dv_6  = 88;
+    optional string  dv_7  = 89;
+    optional string  dv_8  = 90;
+    optional string  bogyong_code_sub  = 91;
+    optional string  instead_yn  = 92;
+    optional string  instead_id  = 93;
+    optional string  instead_date  = 94;
+    optional string  instead_time  = 95;
+    optional string  approve_yn  = 96;
+    optional string  postapprove_yn = 97;
+}
+
+message OcsoOCS1003P01UpdateDataOCS1003Request
+{
+    optional string  upd_date   = 1;
+    optional string  upd_id   = 2;
+    optional string  order_gubun   = 3;
+    optional string  suryang   = 4;
+    optional string  ord_danui   = 5;
+    optional string  dv_time   = 6;
+    optional string  dv   = 7;
+    optional string  nalsu   = 8;
+    optional string  jusa   = 9;
+    optional string  bogyong_code   = 10;
+    optional string  emergency   = 11;
+    optional string  jaeryo_jundal_yn   = 12;
+    optional string  jundal_table   = 13;
+    optional string  jundal_part   = 14;
+    optional string  move_part   = 15;
+    optional string  muhyo   = 16;
+    optional string  portable_yn   = 17;
+    optional string  anti_cancer_yn   = 18;
+    optional string  dc_yn   = 19;
+    optional string  dc_gubun   = 20;
+    optional string  bannab_yn   = 21;
+    optional string  bannab_confirm   = 22;
+    optional string  sutak_yn   = 23;
+    optional string  powder_yn   = 24;
+    optional string  hope_date   = 25;
+    optional string  hope_time   = 26;
+    optional string  dv_1   = 27;
+    optional string  dv_2   = 28;
+    optional string  dv_3   = 29;
+    optional string  dv_4   = 30;
+    optional string  dv_5   = 31;
+    optional string  dv_6   = 32;
+    optional string  dv_7   = 33;
+    optional string  dv_8   = 34;
+    optional string  mix_group   = 35;
+    optional string  order_remark   = 36;
+    optional string  nurse_remark   = 37;
+    optional string  bom_occur_yn   = 38;
+    optional string  bom_source_key   = 39;
+    optional string  nurse_confirm_user   = 40;
+    optional string  nurse_confirm_date   = 41;
+    optional string  nurse_confirm_time   = 42;
+    optional string  dangil_gumsa_order_yn   = 43;
+    optional string  dangil_gumsa_result_yn   = 44;
+    optional string  home_care_yn   = 45;
+    optional string  regular_yn   = 46;
+    optional string  hubal_change_yn   = 47;
+    optional string  pharmacy   = 48;
+    optional string  jusa_spd_gubun   = 49;
+    optional string  drg_pack_yn   = 50;
+    optional string  sort_fkocskey   = 51;
+    optional string  wonyoi_order_yn   = 52;
+    optional string  imsi_drug_yn   = 53;
+    optional string  specimen_code   = 54;
+    optional string  general_disp_yn   = 55;
+    optional string  bogyong_code_sub   = 56;
+    optional string  group_ser   = 57;
+    optional string  pkocskey = 58;
+}
+
+message OcsoOCS1003P01GetGwoFromOutsangRequest
+{
+    required string pk_out_sang = 1;
+}
+
+
+message OcsoOCS1003P01GetGwoFromOutsangResponse
+{
+    optional string gwa = 1;
+}
+
+message OcsoOCS1003P01UpdateOutSangRequest
+{
+    optional string ju_sang_yn  = 1;
+    optional string sang_name  = 2;
+    optional string sang_start_date  = 3;
+    optional string sang_end_date  = 4;
+    optional string sang_end_sayu  = 5;
+    optional string pre_modifier1  = 6;
+    optional string pre_modifier2  = 7;
+    optional string pre_modifier3  = 8;
+    optional string pre_modifier4  = 9;
+    optional string pre_modifier5  = 10;
+    optional string pre_modifier6  = 11;
+    optional string pre_modifier7  = 12;
+    optional string pre_modifier8  = 13;
+    optional string pre_modifier9  = 14;
+    optional string pre_modifier10  = 15;
+    optional string pre_modifier_name  = 16;
+    optional string post_modifier1  = 17;
+    optional string post_modifier2  = 18;
+    optional string post_modifier3  = 19;
+    optional string post_modifier4  = 20;
+    optional string post_modifier5  = 21;
+    optional string post_modifier6  = 22;
+    optional string post_modifier7  = 23;
+    optional string post_modifier8  = 24;
+    optional string post_modifier9  = 25;
+    optional string post_modifier10  = 26;
+    optional string post_modifier_name  = 27;
+    optional string upd_id  = 28;
+    optional string upd_date  = 29;
+    optional string sang_jindan_date  = 30;
+    optional string gwa  = 31;
+    optional string data_gubun  = 32;
+    optional string pk_seq  = 33;
+    optional string ser  = 34;
+    optional string bunho = 35;
+    optional string io_gubun = 36;
+}
+
+message OcsoOCS1003Q05OrderListRequest {
+    optional string generic_yn = 1;
+    optional string pk_order = 2;
+    optional string input_tab = 3;
+    optional string input_gubun = 4;
+    optional string tel_yn = 5;
+    optional string bunho = 6;
+    optional string jubsu_no = 7;
+    optional string kijun = 8;
+    optional string naewon_date = 9;
+    optional string gwa = 10;
+    optional string doctor = 11;
+}
+
+message OcsoOCS1003Q05OrderListResponse {
+    repeated OcsoOCS1003Q05OrderListItemInfo order_list_item = 1;
+}
+
+message OcsoOCS1003Q05ScheduleRequest {
+    optional string input_gubun = 1;
+    optional string tel_yn = 2;
+    optional string input_tab = 3;
+    optional string io_gubun = 4;
+    optional string selected_input_tab = 5;
+    optional string bunho = 6;
+    optional string kijun = 7;
+    optional string naewon_date = 8;
+    optional string gwa = 9;
+}
+
+message OcsoOCS1003Q05ScheduleResponse {
+    repeated OcsoOCS1003Q05ScheduleItemInfo schedule_item = 1;
+}
+
+message OcsoOCS1003Q05DiseaseListRequest {
+	    optional string io_gubun = 1;
+	    optional string jubsu_no = 2;
+	    optional string naewon_date = 3;
+	    optional string gwa = 4;
+	    optional string doctor = 5;
+	    optional string naewon_type = 6;
+	    optional string bunho = 7;
+}
+
+message OcsoOCS1003Q05DiseaseListResponse {
+    repeated OcsoOCS1003Q05DiseaseListItemInfo disease_list_item = 1;
+}
+
+message OcsoOCS1003Q05CodeListRequest {
+    optional string code_type = 1;
+}
+
+message OcsoOCS1003Q05CodeListResponse {
+    repeated string code = 1;
+}
+
+message OCS0132ComboListRequest {
+    optional string code_type = 1;
+}
+
+// Combo List by Code Type Response
+
+// --- [START] OUTSANGU00 ---
+
+message OUTSANGU00InitializeRequest{
+	optional string bunho = 1;
+	optional string gwa = 2;
+	optional string io_gubun = 3;
+	optional string all_sang_yn = 4;
+	optional string gijun_date = 5;
+}
+
+message OUTSANGU00InitializeResponse{
+	repeated OUTSANGU00InitializeListItemInfo init_info = 1;
+}
+
+message OUTSANGU00getCodeNameRequest{
+	required string code = 1;
+	required string sang_end_say_u  = 2;
+}
+message OUTSANGU00getCodeNameResponse {
+	optional string code_name =1;
+}
+
+
+message OUTSANGU00getFindWorkerRequest{     
+	required string sang_end_say_u  = 2;
+}
+
+
+message OUTSANGU00getFindWorkerResponse{
+  repeated ComboListItemInfo combo_item = 1;
+}    
+
+
+message OUTSANGU00TransactionRequest{
+	optional string data_row_state =1;
+	optional string bunho = 2;
+	optional string gwa = 3;
+	optional string io_gubun = 4;
+	optional string fkinp1001 = 5;
+	optional string sang_code = 6;
+	optional string sang_name = 7;
+	optional string post_modifier_name = 8;
+	optional string pre_modifier_name = 9;
+	optional string sang_start_date = 10;
+	optional string sang_end_date = 11;
+	optional string sang_jindan_date = 12;
+	optional string data_gubun = 13;
+	optional string user_id  = 15;
+	optional string pk_seq   = 16 ;
+	optional string naewon_date  =  	17 ;
+	optional string doctor   =  18 ;
+	optional string naewon_type   =  	19 ;
+	optional string jubsu_no =  20 ;
+	optional string ser      =  21 ;
+	optional string sang_end_sayu   = 22 ;
+	optional string pre_modifier1   = 23 ;
+	optional string pre_modifier2   = 24 ;
+	optional string pre_modifier3   = 25 ;
+	optional string pre_modifier4   = 26 ;
+	optional string pre_modifier5   = 27 ;
+	optional string pre_modifier6   = 28 ;
+	optional string pre_modifier7   = 29 ;
+	optional string pre_modifier8   = 30 ;
+	optional string pre_modifier9   = 31 ;
+	optional string pre_modifier10  = 32 ;
+	optional string post_modifier1  = 33 ;
+	optional string post_modifier2  = 34 ;
+	optional string post_modifier3  = 35 ;
+	optional string post_modifier4  = 36 ;
+	optional string post_modifier5  = 37 ;
+	optional string post_modifier6  = 38 ;
+	optional string post_modifier7  = 39 ;
+	optional string post_modifier8  = 40 ;
+	optional string post_modifier9  = 41 ;
+	optional string post_modifier10 = 42 ;
+	optional string ju_sang_yn= 	43 ; 
+}
+
+message OUTSANGU00TransactionResponse{
+	optional bool resultSang = 1;
+	optional bool updateResponse = 2;
+}
+
+message OUTSANGU00findBoxRequest{
+	required string function_find_box = 1;
+	required string control_name = 2;
+	optional string start_date = 3;
+	optional string find1 = 4;
+	optional string gwa = 5;
+	optional string doctor_ymd = 6;
+}
+
+message OUTSANGU00findBoxResponse{
+	repeated OUTSANGU00findBoxToGwaInfo fbx_to_gwa = 1;
+	repeated OUTSANGU00findBoxToDoctorInfo fbx_to_doctor = 2;
+	optional string gwa_name = 3;
+	optional string doctor_name = 4;
+}
+
+message OUTSANGU00findBoxToGwaRequest{
+	optional string start_date = 1;
+	optional string find1 = 2;
+}
+
+message OUTSANGU00findBoxToGwaResponse{
+	repeated OUTSANGU00findBoxToGwaInfo gwa_info = 1;
+}
+
+
+message OUTSANGU00findBoxToDoctorRequest{
+	optional string gwa = 1;
+	optional string find1 = 2;
+	optional string doctor_ymd = 3;
+}
+
+
+message OUTSANGU00findBoxToDoctorResponse{
+	repeated OUTSANGU00findBoxToDoctorInfo doctor_info = 1;
+}
+
+
+message OUTSANGU00GetGwaNameRequest{
+
+	optional string start_date= 1;
+	optional string find1 = 2;
+}
+
+
+message OUTSANGU00GetGwaNameResponse{
+	optional string gwa_name = 1;
+}
+
+message  OUTSANGU00GetDoctorNameRequest{
+	optional string gwa = 1;
+	optional string find1 = 2;
+	optional string start_date = 3;
+}
+
+message  OUTSANGU00GetDoctorNameResponse{
+	optional string doctor_name = 1;
+}
+
+message OUTSANGU00GridOutSangSaveLayoutRequest{
+	repeated OUTSANGU00InitializeListItemInfo grid_out_sang_info = 1;
+	optional string user_id = 2;
+	optional string bunho = 3;
+}
+message OUTSANGU00createGwaDataRequest{
+         required string out_jubsu_yn  =1;
+}
+
+message OUTSANGU00GrdOCS0301Request
+{
+	optional string memb          = 1;
+	optional string sang_code     = 2;
+	optional string yaksok_code   = 3;
+	optional string input_tab     = 4;
+}
+message OUTSANGU00GrdOCS0301Response
+{
+	repeated OUTSANGU00GrdOCS0301Info list_info = 1;
+}
+
+// --- [END] OUTSANGU00 ---
+
+// --- [START] OCS1003Q05-NEW ---
+message OcsoOCS1003Q05ComboListRequest{
+	repeated ComboDataSourceInfo cbo_item = 1;
+}
+
+
+message OcsoOCS1003Q05ComboListResponse{
+    repeated ComboListItemInfo jusa_cbo_item = 1;
+    repeated ComboListItemInfo pay_cbo_item = 2;
+    repeated ComboListItemInfo portable_yn_cbo_item = 3;
+    repeated ComboListItemInfo jusa_spd_gubun_cbo_item = 4;
+    repeated ComboListItemInfo suryang_cbo_item = 5;
+    repeated ComboListItemInfo nalsu_cbo_item = 6;
+    repeated ComboListItemInfo dv_cbo_item = 7;
+}
+
+
+message OcsoOCS1003Q05GrdRowFocusChangedRequest{
+	optional string generic_yn = 1;
+	optional string pk_order = 2;
+	optional string input_tab = 3;
+	optional string input_gubun = 4;
+	optional string tel_yn = 5;
+	optional string bunho = 6;
+	optional string jubsu_no = 7;
+	optional string kijun = 8;
+	optional string naewon_date = 9;
+	optional string gwa = 10;
+	optional string doctor = 11;
+	optional string io_gubun = 12;
+	optional string naewon_type = 13;
+}
+
+message OcsoOCS1003Q05GrdRowFocusChangedResponse{
+	repeated OcsoOCS1003Q05DiseaseListItemInfo disease_item = 1;
+	repeated OcsoOCS1003Q05OrderListItemInfo order_item = 2;
+}
+// --- [END] OCS1003Q05-NEW ---
+
+
+// ----[START] OCS1003P01 - NEW -----
+
+message OCS1003P01ChangeUserRequest{
+	required string gwa = 1;
+}
+
+message OCS1003P01ChangeUserResponse{
+	required string gwa_name = 1;
+}
+
+message OCS1003P01SettingVisibleByUserRequest{
+	optional NaewonYNInfo1 naewon_param = 1;
+	optional NotApproveOrderCntInfo count_param = 2;
+}
+
+
+message OCS1003P01SettingVisibleByUserResponse{
+	optional string yn_value = 1;
+	optional string count_value = 2;
+}
+
+message OcsoOCS1003P01BtnListQueryRequest{
+    optional string bunho = 1;
+    optional string gwa = 2;
+    optional string naewon_date = 3;
+    optional string fkout1001 = 4;
+    optional string query_gubun = 5;
+    optional string input_gubun = 6;
+    optional string bunho_2 = 7;
+    optional string naewon_date_2 = 8;
+}
+
+message OcsoOCS1003P01BtnListQueryResponse {
+	repeated OcsoOCS1003P01GridOutSangInfo grid_out_sang_item = 1;
+	repeated ComboListItemInfo cbo_item = 2;
+	repeated OcsoOCS1003P01LayoutQueryInfo out_order = 3;
+	repeated OcsoOCS1003P01GridReserOrderListInfo reser_order = 4;
+}
+
+message OCS1003P01SaveLayOutRequest
+{
+    repeated OcsoOCS1003P01GridOutSangInfo grdOutSang_list       = 1;
+    repeated OCS1003P01LayDeletedDataListItemInfo layDelete_list = 2;
+    repeated OCS1003P01LaySaveLayoutListItemInfo laySave_list    = 3;
+    optional string user_id                                      = 4;
+    optional string naewon_key                                   = 5;
+    optional string naewon_date                                  = 6;
+    optional string hosp_code_link                               = 7;
+}
+
+message OcsoOCS1003P01GrdOutSangSaveLayoutRequest
+{
+	repeated OcsoOCS1003P01GridOutSangInfo grdOutSang_list = 1;
+	optional string user_id = 2;
+}
+
+message OcsOCS1003P01CheckHangSangInfoRequest{
+    repeated CheckHangSangInfo hang_sang_info = 1;
+}
+
+message OcsOCS1003P01CheckHangSangInfoResponse {
+    repeated DataStringListItemInfo item_info = 1;
+}
+
+message OcsoOCS1003P01LayPatRequest {
+    optional string f_doctor = 1;
+    optional string f_bunho = 2;
+    optional string f_naewon_date = 3;
+    optional string f_login_doctor_yn = 4;
+}
+
+message OcsoOCS1003P01LayPatResponse {
+    repeated OcsoOCS1003P01LayPatInfo lay_pat_Info = 1;
+}
+
+message OcsoOCS1003P01GetGroupKeyRequest {
+    optional string pkout1001 = 1;
+    optional string code_type = 2;
+}
+
+message OcsoOCS1003P01GetGroupKeyResponse{
+    optional string group_key = 1;
+}
+message OCS1003P01GetUserOptionAndOrderCountRequest {
+	optional GetUserOptionInfo user_option = 1;
+	optional GetOrderCountInfo  order_count = 2;
+}
+
+message OCS1003P01GetUserOptionAndOrderCountResponse {
+	optional string user_option_value = 1;
+	optional string order_count_value = 2;
+}
+
+message OCS1003P01OpenAllergyInforRequest {
+    optional string doctor = 1;
+    optional string gwa = 2;
+    optional string keyword =3;
+    optional string io_gubun = 4;
+    optional string bunho = 5;
+    optional string naewon_date = 6;
+}
+
+message OCS1003P01OpenAllergyInforResponse {
+    optional string allergy_result = 1;
+}
+message OCS1003P01LoadConsultEndYnAndIsNoConfirmConsultRequest {
+    optional LoadConsultEndYNInfo  item_info = 1;
+    optional NoConfirmConsultInfo confirm_consult_info = 2;
+}
+
+message OCS1003P01LoadConsultEndYnAndIsNoConfirmConsultResponse {
+	optional string req_date = 1;
+	optional bool IsNoReturnConsult_yn = 2;
+}
+
+message OCS1003P01CheckPatientEtcRequest {
+    optional KensaReserInfo kensa_reser_info = 1;
+    optional string bunho = 2;
+    optional GetUserOptionInfo user_option_info = 3;
+    optional OutTaGwaJinryoCntInfo out_ta_gwa_jinryo_cnt = 4;
+    optional GetOutJinryoCommentCntInfo comment_cnt_info = 5;
+    optional IpwonReserStatusInfo  reser_status_info = 6;
+}
+
+message OCS1003P01CheckPatientEtcResponse {
+    optional string kensa_reser_value = 1;
+    optional string specific_comment = 2;
+    optional string user_option = 3;
+    optional string out_ta_gwa_jinryo_cnt = 4;
+    optional string out_jinryo_comment = 5;
+    optional bool allergy_data = 6;
+    optional bool ipwon_reser_status = 7;
+}
+// ----[END] OCS1003P01 - NEW ----
+
+// ----------[START] OCS1003Q09 -----------
+message OCS1003Q09GridOCS1003AndSangRequest{	optional string grdsang_bunho = 1;
+	optional string grdsang_naewon_date = 2;
+	optional string grdsang_gwa = 3;
+	optional string grdsang_doctor = 4;
+	optional string grdsang_naewon_type = 5;
+	optional string grdsang_jubsu_no = 6;
+	optional string grdsang_io_gubun = 7;
+	optional string grdocs1003_bunho = 8;
+	optional string grdocs1003_naewon_date = 9;
+	optional string grdocs1003_gwa = 10;
+	optional string grdocs1003_doctor = 11;
+	optional string grdocs1003_naewon_type = 12;
+	optional string grdocs1003_input_gubun = 13;
+	optional string grdocs1003_tel_yn = 14;
+	optional string grdocs1003_input_tab = 15;
+	optional string grdocs1003_jubsu_no = 16;
+	optional string grdocs1003_pk_order = 17;
+	optional string grdocs1003_generic_yn = 18;
+	optional string grdocs1003_kijun = 19;
+	optional string grdocs1003_io_gubun = 20;
+}
+
+message OCS1003Q09GridOCS1003AndSangResponse
+{
+    repeated OcsoOCS1003Q05OrderListItemInfo grid_ocs1003_info = 1;
+    repeated OCS1003Q09GridSangInfo grid_sang_info = 2;
+}
+
+message OCS1003Q09GridOCS1003Request
+{
+	optional string bunho = 1;
+	optional string naewon_date = 2;
+	optional string gwa = 3;
+	optional string doctor = 4;
+	optional string naewon_type = 5;
+	optional string input_gubun = 6;
+	optional string tel_yn = 7;
+	optional string input_tab = 8;
+	optional string jubsu_no = 9;
+	optional string pk_order = 10;
+	optional string generic_yn = 11;
+	optional string kijun = 12;
+	optional string io_gubun = 13;
+}
+
+message OCS1003Q09GridOCS1003Response
+{
+	repeated OcsoOCS1003Q05OrderListItemInfo rid_ocs1003_info = 1;
+}
+
+message OCS1003Q09GridOUT1001Request{
+	optional string gwa = 1;
+	optional string kijun = 2;
+	optional string bunho = 3;
+	optional string input_gubun = 4;
+	optional string tel_yn = 5;
+	optional string hosp_code = 6;
+	optional string io_gubun = 7;
+	optional string input_tab = 8;
+	optional string selected_input_tab = 9;
+	optional string naewon_date = 10;
+}
+
+message OCS1003Q09GridOUT1001Response{
+	repeated OCS1003Q09GridOUT1001Info grid_Out1001_info = 1;
+}
+
+message OCS1003Q09LoadComboDataSourceRequest
+{
+	optional ComboDataSourceInfo for_col_pay = 1;
+	optional ComboDataSourceInfo for_portable_yn = 2;
+	optional ComboDataSourceInfo for_jusa_spd_gubun = 3;
+	optional ComboDataSourceInfo for_nalsu = 4;
+	optional ComboDataSourceInfo for_suryang = 5;
+	optional ComboDataSourceInfo for_dv = 6;
+}
+message OCS1003Q09LoadComboDataSourceResponse
+{
+	repeated ComboListItemInfo data_for_col_pay = 1;
+	repeated ComboListItemInfo data_for_portable_yn = 2;
+	repeated ComboListItemInfo data_for_jusa_spd_gubun = 3;
+	repeated ComboListItemInfo data_for_nalsu = 4;
+	repeated ComboListItemInfo data_for_suryang = 5;
+	repeated ComboListItemInfo data_for_dv = 6;
+}
+
+message OCS1003Q09CheckOrdDanuiRequest{
+	optional string hangmog_code = 1;
+	optional string ord_danui = 2;
+}
+
+
+message OCS1003Q09CheckOrdDanuiResponse{
+	optional string ret_value = 1;
+}
+
+message OCS1003DloCheckLayoutRequest{
+	optional string bunho = 1;
+	optional string naewon_date = 2;
+	optional string gwa = 3;
+	optional string input_gubun = 4;
+	optional string tel_yn = 5;
+}
+
+message OCS1003DloCheckLayoutResponse{
+	repeated OCS1003Q09GridOUT1001Info gridout1001_info = 1;
+}
+// ----------[END] OCS1003Q09 -----------
+
+//[START] OCS1003Q02------
+message OCS1003Q02GridOUT1001Request
+{
+	optional string naewon_date = 1;
+	optional string bunho = 2;
+	optional string gwa = 3;
+	optional string doctor = 4;
+	optional string naewon_yn = 5;
+}
+message OCS1003Q02GridOUT1001Response
+{
+	repeated OCS1003Q02GridOUT1001Info grid_out1001_info = 1;
+}
+message OCS1003GrdOUT1001RowFocusChangedRequest
+{
+	optional string bunho = 1;
+	optional string naewon_date = 2;
+	optional string gwa = 3;
+	optional string fkout1001 = 4;
+	optional string input_gubun = 5;
+	optional string query_gubun = 6;
+}
+message OCS1003GrdOUT1001RowFocusChangedResponse
+{
+	repeated OCS1003Q02grdOCS1001Info grd_ocs1001_info = 1;
+	optional OCS1003Q02LayQueryLayoutInfo lay_query_layout_info = 2;
+}
+//[END] OCS1003Q02------
+
+//[START]OCS1003R00----
+message OCS1003R00FormLoadRequest
+{
+	optional string naewon_date                 = 1;
+	optional string bunho                       = 2;
+	optional string gwa                         = 3;
+	optional string doctor                      = 4;
+	optional string naewon_type                 = 5;
+	optional string jubsu_no                    = 6;
+	optional string input_gubun                 = 7;
+}
+message OCS1003R00FormLoadResponse
+{
+	repeated OCS1003R00LayOCS1001Info ocs1001_item = 1;
+	repeated OCS1003R00LayOCS1003Info ocs1003_item = 2;
+	repeated OCS1003R00LayOUT1001Info out1001_item = 3;
+}
+
+//[END]OCS1003R00------
+message OCSACTGrdJearyoRequest
+{
+        optional string bunho                = 1;
+        optional string order_date           = 2;
+        optional string io_gubun             = 3;
+        optional string jundal_part          = 4;
+        optional string fkocs                = 5;
+}
+message OCSACTGrdJearyoResponse
+{
+        repeated OCSACTGrdJearyoInfo grd_jearyo_lst = 1;
+}
+message OCSACTCboSystemSelectedIndexChangedRequest
+{
+        optional string system_id = 1;
+        optional string code_type = 2;
+        optional string ho_dong = 3;
+}
+message OCSACTCboSystemSelectedIndexChangedResponse
+{
+        repeated ComboListItemInfo cbo_part_item = 1;
+        repeated ComboListItemInfo cbx_actor_item = 2;
+}
+message OCSACTGrdOrderRequest
+{
+        required bool   rbx_non_act                     = 1;
+        required bool   rbx_act                             = 2;
+        optional string cbo_system                            = 3;
+        optional string cbo_val                                              = 4;
+        optional string io_gubun                              = 5;
+        optional string act_gubun                             = 6;
+        optional string from_date                             = 7;
+        optional string to_date                               = 8;
+        optional string jundal_table_code                     = 9;
+        optional string jundal_part                           = 10;
+        optional string bunho                                 = 11;
+        optional string gwa                                   = 12;
+        optional string doctor                                      = 13;
+        optional string system_id                             = 14;
+        optional string cbo_part                             = 15;
+}
+message OCSACTGrdOrderResponse
+{
+        repeated OCSACTGrdOrderInfo grd_order_item = 1;
+}
+//[END]OCS1003R00------
+
+//[START]OCSACT
+message OCSACTDefaultJearyoRequest
+{
+	optional string hangmog_code = 1;
+}
+message OCSACTDefaultJearyoResponse
+{
+	repeated OCSACTDefaultJearyoInfo default_jearyo_lst = 1;
+}
+message OCSACTGrdSangByungRequest
+{
+	optional string bunho = 1;
+	optional string order_date = 2;
+}
+message OCSACTGrdSangByungResponse
+{
+	repeated OCSACTGrdSangByungInfo grd_sang_byung_lst = 1;
+}
+message OCSACTGrdPaListRequest
+{
+	optional string cbo_system                 = 1;
+	optional string cbo_val                    = 2;
+	optional string cbo_part                   = 3;
+	optional string from_date                  = 4;
+	optional string to_date                    = 5;
+	optional string bunho                      = 6;
+	optional string act_gubun                  = 7;
+	optional string jundal_table_code          = 8;
+	optional string io_gubun                   = 9;
+	optional string system_id                  = 10;
+}
+message OCSACTGrdPaListResponse
+{
+	repeated OCSACTGrdPaListInfo grd_pa_lst = 1;
+}
+message OCSACTBtnReserViewerClickRequest
+{
+	optional string code = 1;
+}
+message OCSACTGrdOrderGridColumnProtectModifyRequest
+{
+	optional string in_out_gubun          = 1;
+	optional string pkocs                 = 2;
+}
+message OCSACTGrdJaeryoGridColumnProtectModifyRequest
+{
+	optional string in_out_gubun           = 1;
+	optional string pkocs                  = 2;
+}
+message OCSACTCommandRequest
+{
+	optional string hangmog_code = 1;
+}
+message OCSACTTempOrderRequest
+{
+	optional string hangmog_code = 1;
+}
+message OCSACTBtnReportViewerClickRequest
+{
+	optional string jundal_part = 1;
+}
+message OCSACTSingleStringResponse
+{
+	optional string response_str = 1;
+}
+message OCSACTLayconstantAlarmRequest{
+}
+message OCSACTLayconstantConstRequest{
+}
+message OCSACTCboSystemRequest{
+}
+message OCSACTCboIoGubunRequest{
+}
+message FwEMRHelperExecuteEMRRequest
+{
+	optional string user_id = 1;
+	optional string gwa = 2;
+}
+message OCSACTUpdateRequest
+{
+	required bool rbt_non_act                                                          = 1;
+	required bool rbt_act                                                              = 2;
+	required bool is_upd_jaeryo_process                                                = 3;
+	optional string act_yn                                                             = 4;
+	optional string in_out_gubun                                                       = 5;
+	optional string sort_fkocskey                                                      = 6;
+	optional string pkocs                                                              = 7;
+	optional string acting_date                                                        = 8;
+	optional string acting_time                                                        = 9;
+	optional string new_ocs_key                                                        = 10;
+	optional string jundal_part                                                        = 11;
+	optional string order_date                                                         = 12;
+	optional string user_id                                                            = 13;
+	optional string bunho                                                              = 14;
+	repeated OCSACTUpdateGrdOrderInfo update_grd_order_item                            = 15;
+	repeated OCSACTUpdJaeryoProcessWithUpdGubunInfo jaeryo_with_upd_item               = 16;
+	repeated OCSACTUpdJaeryoProcessInfo jaeryo_item                                    = 17;
+	repeated OCSACTDeleteJaeryoInfo delete_jaeryo_item                                 = 18;
+}
+message OCSACTBtnEMRClickRequest
+{
+	optional string naewon_key = 1;
+}
+message OCSACTGrdJaeryoGridColumnChangedRequest
+{
+	optional string hangmog_code1          = 1;
+	optional string hangmog_code2          = 2;
+	optional string set_hangmog_code       = 3;
+}
+message OCSACTGrdJaeryoGridColumnChangedResponse
+{
+	repeated OCSACTGrdJaeryoGridColumnChangedInfo dt1_item = 1;
+	repeated OCSACTGrdJaeryoGridColumnChangedInfo dt2_item = 2;
+}
+message OCSACTGrdOrderGridColumnChangedRequest
+{
+	optional string user_id = 1;
+}
+message OCSACTCheckNaewonYnRequest
+{
+	optional string pkout1001 = 1;
+}
+message OCSACTGetFindWorkerRequest
+{
+	optional string col_name = 1;
+	optional string arg1 = 2;
+}
+message OCSACTGetFindWorkerResponse
+{
+	repeated OCSACTGetFindWorkerInfo fw_item = 1;
+}
+message OCSACTProcEkgInterfaceRequest
+{
+        optional string order_date           = 1;
+        optional string bunho                = 2;
+        optional string fkout1001            = 3;
+        optional string pkocs                = 4;
+        optional string user_id              = 5;
+        optional string io_gubun             = 6;
+        optional string send_yn              = 7;
+}
+message OCSACTProcEkgInterfaceResponse
+{
+        optional string pkpfe5010 = 1;
+        optional string rtnIfsCnt = 2;
+        optional string exception_id = 3;
+}
+message OCSACTGrdRowFocusChangedRequest
+{
+        optional string bunho                = 1;
+        optional string order_date           = 2;
+        optional string io_gubun             = 3;
+        optional string jundal_part          = 4;
+        optional string fkocs                = 5;
+}
+message OCSACTGrdRowFocusChangedResponse
+{
+        repeated OCSACTGrdJearyoInfo jearyo_item                 = 1;
+        repeated OCSACTGrdSangByungInfo sangbyung_item         = 2;
+}
+message OCSACTChangeOrderCodeGrdOrderListRequest
+{
+        optional string code_type = 1;
+}
+message OCSACTCboTimeAndSystemRequest
+{
+}
+message OCSACTCboTimeAndSystemResponse
+{
+	repeated ComboListItemInfo cbo_time   = 1;
+	repeated ComboListItemInfo cbo_system = 2;
+}
+
+message OCSACTGroupedPatientAndOrderRequest {
+  optional string cbo_system                 = 1;
+  optional string cbo_val                    = 2;
+  optional string cbo_part                   = 3;
+  optional string from_date                  = 4;
+  optional string to_date                    = 5;
+  optional string bunho                      = 6;
+  optional string act_gubun                  = 7;
+  optional string jundal_table_code          = 8;
+  optional string io_gubun                   = 9;
+  optional string system_id                  = 10;
+}
+message OCSACTGroupedPatientAndOrderResponse {
+	repeated OCSACTGrdPaListInfo grd_pa_lst          = 1;
+	repeated OCSACTGrdOrderInfo grd_order_lst        = 2;
+	repeated OCSACTDefaultJearyoInfo grd_default_lst = 3;
+	repeated OCSACTGrdJearyoInfo grd_jearyo_lst      = 4;
+	repeated OCSACTGrdSangByungInfo grd_sang_lst     = 5;
+}
+
+message OCSACT2GetPatientListINJRequest
+{
+        optional string acting_flag = 1;
+        optional string reser_date  = 2;
+        optional string gwa         = 3;
+}
+message OCSACT2GetPatientListINJResponse
+{
+        repeated OCSACT2GetPatientListINJInfo pat_inj_item = 1;
+}
+message OCSACT2GetPatientListOCSRequest
+{
+        optional string cbo_system                 = 1;
+        optional string cbo_val                    = 2;
+        optional string cbo_part                   = 3;
+        optional string from_date                  = 4;
+        optional string to_date                    = 5;
+        optional string bunho                      = 6;
+        optional string act_gubun                  = 7;
+        optional string jundal_table_code          = 8;
+        optional string io_gubun                   = 9;
+        optional string system_id                  = 10;
+}
+message OCSACT2GetPatientListOCSResponse
+{
+        repeated OCSACT2GetPatientListOCSInfo pat_ocs_item = 1;
+}
+message OCSACT2GetPatientListCPLRequest
+{
+        optional bool rbxJubsu_checked                 = 1;
+        optional string from_date                      = 2;
+        optional string to_date                        = 3;
+        optional string bunho                          = 4;
+}
+message OCSACT2GetPatientListCPLResponse
+{
+        repeated OCSACT2GetPatientListCPLInfo pat_cpl_item = 1;
+}
+message OCSACT2GetComboUserRequest
+{
+        optional string hosp_code    = 1;
+        optional string jundal_table = 2;
+}
+message OCSACT2GetGrdPaListRequest
+{
+	optional string jundal_table           = 1;
+	optional string gwa                    = 2;
+	optional string order_date_from        = 3;
+	optional string order_date_to          = 4;
+	optional string bunho                  = 5;
+	optional string hosp_code              = 6;
+	optional string acting_flg             = 7;
+}
+message OCSACT2GetGrdPaListResponse
+{
+	repeated OCSACT2GetGrdPaListInfo pa_item = 1;
+}
+//[END]OCSACT
+
+
+// -----[START] OCS1023U00 ------
+message OCS1023U00GrdOCS1023Request{
+	optional string generic_yn = 1;
+	optional string bunho = 2;
+	optional string gwa = 3;
+	optional string input_tab = 4;
+}
+
+message OCS1023U00GrdOCS1023Response{
+	repeated OCS1023U00GrdOCS1023Info list_info = 1;
+}
+
+message OCS1023U00SaveLayoutRequest{
+	optional string user_id = 1;
+	repeated OCS1023U00GrdOCS1023Info input_list = 2;
+}
+
+// -----[END] OCS1023U00 ------
+
+//[START] OUTSANGQ00
+message OUTSANGQ00GrdOutSangRequest{
+    optional string bunho = 1;
+    optional string gwa = 2;
+    optional string io_gubun = 3;
+    optional string all_sang_yn = 4;
+    optional string gijun_date = 5;
+}
+
+message OUTSANGQ00GrdOutSangResponse{
+    repeated OUTSANGQ00GrdOutSangInfo list_item = 1;
+}
+
+message OUTSANGQ00LayoutGwaRequest{
+}
+
+message OUTSANGQ00IsEnableSangCodeRequest{
+    optional string pkoutsang = 1;
+    optional string bunho = 2;   
+}
+
+message OUTSANGQ00IsEnableSangCodeResponse{
+    repeated OUTSANGQ00IsEnableSangCodeInfo list_item = 1;
+}
+//[END] OUTSANGQ00
+
+//[START] OCS1003R02
+message OCS1003R02LayQueryStartingRequest {
+	optional string gwa = 1;
+	optional string f_bunho = 2;
+	optional string f_naewon_date = 3;
+	optional string f_doctor = 4;
+	optional string f_naewon_type = 5;
+	optional string f_jubsu_no = 6;
+	optional string f_hosp_code = 7;
+	
+}
+message OCS1003R02LayQueryStartingResponse {
+	repeated OCS1003R02DTListItemInfo dt = 1;
+	repeated OCS1003R02DTListItemInfo dt_hosp = 2;
+	
+}
+message OCS1003R02LayOutQueryStartingRequest {
+	optional string f_bunho = 1;
+	optional string f_naewon_date = 2;
+	optional string f_gwa = 3;
+	optional string f_doctor = 4;
+	optional string f_naewon_type = 5;
+	optional string f_jubsu_no = 6;
+	optional string f_gwa_out = 7;
+	optional string f_gwa_name_out = 8;
+	optional string f_bunho_out = 9;
+	optional string f_suname_out = 10;
+	optional string f_balheang_date_out = 11;
+	optional string f_birth_out = 12;
+	optional string f_naewon_date_out = 13;
+	optional string f_bunho_1_out = 14;
+	optional string f_dangil_gumsa_result_yn_out = 15;
+	optional string f_hosp_code = 16;
+	optional string f_fkout1001 = 17;
+	optional string f_jaedan_name = 18;
+	optional string f_hosp_name = 19;
+	optional string f_tel = 20;
+	optional string f_homepage = 21;
+}
+message OCS1003R02LayOutQueryStartingResponse {
+	repeated OCS1003R02LayOutListItemInfo dt = 1;
+	
+}
+message OCS1003R02R03LayOutQuerryStartingReQuest {
+	optional string f_bunho = 1;
+	optional string f_naewon_date = 2;
+	optional string f_gwa = 3;
+	optional string f_doctor = 4;
+	optional string f_naewon_type = 5;
+	optional string f_jubsu_no = 6;
+	optional string f_order_gubun = 7;
+	optional string f_gwa_name_out = 8;
+	optional string f_bunho_out = 9;
+	optional string f_suname_out = 10;
+	optional string f_balheang_date_out = 11;
+	optional string f_birth_out = 12;
+	optional string f_naewon_date_out = 13;
+	optional string f_bunho_1_out = 14;
+	optional string f_hosp_code = 15;
+}
+message OCS1003R02R03LayOutQuerryStartingReponse {
+	repeated OCS1003R02R03LayOutListItemInfo dt = 1;
+	
+}
+//new define 
+message OCS1003R02LayR02QueryStartingRequest
+{
+	optional string gwa = 1;
+	optional string bunho = 2;
+	optional string naewon_date = 3;
+	optional string doctor = 4;
+	optional string naewon_type = 5;
+	optional string jubsu_no = 6;
+	optional string fkout1001 = 7;
+	optional string user_id = 8;
+}
+message OCS1003R02LayR02QueryStartingResponse
+{
+	optional string io_flag = 1;
+	repeated OCS1003R02LayR02ListItemInfo layr02_list = 2;
+}
+message OCS1003R02LayR03QueryStartingRequest
+{
+	optional string gwa = 1;
+	optional string bunho = 2;
+	optional string naewon_date = 3;
+	optional string doctor = 4;
+	optional string naewon_type = 5;
+	optional string jubsu_no = 6;
+}
+message OCS1003R02LayR03QueryStartingResponse
+{
+	repeated OCS1003R02LayR03ListItemInfo layr03_list = 1;
+}
+//[END] OCS1003R02
+
+
+//[START] OUT2016U00
+message OUT2016U00PatientLinkingRequest{
+        optional string link_type = 1;
+        optional string hosp_code = 2;
+        optional string bunho = 3;
+        optional string hosp_code_link = 4;
+        optional string bunho_link = 5;
+        optional string password = 6;
+}
+
+message OUT2016U00UpdatePatientLinkingRequest{
+        optional string hosp_code = 1;
+        optional string bunho = 2;
+        repeated OUT2016U00PatientLinkingContentInfo phrPatientLinkingContent = 3;
+}
+//[END] OUT2016U00
+
+//[START] OCS2016U00
+message OCS2016U00GrdQuestionRequest{
+        optional string hosp_code = 1;
+        optional string doctor = 2;
+        optional string datetime = 3;
+        optional string question_type = 4;
+        optional string gwa = 5;
+}
+
+message OCS2016U00GrdQuestionResponse{
+        repeated OCS2016U00GrdQuestionInfo list_question_info = 1;
+}
+
+message OCS2016U00LoadDiscussionRequest{
+        optional string grp_question_id = 1;
+}
+
+message OCS2016U00LoadDiscussionResponse{
+        repeated OCS2016U00LoadDiscussionInfo item_discussion_info = 1;
+}
+
+message OCS2016GetLinkingDepartmentRequest{
+        optional string find1 = 1;
+        optional string hosp_code = 2;
+}
+
+message OCS2016GetLinkingDepartmentResponse{
+        repeated OCS2016GetLinkingDepartmentInfo department_info = 1;
+}
+
+message OCS2016U00QuestionSaveLayoutRequest{
+        optional string question_type = 1;
+        repeated OCS2016U00QuestionSaveLayoutInfo question_list = 2;
+        repeated OCS2016U00LoadDiscussionInfo discussion_list = 3;
+}
+
+message PatientLinkingFwkDoctorRequest{
+        optional string hosp_code = 1;
+        optional string gwa = 2;
+}
+
+message PatientLinkingFwkDoctorResponse{
+        repeated PatientLinkingFwkDoctorInfo doctor_list = 1;
+}
+
+message OCS2016GetUserDepartmentRequest{
+        optional string find1 = 1;
+        optional string hosp_code = 2;
+}
+
+message OCS2016GetUserDepartmentResponse{
+        repeated OCS2016GetUserDepartmentInfo department_info = 1;
+}
+
+message OCS2016U00UpdateReplyRequest{
+		repeated OCS2016U00LoadDiscussionInfo discussion_list = 1;
+}
+
+message OCS2016U00GetShardingHospitalRequest{
+        optional string hosp_code = 1;
+}
+//[END] OCS2016U00
+
+//[START] PHR
+message OUTSANGPatientDiseaseRequest{
+        optional string patient_code = 1;
+        optional string hosp_code = 2;
+}
+
+message OUTSANGPatientDiseaseResponse{
+        repeated PatientDiseaseInfo patient_disease = 1;
+        optional string hosp_name = 2;
+}
+
+message OcsoPatientMedicineRequest{
+        optional string patient_code = 1;
+        optional string hosp_code = 2;
+}
+
+message OcsoPatientMedicineResponse{
+        repeated OcsoPatientMedicineInfo patient_medicine = 1;
+        optional string hosp_name = 2;
+}
+//[END] PHR
+
+//[START] Composite
+message OCSACTCompositeFirstRequest {
+	optional OCSACTCboSystemSelectedIndexChangedRequest cbo_system_event_param = 1;
+	optional OCSACTLayconstantConstRequest lay_const_param                     = 2;
+	optional OCSACTLayconstantAlarmRequest lay_alarm_param                     = 3;
+}
+message OCSACTCompositeFirstResponse {
+	optional OCSACTCboSystemSelectedIndexChangedResponse cbo_system_event_list = 1;
+	optional LayConstantInfoResponse lay_const_list                            = 2;
+	optional LayConstantInfoResponse lay_alarm_list                            = 3;
+}
+message OCSACTCompositeSecondRequest {
+	optional OCSACTGrdJearyoRequest grd_jearyo_param      = 1;
+	optional OCSACTGrdSangByungRequest grd_sang_param     = 2;
+	optional OCSACTDefaultJearyoRequest grd_default_param = 3;
+}
+message OCSACTCompositeSecondResponse {
+	optional OCSACTGrdJearyoResponse grd_jearyo_list      = 1;
+	optional OCSACTGrdSangByungResponse grd_sang_list     = 2;
+	optional OCSACTDefaultJearyoResponse grd_default_list = 3;
+}
+
+message OCSACT2CompositeRequest {
+    optional OCSACTCboTimeAndSystemRequest cbo_time_and_sys = 1;
+    optional OCSACT2GetComboUserRequest cbo_user = 2;
+    optional OCSACT2GetGrdPaListRequest grd_pa_list = 3;
+    optional OCSACTCboSystemSelectedIndexChangedRequest cbo_selected_index_change = 4;
+    optional OCSACTLayconstantConstRequest lay_constant_cons = 5;
+    optional OCSACTLayconstantAlarmRequest lay_constant_alarm = 6;
+}
+
+message OCSACT2CompositeResponse {
+    optional OCSACTCboTimeAndSystemResponse cbo_time_and_sys_res = 1;
+    optional ComboResponse cbo_user_res = 2;
+    optional OCSACT2GetGrdPaListResponse grd_pa_list_res = 3;
+    optional OCSACTCboSystemSelectedIndexChangedResponse cbo_selected_index_change_res = 4;
+    optional LayConstantInfoResponse lay_constant_cons_res = 5;
+    optional LayConstantInfoResponse lay_constant_res = 6;
+}
+
+//[END] Composite
+
+message OcsoUpdatePaidOrderRequest {
+	required string hosp_code 		= 1;
+	required string reception_date 	= 2;
+	repeated string recept_ref_id 	= 3;
+}
+
+message OcsoUpdatePaidOrderResponse {
+	required bool result 	= 1;
+	optional string message	= 2;
+}
+
+message OCS4001U00Request
+{
+        optional string bunho_code = 1;
+        optional string hosp_code = 2;
+        optional string template_id = 3;
+        optional string order_date = 4;
+}
+
+message OCS4001U00Response{
+    optional string        input_content                    = 1;
+    optional string        print_content                    = 2;
+    optional string        format_type                      = 3;
+    optional string        tpl_name                         = 4;
+    repeated OCS4001U00SangNameInfo sang_name_list  		= 5;
+    repeated OCS4001U00ListItemInfo items                   = 6;
+    repeated OCS4001U00HospitalInfo hospitals               = 7;
+    repeated OCS4001U00PrescriptionInfo prescriptions       = 8; 
+}
+message OCS4001U00SaveRequest
+{
+        repeated OCS4001U00SaveInfo items = 1;
+}

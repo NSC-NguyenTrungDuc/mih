@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Aileron-Light.otf">
+            <string>Aileron-Light</string>
+            <string>Aileron-Light</string>
+            <string>Aileron-Light</string>
+        </mutableArray>
+        <mutableArray key="Aileron-Thin.otf">
+            <string>Aileron-Thin</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="StandardHomeDateCell">
+            <rect key="frame" x="0.0" y="0.0" width="179" height="154"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="179" height="154"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHw-kS-2nQ">
+                        <rect key="frame" x="45" y="40" width="90" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="17k-hi-qzz"/>
+                            <constraint firstAttribute="width" constant="90" id="eon-dE-lHC"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Aileron-Light" family="Aileron" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rd" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF5-53-UiB">
+                        <rect key="frame" x="111" y="61" width="40" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="C7T-y0-kKM"/>
+                            <constraint firstAttribute="width" constant="40" id="LKh-0s-dta"/>
+                            <constraint firstAttribute="height" constant="15" id="S8S-a7-DCf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Aileron-Light" family="Aileron" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="LKh-0s-dta"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1k-uB-ZM4">
+                        <rect key="frame" x="111" y="78" width="40" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="47" id="1ww-v1-I0h"/>
+                            <constraint firstAttribute="width" constant="40" id="Axk-XH-cIu"/>
+                            <constraint firstAttribute="height" constant="15" id="ZZq-p7-xQI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Aileron-Light" family="Aileron" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1ww-v1-I0h"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPh-k4-SPL">
+                        <rect key="frame" x="46" y="60" width="63" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="63" id="Lqs-B0-iDX"/>
+                            <constraint firstAttribute="height" constant="44" id="zaG-YJ-LAE"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Aileron-Thin" family="Aileron" pointSize="53"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="cPh-k4-SPL" secondAttribute="centerX" constant="12" id="2vz-1z-GPO"/>
+                <constraint firstItem="R1k-uB-ZM4" firstAttribute="leading" secondItem="cPh-k4-SPL" secondAttribute="trailing" constant="2" id="CiT-Zn-aNU"/>
+                <constraint firstItem="cPh-k4-SPL" firstAttribute="centerY" secondItem="R1k-uB-ZM4" secondAttribute="centerY" constant="-3" id="K3d-z8-8fE"/>
+                <constraint firstItem="tF5-53-UiB" firstAttribute="leading" secondItem="R1k-uB-ZM4" secondAttribute="leading" id="PFm-Xt-Nb8"/>
+                <constraint firstItem="tF5-53-UiB" firstAttribute="top" secondItem="FHw-kS-2nQ" secondAttribute="top" constant="39" id="SI7-fq-umB"/>
+                <constraint firstAttribute="trailing" secondItem="FHw-kS-2nQ" secondAttribute="trailing" constant="8" id="SzI-1H-gFd"/>
+                <constraint firstAttribute="centerX" secondItem="FHw-kS-2nQ" secondAttribute="centerX" id="W2m-b4-9mX"/>
+                <constraint firstItem="R1k-uB-ZM4" firstAttribute="top" secondItem="cPh-k4-SPL" secondAttribute="bottom" constant="-31" id="WFs-5d-waa"/>
+                <constraint firstItem="R1k-uB-ZM4" firstAttribute="top" secondItem="tF5-53-UiB" secondAttribute="bottom" constant="5" id="Wpv-Dz-thQ"/>
+                <constraint firstItem="R1k-uB-ZM4" firstAttribute="top" secondItem="tF5-53-UiB" secondAttribute="bottom" constant="2" id="WuT-N1-L9i"/>
+                <constraint firstAttribute="centerY" secondItem="cPh-k4-SPL" secondAttribute="centerY" constant="-5" id="aOH-0E-IJZ"/>
+                <constraint firstItem="cPh-k4-SPL" firstAttribute="top" secondItem="FHw-kS-2nQ" secondAttribute="bottom" id="fie-jL-hdd"/>
+                <constraint firstItem="cPh-k4-SPL" firstAttribute="centerX" secondItem="R1k-uB-ZM4" secondAttribute="centerX" constant="-79" id="oTG-4F-d2g"/>
+                <constraint firstItem="tF5-53-UiB" firstAttribute="top" secondItem="FHw-kS-2nQ" secondAttribute="bottom" constant="10" id="rvO-y1-7xf"/>
+                <constraint firstItem="FHw-kS-2nQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="sfK-3p-Oxv"/>
+                <constraint firstAttribute="bottom" secondItem="FHw-kS-2nQ" secondAttribute="bottom" constant="109" id="wQB-ov-fVi"/>
+                <constraint firstItem="cPh-k4-SPL" firstAttribute="centerY" secondItem="R1k-uB-ZM4" secondAttribute="centerY" constant="-6.5" id="xu5-M1-Dlx"/>
+            </constraints>
+            <size key="customSize" width="179" height="154"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="SzI-1H-gFd"/>
+                    <exclude reference="sfK-3p-Oxv"/>
+                    <exclude reference="wQB-ov-fVi"/>
+                    <exclude reference="oTG-4F-d2g"/>
+                    <exclude reference="xu5-M1-Dlx"/>
+                    <exclude reference="SI7-fq-umB"/>
+                    <exclude reference="rvO-y1-7xf"/>
+                    <exclude reference="WFs-5d-waa"/>
+                    <exclude reference="Wpv-Dz-thQ"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="labelDay" destination="cPh-k4-SPL" id="dhB-cB-URx"/>
+                <outlet property="labelDaySuffix" destination="tF5-53-UiB" id="Z7d-y2-HWu"/>
+                <outlet property="labelMonth" destination="R1k-uB-ZM4" id="eLL-9O-131"/>
+                <outlet property="labelToday" destination="FHw-kS-2nQ" id="JUy-uR-wwv"/>
+            </connections>
+            <point key="canvasLocation" x="474.5" y="298"/>
+        </collectionViewCell>
+    </objects>
+</document>

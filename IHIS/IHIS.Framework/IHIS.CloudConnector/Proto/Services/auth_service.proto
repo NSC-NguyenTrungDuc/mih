@@ -1,0 +1,20 @@
+syntax = "proto2";
+
+//Logon request
+message LogonRequest {
+	required string ticket = 1;	//token key get after login
+	optional string customer_id = 2;
+	required string target = 3; // SOCIAL = 1; TRADING = 2;
+	required string service_type = 4; //1: FX account, 4: CFD account, 7: Social account
+}
+
+//Logout request
+message LogoutRequest {
+	required string ticket = 1;	//token key get after login
+	optional string customer_id = 2;
+}
+
+//Heartbeat
+message HeartbeatEvent {
+	//No content
+}

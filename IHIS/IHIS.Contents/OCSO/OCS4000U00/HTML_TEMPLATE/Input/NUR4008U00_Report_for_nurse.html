@@ -1,0 +1,628 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Report for nurse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	  <script src="../js/moment.min.js"></script>
+      <script src="../js/pikaday.js"></script>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/handlebars.min.js"></script>	
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/app.js"></script>
+	
+	<!--Select Date-->
+	<link href="../js/kendo/kendo.common.min.css" rel="stylesheet" />
+	<link href="../js/kendo/kendo.default.min.css" rel="stylesheet" />
+	<link href="../js/kendo/calendar-select.css" rel="stylesheet" />
+	<script src="../js/kendo/kendo.ui.core.min.js"></script>
+	<script src="../js/kendo/kendo-multi-calendar.min.js"></script>
+	<script src="../js/kendo/kendo-multi-date-select.js"></script>
+	<script src="../js/kendo/cultures/kendo.culture.ja-JP.js"></script>
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+  	body{
+  		font-size: 15px;		
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  	}
+	.k-button{
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+    hr{
+      border-width: 0;
+      height: 1px;
+      background-color: #ccc;
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+  	
+  	.wrapper{
+  		width: 820px;
+  		margin-top: 0;
+  		margin-right: auto;
+  		margin-left: auto;
+  		margin-bottom: 0;
+  	}
+    .page-title{
+      font-size: 40px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+    .title{
+      font-size: 24px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    .text-center{
+      text-align: center;
+    }
+    .text-right{
+      text-align: right;
+    }
+    .uppercase{
+      text-transform: uppercase;
+    }
+    .table {
+      border-spacing: 0;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    .table .td-title{
+      width: 200px;
+      padding-right: 20px;
+    }
+    .table .td-content {
+      width: 600px;
+    }
+    .table tr th {
+      text-align: left;
+      vertical-align: top;    
+    }
+    .table tr td {
+      vertical-align: top;
+    }
+    .table tr.row > td,
+    .table tr.row > th{
+      padding-bottom: 20px;
+    }
+
+    .label{
+      margin-top: 3px;
+      margin-bottom: 7px;
+    }
+    .input{
+      border-width: 1px;
+      border-style: solid;
+      border-color: #ccc;
+      padding-top: 7px;
+      padding-left: 12px;
+      padding-right: 12px;
+      padding-bottom: 7px;
+    }
+    .input:focus{
+      border-color: #666;
+    }
+    .input:disabled{
+      background-color: #f5f5f5;
+      color: #666;
+    }
+    .table .td-content .input-block{
+      width: 574px;
+    }
+    .table .td-full .input-block{
+      width: 774px;
+    }
+    select.input{
+      padding-left: 11px;
+      padding-right: 11px;
+    }
+    .table .td-content .select-block {
+      width: 100%;
+    }
+    select.input option {
+      padding-left: 13px;
+      padding-right: 13px;
+    }
+	.btn-submit-inline{
+      padding-top: 7px;
+      padding-left: 12px;
+      padding-right: 12px;
+      padding-bottom: 7px;
+      display: inline-block;
+      background: #666;
+      color: #fff;
+      border: 0;
+      cursor: pointer;
+    }
+    .list-date{
+      padding: 10px 0;
+    }
+    .box{
+      background-color: #f5f5f5;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-width: 1px;
+      border-style: dashed;
+      border-color: #ccc;
+    }
+    .button{
+      font-size: 18px;
+      background-color: #2a75a9;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 25px;
+      padding-right: 25px;
+      color: #fff;
+      border-width: 0;
+      cursor: pointer;
+    }
+    .pika-single {
+        z-index: 9999;
+        display: block;
+        position: relative;
+        color: #333;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-bottom-color: #bbb;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    /*
+    clear child float (pika-lendar), using the famous micro clearfix hack
+    http://nicolasgallagher.com/micro-clearfix-hack/
+    */
+    .pika-single:before,
+    .pika-single:after {
+        content: " ";
+        display: table;
+    }
+    .pika-single:after { clear: both }
+    .pika-single { *zoom: 1 }
+
+    .pika-single.is-hidden {
+        display: none;
+    }
+
+    .pika-single.is-bound {
+        position: absolute;
+        box-shadow: 0 5px 15px -5px rgba(0,0,0,.5);
+    }
+
+    .pika-lendar {
+        float: left;
+        width: 240px;
+        margin: 8px;
+    }
+
+    .pika-title {
+        position: relative;
+        text-align: center;
+    }
+
+    .pika-label {
+        display: inline-block;
+        *display: inline;
+        position: relative;
+        z-index: 9999;
+        overflow: hidden;
+        margin: 0;
+        padding: 5px 3px;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: bold;
+        background-color: #fff;
+    }
+    .pika-title select {
+        cursor: pointer;
+        position: absolute;
+        z-index: 9998;
+        margin: 0;
+        left: 0;
+        top: 5px;
+        filter: alpha(opacity=0);
+        opacity: 0;
+    }
+
+    .pika-prev,
+    .pika-next {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        outline: none;
+        border: 0;
+        padding: 0;
+        width: 20px;
+        height: 30px;
+        /* hide text using text-indent trick, using width value (it's enough) */
+        text-indent: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        background-color: transparent;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 75% 75%;
+        opacity: .5;
+        *position: absolute;
+        *top: 0;
+    }
+
+    .pika-prev:hover,
+    .pika-next:hover {
+        opacity: 1;
+    }
+
+    .pika-prev,
+    .is-rtl .pika-next {
+        float: left;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAUklEQVR42u3VMQoAIBADQf8Pgj+OD9hG2CtONJB2ymQkKe0HbwAP0xucDiQWARITIDEBEnMgMQ8S8+AqBIl6kKgHiXqQqAeJepBo/z38J/U0uAHlaBkBl9I4GwAAAABJRU5ErkJggg==');
+        *left: 0;
+    }
+
+    .pika-next,
+    .is-rtl .pika-prev {
+        float: right;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAU0lEQVR42u3VOwoAMAgE0dwfAnNjU26bYkBCFGwfiL9VVWoO+BJ4Gf3gtsEKKoFBNTCoCAYVwaAiGNQGMUHMkjGbgjk2mIONuXo0nC8XnCf1JXgArVIZAQh5TKYAAAAASUVORK5CYII=');
+        *right: 0;
+    }
+
+    .pika-prev.is-disabled,
+    .pika-next.is-disabled {
+        cursor: default;
+        opacity: .2;
+    }
+
+    .pika-select {
+        display: inline-block;
+        *display: inline;
+    }
+
+    .pika-table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 0;
+    }
+
+    .pika-table th,
+    .pika-table td {
+        width: 14.285714285714286%;
+        padding: 0;
+    }
+
+    .pika-table th {
+        color: #999;
+        font-size: 12px;
+        line-height: 25px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .pika-button {
+        cursor: pointer;
+        display: block;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        outline: none;
+        border: 0;
+        margin: 0;
+        width: 100%;
+        padding: 5px;
+        color: #666;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: right;
+        background: #f5f5f5;
+    }
+
+    .pika-week {
+        font-size: 11px;
+        color: #999;
+    }
+
+    .is-today .pika-button {
+        color: #33aaff;
+        font-weight: bold;
+    }
+
+    .is-selected .pika-button {
+        color: #fff;
+        font-weight: bold;
+        background: #33aaff;
+        box-shadow: inset 0 1px 3px #178fe5;
+        border-radius: 3px;
+    }
+
+    .is-inrange .pika-button {
+        background: #D5E9F7;
+    }
+
+    .is-startrange .pika-button {
+        color: #fff;
+        background: #6CB31D;
+        box-shadow: none;
+        border-radius: 3px;
+    }
+
+    .is-endrange .pika-button {
+        color: #fff;
+        background: #33aaff;
+        box-shadow: none;
+        border-radius: 3px;
+    }
+
+    .is-disabled .pika-button {
+        pointer-events: none;
+        cursor: default;
+        color: #999;
+        opacity: .3;
+    }
+
+    .pika-button:hover {
+        color: #fff;
+        background: #ff8000;
+        box-shadow: none;
+        border-radius: 3px;
+    }
+
+    /* styling for abbr */
+    .pika-table abbr {
+        border-bottom: none;
+        cursor: help;
+    }
+    mark {
+    	background-color: #effeff;
+    	color: #000000;
+			padding:5px;
+		}
+	.kendo-calendar{
+		margin-top: 6px;
+	}
+  </style>
+</head>
+<body>
+<form id="myform" action="" method="post">
+ 	<div>	
+		<div id="data-template">						
+		</div>
+	</div>
+	
+<script id="some-template" type="text/x-handlebars-template">	
+	<div class="wrapper">
+    <h1 class="page-title text-center">訪問看護報告書</h1> 
+    <hr>
+    <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+        <tr class="row">
+            <th class="td-title">
+                <div class="label">&nbsp;</div>
+            </th>
+            <td class="td-content">
+                <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td>
+                      <div class="label">作成日</div>
+                      <input id="make-date" name="make-date" type="text" value="{{make-date}}" class="input date-picker" style="width: 266px" />        
+              
+                    </td>
+                    <td style="width: 14px">&nbsp;</td>
+                    <td>
+                      <div class="label">有効期間</div>
+                      <input id="valid-date" type="text" name="valid-date" value="{{valid-date}}" class="input date-picker" style="width: 266px" />                      
+                    </td>
+                  </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <hr>   
+    <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+      <tr class="row">
+        <th class="td-title"><div class="label">患者氏名</div></th>
+        <td class="td-content">
+			<mark style="width: 534px;display: inline-block;">{{PatientName1}}</mark> 
+			<div style="width: 30px;text-align: right;display: inline-block;">様</div>
+        </td>
+      </tr>
+      <tr class="row">
+        <th class="td-title"><div class="label">生年月日</div></th>
+        <td class="td-content">
+        	<mark>{{Birth}}</mark>
+        </td>
+      </tr>
+      <tr class="row">
+        <th class="td-title"><div class="label">要介護認定の状況</div></th>
+        <td class="td-content">
+            <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    <div class="label"><input type="radio" name="CareDegree" value="自立" {{{setChecked '自立' CareDegree}}}/> 自立</div>
+                    <select name="CareDegree_0" disabled group="CareDegree" group-value="自立" class="input select-block">
+					{{#select CareDegree_0}}
+                        <option>---</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+					{{/select}}
+                    </select>
+                </td>
+                <td style="width: 30px;">&nbsp;<td>
+                <td>
+                    <div class="label"><input type="radio" name="CareDegree"  value="要支援" {{{setChecked '要支援' CareDegree}}}/> 要支援</div>
+                    <select name="CareDegree_1" disabled id="" group="CareDegree" group-value="要支援" class="input select-block">
+					{{#select CareDegree_1}}
+                        <option>---</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+					{{/select}}
+                    </select>
+                </td>
+                <td style="width: 30px;">&nbsp;<td>
+                <td>
+                    <div class="label"><input type="radio" name="CareDegree" value="経過的要介護" {{{setChecked '経過的要介護' CareDegree}}}/> 経過的要介護</div>
+                    <select name="CareDegree_2" disabled id="" group="CareDegree" group-value="経過的要介護"  class="input select-block">
+					{{#select CareDegree_2}}
+                        <option>---</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+					{{/select}}
+                    </select>
+                </td>
+                <td style="width: 30px;">&nbsp;<td>
+                <td>
+                    <div class="label"><input type="radio" name="CareDegree" value="要介護" {{{setChecked '要介護' CareDegree}}}/> 要介護</div>
+                    <select name="CareDegree_3" disabled id="" group="CareDegree" group-value="要介護"  class="input select-block">
+					{{#select CareDegree_3}}
+                        <option>---</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+					{{/select}}
+                    </select>
+                </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="row">
+        <th class="td-title"><div class="label"></div></th>
+        <td class="td-content">
+			<table class="table">
+				<tr>
+					<td><div class="label" style="width: 70px; padding-top:3px;"><input type="checkbox" name="CareDegreeOther" value="その他" {{{setChecked 'その他' CareDegreeOther}}}/>その他</div></td>
+					<td style="width:100%"><div><input style="width:500px" type="text" group="CareDegreeOther" name="CareDegreeOtherText" value="{{CareDegreeOtherText}}" class="input"/></div></td>
+				</tr>
+			</table>	
+        </td>
+      </tr>
+      <tr class="row">
+        <th class="td-title"><div class="label">住所</div></th>
+        <td class="td-content">
+        	<mark>{{Address1}}</mark>
+        </td>
+      </tr>
+    </table>
+    <hr>
+    <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+		
+		      <tr class="row">
+        <th class="td-title"><div class="label">訪問日</div></th>
+        <td class="td-content">
+          <div class="label">訪問日→○</div>
+          <div class="list-date">
+            <!-- <strong>List date</strong>: <span>27/06/2016 <a href="#">(x)</a></span> / <span>29/06/2016 <a href="#">(x)</a></span> / <span>30/07/2016 <a href="#">(x)</a></span> -->
+			<strong>日付一覧</strong>: 
+			
+				<div class="kendo-calendar" target = "visit_date"></div>
+				<input name="visit_date" type="text" value="{{visit_date}}" style="display:none" />
+          </div>
+          <hr>
+          <div class="label">特別訪問看護指示書による訪問→△</div>
+		  <div class="list-date">
+            <!-- <strong>List date</strong>: <span>27/06/2016 <a href="#">(x)</a></span> / <span>29/06/2016 <a href="#">(x)</a></span> / <span>30/07/2016 <a href="#">(x)</a></span> -->
+			<strong>日付一覧</strong>: 
+			
+				<div class="kendo-calendar" target = "visit_especially"></div>
+				<input type="text" name="visit_especially" value="{{visit_especially}}" style="display:none" />
+          </div>
+          <hr>
+          <div class="label">緊急時訪問→×</div>          
+		  <div class="list-date">
+				<!-- <strong>List date</strong>: <span>27/06/2016 <a href="#">(x)</a></span> / <span>29/06/2016 <a href="#">(x)</a></span> / <span>30/07/2016 <a href="#">(x)</a></span> -->
+				<strong>日付一覧</strong>: 
+			
+				<div class="kendo-calendar" target = "visit_emergency"></div>
+				<input name="visit_emergency" type="text" value="{{visit_emergency}}" style="display:none" />
+          </div>
+          <hr>
+          <div class="label">1日に2回以上の訪問→◎</div>
+		  <div class="list-date">
+            <!-- <strong>List date</strong>: <span>27/06/2016 <a href="#">(x)</a></span> / <span>29/06/2016 <a href="#">(x)</a></span> / <span>30/07/2016 <a href="#">(x)</a></span> -->
+			<strong>日付一覧</strong>: 
+			
+				<div class="kendo-calendar" target = "visit_2more"></div>
+				<input name="visit_2more" type="text" value="{{visit_2more}}" style="display:none" />
+          </div>
+          <hr>
+        </td>
+      </tr>	
+      <tr class="row">
+        <th class="td-title"><div class="label">病状・主訴</div></th>
+        <td class="td-content">
+          <textarea name = "item_8_2" class="input input-block" cols="1" rows="2">{{item_8_2}}</textarea>
+        </td>        
+      </tr>
+      <tr class="row">
+        <th class="td-title"><div class="label">リハビリテーション内容</div></th>
+        <td class="td-content">
+          <select name="item_8_3" id="item_8_3" class="input select-block">
+		  {{#select item_8_3}}
+            <option value="関節可動域訓練">関節可動域訓練</option>
+            <option value="筋力増強訓練">筋力増強訓練</option>
+            <option value="立ち上がり練習">立ち上がり練習</option>
+            <option value="歩行練習">歩行練習</option>
+            <option value="寝返り練習">寝返り練習</option>
+			{{/select}}
+          </select>
+        </td>        
+      </tr>
+      <tr class="row">
+        <th class="td-title"><div class="label">病状・主訴</div></th>
+        <td class="td-content">
+          <textarea name = "item_8_4" class="input input-block" cols="1" rows="2">{{item_8_4}}</textarea>
+        </td>        
+      </tr>
+      <tr class="row">
+        <th class="td-title"><div class="label">衛生材料などの使用料及び使用状況</div></th>
+        <td class="td-content">
+          <div>&nbsp;</div>
+          <div class="label"><strong>衛生材料の名称</strong>:</div>
+          <input type="text" name = "item_8_5" value="{{item_8_5}}" class="input input-block" />
+          <div>&nbsp;</div>
+          <div class="label"><strong>使用及び交換頻度</strong>:</div>
+          <input type="text" name = "item_8_6" value="{{item_8_6}}" class="input input-block" />
+          <div>&nbsp;</div>
+          <div class="label"><strong>使用量</strong>:</div>
+          <input type="text" name = "item_8_7" value="{{item_8_7}}" class="input input-block" />
+        </td>        
+      </tr>
+      <tr class="row">
+        <th class="td-title"><div class="label">衛生材料の種類・量の変更</div></th>
+        <td class="td-content">
+          <div class="label">衛生材料等（種類・サイズ・必要量等）の <strong>変更の必要性</strong></div>
+          <input type="text" name = "item_8_8" value="{{item_8_8}}" class="input input-block" />
+          <div>&nbsp;</div>
+          <div class="label"><strong>変更内容</strong>:</div>
+          <input type="text" name = "item_8_9" value="{{item_8_9}}" value="" class="input input-block" />
+        </td>        
+      </tr>
+      <tr class="row">
+        <th class="td-title"><div class="label">特記すべき事項</div></th>
+        <td class="td-content">
+          <textarea name = "item_8_10" class="input input-block" cols="1" rows="2">{{item_8_10}}</textarea>
+        </td>        
+      </tr>
+      <tr class="row">
+        <th class="td-title"><div class="label">管理者氏名</div></th>
+        <td class="td-content">
+		  <input type="text" name = "Person1" value="{{Person1}}" value="" class="input input-block" />
+        </td>        
+      </tr>
+      <tr class="row">
+        <th class="td-title"><div class="label">担当者氏名</div></th>
+        <td class="td-content">
+		  <input type="text" name = "Person2" value="{{Person2}}" value="" class="input input-block" />
+        </td>        
+      </tr>
+    </table>
+    <hr>
+	</div>
+</script>
+</form>
+</body>
+</html>

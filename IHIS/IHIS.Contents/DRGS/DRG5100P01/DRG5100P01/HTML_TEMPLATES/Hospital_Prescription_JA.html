@@ -1,0 +1,490 @@
+this.DvTime<!DOCTYPE html><html class="no-js"><head>
+        <meta charset="utf-8">
+        <title>JP</title>
+        <link rel="stylesheet" type="text/css" href="../css/prescription_ja.css">
+		<script src="../js/moment.min.js"></script>
+		<script src="../js/pikaday.js"></script>
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/handlebars.min.js"></script> 
+		<script type="text/javascript" src="../js/common.js"></script>
+		<script type="text/javascript" src="../js/app.js"></script>
+    </head>
+	<body>
+		<script id="template-in-hospital" type="text/x-handlebars-template">
+		<div class="pres-jp billing">
+			<header>
+				<h1>院内処方箋 <span>P {{PageNumber}} / {{PageTotal}}</span></h1>
+				<p>&nbsp;&nbsp;<span class="right">{{GwaName}}</span></p>
+			</header>
+			<div class="container">
+				<div class="pres">
+					<table class="pres-content">
+						<tbody><tr>
+							<td width="50%">
+								<p style="margin-left:5px;" class="textop">患者番号 : <span> {{PatientCode}}</span> 保険区分 : <span> {{GubunName}}</span></p>
+								<table class="tb1">
+									<tbody><tr>
+										<td>公費負担者番号</td>
+										<td align="center" style="border-right:1px dotted #000">{{BudamjaBunho11}}</td>
+										<td align="center" style="border-left:none">{{BudamjaBunho12}}</td>
+										<td align="center" style="border-right:1px dotted #000">{{BudamjaBunho13}}</td>
+										<td align="center" style="border-left:none">{{BudamjaBunho14}}</td>
+										<td align="center" style="border-right:1px dotted #000">{{BudamjaBunho15}}</td>
+										<td align="center" style="border-left:1px dotted #000;border-right:1px dotted #000">{{BudamjaBunho16}}</td>
+										<td align="center" style="border-left:1px dotted #000">{{BudamjaBunho17}}</td>
+										<td align="center" style="border-left:none">{{BudamjaBunho18}}</td>
+									</tr>
+									<tr>
+										<td>公費負担医療<br>の受給者番号</td>
+										<td align="center" style="border-left:1px dotted #000;border-right:1px dotted #000">{{SugubjaBunho11}}</td>
+										<td align="center" style="border-left:1px dotted #000;border-right:1px dotted #000">{{SugubjaBunho12}}</td>
+										<td align="center" style="border-left:1px dotted #000">{{SugubjaBunho13}}</td>
+										<td align="center" style="border-left:1px dotted #000;border-right:1px dotted #000">{{SugubjaBunho14}}</td>
+										<td align="center" style="border-left:1px dotted #000;border-right:1px dotted #000">{{SugubjaBunho15}}</td>
+										<td align="center" style="border-left:1px dotted #000">{{SugubjaBunho16}}</td>
+										<td align="center">{{SugubjaBunho17}}</td>
+									</tr>
+									
+								</tbody></table>
+								<table class="tb2">
+									<tbody><tr class="first-f">
+										<td rowspan="3" width="10px" style="line-height: 60px; font-size: 16px; ">患者</td>
+										<td style="font-size: 14px; "> <span class="pull-left">氏</span> <span class="pull-right">名</span></td>
+										<td colspan="5"><h4 style="font-size:16px; margin-bottom:15px; font-weight: bold;">{{NameKana}}</h4><h3 style="font-size:20px; font-weight: bold;">{{NameKanji}}</h3></td>
+									</tr>
+									<tr class="first-f">
+										<td align="center" style="font-size: 14px;     width: 80px; ">生年月日</td>
+										<td colspan="5"><span style="font-size:16px">{{Birth}}</span><span style="font-size:16px" class="pull-right">{{#getSex Sex}}{{/getSex}}</span></td>
+									</tr>
+									<tr class="fe23">
+										<td><span class="pull-left">区</span> <span class="pull-right">分</span></td>
+										<td width="60px" align="center"<span {{#ifCond BoninGubunOval '=='  '0' }} class="boraround" {{/ifCond}}> 被保険者</span></td>
+										<td width="60px" align="center"{{#ifCond BoninGubunOval '=='  '1' }} class="boraround" {{/ifCond}}> 被扶養者</td>
+										<td width="60px" align="center">患者負担</td>
+										<td width="60px" align="center"></td>
+									</tr>
+									<tr>
+										<td colspan="2" align="center">職務上事由</td>
+										<td colspan="4" class="sp-margin"><span{{#ifCond SunwonGubunOval '=='  '1' }} class="boraround" {{/ifCond}}> 職務上</span>　<span {{#ifCond SunwonGubunOval '=='  '1' }} class="boraround" {{/ifCond}}>下船後３月以内</span>　<span {{#ifCond SunwonGubunOval '=='  '1' }} class="boraround" {{/ifCond}}>通勤災害</span></td>
+
+									</tr>
+								</tbody></table>
+							</td>
+							<td valign="top">
+								<div class="numberfd">伝票番号 : <span class="valuepo">{{DrugBunho}}</span>
+									<span class="pull-right">担当者No : <span class="valuepo">{{DoctorCode}}</span></span>
+								</div>
+								<table class="tb3">
+									<tbody><tr class="tb3first">
+										<td width="48%"><h3>保険者番号</h3></td>
+										<td width="20px" style="border-right:1px dotted #000" align="center">{{Johap1}}</td>
+										<td width="20px" style="border-left:1px dotted #000" align="center">{{Johap2}}</td>
+										<td width="20px" style="border-right:1px dotted #000" align="center">{{Johap3}}</td>
+										<td width="20px" style="border-left:1px dotted #000" align="center">{{Johap4}}</td>
+										<td width="20px" style="border-right:1px dotted #000" align="center">{{Johap5}}</td>
+										<td width="20px" style="border-left:1px dotted #000;border-right:1px dotted #000;" align="center">{{Johap6}}</td>
+										<td width="20px" style="border-right:1px dotted #000;border-left:1px dotted #000;" align="center">{{Johap7}}</td>
+										<td width="20px" style="" align="center">{{Johap8}}</td>
+									</tr>
+									<tr class="twotdb">
+										<td> 被保険者証、被保険<br>者手帳の記号、番号</td>
+										<td colspan="9">
+											{{Gaein}}<br>{{GaeinNo}}
+										</td>
+									</tr>
+								</tbody></table>
+								<table class="tb4">
+									<tbody><tr>
+										<td rowspan="3" width="37%">保険医療機関の<br>所在地及び名称</td>
+									</tr>
+									<tr>
+										<td>{{JeadanName}}</td>
+
+									</tr>
+									<tr>
+										<td><span class="valueiu"><strong>{{YoyangName}}</strong></span></td>
+									</tr>
+									<tr>
+										<td style="padding-left:20px" colspan="2">{{Address}}<br>{{Address1}}</td>
+									</tr>
+								</tbody></table>
+								<table class="tb5 ">
+									<tbody><tr>
+										<td width="30%">保険医師名</td>
+										<td><span class="valueiu"><strong>{{DoctorName}}</strong></span> <span class="pull-right" style="margin-right:10px; font-size:16px;">印
+</span></td>
+									</tr>
+									<tr>
+										<td>電話番号 </td>
+										<td>{{Tel}}</td>
+									</tr>
+								</tbody></table>
+							</td>
+						</tr>
+						
+					</tbody></table>
+					<table class="tb6">
+						<tbody><tr class="frr1">
+							<td align="center" width="96px">交付
+<br>年月日</td>
+							<td width="200px"><h3 style="font-weight: bold;">{{ExaminationDate}}</h3></td>
+							<td align="center" width="71px">処方箋の
+<br>使用期間</td>
+							<td style="font-size:10px;"><div>{{GigamDate}}<span>特に記載のある場合を除き、</span></div>交付の日を含めて4日以内に保険薬局に提出すること。</td>
+						</tr>
+					</tbody></table>
+					<table class="tb7">
+						<tbody><tr>
+							<td width="20px" align="center" valign="middle" style="font-size:16px; line-height:80px;">処方</td>
+							<td valign="top">
+								<table class="subtb7">
+								{{#each PresDetail}}
+									<tbody><tr>
+										<td valign="top" width="84px"><strong>{{#getSerialV this.DataGubun this.SerialV}}{{/getSerialV}}</strong></td>
+										<td width="80%">{{this.JaeryoName}}</td>
+										<td width="12%">{{this.OrderSuryang}}<span>{{this.OrderDanui}}</span><span>{{this.DvTime}}</span><span>{{this.Dv}}</span></td>
+									</tr>
+									{{#ifCond this.DataBlockEnd '=='  'Y' }}
+									<tr>
+										<td></td>
+										<td><strong>{{this.BogyongName}}</strong></td>
+										<td align="right"><strong>{{this.Nalsu}}&nbsp;
+										{{#getNalsuStr this.Nalsu this.DonbokYn}}
+										{{/getNalsuStr}}
+										</strong></td>
+									</tr>							
+									{{/ifCond}}
+									{{#ifCond this.DetailEnd '=='  'Y' }}
+									<tr>
+										<td></td>
+										<td>-----< 以下余白 >-----</td>
+										<td></td>
+									</tr>
+									{{/ifCond}}
+								</tbody>
+								{{/each}}
+								</table>
+							</td>
+						</tr>
+					</tbody></table>
+				</div>
+				<div class="pres-btt">
+					<table class="tablebtt">
+						<tbody><tr>
+							<td style="padding-left:0;" width="60%" class="tabledviewfirq2"><div class="firq1">備
+考</div><div class="firq11" valign="top">{{CautionName}}<br>{{MayakDoctor}}</div></td>
+							<td width="40%" valign="top"></td>
+						</tr>
+						<tr>
+							<td class="tabledviewfirq2">
+								<div class="firq2">麻薬使用<br>の場合</div>
+								<table width="100%">
+									<tbody><tr>
+										<td width="40%">患者住所</td>
+										<td valign="top">{{MayakAddress}}</td>
+									</tr>
+									<tr>
+										<td>麻薬施用者免許番号</td>
+										<td valign="top">{{MayakLicense}}</td>
+									</tr>
+								</tbody></table>
+							</td>
+							<td valign="top">後発医薬品への変更可(変更内訳はFAXにて 送信してください。)</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="padding:0;     border-left: none;">
+								<table width="100%" class="tabletddbn">
+									<tbody><tr>
+										<td width="17%">調剤済年月日</td>
+										<td width="40%">
+											<table width="100%" id="tbldate">
+												<tbody><tr>
+													<td>平成&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日</td>
+												</tr>
+											</tbody></table>
+										</td>
+										<td width="17%" rowspan="2">公費負担者番号</td>
+										<td align="center" rowspan="2" style="border-right:1px dotted #000" valign="middle">&nbsp;
+										</td>
+										<td align="center" rowspan="2" style="border-left:1px dotted #000">&nbsp;</td>
+										<td align="center" rowspan="2" style="border-right:1px dotted #000" valign="middle">&nbsp;
+										</td>
+										<td align="center" rowspan="2" style="border-left:1px dotted #000">&nbsp;</td>
+										<td align="center" rowspan="2" style="border-right:1px dotted #000; " valign="middle">&nbsp;
+										</td>
+										<td align="center" rowspan="2" style="border-left:1px dotted #000;border-right:1px dotted #000">&nbsp;</td>
+										<td align="center" rowspan="2" style="border-left:1px dotted #000; " valign="middle">&nbsp;</td>
+										<td align="center" rowspan="2">&nbsp;</td>
+										<td align="center" rowspan="2" width="17px" style="border-right:none"> 
+											<div class="background">
+											    <div class="line2"></div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td rowspan="2">保険薬局の所在<br>地及び名称</td>
+										<td rowspan="3">
+											<div class="stamp"><span class="stamd">印</span></div>
+										</td>
+									</tr>
+									<tr>
+										<td rowspan="2">公費負担医療<br>の受給者番号</td>
+										<td align="center" rowspan="2" style="border-right:1px dotted #000; " valign="middle">{{SugubjaBunho21}}
+										</td>
+										<td align="center" rowspan="2" style="border-left:1px dotted #000;border-right:1px dotted #000">{{SugubjaBunho22}}</td>
+										<td align="center" rowspan="2" style="border-left:1px dotted #000; " valign="middle">{{SugubjaBunho23}}</td>
+										<td align="center" rowspan="2" style="border-right:1px dotted #000; " valign="middle">{{SugubjaBunho24}}
+										</td>
+										<td align="center" rowspan="2" style="border-left:1px dotted #000;border-right:1px dotted #000">{{SugubjaBunho25}}</td>
+										<td align="center" rowspan="2" style="border-left:1px dotted #000; " valign="middle">{{SugubjaBunho26}}
+										</td><td align="center" rowspan="2">{{SugubjaBunho27}}</td>
+										<td align="center" style="border-right:none" rowspan="2" colspan="2" width="34px">&#32;	 
+											<div class="background">
+											    <div class="line3"></div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>保険薬剤師名</td>
+									</tr>
+								</tbody></table>
+							</td>
+						</tr>
+					</tbody></table>
+				</div>
+			</div>
+		</div>
+		</script>
+		<script id="template-out-hospital" type="text/x-handlebars-template">
+		<div class="jpout">
+         <div class="right-page">様<br>式<br>第<br>二<br>号<span><br><br><span class="rotate">（</span>第<br>二<br>十<br>三<br>条<br>関<br>係<span class="rotate">）</span></span></div>
+         <div class="wrapper">
+            <header>
+               <h1 style="letter-spacing:0px">
+				<label style="margin-right:60px">処&nbsp;</label>
+				<label style="margin-right:60px">方&nbsp;</label>
+				<label style="margin-right:60px">せ&nbsp;</label>
+				<label style="margin-right:60px">ん&nbsp;</label>
+			  </h1>
+               <p>（この処方せんは、どの保険薬局でも有効です。） </p>
+            </header>
+            <div class="container">
+               <div class="pres">
+                  <table class="top1" width="100%">
+                     <tbody><tr>
+                        <td width="90px" align="center">公費負担者番号</td>
+                        <td width="20px" style="border-right:1px dotted #000;">{{BudamjaBunho11}}</td>
+                        <td width="20px" style="border-left:1px dotted #000;">{{BudamjaBunho12}}</td>
+                        <td width="20px" style="border-right:1px dotted #000;">{{BudamjaBunho13}}</td>
+                        <td width="20px" style="border-left:1px dotted #000;">{{BudamjaBunho14}}</td>
+                        <td width="20px" style="border-right:1px dotted #000;">{{BudamjaBunho15}}</td>
+                        <td width="20px" style="border-left:1px dotted #000;border-right:1px dotted #000;">{{BudamjaBunho16}}</td>
+                        <td width="20px" style="border-left:1px dotted #000;">{{BudamjaBunho17}}</td>
+                        <td width="20px">{{BudamjaBunho18}}</td>
+                        <td>保 険 者 番 号</td>
+                        <td width="20px" style="border-right:1px dotted #000;">{{Johap1}}</td>
+                        <td width="20px" style="border-left:1px dotted #000;">{{Johap2}}</td>
+                        <td width="20px" style="border-right:1px dotted #000;">{{Johap3}}</td>
+                        <td width="20px" style="border-left:1px dotted #000;">{{Johap4}}</td>
+                        <td width="20px" style="border-right:1px dotted #000;">{{Johap5}}</td>
+                        <td width="20px" style="border-left:1px dotted #000;border-right:1px dotted #000;">{{Johap6}}</td>
+                        <td width="20px" style="border-left:1px dotted #000;">{{Johap7}}</td>
+                        <!-- <td width="20px">3</td> -->
+                     </tr>
+                     <tr class="topre2">
+                        <td colspan="2" align="center">
+                           公費負担医療<br>の受給者番号
+                        </td>
+                        <td align="center" style="border-right:1px dotted #000;">{{SugubjaBunho11}}</td>
+                        <td align="center" style="border-left:1px dotted #000;border-right:1px dotted #000;">{{SugubjaBunho12}}</td>
+                        <td align="center" style="border-left:1px dotted #000;">{{SugubjaBunho13}}</td>
+                        <td align="center" style="border-right:1px dotted #b1afaf;">{{SugubjaBunho14}}</td>
+                        <td align="center" width="20px" style="border-right:1px dotted #000;border-left:1px dotted #000;">{{SugubjaBunho15}}</td>
+                        <td align="center" width="20px" style="border-left:1px dotted #000;border-right:1px solid #b1afaf; ">{{SugubjaBunho16}}</td>
+                        <td align="center" width="15px" style="border-left:1px solid #b1afaf;">{{SugubjaBunho17}}</td>
+                        <td width="170px" align="center"> 被保険者証・被保険<br>者手帳の記号・番号</td>
+                        <td colspan="8" align="left" style="text-align:left ">{{Gaein}}<br>{{GaeinNo}}</td>
+                     </tr>
+                  </tbody></table>
+                  <table class="top2" width="100%">
+                     <tbody><tr>
+                        <td width="20px" rowspan="3" align="center" style=" line-height: 60px;">患<br>者</td>
+                        <td width="63px" align="center">氏　名</td>
+                        <td colspan="3">
+                           <h4 style="font-size:16px; margin-bottom:15px; font-weight: bold;">{{NameKana}}</h4>
+                           <h3 style="font-size:20px; font-weight: bold;">{{NameKanji}}</h3>
+                        </td>
+                        <td rowspan="3" colspan="2" style="padding-right:0; border-top:none; border-right:none">
+                           <table width="100%" class="sub2top2">
+                              <tbody><tr class="spankju">
+                                 <td width="40%"><span>保険医療機関の<br>所在地及び名称</span></td>
+                                 <td>{{JeadanName}}<br><span style="font-weight: bold;">{{YoyangName}}</span></td>
+                              </tr>
+								<tr>
+                                 <td colspan="2" style="padding-left:20px;">{{Address}}<br>{{Address1}}</td>
+                                 
+                              </tr>
+                              <tr>
+                                 <td>電 話 番 号</td>
+                                 <td>{{Tel}}</td>
+                              </tr>
+                              <tr>
+                                 <td>保 険 医 氏 名</td>
+                                 <td style="font-weight: bold; font-size:18px; position:relative ">{{DoctorName}} <span class="stamptt1">印</span></td>
+                              </tr>
+                              <tr>
+                                 <td colspan="2" style="padding:5px 0 5px 5px">
+                                    <table class="subsub2b3">
+                                       <tbody><tr>
+                                          <td width="110px" align="center">都道府県番号</td>
+                                          <td width="15px" style="border-right:1px solid #b1afaf;"></td>
+                                          <td width="15px" style="border-left:1px solid #b1afaf;"></td>
+                                          <td width="55px" align="center">点数表番号</td>
+                                          <td width="15px" align="center"></td>
+                                          <td width="60px" style="font-size:12px;">医療機関
+                                             コード
+                                          </td>
+                                          <td width="15px" style="border-right:1px solid #b1afaf;"></td>
+                                          <td width="15px" style="border-left:1px solid #b1afaf;"></td>
+                                          <td width="15px" style="border-right:1px solid #b1afaf;"></td>
+                                          <td width="15px" style="border-left:1px solid #b1afaf;border-right:1px solid #b1afaf;"></td>
+                                          <td width="15px" style="border-right:1px solid #b1afaf;"></td>
+                                          <td width="15px" style="border-left:1px solid #b1afaf;border-right:1px solid #b1afaf;"></td>
+                                          <td width="15px" style="position:relative"><span class="line-right"></span></td>
+                                       </tr>
+                                    </tbody></table>
+                                 </td>
+                              </tr>
+                           </tbody></table>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td align="center">生年月日</td>
+                        <td valign="middle" colspan="2" width="350px" class="datefe">
+                           <span class="text-ro"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="dateff">{{Birth}}</span>
+                        </td>
+                        <td width="50px" align="center"><span {{#ifCond Sex '=='  'M'}} class="round" {{/ifCond}}>男</span>・<span {{#ifCond Sex '=='  'F'}} class="round" {{/ifCond}}>女</span></td>
+                     </tr>
+                     <tr>
+                        <td align="center">区　分</td>
+                        <td style="padding:0;" colspan="3" valign="top" class="td-fixuy">
+                           <table class="subtop2" width="100%">
+                              <tbody><tr>
+                                 <td width="45%"><span class="round fix1"> 被保険者</span></td>
+                                 <td>被扶養者</td>
+                              </tr>
+                           </tbody></table>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td colspan="2" align="center">交付年月日</td>
+                        <td colspan="3" class="dsate">　　 <span class="dateff">{{ExaminationDate}}</span></td>
+                        <td align="center" width="160px">処 方 せ ん の<br>
+                           使　用　期　間
+                        </td>
+                        <td width="256px" class="datfes" style="padding:0 5px;">
+                           <span class="viewdpo">{{GigamDate}}</span>
+                           <div class="tag">特に記載のある場合
+                              を除き、交付の日を含
+                              めて４日以内に保険薬
+                              局に提出すること。
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td valign="middle" style="line-height:130px; font-size:18px;">処<br>方</td>
+                        <td valign="top" style="padding-top:16px;">変更不可</td>
+                        <td colspan="5" valign="top" style="position:relative">
+                        		<div class="desc">個々の処方薬について、後発医薬品（ジェネリック医薬品）への変更に差し支えがあると判断した場合には、「変更不可」欄に「レ」又は「×」を記載し、「保険医署名」欄に署名又は記名・押印すること。</div>
+                        		<table class="subtb7" width="112%">
+							<tbody>
+							{{#each PresDetail}}
+								<tr>
+									<td valign="top" width="10px"><strong>{{#getSerialV this.DataGubun this.SerialV}}{{/getSerialV}}</strong></td>
+									<td width="78%">{{this.JaeryoName}}</td>
+									<td width="12%">{{this.OrderSuryang}}<span>{{this.OrderDanui}}</span><span>{{this.DvTime}}</span><span>{{this.Dv}}</span></td>
+								</tr>
+								{{#ifCond this.DataBlockEnd '=='  'Y' }}								
+								<tr>
+									<td></td>
+									<td><strong>{{this.BogyongName}}</strong></td>
+									<td align="right"><strong>{{this.Nalsu}}&nbsp;
+									{{#getNalsuStr this.Nalsu this.DonbokYn}}
+									{{/getNalsuStr}}
+									</strong></td>
+								</tr>
+								{{/ifCond}}
+								{{#ifCond this.DetailEnd '=='  'Y' }}
+								<tr>
+									<td></td>
+									<td>-----< 以下余白 >-----</td>
+									<td></td>
+								</tr>		
+							{{/ifCond}}
+							{{/each}}								
+							</tbody></table>
+                        </td>
+                     </tr>
+                     <tr>
+                     	<td rowspan="3" valign="middle" style="line-height:50px; font-size:18px;">備<br>考</td>
+                     	<td valign="top" width="250px" colspan="4">保険医署名 <div class="desc1">「変更不可」欄に「レ」又は「×」を記載した場合は、署名又は記名・押印すること。</div></td>
+                     	<td colspan="4" class="borderdd"></td>
+                     </tr>
+                     <tr>
+                     	<td class="bodr" colspan="8"></td>
+                     </tr>
+                     <tr>
+                     	<td colspan="8" align="center" style="line-height:16px;">保険薬局が調剤時に残薬を確認した場合の対応（特に指示がある場合は「レ」又は「×」を記載すること。）<br><span style="font-size: 22px;">□</span>保険医療機関へ疑義照会した上で調剤 　<span style="font-size: 22px; margin-left:60px;">□</span>保険医療機関へ情報提供</td>
+                     </tr>
+                     <tr>
+                     	<td colspan="8" style="padding:0">
+                     		<table class="bttom" width="100%">
+                     			<tbody><tr>
+                     				<td width="100px">調剤済年月日</td>
+                     				<td width="230px">平成 <span class="dateff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>年</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>月</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>日</span></span></td>
+                     				<td width="153px">公費負担者番号</td>
+                     				<td width="20px" align="center" style="border-right:1px dotted #000;">{{BudamjaBunho21}}</td>
+                        <td width="20px" style="border-left:1px dotted #000;" align="center">{{BudamjaBunho22}}</td>
+                     				<td width="20px" style="border-right:1px dotted #000;">{{BudamjaBunho23}}</td>
+                        <td width="20px" style="border-left:1px dotted #000;" align="center">{{BudamjaBunho24}}</td>
+                     				<td width="20px" style="border-right:1px dotted #000;" align="center">{{BudamjaBunho25}}</td>
+                        <td width="20px" style="border-left:1px dotted #000;border-right:1px dotted #000;" align="center">{{BudamjaBunho26}}</td>
+                     				<td style="border-left:1px dotted #000;border-right:1px solid #b1afaf; width: 20px;" align="center">{{BudamjaBunho27}}</td>
+                     				<td style="border-left:1px solid #b1afaf; width: 20px;">{{BudamjaBunho28}}</td>
+                     			</tr>
+                     			<tr class="tr-bptop">
+                     				<td>保険薬局の所在
+								地 及 び 名 称
+								保険薬剤師氏名</td>
+                     				<td style="position:relative">
+                     					<div class="ct-iuy"></div>
+                     					<span class="stamptt1 fix">印</span></td>
+                     				<td colspan="2">公費負担医療の<br>
+								受 給 者 番 号</td>
+                     				<td width="20px" style="border-right:1px dotted #000;"></td>
+                        <td width="20px" style="border-left:1px dotted #000;border-right:1px dotted #000;"></td>
+                     				<td style="border-left:1px dotted #000;"></td>
+                     				<td width="20px" style="border-right:1px dotted #000;"></td>
+                        <td width="20px" style="border-left:1px dotted #000;border-right:1px dotted #000;"></td>
+                     				<td style="border-left:1px dotted #000;border-right:1px solid #b1afaf"></td>
+                     				<td style="border-left:1px solid #b1afaf"></td>
+                     			</tr>
+                     		</tbody></table>
+                     	</td>
+                     </tr>
+                  </tbody></table>
+                  <div class="footer">
+                  	<span class="prepared">備<br>考</span>
+                  	<ul>
+                  		<li>「処方」欄には、薬名、分量、用法及び用量を記載すること。</li>
+                  		<li>この用紙は、日本工業規格 Ａ 列５番を標準とすること。</li>
+                  		<li>療養の給付及び公費負担医療に関する費用の請求に関する省令（昭和51年厚生省令第36号）第１条の公費負担医療については、「保険医療機関」とあるのは「公費負担医療の担当医療機関」と、「保険医氏名」とあるのは「公費負担医療の担当医氏名」と読み替えるものとすること。</li>
+                  	</ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+	  </script>
+	  </body>
+	  </html>

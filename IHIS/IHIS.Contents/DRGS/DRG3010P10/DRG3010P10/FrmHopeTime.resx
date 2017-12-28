@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="grdTimeListOrder.QuerySQL" xml:space="preserve">
+    <value>SELECT A.ORDER_DATE            ORDER_DATE
+      ,A.MIX_GROUP             MIX_GROUP
+      ,A.JAERYO_CODE           JAERYO_CODE
+      ,B.JAERYO_NAME           JAERYO_NAME
+      ,A.ORD_SURYANG           ORD_SURYANG
+      ,A.DV_TIME               DV_TIME
+      ,A.DV                    DV
+      ,A.NALSU                 NALSU
+      ,A.ORDER_DANUI           ORDER_DANUI
+      ,FN_OCS_LOAD_CODE_NAME('ORD_DANUI', A.ORDER_DANUI) DANUI_NAME
+      ,A.BOGYONG_CODE          BOGYONG_CODE
+      ,C.BOGYONG_NAME          BOGYONG_NAME
+      ,A.POWDER_YN             POWDER_YN
+      ,A.REMARK                REMARK
+      ,A.DV_1                  DV_1
+      ,A.DV_2                  DV_2
+      ,A.DV_3                  DV_3
+      ,A.DV_4                  DV_4
+      ,A.DV_5                  DV_5
+      ,FN_DRG_JUNINP_YN(A.FKOCS2003)  HUBAL_CHANGE_YN
+      ,A.PHARMACY              PHARMACY
+      ,A.DRG_PACK_YN           DRG_PACK_YN
+      ,A.JUSA                  JUSA
+      ,D.SUNAME                SUNAME
+      ,A.DRG_BUNHO             DRG_BUNHO
+      ,A.FKOCS2003             FKOCS2003
+      ,A.APPEND_YN             APPEND_YN
+      ,A.RE_USE_YN             RE_USE_YN
+      ,A.HOPE_DATE             HOPE_DATE
+      ,A.HOPE_TIME             HOPE_TIME
+  FROM OUT0101 D,
+       DRG0120 C,
+       INV0110 B,
+       DRG3010 A
+ WHERE A.HOPE_DATE               = :f_hope_date
+   AND A.HOPE_TIME               = :f_hope_time
+   AND A.BUNHO                   = :f_bunho
+   AND A.HO_DONG                 = :f_ho_dong
+   AND A.RESIDENT                = :f_doctor
+   AND NVL(A.APPEND_YN,'N')      LIKE :f_magam_gubun
+   AND A.BUNRYU1                 IN ('1','6')
+   AND NVL(EMERGENCY,'N')        = 'N'
+   AND NVL(TOIWON_DRG_YN,'N')    = 'N'
+   AND A.DRG_BUNHO               IS NULL
+   AND A.SOURCE_FKOCS2003        IS NULL
+   AND A.NALSU                   &gt; 0
+   AND NVL(A.DC_YN,'N')          = 'N'
+   AND NVL(A.BANNAB_YN,'N')      = 'N'
+   AND NVL(A.RE_USE_YN, 'N')     = 'N'
+   AND B.JAERYO_CODE          (+)= A.JAERYO_CODE
+   AND C.BOGYONG_CODE         (+)= A.BOGYONG_CODE
+   AND D.BUNHO                   = A.BUNHO
+   AND :f_magam_bunryu           = '1'
+ UNION ALL
+SELECT A.ORDER_DATE            ORDER_DATE
+      ,A.MIX_GROUP             MIX_GROUP
+      ,A.JAERYO_CODE           JAERYO_CODE
+      ,B.JAERYO_NAME           JAERYO_NAME
+      ,A.ORD_SURYANG           ORD_SURYANG
+      ,A.DV_TIME               DV_TIME
+      ,A.DV                    DV
+      ,A.NALSU                 NALSU
+      ,A.ORDER_DANUI           ORDER_DANUI
+      ,FN_OCS_LOAD_CODE_NAME('ORD_DANUI', A.ORDER_DANUI) DANUI_NAME
+      ,A.BOGYONG_CODE          BOGYONG_CODE
+      ,A.BOGYONG_CODE || ' ' || FN_OCS_LOAD_CODE_NAME('JUSA_SPD_GUBUN',NVL(A.JUSA_SPD_GUBUN,'0'))     BOGYONG_NAME
+      ,A.POWDER_YN             POWDER_YN
+      ,A.REMARK                REMARK
+      ,A.DV_1                  DV_1
+      ,A.DV_2                  DV_2
+      ,A.DV_3                  DV_3
+      ,A.DV_4                  DV_4
+      ,A.DV_5                  DV_5
+      ,FN_DRG_JUNINP_YN(A.FKOCS2003)      HUBAL_CHANGE_YN
+      ,A.PHARMACY              PHARMACY
+      ,A.DRG_PACK_YN           DRG_PACK_YN
+      ,A.JUSA                  JUSA
+      ,D.SUNAME                SUNAME
+      ,A.DRG_BUNHO             DRG_BUNHO
+      ,A.FKOCS2003             FKOCS2003
+      ,A.APPEND_YN             APPEND_YN
+      ,A.RE_USE_YN             RE_USE_YN
+      ,A.HOPE_DATE             HOPE_DATE
+      ,A.HOPE_TIME             HOPE_TIME
+  FROM OUT0101 D,
+       DRG0120 C,
+       INV0110 B,
+       DRG3010 A
+ WHERE A.HOPE_DATE               = :f_hope_date
+   AND A.HOPE_TIME               = :f_hope_time
+   AND A.BUNHO                   = :f_bunho
+   AND A.HO_DONG                 = :f_ho_dong
+   AND A.RESIDENT                = :f_doctor
+   AND NVL(A.APPEND_YN,'N')      LIKE :f_magam_gubun
+   AND A.BUNRYU1                 IN ('4')
+   AND NVL(EMERGENCY,'N')        = 'N'
+   AND NVL(TOIWON_DRG_YN,'N')    = 'N'
+   AND A.DRG_BUNHO               IS NULL
+   AND A.SOURCE_FKOCS2003        IS NULL
+   AND A.NALSU                   &gt; 0
+   AND NVL(A.DC_YN,'N')          = 'N'
+   AND NVL(A.BANNAB_YN,'N')      = 'N'
+   AND NVL(A.RE_USE_YN, 'N')     = 'N'
+   AND B.JAERYO_CODE          (+)= A.JAERYO_CODE
+   AND C.BOGYONG_CODE         (+)= A.BOGYONG_CODE
+   AND D.BUNHO                   = A.BUNHO
+   AND :f_magam_bunryu           = '2'
+ ORDER BY 1, 2, 25</value>
+  </data>
+  <data name="grdTimeListJUSAOrder.QuerySQL" xml:space="preserve">
+    <value>SELECT A.ORDER_DATE            ORDER_DATE
+      ,A.MIX_GROUP             MIX_GROUP
+      ,A.JAERYO_CODE           JAERYO_CODE
+      ,B.JAERYO_NAME           JAERYO_NAME
+      ,A.ORD_SURYANG           ORD_SURYANG
+      ,A.DV_TIME               DV_TIME
+      ,A.DV                    DV
+      ,A.NALSU                 NALSU
+      ,A.ORDER_DANUI           ORDER_DANUI
+      ,FN_OCS_LOAD_CODE_NAME('ORD_DANUI', A.ORDER_DANUI) DANUI_NAME
+      ,A.BOGYONG_CODE          BOGYONG_CODE
+      ,C.BOGYONG_NAME          BOGYONG_NAME
+      ,A.POWDER_YN             POWDER_YN
+      ,A.REMARK                REMARK
+      ,A.DV_1                  DV_1
+      ,A.DV_2                  DV_2
+      ,A.DV_3                  DV_3
+      ,A.DV_4                  DV_4
+      ,A.DV_5                  DV_5
+      ,FN_DRG_JUNINP_YN(A.FKOCS2003)  HUBAL_CHANGE_YN
+      ,A.PHARMACY              PHARMACY
+      ,A.DRG_PACK_YN           DRG_PACK_YN
+      ,A.JUSA                  JUSA
+      ,D.SUNAME                SUNAME
+      ,A.DRG_BUNHO             DRG_BUNHO
+      ,A.FKOCS2003             FKOCS2003
+      ,A.APPEND_YN             APPEND_YN
+      ,A.RE_USE_YN             RE_USE_YN
+      ,A.HOPE_DATE             HOPE_DATE
+      ,A.HOPE_TIME             HOPE_TIME
+  FROM OUT0101 D,
+       DRG0120 C,
+       INV0110 B,
+       DRG3010 A
+ WHERE A.HOPE_DATE               = :f_hope_date
+   AND A.HOPE_TIME               = :f_hope_time
+   AND A.BUNHO                   = :f_bunho
+   AND A.HO_DONG                 = :f_ho_dong
+   AND A.RESIDENT                = :f_doctor
+   AND NVL(A.APPEND_YN,'N')      LIKE :f_magam_gubun
+   AND A.BUNRYU1                 IN ('1','6')
+   AND NVL(EMERGENCY,'N')        = 'N'
+   AND NVL(TOIWON_DRG_YN,'N')    = 'N'
+   AND A.DRG_BUNHO               IS NULL
+   AND A.SOURCE_FKOCS2003        IS NULL
+   AND A.NALSU                   &gt; 0
+   AND NVL(A.DC_YN,'N')          = 'N'
+   AND NVL(A.BANNAB_YN,'N')      = 'N'
+   AND NVL(A.RE_USE_YN, 'N')     = 'N'
+   AND B.JAERYO_CODE          (+)= A.JAERYO_CODE
+   AND C.BOGYONG_CODE         (+)= A.BOGYONG_CODE
+   AND D.BUNHO                   = A.BUNHO
+   AND :f_magam_bunryu           = '1'
+ UNION ALL
+SELECT A.ORDER_DATE            ORDER_DATE
+      ,A.MIX_GROUP             MIX_GROUP
+      ,A.JAERYO_CODE           JAERYO_CODE
+      ,B.JAERYO_NAME           JAERYO_NAME
+      ,A.ORD_SURYANG           ORD_SURYANG
+      ,A.DV_TIME               DV_TIME
+      ,A.DV                    DV
+      ,A.NALSU                 NALSU
+      ,A.ORDER_DANUI           ORDER_DANUI
+      ,FN_OCS_LOAD_CODE_NAME('ORD_DANUI', A.ORDER_DANUI) DANUI_NAME
+      ,A.BOGYONG_CODE          BOGYONG_CODE
+      ,A.BOGYONG_CODE || ' ' || FN_OCS_LOAD_CODE_NAME('JUSA_SPD_GUBUN',NVL(A.JUSA_SPD_GUBUN,'0'))     BOGYONG_NAME
+      ,A.POWDER_YN             POWDER_YN
+      ,A.REMARK                REMARK
+      ,A.DV_1                  DV_1
+      ,A.DV_2                  DV_2
+      ,A.DV_3                  DV_3
+      ,A.DV_4                  DV_4
+      ,A.DV_5                  DV_5
+      ,FN_DRG_JUNINP_YN(A.FKOCS2003)      HUBAL_CHANGE_YN
+      ,A.PHARMACY              PHARMACY
+      ,A.DRG_PACK_YN           DRG_PACK_YN
+      ,A.JUSA                  JUSA
+      ,D.SUNAME                SUNAME
+      ,A.DRG_BUNHO             DRG_BUNHO
+      ,A.FKOCS2003             FKOCS2003
+      ,A.APPEND_YN             APPEND_YN
+      ,A.RE_USE_YN             RE_USE_YN
+      ,A.HOPE_DATE             HOPE_DATE
+      ,A.HOPE_TIME             HOPE_TIME
+  FROM OUT0101 D,
+       DRG0120 C,
+       INV0110 B,
+       DRG3010 A
+ WHERE A.HOPE_DATE               = :f_hope_date
+   AND A.HOPE_TIME               = :f_hope_time
+   AND A.BUNHO                   = :f_bunho
+   AND A.HO_DONG                 = :f_ho_dong
+   AND A.RESIDENT                = :f_doctor
+   AND NVL(A.APPEND_YN,'N')      LIKE :f_magam_gubun
+   AND A.BUNRYU1                 IN ('4')
+   AND NVL(EMERGENCY,'N')        = 'N'
+   AND NVL(TOIWON_DRG_YN,'N')    = 'N'
+   AND A.DRG_BUNHO               IS NULL
+   AND A.SOURCE_FKOCS2003        IS NULL
+   AND A.NALSU                   &gt; 0
+   AND NVL(A.DC_YN,'N')          = 'N'
+   AND NVL(A.BANNAB_YN,'N')      = 'N'
+   AND NVL(A.RE_USE_YN, 'N')     = 'N'
+   AND B.JAERYO_CODE          (+)= A.JAERYO_CODE
+   AND C.BOGYONG_CODE         (+)= A.BOGYONG_CODE
+   AND D.BUNHO                   = A.BUNHO
+   AND :f_magam_bunryu           = '2'
+ ORDER BY 1, 2, 25</value>
+  </data>
+  <data name="grdPaQuery.QuerySQL" xml:space="preserve">
+    <value>SELECT DISTINCT
+       A.BUNHO                                               BUNHO       
+      ,B.SUNAME                                              SUNAME      
+      ,B.SEX                                                 SEX         
+      ,FN_BAS_LOAD_AGE(A.ORDER_DATE, B.BIRTH, '')            AGE         
+      ,A.HO_DONG                                             HO_DONG     
+      ,A.RESIDENT                                            RESIDENT    
+      ,FN_BAS_LOAD_DOCTOR_NAME(A.RESIDENT, A.ORDER_DATE)     DOCTOR_NAME 
+      ,C.HO_DONG1                                            HO_DONG     
+      ,NVL(A.APPEND_YN,'N')                                  APPEND_YN   
+      ,DECODE(A.BUNRYU1,'4','Y','N')                         JUSA_YN     
+      ,A.HOPE_DATE                                           HOPE_DATE   
+      ,A.HOPE_TIME                                           HOPE_TIME   
+      ,A.HOPE_DATE                                           OLD_HOPE_DATE   
+      ,A.HOPE_TIME                                           OLD_HOPE_TIME   
+  FROM INP1001 C,
+       OUT0101 B,
+       DRG3010 A
+ WHERE A.BUNHO                = :f_bunho
+   AND NVL(A.RE_USE_YN,'N')   = 'N'
+   AND NVL(EMERGENCY,'N')     = 'N'
+   AND NVL(TOIWON_DRG_YN,'N') = 'N'
+   AND A.DRG_BUNHO            IS NULL
+   AND A.SOURCE_FKOCS2003     IS NULL
+   AND A.NALSU                &gt; 0
+   AND NVL(A.DC_YN,'N')       = 'N'
+   AND NVL(A.BANNAB_YN,'N')   = 'N'
+   AND NVL(A.BANNAB_YN,'N')   != 'Y'
+   AND B.BUNHO                = A.BUNHO
+   AND C.PKINP1001            = A.FKINP1001
+   AND NVL(C.CANCEL_YN,'N')   = 'N'
+   AND C.JAEWON_FLAG          = 'Y'
+   AND NVL(C.TOIWON_GOJI_YN, 'N') = 'N'
+ ORDER BY 10, 11, 12</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnCurSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAATlJREFUOE+tkzFL
+        w0AYhvtnEv+HiiQuXeKUpFMSJwVxEnRycxBacRM6CYIREdQm2kVIK9TYgk1IIjj6F7K+9ruSmOjJdfDg
+        gXDHPd/7HV8ajf9Yh8dDLK+cIQgCId3uAM3mOWp1SbCuesjzXIjvJzBaI2jaxbeEBKpyzy5P36YlURQh
+        juMSOn/opTCNAUzdZfssCQkUpSesTgLPS6HzBKpaTxDN7EmSIk0TRpa9swK+n8HQOQmKFkTvwAT8BHcL
+        tcAELU4C6mtv/0XI9tYQjv36+xFp03bCheAKLCtkZm3jFs+jDy5L8gkIrsD+IVhdu8LObh/XNxPQCsNP
+        SFL7b4FjjWsJ5oJHNiiFQJY7fMHB0RM2nUlNQJerixLI0ilfQFWo9wL3sg8epuHOxnhOOcbVv6o696Lv
+        4t4XirWXaYB0oU4AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAATlJREFUOE+tkzFL
+        w0AYhvtnEv+HiiQuXeKUpFMSJwVxEnRycxBacRM6CYIREdQm2kVIK9TYgk1IIjj6F7K+9ruSmOjJdfDg
+        gXDHPd/7HV8ajf9Yh8dDLK+cIQgCId3uAM3mOWp1SbCuesjzXIjvJzBaI2jaxbeEBKpyzy5P36YlURQh
+        juMSOn/opTCNAUzdZfssCQkUpSesTgLPS6HzBKpaTxDN7EmSIk0TRpa9swK+n8HQOQmKFkTvwAT8BHcL
+        tcAELU4C6mtv/0XI9tYQjv36+xFp03bCheAKLCtkZm3jFs+jDy5L8gkIrsD+IVhdu8LObh/XNxPQCsNP
+        SFL7b4FjjWsJ5oJHNiiFQJY7fMHB0RM2nUlNQJerixLI0ilfQFWo9wL3sg8epuHOxnhOOcbVv6o696Lv
+        4t4XirWXaYB0oU4AAAAASUVORK5CYII=
+</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>55</value>
+  </metadata>
+</root>

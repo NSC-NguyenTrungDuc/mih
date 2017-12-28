@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Aileron-Light.otf">
+            <string>Aileron-Light</string>
+        </mutableArray>
+        <mutableArray key="Aileron-Regular.otf">
+            <string>Aileron-Regular</string>
+            <string>Aileron-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="StandardDetailTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ByC-L9-1Em">
+                        <rect key="frame" x="10" y="10" width="65" height="24"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFE-8J-AIz">
+                                <rect key="frame" x="0.0" y="3.5" width="65" height="17"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Aileron-Light" family="Aileron" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="65" id="Y87-2K-N6f"/>
+                            <constraint firstItem="yFE-8J-AIz" firstAttribute="width" secondItem="ByC-L9-1Em" secondAttribute="width" id="YUK-cp-0FV"/>
+                            <constraint firstItem="yFE-8J-AIz" firstAttribute="centerY" secondItem="ByC-L9-1Em" secondAttribute="centerY" id="aER-LS-Hct"/>
+                            <constraint firstItem="yFE-8J-AIz" firstAttribute="centerX" secondItem="ByC-L9-1Em" secondAttribute="centerX" id="iNe-sr-ST2"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CqM-Ux-LCp">
+                        <rect key="frame" x="81" y="15" width="136" height="13.5"/>
+                        <fontDescription key="fontDescription" name="Aileron-Regular" family="Aileron" pointSize="11"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaf-Pw-u2a">
+                        <rect key="frame" x="220" y="14.5" width="90" height="14.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="90" id="dWD-TQ-L5e"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Aileron-Regular" family="Aileron" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="ByC-L9-1Em" secondAttribute="bottom" id="1KZ-nT-Bqv"/>
+                    <constraint firstItem="ByC-L9-1Em" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="49a-6u-wCx"/>
+                    <constraint firstItem="ByC-L9-1Em" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="DAo-R2-Pyd"/>
+                    <constraint firstItem="CqM-Ux-LCp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="EiS-Cx-x6G"/>
+                    <constraint firstItem="CqM-Ux-LCp" firstAttribute="leading" secondItem="ByC-L9-1Em" secondAttribute="trailing" constant="6" id="EqI-nc-v5l"/>
+                    <constraint firstItem="ByC-L9-1Em" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="Q6o-2h-r17"/>
+                    <constraint firstItem="ByC-L9-1Em" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="Rnf-Uc-4u3"/>
+                    <constraint firstItem="oaf-Pw-u2a" firstAttribute="leading" secondItem="CqM-Ux-LCp" secondAttribute="trailing" constant="3" id="Z4o-zN-QhL"/>
+                    <constraint firstItem="ByC-L9-1Em" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ZDK-nt-oTh"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="oaf-Pw-u2a" secondAttribute="trailing" constant="2" id="irN-OR-vLZ"/>
+                    <constraint firstItem="oaf-Pw-u2a" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="nU6-P9-jgn"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ByC-L9-1Em" secondAttribute="bottom" constant="1.5" id="tQx-oH-WoY"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="1KZ-nT-Bqv"/>
+                        <exclude reference="49a-6u-wCx"/>
+                        <exclude reference="Q6o-2h-r17"/>
+                        <exclude reference="ZDK-nt-oTh"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ByC-L9-1Em" secondAttribute="bottom" constant="10" id="72e-am-lN6"/>
+                <constraint firstItem="ByC-L9-1Em" firstAttribute="top" secondItem="KGk-i7-Jjw" secondAttribute="top" constant="10" id="Ehb-7O-CSH"/>
+                <constraint firstItem="oaf-Pw-u2a" firstAttribute="centerY" secondItem="KGk-i7-Jjw" secondAttribute="centerY" id="Fe7-fc-fZ0"/>
+                <constraint firstAttribute="trailing" secondItem="oaf-Pw-u2a" secondAttribute="trailing" constant="10" id="M9Z-yC-e5d"/>
+                <constraint firstItem="CqM-Ux-LCp" firstAttribute="centerY" secondItem="KGk-i7-Jjw" secondAttribute="centerY" id="ju7-lD-NQl"/>
+                <constraint firstItem="ByC-L9-1Em" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" constant="10" id="u2v-2M-1NT"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="72e-am-lN6"/>
+                    <exclude reference="Ehb-7O-CSH"/>
+                    <exclude reference="u2v-2M-1NT"/>
+                    <exclude reference="ju7-lD-NQl"/>
+                    <exclude reference="Fe7-fc-fZ0"/>
+                    <exclude reference="M9Z-yC-e5d"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="labelDateTime" destination="CqM-Ux-LCp" id="yPE-xk-OvF"/>
+                <outlet property="labelRanking" destination="oaf-Pw-u2a" id="VUt-H4-yd0"/>
+                <outlet property="labelValue" destination="yFE-8J-AIz" id="T7y-NO-vV0"/>
+                <outlet property="viewValue" destination="ByC-L9-1Em" id="wwf-qP-06l"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

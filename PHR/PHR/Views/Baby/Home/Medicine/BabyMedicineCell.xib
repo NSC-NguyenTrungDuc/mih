@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="BabyMedicineCell">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 capsule" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bu-QU-DiJ">
+                        <rect key="frame" x="126" y="33" width="61" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="61" id="NdD-N9-Zjd"/>
+                            <constraint firstAttribute="height" constant="17" id="myw-4x-eEw"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_Medicine_2" translatesAutoresizingMaskIntoConstraints="NO" id="XGr-0Y-hYu">
+                        <rect key="frame" x="144" y="8" width="25" height="25"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="SLE-f0-plk"/>
+                            <constraint firstAttribute="width" constant="25" id="oVW-Fj-nAq"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Panadon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRD-Df-aJP">
+                        <rect key="frame" x="10" y="8" width="100" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Rbe-2Z-LYl"/>
+                            <constraint firstAttribute="width" constant="100" id="puE-tT-XVX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKa-ey-CVe">
+                        <rect key="frame" x="10" y="28" width="97" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="hFg-H7-cre"/>
+                            <constraint firstAttribute="width" constant="97" id="l1Q-M6-PUr"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="2bu-QU-DiJ" secondAttribute="trailing" constant="5" id="8Cc-FD-Kq7"/>
+                    <constraint firstItem="MRD-Df-aJP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="CPc-Y7-DVu"/>
+                    <constraint firstItem="XGr-0Y-hYu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Dwu-Rz-151"/>
+                    <constraint firstItem="wKa-ey-CVe" firstAttribute="top" secondItem="MRD-Df-aJP" secondAttribute="bottom" constant="-1" id="JMf-za-Nba"/>
+                    <constraint firstItem="wKa-ey-CVe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="c9l-QD-RNp"/>
+                    <constraint firstItem="2bu-QU-DiJ" firstAttribute="centerX" secondItem="XGr-0Y-hYu" secondAttribute="centerX" id="j8N-Hh-lmh"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="XGr-0Y-hYu" secondAttribute="trailing" constant="23" id="wwr-Jd-KdQ"/>
+                    <constraint firstItem="2bu-QU-DiJ" firstAttribute="top" secondItem="XGr-0Y-hYu" secondAttribute="bottom" id="xBr-wT-hac"/>
+                    <constraint firstItem="MRD-Df-aJP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="zrJ-hm-GnV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imgMedicine" destination="XGr-0Y-hYu" id="C08-Gu-e3Z"/>
+                <outlet property="lbNameMedicine" destination="MRD-Df-aJP" id="PGb-Js-D6j"/>
+                <outlet property="lbNumberMedicine" destination="2bu-QU-DiJ" id="SZr-FG-ekv"/>
+                <outlet property="lbTimeDrink" destination="wKa-ey-CVe" id="Rmm-eZ-t0g"/>
+            </connections>
+            <point key="canvasLocation" x="-481" y="-446"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Icon_Medicine_2" width="24" height="24"/>
+    </resources>
+</document>

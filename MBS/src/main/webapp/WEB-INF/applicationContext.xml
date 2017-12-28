@@ -1,0 +1,183 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:task="http://www.springframework.org/schema/task"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+	http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.0.xsd
+	http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+	http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
+
+	<context:annotation-config />
+	<context:component-scan base-package="nta" />
+	<mvc:annotation-driven validator="validator" />
+	<context:property-placeholder location="file:${configPath}/jdbc.properties,file:${configPath}/configs.properties,file:${configPath}/api.kcck.properties" />
+	<mvc:resources mapping="/assets/**" location="/assets/" />
+
+    <!-- Enable @AspectJ support -->
+    <aop:aspectj-autoproxy proxy-target-class="true" />
+    <aop:config>
+        <aop:pointcut id="actionOperations" expression="execution(org.springframework.web.servlet.ModelAndView nta.mss.controller.*Controller.*(..))"/>
+        <aop:pointcut id="allOperations" expression="execution(org.springframework.web.servlet.ModelAndView nta.mss.controller.*Controller.*(..)) || execution(* *..service..impl.*Service*.*(..))"/>
+        <aop:pointcut id="serviceOperations" expression="execution(* *..service..impl.*Service*.*(..))"/>
+        <aop:pointcut id="businessOperations" expression="execution(org.springframework.web.servlet.ModelAndView nta.mss.controller.*Controller.*(..))"/>
+        <aop:advisor advice-ref="debugInterceptor" pointcut-ref="allOperations" />
+        <aop:advisor advice-ref="performanceMonitorInterceptor" pointcut-ref="serviceOperations" />
+        <aop:aspect ref="notificationAspect">
+            <aop:around method="proceed" pointcut-ref="actionOperations" />
+        </aop:aspect>
+        <aop:aspect ref="firstFailureDataCaptureAspect">
+            <aop:after-returning method="afterReturning" returning="result" pointcut-ref="businessOperations" />
+            <aop:before method="before" pointcut-ref="businessOperations" />
+            <aop:after-throwing method="afterThrowing" throwing="ex" pointcut-ref="businessOperations" />
+        </aop:aspect>
+    </aop:config>
+
+	<jpa:repositories base-package="nta.mss.repository" />
+	<import resource="navigationContext.xml" />
+	<import resource="securityContext.xml"/>
+
+	<bean id="debugInterceptor" class="nta.mss.interceptor.DebugInterceptor" />
+	
+	<bean id="firstFailureDataCaptureAspect" class="nta.mss.datacapture.FirstFailureDataCaptureAspect" />
+	
+	<bean id="performanceMonitorInterceptor" class="nta.mss.interceptor.PerformanceMonitorInterceptor" />
+	
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="url" value="${jdbc.url}" />
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="maxActive" value="${jdbc.maxActive}" />
+		<property name="maxIdle" value="${jdbc.maxIdle}" />
+		<property name="testOnBorrow" value="true" />
+		<property name="testOnReturn" value="true" />
+		<property name="validationQuery" value="select 1" />
+	</bean>
+
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+				<property name="databasePlatform" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+				<property name="generateDdl" value="false" />
+				<property name="showSql" value="true" />
+			</bean>
+		</property>
+	</bean>
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+	<bean id="mapper" class="org.dozer.DozerBeanMapper" lazy-init="true">
+		<property name="mappingFiles">
+			<list>
+				<value>dozer-mappings.xml</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename" value="classpath:/messages" />
+		<property name="defaultEncoding" value="UTF-8" />
+	</bean>
+	
+	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+		<property name="defaultLocale" value="ja" />
+	</bean>
+	<bean id="cache" class="nta.mss.misc.common.InmemoryTokenStore" init-method="intConfig" >
+		<property name="expire" value="${guava.expire}"></property>
+		<property name="maximumSize" value="${guava.maximumSize}"></property>
+	</bean>
+	<mvc:interceptors>
+		<bean id="localeChangeInterceptor" class="nta.mss.interceptor.MssLocaleInterceptor">
+			<property name="paramName" value="lang" />
+		</bean>
+        <bean class="nta.mss.interceptor.MssSessionInterceptor" >
+			<property name="cache" ref="cache" />
+		</bean>
+	    <bean class="nta.mss.interceptor.MssNavigationInterceptor" />
+	</mvc:interceptors>
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="validationMessageSource" ref="messageSource" />
+	</bean>
+	
+	<bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+        <property name="velocityPropertiesMap">
+            <map>
+                <entry key="resource.loader"><value>ds</value></entry>
+                <entry key="ds.resource.loader.instance">
+                    <ref bean="templateLoader"/>
+                </entry>
+                <entry key="ds.resource.loader.resource.table">
+                    <value>templates</value>
+                </entry>
+                <entry key="ds.resource.loader.resource.keycolumn">
+                    <value>template_id</value>
+                </entry>
+                <entry key="ds.resource.loader.resource.templatecolumn">
+                    <value>template_body</value>
+                </entry>
+                <entry key="ds.resource.loader.resource.timestampcolumn">
+                    <value>created</value>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+    <!-- Velocity Database Template Loader -->
+    <bean id="templateLoader" scope="singleton"
+          class="org.apache.velocity.runtime.resource.loader.DataSourceResourceLoader">
+        <property name="dataSource"><ref local="dataSource"/></property>
+    </bean>
+
+    <!-- Mail sender configured for using Gmail -->
+    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl"
+          p:host="${mail.smtp.host}"
+          p:username="${mail.username}"
+          p:password="${mail.password}"
+          p:port="${mail.smtp.port}">
+        <property name="javaMailProperties">
+            <props>
+                <prop key="mail.smtp.auth">${mail.smtp.auth}</prop>
+                <prop key="mail.smtp.starttls.enable">${mail.smtp.starttls.enable}</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="templateMessage" class="org.springframework.mail.SimpleMailMessage"
+          p:from="${mail.sender}" p:bcc="${mail.bcc}" />
+
+    <bean id="executorService" class="java.util.concurrent.Executors" factory-method="newFixedThreadPool" destroy-method="shutdown">
+        <constructor-arg value="10" />
+    </bean>
+
+    <task:executor id="threadPoolTaskExecutor" pool-size="10" />
+
+    <task:scheduler id="threadPoolTaskScheduler" pool-size="10" />
+
+    <task:annotation-driven executor="executorService" proxy-target-class="true" mode="proxy" />
+    
+    <bean id="multipartResolver"  class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+    </bean>
+    
+    <bean id="fileValidator" class="nta.mss.validation.MultipartFileValidator" >
+    	<constructor-arg name="extensionWhitelist">
+			<list>
+				<value>.csv</value>
+				<value>.xls</value>
+			</list>
+    	</constructor-arg>
+    	<constructor-arg name="maxFileSize" value="100000"></constructor-arg>
+    </bean>
+    <bean id="notificationAspect" class="nta.mss.interceptor.NotificationAspect"/>
+</beans>

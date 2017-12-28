@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Medicine Management Page 2</title>
+		<script src="../js/pikaday.js"></script>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/handlebars.min.js"></script>	
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/app.js"></script>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+<form id="myform" action="" method="post">
+ 	<div>
+	
+		<div id="data-template">
+		</div>
+	</div>
+
+
+<script id="some-template" type="text/x-handlebars-template">
+ 
+ 
+ 
+<div class="wrapper">
+
+	<h1 class="page-title text-center">訪問薬剤管理指導提示書</h1>
+	<table style="width:100%; margin-top:20px;">
+		<tr>
+			<td style="width:84%;"></td>
+			<td >作成日: {{PrintDate}}</td>
+		</tr>
+	</table>
+	
+	<table class="table full-w" border="1" align="" cellpadding="0" cellspacing="0">
+		<tr>
+		
+			<td>希望訪問日時：　{{item_6_3}}, {{item_6_4}}</td>
+		</td>
+		<tr>
+			<td>患者氏名　{{PatientName1}} {{{getSex Sex}}}　生年月日　{{Birth}} （　{{YearAge}}歳)</td>
+		</tr>
+		<tr>
+			<td>患者住所：　〒{{ZipCode1}}-{{ZipCode2}}&nbsp;&nbsp;<br />{{Address1}}　　　電話番号{{Tel}}</td>
+		</tr>
+		<tr>
+			<td>主たる傷病名：　{{#each Diseases}} 
+												{{this}}　&nbsp;
+										{{/each}}　　　　病名告知: {{item_6_4}}</td>
+		</tr>
+
+		<tr>
+		<td>
+			<span style="text-align:center;display:block;">指示事項及び留意事項</span>
+			<table border="0" class="table">
+				<tr>
+					<td width="60%">
+						{{item_6_2_1}} {{#if item_6_2_1}} <br/> {{/if}}
+						{{item_6_2_2}} {{#if item_6_2_2}} <br/> {{/if}}
+						{{item_6_2_3}} {{#if item_6_2_3}} <br/> {{/if}}
+						{{item_6_2_4}} {{#if item_6_2_4}} <br/> {{/if}}
+						{{item_6_2_5}} {{#if item_6_2_5}} <br/> {{/if}}
+						{{item_6_2_6}} {{#if item_6_2_6}} <br/> {{/if}}
+						{{item_6_2_7}} {{#if item_6_2_7}} <br/> {{/if}}
+						{{item_6_2_8}} {{#if item_6_2_8}} <br/> {{/if}}
+						{{item_6_2_9}} {{#if item_6_2_9}} <br/> {{/if}}
+						{{item_6_2_10}}{{#if item_6_2_10}} <br/> {{/if}}
+					</td>
+					<td style="border:1px solid #000;padding: 10px 20px;">
+						留意事項：{{item_6_6}}
+					</td>
+				</tr>
+			</table>
+		</td>
+		</tr>			
+	</table>
+	
+	<br/><br/>
+	
+	<table  border="0" class="table">
+	<tr>
+	<td style="width:20%;"></td>
+		<td style="width:60%;">
+		
+			<table  border="0" class="table">
+				<tr>
+				<td style="width:15%;line-height:34px;">
+				</td>
+				<td style="line-height:34px; padding-right: 18px; text-align:right;">
+				上記の通り、当月の訪問薬剤管理指導の実施を指示致します。<br/>
+				医療機関名: {{Hospital.YoyangName}}<br/>
+				医師氏名: {{item_6_5}}<br/>
+				所在地: {{Hospital.Address}}<br/>
+				電話番号: {{Hospital.Tel}}<br/>
+				FAX番号: {{Hospital.Fax}}<br/>
+				</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	</table>	
+ </div>
+ 
+</script>
+
+</form> 
+</body>
+</html>

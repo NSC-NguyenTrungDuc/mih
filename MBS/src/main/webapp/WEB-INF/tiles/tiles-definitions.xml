@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<!-- [Start] Tiles definitions for front-end -->
+	<definition name="base.front.definition" template="/WEB-INF/jsp/front/layout/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/front/layout/menu.jsp" />
+		<put-attribute name="header"
+			value="/WEB-INF/jsp/front/layout/header.jsp" />
+		<put-attribute name="btnLogout" cascade="true"
+			value="/WEB-INF/jsp/front/layout/btn-logout.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/jsp/front/layout/footer.jsp" />
+	</definition>
+
+	<definition name="front.booking.index" extends="base.front.definition">
+		<put-attribute name="title" value="fe000.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/fe000.jsp" />
+	</definition>
+
+	<definition name="front.booking.new" extends="base.front.definition">
+		<put-attribute name="title" value="fe001.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/fe001.jsp" />
+	</definition>
+	<definition name="front.booking.time" extends="base.front.definition">
+		<put-attribute name="title" value="fe002.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/fe002.jsp" />
+	</definition>
+
+	<definition name="front.booking.time.re.examination"
+		extends="base.front.definition">
+		<put-attribute name="title" value="fe002.title" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/front/view/fe002-1.jsp" />
+	</definition>
+
+	<definition name="front.booking.info" extends="base.front.definition">
+		<put-attribute name="title" value="fe003.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/fe003.jsp" />
+	</definition>
+	<definition name="front.booking.info.confirm" extends="base.front.definition">
+		<put-attribute name="title" value="fe004.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/fe004.jsp" />
+	</definition>
+
+	<definition name="front.booking.info.confirm_vaccine" extends="base.front.definition">
+		<put-attribute name="title" value="fe004.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/fe004_vaccine.jsp" />
+	</definition>
+
+	<definition name="front.booking.accept" extends="base.front.definition">
+		<put-attribute name="title" value="fe005.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/fe005.jsp" />
+	</definition>
+	<definition name="front.booking.vaccine.complete" extends="base.front.definition">
+		<put-attribute name="title" value="fe006.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/fe006.jsp" />
+	</definition>
+	<definition name="front.booking.complete" extends="base.front.definition">
+		<put-attribute name="title" value="fe006.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/fe009.jsp" />
+	</definition>
+	<definition name="front.booking.reexamination" extends="base.front.definition">
+		<put-attribute name="title" value="fe010.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/fe010.jsp" />
+	</definition>
+
+	<definition name="front.authorizedEmail" extends="base.front.definition">
+		<put-attribute name="title" value="fe020.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/fe020.jsp" />
+	</definition>
+
+	<definition name="front.acceptEmail" extends="base.front.definition">
+		<put-attribute name="title" value="fe021.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/fe021.jsp" />
+	</definition>
+
+	<definition name="front.booking.change.info" extends="base.front.definition">
+		<put-attribute name="title" value="fe022.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/fe022.jsp" />
+	</definition>
+
+	<definition name="front.booking.change" extends="base.front.definition">
+		<put-attribute name="title" value="fe023.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/fe023.jsp" />
+	</definition>
+
+	<definition name="front.booking.change.confirm" extends="base.front.definition">
+		<put-attribute name="title" value="fe024.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/fe024.jsp" />
+	</definition>
+
+	<definition name="front.booking.change.accept" extends="base.front.definition">
+		<put-attribute name="title" value="fe025.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/fe025.jsp" />
+	</definition>
+
+	<definition name="front.booking.change.complete" extends="base.front.definition">
+		<put-attribute name="title" value="fe026.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/fe026.jsp" />
+	</definition>
+
+	<definition name="front.pendingStatus" extends="base.front.definition">
+		<put-attribute name="title" value="fe030.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/fe030.jsp" />
+	</definition>
+	<definition name="front.pendingStatusDetail" extends="base.front.definition">
+		<put-attribute name="title" value="fe031.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/fe031.jsp" />
+	</definition>
+
+	<definition name="front.booking.expire" extends="base.front.definition">
+		<put-attribute name="title" value="fe007.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/fe007.jsp" />
+	</definition>
+
+	<definition name="front.thank.you" extends="base.front.definition">
+		<put-attribute name="title" value="thanks.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/thanks.jsp" />
+	</definition>
+
+	<definition name="front.calendar"
+		template="/WEB-INF/jsp/front/layout/calendar-layout.jsp">
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/front/view/calendar.jsp" />
+	</definition>
+
+	<definition name="front.calendar.week"
+		template="/WEB-INF/jsp/front/layout/calendar-layout.jsp">
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/front/view/calendar-week.jsp" />
+	</definition>
+
+	<definition name="front.login" extends="base.front.definition">
+		<put-attribute name="title" value="general.login.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/re001.jsp" />
+	</definition>
+
+	<definition name="front.forget.password" extends="base.front.definition">
+		<put-attribute name="title" value="re00101.title" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/front/view/re00101.jsp" />
+	</definition>
+
+	<definition name="front.register" extends="base.front.definition">
+		<put-attribute name="title" value="re002.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/re002.jsp" />
+	</definition>
+
+	<definition name="front.booking.vaccine.recommendation"
+		extends="base.front.definition">
+		<put-attribute name="title"
+			value="fe00302.title.booking.vaccine.recommendation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/fe203.jsp" />
+	</definition>
+
+	<definition name="front.profile.management" extends="base.front.definition">
+		<put-attribute name="title" value="re005.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/re005.jsp" />
+	</definition>
+
+	<definition name="front.vaccine.history" extends="base.front.definition">
+		<put-attribute name="title" value="re007.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/re007.jsp" />
+	</definition>
+
+	<definition name="front.booking.add.child" extends="base.front.definition">
+		<put-attribute name="title" value="re008.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/re008.jsp" />
+	</definition>
+
+	<definition name="front.booking.add.history.vaccine"
+		extends="base.front.definition">
+		<put-attribute name="title" value="re011.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/re011.jsp" />
+	</definition>
+
+	<definition name="front.booking.edit.history.vaccine"
+		extends="base.front.definition">
+		<put-attribute name="title" value="re011.title" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/front/view/re01101.jsp" />
+	</definition>
+
+	<definition name="front.booking.vaccine.info" extends="base.front.definition">
+		<put-attribute name="title" value="fe104.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/fe104.jsp" />
+	</definition>
+	<definition name="front.change.password" extends="base.front.definition">
+		<put-attribute name="title" value="fe109.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/fe109.jsp" />
+	</definition>
+	<!-- [End] Tiles definitions for front-end -->
+
+	<!-- [Start] Tiles definitions for front-end doctor view -->
+	<definition name="base.front.doctorview.definition" template="/WEB-INF/jsp/front/layout/layout-doctor-view.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/front/layout/menu-doctor-view.jsp" />
+		<put-attribute name="header-doctor"
+			value="/WEB-INF/jsp/front/layout/header-doctor.jsp" />
+		<put-attribute name="body" value=""/>
+		<put-attribute name="footer-doctor"
+			value="/WEB-INF/jsp/front/layout/footer-doctor.jsp" />
+	</definition>
+	<definition name="doctor.moviestalk" extends="base.front.doctorview.definition">
+		<put-attribute name="title" value="fed15.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/doctor-view/fed15.jsp"/>
+	</definition>
+	<definition name="doctor.profileInfo" extends="base.front.doctorview.definition">
+		<put-attribute name="title" value="fed01.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/doctor-view/fed01.jsp"/>
+	</definition>
+	<definition name="doctor.bodyMeasurement" extends="base.front.doctorview.definition">
+		<put-attribute name="title" value="fed02.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/doctor-view/fed02.jsp"/>
+	</definition>
+	<definition name="doctor.vital" extends="base.front.doctorview.definition">
+		<put-attribute name="title" value="fed03.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/doctor-view/fed03.jsp"/>
+	</definition>
+	<definition name="doctor.fitness" extends="base.front.doctorview.definition">
+		<put-attribute name="title" value="fed07.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/doctor-view/fed07.jsp"/>
+	</definition>
+	<definition name="doctor.food" extends="base.front.doctorview.definition">
+		<put-attribute name="title" value="fed09.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/doctor-view/fed09.jsp"/>
+	</definition>
+	<definition name="doctor.sleep" extends="base.front.doctorview.definition">
+		<put-attribute name="title" value="fed12.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/doctor-view/fed12.jsp"/>
+	</definition>
+	<definition name="doctor.moviestalkHistory" extends="base.front.doctorview.definition">
+		<put-attribute name="title" value="fed13.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/doctor-view/fed13.jsp"/>
+	</definition>
+	
+	<definition name="doctor.movieTalk.waitingList" extends="base.front.doctorview.definition">
+		<put-attribute name="title" value="fed15.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/doctor-view/fed15.jsp"/>
+	</definition>
+	<!-- [End] Tiles definitions for front-end doctor view-->
+
+	<!-- [Start] Tiles definitions for back-end -->
+	<definition name="base.back.definition" template="/WEB-INF/jsp/back/layout/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/back/layout/menu.jsp" />
+		<put-attribute name="header"
+			value="/WEB-INF/jsp/back/layout/header.jsp" />
+		<put-attribute name="btnLogout" cascade="true"
+			value="/WEB-INF/jsp/back/layout/btn-logout.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/jsp/back/layout/footer.jsp" />
+	</definition>
+
+	<definition name="back.booking.department.select" extends="base.back.definition">
+		<put-attribute name="title" value="be001.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be001.jsp" />
+	</definition>
+
+	<definition name="back.booking.time.select" extends="base.back.definition">
+		<put-attribute name="title" value="be003.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be003.jsp" />
+	</definition>
+
+	<definition name="back.booking.new" extends="base.back.definition">
+		<put-attribute name="title" value="be004.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be004.jsp" />
+	</definition>
+
+	<definition name="back.booking.info" extends="base.back.definition">
+		<put-attribute name="title" value="be005.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be005.jsp" />
+	</definition>
+
+	<definition name="back.booking.change.time" extends="base.back.definition">
+		<put-attribute name="title" value="be005.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be005-1.jsp" />
+	</definition>
+
+	<definition name="back.booking.change.time.confirm" extends="base.back.definition">
+		<put-attribute name="title" value="be005.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be005-2.jsp" />
+	</definition>
+
+	<definition name="back.booking.change.doctor" extends="base.back.definition">
+		<put-attribute name="title" value="be005.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be005-3.jsp" />
+	</definition>
+
+	<definition name="back.booking.change.doctor.confirm"
+		extends="base.back.definition">
+		<put-attribute name="title" value="be005.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be005-4.jsp" />
+	</definition>
+
+	<definition name="back.booking.search" extends="base.back.definition">
+		<put-attribute name="title" value="be006.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be006.jsp" />
+	</definition>
+
+	<definition name="back.schedule.view.dept.and.doctor"
+		extends="base.back.definition">
+		<put-attribute name="title" value="be010.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be010.jsp" />
+	</definition>
+
+	<definition name="back.add.department" extends="base.back.definition">
+		<put-attribute name="title" value="be011.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be011.jsp" />
+	</definition>
+
+	<definition name="back.schedule.adding.doctor" extends="base.back.definition">
+		<put-attribute name="title" value="be012.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be012.jsp" />
+	</definition>
+
+	<definition name="back.upload.doctor" extends="base.back.definition">
+		<put-attribute name="title" value="be013.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be013.jsp" />
+	</definition>
+
+	<definition name="back.delete.doctor" extends="base.back.definition">
+		<put-attribute name="title" value="be014.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be014.jsp" />
+	</definition>
+
+	<definition name="back.import.department.schedule" extends="base.back.definition">
+		<put-attribute name="title" value="be015.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be015.jsp" />
+	</definition>
+
+	<definition name="back.schedule.register.default.coma"
+		extends="base.back.definition">
+		<put-attribute name="title" value="be016.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be016.jsp" />
+	</definition>
+
+	<definition name="back.schedule.register.monthly.coma"
+		extends="base.back.definition">
+		<put-attribute name="title" value="be016.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be016-1.jsp" />
+	</definition>
+
+	<definition name="back.schedule.select.department" extends="base.back.definition">
+		<put-attribute name="title" value="be020.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be020.jsp" />
+	</definition>
+
+	<definition name="back.schedule.adding.coma" extends="base.back.definition">
+		<put-attribute name="title" value="be021.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be021.jsp" />
+	</definition>
+
+	<definition name="back.schedule.delete.coma" extends="base.back.definition">
+		<put-attribute name="title" value="be022.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be022.jsp" />
+	</definition>
+
+	<definition name="back.schedule.delete.coma.confirmation"
+		extends="base.back.definition">
+		<put-attribute name="title" value="be023.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be023.jsp" />
+	</definition>
+
+	<definition name="back.default.schedule" extends="base.back.definition">
+		<put-attribute name="title" value="be027.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be027.jsp" />
+	</definition>
+
+	<definition name="back.schedule.mail.history" extends="base.back.definition">
+		<put-attribute name="title" value="be025.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be025.jsp" />
+	</definition>
+
+	<definition name="back.schedule.delete.coma.sending.setting"
+		extends="base.back.definition">
+		<put-attribute name="title" value="be026.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be026.jsp" />
+	</definition>
+
+	<definition name="back.mail.template.list" extends="base.back.definition">
+		<put-attribute name="title" value="be030.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be030.jsp" />
+	</definition>
+
+	<definition name="back.sms.template.list" extends="base.back.definition">
+		<put-attribute name="title" value="be0301.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be0301.jsp" />
+	</definition>
+
+	<definition name="back.mail.template.detail" extends="base.back.definition">
+		<put-attribute name="title" value="be031.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be031.jsp" />
+	</definition>
+
+	<definition name="back.sms.template.detail" extends="base.back.definition">
+		<put-attribute name="title" value="be0311.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be0311.jsp" />
+	</definition>
+
+	<definition name="back.mail.reminder.mailing.list.check"
+		extends="base.back.definition">
+		<put-attribute name="title" value="be040.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be040.jsp" />
+	</definition>
+
+	<definition name="back.add.new.mailing.list" extends="base.back.definition">
+		<put-attribute name="title" value="be041.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be041.jsp" />
+	</definition>
+
+	<definition name="back.save.mail.list" extends="base.back.definition">
+		<put-attribute name="title" value="be040.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be042.jsp" />
+	</definition>
+
+	<definition name="back.mail.list.send" extends="base.back.definition">
+		<put-attribute name="title" value="be040.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be043.jsp" />
+	</definition>
+
+	<definition name="back.send.mail.list.confirm" extends="base.back.definition">
+		<put-attribute name="title" value="be040.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be044.jsp" />
+	</definition>
+
+	<definition name="back.mail.list.history" extends="base.back.definition">
+		<put-attribute name="title" value="be045.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be045.jsp" />
+	</definition>
+
+	<definition name="back.mail.update.mail.list" extends="base.back.definition">
+		<put-attribute name="title" value="be046.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be046.jsp" />
+	</definition>
+
+	<!-- <definition name="back.update.mail.list.detail" extends="base.back.definition"> -->
+	<!-- <put-attribute name="title" value="be046.title" /> -->
+	<!-- <put-attribute name="body" value="/WEB-INF/jsp/back/view/be046-2.jsp"
+		/> -->
+	<!-- </definition> -->
+
+	<!-- <definition name="back.mail.add.new.mailDetail" extends="base.back.definition"> -->
+	<!-- <put-attribute name="title" value="be046.title" /> -->
+	<!-- <put-attribute name="body" value="/WEB-INF/jsp/back/view/be046-3.jsp"
+		/> -->
+	<!-- </definition> -->
+
+	<definition name="back.id.management" extends="base.back.definition">
+		<put-attribute name="title" value="be092.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be092.jsp" />
+	</definition>
+
+	<definition name="back.vaccine.report" extends="base.back.definition">
+		<put-attribute name="title" value="be203.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be203.jsp" />
+	</definition>
+
+	<definition name="back.booking.vaccine" extends="base.back.definition">
+		<put-attribute name="title" value="be301.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be301.jsp" />
+	</definition>
+
+	<definition name="back.account.manage" extends="base.back.definition">
+		<put-attribute name="title" value="be104.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be104.jsp" />
+	</definition>
+
+	<definition name="back.vaccine.management" extends="base.back.definition">
+		<put-attribute name="title" value="be201.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be201.jsp" />
+	</definition>
+
+	<definition name="back.hospital.detail" extends="base.back.definition">
+		<put-attribute name="title" value="be202.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be202.jsp" />
+	</definition>
+
+	<definition name="back.search.crm" extends="base.back.definition">
+		<put-attribute name="title" value="be204.title.search" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be204.jsp" />
+	</definition>
+	<definition name="back.crm.send.mail.list.confirm" extends="base.back.definition">
+		<put-attribute name="title" value="be204.title.confirm" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be205.jsp" />
+	</definition>
+    <!-- Start back payment -->
+	<definition name= "back.payment.history.index" extends="base.back.definition">
+		<put-attribute name="title" value="fe901.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/be901.jsp"/>
+	</definition>
+	<!-- End back payment -->
+	<!-- Errors -->
+	<definition name="front.access.denied"
+		template="/WEB-INF/jsp/front/error/403-access-denied.jsp">
+	</definition>
+	<definition name="front.page.not.found"
+		template="/WEB-INF/jsp/front/error/404-page-not-found.jsp">
+	</definition>
+	<definition name="front.page.error" template="/WEB-INF/jsp/front/error/error.jsp">
+	</definition>
+
+	<definition name="back.access.denied"
+		template="/WEB-INF/jsp/back/error/403-access-denied.jsp">
+	</definition>
+	<definition name="back.page.not.found"
+		template="/WEB-INF/jsp/back/error/404-page-not-found.jsp">
+	</definition>
+	<definition name="back.page.error" template="/WEB-INF/jsp/back/error/error.jsp">
+	</definition>
+
+	<!-- Patient -Movie talk -->
+
+	<definition name="front.movietalk.index" extends="base.front.definition">
+		<put-attribute name="title" value="movie-patient.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/movie-patient.jsp" />
+	</definition>
+
+	<definition name="front.movietalk.patient.index" extends="base.front.definition">
+		<put-attribute name="title" value="fe616.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/fe616.jsp" />
+	</definition>
+	
+	<definition name="patient.moviestalkHistory" extends="base.front.definition">
+		<put-attribute name="title" value="fed13.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/fe008.jsp"/>
+	</definition>
+	<!-- Payment -->
+	<definition name= "payment.history.index" extends="base.front.definition">
+		<put-attribute name="title" value="fe901.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/fe901.jsp"/>
+	</definition>
+	<definition name= "payment.process.index" extends="base.front.definition">
+		<put-attribute name="title" value="fe903.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/fe903.jsp"/>
+	</definition>
+	<definition name= "payment.process.result" extends="base.front.definition">
+		<put-attribute name="title" value="fe903.title" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/fe904.jsp"/>
+	</definition>
+	<!-- [End] Payment process  -->
+	<!-- [End] Tiles definitions for back-end -->
+	<definition name="back.login" extends="base.back.definition"
+		template="/WEB-INF/jsp/back/layout/login-layout.jsp">
+		<put-attribute name="title" value="login.title" />
+		<put-attribute name="menu" value="" />
+		<put-attribute name="btnLogout" cascade="true" value="" />
+		<put-attribute name="body" value="/WEB-INF/jsp/back/view/login.jsp" />
+	</definition>
+</tiles-definitions>

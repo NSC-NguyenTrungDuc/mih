@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <script src="../libs/jquery/jquery-1.9.1.js"></script>
+  <script src="../libs/highcharts/highcharts.js"></script>
+  <script src="../libs/utils.js"></script>
+  <script src="../jsUtilities/DateFormat.js"></script>
+  <script src="../jsUtilities/DataManipulate.js"></script>
+</head>
+<body style="background-color: transparent; padding: 0px;">
+  <div id="container" style="width: 100%; height: 100%; position:absolute; margin-right:10px;"></div>
+  <script type="text/javascript">
+
+  function changeDimension(width, height) {
+    $('#container').height(height);
+    window.location = "phr-js-log:" + height;
+    $(window).resize();
+  }
+
+  /*
+  content =     (
+  {
+  alert = 1;
+  color = "#FFFF00";
+  id = 82;
+  method = Poo;
+  note = Note;
+  "profile_id" = 280;
+  state = Dry;
+  "time_pee_poo" = "2016-02-19T11:48:30Z";
+},
+{
+alert = 1;
+color = "#FFFF00";
+id = 81;
+method = Poo;
+note = Note;
+"profile_id" = 280;
+state = Dry;
+"time_pee_poo" = "2016-02-19T11:48:08Z";
+},
+{
+alert = 1;
+color = "#FFFF00";
+id = 80;
+method = Poo;
+note = Note;
+"profile_id" = 280;
+state = Dry;
+"time_pee_poo" = "2016-02-19T11:41:45Z";
+}
+);
+message = "message.success";
+status = SUCCESS;
+}
+
+*/
+
+/*
+[
+[Date.UTC(1970, 9, 21), 0],
+[Date.UTC(1970, 10, 4), 0.28],
+[Date.UTC(1970, 10, 9), 0.25]
+]
+*/
+
+function drawGraph(base64Data) {
+  var heighColor = 'orange';
+  var weightColor = '#b2e0ff';
+  var headSizeColor = '#ff3970';
+  var fontSizeConfig = '7px';
+  var fontSizeLengend = '5px';
+  var fontLegend = '5pt Trebuchet MS, Verdana, sans-serif';
+  var colorLegend = '#FFFFFF';
+  //
+  var type = 2;
+  var offsetConfigZero = 0;
+  var offsetConfig = 5;
+  var offsetConfigHeadSize = 10;
+  var offsetConfigNegative = -10;
+  //get data
+  var data = Base64.decode(base64Data);
+  var json = JSON.parse(data);
+  var arrayDiaper = json["content"];
+  var arrayNumberPoo = [];
+  var arrayNumberPee = [];
+  var arrayColorPee = [];
+  var arrayColorPoo = [];
+  var arrayState = [];
+  var arrayPee = [];
+  var arrayPoo = [];
+  var lastIndex = arrayDiaper.length - 1;
+  // calculate
+  var numberPoo = 0;
+  var numberPee = 0;
+  var isOtherDayPoo = 0;
+  var isOtherDayPee = 0;
+  var sameDay = 1; // init
+  var count = arrayDiaper.length;
+  for (i = lastIndex; i >= 0; i--) {
+    var diaper = arrayDiaper[i]; // get an object
+    var method_tocheck = diaper["method"];
+    if (method_tocheck == "Poo" || method_tocheck == "うんち") {
+      arrayPoo.push(diaper);
+    } else if (method_tocheck == "Pee" || method_tocheck == "おしっこ") {
+      arrayPee.push(diaper);
+    }
+  }
+  // Init tempDate POO
+  if (arrayPoo.length > 0) {
+    var initDiaperPoo = arrayPoo[0]; // oldest record
+    var initServerTimePoo = initDiaperPoo["time_pee_poo"];
+    var initTime_pee_poo = processingDateToUTC(initServerTimePoo);
+    var decidedTimePoo = processingDateToUTC(initServerTimePoo);
+    var tempDatePoo = new Date(initTime_pee_poo);
+    //numberPoo += 1;
+    // count for POO
+    //console.log(arrayPoo);
+    sameDay = 1; // for POO
+    for (i = 0; i < arrayPoo.length; i++) {
+      if (isOtherDayPoo == 1) { i = i-1; }
+      var poo = arrayPoo[i]; // get an object
+      var serverTime = poo["time_pee_poo"];
+      var time_pee_poo = processingDateToUTC(serverTime);
+      if (isEqualDate(tempDatePoo,new Date(time_pee_poo)) == 1){
+        // if date equal continue add (same day).
+        numberPoo = numberPoo + 1;
+        decidedTimePoo = time_pee_poo;
+        isOtherDayPoo = 0;
+      } else if (isEqualDate(tempDatePoo,new Date(time_pee_poo)) == 0){
+        // if date not equal push to array then reset number, push data when have next day
+        arrayNumberPoo.push([decidedTimePoo,numberPoo]); // push when decidedDate
+        tempDatePoo = new Date(time_pee_poo); // change tempdate
+        numberPoo = 0; // reset
+        sameDay = 0;
+        isOtherDayPoo = 1;
+      }
+      if(sameDay == 1 && i == arrayPoo.length - 1){
+        arrayNumberPoo.push([decidedTimePoo,numberPoo]);
+      }
+      if(sameDay == 0 && i == arrayPoo.length - 1){
+        if (numberPoo == 0) { numberPoo += 1;}
+        arrayNumberPoo.push([time_pee_poo,numberPoo]);
+      }
+    }
+  }
+  // Init tempDate PEE
+  if (arrayPee.length > 0) {
+    var initDiaperPee = arrayPee[0]; // oldest record
+    var initServerTimePee = initDiaperPee["time_pee_poo"];
+    var initTime_pee_poo = processingDateToUTC(initServerTimePee);
+    var decidedTimePee = processingDateToUTC(initServerTimePee);
+    var tempDatePee = new Date(initTime_pee_poo);
+    //numberPee += 1;
+    // count for PEE
+    sameDay = 1; // for PEE
+    for (i = 0; i < arrayPee.length; i++) {
+      if (isOtherDayPee == 1) { i = i-1; }
+      var pee = arrayPee[i]; // get an object
+      var serverTime = pee["time_pee_poo"];
+      var time_pee_poo = processingDateToUTC(serverTime);
+      if (isEqualDate(tempDatePee,new Date(time_pee_poo)) == 1){
+        // if date equal continue add (same day).
+        numberPee = numberPee + 1;
+        decidedTimePee = time_pee_poo;
+        isOtherDayPee = 0;
+      } else if (isEqualDate(tempDatePee,new Date(time_pee_poo)) == 0){
+        // if date not equal push to array then reset number, push data when have next day
+        arrayNumberPee.push([decidedTimePee,numberPee]); // push when decidedDate
+        tempDatePee = new Date(time_pee_poo); // change tempdate
+        numberPee = 0; // reset
+        sameDay = 0;
+        isOtherDayPee = 1;
+      }
+      // reach end of list and STILL SAME DAY
+      if(sameDay == 1 && i == arrayPee.length - 1){
+        arrayNumberPee.push([decidedTimePee,numberPee]);
+      }
+      // reach end of list and NOT SAME DAY
+      if(sameDay == 0 && i == arrayPee.length - 1){
+        if (numberPee == 0) { numberPee += 1;}
+        arrayNumberPee.push([time_pee_poo,numberPee]);
+      }
+    }
+  }
+  $('#container').highcharts({
+    chart: {
+      zoomType: 'x',
+      backgroundColor: 'transparent'
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ''
+    },
+    xAxis: {
+      type: 'datetime',
+      tickLength: 0,
+      labels: {
+        style: {
+          color: '#FFFFFF',
+          font: '11px Trebuchet MS, Verdana, sans-serif'
+        }
+      }
+    },
+    yAxis: [{ // Primary yAxis
+      min: 0,
+      gridLineWidth: 0,
+      labels: {
+        //format: '{value}',
+        style: {
+          color: heighColor,
+          //fontSize: fontSizeConfig
+        }
+        //offset: offsetConfig
+      },
+      title: {
+        text: 'Poo(times)',
+        style: {
+          color: heighColor
+          //fontSize: fontSizeConfig
+        },
+        //offset: offsetConfig
+      },
+      opposite: true,
+      offset: offsetConfigZero,
+      tickInterval: 1
+    }, { // Secondary yAxis
+      min: 0,
+      gridLineWidth: 0,
+      labels: {
+        //format: '{value}',
+        style: {
+          color: weightColor,
+          //fontSize:fontSizeConfig
+        },
+        //offset: offsetConfig
+      },
+      title: {
+        text: 'Pee(times)',
+        style: {
+          color: weightColor,
+          //fontSize:fontSizeConfig
+        },
+        //offset: offsetConfigHeadSize
+      },
+      offset: offsetConfigZero,
+      tickInterval: 1
+    }],
+    tooltip: {
+      hideDelay: 100,
+      formatter: function () {
+        var dateTime = new Date(this.x);
+        var newDate = dateFormat(dateTime, "dd/mm h:MM:ss TT");
+        return '<b>' + newDate + '</b><br/>' + this.series.name + ': <b>'+ this.y + '</b>';
+      }
+    },
+    legend: {
+      layout: 'vertical',
+      align: 'left',
+      x: 40,
+      verticalAlign: 'top',
+      y: 0,
+      floating: true,
+      backgroundColor: 'transparent',
+      itemStyle: {
+        fontSize:fontLegend,
+        font: fontLegend,
+        color: colorLegend
+      }
+    },
+    series: [{
+      name: 'Poo',
+      type: 'line',
+      lineWidth: 0.5,
+      yAxis: 0,
+      dashStyle: 'shortdot',
+      data: arrayNumberPoo ,
+      color: heighColor
+      //  tooltip: {
+      //    valueSuffix: ' cm'
+      //  }
+    }, {
+      name: 'Pee',
+      type: 'line',
+      lineWidth: 0.5,
+      yAxis: 1,
+      dashStyle: 'shortdot',
+      data: arrayNumberPee,
+      color: weightColor
+      //  tooltip: {
+      //    valueSuffix: ' kg'
+      //  }
+    }]
+  });
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="ImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="ImageList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACc
+        FgAAAk1TRnQBSQFMAgEBDgEAAewBAgHsAQIBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        AwABQAMAAUADAAEBAQABCAYAARAYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
+        AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
+        AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
+        AWYDAAGZAwABzAIAATMDAAIzAgABMwFmAgABMwGZAgABMwHMAgABMwH/AgABZgMAAWYBMwIAAmYCAAFm
+        AZkCAAFmAcwCAAFmAf8CAAGZAwABmQEzAgABmQFmAgACmQIAAZkBzAIAAZkB/wIAAcwDAAHMATMCAAHM
+        AWYCAAHMAZkCAALMAgABzAH/AgAB/wFmAgAB/wGZAgAB/wHMAQABMwH/AgAB/wEAATMBAAEzAQABZgEA
+        ATMBAAGZAQABMwEAAcwBAAEzAQAB/wEAAf8BMwIAAzMBAAIzAWYBAAIzAZkBAAIzAcwBAAIzAf8BAAEz
+        AWYCAAEzAWYBMwEAATMCZgEAATMBZgGZAQABMwFmAcwBAAEzAWYB/wEAATMBmQIAATMBmQEzAQABMwGZ
+        AWYBAAEzApkBAAEzAZkBzAEAATMBmQH/AQABMwHMAgABMwHMATMBAAEzAcwBZgEAATMBzAGZAQABMwLM
+        AQABMwHMAf8BAAEzAf8BMwEAATMB/wFmAQABMwH/AZkBAAEzAf8BzAEAATMC/wEAAWYDAAFmAQABMwEA
+        AWYBAAFmAQABZgEAAZkBAAFmAQABzAEAAWYBAAH/AQABZgEzAgABZgIzAQABZgEzAWYBAAFmATMBmQEA
+        AWYBMwHMAQABZgEzAf8BAAJmAgACZgEzAQADZgEAAmYBmQEAAmYBzAEAAWYBmQIAAWYBmQEzAQABZgGZ
+        AWYBAAFmApkBAAFmAZkBzAEAAWYBmQH/AQABZgHMAgABZgHMATMBAAFmAcwBmQEAAWYCzAEAAWYBzAH/
+        AQABZgH/AgABZgH/ATMBAAFmAf8BmQEAAWYB/wHMAQABzAEAAf8BAAH/AQABzAEAApkCAAGZATMBmQEA
+        AZkBAAGZAQABmQEAAcwBAAGZAwABmQIzAQABmQEAAWYBAAGZATMBzAEAAZkBAAH/AQABmQFmAgABmQFm
+        ATMBAAGZATMBZgEAAZkBZgGZAQABmQFmAcwBAAGZATMB/wEAApkBMwEAApkBZgEAA5kBAAKZAcwBAAKZ
+        Af8BAAGZAcwCAAGZAcwBMwEAAWYBzAFmAQABmQHMAZkBAAGZAswBAAGZAcwB/wEAAZkB/wIAAZkB/wEz
+        AQABmQHMAWYBAAGZAf8BmQEAAZkB/wHMAQABmQL/AQABzAMAAZkBAAEzAQABzAEAAWYBAAHMAQABmQEA
+        AcwBAAHMAQABmQEzAgABzAIzAQABzAEzAWYBAAHMATMBmQEAAcwBMwHMAQABzAEzAf8BAAHMAWYCAAHM
+        AWYBMwEAAZkCZgEAAcwBZgGZAQABzAFmAcwBAAGZAWYB/wEAAcwBmQIAAcwBmQEzAQABzAGZAWYBAAHM
+        ApkBAAHMAZkBzAEAAcwBmQH/AQACzAIAAswBMwEAAswBZgEAAswBmQEAA8wBAALMAf8BAAHMAf8CAAHM
+        Af8BMwEAAZkB/wFmAQABzAH/AZkBAAHMAf8BzAEAAcwC/wEAAcwBAAEzAQAB/wEAAWYBAAH/AQABmQEA
+        AcwBMwIAAf8CMwEAAf8BMwFmAQAB/wEzAZkBAAH/ATMBzAEAAf8BMwH/AQAB/wFmAgAB/wFmATMBAAHM
+        AmYBAAH/AWYBmQEAAf8BZgHMAQABzAFmAf8BAAH/AZkCAAH/AZkBMwEAAf8BmQFmAQAB/wKZAQAB/wGZ
+        AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
+        AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
+        AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
+        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD/wQAAf8B8AFyAUkBJwFJ
+        AXIBCAH/CQAGrScAAfQBcgEuAzQBMwItAXIB8wYABa0BswHVAbQBswGtJAAB/wFQA1UBlwF4AjQCLQFP
+        AfMEAAatAbMB1AHVAdsB1QGtIgAB/wGXA1YBVQEbAf8BCAM0AS0BcgH/AgAFrQT/AdQB1QHbAdUBrSEA
+        AfMBTwNWAVUBeAL/AQgDNAEtAQgCAAatAv8C1ALVAdsBsyEAAZgDVgJVAVYBeAL/AQgDNAFyAQABiwat
+        Av8BswPUAtUBrSAAAZcBVgF4CP8BCAI0AU8BAAGLAc8FrQL/Aa0BswPUAdUBrSAAAVUBVgF4CP8BGwJV
+        AS4BAAGtAc8FrQL/Aa0EswG0Aa0gAAGXBlYBmAL/ARsCVgFVAU8BAAGtAbQFrQL/Ba0BswGtIAABmAVW
+        AXgC/wEbBFYBlwEAAYYBtAStA/8HrSAAAfQBVQJ4AlYBCAH/ARsEVgFPAfABAAGGAbQOrSAAAf8BmAF4
+        AZgBeAJWAZkFVgGXAf8CAAGtAbQErQL1Bq0iAAH2AZcBeAGYAngGVgH0AwABhgK0A60C9QatIwAB9gGY
+        AVUCmAF4AVcBVgFVAZcB9AUAAYYCtAmtJQAB/wH0AZgBlwFVAZcBmAHzAf8HAAGGAa0DtALPA604AAKG
+        Aq0CiycACrwEAAL/DOsC/wExAVIBMQEaBPQLAAvvAwABvApLArwCAAL/AbwC9AHzAhkCAAIZAQkB6wL/
+        ARoCegFYBFIEGgYAAe8KEwHvAwABUglZAXoBSwG8AgAC/wG8Af8C9AHzARkCAAF6AhkB6wL/AQABGwF6
+        AeUCegJ5BFgBeQGZAwAO7wIAAVIBwwJ6BlkBegFLAbwCAAL/AbwC/wL0AfMBGQJTAXoBGQHrAv8BAAH0
+        AVgBegKgBnoBWAFSARoCAALvCwcB8gHvAQABUgHDAnoGWQF6AUsBvAIAAv8BvAH/AzEB9AHzARkCUwF6
+        AesC/wMAAZkDoAGaBHoBwwGgAZkB/wLvAf8L8gH/Ae8BAAFSAcMB5Qh6AUsBvAIAAv8BvAExAVgB/wF6
+        AjEB8wEZAlMBegL/AwABmQSgAZoBmQGaAaABwwGgAVIB9ALvAf8C8gLvA/IC7wLyAf8B7wEAAVIBwwGg
+        AeUHegFLAbwCAAL/ATEBWAF6Af8BoAJ6AjEBGQJTAUYB/wMAAZkEoAHrAqACwwGgAVIB9ALvDf8B7wEA
+        AVIBwwGgAeUGoAF6AUsBvAIAAf8BMQFYAXoB/wGgAXoCoAF6ATEB8wEZA0YDAAGZAuoBbAHqAaAEwwGg
+        AVIB9ALvDPIB7wIAAVIBwwGgAeUGoAF6AUsBvAIAATEBWAF6Af8DoAJ6AaABMQH0AfMB6wFGAf8DAAH3
+        AbQCswGLAZkFwwGaATEB7wH/A/IJ7wMAAVIB9gigAXoBSwG8AgABMQF6Af8GoAF6ATEC9AHrAv8DAAH3
+        AZEBugHbAbQBkQXDAZoBMQEABe8GCQLvAwABUgH2AcMHoAF6AUsBvAIAATEB/wegATEB/wL0AesC/wMA
+        AfcBswGLAbMB3AG0BsMBUgQAAbwGGQG1BQABUgH2ARoGmQHDAXoBSwG8AgACMQagATEB/wO1AfcC/wMA
+        AbUBCQHVAdsBCQG0BsMBWAQAAbwCGQTdAbUFAAFSAfYHBwHDAXoBSgG8AgAC/wIxA6ABMQL/ArUB9wEb
+        Av8BAAH/AbwBrgG7AdsBtQHtB5oBUgMAArwF9AIHBgACUgG8A/8BvAN5AQcDAAL/AbwB/wMxA/8BtQH3
+        ARsD/wEAAfQBuwEJAbQBtQHwCRoCAAH/AQcE/wH0AfEBBwkABQcHAAL/CLwB9wEbBP8BAAH/AfAC3QG1
+        DAABBwa1AQcB/xUAEP8DAAG1Aa4kAAF5ATEBUgkAAbwBkwG8AQACvCsAAfQCUgFYAZoBUgExCAABmgEl
+        AXQBBwFMAW8BAAIHAfYlAAEaAlIDegHDAVIB3QFRBAABGwKaAQcBJQFMAW8BJQFMAXQBJQFvAfYFAAH0
+        AQkErQEJAfMIAAH0Ab0EsQG9AfQHAAJSBHoBmgHDAVIB3QFSBQABTAElAUwDMQIrAiUBkwUAARkIrQEZ
+        BgAB8wixAfMEAAJSAnoFmgHDAVIB3QFSARsBAAEbAZQBvQGaASwDUwIyATEBKwFvAbwBBwG8AgAB9AGt
+        BbQErQHzBAAB9AGxBdIEsQH0AwABUgiaAcMBUgHdAVIBeQEAARsBTQEmAU0EWQJTATIBMQErAUwBJQF0
+        AgABCQK0AbUB3AHWArQBswKtAQkEAAG9AdIFtwHSA7EBvQMAAVgGoALDAVIC3QH3AXkCAAEbAXUBUwZZ
+        AVMBMgExASUBTAEHAgACtAUJArQDrQQAAdIHtwHSA7EDAAFYBKACwwJSAbwC3QHvAVIBGgH2ARsBvQFZ
+        A+UEWQEyATEBdAQAAbQCCQMZAgkCtAKtBAACtwK9Ad4CvQK3AdICsQIAARoBWATDAlIBvAQZAbUBUgGZ
+        Ab0CTQFTBOUDWQFTATICTAEHAgAB1gEJAhkB9AIZAQkB3AG0Aq0EAAK3Ab0D3gG9ArcB0gKxAgABWAPD
+        AlIBGgUZAbUB9wGaAXkBGwK9AXoF5QNZAVMCTAGaAgAB3AEJARkB9AH/AfQBGQEJAdwBtAKtBAACtwLe
+        Af8C3gK3AdICsQIAAVgBwwJSARoF9AHdAbUBmQKgAXkB9gEbAb0BdQFZA+UDWQFTASwBdQG9AwABGQEJ
+        AhkB9AIZAQkB1gG0Aa0BCQQAAb0BtwG9A94BvQK3AdIBsQG9AgACWAEaBf8B3QG1AfcBmQOgAVIB9gGU
+        AU0CdQFZA+UCWQJ1ASYBTAG9AgAB9AIJAxkCCQK0Aa0B9AQAAf8BtwK9Ad4CvQK3AdIBsQH0BAAB3QP/
+        Ad0BtQH3AQcEwwJSAQABGwG9ARsBdQFNAXUCegF1ASwBdQEbAZQBTQGaAwAB9AUJArQBrQEZBgAB9Aa3
+        AdIBsQHzBQAB3QL/AbUB9wG8AcMFUgUAAfYCdQG9AZoBdQG9AXUBTQEbAfYBGwH2BAAB9AEZAdwB1gK0
+        AQkB9AgAAf8BvQO3AdIBvQH0BgAB3QK1AfcBwwJSAfYBAAFSAZkGAAH2Ar0BAAGUAU0CGwG9AfYoAAFS
+        AXkQAAG9AXUB9jYADq4XAAGhA6cBoQgAAfEL8AIAAc8M/wGLBAABvAEHAbwB8A8AAaEBhgKuAacHAAHx
+        DewBAAHPAfQBGQHcASoG3AEZAf8BiwMAAZkBcwFuAusB7AGSAe8BkgHvAbwIAAGhAacBrgLsAYYCoQQA
+        AfECUgFMCioC7AHPAfQBGQEqAW0EMQMZAf8BiwMAAVICWQFYAVIBdAFzAW4BcwFuAW0B7wcAAacBhgPs
+        Aa4BpwGhBAABUgF6AVIBoAh6AVIBoAEqAewBzwH/AhkBMQPDAVEBMQIZAf8BiwMAAVIBWAZZATgBWQF0
+        AesBvAYAAYYB7APtAewBrgGhBAABUgF6AVIBoAh6AVIBoAEqAewBzwH/AhkBMQHDAW0BUQHDAVEBMQEZ
+        Af8BiwMAAVIBWAF6AeUBegVZAXoBbQH3BAABoQGnAa4B7AHtApIB7AGuAacBoQMAAVIBegFSCaABWAGg
+        ASoB7AHPAf8BGQHcATEBwwFRAW0BwwFRATEBGQH/AYsDAAFSAVkBegKgBOUBegHDAXQB6wG8AwABoQGG
+        Aa4C7QKSAe0B7AGuAacDAAFSAXoBUgmgAXoBoAEqAewBzwH/AfQBGQExAUsCwwKgAVEBMQH/AYsDAAFS
+        ATgBWAagAeUB9gGaAUoB9wMAAacBrgHsBZIB7QHsAYYDAAFSAXoBUgmgAXoBoAEqAewBzwH/A/QBMQFK
+        AVEDoAFtAewBFAMAATEBOAFYAXkCmgSgAvYBdAHrAbwBAAGnAYYB7AHtBZIB7QHsAa4BpwGhAQABUgF6
+        AVIJ/wGaAf8BKgHsAc8B/wH0A9wCMQFRARkBtQFmAhQDAAExBFkCWAGaAqAB9gH/AZoBbQHvAQABhgGu
+        Au0GkgHtAewBrgGnAQABUgGgAZoMUgHxAbQB/wb0ATEBEwEZAbUBrgGGARQCAAExAeUBWQNeAVkBWAN5
+        ApoBcwG8AaEBrgHsAe0IkgLsAacBoQFSBqAF/wEqAewB8QEAAbQC/wH0Af8B9AH/AfQB/wEUAbUBGQG1
+        Aa4BhgEUAQABMQjlAXoBUQEcAZkBvAEAAYYBrgHtCZIB7QHsAa4BpwFSAf8EoAH/BVIBTAHxAgABtAL/
+        BtwCFAG1ARkBtQGLAYYBAAExBKACWAJ5AVgBHAQAAa4B7AuSAe0B7AGGAQABUgT/AVIB8QgAAbQK/wEU
+        AbUBGQG1AYYBAAGZAVIDeQEcAbwDGgEbBAAC7AztAewBhgIABFIB8QkAAbQL/wEUAbUBGQFmEAAP7AGG
+        EAANtANmEAAP7AGGAUIBTQE+BwABPgMAASgDAAFAAwABQAMAAQEBAAEBBgABAhYAA/8BAAHgAQ8B+AEf
+        BAABwAEHAeABBwQAAYABAwHAAQMFAAEBAYABAQUAAQEBgAEBBQABAQcAAQEHAAEBBwABAQcAAQEHAAEB
+        BwABAQGAAQEEAAGAAQMBgAEBBAABwAEHAcABAwQAAeABDwHgAQcEAAL/AfgBHwQAAcABDwMAAf8B4AED
+        AYABAwMAAQ8BwAEDAYABAwIAAYABAwGAAQEBgAEDAgABgAEBAYABAAGAAQMCAAHgAwABgAEDAgAB4AMA
+        AYABAwIAAeADAAGAAQMCAAHgAgABAQGAAQMCAAHgAgABAwGAAQMCAAHgAQABgAEDAYABAwIAAeABAAHw
+        AQ8BgAEDAgAB4AEAAfABDwGAAQMCAAGAAQAB4AEPAcABBwIAAYABAAHAAR8B8AF/AgABgwH/AcABHwL/
+        AgAB5wT/AY8B+AGfBP8B/AEHAfgBEQT/AfABAwHAAQEB8AEPAfABDwHgAQMB4AEDAeABBwHgAQcBgAEB
+        AgABwAEDAcABAwGAAQECAAHAAQMBwAEDAYABAQGAAQABwAEDAcABAwGAAgABAwHAAQMBwAEDBAABwAED
+        AcABAwQAAcABAwHAAQMDAAEBAcABAwHAAQMEAAHAAQMBwAEDAcABAAGAAQAB4AEHAeABBwHAAQMB4AEA
+        AfABDwHwAQ8BwAEnAeIBBwT/AfkB/wH+AT8G/wEAAQMC/wH4AT8BwAEDAQABAwHDAf8B+AE/AYABAQEA
+        AQMBgAEPAfABDwMAAQMBgAEHAfABDwMAAQMBgAEDAfABDwMAAQMBgAEDAcABBwMAAQMBgAEBAcABBwMA
+        AQMBgAEBAcABBwMAAQMBgAEAAYABAQMAAQMBgAEAAYABAQMAAQEBgAQAAQECAAGAAQEDAAEDAgABgAEP
+        AgABgAH/AgABgAEPAgABwQH/AgAC/wIAAv8CAAL/AgAL
+</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnClearNurse.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhEAAQAIYAAI6QtbW1tf///////oio2dDn/9zu/+bz/lec5Oz2/tbr/vf7/p7B7t7y/7ve/7ne
+        /uv2/8vk/svm/+73/+j1/+n0/+73/uHx/5q14Pr+//Lz9K/Z/+Dx/pu55LTc/pCVuuLw/9Dn/sre/sbj
+        /Z286YDJ/LbU/9fq/7rg/9fq/pet1sHZ/5Kcw6G74sfi/6W+5NTq/87f/r3Y/7ja/9jn//v+/5WkzMDg
+        /f7///7+/v79/66p8vj6+vL3/er3/8vl/srm/9Do/7Pc/9zv/9Ti9tfr/sXj//X8/73A8Mzm//T6/5ao
+        0aC95I+SuKnU/8Dh/pu029Dg/52337rV//T29q3Z//H5/Z6/6/j8/fL4/8Pk/8zm/uHx/s/p/8Dg/5mx
+        2/j7/9br/+fz/t3u//D4/v7//uvt89/x/9Ho/pu237LQ/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEBAAAh+QQB
+        AABrACwAAAAAEAAQAAAIuwDXCBxIsOBABi+YtEgjBQoAAgbXMMCBhQcVDWYAIIBY8IqAAQIEZFACoMTG
+        giQ+DgBjxQKAlwAKdhBQJkcWCBWIINkBIABBDAJ0LJhwAMSZE1F6EvwiYAEZChwMhEEDQ+lAFQJ6JOAy
+        REGBLUGsClxSI4GYMUVCRBgBROwaG0cOXEhR4IeLG1rcsvBhQEESI14ceEDh9kODLhKePBBSxckGt01o
+        xBCxQsYUE2pmuIXJmbNPggFCix79OSAAOw==
+</value>
+  </data>
+  <data name="grdNUR9001.QuerySQL" xml:space="preserve">
+    <value>SELECT A.PKNUR9001                                     PKNUR9001       ,
+       A.FKINP1001                                     FKINP1001       ,
+       A.BUNHO                                         BUNHO           ,
+       A.RECORD_DATE                                   RECORD_DATE     ,
+       A.RECORD_TIME                                   RECORD_TIME     ,
+       A.SOAP_GUBUN                                    SOAP_GUBUN      ,
+       A.RECORD_CONTENTS                               RECORD_CONTENTS ,
+       A.NUR_PLAN_JIN                                  NUR_PLAN_JIN    ,
+       A.RECORD_USER                                   RECORD_USER     ,
+       FN_ADM_LOAD_USER_NM(A.RECORD_USER, A.RECORD_DATE) RECORD_USER_NAME,
+       NVL(A.VALD, 'N')                                VALD            ,
+       NVL(A.DC_YN, 'N')                               DC_YN           ,
+       A.DC_USER                                       DC_USER         ,
+       A.MAYAK_USE_YN                                  MAYAK_USE_YN    ,
+       A.RECORD_CONTENTS                               RECORD_CONTENTS ,
+       A.FKNUR4001                                             FKNUR4001       ,
+       CASE WHEN SYSDATE - TO_DATE(TO_CHAR(A.RECORD_DATE, 'YYYYMMDD') || 
+                 A.RECORD_TIME, 'YYYYMMDD HH24MISS') &gt;= 1 THEN
+                 'Y'
+            ELSE 'N' END                             OVER24
+  FROM NUR9001 A
+     , NUR4001 B
+ WHERE A.HOSP_CODE   = :f_hosp_code
+   AND A.BUNHO       = :f_bunho
+   --AND RECORD_DATE = TO_DATE(:f_record_date, 'YYYY/MM/DD')
+   --AND RECORD_DATE BETWEEN TO_DATE(:f_ipwon_date, 'YYYY/MM/DD') AND TO_DATE(:f_record_date, 'YYYY/MM/DD')
+   AND A.FKINP1001   = :f_fkinp1001
+   AND A.RECORD_DATE BETWEEN :f_from_date AND :f_to_date
+   AND NVL(A.VALD, 'Y') = 'Y'
+   AND B.HOSP_CODE(+)   = A.HOSP_CODE
+   AND B.BUNHO(+)       = A.BUNHO
+   AND B.PKNUR4001(+)   = A.FKNUR4001
+ ORDER BY A.RECORD_DATE 
+        , A.RECORD_TIME
+        , B.SORT_KEY
+        , B.NUR_PLAN_JIN
+        , DECODE(A.SOAP_GUBUN,'S','1','O','2','A','3','P','4','5')</value>
+  </data>
+  <metadata name="fwkNurse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>898, 17</value>
+  </metadata>
+  <data name="fwkNurse.InputSQL" xml:space="preserve">
+    <value>SELECT B.USER_ID
+     , B.USER_NM
+  FROM ADM3200 B
+ WHERE HOSP_CODE = :f_hosp_code
+   AND (B.USER_END_YMD IS NULL
+    OR SYSDATE &lt; B.USER_END_YMD)
+   AND B.USER_ID LIKE TRIM(:f_sabun)||'%'
+   AND B.USER_GUBUN = '2'
+   AND B.DEPT_CODE = :f_buseo_code
+ ORDER BY 1, 2</value>
+  </data>
+  <data name="btnDc.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhEAAQAIIAAMfHx/80Af/DtP9wTP9wTf9xTf/CtP///yH/C05FVFNDQVBFMi4wAwEBAAAh+QQB
+        AAAHACwAAAAAEAAQAAAINQAPCBxIsKDBgwgTKlzIsCHCABAjSjQ4gMCAihcLWDQooKMAAx47AjAIoKTJ
+        kw5TqlzJkmVAADs=
+</value>
+  </data>
+  <data name="btnSoap.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhEAAQAIUAAHiYtd7e3gN/4f///8G4p/f39fz8+/39+/X18ff28+Th2d/b0vf39NLMwPz8+vHw
+        6+3t59jTyerp4+Pg2cO6qsC3puXh2tzYz/Dw7M/Iu/b29PLy7sK4qNvWzMa+rtbRxtLMv////wAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEBAAAh+QQBAAAhACwAAAAAEAAQ
+        AAAIaQBDCBxIsKDBgwgTHgTAsCEAhAAGSJw44KFBAAYOHBBgwEECAAEuFijAQICGBxZAXkQgoGXLBSoL
+        AtiAAYIACRM6xCQIQMGFCAI+NMiwcyAAEB44ECBQgUJRow4ZhkQYoKpVhVizaj0YEAA7
+</value>
+  </data>
+  <data name="lblBojo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAZxJREFUOE+90k9L
+        AkEYx3HfU++lS/fuda1DUHQVqkt1MKKTEXUIwYgOWoQddFXYXArJBKGyMsv/q0/+ntlnm910LYIe+DJO
+        znwYodC/zFxygdDM+jRhv7qbIzS/eMj7UmKWkHkwxfuxI9BtI0/Wu8EIKj0OVA7UGRjD0txIVCAgwIIh
+        han9CBA/C4hZT/OKn+VCw3BBXiMQY/Y5dTsnnAcFCAxlaykXtMq2Bmqv0iDsu60jPrO8lfKil9WEG1CA
+        +WKPY3QICSav7DWiZH/skV2PeFGAp5U4xcrHHEBAmZsvkF/Vjn2DsLdrG6NfuV+MugFNmW26yKlwwQ+h
+        /kuY+tUVDmccToERa4c2zW0OYDLXovhVk1ccBiQYQz7MA2KAhrNrHD4DPUs33XDBAz0tjYZkgEh3RWIQ
+        L8SKGPS9qPmmzjmEd/CFkSWyCiqB7ktEDxWVQPVn4sZiGAF1FAGUXqsKxhoI4ouMQW5BqIATX+cH/Sj+
+        zySggSAGB3RY0MK1wvAq/F3OOdcmjw4LChDrrzF95LKAf8L0+TkUCn0CTXZZRf7HZqEAAAAASUVORK5C
+        YII=
+</value>
+  </data>
+  <metadata name="fwkFind.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>128, 17</value>
+  </metadata>
+  <data name="fwkFind.InputSQL" xml:space="preserve">
+    <value>SELECT B.USER_ID, B.USER_NM
+  FROM ADM3211 B, ADM3200 C
+ WHERE B.HOSP_CODE  = :f_hosp_code
+   AND C.HOSP_CODE  = B.HOSP_CODE
+   AND TRUNC(SYSDATE) BETWEEN B.START_DATE
+                           AND NVL(B.END_DATE, TO_DATE('9998/12/31', 'YYYY/MM/DD'))
+   AND ((B.USER_ID LIKE TRIM(:f_sabun)||'%'
+   AND   B.USER_ID LIKE TRIM(:f_find1)||'%')
+   OR   (B.USER_NM LIKE TRIM(:f_sabun)||'%'
+   AND   B.USER_NM LIKE TRIM(:f_find1)||'%'))
+   AND B.USER_ID = C.USER_ID
+   AND C.USER_GUBUN = '2'
+ ORDER BY 1, 2</value>
+  </data>
+  <metadata name="layComboSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>226, 17</value>
+  </metadata>
+  <metadata name="layBojoList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>357, 17</value>
+  </metadata>
+  <data name="layBojoList.QuerySQL" xml:space="preserve">
+    <value>SELECT A.SOAP_BUN1          SOAP_BUN1,
+       A.SOAP_BUN1_NAME     SOAP_BUN1_NAME,
+       B.SOAP_BUN2          SOAP_BUN2,
+       B.SOAP_BUN2_NAME     SOAP_BUN2_NAME,
+       A.SORT_KEY           SORT_KEY,
+       B.SORT_KEY           SORT_KEY
+  FROM NUR0901 A
+     , NUR0902 B
+ WHERE A.HOSP_CODE     = :f_hosp_code
+   AND B.HOSP_CODE     = A.HOSP_CODE
+   AND A.HO_DONG       = :f_ho_dong
+   AND A.SOAP_GUBUN    = :f_soap_gubun
+   AND B.SOAP_GUBUN    = A.SOAP_GUBUN
+   AND B.SOAP_BUN1     = A.SOAP_BUN1
+   AND B.HO_DONG       = A.HO_DONG
+   AND A.VALD          = 'Y'
+   AND B.VALD          = 'Y'
+ ORDER BY 5, 2, 6, 4  </value>
+  </data>
+  <metadata name="layWorkTime.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>474, 17</value>
+  </metadata>
+  <data name="btnHelp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACtSURBVDhPjZHRDYAgDETZiZ3ciZ0ciD9tjx45kRoveYlQ
+        3qGx7FJru8BxBv7crhjnoXQ0wdezaBDHn3GZkh7OCG0kk3vvQPeU0K3AFrubfxXw9t2BP6QFmnWmpK/v
+        MLtZDWcU6EBgsHZB4KVWYJ8gksJgDdGeA9OwjwKVFGYnzwL8iUUkzCr6yEshe75kZhbY6HE7sxZM4vU/
+        ZeYlO1YAGUVjL47neZUEMZaUcgMx7iNyv9IuBAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="xLabel1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEISURBVDhPhZLBDcMwDAOzU3byTt4mA+TdFfrtvw9VR0lG
+        YzSuAUKxLVKUnG217DzNejN7vyyP1otEkRza927Wdns+H4LuVmISoCKQkAvUNzHFyKsoYqkrZmIQEzrb
+        FCMnnFEgq+YBiSL6t3kssAd1v/t4JOCtDjtl844sAUc6EfnbfuCLuBChejigBYhs1ILjD9l62AfHcUwt
+        kHRHloCThXZ9yjF9KsykQlUHOUQ5EBn7fhhPM0FEkGQfolpABCdR3Z9RLfCcTPlKvJKbp56qTswmYg1l
+        YpEG0cGdKvv05xWDxEkP9RKi4hCtb59X/ca/FiJRqYVYCnHHHiwF6A2b1aP2c79a2/YBoOViCf6Jg60A
+        AAAASUVORK5CYII=
+</value>
+  </data>
+  <metadata name="layNUR4001.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>604, 17</value>
+  </metadata>
+  <data name="layNUR4001.QuerySQL" xml:space="preserve">
+    <value>SELECT M.PKNUR4001                   ,
+       M.BUNHO                       ,
+       M.FKINP1001                   ,
+       M.NUR_PLAN_JIN                ,
+       M.NUR_PLAN_JIN_NAME           ,
+       M.PURPOSE                     ,
+       M.PLAN_USER                   ,
+       M.PLAN_DATE                   ,
+       M.PKNUR4003                   ,
+       M.NUR_PLAN                    ,
+       M.NUR_PLAN_OTE                ,
+       ''                            ,
+       M.PKNUR4004                   ,
+       M.NUR_PLAN_DETAIL             ,
+       M.NUR_PLAN_DENAME             ,
+       FN_ADM_LOAD_USER_NM(M.PLAN_USER, TRUNC(SYSDATE)) PLAN_USER_NAME,
+       M.NUR_PLAN_NAME               ,
+       M.NUR4001_VALD                  NUR4001_VALD,
+       M.VALU_DATE                  VALU_DATE
+  FROM ( SELECT A.PKNUR4001                   ,
+                A.BUNHO                       ,
+                A.FKINP1001                   ,
+                A.NUR_PLAN_JIN                ,
+                A.PURPOSE                     ,
+                --C.NUR_PLAN_PRONAME            ,
+                DECODE(A.SORT_KEY, NULL, A.NUR_PLAN_JIN_NAME, '#' || A.SORT_KEY ||' ' ||A.NUR_PLAN_JIN_NAME)  NUR_PLAN_JIN_NAME  ,
+                A.PLAN_USER                   ,
+                A.PLAN_DATE                   ,
+                D.PKNUR4003                   ,
+                D.NUR_PLAN                    ,
+                D.NUR_PLAN_OTE                ,
+                D.NUR_PLAN_NAME               ,
+                E.PKNUR4004                   ,
+                E.NUR_PLAN_DETAIL             ,
+                E.NUR_PLAN_DENAME             ,
+                --B.SORT_KEY        NUR0401_SORT,
+                A.SORT_KEY        NUR4001_SORT,
+                D.SORT_KEY        NUR4003_SORT,
+                DECODE(D.NUR_PLAN_OTE, 'P', '1'
+                                     , 'O', '2'
+                                     , 'T', '3'
+                                     , '4' )
+                                  OTE_GUBUN,
+                E.SORT_KEY        NUR4004_SORT,
+                DECODE(FN_NUR_PLAN_END_DATE(A.HOSP_CODE, A.PKNUR4001, TRUNC(SYSDATE)), NULL, 'Y', 'N')  NUR4001_VALD,
+                FN_NUR_PLAN_RECENT_VALU(A.HOSP_CODE, A.PKNUR4001, TRUNC(SYSDATE)) VALU_DATE
+           FROM NUR4001 A,
+                NUR4003 D,
+                NUR4004 E
+          WHERE A.HOSP_CODE          = :f_hosp_code
+            AND A.BUNHO              = :f_bunho
+            AND A.FKINP1001          = :f_fkinp1001
+            AND D.HOSP_CODE          = A.HOSP_CODE
+            AND D.FKNUR4001          = A.PKNUR4001
+            AND NVL(D.VALD, 'N')     = 'Y'
+            AND E.HOSP_CODE      (+) = D.HOSP_CODE
+            AND E.FKNUR4003      (+) = D.PKNUR4003
+            AND E.VALD           (+) = 'Y' ) M
+ORDER BY NVL(M.NUR4001_SORT, 99)
+       , TO_CHAR(M.PKNUR4001, '000000000000000')||
+         TO_CHAR(M.PLAN_DATE, 'YYYYMMDD')||
+         M.OTE_GUBUN||
+         LTRIM(TO_CHAR(NVL(M.NUR4003_SORT, 99),'00'))||
+         LTRIM(TO_CHAR(NVL(M.NUR4004_SORT, 99),'00'))</value>
+  </data>
+  <metadata name="layComboNUR4001.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>730, 17</value>
+  </metadata>
+  <data name="layComboNUR4001.QuerySQL" xml:space="preserve">
+    <value>SELECT NULL PKNUR4001,
+       '-' NUR_PLAN_JIN_NAME,
+       0  SORT_KEY
+  FROM SYS.DUAL
+ UNION ALL
+SELECT 0 PKNUR4001,
+       'T' NUR_PLAN_JIN_NAME,
+       1  SORT_KEY
+  FROM SYS.DUAL
+ UNION ALL 
+SELECT A.PKNUR4001, A.NUR_PLAN_JIN_NAME, NVL(A.SORT_KEY+1, 99)
+  FROM NUR4001 A
+ WHERE A.HOSP_CODE = :f_hosp_code 
+   AND A.FKINP1001 = :f_fkinp1001
+ ORDER BY 3, 1</value>
+  </data>
+  <data name="grdPalist.QuerySQL" xml:space="preserve">
+    <value>SELECT A.HO_CODE1                                                              HO_CODE
+     , A.BUNHO                                                                 BUNHO
+     , A.SUNAME                                                                SUNAME
+     , A.PKINP1001                                                             PKINP1001
+     , FN_BAS_LOAD_AGE(:f_date,A.BIRTH,'')||'/'||A.SEX                   AGE_SEX
+     --, NVL(A.SIL_IPWON_DATE,NVL(A.CHT_IPWON_DATE, A.IPWON_DATE))               IPWON_DATE
+     , A.IPWON_DATE                                                            IPWON_DATE
+     , FN_BAS_LOAD_DOCTOR_NAME(A.DOCTOR, TO_DATE(:f_date, 'YYYY/MM/DD')) DOCTOR_NAME
+     , A.CYCLE_ORDER_GROUP
+  FROM VW_OCS_INP1001_01 A
+     , BAS0250           B
+ WHERE A.HOSP_CODE     = :f_hosp_code
+   AND A.HO_DONG1      = :f_ho_dong
+   AND A.IPWON_DATE   &lt;= TO_DATE(:f_date, 'YYYY/MM/DD')
+   AND A.JAEWON_FLAG   = 'Y'
+   AND B.HOSP_CODE = A.HOSP_CODE
+   AND B.HO_DONG = A.HO_DONG1
+   AND B.HO_CODE = A.HO_CODE1   
+   AND ((NVL(:f_a, 'N') = 'Y' and B.TEAM = 'A') OR
+        (NVL(:f_b, 'N') = 'Y' and B.TEAM = 'B') OR
+        (NVL(:f_c, 'N') = 'Y' and B.TEAM = 'C') OR
+        (NVL(:f_d, 'N') = 'Y' and B.TEAM = 'D') OR        
+        (NVL(:f_a, 'N') = 'N' AND 
+         NVL(:f_b, 'N') = 'N' AND
+         NVL(:f_c, 'N') = 'N' AND
+         NVL(:f_d, 'N') = 'N' )
+       )
+    
+ ORDER BY B.HO_SORT, A.BED_NO</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>47</value>
+  </metadata>
+</root>

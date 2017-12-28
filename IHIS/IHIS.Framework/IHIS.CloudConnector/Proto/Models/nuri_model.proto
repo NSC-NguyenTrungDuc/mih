@@ -1,0 +1,90 @@
+syntax = "proto2";
+
+//NUR7001U00 Get List Item Manage allergy
+message NuriNUR1016U00ManageAllergyListItemInfo {
+	optional string pknur1016 = 1;
+	optional string bunho = 2;
+	optional string allergy_gubun  = 3;
+	optional string allergy_info   = 4;
+	optional string start_date  = 5;
+	optional string end_sayu  = 6;
+	optional string input_text  = 7;
+	
+}
+
+//NUR7001U00 Get List Item Measure Physical condition
+message NuriNUR7001U00MeasurePhysicalConditionListItemInfo {
+
+	optional string bunho = 1;
+	optional string measure_date = 2;
+	optional string seq  = 3;
+	optional string height   = 4;
+	optional string weight  = 5;
+	optional string bp_from  = 6;
+	optional string bp_to  = 7;
+	optional string body_heat = 8;
+	optional string pulse = 9;
+	optional string suname = 10;
+	optional string spo2 = 11;
+	optional string measure_time = 12;
+	optional string breath = 13;
+	optional string upd_id = 14;
+	
+}
+
+
+// Start Nuri NUR1016U00 new 
+
+//gen proto tu day
+message NUR1016U00GrdNUR1016ListItemInfo {
+	optional string pknur1016 = 1;
+	optional string bunho = 2;
+	optional string allergy_gubun = 3;
+	optional string allergy_info = 4;
+	optional string start_date = 5;
+	optional string end_date = 6;
+	optional string end_sayu = 7;
+	optional string input_text = 8;
+	optional string y_value = 9;
+	optional string row_state = 10;
+}
+
+
+// End Nuri NUR1016U00
+
+
+
+// Start Nuri NUR1017U00 new 
+
+//NUR1017U00 Get data for grdNUR1017
+message NUR1017U00GrdNUR1017ListItemInfo {
+    optional string infe_code = 1;
+    optional string bunho = 2;
+    optional string start_date  = 3;
+    optional string end_date   = 4;
+    optional string infe_jaeryo  = 5;
+    optional string end_sayu  = 6;
+    optional string input_text  = 7;
+    optional string y_value = 8;
+    optional string pknur1017 = 9;
+    optional string row_state = 10;
+}
+
+// End Nuri NUR1017U00 new 
+
+// Start NUR0101U01
+message NUR0101U01GrdDetailInfo{
+	optional string code_type = 1;
+	optional string code = 2;
+	optional string code_name = 3;
+	optional string sort_key = 4;
+	optional string key = 5;
+	optional string data_row_state = 6;
+}
+message NUR0101U01GrdMasterInfo{
+	optional string code_type = 1;
+	optional string code_type_name = 2;
+	optional string admin_gubun = 3;
+	optional string data_row_state = 4;
+}
+// End NUR0101U01

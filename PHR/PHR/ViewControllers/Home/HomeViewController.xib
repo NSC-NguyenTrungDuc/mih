@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <development version="7000" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Aileron-Regular.otf">
+            <string>Aileron-Regular</string>
+            <string>Aileron-Regular</string>
+            <string>Aileron-Regular</string>
+        </mutableArray>
+        <mutableArray key="Aileron-Thin.otf">
+            <string>Aileron-Thin</string>
+            <string>Aileron-Thin</string>
+            <string>Aileron-Thin</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
+            <connections>
+                <outlet property="btnRegister" destination="fY9-uh-kPR" id="LKd-PB-bAZ"/>
+                <outlet property="btnSignIn" destination="FR2-z3-CnX" id="Vtu-39-sLV"/>
+                <outlet property="labelAProductOf" destination="pby-Cy-CuN" id="5xI-uH-jIr"/>
+                <outlet property="labelHealth" destination="MaG-MA-kXw" id="doZ-B4-8uk"/>
+                <outlet property="labelPersonal" destination="LG9-Vu-Rtg" id="fbz-3F-uoW"/>
+                <outlet property="labelRecord" destination="Ave-Bz-Qt0" id="Jp4-gN-Mfn"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewPlayer" destination="y2B-ZJ-GlD" id="8J0-wB-eqW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y2B-ZJ-GlD">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orange_splash" translatesAutoresizingMaskIntoConstraints="NO" id="eE6-Bh-ybF">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="パーソナル" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LG9-Vu-Rtg">
+                    <rect key="frame" x="35" y="150" width="180" height="40"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="sbi-2Y-k3N"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Aileron-Thin" family="Aileron" pointSize="36"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ヘルス" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MaG-MA-kXw">
+                    <rect key="frame" x="35" y="205" width="108" height="40"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="i09-Y8-dqD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Aileron-Thin" family="Aileron" pointSize="36"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="レコード" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ave-Bz-Qt0">
+                    <rect key="frame" x="35" y="260" width="144" height="40"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="eEv-1s-CyU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Aileron-Thin" family="Aileron" pointSize="36"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fY9-uh-kPR">
+                    <rect key="frame" x="20" y="480" width="560" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Wsk-Wq-7ff"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Aileron-Regular" family="Aileron" pointSize="18"/>
+                    <state key="normal" title="Register new Account">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="pressBtnRegister:" destination="-1" eventType="touchUpInside" id="Lrr-bQ-0yT"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FR2-z3-CnX">
+                    <rect key="frame" x="45" y="545" width="510" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="m17-hT-mV3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Aileron-Regular" family="Aileron" pointSize="16"/>
+                    <state key="normal" title=" Sign In">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="pressBtnSignIn:" destination="-1" eventType="touchUpInside" id="mfm-bm-LZZ"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A product of Karte.Clinic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pby-Cy-CuN">
+                    <rect key="frame" x="240" y="577" width="120" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="PTM-uE-731"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Aileron-Regular" family="Aileron" pointSize="11"/>
+                    <color key="textColor" red="0.8862745098" green="0.8862745098" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="PTM-uE-731"/>
+                        </mask>
+                    </variation>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="eE6-Bh-ybF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="0RJ-zY-APP"/>
+                <constraint firstItem="FR2-z3-CnX" firstAttribute="top" secondItem="pby-Cy-CuN" secondAttribute="bottom" constant="214" id="6ft-bV-x5K"/>
+                <constraint firstItem="FR2-z3-CnX" firstAttribute="top" secondItem="fY9-uh-kPR" secondAttribute="bottom" constant="15" id="8Cx-9M-Tne"/>
+                <constraint firstItem="pby-Cy-CuN" firstAttribute="top" secondItem="FR2-z3-CnX" secondAttribute="bottom" constant="7" id="8cW-yO-sCa"/>
+                <constraint firstItem="Ave-Bz-Qt0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="8ub-1p-7XM"/>
+                <constraint firstItem="y2B-ZJ-GlD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Bha-Vr-6B4"/>
+                <constraint firstItem="y2B-ZJ-GlD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Bu0-Zd-Fe7"/>
+                <constraint firstAttribute="trailing" secondItem="fY9-uh-kPR" secondAttribute="trailing" constant="20" id="Eyf-C3-Kfd"/>
+                <constraint firstItem="MaG-MA-kXw" firstAttribute="top" secondItem="LG9-Vu-Rtg" secondAttribute="bottom" id="KMs-yT-NmN"/>
+                <constraint firstItem="fY9-uh-kPR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="KnQ-VL-fyL"/>
+                <constraint firstAttribute="trailing" secondItem="eE6-Bh-ybF" secondAttribute="trailing" id="LAG-d2-orZ"/>
+                <constraint firstItem="MaG-MA-kXw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="OKV-tM-bdz"/>
+                <constraint firstItem="MaG-MA-kXw" firstAttribute="top" secondItem="LG9-Vu-Rtg" secondAttribute="bottom" constant="15" id="PB0-dm-UYp"/>
+                <constraint firstItem="MaG-MA-kXw" firstAttribute="centerX" secondItem="fY9-uh-kPR" secondAttribute="centerX" id="WK6-Yb-Clj"/>
+                <constraint firstItem="LG9-Vu-Rtg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="WbX-ME-x6A"/>
+                <constraint firstAttribute="trailing" secondItem="FR2-z3-CnX" secondAttribute="trailing" constant="45" id="X7i-B7-Tyt"/>
+                <constraint firstItem="FR2-z3-CnX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="45" id="a1W-0w-jpk"/>
+                <constraint firstAttribute="bottom" secondItem="FR2-z3-CnX" secondAttribute="bottom" constant="30" id="ahG-16-cSW"/>
+                <constraint firstItem="MaG-MA-kXw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="267" id="cfJ-iX-YNC"/>
+                <constraint firstAttribute="bottom" secondItem="y2B-ZJ-GlD" secondAttribute="bottom" id="d6Q-E0-ZT6"/>
+                <constraint firstItem="eE6-Bh-ybF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dHL-3w-2uk"/>
+                <constraint firstItem="pby-Cy-CuN" firstAttribute="centerX" secondItem="FR2-z3-CnX" secondAttribute="centerX" id="fNH-0a-gvf"/>
+                <constraint firstAttribute="trailing" secondItem="y2B-ZJ-GlD" secondAttribute="trailing" id="fgm-OA-oKK"/>
+                <constraint firstAttribute="bottom" secondItem="eE6-Bh-ybF" secondAttribute="bottom" id="oR4-iy-BNw"/>
+                <constraint firstItem="Ave-Bz-Qt0" firstAttribute="top" secondItem="MaG-MA-kXw" secondAttribute="bottom" constant="15" id="out-Zl-VUE"/>
+                <constraint firstItem="LG9-Vu-Rtg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="uAO-YQ-b1w"/>
+                <constraint firstItem="LG9-Vu-Rtg" firstAttribute="centerX" secondItem="fY9-uh-kPR" secondAttribute="centerX" id="vza-7w-czr"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="vza-7w-czr"/>
+                    <exclude reference="KMs-yT-NmN"/>
+                    <exclude reference="WK6-Yb-Clj"/>
+                    <exclude reference="cfJ-iX-YNC"/>
+                    <exclude reference="6ft-bV-x5K"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="orange_splash" width="375" height="667"/>
+    </resources>
+</document>

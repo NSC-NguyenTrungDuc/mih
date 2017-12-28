@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MSG_ERR_01" xml:space="preserve">
+    <value>Reservation time [{0}] is not overlap. please confirm.</value>
+  </data>
+  <data name="MSG_ERR_02" xml:space="preserve">
+    <value>You do not have the appropriate doctor's practice schedule. please confirm.</value>
+  </data>
+  <data name="MSG_ERR_03" xml:space="preserve">
+    <value>We have exceeded the reservation possible number of people of the reservation time of the relevant date. please confirm.</value>
+  </data>
+  <data name="MSG_ERR_04" xml:space="preserve">
+    <value>Failed to generate the receipt number.</value>
+  </data>
+  <data name="MSG_ERR_05" xml:space="preserve">
+    <value>Failed to save the reservation comment.</value>
+  </data>
+  <data name="MSG_ERR_06" xml:space="preserve">
+    <value>You can not change the reservation because the order breakdown exists.</value>
+  </data>
+  <data name="MSG_ERR_07" xml:space="preserve">
+    <value>Failed to save the reservation comment.</value>
+  </data>
+  <data name="MSG_ERR_08" xml:space="preserve">
+    <value>You can not change the reservation because the order breakdown exists.</value>
+  </data>
+  <data name="MSG001_MSG" xml:space="preserve">
+    <value>Failed to generate the schedule.</value>
+  </data>
+  <data name="MSG002_CAP" xml:space="preserve">
+    <value>Medical doctor selection</value>
+  </data>
+  <data name="MSG002_MSG" xml:space="preserve">
+    <value>Please select a medical doctor.</value>
+  </data>
+  <data name="MSG003_CAP" xml:space="preserve">
+    <value>Reservation date</value>
+  </data>
+  <data name="MSG003_MSG" xml:space="preserve">
+    <value>Please select the reservation date.</value>
+  </data>
+  <data name="MSG004_CAP" xml:space="preserve">
+    <value>Caution</value>
+  </data>
+  <data name="MSG004_MSG" xml:space="preserve">
+    <value>Can not be deleted because the visit has been a patient.</value>
+  </data>
+  <data name="MSG005_CAP" xml:space="preserve">
+    <value>Reservation cancellation confirmation</value>
+  </data>
+  <data name="MSG005_MSG" xml:space="preserve">
+    <value>Do you want to undo the appointments of the relevant patient?</value>
+  </data>
+  <data name="MSG006_CAP" xml:space="preserve">
+    <value>Reservations overlap</value>
+  </data>
+  <data name="MSG006_MSG" xml:space="preserve">
+    <value>It has already entered a reservation of the same patient. please confirm.</value>
+  </data>
+  <data name="MSG007_MSG" xml:space="preserve">
+    <value>Medical doctor is not valid. please confirm.</value>
+  </data>
+  <data name="MSG008_MSG" xml:space="preserve">
+    <value>It has become a booking doctor at the doctor registration screen. please confirm.</value>
+  </data>
+  <data name="MSG009_MSG" xml:space="preserve">
+    <value>Date you have selected can not be reserved because it is closed on registration. Please check the practice schedule.</value>
+  </data>
+  <data name="MSG010_MSG" xml:space="preserve">
+    <value>It failed to order cancellation transfer.</value>
+  </data>
+  <data name="MSG011_MSG" xml:space="preserve">
+    <value>It failed to order the transfer.</value>
+  </data>
+  <data name="MSG012_CAP" xml:space="preserve">
+    <value>Appointments table output</value>
+  </data>
+  <data name="MSG012_MSG" xml:space="preserve">
+    <value>Are you sure you want to output the appointments table?</value>
+  </data>
+  <data name="MSG013_MSG_1" xml:space="preserve">
+    <value>Reservation time [</value>
+  </data>
+  <data name="MSG013_MSG_2" xml:space="preserve">
+    <value>] I will not overlap. please confirm.</value>
+  </data>
+  <data name="MSG014_MSG" xml:space="preserve">
+    <value>You do not have the appropriate doctor's practice schedule. please confirm.</value>
+  </data>
+  <data name="MSG015_MSG" xml:space="preserve">
+    <value>We have exceeded the reservation possible number of people of the reservation time of the relevant date. please confirm.</value>
+  </data>
+  <data name="MSG016_MSG" xml:space="preserve">
+    <value>Failed to generate the receipt number.</value>
+  </data>
+  <data name="MSG017_MSG" xml:space="preserve">
+    <value>Failed to save the reservation comment.</value>
+  </data>
+  <data name="MSG018_MSG" xml:space="preserve">
+    <value>You can not change the reservation because the order breakdown exists.</value>
+  </data>
+  <data name="MSG019_CAP" xml:space="preserve">
+    <value>User ID check</value>
+  </data>
+  <data name="MSG019_MSG" xml:space="preserve">
+    <value>User ID is not valid.</value>
+  </data>
+  <data name="MSG020_CAP" xml:space="preserve">
+    <value>Medical care request</value>
+  </data>
+  <data name="MSG020_MSG" xml:space="preserve">
+    <value>You can not change the diagnosis request information of other teachers.</value>
+  </data>
+  <data name="MSG021_CAP" xml:space="preserve">
+    <value>Check patient number</value>
+  </data>
+  <data name="MSG021_MSG" xml:space="preserve">
+    <value>You can not change so different from the patient number that has been entered.</value>
+  </data>
+  <data name="MSG022_CAP" xml:space="preserve">
+    <value>warning</value>
+  </data>
+  <data name="MSG022_MSG" xml:space="preserve">
+    <value>Connection information to ORCA is incorrect. Please check the ORCA of information again.</value>
+  </data>
+  <data name="MSG023_MSG" xml:space="preserve">
+    <value>Please re-confirm it is not mapped the doctor code and department code.</value>
+  </data>
+  <data name="MSG024_MSG" xml:space="preserve">
+    <value>It did not enter a patient number. Enter the patient number.</value>
+  </data>
+  <data name="MSG025_CAP" xml:space="preserve">
+    <value>Caution</value>
+  </data>
+  <data name="MSG025_MSG" xml:space="preserve">
+    <value>Medical doctor has not been selected</value>
+  </data>
+  <data name="RES1001U00_GetToolTipText_1" xml:space="preserve">
+    <value>{0} year {1} month {2} day {3} when {4} minutes</value>
+  </data>
+  <data name="RES1001U00_GetToolTipText_10" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="RES1001U00_GetToolTipText_11" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="RES1001U00_GetToolTipText_12" xml:space="preserve">
+    <value>phone</value>
+  </data>
+  <data name="RES1001U00_GetToolTipText_13" xml:space="preserve">
+    <value>Reservation date</value>
+  </data>
+  <data name="RES1001U00_GetToolTipText_14" xml:space="preserve">
+    <value>Cooperation of medical record information</value>
+  </data>
+  <data name="RES1001U00_GetToolTipText_15" xml:space="preserve">
+    <value>Appointment information from clinic</value>
+  </data>
+  <data name="RES1001U00_GetToolTipText_2" xml:space="preserve">
+    <value>Patient information</value>
+  </data>
+  <data name="RES1001U00_GetToolTipText_3" xml:space="preserve">
+    <value>Patient number</value>
+  </data>
+  <data name="RES1001U00_GetToolTipText_4" xml:space="preserve">
+    <value>Patient name</value>
+  </data>
+  <data name="RES1001U00_GetToolTipText_5" xml:space="preserve">
+    <value>Birthday</value>
+  </data>
+  <data name="RES1001U00_GetToolTipText_6" xml:space="preserve">
+    <value>sex</value>
+  </data>
+  <data name="RES1001U00_GetToolTipText_7" xml:space="preserve">
+    <value>Appointment information from other clinic</value>
+  </data>
+  <data name="RES1001U00_GetToolTipText_8" xml:space="preserve">
+    <value>Hospital code</value>
+  </data>
+  <data name="RES1001U00_GetToolTipText_9" xml:space="preserve">
+    <value>Hospital name</value>
+  </data>
+  <data name="RES1001U00_GetToolTipText_Female" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="RES1001U00_GetToolTipText_Male" xml:space="preserve">
+    <value>male</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>(If you are empty frame it will be beyond the reservations number of different user segments.)</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>Please contact the department.</value>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value>Please contact the department.</value>
+  </data>
+  <data name="String3" xml:space="preserve">
+    <value>(If you are empty frame it will be beyond the reservations number of different user segments.)</value>
+  </data>
+  <data name="String4" xml:space="preserve">
+    <value>Please contact the department.</value>
+  </data>
+  <data name="StringLinkHosp" xml:space="preserve">
+    <value>Outside</value>
+  </data>
+  <data name="StringMyHosp" xml:space="preserve">
+    <value>The inner</value>
+  </data>
+</root>

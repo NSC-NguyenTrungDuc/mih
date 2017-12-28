@@ -1,0 +1,952 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>682, 3</value>
+  </data>
+  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 28</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnSave.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
+    <value>btnSave</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButton, IHIS.Controls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
+    <value>xPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnExit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>766, 3</value>
+  </data>
+  <data name="btnExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 28</value>
+  </data>
+  <data name="btnExit.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Name" xml:space="preserve">
+    <value>btnExit</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButton, IHIS.Controls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnExit.Parent" xml:space="preserve">
+    <value>xPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnExit.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="xPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="xPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 475</value>
+  </data>
+  <data name="xPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>854, 36</value>
+  </data>
+  <data name="xPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;xPanel1.Name" xml:space="preserve">
+    <value>xPanel1</value>
+  </data>
+  <data name="&gt;&gt;xPanel1.Type" xml:space="preserve">
+    <value>IHIS.Framework.XPanel, IHIS.Controls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;xPanel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="grdOrderList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="grdOrderList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 2</value>
+  </data>
+  <data name="grdOrder.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="grdOrder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 2</value>
+  </data>
+  <data name="grdOrder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>848, 118</value>
+  </data>
+  <data name="grdOrder.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;grdOrder.Name" xml:space="preserve">
+    <value>grdOrder</value>
+  </data>
+  <data name="&gt;&gt;grdOrder.Type" xml:space="preserve">
+    <value>IHIS.Framework.XMstGrid, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;grdOrder.Parent" xml:space="preserve">
+    <value>xPanel3</value>
+  </data>
+  <data name="&gt;&gt;grdOrder.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="grdOrderList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>848, 340</value>
+  </data>
+  <data name="grdOrderList.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;grdOrderList.Name" xml:space="preserve">
+    <value>grdOrderList</value>
+  </data>
+  <data name="&gt;&gt;grdOrderList.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGrid, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;grdOrderList.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="&gt;&gt;grdOrderList.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xPanel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="xPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 129</value>
+  </data>
+  <data name="xPanel2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="xPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>854, 346</value>
+  </data>
+  <data name="xPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;xPanel2.Name" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="&gt;&gt;xPanel2.Type" xml:space="preserve">
+    <value>IHIS.Framework.XPanel, IHIS.Controls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xPanel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;xPanel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xPanel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="xPanel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 5</value>
+  </data>
+  <data name="xPanel3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="xPanel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>854, 124</value>
+  </data>
+  <data name="xPanel3.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;xPanel3.Name" xml:space="preserve">
+    <value>xPanel3</value>
+  </data>
+  <data name="&gt;&gt;xPanel3.Type" xml:space="preserve">
+    <value>IHIS.Framework.XPanel, IHIS.Controls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xPanel3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;xPanel3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.AutoScaleBaseSize" type="System.Drawing.Size, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>864, 538</value>
+  </data>
+  <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell83.Name" xml:space="preserve">
+    <value>xEditGridCell83</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell83.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell84.Name" xml:space="preserve">
+    <value>xEditGridCell84</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell84.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell85.Name" xml:space="preserve">
+    <value>xEditGridCell85</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell85.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell86.Name" xml:space="preserve">
+    <value>xEditGridCell86</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell86.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell87.Name" xml:space="preserve">
+    <value>xEditGridCell87</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell87.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell88.Name" xml:space="preserve">
+    <value>xEditGridCell88</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell88.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell61.Name" xml:space="preserve">
+    <value>xEditGridCell61</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell61.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell17.Name" xml:space="preserve">
+    <value>xEditGridCell17</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell17.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell89.Name" xml:space="preserve">
+    <value>xEditGridCell89</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell89.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell62.Name" xml:space="preserve">
+    <value>xEditGridCell62</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell62.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell90.Name" xml:space="preserve">
+    <value>xEditGridCell90</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell90.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell63.Name" xml:space="preserve">
+    <value>xEditGridCell63</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell63.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell91.Name" xml:space="preserve">
+    <value>xEditGridCell91</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell91.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell92.Name" xml:space="preserve">
+    <value>xEditGridCell92</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell92.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell93.Name" xml:space="preserve">
+    <value>xEditGridCell93</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell93.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell60.Name" xml:space="preserve">
+    <value>xEditGridCell60</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell60.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell94.Name" xml:space="preserve">
+    <value>xEditGridCell94</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell94.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell95.Name" xml:space="preserve">
+    <value>xEditGridCell95</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell95.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell96.Name" xml:space="preserve">
+    <value>xEditGridCell96</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell96.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell97.Name" xml:space="preserve">
+    <value>xEditGridCell97</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell97.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell38.Name" xml:space="preserve">
+    <value>xEditGridCell38</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell38.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell37.Name" xml:space="preserve">
+    <value>xEditGridCell37</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell37.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell64.Name" xml:space="preserve">
+    <value>xEditGridCell64</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell64.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell99.Name" xml:space="preserve">
+    <value>xEditGridCell99</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell99.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell100.Name" xml:space="preserve">
+    <value>xEditGridCell100</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell100.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell101.Name" xml:space="preserve">
+    <value>xEditGridCell101</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell101.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell102.Name" xml:space="preserve">
+    <value>xEditGridCell102</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell102.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell103.Name" xml:space="preserve">
+    <value>xEditGridCell103</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell103.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell104.Name" xml:space="preserve">
+    <value>xEditGridCell104</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell104.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell105.Name" xml:space="preserve">
+    <value>xEditGridCell105</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell105.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell39.Name" xml:space="preserve">
+    <value>xEditGridCell39</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell39.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell65.Name" xml:space="preserve">
+    <value>xEditGridCell65</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell65.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell12.Name" xml:space="preserve">
+    <value>xEditGridCell12</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell12.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell14.Name" xml:space="preserve">
+    <value>xEditGridCell14</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell14.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell36.Name" xml:space="preserve">
+    <value>xEditGridCell36</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell36.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell40.Name" xml:space="preserve">
+    <value>xEditGridCell40</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell40.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell41.Name" xml:space="preserve">
+    <value>xEditGridCell41</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell41.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell67.Name" xml:space="preserve">
+    <value>xEditGridCell67</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell67.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell68.Name" xml:space="preserve">
+    <value>xEditGridCell68</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell68.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell59.Name" xml:space="preserve">
+    <value>xEditGridCell59</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell59.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell66.Name" xml:space="preserve">
+    <value>xEditGridCell66</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell66.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell71.Name" xml:space="preserve">
+    <value>xEditGridCell71</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell71.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell73.Name" xml:space="preserve">
+    <value>xEditGridCell73</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell73.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell72.Name" xml:space="preserve">
+    <value>xEditGridCell72</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell72.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell2.Name" xml:space="preserve">
+    <value>xEditGridCell2</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell2.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell77.Name" xml:space="preserve">
+    <value>xEditGridCell77</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell77.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell75.Name" xml:space="preserve">
+    <value>xEditGridCell75</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell75.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell76.Name" xml:space="preserve">
+    <value>xEditGridCell76</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell76.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell3.Name" xml:space="preserve">
+    <value>xEditGridCell3</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell3.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell29.Name" xml:space="preserve">
+    <value>xEditGridCell29</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell29.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell30.Name" xml:space="preserve">
+    <value>xEditGridCell30</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell30.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell31.Name" xml:space="preserve">
+    <value>xEditGridCell31</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell31.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell6.Name" xml:space="preserve">
+    <value>xEditGridCell6</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell6.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell32.Name" xml:space="preserve">
+    <value>xEditGridCell32</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell32.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell5.Name" xml:space="preserve">
+    <value>xEditGridCell5</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell5.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell33.Name" xml:space="preserve">
+    <value>xEditGridCell33</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell33.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell4.Name" xml:space="preserve">
+    <value>xEditGridCell4</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell4.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell8.Name" xml:space="preserve">
+    <value>xEditGridCell8</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell8.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell21.Name" xml:space="preserve">
+    <value>xEditGridCell21</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell21.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell7.Name" xml:space="preserve">
+    <value>xEditGridCell7</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell7.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell34.Name" xml:space="preserve">
+    <value>xEditGridCell34</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell34.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell69.Name" xml:space="preserve">
+    <value>xEditGridCell69</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell69.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell70.Name" xml:space="preserve">
+    <value>xEditGridCell70</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell70.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell1.Name" xml:space="preserve">
+    <value>xEditGridCell1</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell1.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell74.Name" xml:space="preserve">
+    <value>xEditGridCell74</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell74.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell9.Name" xml:space="preserve">
+    <value>xEditGridCell9</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell9.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>CommentForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>IHIS.Framework.XForm, IHIS.Forms, Version=1.0.5452.30293, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btnExit.Text" xml:space="preserve">
+    <value>  閉じる</value>
+  </data>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>  保 存</value>
+  </data>
+  <data name="grdOrder.QuerySQL" xml:space="preserve">
+    <value>SELECT A.DRG_BUNHO                          DRG_BUNHO
+      ,A.BUNHO                              BUNHO
+      ,MAX(A.ORDER_DATE)                    ORDER_DATE
+      ,A.JUBSU_DATE                         JUBSU_DATE
+      ,MAX(DECODE(NVL(A.PRINT_YN,'N'),'N',' ',
+           TO_CHAR(A.JUBSU_ILSI,'HH24MI'))) JUBSU_TIME
+      ,MAX(A.DOCTOR)                        DOCTOR
+      ,MAX(C.DOCTOR_NAME)                   DOCTOR_NAME
+      ,MAX(A.GWA)                           GWA
+      ,MAX(B.BUSEO_NAME)                    BUSEO_NAME
+      ,MAX(A.ACT_ILSI)                      ACT_DATE
+      ,NVL(A.PRINT_YN, 'N')                 ACT_YN
+      ,MAX(A.SUNAB_DATE)                    SUNAB_DATE
+      ,MAX(A.CHULGO_DATE)                   CHULGO_DATE
+      ,NVL(A.BORYU_YN, 'N')                 BORYU_YN
+      , ''                                  chulgo_buseo
+      ,NVL(A.WONYOI_ORDER_YN, 'N')          WONYOI_ORDER_YN
+      ,MAX(D.ORDER_REMARK)                  ORDER_REMARK
+      ,MAX(D.DRG_REMARK)                    DRG_REMARK
+      ,MAX(E.ORDER_REMARK)                  O_REMARK
+      ,MAX(E.DRG_REMARK)                    D_REMARK
+  FROM DRG9041     E
+      ,DRG9040     D
+      ,BAS0270     C
+      ,VW_GWA_NAME B
+      ,DRG2010     A
+ WHERE A.BUNHO                    = :f_bunho
+   AND A.HOSP_CODE                = :f_hosp_code
+   AND NVL(A.DC_YN,'N')           &lt;&gt; 'Y'
+   AND A.SOURCE_FKOCS1003         IS NULL
+   AND B.BUSEO_CODE               (+)= A.GWA
+   AND C.DOCTOR                   (+)= A.DOCTOR
+   AND D.IN_OUT_GUBUN             (+)= 'O'
+   AND D.JUBSU_DATE               (+)= A.JUBSU_DATE
+   AND D.DRG_BUNHO                (+)= A.DRG_BUNHO
+   AND E.BUNHO                    (+)= A.BUNHO
+   AND E.HOSP_CODE                (+)= A.HOSP_CODE
+   AND D.HOSP_CODE                (+)= A.HOSP_CODE
+   AND C.HOSP_CODE                (+)= A.HOSP_CODE
+   AND B.HOSP_CODE                (+)= A.HOSP_CODE
+ GROUP BY A.BUNHO
+        , A.DRG_BUNHO
+        , A.JUBSU_DATE
+        , NVL(A.WONYOI_ORDER_YN, 'N')
+        , NVL(A.PRINT_YN, 'N')
+        , NVL(A.BORYU_YN, 'N')
+ ORDER BY 4 DESC, 1</value>
+  </data>
+  <data name="grdOrderList.QuerySQL" xml:space="preserve">
+    <value>SELECT DISTINCT
+       A.BUNHO                             BUNHO
+      ,A.DRG_BUNHO                         DRG_BUNHO
+      ,A.NAEWON_DATE                       NAEWON_DATE
+      ,A.GROUP_SER                         GROUP_SER
+      ,A.JUBSU_DATE                        JUBSU_DATE
+      ,A.ORDER_DATE                        ORDER_DATE
+      ,A.JAERYO_CODE                       JAERYO_CODE
+      ,A.NALSU                             NALSU
+      ,A.DIVIDE                            DIVIDE
+      ,A.ORD_SURYANG                       ORD_SURYANG
+      ,A.ORDER_SURYANG                     ORDER_SURYANG
+      ,FN_OCS_LOAD_CODE_NAME('ORD_DANUI', A.ORDER_DANUI, A.HOSP_CODE) ORDER_DANUI
+      ,FN_OCS_LOAD_CODE_NAME('SUBUL_DANUI', A.SUBUL_DANUI, A.HOSP_CODE) SUBUL_DANUI
+      ,A.GROUP_YN                          GROUP_YN
+      ,A.JAERYO_GUBUN                      JAERYO_GUBUN
+      ,A.BOGYONG_CODE                      BOGYONG_CODE
+      ,B.BOGYONG_NAME                      BOGYONG_NAME
+      ,FN_DRG_LOAD_DRG0130( A.CAUTION_CODE, A.HOSP_CODE)   CAUTION_NAME
+      ,A.CAUTION_CODE                      CAUTION_CODE
+      ,A.MIX_YN                            MIX_YN
+      ,E.ATC_YN                            ATC_YN
+      ,A.DV                                DV
+      ,A.DV_TIME                           DV_TIME
+      ,A.DC_YN                             DC_YN
+      ,A.BANNAB_YN                         BANNAB_YN
+      ,A.SOURCE_FKOCS1003                  SOURCE_FKOCS1003
+      ,A.FKOCS1003                         FKOCS1003
+      ,A.FKOUT1001                         FKOUT1001
+      ,A.SUNAB_DATE                        SUNAB_DATE
+      ,B.PATTERN                           PATTERN
+      ,C.JAERYO_NAME                       JAERYO_NAME
+      ,NVL(A.SUNAB_NALSU,0)                SUNAB_NALSU
+      ,NVL(A.WONYOI_ORDER_YN,'N')          WONYOI_YN
+      ,TRIM(D.ORDER_REMARK)                REMARK
+      ,A.ACT_DATE                          ACT_DATE
+      ,A.BUNRYU2                           MAYAK
+      ,A.TPN_JOJE_GUBUN                    TPN_JOJE_GUBUN
+      ,NVL(C.MIX_YN_INP,'N')               UI_JUSA_YN
+      ,A.SUBUL_SURYANG                     SUBUL_SURYANG
+      ,E.SERIAL_V                          SERIAL_V
+      ,A.POWDER_YN                         POWDER_YN
+      ,NVL(A.GYUNBON_YN, 'N')              GYUNBON_YN
+      ,NVL(A.PRINT_YN, 'N')                PRINT_YN
+      ,A.HUBAL_CHANGE_YN                   HUBAK_CHANGE_YN
+      ,A.PHARMACY                          PHARMACY   
+      ,A.DRG_PACK_YN                       DRG_PACK_YN
+      ,G.ORDER_REMARK                      ORDER_REMARK
+      ,G.DRG_REMARK                        DRG_REMARK
+  FROM DRG9042 G
+      ,DRG2030 E
+      ,OCS1003 D
+      ,INV0110 C
+      ,DRG0120 B
+      ,DRG2010 A
+ WHERE A.ORDER_DATE       = TO_DATE(:f_jubsu_date)
+   AND A.DRG_BUNHO        = :f_drg_bunho
+   AND NVL(A.WONYOI_ORDER_YN, 'N') = :f_wonyol_order_yn
+   AND A.BUNHO            = :f_bunho
+   AND A.HOSP_CODE        = :f_hosp_code
+   AND A.SOURCE_FKOCS1003 IS NULL
+   AND A.JUNDAL_PART     IN ('PA')
+   AND B.BOGYONG_CODE  (+)= A.BOGYONG_CODE
+   AND C.JAERYO_CODE      = A.JAERYO_CODE
+   AND D.PKOCS1003        = A.FKOCS1003
+   AND E.FKOCS1003     (+)= A.FKOCS1003
+   AND E.JUBSU_DATE    (+)= A.ORDER_DATE
+   AND E.DRG_BUNHO     (+)= A.DRG_BUNHO
+   AND G.IN_OUT_GUBUN  (+)= 'O'
+   AND G.FKOCS         (+)= A.FKOCS1003
+   AND G.HOSP_CODE     (+)= A.HOSP_CODE
+   AND E.HOSP_CODE     (+)= A.HOSP_CODE
+   AND D.HOSP_CODE        = A.HOSP_CODE
+   AND C.HOSP_CODE        = A.HOSP_CODE
+   AND B.HOSP_CODE     (+)= A.HOSP_CODE
+ ORDER BY TO_NUMBER(E.SERIAL_V), A.FKOCS1003</value>
+  </data>
+  <data name="xEditGridCell1.HeaderText" xml:space="preserve">
+    <value>院外</value>
+  </data>
+  <data name="xEditGridCell14.HeaderText" xml:space="preserve">
+    <value>医師
+指示</value>
+  </data>
+  <data name="xEditGridCell17.HeaderText" xml:space="preserve">
+    <value>日数</value>
+  </data>
+  <data name="xEditGridCell2.HeaderText" xml:space="preserve">
+    <value>RP
+コメント</value>
+  </data>
+  <data name="xEditGridCell21.HeaderText" xml:space="preserve">
+    <value>受付</value>
+  </data>
+  <data name="xEditGridCell3.HeaderText" xml:space="preserve">
+    <value>投薬番号</value>
+  </data>
+  <data name="xEditGridCell30.HeaderText" xml:space="preserve">
+    <value>オ―ダ日付</value>
+  </data>
+  <data name="xEditGridCell31.HeaderText" xml:space="preserve">
+    <value>受付日付</value>
+  </data>
+  <data name="xEditGridCell37.HeaderText" xml:space="preserve">
+    <value>回数</value>
+  </data>
+  <data name="xEditGridCell38.HeaderText" xml:space="preserve">
+    <value>ATC</value>
+  </data>
+  <data name="xEditGridCell39.HeaderText" xml:space="preserve">
+    <value>オーダコード名</value>
+  </data>
+  <data name="xEditGridCell4.HeaderText" xml:space="preserve">
+    <value>診療科</value>
+  </data>
+  <data name="xEditGridCell5.HeaderText" xml:space="preserve">
+    <value>診療医</value>
+  </data>
+  <data name="xEditGridCell59.HeaderText" xml:space="preserve">
+    <value>RP</value>
+  </data>
+  <data name="xEditGridCell6.HeaderText" xml:space="preserve">
+    <value>受付
+時間</value>
+  </data>
+  <data name="xEditGridCell60.HeaderText" xml:space="preserve">
+    <value>用法</value>
+  </data>
+  <data name="xEditGridCell61.HeaderText" xml:space="preserve">
+    <value>オーダコード</value>
+  </data>
+  <data name="xEditGridCell62.HeaderText" xml:space="preserve">
+    <value>数量</value>
+  </data>
+  <data name="xEditGridCell63.HeaderText" xml:space="preserve">
+    <value>単位</value>
+  </data>
+  <data name="xEditGridCell64.HeaderText" xml:space="preserve">
+    <value>類
+型</value>
+  </data>
+  <data name="xEditGridCell65.HeaderText" xml:space="preserve">
+    <value>領収</value>
+  </data>
+  <data name="xEditGridCell66.HeaderText" xml:space="preserve">
+    <value>粉
+砕</value>
+  </data>
+  <data name="xEditGridCell69.HeaderText" xml:space="preserve">
+    <value>状態</value>
+  </data>
+  <data name="xEditGridCell7.HeaderText" xml:space="preserve">
+    <value>収納日付</value>
+  </data>
+  <data name="xEditGridCell70.HeaderText" xml:space="preserve">
+    <value>부서</value>
+  </data>
+  <data name="xEditGridCell71.HeaderText" xml:space="preserve">
+    <value>見
+本</value>
+  </data>
+  <data name="xEditGridCell74.HeaderText" xml:space="preserve">
+    <value>患者情報コメント</value>
+  </data>
+  <data name="xEditGridCell75.HeaderText" xml:space="preserve">
+    <value>保険</value>
+  </data>
+  <data name="xEditGridCell76.HeaderText" xml:space="preserve">
+    <value>간이
+현탁</value>
+  </data>
+  <data name="xEditGridCell77.HeaderText" xml:space="preserve">
+    <value>薬品別
+コメント</value>
+  </data>
+  <data name="xEditGridCell8.HeaderText" xml:space="preserve">
+    <value>投薬日付</value>
+  </data>
+  <data name="xEditGridCell86.HeaderText" xml:space="preserve">
+    <value>G
+R</value>
+  </data>
+  <data name="xEditGridCell9.HeaderText" xml:space="preserve">
+    <value>印刷</value>
+  </data>
+  <data name="xEditGridCell94.HeaderText" xml:space="preserve">
+    <value>用法</value>
+  </data>
+</root>

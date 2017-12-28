@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <link rel="icon" type="image/ico" href="images/MIS_favico.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0">
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/jquery-ui/themes/base/jquery-ui.min.css" />
+    <link rel="stylesheet" href="bower_components/jquery-toggles/css/toggles-full.css" />
+    <link rel="stylesheet" href="bower_components/select2/dist/css/select2.min.css" />
+    <link rel="stylesheet" href="bower_components/datatables/media/css/jquery.dataTables.css" />
+    <link rel="stylesheet" href="bower_components/datatables-bootstrap3/BS3/assets/css/datatables.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="bower_components/weather-icons/css/weather-icons.min.css" />
+    <link rel="stylesheet" href="bower_components/jquery.steps/demo/css/jquery.steps.css" />
+    <link rel="stylesheet" href="bower_components/jquery.gritter/css/jquery.gritter.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css styles/custom.css -->
+    <link rel="stylesheet" href="css/style.css"/>
+    <!--<link rel="stylesheet" href="css/dataTables.bootstrap.css"/>-->
+    <link rel="stylesheet" href="css/font.css"/>
+    <link rel="stylesheet" href="css/font2.css"/>
+    <link rel="stylesheet" href="css/survey-custom.css"/>
+
+
+    <link rel="stylesheet" href="css/mind-map.css"/>
+    <!-- endbuild -->
+</head>
+<body ng-controller="GlobalController">
+<div ng-view></div>
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/jquery-v1/index.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-css-injector/angular-css-injector.js"></script>
+<script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+<script src="bower_components/jquery-ui/jquery-ui.js"></script>
+<script src="bower_components/jquery-ui/ui/core.js"></script>
+<script src="bower_components/jquery-ui/ui/widget.js"></script>
+<script src="bower_components/jquery-ui/ui/menu.js"></script>
+<script src="bower_components/jquery-ui/ui/position.js"></script>
+<script src="bower_components/jquery-ui/ui/selectmenu.js"></script>
+<script src="bower_components/jquery-ui/ui/tabs.js"></script>
+<script src="bower_components/jquery-ui/ui/autocomplete.js"></script>
+<script src="bower_components/angular-ui-sortable/sortable.js"></script>
+<script src="bower_components/jquery-toggles/toggles.js"></script>
+<script src="bower_components/angular-gettext/dist/angular-gettext.js"></script>
+<script src="bower_components/select2/dist/js/select2.full.min.js"></script>
+<script src="bower_components/select2/dist/js/i18n/ja.js"></script>
+<script src="bower_components/rowsorter/dist/RowSorter.js"></script>
+<script src="bower_components/datatables/media/js/jquery.dataTables.js"></script>
+<script src="bower_components/datatables-bootstrap3/BS3/assets/js/datatables.js"></script>
+<script src="bower_components/moment/moment.js"></script>
+<script src="bower_components/moment/locale/ja.js"></script>
+<script src="bower_components/moment/locale/vi.js"></script>
+<script src="bower_components/datatables.net/js/jquery.dataTables.js"></script>
+<script src="bower_components/angular-datatables/dist/angular-datatables.min.js"></script>
+<script src="bower_components/jquery.steps/build/jquery.steps.js"></script>
+<script src="bower_components/jquery.gritter/js/jquery.gritter.js"></script>
+<script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ja.min.js"></script>
+<script src="bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.vi.min.js"></script>
+<script src="bower_components/angular-ui-select2/src/select2.js"></script>
+<script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
+<script src="bower_components/pdfmake/build/pdfmake.js"></script>
+<script src="bower_components/html2canvas/build/html2canvas.js"></script>
+<script src="bower_components/canvas2image/canvas2image/canvas2image.js"></script>
+<script src="bower_components/ScrollToFixed/jquery-scrolltofixed.js"></script>
+<script src="bower_components/angular-elastic/elastic.js"></script>
+<script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+<script src="bower_components/respond/dest/respond.src.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+<script src="js/custom-config.js"></script>
+<script src="js/language.js"></script>
+<!-- Real user service that uses an api -->
+<!-- <script src="app-services/user.service.js"></script> -->
+
+<script src="scripts/d3.v3.min.js"></script>
+<script src="scripts/d3.layout.js"></script>
+
+<!-- build:js scripts/scripts.js -->
+<script src="app.js"></script>
+<script src="app-services/base.service.js"></script>
+<script src="app-services/authentication.service.js"></script>
+<script src="app-services/departments.service.js"></script>
+<script src="app-services/flash.service.js"></script>
+<script src="app-services/user.service.local-storage.js"></script>
+<script src="app-services/question.service.js"></script>
+<script src="app-services/survey.service.js"></script>
+<script src="app-services/patient.survey.service.js"></script>
+<script src="modules/patient/patient.service.js"></script>
+
+
+<script src="scripts/controllers/GlobalController.js"></script>
+<script src="modules/login/login.controller.js"></script>
+<script src="js/translations.js"></script>
+<script src="modules/home/home.controller.js"></script>
+<script src="modules/patient/patient.controller.js"></script>
+<script src="modules/patient_survey/patient.survey.controller.js"></script>
+<script src="modules/patient_survey/patient.survey.branching.controller.js"></script>
+<script src="modules/questions/questions.controller.js"></script>
+<script src="modules/survey/survey.controller.js"></script>
+<script src="modules/survey/survey.settting.controller.js"></script>
+<script src="modules/patient/patient.branching.controller.js"></script>
+<!-- endbuild -->
+</body>
+</html>

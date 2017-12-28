@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <DebugType>
+    </DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A06EAE25-6D9E-481C-A0F8-07957D8C186D}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>PHYS.PHY2001U04</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>IHIS.PHYS</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IHIS.BizObjects, Version=1.0.5686.25217, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\IHIS.BizObjects.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.CloudConnector, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\IHIS.CloudConnector.dll</HintPath>
+    </Reference>
+    <Reference Include="IHIS.Controls, Version=1.0.5686.26042, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\IHIS.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.DbControls, Version=1.0.5686.25215, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\IHIS.DbControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.Forms, Version=1.0.5686.26043, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\IHIS.Forms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.Service, Version=1.0.5686.26041, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\IHIS.Service.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.Win32, Version=1.0.5686.26042, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\IHIS.Win32.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.CloudConnector">
+      <HintPath>C:\IHISIHIS.CloudConnector.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.ComFunc">
+      <HintPath>C:\IHIS\IHIS.ComFunc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.X.Magic, Version=1.0.5686.26041, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\IHIS.X.Magic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PHYS.Lib.RehaBiz, Version=1.0.6428.17194, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\IHIS\PHYS\PHYS.Lib.RehaBiz.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="JubsuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JubsuForm.Designer.cs">
+      <DependentUpon>JubsuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewOrderOUT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewOrderOUT.designer.cs">
+      <DependentUpon>NewOrderOUT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PHY2001U04.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="NewOrderINP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewOrderINP.designer.cs">
+      <DependentUpon>NewOrderINP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RehaOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RehaOptions.Designer.cs">
+      <DependentUpon>RehaOptions.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="JubsuForm.en.resx">
+      <DependentUpon>JubsuForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JubsuForm.ja-JP.resx">
+      <DependentUpon>JubsuForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JubsuForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>JubsuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JubsuForm.vi-VN.resx">
+      <DependentUpon>JubsuForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewOrderINP.en.resx">
+      <DependentUpon>NewOrderINP.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewOrderINP.ja-JP.resx">
+      <DependentUpon>NewOrderINP.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewOrderINP.vi-VN.resx">
+      <DependentUpon>NewOrderINP.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewOrderOUT.en.resx">
+      <DependentUpon>NewOrderOUT.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewOrderOUT.ja-JP.resx">
+      <DependentUpon>NewOrderOUT.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewOrderOUT.resx">
+      <DependentUpon>NewOrderOUT.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewOrderOUT.vi-VN.resx">
+      <DependentUpon>NewOrderOUT.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PHY2001U04.en.resx">
+      <DependentUpon>PHY2001U04.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PHY2001U04.ja-JP.resx">
+      <DependentUpon>PHY2001U04.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PHY2001U04.resx">
+      <DependentUpon>PHY2001U04.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PHY2001U04.vi-VN.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PHY2001U04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewOrderINP.resx">
+      <DependentUpon>NewOrderINP.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RehaOptions.en.resx">
+      <DependentUpon>RehaOptions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RehaOptions.ja-JP.resx">
+      <DependentUpon>RehaOptions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RehaOptions.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RehaOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RehaOptions.vi-VN.resx">
+      <DependentUpon>RehaOptions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.en.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ja-JP.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.vi-VN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\전송_16.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\종료.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backcolor2.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TopControlBackground90.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewOrder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MdiFormINP.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MdiFormOUT.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>$(SolutionDir)..\IHISContentsBuild.bat PRE  $(SolutionDir)..\ $(TargetDir) $(SolutionName) $(TargetFileName)</PreBuildEvent>
+    <PostBuildEvent>$(SolutionDir)..\IHISContentsBuild.bat POST  $(SolutionDir)..\ $(TargetDir) $(SolutionName) $(TargetFileName)</PostBuildEvent>
+  </PropertyGroup>
+</Project>

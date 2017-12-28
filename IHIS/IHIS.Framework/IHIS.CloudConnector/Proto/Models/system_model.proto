@@ -1,0 +1,212 @@
+syntax = "proto2";
+
+// Main menu item
+message MainMenuItemInfo {
+	required string group_id = 1;
+	required string group_name = 2;
+	required string system_id = 3;
+	required string system_name = 4;
+	optional string display_group_id = 5;
+	optional string display_group_name = 6;
+	optional string description = 7;
+}
+
+message DataStringListItemInfo {
+	optional string data_value = 1;
+}
+
+// Combo List Item
+message ComboListItemInfo {
+	optional string code = 1;
+	optional string code_name = 2;
+}
+
+message TripleListItemInfo {
+	optional string item_1 = 1;
+	optional string item_2 = 2;
+	optional string item_3 = 3;
+}
+
+// FindPatientForm
+message FindPatientInfo{
+	optional string patient_code = 1;
+	optional string patient_name = 2;
+	optional string patient_name2 = 3;
+	optional string sex = 4;
+	optional string birth = 5;
+	optional string last_comming_date = 6;
+	optional string address = 7;
+	optional string ipwon_yn = 8;
+	optional string treatment_area = 9;
+	optional string tel = 10;
+}
+
+// --- [Start] XPaInfoBox ---
+message XPaInfoBoxInfo
+{
+optional string patient_name = 1;
+optional string patient_name2 = 2;
+optional string sex = 3;
+optional string year_age = 4;
+optional string month_age = 5;
+optional string department_code = 6;
+optional string department_name = 7;
+optional string birth = 8;
+optional string tel = 9;
+optional string tel1 = 10;
+optional string tel_hp = 11;
+optional string email = 12;
+optional string zip_code1 = 13;
+optional string zip_code2 = 14;
+optional string address1 = 15;
+optional string address2 = 16;
+}
+
+
+// --- [End] XPaInfoBox ---
+
+// Grid visit Insure
+message DetailPaInfoFormGridInsureInfo
+{
+	optional string start_date = 1;
+	optional string type_name = 2;
+	optional string end_date = 3;
+	optional string johap_name = 4;
+	optional string percentage = 5;
+	optional string percentage_no = 6;
+	optional string last_check_date = 7;
+}
+   
+   // Grid visit info
+ message DetailPaInfoFormGrdVisitListInfo
+ {
+	optional string coming_date = 1;
+	optional string department_name = 2;
+	optional string type_name = 3;
+	optional string doctor_name = 4;
+	optional string out_date = 5;
+ }
+ 
+ // UdpHelperSendInfo
+ message UdpHelperSendInfo {
+	optional string sender_id = 1;
+	optional string msg_title = 2;
+	optional string msg_contents = 3;
+	optional string recver_id = 4;
+	optional string data_value = 5;
+}
+ 
+ // Grid Comment
+ message DetailPaInfoFormGridCommentInfo
+ {
+	optional string comment = 1;
+ }
+ 
+ message BuseoInfo
+{
+	optional string buseo_code = 1;
+	optional string buseo_name = 2;
+}
+
+message UserRequestInfo {
+    optional string sys_id = 1; 
+    optional string user_id = 2; 
+    optional string user_scrt = 3; 
+    optional string scrt_check_yn = 4; 
+    optional string ip_addr = 5;
+}
+
+message UserItemInfo {
+    optional string user_nm = 1;
+    optional string user_dept = 2;
+    optional string dept_nm = 3;
+    optional string gwa_code = 4;
+    optional string gwa_name = 5;
+    optional string user_level = 6;
+    optional string user_group = 7;
+    optional string user_gubun = 8;
+    optional string buseo_gubun = 9;
+    optional string yaksok_com_id = 10;
+    optional string yaksok_open_id = 11;
+    optional string slip_com_id = 12;
+    optional string slip_open_id = 13;
+    optional string sang_com_id = 14;
+    optional string sang_open_id = 15;
+    optional string jindan_com_id = 16;
+    optional string jindan_open_id = 17;
+    optional string nurse_team = 18;
+    optional string cp_com_id = 19;
+    optional string cp_open_id = 20;
+    optional string input_gubun = 21;
+    optional string doctor_id = 22;
+}
+
+message FormGwaItemInfo {
+    optional string doctor = 1;
+    optional string doctor_gwa = 2;
+    optional string gwa_name = 3;
+}
+
+message FormScreenInfo {
+	optional string sys_id = 1;
+	optional string pgm_nm = 2;
+	optional string pgm_ent_grad = 3;
+	optional string pgm_upd_grad = 4;
+	optional string pgm_scrt = 5;
+	optional string pgm_dup_yn = 6;
+	optional string asm_name = 7;
+	optional string asm_path = 8;
+	optional string asm_ver = 9;
+	optional string grp_id = 10;
+}
+
+message MenuViewFormItemInfo{
+    optional string menu_tp = 1;
+    optional string menu_level = 2;
+    optional string tr_id = 3;
+    optional string menu_title = 4;
+    optional string pgm_id = 5;
+    optional string pgm_open_tp = 6;
+    optional string menu_param = 7;
+}
+
+// Start IHIS.Framework IHIS.Form Mdi Form
+
+message MdiFormMenuItemInfo {
+    optional string menu_level = 1;
+    optional string menu_tp = 2;
+    optional string pgm_nm = 3;
+    optional string tr_id = 4;
+    optional string pgm_id = 5;
+    optional string pgm_sys_id = 6;
+    optional string pgm_ent_grad = 7;
+    optional string pgm_upd_grad = 8;
+    optional string pgm_scrt = 9;
+    optional string pgm_dup_yn = 10;
+    optional string pgm_open_tp = 11;
+    optional string short_cut = 12;
+    optional string asm_name = 13;
+    optional string asm_path = 14;
+    optional string asm_ver = 15;
+    optional string menu_param = 16;
+}
+
+message MdiFormMainMenuItemInfo {
+    optional string pgm_sys_id = 1;
+    optional string pgm_id = 2;
+}
+
+// End IHIS.Framework IHIS.Form Mdi Form
+
+message LayConstantInfo
+{
+	optional string code = 1;
+	optional string code_name = 2;
+	optional string code_value = 3;
+}
+
+message CheckAdminUserInfo {
+	optional string user_scrt = 1;
+	optional string user_group = 2;
+	optional string user_yn = 3;
+}

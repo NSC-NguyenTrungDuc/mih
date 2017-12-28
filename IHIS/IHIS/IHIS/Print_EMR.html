@@ -1,0 +1,549 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Preview Patient Health/Medical Record Printing</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/modernizr-2.8.3.min.js"></script>
+	
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>	
+	<script type="text/javascript" src="js/handlebars.min.js"></script>
+</head>
+
+<body>
+<script id="some-template" type="text/x-handlebars-template">
+	{{#if IsDiseasePrinting}}
+    <page class="page" size="A4">
+        <header id="header">
+            <table class="header-table">
+                <thead>
+                    <tr>
+                        <th width="20%">&nbsp;</th>
+                        <th width="60%">
+                            <h1 class="page-title text-center">診 療 録</h1>
+                        </th>
+                        <th width="20%">
+                            <div class="small-text text-right">
+                                No: <strong>{{PageNumber}}</strong>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+        </header>
+        <div id="content">
+            <table class="table" cellspacing="0" cellpadding="0" border="1" align="" style="border:2px solid #000;">
+                <tr class="trhide">
+                    <td width="30">1</td>
+                    <td width="15">2</td>
+                    <td width="35">3</td>
+                    <td width="175">4</td>
+                    <td width="25">5</td>
+                    <td width="25">6</td>
+                    <td width="30">7</td>
+                    <td width="60">8</td>
+                    <td>9</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <th colspan="3">
+                        公費負担者番号
+                    </th>
+                    <td colspan="3" class="td-table">
+                        <table height="25" cellspacing="0" cellpadding="0" border="0" align="">
+                            <tr>
+                                <td class="text-center" width="12.5%" style="border-right-style:1px solid #f5f5f5;">{{InsPersonNoChracters.[0]}}</td>
+                                <td class="text-center" width="12.5%" style="border-right-width: 2px">{{InsPersonNoChracters.[1]}}</td>
+                                <td class="text-center" width="12.5%" style="border-right-style:1px solid #f5f5f5;">{{InsPersonNoChracters.[2]}}</td>
+                                <td class="text-center" width="12.5%" style="border-right-width: 2px">{{InsPersonNoChracters.[3]}}</td>
+                                <td class="text-center" width="12.5%" style="border-right-style:1px solid #f5f5f5;">{{InsPersonNoChracters.[4]}}</td>
+                                <td class="text-center" width="12.5%" style="border-right-style:1px solid #f5f5f5;">{{InsPersonNoChracters.[5]}}</td>
+                                <td width="29" class="text-center" width="12.5%" style="border-right-style:1px solid #f5f5f5;">{{InsPersonNoChracters.[6]}}</td>
+                                <td width="29" width="12.5%" class="text-center">{{InsPersonNoChracters.[7]}}</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <th colspan="2">
+                        保険者番号
+                    </th>
+                    <td colspan="2" class="td-table">
+                        <table height="25" cellspacing="0" cellpadding="0" border="0" align="">
+                            <tr>
+                                <td class="text-center" width="11.11%" style="border-right-style:1px solid #f5f5f5;">{{InsProviderNoChracters.[0]}}</td>
+                                <td class="text-center" width="11.11%" style="border-right-width: 2px">{{InsProviderNoChracters.[1]}}</td>
+                                <td class="text-center" width="11.11%" style="border-right-style:1px solid #f5f5f5;">{{InsProviderNoChracters.[2]}}</td>
+                                <td class="text-center" width="11.11%" style="border-right-width: 2px">{{InsProviderNoChracters.[3]}}</td>
+                                <td class="text-center" width="11.11%" style="border-right-style:1px solid #f5f5f5;">{{InsProviderNoChracters.[4]}}</td>
+                                <td class="text-center" width="11.11%" style="border-right-style:1px solid #f5f5f5;">{{InsProviderNoChracters.[5]}}</td>
+                                <td class="text-center" width="11.11%" style="border-right-width: 2px">{{InsProviderNoChracters.[6]}}</td>
+                                <td class="text-center" width="11.11%" style="border-right-style:1px solid #f5f5f5;">{{InsProviderNoChracters.[7]}}</td>
+                                <td class="text-center" width="11.11%">{{InsProviderNoChracters.[8]}}</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="3">
+                        <div>公費負担医療の</div>
+                        <div>受給者番号</div>
+                    </th>
+                    <td colspan="3" class="td-table">
+                        <table height="45" cellspacing="0" cellpadding="0" border="0" align="">
+                            <tr>
+                                <td class="text-center" width="12.5%" style="border-right-style:1px solid #f5f5f5;">&nbsp;
+                                    <br>{{RecipientNoChracters.[0]}}</td>
+                                <td class="text-center" width="12.5%" style="border-right-style:1px solid #f5f5f5;">&nbsp;
+                                    <br>{{RecipientNoChracters.[1]}}</td>
+                                <td class="text-center" width="12.5%" style="border-right-width: 2px">&nbsp;
+                                    <br>{{RecipientNoChracters.[2]}}</td>
+                                <td class="text-center" width="12.5%" style="border-right-style:1px solid #f5f5f5;">&nbsp;
+                                    <br>{{RecipientNoChracters.[3]}}</td>
+                                <td class="text-center" width="12.5%" style="border-right-style:1px solid #f5f5f5;">&nbsp;
+                                    <br>{{RecipientNoChracters.[4]}}</td>
+                                <td class="text-center" width="12.5%" style="border-right-width: 2px">&nbsp;
+                                    <br>{{RecipientNoChracters.[5]}}</td>
+                                <td width="29" class="text-center" width="12.5%" style="border-right-style:1px solid #f5f5f5;">&nbsp;
+                                    <br>{{RecipientNoChracters.[6]}}</td>
+                                <td width="29" width="12.5%" class="text-center">&nbsp;
+                                    <br>{{RecipientNoChracters.[7]}}</td>
+                            </tr>
+                        </table>
+                    </td>
+                    </td>
+                    <th colspan="2">
+                        記号・番号
+                    </th>
+                    <td colspan="2">
+                        {{InsCode}} ・{{Number}}
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        患者ID
+                    </th>
+                    <td colspan="2">
+						{{PatientCode}}
+                    </td>
+                    <td colspan="2" class="text-center">
+                        {{Gender}}
+                    </td>
+                    <th colspan="2">
+                        有効期限
+                    </th>
+                    <td colspan="2">
+                          {{ExpireDate}}
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2" rowspan="2">
+                        氏名
+                    </th>
+                    <td colspan="4">
+                        <strong>{{NameKana}}</strong>
+                    </td>
+                    <th colspan="2">
+                        被保険者氏名
+                    </th>
+                    <td colspan="2">
+                        {{InsInstitutionalName}}
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <strong>{{NameKanji}}</strong>
+                    </td>
+                    <th colspan="2">
+                        資格取得日
+                    </th>
+                    <td colspan="2">
+                        {{EffectiveDate}}
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="1" rowspan="2">
+                        住所
+                    </th>
+                    <td colspan="5" rowspan="2">
+                        {{PatientAddress}}
+                    </td>
+                    <th rowspan="2" class="text-center">
+                        <div>事</div>
+                        <div>業</div>
+                        <div>所</div>
+                    </th>
+                    <th>
+                        所在地
+                    </th>
+                    <td colspan="2">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        名　称
+                    </th>
+                    <td colspan="2">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        生年月日
+                    </th>
+                    <td colspan="2">
+                        {{Birthday}}
+                    </td>
+                    <td>
+                        {{Age}}
+                    </td>
+                    <td class="text-center">
+                        歳
+                    </td>
+                    <th rowspan="2" class="text-center">
+                        <div>
+                            保
+                        </div>
+                        <div>
+                            険
+                        </div>
+                        <div>
+                            険
+                        </div>
+                    </th>
+                    <th>
+                        所在地
+                    </th>
+                    <td colspan="2">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        TEL
+                    </th>
+                    <td colspan="2">
+                        {{PatientTel}}
+                    </td>
+                    <td colspan="2" class="text-center">
+                        本人
+                    </td>
+                    <th>
+                        名　称
+                    </th>
+                    <td colspan="2">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="10">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="5">
+                        傷　病　名
+                    </th>
+                    <th class="text-center">
+                        <div>職</div>
+                        <div>務</div>
+                    </th>
+                    <th colspan="2" class="text-center">
+                        開始
+                    </th>
+                    <th class="text-center">
+                        終了
+                    </th>
+                    <th class="text-center">
+                        転記
+                    </th>
+                </tr>
+				{{#each DiseasePrintInfos}}
+                <tr>
+                    <td colspan="5">
+                        {{Disease}}
+                    </td>
+                    <td class="text-center">
+                        <div>上</div>
+                        <div>・</div>
+                        <div>外</div>
+                    </td>
+                    <td colspan="2" class="text-center">
+                        {{StartDate}}
+                    </td>
+                    <td class="text-center">
+                        {{EndDate}}
+                    </td>
+                    <td class="text-center">
+                        <div>{{Reason}}</div>
+                        <div>
+                            {{EndDate}}
+                        </div>
+                    </td>
+                </tr>
+				{{/each}}
+            </table>
+			&nbsp;
+			<table class="table" cellspacing="0" cellpadding="0" border="1" align="" style="border:2px solid #000;">
+				<tr>
+					<th width="30" rowspan="2" class="text-center">
+						<div>備</div>
+						<div>考</div>
+					</th>
+					<td width="300" rowspan="2">
+						&nbsp;
+					</td>
+					<th width="100">
+						公費負担者番号
+					</th>
+					<td class="td-table">
+						<table height="25" cellspacing="0" cellpadding="0" border="0" align="">
+							<tr>
+								<td class="text-center" width="12.5%" style="border-right-style:1px solid #f5f5f5;">{{InsPersonNoChracters2.[0]}}</td>
+								<td class="text-center" width="12.5%" style="border-right-width: 2px">{{InsPersonNoChracters2.[1]}}</td>
+								<td class="text-center" width="12.5%" style="border-right-style:1px solid #f5f5f5;">{{InsPersonNoChracters2.[2]}}</td>
+								<td class="text-center" width="12.5%" style="border-right-width: 2px">{{InsPersonNoChracters2.[3]}}</td>
+								<td class="text-center" width="12.5%" style="border-right-style:1px solid #f5f5f5;">{{InsPersonNoChracters2.[4]}}</td>
+								<td class="text-center" width="12.5%" style="border-right-style:1px solid #f5f5f5;">{{InsPersonNoChracters2.[5]}}</td>
+								<td width="29" width="12.5%" class="text-center" >{{InsPersonNoChracters2.[6]}}</td>
+								<td width="29" width="12.5%" class="text-center">{{InsPersonNoChracters2.[7]}}</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<div>公費負担医療の</div>
+						<div>受給者番号</div>
+					</th>
+					<td class="td-table">
+						<table height="45" cellspacing="0" cellpadding="0" border="0" align="">
+							<tr>
+								<td class="text-center" width="12.5%" style="border-right-style:1px solid #f5f5f5;">&nbsp;
+									<br>{{RecipientNoChracters2.[0]}}</td>
+								<td class="text-center" width="12.5%" style="border-right-style:1px solid #f5f5f5;">&nbsp;
+									<br>{{RecipientNoChracters2.[1]}}</td>
+								<td class="text-center" width="12.5%" style="border-right-width: 2px">&nbsp;
+									<br>{{RecipientNoChracters2.[2]}}</td>
+								<td class="text-center" width="12.5%" style="border-right-style:1px solid #f5f5f5;">&nbsp;
+									<br>{{RecipientNoChracters2.[3]}}</td>
+								<td class="text-center" width="12.5%" style="border-right-style:1px solid #f5f5f5;">&nbsp;
+									<br>{{RecipientNoChracters2.[4]}}</td>
+								<td class="text-center" width="12.5%" style="border-right-width: 2px">&nbsp;
+									<br>{{RecipientNoChracters2.[5]}}</td>
+								<td width="29" width="12.5%" class="text-center">&nbsp;
+									<br>{{RecipientNoChracters2.[6]}}</td>
+								<td width="29" width="12.5%" class="text-center">&nbsp;
+									<br>{{RecipientNoChracters2.[7]}}</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+        </div>
+        <footer id="footer">
+            <div class="footer-table">
+                <table class="table">
+                    <tr>
+                        <td align = "right">{{HospitalName}}</td>
+                    </tr>
+                </table>
+            </div>
+        </footer>
+    </page>
+	{{/if}}
+	<hr>
+    <page class="page" size="A4">
+        <header id="header">
+            <table class="header-table">
+                <thead>
+                    <tr>
+                        <th width="20%">&nbsp;</th>
+                        <th width="60%">
+                            <h1 class="page-title text-center">診 療 録</h1>
+                        </th>
+                        <th width="20%">
+                            <div class="small-text text-right">
+                                No: <strong>{{PageNumber}}</strong>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+        </header>
+        <div id="content">
+            <table class="table" cellspacing="0" cellpadding="0" border="1" align="" style="border:2px solid #000">
+                <tbody>
+                    <tr class="trhide">
+                        <td>1</td>
+                        <td width="120">2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td width="20">6</td>
+                        <td width="50">7</td>
+                        <td width="40">8</td>
+                        <td width="30">9</td>
+                        <td>10</td>
+                        <td width="40">11</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <th width="54">患者ID</th>
+                        <td colspan="6">{{PatientCode}}</td>
+                        <th colspan="2">発行期間</th>
+                        <td>{{FirstExaminationDate}}</td>
+                        <td class="text-center">～</td>
+                        <td>{{LastExaminationDate}}</td>
+                    </tr>			
+					{{#if IsPatientInfo}}	
+                    <tr>
+                        <th>氏名</th>
+                        <td colspan="5"><strong>{{NameKanji}}</strong></td>
+                        <td class="text-center">{{Gender}}</td>
+                        <th class="text-center">科</th>
+                        <td colspan="2">{{Department}}</td>
+                        <td class="text-center">担当医</td>
+                        <td><strong>{{DoctorNameUserName}}</strong></td>
+                    </tr>
+                    <tr>
+                        <th>生年月日</th>
+                        <td>{{Birthday}}</td>
+                        <td>{{Age}}</td>
+                        <td class="text-center">歳</td>
+                        <td rowspan="2">
+                            <div>保</div>
+                            <div>険</div>
+                        </td>
+                        <td width="70" colspan="2" rowspan="2">
+                            <div class="break-word text-center" style="width: 80px">
+                                 {{InsuranceClassification}}
+                            </div>
+                        </td>
+                        <th class="text-center">病名</th>
+                        <td colspan="4" class="text-center">{{Disease}}</td>
+                    </tr>
+                    <tr>
+                        <th>TEL</th>
+                        <td colspan="3">{{PatientTel}}</td>
+                        <th class="text-center">住所</th>
+                        <td colspan="4">{{PatientAddress}}</td>
+                    </tr>
+					{{else}}
+						<tr>
+						<th>氏名</th>
+						<td colspan="12"><strong>{{NameKanji}}</strong></td>
+						</tr>
+					{{/if}}
+                    <tr>
+                        <td colspan="12">&nbsp;</td>
+                    </tr>
+                    <tr style="border-top:2px solid #000;border-bottom:2px solid #000">
+                        <td colspan="7" class="text-center"><strong>既往歴・原因・主要症状・経過等</strong></td>
+                        <td colspan="5" class="text-center"><strong>処方・手術・処置等</strong></td>
+                    </tr>
+					{{#each EmrPrintInfos}}
+                    <tr>
+                        <th colspan="12">診療日: {{ExaminationDate}}</th>
+                    </tr>
+                    <tr>
+                        <td colspan="7" valign="top">
+                            <table class="table">
+								{{#each TagPrintInfos}}
+								<tr>
+                                    <td width="80" valign ="top"><span>{{TagCode}}</span> <span>{{TagName}}</span></td>
+									{{#if IsImage}}
+                                    <td>
+										<div>
+											<img src="{{ImageLink}}" alt="" class="img fiximgpri"> 
+										</div>
+									</td>
+									{{else}}
+										<td style = "word-break: break-all;">{{TagContent}}</td>
+									{{/if}}
+                                </tr>
+                                {{/each}}
+                            </table>
+                        </td>
+                        <td colspan="5" valign="top">
+						{{#if @root.IsOrderInfo}}						
+							{{#each OrderPrintInfos}}		                           
+							<table cellspacing="0" cellpadding="0" border="0" align="">
+								<tr>
+								<td style="width:250px;" colspan="2">{{OrderClassification}}</td>
+                                    <td>{{DoctorNameFromMml}}</td>
+								</tr>
+                                <tr>
+								{{#if IsMixSet}}
+									<td rowspan="7" valign="top" style="   width: 15px;"><strong>M</strong></td>
+									{{else}}
+									<td rowspan="7" valign="top" style="   width: 15px;"><strong> </strong></td>
+								{{/if}}								                                    
+                                </tr>
+                                <tr>                                    									
+                                    <td valign = "top">{{OrderName}}</td>									
+                                    <td width = "20%" align = "right">{{OrderContent}}</td>
+                                </tr>
+								{{#if IsComment}}
+								<tr>
+                                    <td colspan="2"> ∟{{Comment}}</td>
+                                </tr>
+								{{/if}}
+								{{#if IsHopeDate}}
+								<tr>
+                                    <td colspan="2" > 希望日: {{HopeDate}}</td>
+                                </tr>
+								{{/if}}
+								{{#if IsUnequalDosage}}
+								<tr>
+                                    <td colspan="2"> ※分割: {{UnequalDosage}}</td>
+                                </tr>
+								{{/if}}
+								{{#if IsDosage}}
+								<tr>
+                                    <td  style="padding-left:10px;" valign = "top"><strong>{{Dosage}}</strong></td>
+                                    <td align = "right"><strong>{{NumberOfDay}} 日</strong></td>
+                                </tr>
+								{{/if}}
+								{{#if IsInjectionGuide}}
+								<tr>
+                                    <td  style="padding-left:10px;"><strong>{{JusaName}}</strong></td>
+                                </tr>
+								{{/if}}
+                            </table>
+							{{#if IsBlank}}
+							&nbsp;
+							{{/if}}
+                            {{/each}}											
+							{{/if}}
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+        <footer id="footer">
+            <div class="footer-table">
+                <table class="table">
+                    <tr>
+                        <td align = "right">{{HospitalName}}</td>
+                    </tr>
+                </table>
+            </div>
+        </footer>
+    </page>
+</script>	
+</body>
+
+</html>
+
+
+
+
+

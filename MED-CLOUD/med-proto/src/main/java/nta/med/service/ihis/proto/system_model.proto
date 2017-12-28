@@ -1,0 +1,829 @@
+
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "SystemModelProto";
+
+message MainMenuItemInfo {
+	required string group_id = 1;
+	required string group_name = 2;
+	required string system_id = 3;
+	required string system_name = 4;
+	optional string display_group_id = 5;
+	optional string display_group_name = 6;
+	optional string description = 7;
+}
+
+
+message PatientInfo 
+{
+        optional string patient_name1   = 1;
+        optional string patient_name2   = 2;
+        optional string sex             = 3;
+        optional string year_age        = 4;
+        optional string month_age       = 5;
+        optional string type            = 6;
+        optional string code_nm         = 7;
+        optional string birth           = 8;
+        optional string tel             = 9;
+        optional string tel1            = 10;
+        optional string tel_hp          = 11; 
+        optional string email           = 12;
+        optional string zip_code1       = 13;
+        optional string zip_code2       = 14;
+        optional string address1        = 15;
+        optional string address2        = 16;
+		optional string tel_gubun1      = 17;                        
+		optional string tel_gubun2      = 18;                        
+		optional string tel_gubun3      = 19;
+		optional string pwd             = 20;        
+}
+
+
+message PrivateInsInfo
+{
+        optional string gubun               = 1;                
+        optional string johap               = 2;                
+        optional string piname              = 3;                
+        optional string gaein               = 4;                
+        optional string gaein_no            = 5;
+        optional string bon_ga_gubun        = 6;                        
+        optional string start_date          = 7;                                
+ 		optional string end_date            = 8;                                
+        optional string chuiduck_date       = 9;
+}
+
+message PublicInsInfo
+{
+	optional string gongbi_code          = 1;                        
+	optional string budamja_bunho        = 2;                                
+	optional string sugubja_bunho        = 3;                                
+	optional string start_date           = 4;                        
+	optional string end_date             = 5;
+}
+
+// XPaInfoBox 
+message XPaInfoBoxInfo{
+         optional string patient_name = 1;
+         optional string patient_name2 = 2;
+         optional string sex = 3;
+         optional string year_age = 4;
+         optional string month_age = 5;
+         optional string department_code = 6;
+         optional string department_name = 7;
+         optional string birth = 8;
+         optional string tel = 9;
+         optional string tel1 = 10;
+         optional string tel_hp = 11;
+         optional string email = 12;
+         optional string zip_code1 = 13;
+         optional string zip_code2 = 14;
+         optional string address1 = 15;
+         optional string address2 = 16;
+ }
+ 
+ // BAS0123 Manage Zip code
+message BasManageZipCodeInfo{
+    optional string zip_code = 1;
+    optional string zip_name1 = 2;
+    optional string zip_name2 = 3;
+    optional string zip_name3 = 4;
+    optional string zip_name_gaga1 = 5;
+    optional string zip_name_gaga2 = 6;
+    optional string zip_name_gaga3 = 7;
+    optional string zip_code1 = 8;
+    optional string zip_code2 = 9;
+}
+
+// FindPatientForm
+message FindPatientInfo{
+    optional string patient_code = 1;
+    optional string patient_name = 2;
+    optional string patient_name2 = 3;
+    optional string sex = 4;
+    optional string birth = 5;
+    optional string last_comming_date = 6;
+    optional string address = 7;
+    optional string ipwon_yn = 8;
+    optional string treatment_area = 9;
+    optional string tel = 10;
+}
+
+
+message DetailPaInfoFormGridInsureInfo{
+    optional string start_date = 1;
+    optional string type_name = 2;
+    optional string end_date = 3;
+    optional string johap_name = 4;
+    optional string percentage = 5;
+    optional string percentage_no = 6;
+    optional string last_check_date = 7;
+}
+
+// Grid visit info
+message DetailPaInfoFormGridVisitListInfo{
+    optional string coming_date = 1;
+    optional string department_name = 2;
+    optional string type_name = 3;
+    optional string doctor_name = 4;
+    optional string out_date = 5;
+}
+
+message DetailPaInfoFormGridCommentInfo{
+    optional string comment = 1;
+}
+
+message BuseoInfo{
+    optional string buseo_code = 1;
+    optional string buseo_name = 2;
+}
+
+message FormGwaItemInfo {
+    optional string doctor = 1;
+    optional string doctor_gwa = 2;
+    optional string gwa_name = 3;
+}
+
+message UserItemInfo {
+    optional string user_nm = 1;
+    optional string user_dept = 2;
+    optional string dept_nm = 3;
+    optional string gwa_code = 4;
+    optional string gwa_name = 5;
+    optional string user_level = 6;
+    optional string user_group = 7;
+    optional string user_gubun = 8;
+    optional string buseo_gubun = 9;
+    optional string yaksok_com_id = 10;
+    optional string yaksok_open_id = 11;
+    optional string slip_com_id = 12;
+    optional string slip_open_id = 13;
+    optional string sang_com_id = 14;
+    optional string sang_open_id = 15;
+    optional string jindan_com_id = 16;
+    optional string jindan_open_id = 17;
+    optional string nurse_team = 18;
+    optional string cp_com_id = 19;
+    optional string cp_open_id = 20;
+    optional string input_gubun = 21;
+    optional string doctor_id = 22;
+    optional string hosp_code = 23;
+	optional string hosp_name = 24;
+}
+
+message UserRequestInfo {
+    optional string sys_id = 1; 
+    optional string user_id = 2; 
+    optional string user_scrt = 3; 
+    optional string scrt_check_yn = 4; 
+    optional string ip_addr = 5;
+}
+
+message MdiFormMenuItemInfo {
+    optional string menu_level = 1;
+    optional string menu_tp = 2;
+    optional string pgm_nm = 3;
+    optional string tr_id = 4;
+    optional string pgm_id = 5;
+    optional string pgm_sys_id = 6;
+    optional string pgm_ent_grad = 7;
+    optional string pgm_upd_grad = 8;
+    optional string pgm_scrt = 9;
+    optional string pgm_dup_yn = 10;
+    optional string pgm_open_tp = 11;
+    optional string short_cut = 12;
+    optional string asm_name = 13;
+    optional string asm_path = 14;
+    optional string asm_ver = 15;
+    optional string menu_param = 16;
+}
+message MdiFormOpenMainScreenInfo
+{
+	optional string pgm_sys_id = 1;
+	optional string pgm_id = 2;
+}
+message MdiFormMainMenuItemInfo {
+    optional string pgm_sys_id = 1;
+    optional string pgm_id = 2;
+}
+
+// ----[START] Orderbiz
+// orderbiz LoadCht0110Info
+message OcsoLoadCht0110Info
+{
+    optional string sang_code = 1;
+    optional string sang_name = 2;
+    optional string icd9_code = 3;
+}
+
+message LoadPatientBaseInfo
+{
+    optional string io_suname               = 1;
+    optional string io_suname2              = 2;
+    optional string io_sujumin1             = 3;
+    optional string io_sujumin2             = 4;
+    optional string io_sex                  = 5;
+    optional string io_birth                = 6;
+    optional string io_age                  = 7;
+    optional string io_age_num              = 8;
+    optional string io_weight               = 9;
+    optional string io_height               = 10;
+    optional string io_zip_code1            = 11;
+    optional string io_zip_code2            = 12;
+    optional string io_address1             = 13;
+    optional string io_address2             = 14;
+    optional string io_tel                  = 15;
+    optional string io_tel1                 = 16;
+    optional string io_tel_hp               = 17;
+    optional string io_pace_maker_yn        = 18;
+    optional string io_dummy2               = 19;
+    optional string io_dummy3               = 20;
+    optional string io_flag                 = 21;
+}
+
+message PrOcsLoadIpwonReserInfo
+{
+	optional string reser_date = 1;
+    optional string ipwon_gwa = 2;
+    optional string parent_gwa = 3;
+    optional string resident = 4; // doctor in sp
+    optional string flag = 5;
+}
+
+message FnInpLoadJaewonIlsuInfo
+{
+    optional string cp_code = 1;
+    optional string app_date = 2;
+}
+
+message PrOcsLoadIpwonInfo
+{
+    optional string chisik_yn                      = 1;
+    optional string weight_input_yn                = 2;
+    optional string wonyoi_order_yn                = 3;
+    optional string wonnae_sayu_code               = 4;
+    optional string wonnae_sayu_name               = 5;
+    optional string cht_ipwon_date                 = 6;
+    optional string double_ipwon_type              = 7;
+    optional string ipwon_gwa                      = 8;
+    optional string parent_gwa                     = 9;
+    optional string resident                       = 10;
+    optional string resident_name                  = 11;
+    optional string drg_yn                         = 12;
+    optional string drg_no                         = 13;
+    optional string inp_double_ipwon_type          = 14;
+    optional string toiwon_goji_yn                 = 15;
+    optional string toiwon_date                    = 16;
+    optional string incu_yn                        = 17;
+    optional string jinryo_result                  = 18;
+    optional string ga_toiwon_date                 = 19;
+    optional string simsa_magam_yn                 = 20;
+    optional string toiwon_res_date                = 21;
+    optional string flag                           = 22;
+}
+message GetJundaTableRequestInfo{
+	optional string ioe_gubun = 1;
+	optional string hangmog_code = 2;
+	optional string app_date = 3;
+	optional string jundal_part = 4;
+}
+
+
+message GetJundaTableResponseInfo{
+	optional string jundal_table_out = 1;
+	optional string jundal_part_out = 2;
+	optional string move_part = 3;
+	optional string jundal_table_inp = 4;
+	optional string jundal_part_inp = 5;
+}
+
+message HIOcsSpecificCommentInfo
+{
+    optional string specific_comment_name         = 1;
+    optional string specific_comment_sys_id       = 2;
+    optional string specific_comment_pgm_id       = 3;
+    optional string specific_comment_not_null     = 4;
+    optional string specific_comment_table_id     = 5;
+    optional string specific_comment_col_id       = 6;
+}
+
+message OcsoSelectedPatientInfo 
+{
+    optional string naewon_date= 1;
+    optional string bunho = 2;
+    optional string suname2 = 3;
+    optional string suname = 4;
+    optional string sex = 5;
+    optional string birth = 6;
+    optional string zip_code = 7;
+    optional string address = 8;
+    optional string tel= 9;
+    optional string naewon_key = 10;
+    optional string gwa = 11;
+    optional string doctor = 12;
+}
+
+message OpenAllergyInfo{
+    optional string bunho = 1;
+    optional string naewon_date = 2;
+}
+
+
+
+
+
+
+
+
+
+message AbleInsteadOrderInfo{
+    optional string bunho = 1;
+    optional string pkout1001 = 2;
+    optional string naewon_date = 3;
+}
+
+message DupCheckInputOutOrderInfo{
+    optional string bunho = 1;
+    optional string naewon_date = 2;
+    optional string gwa = 3;
+    optional string doctor = 4;
+    optional string naewon_type = 5;
+    optional string jubsu_no = 6;
+    optional string hangmog_code = 7;
+    optional string hope_date = 8;
+}
+
+message GetEnablePostApproveInfo {
+    optional string io_gubun = 1;
+    optional string approve_doctor = 2;
+}
+
+message UdpHelperSendInfo {
+    optional string sender_id = 1;
+    optional string msg_title = 2;
+    optional string msg_contents = 3;
+    optional string recver_id = 4;
+    optional string ip_addr = 5;
+}
+// ----[END] Orderbiz
+
+message FormScreenInfo{
+    optional string sys_id = 1;
+    optional string pgm_nm = 2;
+    optional string pgm_ent_grad = 3;
+    optional string pgm_upd_grad = 4;
+    optional string pgm_scrt = 5;
+    optional string pgm_dup_yn = 6;
+    optional string asm_name = 7;
+    optional string asm_path = 8;
+    optional string asm_ver = 9;
+    optional string grp_id = 10;
+}
+
+message MenuViewFormItemInfo{
+    optional string menu_tp = 1;
+    optional string menu_level = 2;
+    optional string tr_id = 3;
+    optional string menu_title = 4;
+    optional string pgm_id = 5;
+    optional string pgm_open_tp = 6;
+    optional string menu_param = 7;
+}
+
+
+message LayConstantInfo
+{
+	optional string code = 1;
+	optional string code_name = 2;
+	optional string code_value = 3;
+}
+//[START]OCSACT
+message FwPaCommentGrdCmmtFwkInfo
+{
+	optional string comments            = 1;
+	optional string display_yn          = 2;
+	optional string bunho               = 3;
+	optional string cmmt_gubun          = 4;
+	optional string jundal_table        = 5;
+	optional string jundal_part         = 6;
+	optional string in_out_gubun        = 7;
+	optional string fkocs               = 8;
+	optional string hangmog_code        = 9;
+	optional string ser                 = 10;
+}
+//[END]OCSACT
+
+message LoadOcs0131Info{
+    optional string code_type = 1;
+    optional string code_type_name = 2;
+    optional string choice_user = 3;
+    optional string ment = 4;
+    optional string sys_date = 5;
+    optional string upd_id = 6;
+    optional string upd_date = 7;
+}
+
+message LoadOcs0132Info{
+    optional string code_type = 1;
+    optional string code = 2;
+    optional string code_name = 3;
+    optional string value_point = 4;
+    optional string sort_key = 5;
+    optional string group_key = 6;
+    optional string ment = 7;
+    optional string sys_date = 8;
+    optional string upd_id = 9;
+    optional string upd_date = 10;
+}
+//[START] CACHE_PHY2001U04
+message PHY2001U04CboJubsuGubunInfo
+{
+	optional string code = 1;
+	optional string code_name = 2;
+	optional string sort_key = 3;
+}
+//[END] CACHE_PHY2001U04
+
+//[START] StartForm
+message AdmLoginFormCheckLoginUserInfo
+{
+	optional string user_id               = 1;
+	optional string user_nm               = 2;
+	optional string user_group            = 3;
+	optional string hosp_code             = 4;
+    optional string doctor_drug_check     = 5;
+    optional string check_kinki           = 6;
+    optional string check_interaction     = 7;
+    optional string check_dosage          = 8;
+    optional string rev_kinki_message     = 9;
+    optional string rev_kinki_disease     = 10;
+    optional string rev_dosage            = 11;
+    optional string rev_drug_checking     = 12;
+    optional string rev_interaction       = 13;
+    optional string rev_generic_name      = 14;
+    optional string language              = 15;
+    optional string change_pwd_flg        = 16;
+    optional string first_login_flg       = 17;
+    optional string last_pwd_change       = 18;
+    optional string pwd_history           = 19;
+    optional string current_time          = 20;
+    optional string end_time          	  = 21;
+    optional int32 clis_smo_id            = 22;
+    optional string cert_expired          = 23;
+    optional string inv_usage             = 24;
+    optional string use_phr               = 25;
+    optional string time_zone             = 26;
+}
+message NewMstDataListInfo
+{
+    optional string screen_name = 1;
+}
+message MainFormGetMainMenuItemInfo
+{
+	optional string grp_id           = 1;
+	optional string grp_nm           = 2;
+	optional string sys_id           = 3;
+	optional string sys_nm           = 4;
+	optional string disp_grp_id      = 5;
+	optional string disp_grp_nm      = 6;
+	optional string sys_desc         = 7;
+}
+//[END] StartForm
+
+//[START] OCS.Libs
+message CFFormUnevenPrescribeLayDRG0120Info
+{
+	optional string bogyong_code                 = 1;
+	optional string bogyong_name                 = 2;
+	optional string pattern                      = 3;
+	optional string bogyong_gubun                = 4;
+	optional string bogyong_jo_flag              = 5;
+	optional string bogyong_ju_flag              = 6;
+	optional string bogyong_seok_flag            = 7;
+	optional string bogyong_time1_flag           = 8;
+	optional string bogyong_time2_flag           = 9;
+	optional string bogyong_time3_flag           = 10;
+	optional string bogyong_time4_flag           = 11;
+	optional string bogyong_time5_flag           = 12;
+	optional string bogyong_time6_flag           = 13;
+	optional string bogyong_time7_flag           = 14;
+}
+//[END] OCS.Libs
+
+// [START] CheckHideButton
+message CheckHideButtonInfo
+{
+        optional string code = 1;
+        optional string code_name = 2;
+        optional string sort_key = 3;
+}
+// [END] CheckHideButton
+
+//[START] KINKI
+message DrugInteractionInfo{
+	optional string drug_id = 1;
+	optional string branch_number = 2;
+	optional string yj9_code = 3;
+	optional string described_clssification = 4;
+	optional string a5 = 5;
+	optional string a6 = 6;
+	optional string a7 = 7;
+	optional string a8 = 8;
+	optional string a9 = 9;
+	optional string order_note = 10;
+	optional string a11 = 11;
+	optional string comment = 12;
+}
+message DrugGenericNameInfo{
+	optional string drug_id = 1;
+	optional string branch_number = 2;
+	optional string yj9_code = 3;
+	optional string described_clssification = 4;
+	optional string order_note = 5;
+	optional string a6 = 6;
+	optional string yj9_code_effect = 7;
+	optional string a8 = 8;
+	optional string comment1 = 9;
+	optional string comment2 = 10;
+}
+message DrugDosageInfo{
+	optional string drug_id = 1;
+	optional string branch_number = 2;
+	optional string dosage_branch_number = 3;
+	optional string a4 = 4;
+	optional string a5 = 5;
+	optional string adaptation = 6;
+	optional string adaptation_related = 7;
+	optional string a8 = 8;
+	optional string age_clssification = 9;
+	optional string appropriate = 10;
+	optional string appropriate_condition = 11;
+	optional string a12 = 12;
+	optional string a13 = 13;
+	optional string one_dose = 14;
+}
+
+message DrugCheckingInfo{
+	optional string drug_id = 1;
+	optional string branch_number = 2;
+	optional string a3 = 3;
+	optional string a4 = 4;
+	optional string a5 = 5;
+	optional string a6 = 6;
+	optional string a7 = 7;
+	optional string a8 = 8;
+	optional string a9 = 9;
+	optional string yj_code = 10;
+	optional string a11 = 11;
+	optional string a12 = 12;
+	optional string a13 = 13;
+	optional string a14 = 14;
+	optional string a15 = 15;
+	optional string a16 = 16;
+	optional string a17 = 17;
+	optional string a18 = 18;
+	optional string a19 = 19;
+	optional string a20 = 20;
+	optional string a21 = 21;
+	optional string a22 = 22;
+	optional string a23 = 23;
+	optional string a24 = 24;
+	optional string a25 = 25;
+	optional string a26 = 26;
+	optional string a27 = 27;
+	optional string a28 = 28;
+}
+
+message DrugDosageAddtionInfo{
+	optional string drug_id = 1;
+	optional string branch_number = 2;
+	optional string dosage_branch_number = 3;
+	optional string a73 = 4;
+	optional string a74 = 5;
+	optional string a75 = 6;
+	optional string a76 = 7;
+	optional string a77 = 8;
+	optional string a78 = 9;
+	optional string a79 = 10;
+	optional string a80 = 11;
+	optional string a81 = 12;
+	optional string a82 = 13;
+	optional string a83 = 14;
+	optional string a84 = 15;
+	optional string a85 = 16;
+	optional string a86 = 17;
+	optional string a87 = 18;
+	optional string a88 = 19;
+	optional string a89 = 20;
+	optional string a90 = 21;
+	optional string a91 = 22;
+	optional string a92 = 23;
+	optional string a93 = 24;
+	optional string a94 = 25;
+	optional string a95 = 26;
+	optional string a96 = 27;
+	optional string a97 = 28;
+	optional string a98 = 29;
+	optional string a99 = 30;
+	optional string a100 = 31;
+	optional string a101 = 32;
+}
+
+message DrugDosageNormalInfo{
+	optional string drug_id = 1;
+	optional string branch_number = 2;
+	optional string dosage_branch_number = 3;
+	optional string daily_dose = 4;
+	optional string daily_dose_content = 5;
+	optional string dose_form = 6;
+	optional string daily_dose_form = 7;
+	optional string dosage_form_unit = 8;
+	optional string daily_number_doses = 9;
+	optional string a21 = 10;
+	optional string a22 = 11;
+	optional string a23 = 12;
+	optional string a24 = 13;
+	optional string a25 = 14;
+	optional string a26 = 15;
+	optional string a27 = 16;
+	optional string a28 = 17;
+	optional string a29 = 18;
+	optional string a30 = 19;
+	optional string a31 = 20;
+	optional string a32 = 21;
+	optional string a33 = 22;
+	optional string a34 = 23;
+	optional string a35 = 24;
+	optional string a36 = 25;
+	optional string a37 = 26;
+	optional string a38 = 27;
+	optional string a39 = 28;
+	optional string a40 = 29;
+	optional string a41 = 30;
+	optional string a42 = 31;
+	optional string a43 = 32;
+}
+message DrugDosageStandardInfo{
+	optional string drug_id = 1;
+	optional string branch_number = 2;
+	optional string dosage_branch_number = 3;
+	optional string a44 = 4;
+	optional string a45 = 5;
+	optional string a46 = 6;
+	optional string a47 = 7;
+	optional string a48 = 8;
+	optional string a49 = 9;
+	optional string a50 = 10;
+	optional string a51 = 11;
+	optional string a52 = 12;
+	optional string a53 = 13;
+	optional string a54 = 14;
+	optional string a55 = 15;
+	optional string a56 = 16;
+	optional string a57 = 17;
+	optional string a58 = 18;
+	optional string a59 = 19;
+	optional string a60 = 20;
+	optional string a61 = 21;
+	optional string a62 = 22;
+	optional string a63 = 23;
+	optional string a64 = 24;
+	optional string a65 = 25;
+	optional string a66 = 26;
+	optional string a67 = 27;
+	optional string a68 = 28;
+	optional string a69 = 29;
+	optional string a70 = 30;
+	optional string a71 = 31;
+	optional string a72 = 32;
+}
+message DrugKinkiDiseaseInfo{
+	optional string kinki_id = 1;
+	optional string disease_name = 2;
+	optional string index_term = 3;
+	optional string standard_disease_name = 4;
+	optional string disease_code = 5;
+	optional string icd10 = 6;
+	optional string decision_flg = 7;
+	optional string comment = 8;
+}
+message DrugKinkiMessageInfo{
+	optional string drug_id = 1;
+	optional string branch_number = 2;
+	optional string warning_level = 3;
+	optional string kinki_id = 4;
+	optional string message = 5;
+	optional string category = 6;
+}
+
+//[END] KINKI
+
+//[START] Accounting info
+message OrcaInfo{
+	optional string orca_ip               = 1;
+    optional string orca_user             = 2;
+    optional string orca_password         = 3;
+    optional string orca_port             = 4;
+    optional string orca_hosp_code        = 5;
+    optional string orca_port_rcv_claim   = 6;
+    optional string orca_cloud_yn         = 7;
+}
+message MisaInfo{
+	optional string misa_ip                = 1;
+    optional string misa_user              = 2;
+    optional string misa_pwd               = 3;
+    optional string misa_db_insur_name     = 4;
+    optional string misa_instance_name     = 5;
+    optional string misa_db_non_insur_name = 6;
+}
+//[END] Accounting info
+
+message GetORCAEnvInfo
+{
+        optional string orca_ip          = 1;
+        optional string orca_port        = 2;
+        optional string orca_user        = 3;
+        optional string orca_pwd         = 4;
+}
+message CacheRevisionInfo
+{
+	optional string table_name = 1;
+	required int32  revision   = 2;
+}
+
+// [START] PHR API KC33
+message HospitalDetailInfo
+{
+	optional string hosp_code 		= 1;
+	optional string hosp_name 		= 2;
+	optional string address 		= 3;
+	optional string tel 			= 4;
+	optional string country_code 	= 5;
+}
+// [END] PHR API KC33
+
+message IntegratedEnvironment {
+    optional string hosp_code = 1;
+    repeated IntegratedInfo integrated_info = 2;
+}
+
+message IntegratedInfo {
+    optional string code_name = 1;
+    optional string value = 2;
+}
+//[START] GetHospitalInfo
+message HospitalInfomation{
+	optional string hosp_code = 1;
+	optional string hosp_name = 2;
+	optional string logo      = 3;
+	optional string address   = 4;
+	optional string locale    = 5;
+}
+// [END] GetHospitalInfo
+
+//[START] CheckInventory
+message OBCheckInventoryInfo
+{
+	optional string hangmog_code = 1;
+	optional string hangmog_name = 2;
+	optional string quantity     = 3;
+}
+
+
+message OBCheckInventoryParamInfo
+{
+	optional string hangmog_code = 1;
+	optional string hangmog_name = 2;
+	optional string suryang      = 3;
+	optional string dv           = 4;
+	optional string nalsu        = 5;
+	optional string pkocs1003    = 6;
+	optional string dv_time = 7;
+}
+//[END] CheckInventory
+
+//[END] CheckInventory
+
+// [BEGIN] ACCOUNT INFO
+message SysAccountInfo {
+    optional string user_id		 		= 1;
+    optional string user_name 			= 2;
+}
+// [END] ACCOUNT INFO
+
+message WaitingPatientInfo
+{
+    optional string reservation_code        = 1;
+    optional string examination_date        =2;
+    optional string examination_time        =3;
+    optional string department_code         =4;
+    optional string department_name         =5;
+    optional string patient_name            =6;
+    optional string patient_code            =7;
+    optional string patient_name_kana       =8;
+    optional string doctor_code             =9;
+    optional string doctor_name             =10;
+    optional string sys_id                  =11;
+    optional string recept_time             =12;
+    optional string is_online                =13;
+    optional string nawon_yn                 =14;
+
+}

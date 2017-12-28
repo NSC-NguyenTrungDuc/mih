@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="ImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="ImageList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABA
+        CgAAAk1TRnQBSQFMAgEBBAEAARwBAAGkAQABEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
+        AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
+        AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
+        AWYDAAGZAwABzAIAATMDAAIzAgABMwFmAgABMwGZAgABMwHMAgABMwH/AgABZgMAAWYBMwIAAmYCAAFm
+        AZkCAAFmAcwCAAFmAf8CAAGZAwABmQEzAgABmQFmAgACmQIAAZkBzAIAAZkB/wIAAcwDAAHMATMCAAHM
+        AWYCAAHMAZkCAALMAgABzAH/AgAB/wFmAgAB/wGZAgAB/wHMAQABMwH/AgAB/wEAATMBAAEzAQABZgEA
+        ATMBAAGZAQABMwEAAcwBAAEzAQAB/wEAAf8BMwIAAzMBAAIzAWYBAAIzAZkBAAIzAcwBAAIzAf8BAAEz
+        AWYCAAEzAWYBMwEAATMCZgEAATMBZgGZAQABMwFmAcwBAAEzAWYB/wEAATMBmQIAATMBmQEzAQABMwGZ
+        AWYBAAEzApkBAAEzAZkBzAEAATMBmQH/AQABMwHMAgABMwHMATMBAAEzAcwBZgEAATMBzAGZAQABMwLM
+        AQABMwHMAf8BAAEzAf8BMwEAATMB/wFmAQABMwH/AZkBAAEzAf8BzAEAATMC/wEAAWYDAAFmAQABMwEA
+        AWYBAAFmAQABZgEAAZkBAAFmAQABzAEAAWYBAAH/AQABZgEzAgABZgIzAQABZgEzAWYBAAFmATMBmQEA
+        AWYBMwHMAQABZgEzAf8BAAJmAgACZgEzAQADZgEAAmYBmQEAAmYBzAEAAWYBmQIAAWYBmQEzAQABZgGZ
+        AWYBAAFmApkBAAFmAZkBzAEAAWYBmQH/AQABZgHMAgABZgHMATMBAAFmAcwBmQEAAWYCzAEAAWYBzAH/
+        AQABZgH/AgABZgH/ATMBAAFmAf8BmQEAAWYB/wHMAQABzAEAAf8BAAH/AQABzAEAApkCAAGZATMBmQEA
+        AZkBAAGZAQABmQEAAcwBAAGZAwABmQIzAQABmQEAAWYBAAGZATMBzAEAAZkBAAH/AQABmQFmAgABmQFm
+        ATMBAAGZATMBZgEAAZkBZgGZAQABmQFmAcwBAAGZATMB/wEAApkBMwEAApkBZgEAA5kBAAKZAcwBAAKZ
+        Af8BAAGZAcwCAAGZAcwBMwEAAWYBzAFmAQABmQHMAZkBAAGZAswBAAGZAcwB/wEAAZkB/wIAAZkB/wEz
+        AQABmQHMAWYBAAGZAf8BmQEAAZkB/wHMAQABmQL/AQABzAMAAZkBAAEzAQABzAEAAWYBAAHMAQABmQEA
+        AcwBAAHMAQABmQEzAgABzAIzAQABzAEzAWYBAAHMATMBmQEAAcwBMwHMAQABzAEzAf8BAAHMAWYCAAHM
+        AWYBMwEAAZkCZgEAAcwBZgGZAQABzAFmAcwBAAGZAWYB/wEAAcwBmQIAAcwBmQEzAQABzAGZAWYBAAHM
+        ApkBAAHMAZkBzAEAAcwBmQH/AQACzAIAAswBMwEAAswBZgEAAswBmQEAA8wBAALMAf8BAAHMAf8CAAHM
+        Af8BMwEAAZkB/wFmAQABzAH/AZkBAAHMAf8BzAEAAcwC/wEAAcwBAAEzAQAB/wEAAWYBAAH/AQABmQEA
+        AcwBMwIAAf8CMwEAAf8BMwFmAQAB/wEzAZkBAAH/ATMBzAEAAf8BMwH/AQAB/wFmAgAB/wFmATMBAAHM
+        AmYBAAH/AWYBmQEAAf8BZgHMAQABzAFmAf8BAAH/AZkCAAH/AZkBMwEAAf8BmQFmAQAB/wKZAQAB/wGZ
+        AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
+        AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
+        AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
+        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD//8A/wD/AP8AJQAJkAEA
+        AzAGAAnuCwAB7BgAAWsHsgFrAjABegEwBgAJ0wHuCQAD7BcAAWsHugFrATACegIwBAAB0wjcAdMB7ggA
+        AQQE7AsAAf8KAAFrBwkBawN6AVIBMAQAAdMDCQLTAwkB0wHuBwACAgEEBOwJAAIHAf8JAAG5AhkDuQIZ
+        AbkD5QFSAU8FAAHTARkB0wL0AdMCGQHTAe4GAAH6AwIBBATsBwAB7AMHAf8JAAK5A5oCuQTlAVIBTwYA
+        AdMEbwLTAe4HAAH6BAIBBATsBgAB7AQHAf8JAAF0A5oBdAEwAuUDTwFWAU8FAAFvApoCdQFvAe4IAAH6
+        AgIB+gICAQQE7AUAAewCBwHsAgcB/wcAAXQCGgFEAhoBdALlAU8CfQFWAVUBTwQAAW8DmgJ1AW8B7gcA
+        AfoCAgHsAfoCAgEEBOwEAAHsAgcBAAHsAgcB/wUAAXQHGgF0AeUBTwJ9AVYBVQFPAwABbwK9A5oCdQFv
+        Ae4GAAH6AgICAAH6AgIBBAPsBAAB7AIHAgAB7AIHAf8EAAF0ARoBRAMaAUQBGgF0AaADTwFWAU8EAAFv
+        AhoDmgGUAXUBbwHuBwAC+gMAAfoCAgEEAewGAALsAwAB7AIHAf8DAAF0BxoBdAOgAVIBTwUAAW8BGwIa
+        A5oCbwHuDQAB+gECAQQNAAHsAQcB/wMAAQ4BFQUaARUBDgOgAVIBTwUAAW8B9AEbAhoBmgNvAe4OAAH6
+        DwAC7AMACRACoAJSATAFAAFvAfYB9AEbBW8B7iMAARQBFQUUARUBFAGgA1IBMAYAB28B7iUABxIBoARS
+        ATAGAAdvAe4mAAVtBjAJAANvAe4GAAFCAU0BPgcAAT4DAAEoAwABQAMAASADAAEBAQABAQYAAQEWAAP/
+        gQAE/wEAAUcB4AEPAf4D/wEAAQcB4AEHAfwBfwL/AQABAwHAAQcB+AE/AfsB/wEAAQMBwAEHAfABHwHx
+        Af8BAAEDAeABBwHgAQ8B4AH/AYABAwHwAQ8B4AEHAeABfwHAAQEB8AEfAeABAwHgAT8BgAEAAfABDwHg
+        AQEB4gEfAgAB4AEHAeMBAQHjAQ8BAAEBAeABBwHzAYMB8wGHAQABAwHgAQcB/wHHAf8BxwEAAQMB4AEH
+        Af8B7wH/AecBAAEDAeABBwT/AQABAwHwAQ8E/wGAAQMB8AEPBP8BwAEHAfwBPxYACw==
+</value>
+  </data>
+  <data name="xEditGridCell1.HeaderText" xml:space="preserve">
+    <value>pkinp1001</value>
+  </data>
+  <data name="xEditGridCell2.HeaderText" xml:space="preserve">
+    <value>Ngày
+nhập viện</value>
+  </data>
+  <data name="xEditGridCell3.HeaderText" xml:space="preserve">
+    <value>Ngày
+ra viện</value>
+  </data>
+  <data name="xEditGridCell4.HeaderText" xml:space="preserve">
+    <value>gwa</value>
+  </data>
+  <data name="xEditGridCell5.HeaderText" xml:space="preserve">
+    <value>Khoa khám</value>
+  </data>
+  <data name="xEditGridCell6.HeaderText" xml:space="preserve">
+    <value>doctor</value>
+  </data>
+  <data name="xEditGridCell7.HeaderText" xml:space="preserve">
+    <value>BS phụ trách</value>
+  </data>
+  <data name="xEditGridCell8.HeaderText" xml:space="preserve">
+    <value>ho_dong</value>
+  </data>
+  <data name="xEditGridCell9.HeaderText" xml:space="preserve">
+    <value>Khu vực
+điều trị</value>
+  </data>
+  <data name="xEditGridCell10.HeaderText" xml:space="preserve">
+    <value>Phòng
+bệnh</value>
+  </data>
+  <data name="xEditGridCell11.HeaderText" xml:space="preserve">
+    <value>Giường
+bệnh</value>
+  </data>
+  <data name="xEditGridCell12.HeaderText" xml:space="preserve">
+    <value>Thời gian
+nhập viện</value>
+  </data>
+  <data name="xEditGridCell13.HeaderText" xml:space="preserve">
+    <value>jaewon_flag</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="grdINP1001.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="grdINP1001.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 66</value>
+  </data>
+  <data name="grdINP1001.QuerySQL" xml:space="preserve">
+    <value>SELECT A.PKINP1001
+     , TRUNC(A.IPWON_DATE) AS IPWON_DATE
+     , TRUNC(A.TOIWON_DATE) AS TOIWON_DATE
+     , A.GWA
+     , FN_BAS_LOAD_GWA_NAME(A.GWA, SYSDATE) AS GWA_NAME
+     , A.DOCTOR
+     , FN_BAS_LOAD_DOCTOR_NAME(A.DOCTOR, SYSDATE) AS DOCTOR
+     , A.HO_DONG1
+     , FN_BAS_LOAD_GWA_NAME(A.HO_DONG1, TRUNC(SYSDATE)) AS HO_DONG_NAME
+     , A.HO_CODE1
+     , A.BED_NO
+     , A.TOIWON_DATE - IPWON_DATE + 1 AS JAEWON_DAYS
+     , A.JAEWON_FLAG
+  FROM INP1001 A
+ WHERE A.HOSP_CODE = :f_hosp_code 
+   AND A.BUNHO = :f_bunho
+   AND ((A.IPWON_DATE BETWEEN :f_from_date AND :f_to_date)
+        OR (A.TOIWON_DATE BETWEEN :f_from_date AND :f_to_date)
+	OR A.TOIWON_DATE IS NULL)
+ ORDER BY A.IPWON_DATE DESC</value>
+  </data>
+  <data name="grdINP1001.Size" type="System.Drawing.Size, System.Drawing">
+    <value>608, 382</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="grdINP1001.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;grdINP1001.Name" xml:space="preserve">
+    <value>grdINP1001</value>
+  </data>
+  <data name="&gt;&gt;grdINP1001.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGrid, IHIS.DbControls, Version=1.0.5449.37789, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;grdINP1001.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grdINP1001.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnChiryo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhEAAQAIZLAM7MwZFrIO7QV///q7/AyfzDMP7qgLm5uNWrQP3PSf7zkv/6of////zIOuS/V/3Y
+        Wv3hbdSqNP3XW//zkv76ocvKx/7hbfzPSdSqO///qNLRnv//1/3+fP/5x///4P3lXv//8/3IOtSmMP/s
+        fO3LWf7aVNjZnP7UUMvHuv7uZ/7KPfS9MX1qSf//0f//6/z/kf//zv/8jNSiLM7Pmf//vczNl/7hbvzJ
+        Ov/2wfj83OfnvM/Qm83MntSkLv7qgdSqOP/kdP/zhP3XWv34cfzIO///6P//v//ecP//ldSqMf/8yv//
+        /wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEBAAAh+QQB
+        AABLACwAAAAAEAAQAAAIqgCXCBxIsGDBAwgRGhyIAEEFBhArOJiIgiACFwQyaiSQgwQLAAxB6OChYceM
+        GiaMCAgAUiCGIjQGyJw5YGXLJT88ZHhBYUHPBQtsDoywAQkHBUgnTFAgVGCSFjGGGDDgY6qBpktEwAiS
+        AoIFCDa+Yu2hZMSHB0IkSHjwAKuMDkBKXEiQYG4CrBFwHDlBpMGNEA0a4F2hooDhwwWwAgjAuLFjADeX
+        QJ5MOXJAADs=
+</value>
+  </data>
+  <data name="btnChiryo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>162, 5</value>
+  </data>
+  <data name="btnChiryo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>137, 28</value>
+  </data>
+  <data name="btnChiryo.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="btnChiryo.Text" xml:space="preserve">
+    <value>Kế hoạch điều trị</value>
+  </data>
+  <data name="&gt;&gt;btnChiryo.Name" xml:space="preserve">
+    <value>btnChiryo</value>
+  </data>
+  <data name="&gt;&gt;btnChiryo.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButton, IHIS.Controls, Version=1.0.5449.37788, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnChiryo.Parent" xml:space="preserve">
+    <value>xPanel3</value>
+  </data>
+  <data name="&gt;&gt;btnChiryo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnVital.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAAAFgSURBVDhPpZJNUsJAFISz9CBew7O4Y+MN3HohT2EJJQpi
+        +UdAEUR+IgkkENTStnsmI8GwEafqVc/P+/q9mcQ7PDrGtuFpaPKX8ZXpOMa6wfIdSLNIliuN0/X5bGGj
+        YDBnwuKNiQwlOlWym2N/D9M5EDEKBgkTZKJKgrxSyWjIZO0J1lw6STYYKFlVYiYJdvo6s1AkQGuq1gUD
+        HYZ0lo4JjabAILJrf2j19tnqdW9DBwEhHUqHBAchN1mp2bf7tUfgvA2ctey6M/5loGRVHRLsBXbdeAIu
+        O0CdsOLiAajSpNIE2urKGejb9icWcnpFeGf3AHVqnaDmroMyDVp5gw8ySuiyLQN3V7BUUc1MVF3aGuQM
+        0k/ghg+kgwZblprWCdVYVbBaV3Wdnd4Dft4g4OerMcnc1YF6NIGEHFz2YeCiAf8BJf88VlZVd64SquRg
+        3f/kDmi+5Az8ER23CGPwv+F53xT2+ghnxPBrAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnVital.Location" type="System.Drawing.Point, System.Drawing">
+    <value>305, 5</value>
+  </data>
+  <data name="btnVital.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 28</value>
+  </data>
+  <data name="btnVital.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="btnVital.Text" xml:space="preserve">
+    <value>Tham chiếu
+bảng nhiệt độ</value>
+  </data>
+  <data name="&gt;&gt;btnVital.Name" xml:space="preserve">
+    <value>btnVital</value>
+  </data>
+  <data name="&gt;&gt;btnVital.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButton, IHIS.Controls, Version=1.0.5449.37788, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnVital.Parent" xml:space="preserve">
+    <value>xPanel3</value>
+  </data>
+  <data name="&gt;&gt;btnVital.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>441, 2</value>
+  </data>
+  <data name="btnList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 34</value>
+  </data>
+  <data name="btnList.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;btnList.Name" xml:space="preserve">
+    <value>btnList</value>
+  </data>
+  <data name="&gt;&gt;btnList.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButtonList, IHIS.BizObjects, Version=1.0.5448.28537, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnList.Parent" xml:space="preserve">
+    <value>xPanel3</value>
+  </data>
+  <data name="&gt;&gt;btnList.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="xPanel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="xPanel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 448</value>
+  </data>
+  <data name="xPanel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>608, 39</value>
+  </data>
+  <data name="xPanel3.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;xPanel3.Name" xml:space="preserve">
+    <value>xPanel3</value>
+  </data>
+  <data name="&gt;&gt;xPanel3.Type" xml:space="preserve">
+    <value>IHIS.Framework.XPanel, IHIS.Controls, Version=1.0.5449.37788, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xPanel3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;xPanel3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="paBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="paBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 34</value>
+  </data>
+  <data name="paBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 5, 0, 5</value>
+  </data>
+  <data name="paBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>608, 32</value>
+  </data>
+  <data name="paBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;paBox.Name" xml:space="preserve">
+    <value>paBox</value>
+  </data>
+  <data name="&gt;&gt;paBox.Type" xml:space="preserve">
+    <value>IHIS.Framework.XPatientBox, IHIS.BizObjects, Version=1.0.5448.28537, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;paBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;paBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="xLabel2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhEAAQAIECAJqamn9/f////wAAACH/C05FVFNDQVBFMi4wAwEBAAAh+QQBAAACACwAAAAAEAAQ
+        AAAIOQAFCBxIsKDBgwgTIgwQQCHBAAAaOhQAMeLEihYVYsy4EIBHjxIPbgwp8iPJkhwTQjy5kOXElwoD
+        AgA7
+</value>
+  </data>
+  <data name="xLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>245, 7</value>
+  </data>
+  <data name="xLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 20</value>
+  </data>
+  <data name="xLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;xLabel2.Name" xml:space="preserve">
+    <value>xLabel2</value>
+  </data>
+  <data name="&gt;&gt;xLabel2.Type" xml:space="preserve">
+    <value>IHIS.Framework.XLabel, IHIS.Controls, Version=1.0.5449.37788, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xLabel2.Parent" xml:space="preserve">
+    <value>xPanel1</value>
+  </data>
+  <data name="&gt;&gt;xLabel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 7</value>
+  </data>
+  <data name="xLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 20</value>
+  </data>
+  <data name="xLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="xLabel1.Text" xml:space="preserve">
+    <value>Thời gian tham chiếu</value>
+  </data>
+  <data name="&gt;&gt;xLabel1.Name" xml:space="preserve">
+    <value>xLabel1</value>
+  </data>
+  <data name="&gt;&gt;xLabel1.Type" xml:space="preserve">
+    <value>IHIS.Framework.XLabel, IHIS.Controls, Version=1.0.5449.37788, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xLabel1.Parent" xml:space="preserve">
+    <value>xPanel1</value>
+  </data>
+  <data name="&gt;&gt;xLabel1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dtpToDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>272, 8</value>
+  </data>
+  <data name="dtpToDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="dtpToDate.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;dtpToDate.Name" xml:space="preserve">
+    <value>dtpToDate</value>
+  </data>
+  <data name="&gt;&gt;dtpToDate.Type" xml:space="preserve">
+    <value>IHIS.Framework.XDateTimePicker, IHIS.Controls, Version=1.0.5449.37788, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dtpToDate.Parent" xml:space="preserve">
+    <value>xPanel1</value>
+  </data>
+  <data name="&gt;&gt;dtpToDate.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="dtpFromDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>141, 7</value>
+  </data>
+  <data name="dtpFromDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="dtpFromDate.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dtpFromDate.Name" xml:space="preserve">
+    <value>dtpFromDate</value>
+  </data>
+  <data name="&gt;&gt;dtpFromDate.Type" xml:space="preserve">
+    <value>IHIS.Framework.XDateTimePicker, IHIS.Controls, Version=1.0.5449.37788, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dtpFromDate.Parent" xml:space="preserve">
+    <value>xPanel1</value>
+  </data>
+  <data name="&gt;&gt;dtpFromDate.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="xPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="xPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="xPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>608, 34</value>
+  </data>
+  <data name="xPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;xPanel1.Name" xml:space="preserve">
+    <value>xPanel1</value>
+  </data>
+  <data name="&gt;&gt;xPanel1.Type" xml:space="preserve">
+    <value>IHIS.Framework.XPanel, IHIS.Controls, Version=1.0.5449.37788, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;xPanel1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>38</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 13</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>608, 487</value>
+  </data>
+  <data name="&gt;&gt;ImageList.Name" xml:space="preserve">
+    <value>ImageList</value>
+  </data>
+  <data name="&gt;&gt;ImageList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell1.Name" xml:space="preserve">
+    <value>xEditGridCell1</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell1.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5449.37789, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell2.Name" xml:space="preserve">
+    <value>xEditGridCell2</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell2.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5449.37789, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell3.Name" xml:space="preserve">
+    <value>xEditGridCell3</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell3.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5449.37789, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell4.Name" xml:space="preserve">
+    <value>xEditGridCell4</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell4.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5449.37789, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell5.Name" xml:space="preserve">
+    <value>xEditGridCell5</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell5.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5449.37789, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell6.Name" xml:space="preserve">
+    <value>xEditGridCell6</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell6.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5449.37789, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell7.Name" xml:space="preserve">
+    <value>xEditGridCell7</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell7.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5449.37789, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell8.Name" xml:space="preserve">
+    <value>xEditGridCell8</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell8.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5449.37789, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell9.Name" xml:space="preserve">
+    <value>xEditGridCell9</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell9.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5449.37789, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell10.Name" xml:space="preserve">
+    <value>xEditGridCell10</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell10.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5449.37789, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell11.Name" xml:space="preserve">
+    <value>xEditGridCell11</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell11.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5449.37789, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell12.Name" xml:space="preserve">
+    <value>xEditGridCell12</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell12.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5449.37789, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell13.Name" xml:space="preserve">
+    <value>xEditGridCell13</value>
+  </data>
+  <data name="&gt;&gt;xEditGridCell13.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditGridCell, IHIS.DbControls, Version=1.0.5449.37789, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>INP1001Q00</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>IHIS.Framework.XScreen, IHIS.Forms, Version=1.0.5449.37790, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+</root>

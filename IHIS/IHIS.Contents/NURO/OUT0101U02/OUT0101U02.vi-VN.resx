@@ -1,0 +1,799 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ImageList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACa
+        BwAAAk1TRnQBSQFMAwEBAAEEAQABVAEFARABAAEQAQAE/wEJARAI/wFCAU0BNgEEBgABNgEEAgABKAMA
+        AUADAAEQAwABAQEAAQgGAAEEGAABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHAAdwBwAEA
+        AfABygGmAQABMwUAATMBAAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANCAQADOQEA
+        AYABfAH/AQACUAH/AQABkwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/ATMDAAFm
+        AwABmQMAAcwCAAEzAwACMwIAATMBZgIAATMBmQIAATMBzAIAATMB/wIAAWYDAAFmATMCAAJmAgABZgGZ
+        AgABZgHMAgABZgH/AgABmQMAAZkBMwIAAZkBZgIAApkCAAGZAcwCAAGZAf8CAAHMAwABzAEzAgABzAFm
+        AgABzAGZAgACzAIAAcwB/wIAAf8BZgIAAf8BmQIAAf8BzAEAATMB/wIAAf8BAAEzAQABMwEAAWYBAAEz
+        AQABmQEAATMBAAHMAQABMwEAAf8BAAH/ATMCAAMzAQACMwFmAQACMwGZAQACMwHMAQACMwH/AQABMwFm
+        AgABMwFmATMBAAEzAmYBAAEzAWYBmQEAATMBZgHMAQABMwFmAf8BAAEzAZkCAAEzAZkBMwEAATMBmQFm
+        AQABMwKZAQABMwGZAcwBAAEzAZkB/wEAATMBzAIAATMBzAEzAQABMwHMAWYBAAEzAcwBmQEAATMCzAEA
+        ATMBzAH/AQABMwH/ATMBAAEzAf8BZgEAATMB/wGZAQABMwH/AcwBAAEzAv8BAAFmAwABZgEAATMBAAFm
+        AQABZgEAAWYBAAGZAQABZgEAAcwBAAFmAQAB/wEAAWYBMwIAAWYCMwEAAWYBMwFmAQABZgEzAZkBAAFm
+        ATMBzAEAAWYBMwH/AQACZgIAAmYBMwEAA2YBAAJmAZkBAAJmAcwBAAFmAZkCAAFmAZkBMwEAAWYBmQFm
+        AQABZgKZAQABZgGZAcwBAAFmAZkB/wEAAWYBzAIAAWYBzAEzAQABZgHMAZkBAAFmAswBAAFmAcwB/wEA
+        AWYB/wIAAWYB/wEzAQABZgH/AZkBAAFmAf8BzAEAAcwBAAH/AQAB/wEAAcwBAAKZAgABmQEzAZkBAAGZ
+        AQABmQEAAZkBAAHMAQABmQMAAZkCMwEAAZkBAAFmAQABmQEzAcwBAAGZAQAB/wEAAZkBZgIAAZkBZgEz
+        AQABmQEzAWYBAAGZAWYBmQEAAZkBZgHMAQABmQEzAf8BAAKZATMBAAKZAWYBAAOZAQACmQHMAQACmQH/
+        AQABmQHMAgABmQHMATMBAAFmAcwBZgEAAZkBzAGZAQABmQLMAQABmQHMAf8BAAGZAf8CAAGZAf8BMwEA
+        AZkBzAFmAQABmQH/AZkBAAGZAf8BzAEAAZkC/wEAAcwDAAGZAQABMwEAAcwBAAFmAQABzAEAAZkBAAHM
+        AQABzAEAAZkBMwIAAcwCMwEAAcwBMwFmAQABzAEzAZkBAAHMATMBzAEAAcwBMwH/AQABzAFmAgABzAFm
+        ATMBAAGZAmYBAAHMAWYBmQEAAcwBZgHMAQABmQFmAf8BAAHMAZkCAAHMAZkBMwEAAcwBmQFmAQABzAKZ
+        AQABzAGZAcwBAAHMAZkB/wEAAswCAALMATMBAALMAWYBAALMAZkBAAPMAQACzAH/AQABzAH/AgABzAH/
+        ATMBAAGZAf8BZgEAAcwB/wGZAQABzAH/AcwBAAHMAv8BAAHMAQABMwEAAf8BAAFmAQAB/wEAAZkBAAHM
+        ATMCAAH/AjMBAAH/ATMBZgEAAf8BMwGZAQAB/wEzAcwBAAH/ATMB/wEAAf8BZgIAAf8BZgEzAQABzAJm
+        AQAB/wFmAZkBAAH/AWYBzAEAAcwBZgH/AQAB/wGZAgAB/wGZATMBAAH/AZkBZgEAAf8CmQEAAf8BmQHM
+        AQAB/wGZAf8BAAH/AcwCAAH/AcwBMwEAAf8BzAFmAQAB/wHMAZkBAAH/AswBAAH/AcwB/wEAAv8BMwEA
+        AcwB/wFmAQAC/wGZAQAC/wHMAQACZgH/AQABZgH/AWYBAAFmAv8BAAH/AmYBAAH/AWYB/wEAAv8BZgEA
+        ASEBAAGlAQADXwEAA3cBAAOGAQADlgEAA8sBAAOyAQAD1wEAA90BAAPjAQAD6gEAA/EBAAP4AQAB8AH7
+        Af8BAAGkAqABAAOAAwAB/wIAAf8DAAL/AQAB/wMAAf8BAAH/AQAC/wIAA/+JAAIHPQACswEHPQAB/wGz
+        AQc9AAH0AbMBBzoAAwcBGQGzBQc1AAGzAdQB2wHcAQkFswEHNQACswHUAdsB3AEJARkB9AH/AbM6AAHb
+        AbMBBz0AAdQBswEHPQACswEHPQACs/cAAUIBTQE+BwABPgMAASgDAAFAAwABEAMAAQEBAAEBBQABgBcA
+        A/8BAAL/BgAC/wYAAf8BPwYAAf4BPwYAAf4BPwYAAf4BPwYAAfABAwYAAeABAwYAAeABBwYAAf4BPwYA
+        Af4BPwYAAf4BPwYAAf4BfwYAAv8GAAL/BgAC/xwACw==
+</value>
+  </data>
+  <data name="xEditGridCell27.HeaderText" xml:space="preserve">
+    <value>MSBN</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnImport.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnImport.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="btnImport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>166, 5</value>
+  </data>
+  <data name="btnImport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 28</value>
+  </data>
+  <data name="btnImport.Text" xml:space="preserve">
+    <value>Nhập dữ liệu BN</value>
+  </data>
+  <data name="btnExport.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnExport.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="btnExport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>267, 5</value>
+  </data>
+  <data name="btnExport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 28</value>
+  </data>
+  <data name="btnExport.Text" xml:space="preserve">
+    <value>Xuất dữ liệu BN</value>
+  </data>
+  <data name="lblAutoOpen.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="lblAutoOpen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 2</value>
+  </data>
+  <data name="lblAutoOpen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 33</value>
+  </data>
+  <data name="lblAutoOpen.Text" xml:space="preserve">
+    <value>Tự động mở màn hình tiếp nhận khám</value>
+  </data>
+  <data name="cbxAutoOpen.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="btnConfirm.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="btnConfirm.Text" xml:space="preserve">
+    <value>In tài khoản BN</value>
+  </data>
+  <data name="btnList.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="grdComment.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+  <data name="btnOUT0106U00.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="btnOUT0106U00.Text" xml:space="preserve">
+    <value>Đăng ký</value>
+  </data>
+  <data name="xLabel8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel8.Text" xml:space="preserve">
+    <value>Ghi chú đặc biệt về bệnh nhân</value>
+  </data>
+  <data name="xLabel16.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel16.Text" xml:space="preserve">
+    <value>Tự động TN</value>
+  </data>
+  <data name="cbxBilling.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="cbxBilling.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+  <data name="cbxBilling.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 23</value>
+  </data>
+  <data name="lblBilling.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="lblBilling.Text" xml:space="preserve">
+    <value>Phân loại</value>
+  </data>
+  <data name="txtRefID.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="txtRefID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 21</value>
+  </data>
+  <data name="xLabel10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel10.Text" xml:space="preserve">
+    <value>Mã th.chiếu</value>
+  </data>
+  <data name="genPatCodeBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="genPatCodeBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>155, 3</value>
+  </data>
+  <data name="genPatCodeBtn.Text" xml:space="preserve">
+    <value>Tạo mã</value>
+  </data>
+  <data name="cboBunhoType.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="cboBunhoType.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+  <data name="cboBunhoType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 23</value>
+  </data>
+  <data name="xLabel5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel5.Text" xml:space="preserve">
+    <value>PLBN</value>
+  </data>
+  <data name="fbxBunho.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="txtSuName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell28.HeaderText" xml:space="preserve">
+    <value>Tên BN</value>
+  </data>
+  <data name="cboSex.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="cboSex.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 23</value>
+  </data>
+  <data name="dtpBirth.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="fbxZip_Code1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="txtZip_Code2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="fbxAddress1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="txtAddress2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="txtTel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="txtTel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="txtTel_HP.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="txtEMail.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="txtSuName2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="dbxAge.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="cboTel_Gubun.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="cboTel_Gubun.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+  <data name="cboTel_Gubun.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 23</value>
+  </data>
+  <data name="cboTel_Gubun2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="cboTel_Gubun2.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+  <data name="cboTel_Gubun2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 23</value>
+  </data>
+  <data name="cboTel_Gubun3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="cboTel_Gubun3.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+  <data name="cboTel_Gubun3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 23</value>
+  </data>
+  <data name="cboDelete_YN.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="cboDelete_YN.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+  <data name="cboDelete_YN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 23</value>
+  </data>
+  <data name="cbxPace_Maker_YN.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="cbxSelf_Pace_Maker.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell42.HeaderText" xml:space="preserve">
+    <value>billing_name</value>
+  </data>
+  <data name="xEditGridCell43.HeaderText" xml:space="preserve">
+    <value>billing_code</value>
+  </data>
+  <data name="grdPatient.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+  <data name="xLabel18.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel18.Text" xml:space="preserve">
+    <value>Máy trợ tim</value>
+  </data>
+  <data name="xLabel4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel4.Text" xml:space="preserve">
+    <value>Lắp máy trợ tim</value>
+  </data>
+  <data name="xLabel53.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel53.Text" xml:space="preserve">
+    <value>PLHL</value>
+  </data>
+  <data name="xLabel52.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel52.Text" xml:space="preserve">
+    <value>Điện thoại 2</value>
+  </data>
+  <data name="xLabel21.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel9.Text" xml:space="preserve">
+    <value>Ngày sinh</value>
+  </data>
+  <data name="xLabel12.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel12.Text" xml:space="preserve">
+    <value>Điện thoại 1</value>
+  </data>
+  <data name="xLabel7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel7.Text" xml:space="preserve">
+    <value>Họ và Tên</value>
+  </data>
+  <data name="xLabel6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel6.Text" xml:space="preserve">
+    <value>MSBN</value>
+  </data>
+  <data name="xLabel13.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel13.Text" xml:space="preserve">
+    <value>Điện thoại 3</value>
+  </data>
+  <data name="xLabel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 21</value>
+  </data>
+  <data name="xLabel1.Text" xml:space="preserve">
+    <value>Tuổi</value>
+  </data>
+  <data name="xLabel11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel11.Text" xml:space="preserve">
+    <value>Địa chỉ</value>
+  </data>
+  <data name="xLabel26.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel26.Text" xml:space="preserve">
+    <value>Giới tính</value>
+  </data>
+  <data name="xLabel2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel2.Text" xml:space="preserve">
+    <value>Họ Tên 2</value>
+  </data>
+  <data name="xLabel14.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="cbxAutoRecept.CheckAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="cbxAutoRecept.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 10pt</value>
+  </data>
+  <data name="cbxAutoRecept.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 21</value>
+  </data>
+  <data name="xLabel3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel3.Text" xml:space="preserve">
+    <value>Thông tin cơ bản</value>
+  </data>
+  <data name="fwkCommon.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+  <data name="btnUpdateInsur.Text" xml:space="preserve">
+    <value>Tham chiếu BH</value>
+  </data>
+  <data name="xButtonBAS0111U00.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="dtpChuiduk_Date.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel35.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel35.Text" xml:space="preserve">
+    <value>Ngày nhận</value>
+  </data>
+  <data name="cboBonin_Gubun.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="cboBonin_Gubun.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+  <data name="cboBonin_Gubun.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 23</value>
+  </data>
+  <data name="txtJohap_gubun.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="txtJohap_gubun.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 21</value>
+  </data>
+  <data name="btnBAS0111U00.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="btnBAS0111U00.Location" type="System.Drawing.Point, System.Drawing">
+    <value>181, 89</value>
+  </data>
+  <data name="fbxGaein.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="fbxGubun1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="dtpLast_Check_Date.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="txtPiName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="txtGaein_No.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="dbxJohap_Name.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="fbxJohap.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="dbxGubun_Name1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="dtpTo_Jy_Date.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="dtpFrom_Jy_Date.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel15.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel15.Text" xml:space="preserve">
+    <value>Ngày XN</value>
+  </data>
+  <data name="xLabel20.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel20.Text" xml:space="preserve">
+    <value>Tên người hưởng BH</value>
+  </data>
+  <data name="xLabel27.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel27.Text" xml:space="preserve">
+    <value>Đối tượng</value>
+  </data>
+  <data name="xLabel28.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel28.Text" xml:space="preserve">
+    <value>MS</value>
+  </data>
+  <data name="xLabel29.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel29.Text" xml:space="preserve">
+    <value>Ký hiệu</value>
+  </data>
+  <data name="xLabel30.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel30.Text" xml:space="preserve">
+    <value>Công ty BH</value>
+  </data>
+  <data name="xLabel31.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel31.Text" xml:space="preserve">
+    <value>Loại BH</value>
+  </data>
+  <data name="xLabel32.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel32.Text" xml:space="preserve">
+    <value>HL đến ngày</value>
+  </data>
+  <data name="xLabel33.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel33.Text" xml:space="preserve">
+    <value>Ngày BD</value>
+  </data>
+  <data name="cbxLast_Check.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell1.HeaderText" xml:space="preserve">
+    <value>Ngày BD</value>
+  </data>
+  <data name="xEditGridCell14.HeaderText" xml:space="preserve">
+    <value>Loại BH</value>
+  </data>
+  <data name="xEditGridCell12.HeaderText" xml:space="preserve">
+    <value>HL đến ngày</value>
+  </data>
+  <data name="grdBoheom.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+  <data name="xLabel34.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel34.Text" xml:space="preserve">
+    <value>Thông tin bảo hiểm</value>
+  </data>
+  <data name="mbxRemark.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel38.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel38.Text" xml:space="preserve">
+    <value>Chú ý</value>
+  </data>
+  <data name="dtpLast_Check_Date2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="txtSugubja_Bunho.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="txtBudamja_Bunho.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="dbxGongbi_Name.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="fbxGongbi_Code.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="dtpTo_Jy_Date2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="dtpFrom_Jy_Date2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel39.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel39.Text" xml:space="preserve">
+    <value>Ngày XN</value>
+  </data>
+  <data name="xLabel42.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel42.Text" xml:space="preserve">
+    <value>MS người thụ hưởng</value>
+  </data>
+  <data name="xLabel43.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel43.Text" xml:space="preserve">
+    <value>MS người ĐN</value>
+  </data>
+  <data name="xLabel44.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel44.Text" xml:space="preserve">
+    <value>Mã BHNN</value>
+  </data>
+  <data name="xLabel46.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel46.Text" xml:space="preserve">
+    <value>Đến ngày</value>
+  </data>
+  <data name="xLabel47.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel47.Text" xml:space="preserve">
+    <value>Ngày áp dụng</value>
+  </data>
+  <data name="cbxLast_Check1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell18.HeaderText" xml:space="preserve">
+    <value>Ngày áp dụng</value>
+  </data>
+  <data name="xEditGridCell23.HeaderText" xml:space="preserve">
+    <value>HL đến ngày</value>
+  </data>
+  <data name="xEditGridCell26.HeaderText" xml:space="preserve">
+    <value>Tên BHNN</value>
+  </data>
+  <data name="grdGongbiList.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+  <data name="xLabel36.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel36.Text" xml:space="preserve">
+    <value>Thông tin bảo hiểm nhà nước</value>
+  </data>
+  <data name="layDupPatient.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+  <data name="layProtectGubunList.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+</root>

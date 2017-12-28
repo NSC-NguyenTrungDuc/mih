@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="ImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="ImageList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABU
+        CwAAAk1TRnQBSQFMAgEBBAEAAQUBAAEUAQABEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
+        AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
+        AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
+        AWYDAAGZAwABzAIAATMDAAIzAgABMwFmAgABMwGZAgABMwHMAgABMwH/AgABZgMAAWYBMwIAAmYCAAFm
+        AZkCAAFmAcwCAAFmAf8CAAGZAwABmQEzAgABmQFmAgACmQIAAZkBzAIAAZkB/wIAAcwDAAHMATMCAAHM
+        AWYCAAHMAZkCAALMAgABzAH/AgAB/wFmAgAB/wGZAgAB/wHMAQABMwH/AgAB/wEAATMBAAEzAQABZgEA
+        ATMBAAGZAQABMwEAAcwBAAEzAQAB/wEAAf8BMwIAAzMBAAIzAWYBAAIzAZkBAAIzAcwBAAIzAf8BAAEz
+        AWYCAAEzAWYBMwEAATMCZgEAATMBZgGZAQABMwFmAcwBAAEzAWYB/wEAATMBmQIAATMBmQEzAQABMwGZ
+        AWYBAAEzApkBAAEzAZkBzAEAATMBmQH/AQABMwHMAgABMwHMATMBAAEzAcwBZgEAATMBzAGZAQABMwLM
+        AQABMwHMAf8BAAEzAf8BMwEAATMB/wFmAQABMwH/AZkBAAEzAf8BzAEAATMC/wEAAWYDAAFmAQABMwEA
+        AWYBAAFmAQABZgEAAZkBAAFmAQABzAEAAWYBAAH/AQABZgEzAgABZgIzAQABZgEzAWYBAAFmATMBmQEA
+        AWYBMwHMAQABZgEzAf8BAAJmAgACZgEzAQADZgEAAmYBmQEAAmYBzAEAAWYBmQIAAWYBmQEzAQABZgGZ
+        AWYBAAFmApkBAAFmAZkBzAEAAWYBmQH/AQABZgHMAgABZgHMATMBAAFmAcwBmQEAAWYCzAEAAWYBzAH/
+        AQABZgH/AgABZgH/ATMBAAFmAf8BmQEAAWYB/wHMAQABzAEAAf8BAAH/AQABzAEAApkCAAGZATMBmQEA
+        AZkBAAGZAQABmQEAAcwBAAGZAwABmQIzAQABmQEAAWYBAAGZATMBzAEAAZkBAAH/AQABmQFmAgABmQFm
+        ATMBAAGZATMBZgEAAZkBZgGZAQABmQFmAcwBAAGZATMB/wEAApkBMwEAApkBZgEAA5kBAAKZAcwBAAKZ
+        Af8BAAGZAcwCAAGZAcwBMwEAAWYBzAFmAQABmQHMAZkBAAGZAswBAAGZAcwB/wEAAZkB/wIAAZkB/wEz
+        AQABmQHMAWYBAAGZAf8BmQEAAZkB/wHMAQABmQL/AQABzAMAAZkBAAEzAQABzAEAAWYBAAHMAQABmQEA
+        AcwBAAHMAQABmQEzAgABzAIzAQABzAEzAWYBAAHMATMBmQEAAcwBMwHMAQABzAEzAf8BAAHMAWYCAAHM
+        AWYBMwEAAZkCZgEAAcwBZgGZAQABzAFmAcwBAAGZAWYB/wEAAcwBmQIAAcwBmQEzAQABzAGZAWYBAAHM
+        ApkBAAHMAZkBzAEAAcwBmQH/AQACzAIAAswBMwEAAswBZgEAAswBmQEAA8wBAALMAf8BAAHMAf8CAAHM
+        Af8BMwEAAZkB/wFmAQABzAH/AZkBAAHMAf8BzAEAAcwC/wEAAcwBAAEzAQAB/wEAAWYBAAH/AQABmQEA
+        AcwBMwIAAf8CMwEAAf8BMwFmAQAB/wEzAZkBAAH/ATMBzAEAAf8BMwH/AQAB/wFmAgAB/wFmATMBAAHM
+        AmYBAAH/AWYBmQEAAf8BZgHMAQABzAFmAf8BAAH/AZkCAAH/AZkBMwEAAf8BmQFmAQAB/wKZAQAB/wGZ
+        AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
+        AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
+        AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
+        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD//8A/wD/AP8ABQAg/wES
+        BOoBbQHrAm0D6wH4AuwB7QJtAesBbQTrBfgC7QHsIP8BEgPqBG0C6wHsAesB7AH4Ae0B7AHqAW0I6wL4
+        AewB+ALtAf8BGgEUAe4BGwHwAbwB8QG8ARMBkgG8AeoB8QH2AewE/wEcAe8BHAG8AvEB8wHwAesD/wES
+        A+oDbQHrAW0C6wL4A+wCbQbrA/gC7APtAfYB7wEHARoCBwH2ARsBBwFtAe8BGwESAe0B9QHsBP8CGwEa
+        AQcBvAIHAfQB6wP/ARID6gFtAesBbQPrAvgB6wH4AuwDbQfrAvgC7ALtAfYCvAEaAZMBHAEaAe8BGgEb
+        AbwB9gEbAfMB9QEbBP8B9gEaAu8CGwHvAQcB8gP/AhIEbQTrAfgB6wHsAe0B+AHtAm0I6wL4Ae0C7AHt
+        AfYCGgG8AQcB7AGSAe0B9wEcAQcBHAHxAfIB9gHzBP8CBwEaARwB7wEHARsB7gH0A/8E6gVtAesC+AHr
+        AfgC7QNtAesFbQLrBOwB9wH1ARoBmQEaAeoDkQQHAbwB8AH/AfQE/wH2AcMBGwG8AZkBGgH2AfQE/wES
+        A+oCbQH4AZoBmQHDAvgB7AL4Ae0B6gHrAm0BEgLtAZIBkwKaAZMB+AHsAe0B7AH2ARoBHAEaA5EBtAEa
+        AgcB9gH/AfEB9gH1BP8BBwGTARwBGgGZAxsB8AP/ARIB6gFtAuoBEwGaARoBmgLDAusC7AHtAW0B6wFt
+        AeoBEgEHAewBHAGZAZQBmgEaAfgC7AHtAfYBGgEcARoBkQH3ArsDGgH0Af8B9AHzBf8B8gEbARwBGgGZ
+        ARoB9gH0BP8E6gJtAZkCGgHDBPgB7AHtA20CEgP3AZkDmgHrAuwB7QH2ARoB7gGZAQcBbQGuAZECHAHv
+        AQcBHAIbAfYE/wH0AfMBGgIcAe8BGwG8AfUD/wESAeoBEgHqAW0B6wPqAesC7AL4Au0EbQISAm0B+AJu
+        AesB+ALsAe0B9QIaAe4BmQHsAe0B7AGSAe8CkgEbAfYB8wH1BP8BBwHvARwBGgH/AfQB8AHvAfMD/wES
+        AeoBEgHqAm0C6wH4AesB7AH4AuwB+AHtBG0B6gNtAusC+ATsAfYBbQHwARoBBwEaAQcBGgHvAQcB9gEb
+        Ae4B8wL2BP8B9QL2ARoB7gHvAfAB9QHrA/8C6gESAW0B6gNtA+sB7AH4Ae0B7AHtBW0E6wH4BewB7QH1
+        ARMCGgIHBBoCGwEaAfAB9QH4EP8F6gFtAesBbQLrAuwB6wHtAewB7QHqAm0B6wFtAesBbQLrBPgC7AHt
+        AfYGGgHuAfMBGgEHBBsB6xD/AhIC6gNtBOsC+AHrAuwB6gZtBOsE7AHtAfYBBwIaAe4BGgEbAQcBGgH0
+        Ae8DGgH0AfgQ/wESBOoBbQfrAewB6wHsAeoCbQHrAW0C6wFtA+sB+ALsAu0B9gIaAUkBHAFtAUkBBwEa
+        AW0BSQH0Ae8BkgGRAW0Q/wESA+oEbQXrAewB7QH4AW0B6gNtB+sC+ALsAUIBTQE+BwABPgMAASgDAAFA
+        AwABIAMAAQEBAAEBBgABARYAA///ABgACw==
+</value>
+  </data>
+  <data name="grdInv0110.QuerySQL" xml:space="preserve">
+    <value>SELECT SUNGBUN_CODE, JAERYO_CODE, JAERYO_NAME
+  FROM INV0110
+ WHERE HOSP_CODE = :f_hosp_code
+   AND JAERYO_CODE  LIKE :f_jaeryo_code||'%'
+   AND JAERYO_NAME  LIKE '%'||:f_jaeryo_name||'%'
+   AND JAERYO_GUBUN IN ('A')
+   AND NVL(BUNRYU1,'N')   LIKE :f_bunryu||'%' 
+   AND ((:f_bulyong_tp = '1')
+     OR (:f_bulyong_tp = '2' AND BULYONG_DATE IS NULL AND JUKYONG_DATE &gt;= TO_DATE('2008/04/01','YYYY/MM/DD'))
+     OR (:f_bulyong_tp = '3' AND BULYONG_DATE IS NOT NULL))
+   /******************************************************/
+   AND NVL(SUNGBUN_CODE,'X')  LIKE '%' || :f_sungbun_code || '%'
+   AND NVL(SUNGBUN_NAME,'X')  LIKE '%' || :f_sungbun_name || '%'
+   AND NVL(JAERYO_E_NAME,'X') LIKE '%' || :f_jaeryo_e_name || '%'
+   AND NVL(CHANGGO1,'X')      LIKE :f_changgo1 || '%'
+   AND NVL(FN_DRG_DRG9992_A32(JAERYO_CODE),'X') LIKE :f_drug_price_code || '%'
+   AND NVL(BUNRYU9     , 'X') LIKE :f_bunryu9           || '%'
+   AND NVL(DRG_TYPE    , 'X') LIKE :f_drg_type          || '%'
+   AND NVL(SMALL_CODE  , 'X') LIKE :f_small_code        || '%'
+   AND NVL(BUNRYU3     , 'X') LIKE :f_bunryu3           || '%'
+   AND NVL(SMALL_CODE1 , 'X') LIKE :f_small_code1       || '%'
+   AND NVL(BUNRYU2     , 'X') LIKE :f_bunryu2           || '%'
+   AND NVL(BUNRYU4     , 'X') LIKE :f_bunryu4           || '%'
+   AND NVL(CAUTION_CODE, 'X') LIKE :f_caution_code      || '%'
+   AND NVL(BUNRYU5     , '0') LIKE DECODE(NVL(:f_bunryu5,'0'),'0','%',:f_bunryu5)
+   AND NVL(BUNRYU7     , '0') LIKE DECODE(NVL(:f_bunryu7,'0'),'0','%',:f_bunryu7)
+   AND NVL(BUNRYU8     , '0') LIKE DECODE(NVL(:f_bunryu8,'0'),'0','%',:f_bunryu8)
+   AND NVL(BUNRYU6     , '0') LIKE DECODE(NVL(:f_bunryu6,'0'),'0','%',:f_bunryu6)
+   AND ((NVL(:f_yuhyo_to_dt,'X') = 'X') OR
+        (NVL(:f_yuhyo_to_dt,'X') &lt;&gt; 'X' AND NVL(YUHYO_TO_DATE,TO_DATE('30010101','YYYYMMDD')) = TO_DATE(:f_yuhyo_to_dt,'YYYY/MM/DD')))
+   AND NVL(COMPANY_NAME, 'X') LIKE :f_company_name      || '%'
+   AND NVL(CHK1        , 'X') LIKE DECODE(:f_chk1,'N','',:f_chk1) || '%'
+   AND NVL(CHK2        , 'X') LIKE DECODE(:f_chk2,'N','',:f_chk2) || '%'
+   AND NVL(CHK3        , 'X') LIKE DECODE(:f_chk3,'N','',:f_chk3) || '%'
+   AND NVL(CHK4        , 'X') LIKE DECODE(:f_chk4,'N','',:f_chk4) || '%'
+   AND NVL(CHK5        , 'X') LIKE DECODE(:f_chk5,'N','',:f_chk5) || '%'
+   AND NVL(CHK6        , 'X') LIKE DECODE(:f_chk6,'N','',:f_chk6) || '%'
+   AND NVL(CHK7        , 'X') LIKE DECODE(:f_chk7,'N','',:f_chk7) || '%'
+   AND NVL(CHK8        , 'X') LIKE DECODE(:f_chk8,'N','',:f_chk8) || '%'
+   AND NVL(CHK9        , 'X') LIKE DECODE(:f_chk9,'N','',:f_chk9) || '%'
+   AND NVL(CHKA        , 'X') LIKE DECODE(:f_chka,'N','',:f_chka) || '%'
+   AND NVL(CHKB        , 'X') LIKE DECODE(:f_chkb,'N','',:f_chkb) || '%'
+   AND NVL(CHKC        , 'X') LIKE DECODE(:f_chkc,'N','',:f_chkc) || '%'
+   AND NVL(CHKE        , 'X') LIKE DECODE(:f_chke,'N','',:f_chke) || '%'
+   AND NVL(CHKF        , 'X') LIKE DECODE(:f_chkf,'N','',:f_chkf) || '%'
+   AND NVL(TOIJANG_YN  , 'X') LIKE DECODE(:f_toijang_yn,'N','',:f_toijang_yn) || '%'
+   AND NVL(TEXT_COLOR  , 'X') LIKE :f_text_color        || '%'
+   AND NVL(CUSTOMER_CODE,'X') LIKE :f_customer_code     || '%'
+   AND NVL(SUBUL_QCODE_OUT,'X') LIKE :f_subul_qcode_out|| '%'
+   AND NVL(SUBUL_QCODE_INP,'X') LIKE :f_subul_qcode_inp|| '%'
+   AND NVL(SUBUL_QCODE_ER ,'X') LIKE :f_subul_qcode_er || '%'
+   AND NVL(BULYONG_CODE   ,'X') LIKE :f_bulyong_code   || '%'
+   AND NVL(REMARK         ,'X') LIKE '%' || :f_remark || '%'
+   AND NVL(CHKD           ,'X') LIKE DECODE(:f_chkd,'N','',:f_chkd) || '%'
+   AND NVL(DRG_COMMENT    ,'X') LIKE '%' || :f_drg_comment || '%'
+   AND NVL(DRG_JIBGYE_GUBUN,'0') LIKE DECODE(NVL(:f_drg_jibgye_gubun,'0'),'0','%',:f_drg_jibgye_gubun)
+   AND ((NVL(:f_jukyong_date,'X') = 'X') OR
+        (NVL(:f_jukyong_date,'X') &lt;&gt; 'X' AND NVL(JUKYONG_DATE,TO_DATE('30010101','YYYYMMDD')) = TO_DATE(:f_jukyong_date,'YYYY/MM/DD')))
+ ORDER BY JAERYO_CODE</value>
+  </data>
+  <metadata name="fwkJaeryo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>466, 17</value>
+  </metadata>
+  <data name="fwkJaeryo.InputSQL" xml:space="preserve">
+    <value>SELECT JAERYO_CODE, JAERYO_NAME, TO_CHAR(BULYONG_DATE,'YYYY/MM/DD')
+  FROM INV0110
+ WHERE (JAERYO_CODE LIKE  :f_find1||'%'
+    OR JAERYO_NAME  LIKE  '%'||:f_find1||'%')
+   AND JAERYO_GUBUN = 'A'
+   AND HOSP_CODE = :f_hosp_code
+ ORDER BY 2</value>
+  </data>
+  <metadata name="fwkCommon.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>122, 17</value>
+  </metadata>
+  <metadata name="layDetail.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>244, 17</value>
+  </metadata>
+  <data name="layDetail.QuerySQL" xml:space="preserve">
+    <value>SELECT TO_CHAR(LEAD_TIME)
+     , TO_CHAR(AVG_QTY_D)
+     , TO_CHAR(AVG_QTY_W)
+     , TO_CHAR(AVG_QTY_M)
+     , TO_CHAR(MAX_QTY_D)
+     , TO_CHAR(MAX_QTY_W)
+     , TO_CHAR(MAX_QTY_M)
+     , HAMRYANG
+     , TO_CHAR(JEJE_GIJUN_QTY)
+     , MIX_YN
+     , MIX_YN_INP
+     , ATC_YN
+     , ATC_YN_INP
+     , ATC_CODE
+     , BOGYONG_CODE
+     , HYONEUNG_CODE
+     , CAUTION_CODE
+     , MAIN_USE_GWA1
+     , MAIN_USE_GWA2
+     , MAIN_USE_GWA3
+     , MAIN_USE_GWA4
+     , MAIN_USE_GWA5
+     , TO_CHAR(BULYONG_TO_DATE,'YYYY/MM/DD')
+     , SUGB_JAERYO_YN
+     , TO_CHAR(GIJUN_AMT)
+     , TO_CHAR(GIJUN_ASSURE_AMT)
+     , BUNGI_ACCT
+     , OLD_MANAGE_NO
+     , MANAGE_NO1
+     , MANAGE_NO2
+     , MANAGE_NO3
+     , MANAGE_NO4
+     , CHANGGO1
+     , CHANGGO2
+     , CHANGGO3
+     , TO_CHAR(DANGA)
+     , TO_CHAR(JUKJUNG_QTY)
+     , ORDER_DANUI
+     , TO_CHAR(GIJUN_DANGA)
+     , GIJUN_KYUKYEOK
+     , BUNRYU9
+     , CUSTOMER_CODE2
+     , SUNGBUN_CODE
+     , BOGYONG_CODE1
+     , BOGYONG_CODE2
+     , BOGYONG_CODE3
+     , BOGYONG_CODE4
+     , TO_CHAR(DRG_MAX_DV)
+     , TO_CHAR(DRG_MAX_SURYANG)
+     , TO_CHAR(BALJU_BULYONG_DATE,'YYYY/MM/DD')
+     , USE_YN
+     , REMARK
+     , TO_CHAR(SORT_KEY)
+     , TO_CHAR(WEIGHT)
+     , IPCHAL_TYPE
+     , TO_CHAR(LAUNDRY_DANGA)
+     , RACK_NO
+     , PATH_BMP
+     , TO_CHAR(START_DATE,'YYYY/MM/DD')
+     , TO_CHAR(END_DATE,'YYYY/MM/DD')
+     , LABEL_YN
+     , TO_CHAR(SYS_DATE,'YYYY/MM/DD')
+     , UPD_ID
+     , TO_CHAR(UPD_DATE,'YYYY/MM/DD')
+     , JAERYO_CODE
+     , MANAGE_NO
+     , SMALL_CODE
+     , JAERYO_NAME
+     , JAERYO_E_NAME
+     , JAERYO_NAME_INX
+     , BUNRYU_BUNHO1
+     , BUNRYU_BUNHO2
+     , KYUKYEOK
+     , PRIS_NAME
+     , MANAGE_NAME
+     , SUNGBUN_NAME
+     , JAERYO_GUBUN
+     , JAERYO_GRADE
+     , ACCT_ID
+     , BUNRYU1
+     , BUNRYU2
+     , BUNRYU3
+     , BUNRYU4
+     , BUNRYU5
+     , BUNRYU6
+     , BUNRYU7
+     , BUNRYU8
+     , TO_CHAR(JUKYONG_DATE,'YYYY/MM/DD')
+     , DRG_TYPE
+     , STORAGE_YN
+     , ICE_YN
+     , BANNAB_YN
+     , COMPANY_CODE
+     , CUSTOMER_CODE
+     , YUHYO_YN
+     , TO_CHAR(YUHYO_MONTH)
+     , TO_CHAR(YUHYO_TO_DATE,'YYYY/MM/DD')
+     , SUIB_YN
+     , SUIB_CUSTOMER
+     , YUNHAP_JOIN_YN
+     , YUNHAP_CODE
+     , BULYONG_CODE
+     , TO_CHAR(BULYONG_DATE,'YYYY/MM/DD')
+     , SUBUL_QCODE_OUT
+     , SUBUL_QCODE_INP
+     , SUBUL_QCODE_ER
+     , DANGA_YN
+     , TO_CHAR(FROM_DANGA_DATE,'YYYY/MM/DD')
+     , TO_CHAR(TO_DANGA_DATE,'YYYY/MM/DD')
+     , SUBUL_DANUI
+     , BALJU_DANUI
+     , ORDER_SUBUL_DANUI
+     , SUBUL_BUSEO
+     , BALJU_BUSEO
+     , TO_CHAR(CHANGE_QTYL)
+     , TO_CHAR(CHANGE_QTYO)
+     , TO_CHAR(JAEGO_QTY)
+     , TO_CHAR(JAEGO_AMT)
+     , TO_CHAR(LAST_IBGO_DANGA)
+     , TO_CHAR(LAST_IBGO_DATE,'YYYY/MM/DD')
+     , TO_CHAR(LAST_CHULGO_DATE,'YYYY/MM/DD')
+     , BUNRYU_BUNHO3
+     , BUNRYU_BUNHO4
+     , RACK_NO2
+     , HAMRYANG_DANUI
+     , TO_CHAR(LIMIT_DV)
+     , NVL(TOIJANG_YN,'N') TOIJANG_YN
+     , BUNRYU_BUNHO5
+     , DELIVERY_GUBUN
+     , TB_YN
+     , SKIN_TEST_YN
+     , IR_JUNDAL_YN
+     , JUSA
+     , TO_CHAR(CHANGE_QTYP)
+     , MAIN_SUNGBUN_CODE
+     , JIBGYE_YN
+     , TO_CHAR(BUGASE_YUL)
+     , COMPANY_NAME
+     , MODEL_NAME
+     , TO_CHAR(FIRST_IBGO_DATE,'YYYY/MM/DD')
+     , IP_ADDR
+     , RE_USE_YN
+     , TO_CHAR(MIN_CHUNGGU_QTY)
+     , CUSTOMER_CODE3
+     , SUTAK_YN
+     , CURENCY
+     , SET_CODE
+     , TO_CHAR(CUSTOMER_DANGA)
+     , TO_CHAR(MIN_BALJU_QTY)
+     , LABEL_DANUI
+     , DRG_TRUNC
+     , LABEL_DANUI2
+     , NVL(substrb(FN_DRG_LOAD_DRG0142(SMALL_CODE, '1')     ,1,100), ' ')
+     , NVL(substrb(FN_INV_LOAD_CODE_NAME('06', DRG_TYPE, NULL)    ,1,100), ' ')
+     , NVL(substrb(FN_DRG_LOAD_DRG0130(CAUTION_CODE)        ,1,100), ' ')
+     , NVL(substrb(FN_BAS_LOAD_BAS0102('SUBUL_CONV_CODE', SUBUL_QCODE_OUT),1,50 ), ' ')
+     , NVL(substrb(FN_BAS_LOAD_BAS0102('SUBUL_CONV_CODE', SUBUL_QCODE_INP),1,50 ), ' ')
+     , NVL(substrb(FN_BAS_LOAD_BAS0102('SUBUL_CONV_CODE', SUBUL_QCODE_ER) ,1,50 ), ' ')
+     , NVL(substrb(FN_DRG_LOAD_DRG0160(CUSTOMER_CODE)       ,1,100), ' ')
+     , NVL(substrb(FN_INV_LOAD_CODE_NAME('10', BULYONG_CODE, NULL),1,10 ), ' ')
+     , NVL(FN_INV_LOAD_CODE_NAME('UA', BUNRYU1, NULL), ' ')
+     , NVL(FN_INV_LOAD_CODE_NAME('UB', BUNRYU2, NULL), ' ')
+     , NVL(FN_INV_LOAD_CODE_NAME('UC', BUNRYU3, NULL), ' ')
+     , NVL(FN_INV_LOAD_CODE_NAME('UD', BUNRYU4, NULL), ' ')
+     , NVL(substrb(FN_DRG_LOAD_DRG0160(COMPANY_NAME), 1, 100), ' ')
+     , FN_OCS_LOAD_CODE_NAME('ORD_DANUI', SUBUL_DANUI)
+     , FN_OCS_LOAD_CODE_NAME('ORD_DANUI', BALJU_DANUI)
+     , FN_OCS_LOAD_CODE_NAME('ORD_DANUI', ORDER_DANUI)
+     , FN_OCS_LOAD_CODE_NAME('ORD_DANUI', LABEL_DANUI)
+     , FN_OCS_LOAD_CODE_NAME('ORD_DANUI', LABEL_DANUI2)
+     , CHK1,CHK2,CHK3,CHK4,CHK5,CHK6
+     , CHK7,CHK8,CHK9,CHKA,CHKB,CHKC,CHKD
+     , DRG_COMMENT
+     , YONGRYANG
+     , TEXT_COLOR
+     , SMALL_CODE1
+     , NVL(substrb(FN_DRG_LOAD_DRG0142(SMALL_CODE1,'2'),1,100), ' ')  SMALL_CODE1_MIDDLE_NAME
+     , ACT_JAERYO_NAME
+     , NVL(substrb(FN_DRG_LOAD_DRG0142(SMALL_CODE ,'2'),1,100), ' ')  SMALL_CODE_MIDDLE_NAME
+     , FN_DRG_DRG9992_A32(JAERYO_CODE) DRUG_PRICE_CODE
+     , DRG_JIBGYE_GUBUN
+     , CHKE
+     , CHKF
+  FROM INV0110
+ WHERE JAERYO_GUBUN IN ('A', 'C')
+   AND JAERYO_CODE  = :f_jaeryo_code
+   AND HOSP_CODE    = :f_hosp_code
+ ORDER BY JAERYO_CODE</value>
+  </data>
+  <data name="grdOCS0103.QuerySQL" xml:space="preserve">
+    <value>SELECT A.HANGMOG_CODE
+     , A.HANGMOG_NAME
+     , A.SLIP_CODE
+     , B.SLIP_NAME
+     , FN_OCS_LOAD_CODE_NAME('ORDER_GUBUN_BAS', A.ORDER_GUBUN, A.HOSP_CODE)     ORDER_GUBUN_NM 
+     , G.INPUT_CONTROL_NAME                                                     INPUT_CONTROL_NAME
+     , FN_OCS_LOAD_CODE_NAME('ORD_DANUI', A.ORD_DANUI, A.HOSP_CODE)             ORD_DANUI_NAME
+     , NVL(A.DISPLAY_YN, 'N')                                                   DISPLAY_YN
+     , NVL(A.DEFAULT_SURYANG, 0)                                                DEFAULT_SURYANG
+     , A.DV_TIME                                                                DV_TIME
+     , FN_DRG_LOAD_BOGYONG_NAME(A.DEFAULT_BOGYONG_CODE, A.HOSP_CODE)            BOGYONG_CODE
+     , NVL(A.LIMIT_NALSU, 0)                                                    LIMIT_NALSU
+     , FN_OCS_LOAD_CODE_NAME('WONYOI_ORDER_YN',A.WONYOI_ORDER_YN, A.HOSP_CODE)  WONYOI_ORDER_YN
+     , DECODE(A.JUNDAL_TABLE_OUT, 'HOM', 'HOME', C.GRP_NM )                     JUNDAL_TABLE_OUT_NAME
+     , FN_BAS_LOAD_GWA_NAME(A.JUNDAL_PART_OUT ,SYSDATE, A.HOSP_CODE)            JUNDAL_PART_OUT_NAME  
+     , DECODE(A.JUNDAL_TABLE_INP, 'HOM', 'HOME', D.GRP_NM )                     JUNDAL_TABLE_INP_NAME
+     , FN_BAS_LOAD_GWA_NAME(A.JUNDAL_PART_INP ,SYSDATE, A.HOSP_CODE)            JUNDAL_PART_INP_NAME
+     , A.SG_CODE                                                                SG_CODE
+     , A.SG_NAME                                                                SG_NAME
+     , FN_OCS_LOAD_CODE_NAME('ORD_DANUI', E.DANWI, A.HOSP_CODE)                 SUNAB_DANUI_NAME
+     , E.BULYONG_YMD                                                            BULYONG_YMD
+     , NVL(E.TOIJANG_YN,'N')                                                    TOIJANG_YN
+     , A.JAERYO_CODE                                                            JAERYO_CODE
+     , F.JAERYO_NAME                                                            JAERYO_NAME
+     , FN_OCS_LOAD_CODE_NAME('ORD_DANUI', F.SUBUL_DANUI, A.HOSP_CODE)           SUBUL_DANUI_NAME
+     , F.BULYONG_DATE                                                           BULYONG_DATE
+     , NVL(A.RETURN_YN,'N')                                                     BANNAB_YN
+     , NVL(A.MUHYO_YN,'N')                                                      MUHYO_YN
+     , A.REMARK                                                                 MENT
+     , TRUNC(A.SYS_DATE)                                                        SYS_DATE
+     , FN_ADM_USER_NM(A.SYS_ID)                                                 CREATE_USER_NM
+     , TRUNC(A.UPD_DATE)                                                        UPD_DATE
+     , FN_ADM_USER_NM(A.UPD_ID)                                                 USER_NM
+  FROM OCS0103 A,
+       OCS0102 B,
+       ADM0100 C,
+       ADM0100 D,
+       BAS0310 E,
+       INV0110 F,
+       OCS0133 G
+ WHERE A.SLIP_CODE        LIKE :f_slip_code||'%'
+   AND A.HOSP_CODE        = :f_hosp_code
+   AND (A.SLIP_CODE       LIKE 'P%' OR A.SLIP_CODE LIKE 'J%')
+   AND A.HANGMOG_NAME_INX LIKE '%'||TRIM(:f_hangmog_name_inx)||'%'
+   AND B.SLIP_CODE    (+) = A.SLIP_CODE
+   AND C.GRP_ID       (+) = A.JUNDAL_TABLE_OUT
+   AND D.GRP_ID       (+) = A.JUNDAL_TABLE_INP
+   AND E.SG_CODE      (+) = A.SG_CODE
+   AND F.JAERYO_CODE  (+) = A.JAERYO_CODE
+   AND G.INPUT_CONTROL(+) = A.INPUT_CONTROL
+   AND B.HOSP_CODE    (+) = A.HOSP_CODE
+   AND E.HOSP_CODE    (+) = A.HOSP_CODE
+   AND F.HOSP_CODE    (+) = A.HOSP_CODE
+   AND G.HOSP_CODE    (+) = A.HOSP_CODE
+ ORDER BY A.SLIP_CODE, A.HANGMOG_CODE</value>
+  </data>
+  <metadata name="layExcel.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>572, 17</value>
+  </metadata>
+  <data name="layExcel.QuerySQL" xml:space="preserve">
+    <value>SELECT FN_LOAD_INV_CODE_NAME('UA',  BUNRYU1)
+     , JAERYO_CODE
+     , FN_DRG_DRG9992_A32(JAERYO_CODE)
+     , JAERYO_NAME
+     , JAERYO_E_NAME
+     , ACT_JAERYO_NAME
+     , SUNGBUN_CODE
+     , SUNGBUN_NAME
+     , HAMRYANG
+     , KYUKYEOK
+     , YONGRYANG
+     , CHANGGO1
+     , FN_LOAD_INV_CODE_NAME('UI', BUNRYU9)
+     , FN_LOAD_INV_CODE_NAME('06', DRG_TYPE)
+     , SMALL_CODE
+     , FN_DRG_LOAD_DRG0142(SMALL_CODE, '2')
+     , SMALL_CODE1
+     , FN_DRG_LOAD_DRG0142(SMALL_CODE1, '2')
+     , FN_LOAD_INV_CODE_NAME('UB',  BUNRYU2)
+     , FN_LOAD_INV_CODE_NAME('UC',  BUNRYU3)
+     , FN_LOAD_INV_CODE_NAME('UD',  BUNRYU4)
+     , FN_DRG_LOAD_DRG0130(CAUTION_CODE)
+     , FN_LOAD_INV_CODE_NAME('A01', BUNRYU5)
+     , FN_LOAD_INV_CODE_NAME('A03', BUNRYU7)
+     , FN_LOAD_INV_CODE_NAME('A04', BUNRYU8)
+     , FN_LOAD_INV_CODE_NAME('A02', BUNRYU6)
+     , FN_INV_LOAD_CODE_NAME('UJ', DRG_JIBGYE_GUBUN, NULL)    DRG_JIBGYE_GUBUN_NAME
+     , YUHYO_TO_DATE
+     , DECODE(TEXT_COLOR,'33554432','Normal','255'  ,'Red'   ,
+                         '16711680','Blue'  ,'32768','Green' ,
+                         '65535'   ,'Yellow','128'  ,'Maroon','')        TEXT_COLOR
+     , NVL(CHK1,'N')                                                     CHK1
+     , NVL(CHK2,'N')                                                     CHK2
+     , NVL(CHK3,'N')                                                     CHK3
+     , NVL(CHK4,'N')                                                     CHK4
+     , NVL(CHK5,'N')                                                     CHK5
+     , NVL(CHK6,'N')                                                     CHK6
+     , NVL(CHK7,'N')                                                     CHK7
+     , NVL(CHK8,'N')                                                     CHK8
+     , NVL(CHK9,'N')                                                     CHK9
+     , NVL(CHKA,'N')                                                     CHKA
+     , NVL(CHKB,'N')                                                     CHKB
+     , NVL(CHKC,'N')                                                     CHKC
+     , NVL(TOIJANG_YN,'N')                                               TOIJANG_YN
+     , NVL(CHKE,'N')                                                     CHKE
+     , NVL(CHKF,'N')                                                     CHKF
+     , NVL(DANGA,0)                                                      DANGA
+     , NVL(GIJUN_DANGA,0)                                                GIJUN_DANGA
+     , FN_ACC_LOAD_CUST_NAME(COMPANY_NAME)                    COMPANY_NAME
+     , FN_ACC_LOAD_CUST_NAME(CUSTOMER_CODE)                   CUSTOMER_CODE
+     , FN_OCS_LOAD_CODE_NAME('ORD_DANUI',SUBUL_DANUI)         SUBUL_DANUI
+     , FN_OCS_LOAD_CODE_NAME('ORD_DANUI',BALJU_DANUI)         BALJU_DANUI
+     , CHANGE_QTYL                                                       CHANGE_QTYL
+     , FN_BAS_LOAD_BUSEO_NAME(SUBUL_BUSEO, JUKYONG_DATE)                 SUBUL_BUSEO
+     , FN_BAS_LOAD_BUSEO_NAME(BALJU_BUSEO, JUKYONG_DATE)                 BALJU_BUSEO
+     , NVL(SUGB_JAERYO_YN,'N')                                           SUGUB_JAERYO
+     , FN_BAS_LOAD_BAS0102('SUBUL_CONV_CODE',SUBUL_QCODE_OUT) SUBUL_OUT
+     , FN_BAS_LOAD_BAS0102('SUBUL_CONV_CODE',SUBUL_QCODE_INP) SUBUL_INP
+     , FN_BAS_LOAD_BAS0102('SUBUL_CONV_CODE',SUBUL_QCODE_ER) SUBUL_ER
+     , BULYONG_DATE                                                             
+     , FN_INV_LOAD_CODE_NAME('10', BULYONG_CODE, NULL)        BULYONG_CODE
+     , REMARK                                                            REMARK
+     , NVL(CHKD,'N')                                                     CHKD
+     , DRG_COMMENT                                                       DRG_COMMENT
+     , JUKYONG_DATE                                                      JUKYONG_DATE
+ FROM  INV0110
+WHERE JAERYO_GUBUN     = 'A'
+  AND HOSP_CODE        = :f_hosp_code
+  AND NVL(BUNRYU1,'N')   LIKE :f_jaeryo_code||'%' 
+   AND ((:f_bulyong_tp = '1')
+     OR (:f_bulyong_tp = '2' AND BULYONG_DATE IS NULL AND JUKYONG_DATE &gt;= TO_DATE('2008/04/01','YYYY/MM/DD'))
+     OR (:f_bulyong_tp = '3' AND BULYONG_DATE IS NOT NULL))
+ORDER BY JAERYO_CODE</value>
+  </data>
+  <metadata name="fdwOCS0102.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>343, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>75</value>
+  </metadata>
+</root>

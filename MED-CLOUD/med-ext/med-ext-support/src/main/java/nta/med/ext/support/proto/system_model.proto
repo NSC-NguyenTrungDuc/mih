@@ -1,0 +1,17 @@
+option java_package = "nta.med.ext.support.proto";
+option java_outer_classname = "SystemModelProto";
+
+message IntegratedEnvironment {
+    optional string hosp_code = 1;
+    repeated IntegratedInfo integrated_info = 2;
+}
+
+message IntegratedInfo {
+    optional string code_name = 1;
+    optional string value = 2;
+}
+
+message EmrTagInfo {
+    optional string tag_code	 		= 1;
+    optional string tag_name 			= 2;
+}

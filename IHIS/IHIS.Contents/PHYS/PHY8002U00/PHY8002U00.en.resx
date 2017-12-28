@@ -1,0 +1,750 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnComplications.Text" xml:space="preserve">
+    <value>患者傷病</value>
+  </data>
+  <data name="btnCopy.Text" xml:space="preserve">
+    <value>前回の依頼照会</value>
+  </data>
+  <data name="btnDisability.Text" xml:space="preserve">
+    <value>障害名</value>
+  </data>
+  <data name="btnFrequency.Text" xml:space="preserve">
+    <value>頻度</value>
+  </data>
+  <data name="btnGenbyoureki.Text" xml:space="preserve">
+    <value>患者傷病</value>
+  </data>
+  <data name="btnInfectious.Text" xml:space="preserve">
+    <value>感染症</value>
+  </data>
+  <data name="btnJisi.Text" xml:space="preserve">
+    <value>指示事項・</value>
+  </data>
+  <data name="btnKioureki.Text" xml:space="preserve">
+    <value>患者傷病</value>
+  </data>
+  <data name="btnObjective.Text" xml:space="preserve">
+    <value>目標</value>
+  </data>
+  <data name="btnReset.Text" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="btnSindanmei.Text" xml:space="preserve">
+    <value>患者傷病</value>
+  </data>
+  <data name="btnStop_kijyun.Text" xml:space="preserve">
+    <value>中止基準</value>
+  </data>
+  <data name="btnTaboo.Text" xml:space="preserve">
+    <value>禁忌事項</value>
+  </data>
+  <data name="cbxBU_FLAG.Text" xml:space="preserve">
+    <value>物理療法</value>
+  </data>
+  <data name="cbxKE_FLAG.Text" xml:space="preserve">
+    <value>牽引療法</value>
+  </data>
+  <data name="cbxSu_1.Text" xml:space="preserve">
+    <value>個別療法</value>
+  </data>
+  <data name="cbxSu_2_1.Text" xml:space="preserve">
+    <value>極超短波</value>
+  </data>
+  <data name="cbxSu_2_2.Text" xml:space="preserve">
+    <value>ホットパック</value>
+  </data>
+  <data name="cbxSu_2_3.Text" xml:space="preserve">
+    <value>低周波</value>
+  </data>
+  <data name="cbxSu_2_4_c.Text" xml:space="preserve">
+    <value>その他</value>
+  </data>
+  <data name="cbxSu_4_1.Text" xml:space="preserve">
+    <value>物療中止</value>
+  </data>
+  <data name="dwIraisyo.DataWindowObject" xml:space="preserve">
+    <value>reha_iraisyo</value>
+  </data>
+  <data name="dwIraisyo.LibraryList" xml:space="preserve">
+    <value>PHYS\\phys.phy8002u00.pbd</value>
+  </data>
+  <data name="dwIraisyo.Name" xml:space="preserve">
+    <value>dwIraisyo</value>
+  </data>
+  <data name="gbx1.Text" xml:space="preserve">
+    <value>主項目</value>
+  </data>
+  <data name="gbx2.Text" xml:space="preserve">
+    <value>該当する疾患別リハビリテーション科</value>
+  </data>
+  <data name="gbxComplications.Text" xml:space="preserve">
+    <value>合併症</value>
+  </data>
+  <data name="gbxGenbyoureki.Text" xml:space="preserve">
+    <value>現病歴</value>
+  </data>
+  <data name="gbxKioureki.Text" xml:space="preserve">
+    <value>既往歴</value>
+  </data>
+  <data name="gbxOT.Text" xml:space="preserve">
+    <value>OT</value>
+  </data>
+  <data name="gbxPT.Text" xml:space="preserve">
+    <value>PT</value>
+  </data>
+  <data name="gbxSindanmei.Text" xml:space="preserve">
+    <value>診断名</value>
+  </data>
+  <data name="gbxST.Text" xml:space="preserve">
+    <value>ST</value>
+  </data>
+  <data name="grbDisability.Text" xml:space="preserve">
+    <value>障害名</value>
+  </data>
+  <data name="lblNalsu.Text" xml:space="preserve">
+    <value>日数</value>
+  </data>
+  <data name="rbtSu_3_1.Text" xml:space="preserve">
+    <value>頸椎</value>
+  </data>
+  <data name="rbtSu_3_2.Text" xml:space="preserve">
+    <value>腰椎</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>注意事項</value>
+  </data>
+  <data name="txtKg.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xEditGridCell1.HeaderText" xml:space="preserve">
+    <value>生成日付</value>
+  </data>
+  <data name="xEditGridCell10.HeaderText" xml:space="preserve">
+    <value>開始日</value>
+  </data>
+  <data name="xEditGridCell100.HeaderText" xml:space="preserve">
+    <value>依頼キー</value>
+  </data>
+  <data name="xEditGridCell101.HeaderText" xml:space="preserve">
+    <value>一連番号</value>
+  </data>
+  <data name="xEditGridCell102.HeaderText" xml:space="preserve">
+    <value>入院外来区分</value>
+  </data>
+  <data name="xEditGridCell103.HeaderText" xml:space="preserve">
+    <value>依頼日付</value>
+  </data>
+  <data name="xEditGridCell104.HeaderText" xml:space="preserve">
+    <value>患者番号</value>
+  </data>
+  <data name="xEditGridCell105.HeaderText" xml:space="preserve">
+    <value>診療科</value>
+  </data>
+  <data name="xEditGridCell106.HeaderText" xml:space="preserve">
+    <value>傷病名コード</value>
+  </data>
+  <data name="xEditGridCell107.HeaderText" xml:space="preserve">
+    <value>発症日</value>
+  </data>
+  <data name="xEditGridCell108.HeaderText" xml:space="preserve">
+    <value>診断日</value>
+  </data>
+  <data name="xEditGridCell109.HeaderText" xml:space="preserve">
+    <value>例外診断名</value>
+  </data>
+  <data name="xEditGridCell11.HeaderText" xml:space="preserve">
+    <value>生成日時</value>
+  </data>
+  <data name="xEditGridCell110.HeaderText" xml:space="preserve">
+    <value>生成日時</value>
+  </data>
+  <data name="xEditGridCell111.HeaderText" xml:space="preserve">
+    <value>ユーザID</value>
+  </data>
+  <data name="xEditGridCell112.HeaderText" xml:space="preserve">
+    <value>更新日時</value>
+  </data>
+  <data name="xEditGridCell113.HeaderText" xml:space="preserve">
+    <value>病院コード</value>
+  </data>
+  <data name="xEditGridCell114.HeaderText" xml:space="preserve">
+    <value>テーブル基本キー</value>
+  </data>
+  <data name="xEditGridCell115.HeaderText" xml:space="preserve">
+    <value>依頼キー</value>
+  </data>
+  <data name="xEditGridCell116.HeaderText" xml:space="preserve">
+    <value>生成日時</value>
+  </data>
+  <data name="xEditGridCell117.HeaderText" xml:space="preserve">
+    <value>入院外来区分</value>
+  </data>
+  <data name="xEditGridCell118.HeaderText" xml:space="preserve">
+    <value>依頼データ</value>
+  </data>
+  <data name="xEditGridCell119.HeaderText" xml:space="preserve">
+    <value>患者番号</value>
+  </data>
+  <data name="xEditGridCell12.HeaderText" xml:space="preserve">
+    <value>ユーザID</value>
+  </data>
+  <data name="xEditGridCell120.HeaderText" xml:space="preserve">
+    <value>診療科</value>
+  </data>
+  <data name="xEditGridCell121.HeaderText" xml:space="preserve">
+    <value>傷病名コード</value>
+  </data>
+  <data name="xEditGridCell122.HeaderText" xml:space="preserve">
+    <value>発症日</value>
+  </data>
+  <data name="xEditGridCell123.HeaderText" xml:space="preserve">
+    <value>診断日</value>
+  </data>
+  <data name="xEditGridCell124.HeaderText" xml:space="preserve">
+    <value>接頭語名</value>
+  </data>
+  <data name="xEditGridCell125.HeaderText" xml:space="preserve">
+    <value>表示傷病名</value>
+  </data>
+  <data name="xEditGridCell126.HeaderText" xml:space="preserve">
+    <value>pr1</value>
+  </data>
+  <data name="xEditGridCell127.HeaderText" xml:space="preserve">
+    <value>pr2</value>
+  </data>
+  <data name="xEditGridCell128.HeaderText" xml:space="preserve">
+    <value>pr3</value>
+  </data>
+  <data name="xEditGridCell129.HeaderText" xml:space="preserve">
+    <value>pr4</value>
+  </data>
+  <data name="xEditGridCell13.HeaderText" xml:space="preserve">
+    <value>項目コード</value>
+  </data>
+  <data name="xEditGridCell130.HeaderText" xml:space="preserve">
+    <value>pr5</value>
+  </data>
+  <data name="xEditGridCell131.HeaderText" xml:space="preserve">
+    <value>pr6</value>
+  </data>
+  <data name="xEditGridCell132.HeaderText" xml:space="preserve">
+    <value>pr7</value>
+  </data>
+  <data name="xEditGridCell133.HeaderText" xml:space="preserve">
+    <value>pr8</value>
+  </data>
+  <data name="xEditGridCell134.HeaderText" xml:space="preserve">
+    <value>pr9</value>
+  </data>
+  <data name="xEditGridCell135.HeaderText" xml:space="preserve">
+    <value>pr10</value>
+  </data>
+  <data name="xEditGridCell136.HeaderText" xml:space="preserve">
+    <value>po1</value>
+  </data>
+  <data name="xEditGridCell137.HeaderText" xml:space="preserve">
+    <value>po2</value>
+  </data>
+  <data name="xEditGridCell138.HeaderText" xml:space="preserve">
+    <value>po3</value>
+  </data>
+  <data name="xEditGridCell139.HeaderText" xml:space="preserve">
+    <value>po4</value>
+  </data>
+  <data name="xEditGridCell14.HeaderText" xml:space="preserve">
+    <value>急性増悪日</value>
+  </data>
+  <data name="xEditGridCell140.HeaderText" xml:space="preserve">
+    <value>po5</value>
+  </data>
+  <data name="xEditGridCell141.HeaderText" xml:space="preserve">
+    <value>po6</value>
+  </data>
+  <data name="xEditGridCell142.HeaderText" xml:space="preserve">
+    <value>po7</value>
+  </data>
+  <data name="xEditGridCell143.HeaderText" xml:space="preserve">
+    <value>po8</value>
+  </data>
+  <data name="xEditGridCell144.HeaderText" xml:space="preserve">
+    <value>po9</value>
+  </data>
+  <data name="xEditGridCell145.HeaderText" xml:space="preserve">
+    <value>po10</value>
+  </data>
+  <data name="xEditGridCell146.HeaderText" xml:space="preserve">
+    <value>接尾語名</value>
+  </data>
+  <data name="xEditGridCell147.HeaderText" xml:space="preserve">
+    <value>傷病名</value>
+  </data>
+  <data name="xEditGridCell148.HeaderText" xml:space="preserve">
+    <value>scan0001seq</value>
+  </data>
+  <data name="xEditGridCell149.HeaderText" xml:space="preserve">
+    <value>createTime</value>
+  </data>
+  <data name="xEditGridCell15.HeaderText" xml:space="preserve">
+    <value>主項目1</value>
+  </data>
+  <data name="xEditGridCell150.HeaderText" xml:space="preserve">
+    <value>データ区分</value>
+  </data>
+  <data name="xEditGridCell151.HeaderText" xml:space="preserve">
+    <value>fkoutsang</value>
+  </data>
+  <data name="xEditGridCell152.HeaderText" xml:space="preserve">
+    <value>生成者 ID</value>
+  </data>
+  <data name="xEditGridCell153.HeaderText" xml:space="preserve">
+    <value>更新日時</value>
+  </data>
+  <data name="xEditGridCell154.HeaderText" xml:space="preserve">
+    <value>患者番号</value>
+  </data>
+  <data name="xEditGridCell155.HeaderText" xml:space="preserve">
+    <value>病院コード</value>
+  </data>
+  <data name="xEditGridCell156.HeaderText" xml:space="preserve">
+    <value>KE依頼ありフラグ</value>
+  </data>
+  <data name="xEditGridCell16.HeaderText" xml:space="preserve">
+    <value>主項目2</value>
+  </data>
+  <data name="xEditGridCell166.HeaderText" xml:space="preserve">
+    <value>テーブル基本キー</value>
+  </data>
+  <data name="xEditGridCell167.HeaderText" xml:space="preserve">
+    <value>データ区分</value>
+  </data>
+  <data name="xEditGridCell168.HeaderText" xml:space="preserve">
+    <value>依頼キー</value>
+  </data>
+  <data name="xEditGridCell169.HeaderText" xml:space="preserve">
+    <value>障害ID</value>
+  </data>
+  <data name="xEditGridCell17.HeaderText" xml:space="preserve">
+    <value>主項目4</value>
+  </data>
+  <data name="xEditGridCell170.HeaderText" xml:space="preserve">
+    <value>障害名</value>
+  </data>
+  <data name="xEditGridCell171.HeaderText" xml:space="preserve">
+    <value>CHT0113key</value>
+  </data>
+  <data name="xEditGridCell18.HeaderText" xml:space="preserve">
+    <value>主項目5</value>
+  </data>
+  <data name="xEditGridCell19.HeaderText" xml:space="preserve">
+    <value>日数</value>
+  </data>
+  <data name="xEditGridCell2.HeaderText" xml:space="preserve">
+    <value>ユーザＩＤ</value>
+  </data>
+  <data name="xEditGridCell20.HeaderText" xml:space="preserve">
+    <value>主項目6</value>
+  </data>
+  <data name="xEditGridCell21.HeaderText" xml:space="preserve">
+    <value>主項目7</value>
+  </data>
+  <data name="xEditGridCell22.HeaderText" xml:space="preserve">
+    <value>主項目8</value>
+  </data>
+  <data name="xEditGridCell23.HeaderText" xml:space="preserve">
+    <value>疾患別リハビリテーション料1</value>
+  </data>
+  <data name="xEditGridCell24.HeaderText" xml:space="preserve">
+    <value>疾患別リハビリテーション料2</value>
+  </data>
+  <data name="xEditGridCell25.HeaderText" xml:space="preserve">
+    <value>疾患別リハビリテーション料3</value>
+  </data>
+  <data name="xEditGridCell26.HeaderText" xml:space="preserve">
+    <value>PT依頼内容1</value>
+  </data>
+  <data name="xEditGridCell27.HeaderText" xml:space="preserve">
+    <value>PT依頼内容2</value>
+  </data>
+  <data name="xEditGridCell28.HeaderText" xml:space="preserve">
+    <value>PT依頼内容3</value>
+  </data>
+  <data name="xEditGridCell29.HeaderText" xml:space="preserve">
+    <value>PT依頼内容4</value>
+  </data>
+  <data name="xEditGridCell3.HeaderText" xml:space="preserve">
+    <value>更新日付</value>
+  </data>
+  <data name="xEditGridCell30.HeaderText" xml:space="preserve">
+    <value>PT依頼内容5</value>
+  </data>
+  <data name="xEditGridCell31.HeaderText" xml:space="preserve">
+    <value>PT依頼内容6</value>
+  </data>
+  <data name="xEditGridCell32.HeaderText" xml:space="preserve">
+    <value>PT依頼内容7</value>
+  </data>
+  <data name="xEditGridCell33.HeaderText" xml:space="preserve">
+    <value>OT依頼内容1</value>
+  </data>
+  <data name="xEditGridCell34.HeaderText" xml:space="preserve">
+    <value>OT依頼内容2</value>
+  </data>
+  <data name="xEditGridCell35.HeaderText" xml:space="preserve">
+    <value>OT依頼内容3</value>
+  </data>
+  <data name="xEditGridCell36.HeaderText" xml:space="preserve">
+    <value>OT依頼内容4</value>
+  </data>
+  <data name="xEditGridCell37.HeaderText" xml:space="preserve">
+    <value>OT依頼内容5</value>
+  </data>
+  <data name="xEditGridCell38.HeaderText" xml:space="preserve">
+    <value>OT依頼内容6</value>
+  </data>
+  <data name="xEditGridCell39.HeaderText" xml:space="preserve">
+    <value>ST依頼内容1</value>
+  </data>
+  <data name="xEditGridCell4.HeaderText" xml:space="preserve">
+    <value>依頼日付</value>
+  </data>
+  <data name="xEditGridCell40.HeaderText" xml:space="preserve">
+    <value>ST依頼内容2</value>
+  </data>
+  <data name="xEditGridCell41.HeaderText" xml:space="preserve">
+    <value>ST依頼内容3</value>
+  </data>
+  <data name="xEditGridCell42.HeaderText" xml:space="preserve">
+    <value>ST依頼内容4</value>
+  </data>
+  <data name="xEditGridCell43.HeaderText" xml:space="preserve">
+    <value>ST依頼内容5</value>
+  </data>
+  <data name="xEditGridCell44.HeaderText" xml:space="preserve">
+    <value>ST依頼内容6</value>
+  </data>
+  <data name="xEditGridCell45.HeaderText" xml:space="preserve">
+    <value>目標</value>
+  </data>
+  <data name="xEditGridCell46.HeaderText" xml:space="preserve">
+    <value>指示事項・注意事項</value>
+  </data>
+  <data name="xEditGridCell47.HeaderText" xml:space="preserve">
+    <value>合併症</value>
+  </data>
+  <data name="xEditGridCell48.HeaderText" xml:space="preserve">
+    <value>選択</value>
+  </data>
+  <data name="xEditGridCell49.HeaderText" xml:space="preserve">
+    <value>禁忌注意</value>
+  </data>
+  <data name="xEditGridCell5.HeaderText" xml:space="preserve">
+    <value>診療科</value>
+  </data>
+  <data name="xEditGridCell50.HeaderText" xml:space="preserve">
+    <value>中止基準</value>
+  </data>
+  <data name="xEditGridCell51.HeaderText" xml:space="preserve">
+    <value>更新日時</value>
+  </data>
+  <data name="xEditGridCell52.HeaderText" xml:space="preserve">
+    <value>頻度</value>
+  </data>
+  <data name="xEditGridCell53.HeaderText" xml:space="preserve">
+    <value>OCSオーダキー(依頼キー)</value>
+  </data>
+  <data name="xEditGridCell54.HeaderText" xml:space="preserve">
+    <value>病院コード</value>
+  </data>
+  <data name="xEditGridCell55.HeaderText" xml:space="preserve">
+    <value>主項目3</value>
+  </data>
+  <data name="xEditGridCell56.HeaderText" xml:space="preserve">
+    <value>コード</value>
+  </data>
+  <data name="xEditGridCell57.HeaderText" xml:space="preserve">
+    <value>項  目</value>
+  </data>
+  <data name="xEditGridCell58.HeaderText" xml:space="preserve">
+    <value>選択</value>
+  </data>
+  <data name="xEditGridCell59.HeaderText" xml:space="preserve">
+    <value>コード</value>
+  </data>
+  <data name="xEditGridCell6.HeaderText" xml:space="preserve">
+    <value>入院外来区分</value>
+  </data>
+  <data name="xEditGridCell60.HeaderText" xml:space="preserve">
+    <value>P T 項 目</value>
+  </data>
+  <data name="xEditGridCell61.HeaderText" xml:space="preserve">
+    <value>選択</value>
+  </data>
+  <data name="xEditGridCell62.HeaderText" xml:space="preserve">
+    <value>コード</value>
+  </data>
+  <data name="xEditGridCell63.HeaderText" xml:space="preserve">
+    <value>O T 項 目</value>
+  </data>
+  <data name="xEditGridCell64.HeaderText" xml:space="preserve">
+    <value>選択</value>
+  </data>
+  <data name="xEditGridCell65.HeaderText" xml:space="preserve">
+    <value>コード</value>
+  </data>
+  <data name="xEditGridCell66.HeaderText" xml:space="preserve">
+    <value>S T 項 目</value>
+  </data>
+  <data name="xEditGridCell67.HeaderText" xml:space="preserve">
+    <value>テーブル基本キー</value>
+  </data>
+  <data name="xEditGridCell68.HeaderText" xml:space="preserve">
+    <value>依頼区分</value>
+  </data>
+  <data name="xEditGridCell69.HeaderText" xml:space="preserve">
+    <value>担当医</value>
+  </data>
+  <data name="xEditGridCell7.HeaderText" xml:space="preserve">
+    <value>手術日</value>
+  </data>
+  <data name="xEditGridCell70.HeaderText" xml:space="preserve">
+    <value>入院日</value>
+  </data>
+  <data name="xEditGridCell71.HeaderText" xml:space="preserve">
+    <value>病室コード</value>
+  </data>
+  <data name="xEditGridCell72.HeaderText" xml:space="preserve">
+    <value>病棟コード</value>
+  </data>
+  <data name="xEditGridCell73.HeaderText" xml:space="preserve">
+    <value>主項目9</value>
+  </data>
+  <data name="xEditGridCell74.HeaderText" xml:space="preserve">
+    <value>主項目10</value>
+  </data>
+  <data name="xEditGridCell75.HeaderText" xml:space="preserve">
+    <value>疾患別リハビリテーション料4</value>
+  </data>
+  <data name="xEditGridCell76.HeaderText" xml:space="preserve">
+    <value>疾患別リハビリテーション料5</value>
+  </data>
+  <data name="xEditGridCell77.HeaderText" xml:space="preserve">
+    <value>PT依頼内容8</value>
+  </data>
+  <data name="xEditGridCell78.HeaderText" xml:space="preserve">
+    <value>PT依頼内容9</value>
+  </data>
+  <data name="xEditGridCell79.HeaderText" xml:space="preserve">
+    <value>PT依頼内容10</value>
+  </data>
+  <data name="xEditGridCell8.HeaderText" xml:space="preserve">
+    <value>患者番号</value>
+  </data>
+  <data name="xEditGridCell80.HeaderText" xml:space="preserve">
+    <value>OT依頼内容7</value>
+  </data>
+  <data name="xEditGridCell81.HeaderText" xml:space="preserve">
+    <value>OT依頼内容8</value>
+  </data>
+  <data name="xEditGridCell82.HeaderText" xml:space="preserve">
+    <value>OT依頼内容9</value>
+  </data>
+  <data name="xEditGridCell83.HeaderText" xml:space="preserve">
+    <value>OT依頼内容10</value>
+  </data>
+  <data name="xEditGridCell84.HeaderText" xml:space="preserve">
+    <value>ST依頼内容7</value>
+  </data>
+  <data name="xEditGridCell85.HeaderText" xml:space="preserve">
+    <value>ST依頼内容8</value>
+  </data>
+  <data name="xEditGridCell86.HeaderText" xml:space="preserve">
+    <value>ST依頼内容9</value>
+  </data>
+  <data name="xEditGridCell87.HeaderText" xml:space="preserve">
+    <value>ST依頼内容10</value>
+  </data>
+  <data name="xEditGridCell88.HeaderText" xml:space="preserve">
+    <value>現病歴</value>
+  </data>
+  <data name="xEditGridCell89.HeaderText" xml:space="preserve">
+    <value>感染症</value>
+  </data>
+  <data name="xEditGridCell9.HeaderText" xml:space="preserve">
+    <value>診断医師</value>
+  </data>
+  <data name="xEditGridCell90.HeaderText" xml:space="preserve">
+    <value>既往歴</value>
+  </data>
+  <data name="xEditGridCell91.HeaderText" xml:space="preserve">
+    <value>処理フラグ</value>
+  </data>
+  <data name="xEditGridCell92.HeaderText" xml:space="preserve">
+    <value>PT依頼ありフラグ</value>
+  </data>
+  <data name="xEditGridCell93.HeaderText" xml:space="preserve">
+    <value>OT依頼ありフラグ</value>
+  </data>
+  <data name="xEditGridCell94.HeaderText" xml:space="preserve">
+    <value>ST依頼ありフラグ</value>
+  </data>
+  <data name="xEditGridCell95.HeaderText" xml:space="preserve">
+    <value>物療依頼ありフラグ</value>
+  </data>
+  <data name="xEditGridCell96.HeaderText" xml:space="preserve">
+    <value>イメージファイル名</value>
+  </data>
+  <data name="xEditGridCell97.HeaderText" xml:space="preserve">
+    <value>イメージ格納経路</value>
+  </data>
+  <data name="xEditGridCell98.HeaderText" xml:space="preserve">
+    <value>病院コード</value>
+  </data>
+  <data name="xEditGridCell99.HeaderText" xml:space="preserve">
+    <value>テーブル基本キー</value>
+  </data>
+  <data name="xFlatLabel39.Text" xml:space="preserve">
+    <value>kg</value>
+  </data>
+  <data name="xFlatLabel5.Text" xml:space="preserve">
+    <value>指示事項・注意事項</value>
+  </data>
+  <data name="xFlatLabel6.Text" xml:space="preserve">
+    <value>目標</value>
+  </data>
+  <data name="xFlatLabel7.Text" xml:space="preserve">
+    <value>診療科 : </value>
+  </data>
+  <data name="xLabel1.Text" xml:space="preserve">
+    <value>治療開始日</value>
+  </data>
+  <data name="xLabel2.Text" xml:space="preserve">
+    <value>手術日</value>
+  </data>
+  <data name="xLabel3.Text" xml:space="preserve">
+    <value>急性増悪日</value>
+  </data>
+  <data name="xLabel4.Text" xml:space="preserve">
+    <value>治療部位</value>
+  </data>
+  <data name="xLabel5.Text" xml:space="preserve">
+    <value>ＣＴ・ＭＲＩ画像</value>
+  </data>
+</root>

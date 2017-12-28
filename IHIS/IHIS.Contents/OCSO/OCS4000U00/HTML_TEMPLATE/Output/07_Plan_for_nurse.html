@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Plan For Nurse</title>
+	<script src="../js/pikaday.js"></script>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/handlebars.min.js"></script>	
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/app.js"></script>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+ 
+<form id="myform" action="" method="post">
+ 	<div>
+	
+		<div id="data-template">
+		</div>
+	</div>
+
+
+	<script id="some-template" type="text/x-handlebars-template"> 
+ 
+<div class="wrapper">
+
+	<h1 class="page-title text-center">訪問看護計画書</h1>
+	
+	<table class="table full-w" border="1" align="" cellpadding="0" cellspacing="0">
+		<tr>
+			<td width="15%">患者氏名   </td>
+			<td>{{PatientName1}}&nbsp; 様 </td>
+			<td> 生年月日</td>
+			<td>明・大・昭・平 &nbsp;&nbsp; {{Birth}}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （{{YearAge}}&nbsp;  歳）</td>
+		</tr>
+		<tr>
+			<td>要介護認定の状況</td>
+			<td colspan="3">{{CareDegree}}{{#if CareDegree}} {{CareDegree_0}} {{CareDegree_1}} {{CareDegree_2}} {{CareDegree_3}} {{/if}}
+				{{#if CareDegreeOther}}
+					<div>
+					その他: {{CareDegreeOtherText}}
+					</div>
+				{{/if}}
+			</td>
+		</tr>
+		<tr>
+			<td>住所</td>
+			<td colspan="3">〒{{ZipCode1}}-{{ZipCode2}}&nbsp;&nbsp;{{Address1}}</td>
+		</tr>
+		
+		<tr>
+			<td colspan="4">
+			看護・リハビリテーションの目的<br/>
+			長期目標： {{item_7_1}}<br/>
+			短期目標： {{item_7_2}}<br/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td colspan="4" style="padding:0 !important;">
+				<table class="table" border="1" frame="void">
+					<tr>
+						<td style="width:15%;">年　月　日</td>
+						<td>問題点・解決策</td>
+						<td>評価</td>
+					</tr>
+					<tr>
+						<td>{{item_7_3}}<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></td>
+						<td>{{item_7_4}}<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></td>
+						<td>{{item_7_5}}<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		
+		<tr>
+			<td colspan="4">
+			衛生材料等が必要な処置の有無　　　　　　　　　　{{item_7_6}}
+			</td>
+		</tr>
+		
+		
+		<tr>
+			<td colspan="4" style="padding:0 !important;">
+				<table class="table" border="1" frame="void">
+					<tr>
+						<td style="width:33.33333333%;">処置の内容</td>
+						<td style="width:33.33333333%;">衛生材料（種類・サイズ）等</td>
+						<td>必要量</td>
+					</tr>
+					<tr>
+						<td>{{item_7_7}}<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></td>
+						<td>{{item_7_8}}<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></td>
+						<td>{{item_7_9}}<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		
+		<tr>
+			<td colspan="4">
+				備考 <br/><br/><br/><br/><br/><br/>
+				{{item_7_10}}
+			</td>
+		</tr>
+
+	</table><br/>	
+	
+	上記の訪問看護計画に基づき指定訪問看護又は看護サービスの提供を実施いたします。 <br/>
+	{{PrintDate}}
+	<br/><br/>
+	<table  border="0" class="table">
+	<tr>
+	<td style="width:20%;"></td>
+		<td style="width:60%;">
+		指定訪問看護ステーション名：<br/>
+		管理者氏名： {{Person1}}<br/>
+		担当者氏名： {{Person2}}<br/>
+		</td>
+	<td style="width:20%;">
+	<br />
+	印<br />
+	</td>
+	</tr>
+	</table><br />
+	{{Hospital.YoyangName}}　医師：{{DoctorName}}
+	<br/><br/>
+	<table>
+	<tr>
+		<td>
+			上記内容について説明を受け、同意し交付を受けました。<br/>
+			日付　{{ PrintDate}}<br/>
+			利用者氏名: {{User1}}<br/>
+			代理者氏名: {{User2}}<br/>	
+		</td>
+		<td style="width: 30%;">
+			<br />
+			<br />
+			<br />
+			（続柄）
+		</td>
+		<td>
+			<br />
+			<br />
+			印<br />
+			印
+		</td>
+	</tr>
+	</table>
+ </div>
+ 
+	</script> 
+ 
+</form>
+ 
+</body>
+</html>

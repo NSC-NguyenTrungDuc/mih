@@ -1,0 +1,2108 @@
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "NuroModelProto";
+
+// Nuro Patient List item
+message NuroPatientListItemInfo {
+    optional string department_code = 1;
+    optional string department_name = 2;
+    optional string patient_code = 3;
+    optional string patient_name = 4;
+    optional string patient_name_2 = 5;
+    optional string coming_date = 6;
+    optional string doctor_code = 7;
+    optional string doctor_name = 8;
+    optional string coming_type = 9;
+    optional string reception_code = 10;
+    optional string birth = 11;
+    optional string age_sex = 12;
+    optional string out_res_key = 13;
+    optional string reception_time = 14;
+    optional string order_end_yn = 15;
+    optional string hold_yn = 16;
+    optional string result_yn = 17;
+    optional string reser_yn = 18;
+    optional string ipwon_yn = 19;
+    optional string sunab_yn = 20;
+    optional string coming_status = 21;
+    optional string reception_type = 22;
+    optional string reception_type_name = 23;
+    optional string remark = 24;
+    optional string arrive_time = 25;
+    optional string type = 26;
+    optional string last_coming_date = 27;
+    optional string ocs_comment = 28;
+    optional string chojae = 29;
+    optional string group_key = 30;
+    optional string patient_type = 31;
+    optional string care_status = 32;
+    optional string percentage = 33;
+    optional string exam_status = 34;
+    optional string trial_yn = 35;
+    optional string sys_id = 36;
+}
+
+// NURO Out order status
+message NuroOutOrderStatusInfo {
+     optional string pk_out_1001 = 1;
+     optional string patient_code = 2;
+     optional string patient_name = 3;
+     optional string reception_time = 4;
+     optional string coming_status_date = 5;
+     optional string reser_yn = 6;
+     optional string dept_code = 7;
+     optional string doctor_code = 8;
+     optional string dept_name = 9;
+     optional string doctor_name = 10;
+     optional string reception_type = 11;
+     optional string complete_examination = 12;
+     optional string number_of_items_req = 13;
+     optional string acting_per = 14;
+     optional string all_end_yn = 15;
+     optional string acting_time = 16;
+     optional string data_send_yn = 17;
+}
+
+// Nuro Patient Detail List item
+message NuroPatientDetailListItemInfo{
+    optional string department_code = 1;
+    optional string department_name = 2;
+    optional string doctor_code = 3;
+    optional string doctor_name = 4;
+    optional string exam_status = 5;
+    optional string reception_no = 6;
+    optional string insur_code = 7;
+    optional string insur_name = 8;
+    required string patient_code = 9;
+    optional string coming_date = 10;
+    optional string pkout1001 = 11;
+    optional string reception_time = 12;
+    optional string coming_status = 13;
+    optional string coming_type = 14;
+    optional string sunnab_status = 15;
+    optional string fkinp1001 = 16;
+    optional string reception_type = 17;
+    optional string inp_trans_status = 18;
+    optional string bigo = 19;
+    optional string insur_code1 = 20;
+    optional string insur_code2 = 21;
+    optional string insur_code3 = 22;
+    optional string insur_code4 = 23;
+    optional string priority1 = 24;
+    optional string priority2 = 25;
+    optional string priority3 = 26;
+    optional string priority4 = 27;
+    optional string sujin_no = 28;
+    optional string wonyoi_order_status = 29;
+    optional string reser_status = 30;
+    optional string button = 31;
+    optional string check_coming = 32;
+    optional string arrive_time = 33;
+    optional string group_key = 34;
+    optional string cont_key = 35;
+    optional string sys_id = 36;
+}
+
+// Nuro Pattient Insurance List item
+message NuroPatientInsuranceListItemInfo {
+    optional string status = 1;
+    optional string insur_code = 2;
+    optional string insur_name = 3;
+    optional string last_check_date = 4;
+    optional string start_date = 5;
+    optional string patient_code = 6;
+    optional string budamja_patient_code = 7;
+    optional string insur_jiyeok = 8;
+}
+
+// Nuro Patient Comment List Item
+message NuroPatientCommentListItemInfo {
+    optional string comment = 1;
+    optional string ser = 2;
+    optional string patient_code = 3;
+    optional string cont_key = 4;
+}
+
+
+message NuroSearchPatientInfo {
+    optional string patient_name1 = 1;
+    optional string patient_name2 = 2;
+    optional string birth = 3;
+}
+
+message NuroCheckBookingInfo {
+    optional string patient_code = 1;
+    optional string reser_data = 2;
+}
+
+message NuroInspectionOrderInfo
+{
+	optional string gwa                 = 1;
+	optional string gwa_name            = 2;
+	optional string bunho               = 3;
+	optional string suname              = 4;
+	optional string reser_date          = 5;
+	optional string hangmog_name        = 6;
+	optional string reser_time          = 7;
+	optional string move_name           = 8;
+	optional string reser_day           = 9;
+	optional string age                 = 10;
+	optional string birth               = 11;
+	optional string suname2             = 12;
+	optional string jundal_part         = 13;
+	optional string reser_move_name     = 14;
+	optional string hangmog_code        = 15;
+	optional string jundal_table        = 16;
+	optional string hope_date           = 17;
+	optional string seq                 = 18;
+	optional string sort                = 19;
+	optional string sort_time           = 20;
+}
+
+
+message NuroInspectionOrderGetReserMoveNameInfo {
+    optional string reser_move_name = 1;
+}
+
+message NuroManagePatientInfo {
+	optional string patient_code = 1;
+	optional string patient_name1 = 2;
+	optional string patient_name2 = 3;
+	optional string birth = 4;
+	optional string sex = 5;
+	optional string zip_code1 = 6;
+	optional string zip_code2 = 7;
+	optional string address1 = 8;
+	optional string address2 = 9;
+	optional string tel = 10;
+	optional string tel1 = 11;
+	optional string tel_hp = 12;
+	optional string tel_type = 13;
+	optional string tel_type2 = 14;
+	optional string tel_type3 = 15;
+	optional string e_mail = 16;
+	optional string pace_maker_yn = 17;
+	optional string self_pace_maker = 18;
+}
+
+
+message NuroCboZipCodeInfo{
+	optional string zip_name = 1;
+}
+
+message NuroOUT1101Q01FwkDoctorInfo {
+    optional string sabun = 1;
+    optional string doctor_name = 2;
+}
+
+message NuroOUT1101Q01GridInfo {
+    optional string bunho = 1;
+    optional string suname = 2;
+    optional string suname2 = 3;
+    optional string birth = 4;
+    optional string naewon_date_jp = 5;
+    optional string naewon_date = 6;
+    optional string sujin_no = 7;
+    optional string jubsu_no = 8;
+    optional string gwa = 9;
+    optional string gwa_name = 10;
+    optional string doctor = 11;
+    optional string doctor_name = 12;
+    optional string jubsu_gubun = 13;
+    optional string gubun_name = 14;
+    optional string jubsu_time = 15;
+    optional string yoyang_name = 16;
+}
+
+message NuroOUT1101Q01PrintNameInfo {
+    optional string code_name = 1;
+    optional string sort_key = 2;
+}
+
+message JapanDateInfo {
+    optional string naewon_date_jp = 1;
+}
+
+message NuroOUT1101Q01DoctorNameInfo {
+    optional string doctor_name = 1;
+}
+
+message NuroManagePatientUpdateData{
+    required string zip_code1 = 1;
+    required string zip_code2 = 2;
+    required string address1 = 3;
+    required string address2 = 4;
+    required string tel = 5;
+    required string tel1 = 6;
+    required string tel_hp = 7;
+    required string tel_gubun = 8;
+    required string tel_gubun2 = 9;
+    required string tel_gubun3 = 10;
+    required string e_mail = 11;
+    required string pace_maker_yn = 12;
+    required string self_pace_maker = 13;
+    required string patient_code = 14;
+}
+
+//Nuro Patient Reception History List Item
+message NuroPatientReceptionHistoryListItemInfo {
+    required string coming_date = 1;
+    required string exam_date = 2;
+    required string exam_time = 3;
+    required string department_code = 4;
+    required string doctor = 5;
+    optional string insur_type = 6;
+    optional string sunnab_status = 7;
+    optional string exam_status = 8;
+    optional string coming_status = 9;
+    optional string patient_code = 10;
+    optional string reception_time = 11;
+    optional string department_name = 12;
+    optional string sujin_no = 13;
+    optional string doku_status = 14;
+    optional string cont_key = 15;
+    optional string sys_id = 16;
+}
+
+// NURO RES1001U00 Doctor Reservation Status List Item Info
+message NuroRES1001U00DoctorReservationStatusListItemInfo {
+    optional string doctor_name = 1;
+    optional string reservation_status = 2;
+}
+
+// NURO RES1001U00 Reservation Schedule Condition List Item Info
+message NuroRES1001U00ReservationScheduleConditionListItemInfo {
+    optional string am_start_time = 1;
+    optional string am_end_time = 2;
+    optional string pm_start_time = 3;
+    optional string pm_end_time = 4;
+}
+
+// NURO RES1001U00 Average Time List Item Info
+message NuroRES1001U00AverageTimeListItemInfo {
+    optional string avg_time = 1;
+    optional string doc_res_limit = 2;
+}
+
+// NURO RES1001U00 Reservation Schedule List Item Info
+message NuroRES1001U00ReservationScheduleListItemInfo {
+    optional string exam_pre_time    = 1;
+    optional string patient_code     = 2;
+    optional string patient_name1    = 3;
+    optional string patient_name2    = 4;
+    optional string exam_status      = 5;
+    optional string reser_date       = 6;
+    optional string pkout1001        = 7;
+    optional string exam_pre_date    = 8;
+    optional string department_code  = 9;
+    optional string reception_no     = 10;
+    optional string type             = 11;
+    optional string doctor_code      = 12;
+    optional string res_type         = 13;
+    optional string res_changgu      = 14;
+    optional string res_input_type   = 15;
+    optional string coming_status    = 16;
+    optional string new_row          = 17;
+    optional string exam_state       = 18;
+}
+
+// NURO RES1001U00MapingCodeInfo
+message RES1001U00MapingCodeInfo {
+	optional string gwa = 1;
+	optional string doctor= 2;
+}
+
+//SaveLayout
+message RES1001U00SaveLayoutItemInfo
+{
+	optional string bunho               = 1;
+	optional string gwa                 = 2;
+	optional string jinryo_pre_date     = 3;
+	optional string jinryo_pre_time     = 4;
+	optional string doctor              = 5;
+	optional string input_gubun         = 6;
+	optional string pkout1001           = 7;
+	optional string reser_comment       = 8;
+	optional string reser_gubun         = 9;
+	optional string gubun               = 10;
+	optional string jubsu_no            = 11;
+	optional string chojae              = 12;
+	optional string changgu             = 13;
+	optional string res_gubun           = 14;
+	optional string newrow              = 15;
+	optional string row_state           = 16;
+    optional string patient_name = 17;
+    optional string patient_name_furigana = 18;
+    optional string phone = 19;
+    optional string email = 20;
+    optional string birth = 21;
+    optional string sex = 22;
+}
+//SaveLayout Modify
+message RES1001U00FrmModifySaveLayoutInfo
+{
+	optional string bunho                  = 1;
+	optional string gwa                    = 2;
+	optional string gubun                  = 3;
+	optional string jinryo_pre_date        = 4;
+	optional string jinryo_pre_time        = 5;
+	optional string doctor                 = 6;
+	optional string input_gubun            = 7;
+	optional string pkout1001              = 8;
+	optional string changgu                = 9;
+	optional string chojae                 = 10;
+	optional string res_gubun              = 11;
+	optional string jubsu_no               = 12;
+	optional string newrow                 = 13;
+	optional string pkres1001              = 14;
+	optional string row_state              = 15;
+}
+message RES1001U00FbxHospCodeLinkListItemInfo {
+	optional string hosp_code  = 1;
+	optional string hosp_name  = 2;
+	optional string address    = 3;
+	optional string telephone  = 4;
+}
+
+//Nuro OUT0101U02 Grid Comment Info
+message NuroOUT0101U02GridCommentInfo
+ {
+	 optional string ser = 1;
+	 optional string comment = 2;
+	 optional string patient_code = 3;
+ }
+ 
+ //Nuro OUT0101U02 Grid Boheom Info
+ message NuroOUT0101U02GridBoheomInfo
+ {
+     optional string start_date = 1;
+     optional string bunho = 2;
+     optional string suname = 3;
+     optional string gubun1 = 4;
+     optional string gubun_name1 = 5;
+     optional string johap = 6;
+     optional string johap_name = 7;
+     optional string tel = 8;
+     optional string gaein = 9;
+     optional string gaein_no = 10;
+     optional string bonin_gubun = 11;
+     optional string bonin_gubun_name = 12;
+     optional string piname = 13;
+     optional string last_check_date = 14;
+     optional string end_date = 15;
+     optional string johap_gubun = 16;
+     optional string old_gubun = 17;
+     optional string retrieve_yn = 18;
+     optional string old_start_date = 19;
+     optional string chuiduk_date = 20;
+     optional string end_yn = 21; 
+     optional string data_row_state = 22;
+ }
+ 
+ //Nuro OUT0101U02 Grid Gongbi List Info
+ message NuroOUT0101U02GridGongbiListInfo {
+    optional string start_date = 1;
+    optional string bunho = 2;
+    optional string budamja_bunho = 3;
+    optional string gongbi_code = 4;
+    optional string sugubja_bunho = 5;
+    optional string end_date = 6;
+    optional string remark = 7;
+    optional string last_check_date = 8;
+    optional string gongbi_name = 9;
+    optional string retrieve_yn = 10;
+    optional string old_start_date = 11;
+    optional string end_yn = 12;
+    optional string data_row_state = 13;
+ }
+ 
+  // Nuro OUT0101U02 Grid Patient Info 
+ message NuroOUT0101U02GridPatientInfo {
+     optional string bunho = 1;
+     optional string suname = 2;
+     optional string sex = 3;
+     optional string birth = 4;
+     optional string zip_code1 = 5;
+     optional string zip_code2 = 6;
+     optional string address1 = 7;
+     optional string address2 = 8;
+     optional string tel = 9;
+     optional string tel1 = 10;
+     optional string type = 11;
+     optional string tel_hp = 12;
+     optional string email = 13;
+     optional string gubun_name = 14;
+     optional string dong_name = 15;
+     optional string suname2 = 16;
+     optional string age = 17;
+     optional string tel_type = 18;
+     optional string tel_type2 = 19;
+     optional string tel_type3 = 20;
+     optional string delete_yn = 21;
+     optional string pace_maker_yn = 22;
+     optional string self_pace_maker = 23;
+     optional string patient_type = 24;
+     optional string retrieve_yn = 25;
+     optional string iu_gubun = 26;
+     optional string ref_id = 27;
+     optional string pass = 28;
+	 optional string parent_code = 29;
+	 optional string billing_type = 30;
+ }
+
+//Nuro OUT0101U02 Lay Dup Patient Info
+message NuroOUT0101U02LayDupPatientInfo
+{
+	optional string patient_code = 1;
+	optional string patient_name = 2;
+	optional string birth = 3;
+	optional string code_name = 4;
+}
+
+//Nuro OUT0101U02 Lay Protect Gubun List Info
+message NuroOUT0101U02LayProtectGubunListInfo
+{
+	optional string code = 1;
+	optional string code_name = 2;
+}
+
+// Nuro OUT0101U02 Get Insurance Code
+message NuroOUT0101U02GetInsuranceCode {
+	optional string insurance_code = 1;
+}
+
+// Nuro OUT0101U02 Get Type
+message NuroOUT0101U02GetType {
+	optional string type = 1;
+	optional string type_name = 2;
+}
+
+// Nuro OUT0101U02 Get Insurance Info
+message NuroOUT0101U02GetInsuranceInfo2 {
+ optional string insurance_code = 1;
+ optional string insurance_name = 2;
+}
+
+// Nuro OUT0101U02 Get Johap Info
+message NuroOUT0101U02GetJohapInfo {
+	optional string johap_name = 1;
+	optional string johap_gubun = 2;
+}
+
+message NuroRES0102U00GrdRES0103Info{
+    optional string doctor          = 1;
+    optional string jinryo_pre_date = 2;
+    optional string am_start_hhmm   = 3;
+    optional string am_end_hhmm     = 4;
+    optional string pm_start_hhmm   = 5;
+    optional string pm_end_hhmm     = 6;
+    optional string remark          = 7;
+    optional string am_gwa_room     = 8;
+    optional string pm_gwa_room	    = 9;
+    optional string data_row_state  = 10;
+}
+
+message NuroRES0102U00GrdRES0102Info{
+    optional string doctor             = 1;
+    optional string gwa                = 2;
+    optional string start_date         = 3;
+    optional string avg_time           = 4;
+    optional string jinryo_break_yn    = 5;
+    optional string am_start_hhmm1     = 6;
+    optional string am_start_hhmm2     = 7;
+    optional string am_start_hhmm3     = 8;
+    optional string am_start_hhmm4     = 9;
+    optional string am_start_hhmm5     = 10;
+    optional string am_start_hhmm6     = 11;
+    optional string am_start_hhmm7     = 12;
+    optional string am_end_hhmm1       = 13;
+    optional string am_end_hhmm2       = 14;
+    optional string am_end_hhmm3       = 15;
+    optional string am_end_hhmm4       = 16;
+    optional string am_end_hhmm5       = 17;
+    optional string am_end_hhmm6       = 18;
+    optional string am_end_hhmm7       = 19;
+    optional string pm_start_hhmm1     = 20;
+    optional string pm_start_hhmm2     = 21;
+    optional string pm_start_hhmm3     = 22;
+    optional string pm_start_hhmm4     = 23;
+    optional string pm_start_hhmm5     = 24;
+    optional string pm_start_hhmm6     = 25;
+    optional string pm_start_hhmm7     = 26;
+    optional string pm_end_hhmm1       = 27;
+    optional string pm_end_hhmm2       = 28;
+    optional string pm_end_hhmm3       = 29;
+    optional string pm_end_hhmm4       = 30;
+    optional string pm_end_hhmm5       = 31;
+    optional string pm_end_hhmm6       = 32;
+    optional string pm_end_hhmm7       = 33;
+    optional string am_gwa_room1       = 34;
+    optional string am_gwa_room2       = 35;
+    optional string am_gwa_room3       = 36;
+    optional string am_gwa_room4       = 37;
+    optional string am_gwa_room5       = 38;
+    optional string am_gwa_room6       = 39;
+    optional string am_gwa_room7       = 40;
+    optional string pm_gwa_room1       = 41;
+    optional string pm_gwa_room2       = 42;
+    optional string pm_gwa_room3       = 43;
+    optional string pm_gwa_room4       = 44;
+    optional string pm_gwa_room5       = 45;
+    optional string pm_gwa_room6       = 46;
+    optional string pm_gwa_room7       = 47;
+    optional string res_am_start_hhmm1 = 48;
+    optional string res_am_start_hhmm2 = 49;
+    optional string res_am_start_hhmm3 = 50;
+    optional string res_am_start_hhmm4 = 51;
+    optional string res_am_start_hhmm5 = 52;
+    optional string res_am_start_hhmm6 = 53;
+    optional string res_am_start_hhmm7 = 54;
+    optional string res_am_end_hhmm1   = 55;
+    optional string res_am_end_hhmm2   = 56;
+    optional string res_am_end_hhmm3   = 57;
+    optional string res_am_end_hhmm4   = 58;
+    optional string res_am_end_hhmm5   = 59;
+    optional string res_am_end_hhmm6   = 60;
+    optional string res_am_end_hhmm7   = 61;
+    optional string res_pm_start_hhmm1 = 62;
+    optional string res_pm_start_hhmm2 = 63;
+    optional string res_pm_start_hhmm3 = 64;
+    optional string res_pm_start_hhmm4 = 65;
+    optional string res_pm_start_hhmm5 = 66;
+    optional string res_pm_start_hhmm6 = 67;
+    optional string res_pm_start_hhmm7 = 68;
+    optional string res_pm_end_hhmm1   = 69;
+    optional string res_pm_end_hhmm2   = 70;
+    optional string res_pm_end_hhmm3   = 71;
+    optional string res_pm_end_hhmm4   = 72;
+    optional string res_pm_end_hhmm5   = 73;
+    optional string res_pm_end_hhmm6   = 74;
+    optional string res_pm_end_hhmm7   = 75;
+    optional string doc_res_limit      = 76;
+    optional string etc_res_limit      = 77;    
+    optional string end_date           = 78;
+    optional string data_row_state     = 79;
+    optional string out_hosp_res_limit = 80;
+}
+
+message CboAvgTimeInfo{
+ 	optional string time_term = 1;
+ 	optional string time_term2 = 2;
+}
+
+message NuroRES0102U00GridDoctorInfo{
+	 optional string doctor = 1;
+	 optional string start_date = 2;
+	 optional string end_date = 3; 
+	 optional string sayu = 4; 
+	 optional string data_row_state = 5;
+}
+
+message NuroRES0102U00GetDoctorInfo{
+ 	optional string doctor = 1;
+}
+
+//Nuro OUT1001U0 1Lay Gongbi Code Info
+message NuroOUT1001U01LayGongbiCodeInfo
+{
+   optional string gongbi_code1 = 1;
+   optional string gongbi_code2 = 2;
+   optional string gongbi_code3 = 3;
+   optional string gongbi_code4 = 4;
+}
+
+//Nuro Layout Bar Code Info
+message NuroOUT1001U01LayoutBarCodeInfo
+{
+    optional string bunho = 1;
+    optional string suname = 2;
+    optional string sex = 3;
+    optional string birth = 4;
+    optional string bunho2 = 5;
+}
+
+
+//Nuro OUT1001U01 Get Group Key Info
+message NuroOUT1001U01GetGroupKeyInfo
+{
+   optional string group_key = 1;
+}
+
+//Nuro OUT1001U01 Load OUT0105 Info
+message NuroOUT1001U01LoadOUT0105Info
+{
+    optional string gongbi_code = 1;
+    optional string priority = 2;
+}
+
+message NuroOUT1001U01GetDoctorInfo
+{
+    optional string gwa = 1;
+    optional string gwa_name = 2;
+    optional string doctor = 3;
+    optional string doctor_name = 4;
+    optional string waiting_patient = 5;
+    optional string total_patient = 6;
+}
+
+message NuroOUT1001U01GetTypeInfo
+{
+    optional string gubun = 1;
+    optional string gubun_name = 2;
+    optional string last_check_date = 3;
+    optional string gongbi_yn = 4;
+}
+
+message NuroOUT1001U01GetDepartmentInfo
+{
+    optional string gwa = 1;
+    optional string gwa_name = 2;
+    optional string buseo_code = 3;
+}
+
+// NURO RES1001U00 Doctor Reservation Date List Item Info
+message NuroRES1001U00DoctorReservationDateListItemInfo {
+        optional string doctor_code = 1;
+        optional string date        = 2;
+        optional string res_date    = 3;
+        optional string res_flag    = 4;
+        optional string res_inwon   = 5;
+        optional string res_outwon  = 6;
+}
+
+// NURO RES1001U00 Resered Data List Item Info
+message NuroRES1001U00ReseredDataListItemInfo {
+        optional string reception_time  = 1;
+        optional string patient_code    = 2;
+        optional string patient_name1   = 3;
+        optional string patient_name2   = 4;
+        optional string exam_status     = 5;
+        optional string upd_date        = 6;
+        optional string pkout1001       = 7;
+        optional string coming_date     = 8;
+        optional string department_code = 9;
+        optional string reception_no    = 10;
+        optional string type            = 11;
+        optional string doctor_code     = 12;
+        optional string res_type        = 13;
+        optional string res_user_name   = 14;
+        optional string res_input_type  = 15;
+        optional string coming_status   = 16;
+        optional string new_row         = 17;
+        optional string exam_state      = 18;
+        optional string exam_irai_state = 19;
+        optional string res_user        = 20;
+        optional string ipwon_status    = 21;
+        optional string reser_comments  = 22;
+        optional string reser_type      = 23;
+        optional string clinic_name     = 24;
+}
+
+// NURO RES1001U00 Reser List Item Info
+message NuroRES1001U00ReserListItemInfo {
+        optional string coming_date = 1;
+        optional string exam_pre_time = 2;
+        optional string department_name = 3;
+        optional string doctor_name = 4;
+}
+
+// NURO RES1001U00 Doctor Reser List Item Info
+message NuroRES1001U00DoctorReserListItemInfo {
+        optional string coming_date      = 1;
+        optional string exam_pre_time    = 2;
+        optional string department_name  = 3;
+        optional string doctor_name      = 4;
+        optional string pkout1001        = 5;
+        optional string coming_status    = 6;
+        optional string patient_code     = 7;
+        optional string department_code  = 8;
+        optional string doctor_code      = 9;
+        optional string exam_irai_status = 10;
+        optional string irai_date        = 11;
+        optional string res_user         = 12;
+        optional string reser_comment    = 13;
+        optional string reser_type       = 14;
+        optional string clinic_name      = 15;
+}
+
+//Nuro OUT1001U01LoadCheckChojaeJpnInfo
+message NuroOUT1001U01LoadCheckChojaeJpnInfo
+{
+        optional string chojae = 1;         
+        optional string cht_chojae = 2;      
+        optional string gajubsu_gubun  = 3;  
+        optional string err = 4;
+}
+
+//Get Temp List
+message NuroNUR1001R00GetTempListItemInfo
+{
+    optional string doctor_name = 1;
+    optional string num1 = 2;
+    optional string num2 = 3;
+    optional string num3 = 4;
+    optional string num4 = 5;
+    optional string num5 = 6;
+    optional string num6 = 7;
+    optional string num7 = 8;
+    optional string num8 = 9;
+    optional string num9 = 10;
+    optional string num10 = 11;
+    optional string num11 = 12;
+    optional string num12 = 13;
+    optional string num13 = 14;
+    optional string num14 = 15;
+    optional string num15 = 16;
+    optional string num16 = 17;
+    optional string num17 = 18;
+    optional string num18 = 19;
+    optional string num19 = 20;
+    optional string num20 = 21;
+    optional string num21 = 22;
+    optional string num22 = 23;
+    optional string num23 = 24;
+    optional string num24 = 25;
+    optional string num25 = 26;
+    optional string num26 = 27;
+    optional string num27 = 28;
+    optional string num28 = 29;
+    optional string num29 = 30;
+    optional string num30 = 31;
+    optional string num31 = 32;
+    optional string last_day = 33;
+}
+
+//Get Gwa Doctor List
+message NuroNUR1001R00GetGwaDoctorListInfo{
+    optional string doctor = 1;
+    optional string doctor_name = 2;
+}
+
+// ----[START] OUT1001P01 ------
+message OUT1001P01GrdOUT1001ListItemInfo{
+    optional string pkout1001 = 1;
+    optional string bunho = 2;
+    optional string gwa = 3;
+    optional string gwa_name = 4;
+    optional string doctor = 5;
+    optional string doctor_name = 6;
+    optional string jubsu_no = 7;
+}
+
+// ----[END] OUT1001P01 ------
+message UpdateJubsuDataInfo {
+    optional string department_code = 1;
+    optional string department_name = 2;
+    optional string doctor_code = 3;
+    optional string doctor_name = 4;
+    optional string exam_status = 5;
+    optional string reception_no = 6;
+    optional string insur_code = 7;
+    optional string insur_name = 8;
+    required string patient_code = 9;
+    optional string coming_date = 10;
+    optional string pkout1001 = 11;
+    optional string reception_time = 12;
+    optional string coming_status = 13;
+    optional string coming_type = 14;
+    optional string sunnab_status = 15;
+    optional string fkinp1001 = 16;
+    optional string reception_type = 17;
+    optional string inp_trans_status = 18;
+    optional string bigo = 19;
+    optional string insur_code1 = 20;
+    optional string insur_code2 = 21;
+    optional string insur_code3 = 22;
+    optional string insur_code4 = 23;
+    optional string priority1 = 24;
+    optional string priority2 = 25;
+    optional string priority3 = 26;
+    optional string priority4 = 27;
+    optional string sujin_no = 28;
+    optional string wonyoi_order_status = 29;
+    optional string reser_status = 30;
+    optional string button = 31;
+    optional string check_coming = 32;
+    optional string arrive_time = 33;
+    optional string group_key = 34;
+    optional string cont_key = 35;
+    optional string data_row_state = 36;
+    optional string deleted_row_table = 37;
+    optional string sys_id = 38;
+	optional string upd_id = 39;
+	optional OrcaReceptionInfo orca_reception_info = 40;
+	optional string modify_flg = 41;
+	optional string has_appointment = 42;
+	optional string recept_ref_id = 43;
+}
+
+message OrcaReceptionInfo{
+    optional string hosp_code = 1;
+    optional string fkout1001 = 2;
+    optional string orca_reception_id = 3;
+    optional string gwa = 4;
+    optional string doctor = 5;
+    optional string order_time = 6;
+    optional string app_time = 7;
+    optional string regist_time = 8;
+    optional string perform_time = 9;
+    optional string io_flag = 10;
+    optional string time_clazz = 11;
+    optional string bund_num = 12;
+    optional string clazz_code = 13;
+    optional string sub_code = 14;
+    optional string act_code = 15;
+    optional string active_flg = 16;
+    optional string sys_id = 17;
+    optional string udp_id = 18;
+    optional string created = 19;
+    optional string updated = 20;
+}
+
+message RES1001U00FrmModifyReserGrdRES1001Info {
+	optional string am_start = 1;
+	optional string am_end = 2;
+	optional string pm_start = 3;
+	optional string pm_end = 4;
+	optional string avg_time = 5;
+}
+
+message NuroRES0102U00GrdRES0103ResInfo
+{        
+    optional string doctor   = 1;
+    optional string jinryo_pre_date = 2;
+    optional string res_am_start_hhmm   = 3;
+    optional string res_am_end_hhmm     = 4;
+    optional string res_pm_start_hhmm   = 5;
+    optional string res_pm_end_hhmm     = 6;
+    optional string remark   = 7;
+    optional string am_gwa_room     = 8;
+    optional string pm_gwa_room = 9;
+    optional string data_row_state = 10;
+}
+
+message NuroChkGetBunhoBySujinInfo{
+    optional string bunho = 1;
+    optional string suname = 2;
+}
+
+
+
+// ---------[START] OCS.lib ----------
+
+message OcsLoadInputControlListItemInfo{
+    optional string input_control      = 1;
+    optional string input_control_name = 2;
+    optional string specimen_code      = 3;
+    optional string suryang            = 4;
+    optional string ord_danui          = 5;
+    optional string dv                 = 6;
+    optional string nalsu              = 7;
+    optional string jusa               = 8;
+    optional string bogyong_code       = 9;
+    optional string toiwon_drg_yn      = 10;
+    optional string portable_yn        = 11;
+    optional string amt                = 12;
+    optional string wonyoi_order_yn    = 13;
+}
+
+message OcsLoadVisibleControlListItemInfo{
+    optional string input_tab = 1;
+    optional string col_name = 2;
+    optional string visible_yn = 3;
+}
+
+message OcsLoadInputTabListItemInfo{
+    optional string input_tab = 1;
+    optional string order_gubun = 2;
+    optional string main_yn = 3;
+    optional string default_yn = 4;
+}
+
+message OcsOrderBizLoadComboDataSourceListItemInfo{
+    optional string code = 1;
+    optional string code_name = 2;
+    optional string group_key = 3;
+    optional string value_point = 4;
+    optional string sort_key = 5;
+    optional string case_dv_toiwon_empty1 = 6;
+    optional string case_dv_toiwon_empty2 = 7;
+    optional string case_dv_toiwon_zero_value = 8;
+}
+
+
+// ---------[END] OCS.lib ----------
+
+// -------[START] OCS1003P01 ------
+message OCS1003P01GrdPatientListItemInfo{
+	optional string bunho = 1;
+	optional string naewon_date = 2;
+	optional string gwa = 3;
+	optional string doctor = 4;
+	optional string naewon_type = 5;
+	optional string reser_yn = 6;
+	optional string jubsu_time = 7;
+	optional string arrive_time = 8;
+	optional string suname = 9;
+	optional string suname2 = 10;
+	optional string sex = 11;
+	optional string age = 12;
+	optional string gubun_name = 13;
+	optional string gwa_name = 14;
+	optional string doctor_name = 15;
+	optional string chojae_name = 16;
+	optional string jinryo_end_yn = 17;
+	optional string pk_naewon = 18;
+	optional string naewon_yn = 19;
+	optional string sunnab_yn = 20;
+	optional string jubsu_gubun1 = 21;
+	optional string other_gwa = 22;
+	optional string consult_yn = 23;
+	optional string jubsu_gubun2 = 24;
+	optional string common_doctor_yn = 25;
+	optional string gubun = 26;
+	optional string group_key = 27;
+	optional string kensa_yn = 28;
+	optional string unapprove_yn = 29;
+	optional string sys_id = 30;
+}
+// -------[END] OCS1003P01 ------
+//[START] OUT0106U00
+message OUT0106U00PatientCommentItemInfo {
+    optional string patient_info = 1;
+    optional string patient_info_name = 2;
+    optional string start_date = 3;
+    optional string end_date = 4;
+    optional string comments = 5;
+    optional string bunho = 6;
+    optional string cont_key = 7;
+    optional string data_row_state = 8;
+}
+
+message OUT0106U00PatientItemInfo {
+    optional string patient_info = 1;
+    optional string patient_info_name = 2;
+    optional string cont_key = 3;
+}
+
+message OUT0106U00GridItemInfo {
+    optional string comments = 1;
+    optional string ser = 2;
+    optional string bunho = 3;
+    optional string display_yn = 4;
+    optional string data_row_state = 5;
+}
+//[END] OUT0106U00
+//------[START] OUT0101Q01-----
+message OUT0101Q01GrdPatientListInfo{
+	optional string bunho = 1;
+	optional string suname = 2;
+	optional string suname2 = 3;
+	optional string sex = 4;
+	optional string birth = 5;
+	optional string zip_code1 = 6;
+	optional string zip_code2 = 7;
+	optional string address1 = 8;
+	optional string address2 = 9;
+	optional string address = 10;
+	optional string tel = 11;
+	optional string tel1 = 12;
+	optional string gubun = 13;
+	optional string jubsu_break = 14;
+	optional string jubsu_break_reason = 15;
+	optional string delete_yn = 16;
+	optional string remark = 17;
+	optional string tel_hp = 18;
+	optional string email = 19;
+	optional string fn_out_load_last_naewon_date = 20;        
+	optional string fn_bas_load_code_name = 21;
+	optional string no_header = 22;
+	optional string ho_dong = 23;
+	optional string cont_key = 24;
+}
+//------[END] OUT0101Q01------
+
+//-----[START] ORDERTRANS -----
+message ORDERTRANSGrdHokenInfo
+{
+	optional string gubun                  = 1;
+	optional string gubun_name             = 2;
+	optional string start_date             = 3;
+	optional string end_date               = 4;
+	optional string johap                  = 5;
+	optional string select_yn              = 6;
+}
+message ORDERTRANSGrdINP2004Info
+{
+	optional string bunho                = 1;
+	optional string suname               = 2;
+	optional string ipwon_date           = 3;
+	optional string data_date            = 4;
+	optional string fkinp1001            = 5;
+	optional string pkinp1002            = 6;
+	optional string from_gwa             = 7;
+	optional string to_gwa               = 8;
+	optional string from_doctor          = 9;
+	optional string to_doctor            = 10;
+	optional string from_ho_dong1        = 11;
+	optional string to_ho_dong1          = 12;
+	optional string from_ho_code1        = 13;
+	optional string to_ho_code1          = 14;
+	optional string from_bed_no          = 15;
+	optional string to_bed_no            = 16;
+	optional string send_yn              = 17;
+	optional string if_flag              = 18;
+}
+message ORDERTRANSGrdSiksaInfo
+{
+	optional string fkinp1001            = 1;
+	optional string pkocs2015            = 2;
+	optional string bunho                = 3;
+	optional string input_gubun          = 4;
+	optional string direct_gubun         = 5;
+	optional string nur_gr_name          = 6;
+	optional string direct_code          = 7;
+	optional string nur_md_name          = 8;
+	optional string direct_cont1         = 9;
+	optional string nur_so_name          = 10;
+	optional string order_date           = 11;
+	optional string drt_from_date        = 12;
+	optional string drt_to_date          = 13;
+	optional string act_date             = 14;
+	optional string pk_seq                     = 15;
+	optional string acting_yn            = 16;
+	optional string select_yn            = 17;
+	optional string send_yn              = 18;
+}
+message ORDERTRANSGrdOutSangInfo
+{
+	optional string bunho                     = 1;
+	optional string gwa                       = 2;
+	optional string gwa_name                  = 3;
+	optional string io_gubun                  = 4;
+	optional string pk_seq                    = 5;
+	optional string ser                       = 6;
+	optional string sang_code                 = 7;
+	optional string pre_name                  = 8;
+	optional string sang_name                 = 9;
+	optional string pre_modifier1             = 10;
+	optional string pre_modifier2             = 11;
+	optional string pre_modifier3             = 12;
+	optional string pre_modifier4             = 13;
+	optional string pre_modifier5             = 14;
+	optional string pre_modifier6             = 15;
+	optional string pre_modifier7             = 16;
+	optional string pre_modifier8             = 17;
+	optional string pre_modifier9             = 18;
+	optional string pre_modifier10            = 19;
+	optional string pre_modifier_name         = 20;
+	optional string post_modifier1            = 21;
+	optional string post_modifier2            = 22;
+	optional string post_modifier3            = 23;
+	optional string post_modifier4            = 24;
+	optional string post_modifier5            = 25;
+	optional string post_modifier6            = 26;
+	optional string post_modifier7            = 27;
+	optional string post_modifier8            = 28;
+	optional string post_modifier9            = 29;
+	optional string post_modifier10           = 30;
+	optional string post_modifier_name        = 31;
+	optional string sang_start_date           = 32;
+	optional string sang_start_date_jp        = 33;
+	optional string sang_end_date             = 34;
+	optional string sang_end_date_jp          = 35;
+	optional string sang_end_sayu             = 36;
+	optional string sang_end_sayu_name        = 37;
+	optional string ju_sang_yn                = 38;
+	optional string cont_key                  = 39;
+}
+message ORDERTRANSGrdWoichulInfo
+{
+	optional string fkinp1001            = 1;
+	optional string fk_out_date          = 2;
+	optional string bunho                = 3;
+	optional string out_date             = 4;
+	optional string out_time             = 5;
+	optional string in_hope_date         = 6;
+	optional string in_hope_time         = 7;
+	optional string in_true_date         = 8;
+	optional string in_true_time         = 9;
+	optional string out_object_text      = 10;
+	optional string start_date           = 11;
+	optional string end_date             = 12;
+	optional string acting_yn            = 13;
+	optional string select_yn            = 14;
+	optional string send_yn              = 15;
+	optional string seq                  = 16;
+}
+message ORDERTRANSLayOut0101Info
+{
+	optional string suname           = 1;
+	optional string suname2          = 2;
+	optional string birth            = 3;
+	optional string tel              = 4;
+	optional string sex              = 5;
+	optional string age              = 6;
+	optional string if_valid_yn      = 7;
+}
+message ORDERTRANSGrdCommentsInfo
+{
+	optional string bunho            = 1;
+	optional string ser              = 2;
+	optional string comments         = 3;
+}
+message ORDERTRANSLayCommonInfo
+{
+	optional string gubun_name       = 1;
+	optional string if_valid_yn      = 2;
+	optional string gongbi_yn        = 3;
+}
+message ORDERTRANSSangSendAllInfo
+{
+	optional string ifs_key = 1;
+}
+message ORDERTRANSGrdEditInfo
+{
+	optional string pk1001                       = 1;
+	optional string pkocs                        = 2;
+	optional string group_ser                    = 3;
+	optional string group_out1001                = 4;
+	optional string order_gubun_name             = 5;
+	optional string hangmog_code                 = 6;
+	optional string hangmog_name                 = 7;
+	optional string specimen_code                = 8;
+	optional string specimen_name                = 9;
+	optional string suryang                      = 10;
+	optional string ord_danui                    = 11;
+	optional string ord_danui_name               = 12;
+	optional string dv_time                      = 13;
+	optional string dv                           = 14;
+	optional string nalsu                        = 15;
+	optional string jusa                         = 16;
+	optional string jusa_name                    = 17;
+	optional string jusa_spd_name                = 18;
+	optional string bogyong_code                 = 19;
+	optional string bogyong_col_name             = 20;
+	optional string emergency                    = 21;
+	optional string jundal_part                  = 22;
+	optional string wonyoi_order_yn              = 23;
+	optional string dangil_gumsa_order_yn        = 24;
+	optional string ocs_flag                     = 25;
+	optional string order_gubun                  = 26;
+	optional string bunho                        = 27;
+	optional string order_date                   = 28;
+	optional string gwa                          = 29;
+	optional string doctor                       = 30;
+	optional string seq                          = 31;
+	optional string fkocs003                     = 32;
+	optional string sub_susul                    = 33;
+	optional string acting_date                  = 34;
+	optional string hope_date                    = 35;
+	optional string sunab_date                   = 36;
+	optional string home_care_yn                 = 37;
+	optional string regular_yn                   = 38;
+	optional string hubal_change_yn              = 39;
+	optional string bun_code                     = 40;
+	optional string input_control                = 41;
+	optional string order_gubun_bas              = 42;
+	optional string acting_yn                    = 43;
+	optional string select_yn                    = 44;
+	optional string send_yn                      = 45;
+	optional string if_flag                      = 46;
+	optional string fkifs1004                    = 47;
+	optional string naewon_yn                    = 48;
+	optional string order_by_key                 = 49;
+	optional string trial_flg                    = 50;
+	optional string cls_code                     = 51;
+	optional string sg_code                      = 52;
+	optional string order_status                 = 53;
+}
+
+message ORDERTRANSGrdListNonSendYnInfo
+{
+	optional string fkout1001             = 1;
+	optional string bunho                 = 2;
+	optional string suname                = 3;
+	optional string acting_date           = 4;
+	optional string gwa                   = 5;
+	optional string gwa_name              = 6;
+	optional string doctor                = 7;
+	optional string doctor_name           = 8;
+	optional string gubun                 = 9;
+	optional string gubun_name            = 10;
+	optional string sended_yn             = 11;
+	optional string naewon_yn             = 12;
+	optional string order_by_key          = 13;
+	optional string chojae_name          =  14;
+}
+
+message ORDERTRANSGrdListSendYnInfo
+{
+	optional string fkout1001             = 1;
+	optional string bunho                 = 2;
+	optional string suname                = 3;
+	optional string acting_date           = 4;
+	optional string gwa                   = 5;
+	optional string gwa_name              = 6;
+	optional string doctor                = 7;
+	optional string doctor_name           = 8;
+	optional string gubun                 = 9;
+	optional string gubun_name            = 10;
+	optional string order_by_key          = 11;
+	optional string pkout1001          	  = 12;
+}
+
+message ORDERTRANSGrdListInfo
+{
+	optional string fkinp1001              = 1;
+	optional string bunho                  = 2;
+	optional string suname                 = 3;
+	optional string ipwon_date             = 4;
+	optional string ipwon_time             = 5;
+	optional string gwa                    = 6;
+	optional string doctor                 = 7;
+	optional string gwa_name               = 8;
+	optional string doctor_name            = 9;
+	optional string gubun                  = 10;
+	optional string gubun_name             = 11;
+	optional string gongbi_yn              = 12;
+	optional string chojae                 = 13;
+	optional string chojae_name            = 14;
+	optional string pkinp1002              = 15;
+	optional string acting_date            = 16;
+	optional string order_date             = 17;
+	optional string gubun_old              = 18;
+	optional string chojae_old             = 19;
+	optional string gongbi_code1           = 20;
+	optional string gongbi_code2           = 21;
+	optional string gongbi_code3           = 22;
+	optional string gongbi_code4           = 23;
+	optional string gongbi_code1_name      = 24;
+	optional string gongbi_code2_name      = 25;
+	optional string gongbi_code3_name      = 26;
+	optional string gongbi_code4_name      = 27;
+	optional string pkout                  = 28;
+	optional string send_date              = 29;
+	optional string sanjung_gubun          = 30;
+	optional string sanjung_gubun_name     = 31;
+	optional string if_valid_yn            = 32;
+}
+message ORDERTRANSGrdEditIGubunInfo
+{
+	optional string pk1001                         = 1;
+	optional string pkocs                          = 2;
+	optional string group_ser                      = 3;
+	optional string order_gubun_name               = 4;
+	optional string hangmog_code                   = 5;
+	optional string hangmog_name                   = 6;
+	optional string specimen_code                  = 7;
+	optional string specimen_name                  = 8;
+	optional string suryang                        = 9;
+	optional string ord_danui                      = 10;
+	optional string ord_danui_name                 = 11;
+	optional string dv_time                        = 12;
+	optional string dv                             = 13;
+	optional string nalsu                          = 14;
+	optional string jusa                           = 15;
+	optional string jusa_name                      = 16;
+	optional string jusa_spd_name                  = 17;
+	optional string bogyong_code                   = 18;
+	optional string ocs_bogyong_col_name           = 19;
+	optional string emergency                      = 20;
+	optional string jundal_part                    = 21;
+	optional string wonyoi_order_yn                = 22;
+	optional string dangil_gumsa_order_yn          = 23;
+	optional string ocs_flag                       = 24;
+	optional string order_gubun                    = 25;
+	optional string bunho                          = 26;
+	optional string order_date                     = 27;
+	optional string gwa                            = 28;
+	optional string doctor                         = 29;
+	optional string seq                            = 30;
+	optional string pkocs1003                      = 31;
+	optional string sub_susul                      = 32;
+	optional string acting_date                    = 33;
+	optional string hope_date                      = 34;
+	optional string sunab_date                     = 35;
+	optional string home_care_yn                   = 36;
+	optional string regular_yn                     = 37;
+	optional string hubal_change_yn                = 38;
+	optional string bun_code                       = 39;
+	optional string input_control                  = 40;
+	optional string order_gubun_bas                = 41;
+	optional string acting_yn                      = 42;
+	optional string select_yn                      = 43;
+	optional string send_yn                        = 44;
+	optional string order_by_key                   = 45;
+	 optional string trial_flg                         = 46;
+}
+message ORDERTRANSGrdGongbiListInfo
+{
+	optional string gongbi_code           = 1;
+	optional string gongbi_name           = 2;
+	optional string last_check_date       = 3;
+	optional string budamja_bunho         = 4;
+	optional string sugubja_bunho         = 5;
+	optional string select_yn             = 6;
+	optional string priority              = 7;
+	optional string if_valid_yn           = 8;
+}
+message ORCATransferOrdersReqClaimInfo{
+        optional string bun_code = 1;
+        optional string tax_yn = 2;
+}
+message ORDERTRANProcessRequiInfo{
+	optional string hosp_code      = 1;
+	optional string pk1001        = 2;
+	optional string gubun         = 3;
+	optional string chojae        = 4;
+	optional string sanjung_gubun = 5;
+	optional string pkinp1002     = 6;
+	optional string sys_id        = 7;
+	optional string bunho         = 8;
+	optional string gongbi_code   = 9;
+	optional string priority      = 10; 
+	optional string io_gubun      = 11; 
+}
+
+message ORDERTRANSMisaGetHangmogInfo
+{
+	optional string hangmog_code = 1;
+	optional string hangmog_name = 2;
+	optional string suryang = 3;
+	optional string nalsu = 4;
+	optional string dv = 5;
+}
+
+message ORDERTRANSMisaTranferInfo
+{
+	optional string sunab_date = 1;
+	optional string pkocs1003 = 2;
+}
+//-----[END] ORDERTRANS -------
+
+//--[START]NUR2001U04-------
+message NUR2001U04SaveLayoutInfo
+{
+	optional string naewon_yn         = 1;
+	optional string arrive_time       = 2;
+	optional string jubsu_gubun       = 3;
+	optional string pkout1001         = 4;
+}
+//--[END]NUR2001U04--------
+
+message OUT1001R01LayOut0101Info{
+	optional string su_name = 1;
+	optional string su_name2 = 2;
+	optional string birth = 3;
+}
+
+message OUT1001R01GrdListInfo{
+	optional string bunho = 1;
+	optional string suname = 2;
+	optional string suname2 = 3;
+	optional string date_convert1 = 4;
+	optional string date_convert2 = 5;
+	optional string naewon_date = 6;
+	optional string sujin_no = 7;
+	optional string jubsu_no = 8;
+	optional string gwa = 9;
+	optional string gwa_name = 10;
+	optional string doctor = 11;
+	optional string doctor_name = 12;
+	optional string jubsu_gubun = 13;
+	optional string gubun_name = 14;
+	optional string jubsu_time = 15;
+	optional string chojae_name = 16;
+	optional string reser_yn = 17;
+	optional string arrive_time = 18;
+	optional string naewon_yn = 19;
+	optional string yoyang_name = 20;
+	optional string sort_key = 21;
+	optional string jundal_part = 22;
+}
+//[START] OUT1001P03
+message OUT1001P03GrdBeforeJubsuInfo{
+	optional string io_gubun = 1;
+	optional string pk_key = 2;
+	optional string bunho = 3;
+	optional string suname = 4;
+	optional string naewon_date = 5;
+	optional string gwa = 6;
+	optional string gwa_name = 7;
+	optional string doctor = 8;
+	optional string doctor_name = 9;
+	optional string naewon_time = 10;
+	optional string select_yn = 11;
+	optional string comments = 12;
+	optional string bunho_type = 13;
+	optional string reser_yn = 14;
+	optional string reser_gubun = 15;
+}
+
+message OUT1001P03GrdOrderInfo{
+	optional string pkocskey = 1;
+	optional string order_gubun = 2;
+	optional string order_gubun_name = 3;
+	optional string hangmog_code = 4;
+	optional string hangmog_name = 5;
+	optional string suryang = 6;
+	optional string ord_danui = 7;
+	optional string nalsu = 8;
+}
+
+message OUT1001P03GrdAfterJubsuInfo{
+	optional string io_gubun = 1;
+	optional string pk_key = 2;
+	optional string bunho = 3;
+	optional string suname = 4;
+	optional string naewon_date = 5;
+	optional string gwa = 6;
+	optional string gwa_name = 7;
+	optional string doctor = 8;
+	optional string doctor_name = 9;
+	optional string naewon_time = 10;
+	optional string comments = 11;
+	optional string bunho_type = 12;
+	optional string reser_yn = 13;
+	optional string reser_gubun = 14;
+}
+
+message OUT1001P03PkKeyInfo{
+	optional string pk_key = 1;
+	optional string io_gubun = 2;
+}
+//[END] OUT1001P03
+
+//--[START]NURO.OUT1001P03-------
+message OUT1001P03BunhoListItemInfo{
+        optional string bunho = 1;
+        optional string suname = 2;
+        optional string sex = 3;
+}
+//--[END]NURO.OUT1001P03-------
+
+
+//--[START] ORDERTRANSangTransInfo -------
+message ORDERTRANSangTransInfo {
+        optional string pkifs1011 = 1;        
+}
+//--[END] ORDERTRANSangTransInfo -------
+
+//--[START] ORDERTRANOrderTransInfo -------
+message ORDERTRANOrderTransInfo{
+        optional string pkifs1004 = 1;        
+}
+//--[END] ORDERTRANOrderTransInfo -------
+
+// NURO ORDERTRANOcs1003 Update Info
+message ORDERTRANOcs1003UpdateInfo{
+	optional string sunab_date = 1;
+	optional string pkocs1003 = 2;
+	optional string hosp_code = 3;                
+	optional string bunho = 4;
+	optional string acting_date = 5;
+	optional string gubun = 6;
+	optional string gwa = 7;
+	optional string doctor = 8;
+	optional string chojae = 9;
+                
+}
+// NURO ORDERTRANPR Make IFS1004
+message ORDERTRANPRMakeIFS1004Info{
+	optional string hosp_code = 1;  
+	optional string io_gubun = 2;  
+	optional string pkout1003 = 3;  
+	optional string trans_yn = 4;  
+	optional string trans_gubun = 5;  
+}
+message NUROAccountForcedEndInfo
+{
+        optional string sunab_date          = 1;
+        optional string fkout1003           = 2;
+        optional string pkocs1003               = 3;
+}
+
+//--[START] NURO.ORDERTRANInsertOcsTempInfo -------
+message ORDERTRANInsertOcsTempInfo{
+        optional string pk_ocs = 1;  
+        optional string bunho = 2;  
+        optional string io_gubun = 3;
+        optional string user_id = 4;
+        optional string junsong_date = 5;
+        optional string fbx_bunho = 6;
+        optional string doctor = 7;
+}
+//--[END] NURO.ORDERTRANInsertOcsTempInfo -------
+
+message NuroORDERTRANSUpdateOCS1003Info
+{   
+	optional string sunab_date = 1;    
+	optional string pkocs1003  = 2;
+}
+
+//--[START] MISA
+message OrderTransMisaHangmogInfo
+{
+	optional string hangmog_code = 1;
+	optional string hangmog_code_ext = 2;
+}
+
+message OrderTransMisaSangCodeInfo
+{
+	optional string sang_code = 1;
+	optional string sang_code_ext = 2;
+}
+//--[END] MISA
+
+// -- [START] NUR2016U02
+message NUR2016U02GrdListInfo
+{
+        optional string select               = 1;
+        optional string hosp_code_link       = 2;
+        optional string yoyang_name          = 3;
+        optional string bunho_link           = 4;
+        optional string suname               = 5;
+        optional string address1             = 6;
+        optional string birth                = 7;
+}
+message NUR2016U02DeleteLinkPatientInfo
+{
+		optional string bunho_link     = 1;
+        optional string hosp_code_link = 2;
+}
+// -- [END] NUR2016U02
+
+//--[START] RES1001U01
+message RES1001U01BookingClinicReferInfo
+{
+        optional string patient_id = 1;
+        optional string patient_name = 2;
+        optional string birthday = 3;
+        optional string sex = 4;
+        optional string booking_clinic_id = 5;
+        optional string booking_clinic_name = 6;
+        optional string tel = 7;
+        optional string booking_date = 8;
+        optional string booking_time = 9;
+        optional string link_patient_flg = 10;
+        optional string out_hosp_code = 11;
+        optional string link_emr_information = 12;
+}
+//--[END] RES1001U01
+message BookingExamInfo {
+
+    required string patient_code = 1;
+    required string patient_name = 2;
+	optional string patient_name_furigana = 3;
+	optional string phone_number = 4;
+	optional int32 department_id = 5;
+	optional string department_code = 6;
+    optional string department_name = 7;
+	optional int32 doctor_id = 8;
+	optional string doctor_code = 9;
+	optional string doctor_name = 10;
+    optional string reservation_date = 11;
+    optional string reservation_time = 12;
+    optional string reservation_code = 13;
+    optional string patient_pwd = 14;
+    optional string email = 15;
+    optional string hosp_code = 16;
+    optional Action action = 17;
+	optional bool is_mss_request = 18;
+	optional string birth = 19;
+	optional string sex = 20;
+	optional string reser_yn = 21;
+    enum Action { BOOKING = 0; CHANGE_BOOKING = 1; CANCEL_BOOKING = 3; }
+
+
+}
+//start nur2016
+message NUR2016Q00GrdHospListInfo
+{
+    optional string hosp_code       	= 1;
+        optional string yoyang_name     = 2;
+        optional string kana_name       = 3;
+        optional string address         = 4;
+        optional string tel             = 5;
+}
+message NUR2016Q00GrdPatientListInfo
+{
+    optional string bunho            = 1;
+    optional string patient_name     = 2;
+    optional string address          = 3;
+    optional string birth            = 4;
+    optional string suname           = 5;
+    optional string suname2          = 6;
+	optional string sex              = 7;
+	optional string tel              = 8;
+	optional string link_emr 		 = 9;
+}
+message NUR2016Q00LinkPatientInfo
+{
+    optional string hosp_code                 = 1;
+    optional string bunho                     = 2;
+    optional string hosp_code_link            = 3;
+    optional string bunho_link                = 4;
+    optional string emr_link_flg              = 5;
+    optional string link_type                 = 6;
+    optional string active_flg                = 7;
+}
+message NUR2016Q00CreateTempIDInfo
+{
+    optional string bunho                      = 1;
+    optional string hosp_code                  = 2;
+    optional string suname                     = 3;
+    optional string suname2                    = 4;
+    optional string address                   = 5;
+    optional string birth                     = 6;
+    optional string link_patient_flg          = 7;
+    optional string bunho_type                = 8;
+	optional string sex 					  = 9;
+    optional string tel  					  = 10;
+}
+//
+
+// [START] NURO OUT0101U02 PRINT
+message OUT0101U02HospitalItemInfo
+{
+        optional string yoyang_name = 1;
+        optional string address = 2;
+        optional string tel = 3;
+        optional string patient_name = 4;
+        optional string password = 5;
+}
+// [END] NURO OUT0101U02 PRINT
+
+//[START] KCCK API
+/*message KCCKGetScheduleDoctorInfo{
+	optional string res_am_start                         = 1;
+	optional string res_am_end                           = 2;
+	optional string res_pm_start                         = 3;
+	optional string res_pm_end                           = 4;
+	optional string avg_time                             = 5;
+	repeated KCCKGetEnableScheduleDoctorInfo enable_slot = 6;
+}
+message KCCKGetEnableScheduleDoctorInfo{
+	optional string enable_date_slot = 1;
+	optional string enable_time_slot = 2;
+}
+*/
+message KcckApiGetDoctorInfo{
+    optional string hosp_code                           = 1;
+	optional string doctor                         		= 2;
+	optional string doctor_grade                        = 3;
+	optional string doctor_name                         = 4;
+	optional string department_id                       = 5;
+	optional string doctor_id	                        = 6;
+    optional string department_code                     = 7;
+    optional string doctor_code                         = 8;
+    optional string start_am                            = 9;
+    optional string end_am                              = 10;
+    optional string start_pm                            = 11;
+    optional string end_pm                              = 12;
+    optional string avg_time                            = 13;
+    repeated ScheduleDoctorInfoMap scheduleInfo         = 14;
+}
+
+
+message ScheduleDoctorInfoMap {
+    optional string start_date      = 1;
+    repeated ScheduleInfo info_list = 2;
+}
+message ScheduleInfo{
+    optional string startTime                      = 1;
+    optional string endTime                        = 2;
+    optional bool enable_slot                      = 3;
+    optional string avg_time                       = 4;
+    optional string limit_other	                   = 5;
+    optional string limit_doctor	               = 6;
+    optional string total_book_in	               = 7;
+    optional string total_book_from_out	           = 8;
+    optional string total_book_out_hosp	           = 9;
+}
+//[END] KCCK API
+
+//[START] NUR2015U01
+message NUR2015U01GrdOrderInfo {
+    optional string exam_date  = 1; 
+    optional string gwa        = 2; 
+    optional string naewon_key = 3;
+    optional string gwa_name   = 4; 
+}
+//[END] NUR2015U01
+
+message NUR2016U02NuroPatientListItemInfo {
+	optional string department_code         = 1;
+	optional string department_name         = 2;
+	optional string patient_code            = 3;
+	optional string patient_name            = 4;
+	optional string patient_name_2          = 5;
+	optional string coming_date             = 6;
+	optional string doctor_code             = 7;
+	optional string doctor_name             = 8;
+	optional string coming_type             = 9;
+	optional string reception_code          = 10;
+	optional string birth                   = 11;
+	optional string age_sex                 = 12;
+	optional string out_res_key             = 13;
+	optional string reception_time          = 14;
+	optional string order_end_yn            = 15;
+	optional string hold_yn                 = 16;
+	optional string result_yn               = 17;
+	optional string reser_yn                = 18;
+	optional string ipwon_yn                = 19;
+	optional string sunab_yn                = 20;
+	optional string coming_status           = 21;
+	optional string reception_type          = 22;
+	optional string reception_type_name     = 23;
+	optional string remark                  = 24;
+	optional string arrive_time             = 25;
+	optional string type                    = 26;
+	optional string last_coming_date        = 27;
+	optional string ocs_comment             = 28;
+	optional string chojae                  = 29;
+	optional string group_key               = 30;
+	optional string patient_type            = 31;
+	optional string care_status             = 32;
+	optional string percentage              = 33;
+	optional string exam_status             = 34;
+	optional string trial_yn                = 35;
+	optional string acting_date             = 36;
+	optional string if_data_sent_yn         = 37;
+	optional string sys_id 					= 38;
+}
+
+//[START] NUR2016U02
+message NUR2016U02TranferInfo {
+	optional string bunho                       = 1;
+	optional string pkout1001                   = 2;                
+	repeated  NUR2016U02ListPkocsInfo list_item = 3;
+}
+message NUR2016U02ListPkocsInfo {
+	optional string pkocs = 1;
+}
+//[END] NUR2016U02
+//[END] NUR2015U01
+
+//[START] KCCK MSS API KC08 
+message PatientDetailInfo{
+	optional string patient_name 		= 1;
+    optional string disease_name 		= 2;
+    optional int32 status 		 		= 3;
+    optional string last_go_hospital 	= 4;
+    optional int32 patient_age 			= 5;
+    optional string patient_sex 		= 6;
+    optional string patient_email 		= 7;
+    optional string patient_tel 		= 8;
+    optional string status_of_disease 	= 9;
+}
+//[END] KCCK MSS API KC08
+
+message LinkEMRPatientInfo
+{
+        optional string patient_id         = 1;
+        optional string bunho              = 2;
+        
+}
+message Department {
+    required string department_id = 1;
+    required string department_code = 2;
+    required string department_name = 3;
+}
+
+message Doctor {
+    required string doctor_id               = 1;
+    required string doctor_code             = 2;
+    required string doctor_name             = 3;
+    optional string doctor_grade            = 4;
+    required string department_id           = 5;
+    optional string hosp_code               = 6;
+    optional string department_code         = 7;
+}
+
+message DoctorSchedule {
+    optional string start_date   = 1;
+    optional string end_date   = 2;
+    optional string time_frame = 3;
+    optional string other_slot = 4;
+    optional string total_slot = 5;
+    repeated DoctorScheduleDetail details = 6;
+}
+
+message DoctorScheduleDetail {
+    required DayOfWeek dow = 1;
+    optional string start_am                = 2;
+    optional string end_am                  = 3;
+    optional string start_pm                = 4;
+    optional string end_pm                  = 5;
+    enum DayOfWeek { SUNDAY = 0; MONDAY = 1; TUESDAY = 2; WEDNESDAY = 3; THURSDAY = 4; FRIDAY = 5; SATURDAY = 6;}
+}
+
+message BookingSchedule {
+    required string doctor_code 		= 1;
+    optional string booking_date 		= 2; //yymmdd
+    optional string total_slots			= 3;
+    optional string other_slots 		= 4;
+    optional string doctor_grade 		= 5;
+	optional string avg_time			= 6;
+	optional string res_am_start_hhmm	= 7;
+	optional string res_am_end_hhmm		= 8;
+	optional string res_pm_start_hhmm	= 9;
+	optional string res_pm_end_hhmm		= 10;
+	repeated BookingScheduleDetail period = 11;
+}
+
+message BookingScheduleDetail {
+    optional string start_time 				= 1; //hh:mm
+    optional string end_time 				= 2; //hh:mm
+    optional string total_booked_in_self 	= 3;
+    optional string total_booked_in_other 	= 4;
+    optional string total_booked_out 		= 5;
+}
+
+//[START] PATIENT_EVENT SYNC DISEASE
+message SyncDisease {
+    optional string datetime_record			= 1;
+ 	optional string disease_start_date		= 2;
+	optional string disease_end_date		= 3;					
+	optional string disease_outcome			= 4;						
+	optional int64 sync_id 					= 5;		
+	optional string disease					= 6;
+	optional string hosp_name				= 7;						
+	optional string created					= 8;					
+	optional string updated					= 9;
+	optional bool is_delete					= 10;
+}
+//[END] PATIENT_EVENT SYNC DISEASE
+
+//[START] PATIENT_EVENT SYNC MEDICINE
+message SyncPrescription {
+    optional string datetime_record			= 1;
+ 	optional string prescription_name		= 2;					
+	optional int64 sync_id 					= 3;
+}
+
+message SyncDrug {
+    optional string datetime_record			= 1;
+ 	optional string prescription_name		= 2;					
+	optional int64 medicine_id 				= 3;
+	optional string medicine_name			= 4;
+	optional string dose					= 5;
+	optional string unit_code				= 6;
+	optional string unit					= 7;
+	optional string frequency				= 8;
+	optional string days					= 9;
+	optional string note					= 10;
+	optional string medicine_method			= 11;
+	optional string hosp_name				= 12;
+	optional string created					= 13;
+	optional string updated					= 14;	
+ 	optional int64 prescription_id 			= 15;
+	optional string presciption_created		= 16;
+	optional string presciption_updated		= 17;
+}
+//[END] PATIENT_EVENT SYNC MEDICINE
+
+//[START] PATIENT_EVENT SYNC VITALS
+message SyncHeight {
+	optional int64 sync_id 					= 1;
+    optional string datetime_record			= 2;
+	optional string height					= 3;
+	optional string created					= 4;		
+	optional string updated					= 5;
+	optional bool is_delete					= 6;
+}		
+
+message SyncWeight {
+	optional int64 sync_id 					= 1;
+    optional string datetime_record			= 2;
+	optional string weight					= 3;
+	optional string created					= 4;		
+	optional string updated					= 5;
+	optional bool is_delete					= 6;
+}
+
+message SyncTemperature {
+	optional int64 sync_id 					= 1;
+    optional string datetime_record			= 2;
+	optional string temperature				= 3;
+	optional string created					= 4;		
+	optional string updated					= 5;
+	optional bool is_delete					= 6;
+}
+
+message SyncHeartRate {
+	optional int64 sync_id 					= 1;
+    optional string datetime_record			= 2;
+	optional string heart_rate				= 3;
+	optional string created					= 4;		
+	optional string updated					= 5;
+	optional bool is_delete					= 6;
+}
+
+message SyncRespirationRate {
+	optional int64 sync_id 					= 1;
+    optional string datetime_record			= 2;
+	optional string respiration_rate		= 3;
+	optional string created					= 4;		
+	optional string updated					= 5;
+	optional bool is_delete					= 6;
+}
+
+message SyncBloodPressure {
+	optional int64 sync_id 					= 1;
+    optional string datetime_record			= 2;
+	optional string low_blood_pressure		= 3;
+	optional string high_blood_pressure		= 4;
+	optional string created					= 5;		
+	optional string updated					= 6;
+	optional bool is_delete					= 7;
+}
+//[END] PATIENT_EVENT SYNC VITALS
+
+// [START] Export patient
+message OUT0101U02PatientExportInfo
+{
+	optional string system_id      			    = 1;
+	optional string created_date   			    = 2;
+	optional string created_admin  			    = 3;
+	optional string update_date    			    = 4;
+	optional string update_admin   			    = 5;
+	optional string hospital_code  			    = 6;
+	optional string patient_code   			    = 7;
+	optional string suname         			    = 8;
+	optional string suname2        			    = 9;
+	optional string sex            			    = 10;
+	optional string birthday       			    = 11;
+	optional string postal_code    			    = 12;
+	optional string address1       			    = 13;
+	optional string address2       			    = 14;
+	optional string phone_number   			    = 15;
+	optional string phone_number2  			    = 16;
+	optional string phone_number3  			    = 17;
+	optional string phone_type1    			    = 18;
+	optional string phone_type2    			    = 19;
+	optional string phone_type3    			    = 20;
+	optional string insurance_type 			    = 21;
+	optional string interupted_reception        = 22;
+	optional string interupted_reception_reason = 23;
+	optional string detete                      = 24;
+	optional string patient_note                = 25;
+	optional string email_address               = 26;
+	optional string pace_maker_yn               = 27;
+	optional string self_pace_maker             = 28;
+	optional string password                    = 29;
+	optional string patient_type                = 30;
+}
+
+message OUT0101U02ImportPatientInfo
+{
+    optional string sex                  = 1;
+    optional string bunho                = 2;
+    optional string suname               = 3;
+    optional string suname2              = 4;
+    optional string birth                = 5;
+    optional string zip_code             = 6;
+    optional string tel                  = 7;
+    optional string bunho_type           = 8;
+    optional string address1             = 9;
+    optional string address2             = 10;
+    optional string address3             = 11;
+}
+
+// [END] Export patient
+
+message ORDERTRANSAPIHangmogInfo
+{
+	optional string hangmog_code 	= 1;
+    optional string hangmog_name 	= 2;
+    optional string pkocs1003 		= 3;
+}
+
+message ORDERTRANSAPIMsgInfo
+{
+	optional string err_code		= 1;
+	optional string api_result      = 2;
+	optional string medical_result  = 3;
+	optional string disease_result  = 4;
+}
+
+message DiseaseSingle {
+     optional string disease_single_code = 1;
+     optional string disease_single_name = 2;
+}
+
+message DiseaseInformation {
+	optional string disease_in_out				= 1;
+	optional string disease_code				= 2;
+	optional string disease_name				= 3;
+	optional string disease_suspected_flag		= 4;
+	optional string disease_start_date			= 5;
+	optional string disease_end_date			= 6;
+	optional string disease_out_come			= 7;
+	optional string disease_supplement			= 8;
+	optional string disease_scode1				= 9;
+	optional string disease_scode2				= 10;
+	optional string disease_scode3				= 11;
+	optional string disease_sname				= 12;
+	optional string disease_category			= 13;
+}
+
+message MedicationInfo {
+	optional string medication_code				= 1;
+	optional string medication_name				= 2;
+	optional string medication_number			= 3;
+	optional string medication_generic_flg		= 4;
+}
+
+message MedicalInformation {
+    optional string medical_class			= 1;
+	optional string medical_class_name		= 2;
+	optional string medical_class_number	= 3;
+	repeated MedicationInfo medication_info	= 4;
+}
+
+message PublicInsuranceInfo {
+	optional string public_insurance_class			= 1;
+	optional string public_insurance_name			= 2;
+	optional string public_insurer_number			= 3;
+	optional string public_insured_person_number	= 4;
+	optional string certificate_issued_date			= 5;
+	optional string certificate_expired_date		= 6;
+}
+
+message HealthInsuranceInfo {
+	optional string insurance_combination_rate_admission	= 1;
+	optional string insurance_combination_rate_outpatient	= 2;
+	optional string health_insured_person_assistance_name	= 3;
+	optional string insurance_check_date					= 4;
+	optional string insurance_combination_number			= 5;
+	optional string insurance_provider_class				= 6;
+	optional string insurance_provider_number				= 7;
+	optional string insurance_provider_whole_name			= 8;
+	optional string health_insured_person_symbol			= 9;
+	optional string health_insured_person_number			= 10;
+	optional string health_insured_person_continuation		= 11;
+	optional string health_insured_person_assistance		= 12;
+	optional string relation_to_insured_person				= 13;
+	optional string health_insured_person_whole_name		= 14;
+	optional string certificate_start_date					= 15;
+	optional string certificate_expired_date				= 16;
+	repeated PublicInsuranceInfo public_insurance			= 17;
+}
+
+message DiagnosisInformation {
+     optional string department_code 						= 1;
+     optional string physician_code 						= 2;
+	 optional HealthInsuranceInfo health_insurance_info 	= 3;
+	 repeated MedicalInformation medical_information		= 4;
+	 repeated DiseaseInformation disease_information		= 5;
+}
+
+message MbsConfig {
+    optional string use_movie_talk   = 1;
+    optional string use_survey = 2;
+    optional string locale = 3;
+}
+
+enum TransferType { SEND_ORDER_DISEASE = 1; SEND_DISEASE_ONLY = 2; RETRANSFER_ORDER = 3; CANCEL_ORDER = 4; }

@@ -1,0 +1,466 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Direction for drip infusion(home care)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	  <script src="../js/moment.min.js"></script>
+      <script src="../js/pikaday.js"></script>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/handlebars.min.js"></script>	
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/app.js"></script>
+  <style>
+  	body{
+  		font-size: 15px;
+  	}
+    hr{
+      border-width: 0;
+      height: 1px;
+      background-color: #ccc;
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+  	
+  	.wrapper{
+  		width: 820px;
+  		margin-top: 0;
+  		margin-right: auto;
+  		margin-left: auto;
+  		margin-bottom: 0;
+  	}
+    .page-title{
+      font-size: 40px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+    .title{
+      font-size: 24px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    .text-center{
+      text-align: center;
+    }
+    .text-right{
+      text-align: right;
+    }
+    .uppercase{
+      text-transform: uppercase;
+    }
+    .table {
+      border-spacing: 0;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    .table .td-title{
+      width: 200px;
+      padding-right: 20px;
+    }
+    .table .td-content {
+      width: 600px;
+    }
+    .table tr th {
+      text-align: left;
+      vertical-align: top;    
+    }
+    .table tr td {
+      vertical-align: top;
+    }
+    .table tr.row > td,
+    .table tr.row > th{
+      padding-bottom: 20px;
+    }
+
+    .label{
+      margin-top: 3px;
+      margin-bottom: 7px;
+    }
+    .input{
+      border-width: 1px;
+      border-style: solid;
+      border-color: #ccc;
+      padding-top: 7px;
+      padding-left: 12px;
+      padding-right: 12px;
+      padding-bottom: 7px;
+    }
+    .input:focus{
+      border-color: #666;
+    }
+    .input:disabled{
+      background-color: #f5f5f5;
+      color: #666;
+    }
+    .table .td-content .input-block{
+      width: 574px;
+    }
+    .table .td-full .input-block{
+      width: 774px;
+    }
+    select.input{
+      padding-left: 11px;
+      padding-right: 11px;
+    }
+    .table .td-content .select-block,
+    .table .td-full .select-block {
+      width: 100%;
+    }
+    select.input option {
+      padding-left: 13px;
+      padding-right: 13px;
+    }
+    .box{
+      background-color: #f5f5f5;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-width: 1px;
+      border-style: dashed;
+      border-color: #ccc;
+    }
+    .button{
+      font-size: 18px;
+      background-color: #2a75a9;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 25px;
+      padding-right: 25px;
+      color: #fff;
+      border-width: 0;
+      cursor: pointer;
+    }
+    .pika-single {
+        z-index: 9999;
+        display: block;
+        position: relative;
+        color: #333;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-bottom-color: #bbb;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    /*
+    clear child float (pika-lendar), using the famous micro clearfix hack
+    http://nicolasgallagher.com/micro-clearfix-hack/
+    */
+    .pika-single:before,
+    .pika-single:after {
+        content: " ";
+        display: table;
+    }
+    .pika-single:after { clear: both }
+    .pika-single { *zoom: 1 }
+
+    .pika-single.is-hidden {
+        display: none;
+    }
+
+    .pika-single.is-bound {
+        position: absolute;
+        box-shadow: 0 5px 15px -5px rgba(0,0,0,.5);
+    }
+
+    .pika-lendar {
+        float: left;
+        width: 240px;
+        margin: 8px;
+    }
+
+    .pika-title {
+        position: relative;
+        text-align: center;
+    }
+
+    .pika-label {
+        display: inline-block;
+        *display: inline;
+        position: relative;
+        z-index: 9999;
+        overflow: hidden;
+        margin: 0;
+        padding: 5px 3px;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: bold;
+        background-color: #fff;
+    }
+    .pika-title select {
+        cursor: pointer;
+        position: absolute;
+        z-index: 9998;
+        margin: 0;
+        left: 0;
+        top: 5px;
+        filter: alpha(opacity=0);
+        opacity: 0;
+    }
+
+    .pika-prev,
+    .pika-next {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        outline: none;
+        border: 0;
+        padding: 0;
+        width: 20px;
+        height: 30px;
+        /* hide text using text-indent trick, using width value (it's enough) */
+        text-indent: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        background-color: transparent;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 75% 75%;
+        opacity: .5;
+        *position: absolute;
+        *top: 0;
+    }
+
+    .pika-prev:hover,
+    .pika-next:hover {
+        opacity: 1;
+    }
+
+    .pika-prev,
+    .is-rtl .pika-next {
+        float: left;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAUklEQVR42u3VMQoAIBADQf8Pgj+OD9hG2CtONJB2ymQkKe0HbwAP0xucDiQWARITIDEBEnMgMQ8S8+AqBIl6kKgHiXqQqAeJepBo/z38J/U0uAHlaBkBl9I4GwAAAABJRU5ErkJggg==');
+        *left: 0;
+    }
+
+    .pika-next,
+    .is-rtl .pika-prev {
+        float: right;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAU0lEQVR42u3VOwoAMAgE0dwfAnNjU26bYkBCFGwfiL9VVWoO+BJ4Gf3gtsEKKoFBNTCoCAYVwaAiGNQGMUHMkjGbgjk2mIONuXo0nC8XnCf1JXgArVIZAQh5TKYAAAAASUVORK5CYII=');
+        *right: 0;
+    }
+
+    .pika-prev.is-disabled,
+    .pika-next.is-disabled {
+        cursor: default;
+        opacity: .2;
+    }
+
+    .pika-select {
+        display: inline-block;
+        *display: inline;
+    }
+
+    .pika-table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 0;
+    }
+
+    .pika-table th,
+    .pika-table td {
+        width: 14.285714285714286%;
+        padding: 0;
+    }
+
+    .pika-table th {
+        color: #999;
+        font-size: 12px;
+        line-height: 25px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .pika-button {
+        cursor: pointer;
+        display: block;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        outline: none;
+        border: 0;
+        margin: 0;
+        width: 100%;
+        padding: 5px;
+        color: #666;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: right;
+        background: #f5f5f5;
+    }
+
+    .pika-week {
+        font-size: 11px;
+        color: #999;
+    }
+
+    .is-today .pika-button {
+        color: #33aaff;
+        font-weight: bold;
+    }
+
+    .is-selected .pika-button {
+        color: #fff;
+        font-weight: bold;
+        background: #33aaff;
+        box-shadow: inset 0 1px 3px #178fe5;
+        border-radius: 3px;
+    }
+
+    .is-inrange .pika-button {
+        background: #D5E9F7;
+    }
+
+    .is-startrange .pika-button {
+        color: #fff;
+        background: #6CB31D;
+        box-shadow: none;
+        border-radius: 3px;
+    }
+
+    .is-endrange .pika-button {
+        color: #fff;
+        background: #33aaff;
+        box-shadow: none;
+        border-radius: 3px;
+    }
+
+    .is-disabled .pika-button {
+        pointer-events: none;
+        cursor: default;
+        color: #999;
+        opacity: .3;
+    }
+
+    .pika-button:hover {
+        color: #fff;
+        background: #ff8000;
+        box-shadow: none;
+        border-radius: 3px;
+    }
+
+    /* styling for abbr */
+    .pika-table abbr {
+        border-bottom: none;
+        cursor: help;
+    }
+    mark {
+    	background-color: #effeff;
+    	color: #000000;
+			padding:5px;
+		}
+  </style>
+</head>
+<body>
+<form id="myform" action="" method="post">
+ 	<div>	
+		<div id="data-template">
+		</div>
+	</div>
+	
+	 <script id="some-template" type="text/x-handlebars-template">		 
+	<div class="wrapper">
+    <h1 class="page-title text-center">在宅患者訪問点滴注射指示書</h1>
+    <hr>
+    <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+        <tr class="row">
+            <th class="td-title">
+                <div class="label">&nbsp;</div>
+            </th>
+            <td class="td-content">
+                <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td>
+                      <div class="label">作成日</div>
+                      <input id="make-date" type="text" value="{{make-date}}" name = "make-date" class="input date-picker" style="width: 266px" />
+                    </td>
+                    <td style="width: 14px">&nbsp;</td>
+                    <td>
+                      <div class="label">有効期間</div>
+                      <input id="valid-date" type="text" value="{{valid-date}}" name = "valid-date" class="input date-picker" style="width: 266px" />
+                    </td>
+                  </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+      <tr class="row">
+        <th class="td-title"><div class="label">患者情報</div></th>
+        <td class="td-content">
+          <table class="table">
+            <tr class="row">
+              <td colspan="3">
+                <div class="label">氏名</div>
+                <mark style="width: 534px;display: inline-block;">{{PatientName1}}</mark>
+                    <div style="width: 30px;text-align: right;display: inline-block;">様</div>
+              </td>
+            </tr>
+            <tr class="row">
+              <td>
+                <div class="label">性別</div>
+                <div class="label"><input type="checkbox" name="Sex" value="M" {{{setChecked 'M' Sex}}} disabled="disabled"/> 男性 &nbsp;&nbsp;
+				<input type="checkbox" name="Sex" value="F" {{{setChecked 'F' Sex}}} disabled="disabled"/> 女性</div>
+              </td>
+              <td>
+                <div class="label">生年月日</div>
+                <input type="text" name = "Birth" value="{{Birth}}" class="input" disabled="disabled"/>
+              </td>
+              <td>
+                <div class="label">年齢</div>
+                <div class="label">{{YearAge}}</div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3">
+                <div class="label">住所</div>
+                <mark>{{Address1}}</mark>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>  
+      <tr class="row">
+        <th class="td-title"><div class="label">主たる傷病名</div></th>
+        <td class="td-content">
+        	{{#each Diseases}}
+          	<mark>{{this}}</mark>
+          {{/each}}	         
+        </td>
+      </tr>    
+    </table>
+    <hr>
+    <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+      <tr class="row">
+        <th class="td-title"><div class="label">病状・主訴</div></th>
+        <td class="td-content">
+          <textarea name = "item_4_1" class="input input-block" cols="1" rows="3">{{item_4_1}}</textarea>
+        </td>
+      </tr>
+      <tr class="row">
+        <th class="td-title"><div class="label">留意事項及び指示事項</div></th>
+        <td class="td-content">
+          <textarea name = "item_4_2" class="input input-block" cols="1" rows="3">{{item_4_2}}</textarea>
+        </td>
+      </tr>
+      <tr class="row">
+        <th class="td-title"><div class="label">点滴注射指示事項内容</br>（投与薬剤・投与量・投与方法等）</div></th>
+        <td class="td-content">
+          <textarea name = "item_4_3" class="input input-block" cols="1" rows="3">{{item_4_3}}</textarea>
+        </td>
+      </tr>
+      <tr class="row">
+        <th class="td-title"><div class="label">緊急時の連絡先</br>不在時の対応法</div></th>
+        <td class="td-content">
+          <textarea name = "item_4_4" class="input input-block" cols="1" rows="3">{{item_4_4}}</textarea>
+        </td>
+      </tr>
+    </table>
+    <hr>
+	</div>
+		 </script> 
+ 
+</form>
+</body>
+</html>

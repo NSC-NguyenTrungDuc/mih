@@ -1,0 +1,198 @@
+// --- [Start] ADM102U ---
+
+message Adm102UGrdListItemInfo{
+	optional string pgm_id = 1;
+	optional string pgm_nm = 2;
+	optional string pgm_tp = 3;
+	optional string sys_id = 4;
+	optional string prod_id = 5;
+	optional string srvc_id = 6;
+	optional string pgm_ent_grad = 7;
+	optional string pgm_upd_grad = 8;
+	optional string pgm_scrt = 9;
+	optional string pgm_dup_yn = 10;
+	optional string end_yn = 11;
+	optional string pgm_acs_yn = 12;
+	optional string mang_memb = 13;
+	optional string asm_name = 14;
+	optional string row_state = 15;
+}
+
+// --- [End] ADM102U ---
+
+// --- [Start] ADM103U ---
+message ADM103UgrdUserGrpInfo
+{
+	optional string user_group = 1;
+	optional string group_nm =2;
+	optional string row_state = 3;
+
+}
+message ADM103LaySysListGrpInfo
+{
+	optional string sys_id= 1;
+	optional string sys_nm=2;
+
+}
+message ADM103LayLoginSysListInfo
+{
+	optional string sys_id= 1;
+	optional string sys_nm=2;
+
+}
+message ADM104UGridUserInfo {
+	optional string user_id = 1;
+	optional string user_nm = 2;
+	optional string user_scrt = 3;
+	optional string dept_code = 4;
+	optional string buseo_name = 5;
+	optional string user_group = 6;
+	optional string group_nm = 7;
+	optional string user_level = 8;
+	optional string user_end_ymd = 9;
+	optional string user_gubun = 10;
+	optional string nurse_confirm_enable_yn = 11;
+	optional string co_id = 12;
+	optional string data_row_state = 13;
+}
+// --- [End] ADM103U ---
+
+// --- [Start] ADM101U ---
+message ADM101UgrdSystemItemInfo{
+	optional string grp_id = 1;
+	optional string sys_id = 2;
+	optional string sys_nm = 3;
+	optional string sys_seq = 4;
+	optional string adm_sys_yn = 5;
+	optional string msg_sys_yn = 6;
+	optional string sys_desc = 7;
+	optional string mang_dept = 8;
+	optional string buseo_name1 = 9;
+	optional string mang_dept1 = 10;
+	optional string buseo_name2 = 11;
+	optional string data_row_state = 12;
+}
+
+message ADM101UGrdGroupItemInfo{
+	optional string grp_id = 1;
+	optional string grp_nm = 2;
+	optional string grp_seq = 3;
+	optional string grp_desc = 4;
+	optional string disp_grp_id = 5;
+	optional string data_row_state = 6;
+}
+
+// --- [End] ADM101U ---
+
+// --- [End] ADM103U ---
+
+// --- [Start] ADM108U ---
+message ADM108UGrdListItemInfo{
+    optional string sys_id = 1;
+    optional string seq = 2;
+    optional string pgm_sys_id = 3;
+    optional string sys_nm = 4;
+    optional string pgm_id = 5;
+    optional string pgm_nm = 6;
+    optional string data_row_state = 7;
+    optional string new_seq = 8;
+}
+
+message ADM108UFwkPgmIdListItemInfo{
+    optional string pgm_id = 1;
+    optional string pgm_nm = 2;
+    optional string sys_id = 3;
+    optional string sys_nm = 4;
+}
+
+message ADM108UTvwSystemListItemInfo{
+    optional string pgm_nm = 1;
+    optional string sys_id = 2;
+    optional string sys_nm = 3;
+}
+// --- [End] ADM108U ---
+
+// --- [Start] ADM501U ---
+message ADM501UListItemInfo{
+    optional string adm0002_pk = 1;
+    optional string msg_gubun = 2;
+    optional string korea_msg = 3;
+    optional string japan_msg = 4;
+    optional string speak_msg = 5;
+    optional string data_row_state = 6;
+}
+// --- [End] ADM501U ---
+
+// --- [Start] ADM201U ---
+message ADM201UGrdDicDetailItemInfo{
+    optional string col_id = 1;
+    optional string code= 2;
+    optional string code_nm = 3;
+    optional string data_row_state = 4;
+}
+
+message ADM201UGrdDicMasterItemInfo{
+    optional string col_id = 1;
+    optional string col_nm= 2;
+    optional string col_tp = 3;
+    optional string col_len = 4;
+    optional string col_scal = 5;
+    optional string cmmt = 6;
+    optional string data_row_state = 7;
+}
+// --- [End] ADM201U ---
+
+// --- [Start] ADM401U ---
+message ADM401UGrdSysItemInfo{
+    optional string sys_id = 1;
+    optional string sys_nm = 2;
+    optional string adm_sys_yn = 3;
+    optional string msg_sys_yn = 4;
+}
+
+message ADM401UAsmItemInfo{
+    optional string asm_type = 1;
+    optional string grp_id = 2;
+    optional string sys_id = 3;
+}
+// --- [End] ADM401U ---
+
+// -- [Start] ADMS2015U01 ---
+message ADMS2015U01MenuInfo{
+	optional string sys_id = 1;
+	optional string tr_id = 2;
+	optional string tr_seq = 3;
+	optional string pgm_id = 4;
+	optional string uppr_menu = 5;
+	optional string pgm_nm = 6;
+	optional string pgm_tp = 7;
+	optional string select_flg = 8;
+}
+
+message ADMS2015U01SettingMenuInfo {
+	optional string tr_id = 1;
+	optional string select_flg = 2;
+}
+// -- [End] ADMS2015U01 ---
+
+// --- [Start] ADMS2015U00 ---
+message ADMS2015U00GroupHospitalInfo {
+	optional string adms_group_id = 1;
+	optional string grp_seq = 2;
+	optional string hosp_code = 3;
+	optional string select_flg = 4;
+	optional string grp_id = 5;
+	optional string grp_nm = 6;
+	optional string data_row_state = 7;
+}
+
+message ADMS2015U00SystemHospitalInfo {
+	optional string adms_group_system_id = 1;
+	optional string system_seq = 2;
+	optional string hosp_code = 3;
+	optional string select_flg = 4;
+	optional string system_id = 5;
+	optional string sys_nm = 6;
+	optional string data_row_state = 7;
+}
+// --- [End] ADMS2015U00 ---

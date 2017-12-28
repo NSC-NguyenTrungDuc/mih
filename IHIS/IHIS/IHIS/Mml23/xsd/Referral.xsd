@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<xs:schema xmlns:mmlRe="uri:mmlRe" xmlns:mmlDp="uri:mmlDp" xmlns:mmlPsi="uri:mmlPsi" xmlns:mmlFc="uri:mmlFc" xmlns:mmlPi="uri:mmlPi" xmlns:mmlSm="uri:mmlSm" xmlns:mmlCm="uri:mmlCm" elementFormDefault="qualified" targetNamespace="uri:mmlRe" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="uri:mmlPsi" />
+  <xs:import namespace="uri:mmlFc" />
+  <xs:import namespace="uri:mmlDp" />
+  <xs:import namespace="uri:mmlPsi" />
+  <xs:import namespace="uri:mmlPi" />
+  <xs:import namespace="uri:mmlSm" />
+  <xs:import namespace="uri:mmlCm" />
+  <xs:element name="ReferralModule">
+    <xs:complexType>
+      <xs:sequence>
+        <!--<xs:element xmlns:q1="uri:mmlPi" ref="q1:PatientModule" />-->
+        <xs:element ref="mmlPi:PatientModule" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlRe:occupation" />
+        <xs:element ref="mmlRe:referFrom" />
+        <xs:element ref="mmlRe:title" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlRe:greeting" />
+        <xs:element ref="mmlRe:chiefComplaints" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlRe:clinicalDiagnosis" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlRe:pastHistory" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlRe:familyHistory" />
+        <xs:element ref="mmlRe:presentIllness" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlRe:testResults" />
+        <!--<xs:element minOccurs="0" maxOccurs="1" xmlns:q2="uri:mmlSm" ref="q2:clinicalCourse" />-->
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlSm:clinicalCourse" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlRe:medication" />
+        <xs:element ref="mmlRe:referPurpose" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlRe:remarks" />
+        <xs:element ref="mmlRe:referToFacility" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlRe:referToPerson" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlRe:referToUnknownName" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="occupation" type="xs:string" />
+  <xs:element name="referFrom">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mmlPsi:PersonalizedInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="title" type="xs:string" />
+  <xs:element name="greeting" type="xs:string" />
+  <xs:element name="chiefComplaints" type="xs:string" />
+  <xs:element name="clinicalDiagnosis" type="xs:string" />
+  <xs:element name="pastHistory">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <!--<xs:element xmlns:q3="uri:mmlCm" ref="q3:extRef" />-->
+        <xs:element ref="mmlCm:extRef" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="familyHistory">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <!--<xs:element xmlns:q4="uri:mmlCm" ref="q4:extRef" />-->
+        <xs:element ref="mmlCm:extRef" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="presentIllness">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <!--<xs:element xmlns:q5="uri:mmlCm" ref="q5:extRef" />-->
+        <xs:element ref="mmlCm:extRef" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="testResults">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <!--<xs:element xmlns:q6="uri:mmlCm" ref="q6:extRef" />-->
+        <xs:element ref="mmlCm:extRef" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="medication">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <!--<xs:element xmlns:q7="uri:mmlCm" ref="q7:extRef" />-->
+        <xs:element ref="mmlCm:extRef" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="referPurpose" type="xs:string" />
+  <xs:element name="remarks">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <!--<xs:element xmlns:q8="uri:mmlCm" ref="q8:extRef" />-->
+        <xs:element ref="mmlCm:extRef" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="referToFacility">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mmlFc:Facility" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlDp:Department" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="referToPerson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mmlPsi:PersonalizedInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="referToUnknownName" type="xs:string" />
+</xs:schema>

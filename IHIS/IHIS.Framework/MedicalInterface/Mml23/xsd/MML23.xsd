@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<xs:schema xmlns:mmlHi="uri:mmlHi" xmlns:claimA="uri:claimA" xmlns:mmlCi="uri:mmlCi" xmlns:mmlCm="uri:mmlCm" xmlns:mmlBc="uri:mmlBc" xmlns:mmlRe="uri:mmlRe" xmlns:mmlRd="uri:mmlRd" xmlns:mmlSg="uri:mmlSg" xmlns:mmlSc="uri:mmlSc" xmlns:mmlFcl="uri:mmlFcl" xmlns="http://tempuri.org/MML23" xmlns:claim="uri:claim" xmlns:mmlPi="uri:mmlPi" xmlns:mmlSm="uri:mmlSm" xmlns:mmlLb="uri:mmlLb" xmlns:mmlPc="uri:mmlPc" xmlns:mmlLs="uri:mmlLs" xmlns:mmlRp="uri:mmlRp" elementFormDefault="qualified" targetNamespace="http://tempuri.org/MML23" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="uri:mmlCi" />
+  <xs:import namespace="uri:mmlCm" />
+  <xs:import namespace="uri:mmlPi" />
+  <xs:import namespace="uri:mmlHi" />
+  <xs:import namespace="uri:mmlRd" />
+  <xs:import namespace="uri:mmlLs" />
+  <xs:import namespace="uri:mmlBc" />
+  <xs:import namespace="uri:mmlFcl" />
+  <xs:import namespace="uri:mmlPc" />
+  <xs:import namespace="uri:mmlSg" />
+  <xs:import namespace="uri:mmlSm" />
+  <xs:import namespace="uri:mmlLb" />
+  <xs:import namespace="uri:mmlRp" />
+  <xs:import namespace="uri:mmlRe" />
+  <xs:import namespace="uri:claim" />
+  <xs:import namespace="uri:claimA" />
+  <xs:import namespace="uri:mmlSc" />
+  <xs:element name="Mml">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="MmlHeader" />
+        <xs:element ref="MmlBody" />
+      </xs:sequence>
+      <xs:attribute fixed="2.3" name="version" type="xs:string" />
+      <xs:attribute name="createDate" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MmlHeader">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mmlCi:CreatorInfo" />
+        <xs:element ref="masterId" />
+        <xs:element ref="toc" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="scopePeriod" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="encryptInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MmlBody">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="MmlModuleItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="docInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="securityLevel" />
+        <xs:element ref="title" />
+        <xs:element ref="docId" />
+        <xs:element ref="confirmDate" />
+        <xs:element ref="mmlCi:CreatorInfo" />
+        <xs:element ref="extRefs" />
+      </xs:sequence>
+      <xs:attribute name="contentModuleType" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="patientInfo" />
+            <xs:enumeration value="healthInsurance" />
+            <xs:enumeration value="registeredDiagnosis" />
+            <xs:enumeration value="lifestyle" />
+            <xs:enumeration value="baseClinic" />
+            <xs:enumeration value="firstClinic" />
+            <xs:enumeration value="progressCourse" />
+            <xs:enumeration value="surgery" />
+            <xs:enumeration value="summary" />
+            <xs:enumeration value="referral" />
+            <xs:enumeration value="test" />
+            <xs:enumeration value="report" />
+            <xs:enumeration value="claim" />
+            <xs:enumeration value="claimAmount" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="moduleVersion" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="encryptInfo" type="xs:string" />
+  <xs:element name="title">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="generationPurpose" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="docId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="uid" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="parentId" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="groupId" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="masterId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mmlCm:Id" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="content">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="mmlPi:PatientModule" />
+        <xs:element ref="mmlHi:HealthInsuranceModule" />
+        <xs:element ref="mmlRd:RegisteredDiagnosisModule" />
+        <xs:element ref="mmlLs:LifestyleModule" />
+        <xs:element ref="mmlBc:BaseClinicModule" />
+        <xs:element ref="mmlFcl:FirstClinicModule" />
+        <xs:element ref="mmlPc:ProgressCourseModule" />
+        <xs:element ref="mmlSg:SurgeryModule" />
+        <xs:element ref="mmlSm:SummaryModule" />
+        <xs:element ref="mmlLb:TestModule" />
+        <xs:element ref="mmlRp:ReportModule" />
+        <xs:element ref="mmlRe:ReferralModule" />
+        <xs:element ref="claim:ClaimModule" />
+        <xs:element ref="claimA:ClaimAmountModule" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="toc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="tocItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tocItem" type="xs:string" />
+  <xs:element name="extRefs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="mmlCm:extRef" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="scopePeriod">
+    <xs:complexType>
+      <xs:attribute name="start" type="xs:string" />
+      <xs:attribute name="end" type="xs:string" />
+      <xs:attribute name="hasOtherInfo">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="true" />
+            <xs:enumeration value="false" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="isExtract">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="true" />
+            <xs:enumeration value="false" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="extractPolicy" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MmlModuleItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="docInfo" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="content" />
+      </xs:sequence>
+      <xs:attribute name="type" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="uid" type="xs:string" />
+  <xs:element name="parentId">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="relation" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="groupId">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="groupClass" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="confirmDate">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="start" type="xs:string" />
+          <xs:attribute name="end" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="securityLevel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="accessRight" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="accessRight">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlSc:facility" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlSc:person" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlSc:license" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlSc:department" />
+      </xs:sequence>
+      <xs:attribute name="permit" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="none" />
+            <xs:enumeration value="read" />
+            <xs:enumeration value="write" />
+            <xs:enumeration value="delete" />
+            <xs:enumeration value="all" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="startDate" type="xs:string" />
+      <xs:attribute name="endDate" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <development version="7000" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HealthRecordViewController">
+            <connections>
+                <outlet property="carouselView" destination="d9h-8C-HHf" id="qhv-5N-HAN"/>
+                <outlet property="imageBackground" destination="oIt-Ag-JJf" id="Ng2-7y-7kg"/>
+                <outlet property="tabbarType" destination="9y0-ju-IOW" id="EZ2-5v-XFr"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oIt-Ag-JJf">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9y0-ju-IOW" customClass="TopMenuScrollView">
+                    <rect key="frame" x="0.0" y="60" width="600" height="50"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="ok9-3z-sJB"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="QcS-GC-WU2"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9h-8C-HHf" userLabel="ContentView" customClass="iCarousel">
+                    <rect key="frame" x="0.0" y="110" width="600" height="490"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="9y0-ju-IOW" secondAttribute="trailing" id="3AH-aV-tuN"/>
+                <constraint firstItem="d9h-8C-HHf" firstAttribute="top" secondItem="9y0-ju-IOW" secondAttribute="bottom" id="6vK-Oa-DRA"/>
+                <constraint firstAttribute="trailing" secondItem="d9h-8C-HHf" secondAttribute="trailing" id="EP2-wc-CQc"/>
+                <constraint firstAttribute="bottom" secondItem="d9h-8C-HHf" secondAttribute="bottom" id="JQh-93-7H6"/>
+                <constraint firstAttribute="trailing" secondItem="oIt-Ag-JJf" secondAttribute="trailing" id="KCz-YG-yW4"/>
+                <constraint firstItem="9y0-ju-IOW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="P88-oP-Roy"/>
+                <constraint firstItem="d9h-8C-HHf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Sab-05-f7i"/>
+                <constraint firstAttribute="bottom" secondItem="oIt-Ag-JJf" secondAttribute="bottom" id="hLH-KH-hrh"/>
+                <constraint firstItem="oIt-Ag-JJf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="k0o-ea-d7h"/>
+                <constraint firstItem="9y0-ju-IOW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="nTW-AI-JPK"/>
+                <constraint firstItem="9y0-ju-IOW" firstAttribute="top" secondItem="d9h-8C-HHf" secondAttribute="bottom" constant="-316" id="slX-1B-R7k"/>
+                <constraint firstItem="oIt-Ag-JJf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yqc-Rg-rP7"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="slX-1B-R7k"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

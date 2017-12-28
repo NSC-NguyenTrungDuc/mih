@@ -1,0 +1,39 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+
+def phr_pods
+    pod 'MMDrawerController', '~> 0.5.7'
+    pod 'CTAssetsPickerController',  '~> 3.3.0'
+    pod 'IQKeyboardManager', '~> 3.3.2'
+    pod 'MBProgressHUD', '~> 0.9.1'
+    pod 'AFNetworking', '~> 2.6.0'
+    pod 'JSONModel', '~>1.5.1'
+    pod 'SDWebImage', '~>3.7.6'
+    pod 'Realm', '~>1.0.2'
+    pod 'Bolts', '~>1.8.4'
+    pod 'FBSDKShareKit', '~>4.15.1'
+    pod 'FBSDKLoginKit', '~>4.15.1'
+    pod 'FBSDKCoreKit', '~>4.15.1'
+    pod 'Fabric', '~>1.6.3'
+    pod 'Crashlytics', '~>3.8.1'
+    pod 'SkyWay-iOS-SDK', '~>0.2.2'
+    pod 'iCarousel', '~>1.8.2'
+    pod 'ReactiveCocoa', '2.1.8'
+    pod 'OHHTTPStubs'
+end
+
+target 'PHR DEV' do
+    phr_pods
+end
+
+target 'PHR UAT PUBLIC' do
+    phr_pods
+end
+
+target 'PHR' do
+    phr_pods
+end
+
+target 'PHR UAT PUBLICTests' do
+    phr_pods
+end

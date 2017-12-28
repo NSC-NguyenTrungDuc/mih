@@ -1,0 +1,158 @@
+import "rpc.proto";
+import "hospital_model.proto";
+
+option java_package = "nta.med.ext.support.proto";
+option java_outer_classname = "HospitalServiceProto";
+
+option (version) = "1.0.0";
+option (service) = "hospital";
+
+message GetDepartmentRequest {
+    required string hosp_code = 1;
+    optional string locale = 2;
+}
+
+message GetDepartmentResponse {
+    repeated Department depts = 1;
+}
+
+message GetDoctorByDepartmentRequest {
+    required string hosp_code = 1;
+    required string department_code = 2;
+    optional string locale = 3;
+}
+
+message GetDoctorByDepartmentResponse {
+    repeated Doctor doctors = 1;
+}
+
+message SearchDoctorRequest {
+    required string hosp_code = 1;
+    required string department_code = 2;
+    optional string start_date = 3;
+    optional string end_date = 4;
+    optional string locale = 5;
+    optional string reservation_date = 6;
+    optional string reservation_time = 7;
+    optional string page_size = 8;
+    optional string page_index = 9;
+}
+
+message SearchDoctorResponse {
+    repeated Doctor doctors = 1;
+    required string total_records = 2;
+}
+
+message SubscribeHospitalEventRequest {
+    optional int64 event_id = 1;
+}
+
+message SubscribeHospitalEventResponse {
+    required Result result = 1;
+    repeated HospitalEvent events = 2;
+    enum Result { SUCCESS = 0; HAS_SUBSCRIBED = 1; INTERNAL_ERROR = 99; }
+}
+
+message GetDoctorByHospitalRequest {
+    required string hosp_code = 1;
+}
+
+message GetDoctorByHospitalResponse {
+    repeated Doctor doctors = 1;
+}
+
+message SearchBookingScheduleRequest {
+    optional string hosp_code    = 1;
+    optional string department   = 2;
+    optional string start_date   = 3;
+    optional string end_date     = 4;
+}
+
+message SearchBookingScheduleResponse {
+    repeated BookingSchedule schedules 			= 1;
+	required bool isDifferentTimeFrame 			= 2;
+	optional string avg_time					= 3;
+}
+
+message GetDoctorInfoRequest{
+    required string session_id  = 1;
+
+}
+
+message GetDoctorInfoResponse{
+    optional Doctor doctor = 1;
+
+}
+
+/*message ScheduleDoctorRequest {
+    optional string hosp_code    = 1;
+    optional string department   = 2;
+    optional string doctor_code  = 3;
+    optional string doctor_grade = 4;
+    optional string agv_time     = 5;
+    optional string start_date   = 6;
+    optional string end_date     = 7;
+    optional string locale       = 8;
+}
+message ScheduleDocTorResponse{
+    repeated Doctor listDoctor = 1;
+}*/
+
+message HospitalEvent {
+    required int64 id = 1;
+    required string type = 2;
+    required int64 timestamp = 3;
+    required int32 hospital_id = 4;
+    repeated Department depts = 5;
+    optional Doctor doctor = 6;
+    optional DoctorSchedule schedules = 7;
+    optional string hosp_code = 8;
+    optional MbsConfig mbs_config = 9;
+}
+
+message SearchHospitalRequest {
+	optional string hosp_name = 1;
+	optional string address = 2;
+	optional string tel = 3;
+	optional string country_code = 4;
+}
+
+message SearchHospitalResponse {
+	repeated HospitalDetailInfo item_info = 1;
+}
+//[START] GetHospitalInfo
+message SearchHospitalInfoByHospCodeRequest{
+	optional string hosp_code = 1;
+}
+message SearchHospitalInfoByHospCodeResponse{
+	optional HospitalInfomation hosp_info = 1;
+}
+// [END] GetHospitalInfo
+
+// [BEGIN] VERIFY ACCOUNT INFO
+message VefiryAccountRequest {
+    required string hosp_code 			= 1;
+    required string login_id 			= 2;
+    required string password 			= 3;
+    required AccountType account_type 	= 4;
+    enum AccountType { MBS = 1; MIS = 2; MED_GATEWAY = 3; }
+}
+
+message VefiryAccountResponse {
+    optional AccountInfo account_info 	= 1;
+    required bool result 				= 2;
+}
+// [END] VERIFY ACCOUNT INFO
+
+message UpdateDefaultScheduleRequest {
+    required string hosp_code = 1;
+    optional string language = 2;
+    repeated Department department_list = 3;
+}
+
+message UpdateDefaultScheduleResponse {
+    required Result result = 1;
+    enum Result { SUCCESS = 0; INVALID = 1; INTERNAL_ERROR = 99; }
+}
+
+

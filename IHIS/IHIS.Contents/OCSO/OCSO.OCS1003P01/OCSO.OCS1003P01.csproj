@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8A8271E6-AAAA-43CC-BCAE-6AE7F681792F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IHIS.OCSO</RootNamespace>
+    <AssemblyName>OCSO.OCS1003P01</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DataWindow, Version=1.5.8018.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\DataWindow.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DataWindowInterop, Version=1.5.8018.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\DataWindowInterop.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.BizObjects, Version=1.0.5926.19132, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\IHIS.BizObjects.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.CloudConnector, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\IHIS.CloudConnector.dll</HintPath>
+    </Reference>
+    <Reference Include="IHIS.Controls, Version=1.0.5926.19131, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\IHIS.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.DbControls, Version=1.0.5926.19131, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\IHIS.DbControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.Forms, Version=1.0.5926.19132, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\IHIS.Forms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.MedicalInterface, Version=1.0.5926.19135, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\IHIS.MedicalInterface.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.Service, Version=1.0.5926.19130, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\IHIS.Service.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.Win32, Version=1.0.5926.19130, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\IHIS.Win32.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.CloudConnector">
+      <HintPath>C:\IHISIHIS.CloudConnector.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.ComFunc">
+      <HintPath>C:\IHIS\IHIS.ComFunc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.X.Magic, Version=1.0.5926.19130, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\IHIS.X.Magic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="OCS.Lib.ColumnControl, Version=1.0.5589.33399, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\OCSO\OCS.Lib.ColumnControl.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="OCS.Lib.CommonForms, Version=1.0.5589.33397, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\OCSO\OCS.Lib.CommonForms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="OCS.Lib.HangmogInfo, Version=1.0.5589.33400, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\OCSO\OCS.Lib.HangmogInfo.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="OCS.Lib.InputControl, Version=1.0.5589.33400, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\OCSO\OCS.Lib.InputControl.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="OCS.Lib.KinkiCheck, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\OCSO\OCS.Lib.KinkiCheck.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="OCS.Lib.OrderBiz, Version=1.0.5589.33400, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\OCSO\OCS.Lib.OrderBiz.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="OCS.Lib.OrderFunc, Version=1.0.5589.33399, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\OCSO\OCS.Lib.OrderFunc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="OCS.Lib.OrderInterface, Version=1.0.5589.33399, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\OCSO\OCS.Lib.OrderInterface.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="OCS.Lib.OrderVariables, Version=1.0.5589.33399, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\OCSO\OCS.Lib.OrderVariables.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="OCS.Lib.PatientInfo, Version=1.0.5589.33399, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\OCSO\OCS.Lib.PatientInfo.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OCS1003P01.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OCS1003P01.Designer.cs">
+      <DependentUpon>OCS1003P01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="OCS1003P01.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OCS1003P01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MSG.xml" />
+    <EmbeddedResource Include="OCS1003P01.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OCS1003P01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OCS1003P01.ja-JP.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OCS1003P01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OCS1003P01.vi-VN.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OCS1003P01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ja-JP.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.en.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.vi-VN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pbl\ocso.ocs1003p01.dwp" />
+    <None Include="pbl\ocso.ocs1003p01.pbd" />
+    <None Include="pbl\ocso.ocs1003p01.pbl" />
+    <None Include="Resources\TopControlBackground.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\32_3.ico" />
+    <Content Include="Images\aquapuls.gif" />
+    <Content Include="Images\chart.gif" />
+    <Content Include="Images\EMR.ico" />
+    <Content Include="Images\grnpuls.gif" />
+    <Content Include="Images\Minus.ico" />
+    <Content Include="Images\Plus.ico" />
+    <Content Include="Images\RANG.ico" />
+    <Content Include="Images\RR311.ico" />
+    <Content Include="Images\RR331.ico" />
+    <Content Include="Images\TopBackground.GIF" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>$(SolutionDir)..\IHISContentsBuild.bat POST  $(SolutionDir)..\ $(TargetDir) $(SolutionName) $(TargetFileName)</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>$(SolutionDir)..\IHISContentsBuild.bat PRE  $(SolutionDir)..\ $(TargetDir) $(SolutionName) $(TargetFileName)</PreBuildEvent>
+  </PropertyGroup>
+</Project>

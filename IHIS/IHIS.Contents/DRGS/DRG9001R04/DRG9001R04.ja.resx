@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="ImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="ImageList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAG
+        CAAAAk1TRnQBSQFMAgEBAgEAAQUBAAEsAQABEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
+        AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
+        AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
+        AWYDAAGZAwABzAIAATMDAAIzAgABMwFmAgABMwGZAgABMwHMAgABMwH/AgABZgMAAWYBMwIAAmYCAAFm
+        AZkCAAFmAcwCAAFmAf8CAAGZAwABmQEzAgABmQFmAgACmQIAAZkBzAIAAZkB/wIAAcwDAAHMATMCAAHM
+        AWYCAAHMAZkCAALMAgABzAH/AgAB/wFmAgAB/wGZAgAB/wHMAQABMwH/AgAB/wEAATMBAAEzAQABZgEA
+        ATMBAAGZAQABMwEAAcwBAAEzAQAB/wEAAf8BMwIAAzMBAAIzAWYBAAIzAZkBAAIzAcwBAAIzAf8BAAEz
+        AWYCAAEzAWYBMwEAATMCZgEAATMBZgGZAQABMwFmAcwBAAEzAWYB/wEAATMBmQIAATMBmQEzAQABMwGZ
+        AWYBAAEzApkBAAEzAZkBzAEAATMBmQH/AQABMwHMAgABMwHMATMBAAEzAcwBZgEAATMBzAGZAQABMwLM
+        AQABMwHMAf8BAAEzAf8BMwEAATMB/wFmAQABMwH/AZkBAAEzAf8BzAEAATMC/wEAAWYDAAFmAQABMwEA
+        AWYBAAFmAQABZgEAAZkBAAFmAQABzAEAAWYBAAH/AQABZgEzAgABZgIzAQABZgEzAWYBAAFmATMBmQEA
+        AWYBMwHMAQABZgEzAf8BAAJmAgACZgEzAQADZgEAAmYBmQEAAmYBzAEAAWYBmQIAAWYBmQEzAQABZgGZ
+        AWYBAAFmApkBAAFmAZkBzAEAAWYBmQH/AQABZgHMAgABZgHMATMBAAFmAcwBmQEAAWYCzAEAAWYBzAH/
+        AQABZgH/AgABZgH/ATMBAAFmAf8BmQEAAWYB/wHMAQABzAEAAf8BAAH/AQABzAEAApkCAAGZATMBmQEA
+        AZkBAAGZAQABmQEAAcwBAAGZAwABmQIzAQABmQEAAWYBAAGZATMBzAEAAZkBAAH/AQABmQFmAgABmQFm
+        ATMBAAGZATMBZgEAAZkBZgGZAQABmQFmAcwBAAGZATMB/wEAApkBMwEAApkBZgEAA5kBAAKZAcwBAAKZ
+        Af8BAAGZAcwCAAGZAcwBMwEAAWYBzAFmAQABmQHMAZkBAAGZAswBAAGZAcwB/wEAAZkB/wIAAZkB/wEz
+        AQABmQHMAWYBAAGZAf8BmQEAAZkB/wHMAQABmQL/AQABzAMAAZkBAAEzAQABzAEAAWYBAAHMAQABmQEA
+        AcwBAAHMAQABmQEzAgABzAIzAQABzAEzAWYBAAHMATMBmQEAAcwBMwHMAQABzAEzAf8BAAHMAWYCAAHM
+        AWYBMwEAAZkCZgEAAcwBZgGZAQABzAFmAcwBAAGZAWYB/wEAAcwBmQIAAcwBmQEzAQABzAGZAWYBAAHM
+        ApkBAAHMAZkBzAEAAcwBmQH/AQACzAIAAswBMwEAAswBZgEAAswBmQEAA8wBAALMAf8BAAHMAf8CAAHM
+        Af8BMwEAAZkB/wFmAQABzAH/AZkBAAHMAf8BzAEAAcwC/wEAAcwBAAEzAQAB/wEAAWYBAAH/AQABmQEA
+        AcwBMwIAAf8CMwEAAf8BMwFmAQAB/wEzAZkBAAH/ATMBzAEAAf8BMwH/AQAB/wFmAgAB/wFmATMBAAHM
+        AmYBAAH/AWYBmQEAAf8BZgHMAQABzAFmAf8BAAH/AZkCAAH/AZkBMwEAAf8BmQFmAQAB/wKZAQAB/wGZ
+        AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
+        AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
+        AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
+        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD/4oAAvgKAAL4MQAB+AGS
+        AfgKAAH4AZIB+C8AAfgCkgH4CgAB+AKSAfgtAAH4A5IB+AoAAfgDkgH4KwAB+ASSAfgKAAH4BJIB+CkA
+        AfgFkgH4CgAB+AWSAfgpAAH4BJIB+AoAAfgEkgH4KwAB+AOSAfgKAAH4A5IB+C0AAfgCkgH4CgAB+AKS
+        AfgvAAH4AZIB+AoAAfgBkgH4MQAC+AoAAvjpAAFCAU0BPgcAAT4DAAEoAwABQAMAARADAAEBAQABAQUA
+        AYAXAAP/AQAE/wQABP8EAAH/AZ8B+QH/BAAB/wEfAfgB/wQAAf4BHwH4AX8EAAH8AR8B+AE/BAAB+AEf
+        AfgBHwQAAfABHwH4AQ8EAAH4AR8B+AEfBAAB/AEfAfgBPwQAAf4BHwH4AX8EAAH/AR8B+AH/BAAB/wGf
+        AfkB/wQABP8EAAT/BAAE/xoACw==
+</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="cboHoDong.Location" type="System.Drawing.Point, System.Drawing">
+    <value>234, 7</value>
+  </data>
+  <data name="cboHoDong.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 21</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cboHoDong.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="cboHoDong.UserSQL" xml:space="preserve">
+    <value>SELECT '%'
+     , FN_ADM_MSG(221)
+  FROM DUAL
+ UNION ALL
+SELECT DISTINCT 
+       A.HO_DONG
+     , B.GWA_NAME 
+  FROM DRG3010 A, BAS0260 B
+ WHERE A.HOSP_CODE = FN_ADM_LOAD_HOSP_CODE()
+   AND B.HOSP_CODE = A.HOSP_CODE
+   AND A.HO_DONG = B.GWA
+ ORDER BY 1</value>
+  </data>
+  <data name="&gt;&gt;cboHoDong.Name" xml:space="preserve">
+    <value>cboHoDong</value>
+  </data>
+  <data name="&gt;&gt;cboHoDong.Type" xml:space="preserve">
+    <value>IHIS.Framework.XDictComboBox, IHIS.DbControls, Version=1.0.5448.27112, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cboHoDong.Parent" xml:space="preserve">
+    <value>xPanel1</value>
+  </data>
+  <data name="&gt;&gt;cboHoDong.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="xLabel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 7</value>
+  </data>
+  <data name="xLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 21</value>
+  </data>
+  <data name="xLabel3.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="xLabel3.Text" xml:space="preserve">
+    <value>病棟名</value>
+  </data>
+  <data name="xLabel3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;xLabel3.Name" xml:space="preserve">
+    <value>xLabel3</value>
+  </data>
+  <data name="&gt;&gt;xLabel3.Type" xml:space="preserve">
+    <value>IHIS.Framework.XLabel, IHIS.Controls, Version=1.0.5448.29010, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xLabel3.Parent" xml:space="preserve">
+    <value>xPanel1</value>
+  </data>
+  <data name="&gt;&gt;xLabel3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="xLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 7</value>
+  </data>
+  <data name="xLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 20</value>
+  </data>
+  <data name="xLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="xLabel2.Text" xml:space="preserve">
+    <value>照会年度</value>
+  </data>
+  <data name="xLabel2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;xLabel2.Name" xml:space="preserve">
+    <value>xLabel2</value>
+  </data>
+  <data name="&gt;&gt;xLabel2.Type" xml:space="preserve">
+    <value>IHIS.Framework.XLabel, IHIS.Controls, Version=1.0.5448.29010, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xLabel2.Parent" xml:space="preserve">
+    <value>xPanel1</value>
+  </data>
+  <data name="&gt;&gt;xLabel2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnPre.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 6</value>
+  </data>
+  <data name="btnPre.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 23</value>
+  </data>
+  <data name="btnPre.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnPre.Name" xml:space="preserve">
+    <value>btnPre</value>
+  </data>
+  <data name="&gt;&gt;btnPre.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButton, IHIS.Controls, Version=1.0.5448.29010, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnPre.Parent" xml:space="preserve">
+    <value>xPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnPre.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnNext.Location" type="System.Drawing.Point, System.Drawing">
+    <value>125, 6</value>
+  </data>
+  <data name="btnNext.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 23</value>
+  </data>
+  <data name="btnNext.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnNext.Name" xml:space="preserve">
+    <value>btnNext</value>
+  </data>
+  <data name="&gt;&gt;btnNext.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButton, IHIS.Controls, Version=1.0.5448.29010, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnNext.Parent" xml:space="preserve">
+    <value>xPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnNext.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="emkYear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 7</value>
+  </data>
+  <data name="emkYear.MaxLength" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="emkYear.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="emkYear.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="emkYear.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;emkYear.Name" xml:space="preserve">
+    <value>emkYear</value>
+  </data>
+  <data name="&gt;&gt;emkYear.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditMask, IHIS.Controls, Version=1.0.5448.29010, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;emkYear.Parent" xml:space="preserve">
+    <value>xPanel1</value>
+  </data>
+  <data name="&gt;&gt;emkYear.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="xPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="xPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="xPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>701, 32</value>
+  </data>
+  <data name="xPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;xPanel1.Name" xml:space="preserve">
+    <value>xPanel1</value>
+  </data>
+  <data name="&gt;&gt;xPanel1.Type" xml:space="preserve">
+    <value>IHIS.Framework.XPanel, IHIS.Controls, Version=1.0.5448.29010, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;xPanel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="xButtonList1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <data name="xButtonList1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="xButtonList1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 9.75pt</value>
+  </data>
+  <data name="xButtonList1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>354, 0</value>
+  </data>
+  <data name="xButtonList1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>345, 38</value>
+  </data>
+  <data name="xButtonList1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;xButtonList1.Name" xml:space="preserve">
+    <value>xButtonList1</value>
+  </data>
+  <data name="&gt;&gt;xButtonList1.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButtonList, IHIS.BizObjects, Version=1.0.5446.25681, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xButtonList1.Parent" xml:space="preserve">
+    <value>pnlBottom</value>
+  </data>
+  <data name="&gt;&gt;xButtonList1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pnlBottom.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="pnlBottom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 619</value>
+  </data>
+  <data name="pnlBottom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>701, 40</value>
+  </data>
+  <data name="pnlBottom.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;pnlBottom.Name" xml:space="preserve">
+    <value>pnlBottom</value>
+  </data>
+  <data name="&gt;&gt;pnlBottom.Type" xml:space="preserve">
+    <value>IHIS.Framework.XPanel, IHIS.Controls, Version=1.0.5448.29010, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;pnlBottom.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlBottom.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dw1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dw1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 32</value>
+  </data>
+  <data name="dw1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>701, 587</value>
+  </data>
+  <data name="dw1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="dw1.Text" xml:space="preserve">
+    <value>xDataWindow1</value>
+  </data>
+  <data name="&gt;&gt;dw1.Name" xml:space="preserve">
+    <value>dw1</value>
+  </data>
+  <data name="&gt;&gt;dw1.Type" xml:space="preserve">
+    <value>IHIS.Framework.XDataWindow, IHIS.DbControls, Version=1.0.5448.27112, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dw1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dw1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="lay9001R.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>121, 17</value>
+  </metadata>
+  <data name="lay9001R.QuerySQL" xml:space="preserve">
+    <value>SELECT DISTINCT 
+       TO_CHAR(E.HOLI_DAY, 'YYYY/MM')                  AS HOLI_DAY
+     , NVL(A.SU, 0)                                    AS DRG_CNT
+     , NVL(G.SU, 0)                                    AS DRG_GROUP_CNT
+     , NVL(C.SU, 0)                                    AS DRG_HANGMOG_CNT
+     , NVL(B.SU, 0)                                    AS INJ_CNT
+     , NVL(H.SU, 0)                                    AS INJ_GROUP_CNT
+     , NVL(D.SU, 0)                                    AS INJ_HANGMOG_CNT
+     , NVL(A.SU, 0) + NVL(B.SU, 0)                     AS DRG_INJ_CNT
+     , NVL(G.SU, 0) + NVL(H.SU, 0)                     AS DRG_INJ_GROUP_CNT
+     , NVL(C.SU, 0) + NVL(D.SU, 0)                     AS DRG_INJ_HANGMOG_CNT
+  FROM 
+       (SELECT JUBSU_DATE , COUNT(*)  SU
+          FROM (
+                SELECT TO_CHAR(X.JUBSU_DATE, 'YYYY/MM') JUBSU_DATE, X.DRG_BUNHO, SUM(1)
+                  FROM DRG3010 X
+                 WHERE X.HOSP_CODE = :f_hosp_code
+                   AND X.JUBSU_DATE BETWEEN TO_DATE(:f_date||'0101','YYYYMMDD') 
+                                        AND TO_DATE(:f_date||'1231','YYYYMMDD')
+                   AND X.BUNRYU1   &lt;&gt; '4'
+                   AND X.DRG_BUNHO IS NOT NULL
+                   AND X.HO_DONG   LIKE :f_ho_dong||'%'
+                   AND X.BUNHO     NOT LIKE '09%'
+                   AND NVL(X.DC_YN, 'N')     = 'N'
+                   AND NVL(X.BANNAB_YN, 'N') = 'N' 
+                 GROUP BY X.JUBSU_DATE, X.DRG_BUNHO
+                )
+         GROUP BY JUBSU_DATE ) A,
+       (SELECT JUBSU_DATE , COUNT(CNT)  SU
+          FROM (
+                SELECT TO_CHAR(X.JUBSU_DATE, 'YYYY/MM') JUBSU_DATE, X.DRG_BUNHO, SUM(1) CNT
+                  FROM DRG3011 X
+                     , DRG3010 Y
+                 WHERE X.HOSP_CODE = :f_hosp_code
+                   AND X.JUBSU_DATE BETWEEN TO_DATE(:f_date||'0101','YYYYMMDD') 
+                                        AND TO_DATE(:f_date||'1231','YYYYMMDD')
+                   AND X.BUNRYU1   &lt;&gt; '4'
+                   AND X.DRG_BUNHO IS NOT NULL
+                   AND X.HO_DONG   LIKE :f_ho_dong||'%'
+                   AND X.BUNHO     NOT LIKE '09%'
+                   --
+                   AND Y.HOSP_CODE = X.HOSP_CODE
+                   AND Y.FKDRG3011 = X.PKDRG3011
+                   AND NVL(Y.BANNAB_YN, 'N') = 'N'
+                   AND NVL(Y.DC_YN, 'N')     = 'N'
+                 GROUP BY X.JUBSU_DATE, X.DRG_BUNHO, X.GROUP_SER
+               )
+         GROUP BY JUBSU_DATE ) G,
+       (SELECT JUBSU_DATE , SUM(CNT)  SU
+          FROM (
+                SELECT TO_CHAR(X.JUBSU_DATE, 'YYYY/MM') JUBSU_DATE, X.DRG_BUNHO, COUNT(X.JAERYO_CODE) CNT
+                  FROM DRG3011 X
+                     , DRG3010 Y
+                 WHERE X.HOSP_CODE = :f_hosp_code
+                   AND X.JUBSU_DATE BETWEEN TO_DATE(:f_date||'0101','YYYYMMDD') 
+                                        AND TO_DATE(:f_date||'1231','YYYYMMDD')
+                   AND X.BUNRYU1   &lt;&gt; '4'
+                   AND X.DRG_BUNHO IS NOT NULL
+                   AND X.HO_DONG   LIKE :f_ho_dong||'%'
+                   AND X.BUNHO     NOT LIKE '09%'
+                   --
+                   AND Y.HOSP_CODE = X.HOSP_CODE
+                   AND Y.FKDRG3011 = X.PKDRG3011
+                   AND NVL(Y.BANNAB_YN, 'N') = 'N'
+                   AND NVL(Y.DC_YN, 'N')     = 'N'
+                 GROUP BY X.JUBSU_DATE, X.DRG_BUNHO
+               )
+         GROUP BY JUBSU_DATE ) C,
+       (SELECT JUBSU_DATE , COUNT(*)  SU
+          FROM (
+                SELECT TO_CHAR(Y.JUBSU_DATE, 'YYYY/MM') JUBSU_DATE, Y.DRG_BUNHO, SUM(1)
+                  FROM DRG3010 Y
+                 WHERE Y.HOSP_CODE = :f_hosp_code
+                   AND Y.JUBSU_DATE BETWEEN TO_DATE(:f_date||'0101','YYYYMMDD') 
+                                        AND TO_DATE(:f_date||'1231','YYYYMMDD')
+                   AND Y.BUNRYU1   = '4'
+                   AND Y.DRG_BUNHO IS NOT NULL
+                   AND Y.HO_DONG   LIKE :f_ho_dong||'%'
+                   AND Y.BUNHO     NOT LIKE '09%'
+                   AND NVL(Y.DC_YN, 'N')     = 'N'
+                   AND NVL(Y.BANNAB_YN, 'N') = 'N' 
+                 GROUP BY Y.JUBSU_DATE, Y.DRG_BUNHO
+                 )
+         GROUP BY JUBSU_DATE ) B,
+       (SELECT JUBSU_DATE , COUNT(CNT)  SU
+          FROM (
+                SELECT TO_CHAR(Y.JUBSU_DATE, 'YYYY/MM') JUBSU_DATE, Y.DRG_BUNHO, SUM(1) CNT
+                  FROM DRG3011 Y
+                     , DRG3010 X
+                 WHERE Y.HOSP_CODE = :f_hosp_code
+                   AND Y.JUBSU_DATE BETWEEN TO_DATE(:f_date||'0101','YYYYMMDD') 
+                                        AND TO_DATE(:f_date||'1231','YYYYMMDD')
+                   AND Y.BUNRYU1   = '4'
+                   AND Y.DRG_BUNHO IS NOT NULL
+                   AND Y.HO_DONG   LIKE :f_ho_dong||'%'
+                   AND Y.BUNHO     NOT LIKE '09%'
+                   --
+                   AND X.HOSP_CODE = Y.HOSP_CODE
+                   AND X.FKDRG3011 = Y.PKDRG3011
+                   AND NVL(X.BANNAB_YN, 'N') = 'N'
+                   AND NVL(X.DC_YN, 'N')     = 'N'
+                 GROUP BY Y.JUBSU_DATE, Y.DRG_BUNHO, Y.GROUP_SER
+               )
+         GROUP BY JUBSU_DATE ) H,
+       (SELECT JUBSU_DATE , SUM(CNT)  SU
+          FROM (
+                SELECT TO_CHAR(Y.JUBSU_DATE, 'YYYY/MM') JUBSU_DATE, Y.DRG_BUNHO, COUNT(Y.JAERYO_CODE) CNT
+                  FROM DRG3011 Y
+                     , DRG3010 X
+                 WHERE Y.HOSP_CODE = :f_hosp_code
+                   AND Y.JUBSU_DATE BETWEEN TO_DATE(:f_date||'0101','YYYYMMDD') 
+                                        AND TO_DATE(:f_date||'1231','YYYYMMDD')
+                   AND Y.BUNRYU1   = '4'
+                   AND Y.DRG_BUNHO IS NOT NULL
+                   AND Y.HO_DONG   LIKE :f_ho_dong||'%'
+                   AND Y.BUNHO     NOT LIKE '09%'
+                   --
+                   AND X.HOSP_CODE = Y.HOSP_CODE
+                   AND X.FKDRG3011 = Y.PKDRG3011
+                   AND NVL(X.BANNAB_YN, 'N') = 'N'
+                   AND NVL(X.DC_YN, 'N')     = 'N'
+                 GROUP BY Y.JUBSU_DATE, Y.DRG_BUNHO
+               )
+         GROUP BY JUBSU_DATE ) D,
+        RES0101 E
+ WHERE E.HOSP_CODE  = :f_hosp_code
+   AND TO_CHAR(E.HOLI_DAY, 'YYYY/MM') = A.JUBSU_DATE(+)
+   AND TO_CHAR(E.HOLI_DAY, 'YYYY/MM') = B.JUBSU_DATE(+)
+   AND TO_CHAR(E.HOLI_DAY, 'YYYY/MM') = C.JUBSU_DATE(+)
+   AND TO_CHAR(E.HOLI_DAY, 'YYYY/MM') = D.JUBSU_DATE(+)
+   AND TO_CHAR(E.HOLI_DAY, 'YYYY/MM') = G.JUBSU_DATE(+)
+   AND TO_CHAR(E.HOLI_DAY, 'YYYY/MM') = H.JUBSU_DATE(+)
+   AND E.HOLI_DAY BETWEEN TO_DATE(:f_date||'01','YYYYMM') AND LAST_DAY(TO_DATE(:f_date||'12','YYYYMM'))
+ ORDER BY 1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>701, 659</value>
+  </data>
+  <data name="&gt;&gt;ImageList.Name" xml:space="preserve">
+    <value>ImageList</value>
+  </data>
+  <data name="&gt;&gt;ImageList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lay9001R.Name" xml:space="preserve">
+    <value>lay9001R</value>
+  </data>
+  <data name="&gt;&gt;lay9001R.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayout, IHIS.DbControls, Version=1.0.5448.27112, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem1.Name" xml:space="preserve">
+    <value>multiLayoutItem1</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem1.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5448.27112, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem2.Name" xml:space="preserve">
+    <value>multiLayoutItem2</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem2.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5448.27112, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem3.Name" xml:space="preserve">
+    <value>multiLayoutItem3</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem3.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5448.27112, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem4.Name" xml:space="preserve">
+    <value>multiLayoutItem4</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem4.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5448.27112, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem12.Name" xml:space="preserve">
+    <value>multiLayoutItem12</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem12.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5448.27112, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem13.Name" xml:space="preserve">
+    <value>multiLayoutItem13</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem13.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5448.27112, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem14.Name" xml:space="preserve">
+    <value>multiLayoutItem14</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem14.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5448.27112, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem15.Name" xml:space="preserve">
+    <value>multiLayoutItem15</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem15.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5448.27112, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem16.Name" xml:space="preserve">
+    <value>multiLayoutItem16</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem16.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5448.27112, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem17.Name" xml:space="preserve">
+    <value>multiLayoutItem17</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem17.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5448.27112, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>DRG9001R04</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>IHIS.Framework.XScreen, IHIS.Forms, Version=1.0.5446.25681, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+</root>

@@ -1,0 +1,1026 @@
+<header ng-include="'templates/header.html'"></header>
+<section id="survey-view">
+    <div class="leftpanel" ng-include="'templates/left_menu.html'"></div>
+    <div class="mainpanel">
+        <div class="contentpanel">
+            <ol class="breadcrumb breadcrumb-quirk">
+                <li><a href="#/"><i class="fa fa-home mr5"></i>
+                    <translate>Dashboard</translate>
+                </a></li>
+                <li class="active">
+                    <translate>Create/edit survey</translate>
+                </li>
+            </ol>
+
+            <div id="wizard-step" class="wizard-style2 wizard-style2-kk">
+                <h3 class="step-title">
+                    <translate>Choose Department</translate>
+                    <small>&nbsp;</small>
+                </h3>
+                <div class="step-content">
+                    <!-- BEGIN Step1 -->
+                    <!-- BEGIN Form -->
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label" style="text-align:left;"><sup class="highlight">*</sup>
+                                <translate>Department</translate>
+                            </label>
+                            <div class="col-sm-9">
+                                <select id="department-select" ng-model="selectedDept" data-placeholder="{{'Select department'|translate}}" style="width: 100%" ng-change="changeDepartment()" ui-select2>
+                                    <option value="">&nbsp;</option>
+                                    <option ng-repeat="option in departmentList" value="{{option.department_code}}" ng-selected="option.department_code == selectedDept">{{ option.department_name}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div><!-- END Form -->
+                    <p class="step1">
+                        <translate>Clone from exsited health survey or chose create new health survey at the bottom option</translate>
+                    </p>
+                    <!-- END Table -->
+                    <div class="table-responsive step1">
+                        <table class="table table-bordered nomargin table-kk" id="lst-survey">
+                            <thead>
+                            <tr>
+                                <th class="text-center" style="width:40px;">&nbsp;</th>
+                                <th>
+                                    <translate>Survey title</translate>
+                                </th>
+                                <th class="text-center" style="width:150px;">
+                                    <translate>Status</translate>
+                                </th>
+                                <th class="text-center" style="width:50px;">&nbsp;</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="s in survey track by $index">
+                                <td class="text-center" style="width:40px;">{{ $index + 1}}</td>
+                                <td>{{ s.survey_title }}</td>
+                                <td class="text-center" style="width:50px;">
+                                    <button ng-if="s.use_flg==1" class="btn btn-success btn-xs btn-block">
+                                        <translate>Active</translate>
+                                    </button>
+                                    <button ng-if="s.use_flg==0" class="btn btn-danger btn-xs btn-block">
+                                        <translate>InActive</translate>
+                                    </button>
+                                </td>
+                                <td class="text-center" style="width:50px;">
+                                    <label class="rdiobox">
+                                        <input type="radio" name="rdio" value="{{ s }}" ng-click="chooses(s)">
+                                        <span></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            </tbody>
+
+                        </table>
+                    </div><!-- END Table -->
+                </div>
+                <h3 class="step-title">
+                    <translate>Survey title</translate>
+                    <small>&nbsp;</small>
+                </h3>
+                <div class="step-content">
+                    <!-- BEGIN Form -->
+                    <div class="form-horizontal">
+                        <form name="stepTitleForm">
+                            <div class="form-group" ng-class="{'has-error' : stepTitleForm.titleSurvey.$invalid && !stepTitleForm.titleSurvey.$pristine}">
+                                <label class="col-sm-3 control-label" style="text-align:left;"><sup class="highlight">*</sup>
+                                    <translate>Survey title</translate>
+                                </label>
+                                <div class="col-sm-9">
+                                    <input id="title-survey" type="text" class="form-control" name="titleSurvey" ng-maxlength="255" placeholder="{{'Enter survey title' | translate }}" ng-model="item.survey_title" ng-class="{'error' : stepTitleForm.titleSurvey.$invalid && !stepTitleForm.titleSurvey.$pristine}" required>
+                                    <span ng-show="stepTitleForm.titleSurvey.$error.required && !stepTitleForm.titleSurvey.$pristine" class="help-error"><translate>Survey title is required</translate></span>
+                                    <span ng-show="stepTitleForm.titleSurvey.$error.maxlength && !stepTitleForm.titleSurvey.$pristine" class="help-error"><translate>Please enter no more than 255 characters</translate></span>
+                                </div>
+                            </div>
+                            <div class="form-group" ng-class="{'has-error' : stepTitleForm.descriptionSurvey.$invalid && !stepTitleForm.descriptionSurvey.$pristine}">
+                                <label class="col-sm-3 control-label" style="text-align:left;">
+                                    <translate>Description</translate>
+                                </label>
+                                <div class="col-sm-9">
+                                    <textarea id="description-survey" class="form-control" rows="3" name="descriptionSurvey" ng-maxlength="500" ng-model="item.description" ng-class="{'error' : stepTitleForm.descriptionSurvey.$invalid && !stepTitleForm.descriptionSurvey.$pristine}" placeholder="{{'Enter survey description' | translate}}">
+                                        {{ item.description }}
+                                    </textarea>
+                                    <span ng-show="stepTitleForm.descriptionSurvey.$error.maxlength && !stepTitleForm.descriptionSurvey.$pristine" class="help-error"><translate>Please enter no more than 500 characters</translate></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" style="text-align:left;">
+                                    <translate>Branching</translate>
+                                </label>
+                                <div class="col-sm-9">
+                                    <input type="checkbox" ng-model="checkedBranchingSurvey" class="ckbox ng-scope" style="border:1px solid #dbdfe6; width: 17px; height: 18px; border-radius: 1px;">
+                                </div>
+                            </div>
+                        </form>
+                    </div><!-- END Form -->
+                </div>
+                <h3 class="step-title">
+                    <translate>Question</translate>
+                    <small>&nbsp;</small>
+                </h3>
+                <div class="step-content">
+                    <!-- BEGIN Well -->
+                    <div class="well well-asset-options well-search-box">
+                        <!-- BEGIN Search Form -->
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6">
+                                <div class="form-group">
+                                    <select id="select1" class="form-control" style="width: 100%" data-placeholder="{{'Select department' | translate}}" ng-model="s_department" ui-select2="{minimumResultsForSearch: -1}">
+                                        <option></option>
+                                        <option value="-1" ng-bind="'All' | translate"></option>
+                                        <option ng-repeat="option in departmentList" value="{{option.department_code}}">{{ option.department_name }}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="form-group">
+                                    <select id="select2" class="form-control" ng-options="q as q.text for q in questionType track by q.question_type" ng-model="s_question" style="width: 100%" data-placeholder="{{ 'Select question type' | translate }}" ui-select2="{minimumResultsForSearch: -1}"></select>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="form-group">
+                                    <input id="question_title" type="text" class="form-control" placeholder="{{ 'Enter question title' | translate }}">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <a ng-click="searchQuestion()" class="btn btn-success btn-block">
+                                            <translate>Search Now</translate>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- END Search Form -->
+                    </div><!-- BEGIN Well -->
+                    <!-- BEGIN Build Serveys 2 -->
+                    <div class="build-serveys-area">
+                        <!-- BEGIN Action Bar -->
+                        <div class="actbar" style="background:#fff;">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <!-- BEGIN Action 1 -->
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <button ng-click="addQuestion()" class="btn btn-block btn-success form-mrgn-bttm"><i class="fa fa-angle-left"></i>
+                                                <translate>Add to survey</translate>
+                                            </button>
+                                        </div>
+                                    </div><!-- END Action 1 -->
+                                </div>
+                                <div class="col-md-6">
+                                    <!-- BEGIN Action 2 -->
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <button ng-click="addGroup()" class="btn btn-success btn-block form-mrgn-bttm"><i class="fa fa-plus"></i>
+                                                <translate>Add more Group</translate>
+                                            </button>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <button ng-click="delQuestions()" class="btn btn-danger btn-block form-mrgn-bttm"><i class="fa fa-trash"></i>
+                                                <translate>Delete Selected</translate>
+                                            </button>
+                                        </div>
+                                    </div><!-- BEGIN Action 2 -->
+                                </div>
+                            </div>
+                        </div><!-- END Action Bar -->
+                        <div class="row">
+
+                            <div class="col-xs-12 col-sm-4 col-lg-4  form-mrgn-bttm">
+                                <!--Question Libary-->
+                                <table id="qlib" class="table table-bordered nomargin table-kk scrollTable">
+                                    <thead>
+                                    <tr>
+                                        <th colspan="3">
+                                            <translate>Question</translate>
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr ng-repeat="q in question_list">
+                                        <td class="text-center">
+                                            <label class="ckbox">
+                                                <input class="selectedQues" type="checkbox" ng-model="q.selected" value="{{ q.question_id }}"><span>&nbsp;</span>
+                                            </label>
+                                        </td>
+                                        <td style="width: 82%;">
+                                            <strong>{{ q.question_content }}</strong><br>
+                                            <span class="smalltext" ng-if="q.question_type == 0"><translate>Single choice</translate></span>
+                                            <span class="smalltext" ng-if="q.question_type == 1"><translate>Multiple choice</translate></span>
+                                        </td>
+                                        <td class="text-center"><a ng-click="detailQuestion(q)" data-toggle="modal"><i class="fa fa-search"></i></a></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <!--Modal-->
+                                <div class="modal bounceIn animated modal-kk" id="question-popup" tabindex="-1" role="dialog" aria-labelledby="question-title" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                <h4 class="modal-title" id="question-title"></h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="form-group">
+                                                    <div class="input-group input-group-kk">
+                                                        <input type="text" id="filter" class="form-control" placeholder="{{'Enter keyword to search' | translate }}">
+                                                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                                                    </div>
+                                                </div>
+                                                <ul class="box-list-item"></ul>
+                                            </div>
+                                        </div><!-- modal-content -->
+                                    </div><!-- modal-dialog -->
+                                </div><!-- modal -->
+                            </div>
+                            <div class="col-xs-12 col-sm-8">
+                                <div class="question-group" ng-repeat="g in group_question" id="group_index{{$index}}">
+                                    <form name="stepContentForm">
+                                        <table class="table table-bordered nomargin table-kk table-sort">
+                                            <thead>
+                                            <tr>
+                                                <th class="text-center">
+                                                    <label class="ckbox">
+                                                        <input id="checkAll{{$index}}" type="checkbox" ng-click="checkAll($index)"><span>&nbsp;</span>
+                                                    </label>
+                                                </th>
+                                                <th colspan="2" ng-click="chooseGroup($index)">
+                                                    <textarea msd-elastic type="text" name="titleGroup{{$index}}" class="form-control" ng-maxlength="256" ng-model="g.title" ng-change="titleGroup($index)" placeholder="{{'Click here to edit' | translate }}">{{ g.title }}</textarea>
+                                                    <span ng-show="stepContentForm.titleGroup{{$index}}.$error.maxlength" class="help-error"><translate>Please enter no more than 256 characters</translate></span>
+                                                </th>
+                                                <th class="text-center"><a ng-click="delGroup($index)" class="smalltext">
+                                                    <translate>Delete</translate>
+                                                </a></th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr ng-repeat="item in g.question_list">
+                                                <td style="width:50px;" class="text-center">
+                                                    <label class="ckbox">
+                                                        <input id="{{ $parent.$index }}{{ $index }}" type="checkbox" ng-model="item.activedValue"><span>&nbsp;</span>
+                                                    </label>
+                                                </td>
+                                                <td style="width:20px;" class="text-center;">{{ $index + 1}}</td>
+                                                <td><strong>{{ item.question_content }}</strong></td>
+                                                <td style="width:150px;" class="text-center">
+                                                    <button ng-click="detailQuestion(item)" class="btn btn-info btn-xs"><i class="fa fa-search"></i></button>
+                                                    &nbsp;
+                                                    <button ng-click="editQuestion(item)" class="btn btn-warning btn-xs"><i class="fa fa-pencil"></i></button>
+                                                    &nbsp;
+                                                    <button ng-click="delQuestion($index,$parent.$index)" class="btn btn-danger btn-xs"><i class="fa fa-close"></i></button>
+                                                    &nbsp;
+                                                    <button ng-click="requireQuestion($index,$parent.$index)" class="btn btn-default btn-xs" id="require{{ $index }}{{$parent.$index}}" data-toggle="modal"><i class="fa fa-star-o"></i></button>
+                                                    <!--&nbsp;-->
+                                                    <!--<button class="btn btn-default btn-xs btn-set-requited"><i class="fa fa-star-o"></i></button>-->
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- END Build select 2 -->
+                </div>
+
+
+                <h3 class="step-title">
+                    <translate>Branching</translate>
+                    <small>&nbsp;</small>
+                </h3>
+                <div class="step-content">
+                    <h2 class="text-center">{{ item.survey_title }}</h2>
+
+                    <!-- Branching action-->
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4 col-lg-4  form-mrgn-bttm" style="border: 1px solid #c3c9d5; height: 400px !important;">
+                            <br>
+
+                            <div class="input-group">
+                                <!--<input type="text" class="form-control" ng-model="search_question_on_group" ng-change="searchQuestionOnGroup()"/>-->
+                                <input type="text" class="form-control" ng-model="search_question_on_group" ng-change="searchQuestionOnGroup()" placeholder="{{'Enter keyword to search' | translate }}"/>
+                                <span class="input-group-addon">
+                                    <i class="fa fa-search"></i>
+                                </span>
+                            </div>
+
+                            <div class="scroll">
+                                <table class="table table-bordered nomargin table-kk table-sort" ng-repeat="g in group_question_result_search">
+                                    <tbody>
+                                    <tr style="background-color: #9FA8BC !important;">
+                                        <th colspan="2" >
+                                            {{g.title}}
+                                        </th>
+                                    </tr>
+                                    <tr class="ng-scope row-question" ng-repeat="q in g.question_list  | filter:search_question_on_group" id="question{{q.question_id}}" ng-click="chooseQuestionBranching(g, q)">
+                                        <td style="width:20px;" class="text-center; ng-binding">{{$index + 1}}</td>
+                                        <td><strong class="ng-binding">{{q.question_content}}</strong></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-8 form-mrgn-bttm" style="height: 400px !important; border-top: 1px solid #c3c9d5; border-right: 1px solid #c3c9d5; border-bottom: 1px solid #c3c9d5;">
+                            <br>
+                            <h5 class="panel-title">
+                                <span class="ng-scope" style="color: #2574AB; font-size: 14px;">{{selected_question_one.question_content}}</span>
+                            </h5>
+                            <span>{{selected_question_one.type}}</span>
+                            <br>
+
+                            <table class="table table-bordered nomargin table-kk table-sort ng-scope scrollTable">
+                                <tbody>
+                                <tr class="ng-scope row-question" ng-repeat="a in selected_question_one.answer_list" ng-class="{'active_question_row': a.answer_id == -1}">
+                                    <td style="width:400px;" class="text-center; ng-binding">
+                                        <strong class="ng-binding">{{a.title}}</strong>
+                                    </td>
+                                    <td>
+                                        <select ng-init="-1" id="select{{a.answer_id}}" ng-model="a.destination_id" ng-change="changeDestinationQuestion(selected_question_one.question_id, a.answer_id)" class="form-control">
+                                            <option value="-1" ng-selected="a.destination_id == -1">-- {{'No branching'| translate }}</option>
+                                            <optgroup ng-repeat="grp in listQuestionToBranching" label="{{grp.group}}" >
+                                                <option ng-repeat="item in grp.list" value="{{item.question_id}}" ng-selected="a.destination_id == item.question_id">{{item.question_content}}</option>
+                                            </optgroup>
+                                            <option value="0" ng-selected="a.destination_id == 0">-- {{'Terminate the survey'| translate }}</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <!-- END Branching action-->
+
+                    <hr class="darken">
+
+                    <div class="minMapWrap" style="width: 100%; height: 700px; overflow: auto;">
+                        <div class="mindMap" mind-map="root"></div>
+                    </div>
+                    <!-- END List -->
+                </div>
+
+
+                <h3 class="step-title">
+                    <translate>Confirm</translate>
+                    <small>&nbsp;</small>
+                </h3>
+                <div class="step-content">
+                    <h2 class="text-center">{{ item.survey_title }}</h2>
+                    <hr class="darken">
+
+                    <!-- Mind map Confirm-->
+                    <div class="minMapWrap" ng-show="confirmType" style="width: 100%; height: 700px; overflow: auto;">
+                        <div class="mindMap" mind-map="root"></div>
+                    </div>
+                    <!-- END Mind map Confirm-->
+
+                    <div ng-show="!confirmType" >
+                    <div class="row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <table class="table nomargin table-bordered table-sm">
+                                <tr>
+                                    <th width="160px;">
+                                        <translate>Patient code</translate>
+                                    </th>
+                                    <td colspan="2"></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <translate>Patient name</translate>
+                                    </th>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <translate>Visit date</translate>
+                                    </th>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <translate>Answered date</translate>
+                                    </th>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-md-5">
+                            <table class="table nomargin table-bordered table-sm">
+                                <tr>
+                                    <th width="160px;">
+                                        <translate>Hospital</translate>
+                                    </th>
+                                    <td>{{ hospitalObj.hosp_name }}</td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <translate>Address</translate>
+                                    </th>
+                                    <td>{{ hospitalObj.address }}</td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <translate>Contact</translate>
+                                    </th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <translate>Department</translate>
+                                    </th>
+                                    <td>{{ departmentArr[selectedDept] }}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <h5>
+                                <translate>Survey description</translate>
+                            </h5>
+                            <p class="smalltext">"{{ item.description }}"</p>
+                        </div>
+                    </div>
+                    <hr class="ligher">
+                    <!-- BEGIN List -->
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="servey-preview-area">
+                                <div ng-repeat="g in group_question">
+                                    <h3>{{ g.title }}</h3>
+                                    <hr class="lighters">
+                                    <div ng-repeat="q in g.question_list">
+                                        <h5><span class="number">{{ $index+1 }}.</span>{{ q.question_content }} <span ng-if="q.required == true" style="color: #9e0505">*</span></h5>
+                                        <!-- BEGIN List Answers-->
+                                        <div class="list-answers" ng-if="q.question_type == 0">
+                                            <!-- BEGIN Row-->
+                                            <div class="row">
+                                                <div class="col-xs-6" ng-repeat="a in q.answer_list track by $index">
+                                                    <p>
+                                                        <label class="rdiobox">
+                                                            <input type="radio" name="rdio1" disabled><span>{{a.title}}</span>
+                                                        </label>
+                                                    </p>
+                                                </div>
+                                                <div class="col-xs-6" ng-if="q.has_other_answer==true">
+                                                    <p>
+                                                        <label>
+                                                            <translate>Other</translate>:<input type="text" name="txt1" disabled>
+                                                        </label>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!-- END Row-->
+                                        </div><!-- END List Answers-->
+                                        <div class="list-answers" ng-if="q.question_type==1">
+                                            <!-- BEGIN Row-->
+                                            <div class="row">
+                                                <div class="col-xs-6" ng-repeat="a in q.answer_list track by $index">
+                                                    <p>
+                                                        <label class="ckbox">
+                                                            <input type="checkbox" disabled><span>{{ a.title }}</span>
+                                                        </label>
+                                                    </p>
+                                                </div>
+                                                <div class="col-xs-6" ng-if="q.has_other_answer==true">
+                                                    <p>
+                                                        <label>
+                                                            <translate>Other</translate>:<input type="text" name="txt1" disabled>
+                                                        </label>
+                                                    </p>
+                                                </div>
+                                            </div><!-- END Row-->
+                                        </div><!-- END List Answers-->
+                                        <div class="list-answers" ng-if="q.question_type==2">
+                                            <!-- BEGIN Row-->
+                                            <div class="row">
+                                                <div class="col-xs-6" ng-repeat="a in q.answer_list track by $index">
+                                                    <p>
+                                                        <label>
+                                                            <input type="text" name="txt1" disabled>
+                                                        </label>
+                                                    </p>
+                                                </div>
+                                                <div class="col-xs-6" ng-if="q.has_other_answer==true">
+                                                    <p>
+                                                        <label>
+                                                            <translate>Other</translate>:<input type="text" name="txt1" disabled>
+                                                        </label>
+                                                    </p>
+                                                </div>
+                                            </div><!-- END Row-->
+                                        </div><!-- END List Answers-->
+                                    </div>
+                                </div>
+                                <!--<hr class="lighters">
+                                <p>
+                                    <label class="ckbox">
+                                        <input type="checkbox" ng-model="surveyActive"><span><translate>Set default health survey, apply immediately</translate></span>
+                                    </label>
+                                </p>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- END List -->
+                </div>
+
+                <h3 class="step-title">
+                    <translate>Complete</translate>
+                    <small>&nbsp;</small>
+                </h3>
+                <div class="step-content">
+                    <p>&nbsp;</p>
+                    <p class="text-center" style="color:#259dab">
+                        <i class="fa fa-check-circle-o" style="font-size:48px;"></i><br>
+                        <translate>Health survey <strong>{{item.survey_title}}</strong> has been created successfully</translate>
+                    </p>
+                    <br>
+                    <p class="text-center">
+                        <button id="export_survey_to_pdf" ng-click="exportPdf(item)" class="btn btn-success"><i class="fa fa-file-pdf-o"></i>
+                            <translate>Export survey PDF</translate>
+                        </button>
+                        <span>
+                            <img id="loading_icon" src="images/loading_729.gif" width="28" style="display: none"/>
+                        </span>
+                        <button ng-click="home()" class="btn btn-default"><i class="fa fa-home"></i>
+                            <translate>Back to home page</translate>
+                        </button>
+                    </p>
+                </div>
+            </div>
+            <!-- content goes here... -->
+        </div><!-- contentpanel -->
+    </div><!-- mainpanel -->
+</section>
+<!-- Edit Question -->
+<div class="modal bounceIn animated" id="question-edit-popup" role="dialog" aria-labelledby="question-edit-title" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="question-edit-title"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h5 class="panel-title">
+                            <translate>Question</translate>
+                        </h5>
+                        <hr class="darken">
+                        <!-- BEGIN Form -->
+                        <div class="form-horizontal">
+                            <form name="popupEditQuestionForm">
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label"><sup class="highlight">*</sup>
+                                        <translate>Department</translate>
+                                    </label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control" id="department_selected" ng-model="department_code" data-placeholder="Select Department" style="width: 100%">
+                                            <option ng-repeat="option in departmentList" value="{{option.department_code}}" ng-selected="{{option.department_code == department_code}}">{{ option.department_name}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label"><sup class="highlight">*</sup>
+                                        <translate>Question type</translate>
+                                    </label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control" id="question-type" ng-model="question_type" style="width: 100%" data-placeholder="test" ng-change="changeType()">
+                                            <option ng-repeat="option in questionSelectList" value="{{option.question_type}}" ng-selected="{{option.question_type == question_type}}">{{option.text}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group" ng-class="{'has-error' : popupEditQuestionForm.contentQuestionPopup.$error.required && !popupEditQuestionForm.contentQuestionPopup.$pristine}">
+                                    <label class="col-sm-3 control-label"><sup class="highlight">*</sup>
+                                        <translate>Question</translate>
+                                    </label>
+                                    <div class="col-sm-9">
+                                        <input type="text" id="question" class="form-control" name="contentQuestionPopup" ng-maxlength="256" placeholder="{{'Question for women : Is there any chance that you may be pregnant?'|translate}}" ng-model="questionObj.question_content" required/>
+                                        <span ng-show="popupEditQuestionForm.contentQuestionPopup.$error.required && !popupEditQuestionForm.contentQuestionPopup.$pristine" class="help-error"><translate>Question title is required</translate></span>
+                                        <span ng-show="popupEditQuestionForm.contentQuestionPopup.$error.maxlength && !popupEditQuestionForm.contentQuestionPopup.$pristine" class="help-error"><translate>Please enter no more than 256 characters</translate></span>
+                                    </div>
+                                </div>
+                                <div class="form-group" ng-class="{'has-error' : popupEditQuestionForm.descriptionQuestionPopup.$error.maxlength && !popupEditQuestionForm.descriptionQuestionPopup.$pristine}">
+                                    <label class="col-sm-3 control-label">
+                                        <translate>Description about question</translate>
+                                    </label>
+                                    <div class="col-sm-9">
+                                        <textarea id="description" class="form-control" rows="3" name="descriptionQuestionPopup" placeholder="{{'Information'|translate}}" ng-maxlength="512" ng-model="questionObj.description"></textarea>
+                                        <span ng-show="popupEditQuestionForm.descriptionQuestionPopup.$error.maxlength && !popupEditQuestionForm.descriptionQuestionPopup.$pristine" class="help-error"><translate>Please enter no more than 512 characters</translate></span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div><!-- END Form -->
+                    </div>
+                    <div class="col-sm-12">
+                        <!-- BEGIN Table -->
+                        <translate>Answer</translate>
+                        <hr class="darken">
+                        <div class="table-responsive">
+                            <form name="popupContentQuestionForm">
+                                <table id="table-answers" class="table table-bordered nomargin table-w">
+                                    <tr ng-repeat="item in answerList" id="answer_item{{$index}}">
+                                        <td style="width: 40px; vertical-align:middle;text-align:center;">
+                                            <label class="rdiobox" ng-if="question_type==0">
+                                                <input id="radio{{$index}}" type="radio" name="rdio" ng-click="setCorrectAnser($index)"/>
+                                                <span></span>
+                                            </label>
+                                            <label ng-if="question_type==1" class="ckbox" style="border:1px solid #dbdfe6; width: 17px; height: 18px; border-radius: 1px;">
+                                                <input type="checkbox" name="rdio" ng-model="item.is_correct"/>
+                                                <span class="checked-span"></span>
+                                            </label>
+                                        </td>
+                                        <td style="vertical-align:middle">
+                                            <input type="text" id="input-answer{{ $index }}" class="form-control" name="answerQuestionPopup{{ $index }}" ng-maxlength="128" ng-model="item.title" ng-change="validateAnswer($index)" onkeydown="if (event.keyCode == 13) $('#addAnswer').click();" required/>
+                                            <span ng-show="popupContentQuestionForm.answerQuestionPopup{{ $index }}.$error.required && !popupContentQuestionForm.answerQuestionPopup{{ $index }}.$pristine" class="help-error"><translate>Please enter the answer content</translate></span>
+                                            <span ng-show="popupContentQuestionForm.answerQuestionPopup{{ $index }} .$error.maxlength && !popupContentQuestionForm.answerQuestionPopup{{ $index }}.$pristine" class="help-error"><translate>Please enter no more than 128 characters</translate></span>
+                                        </td>
+                                        <td style="vertical-align:middle;">
+                                            <button class="btn btn-danger btn-xs btn-block" ng-click="removeAnswer($index)"><i class="fa fa-close"></i>
+                                                <translate>Delete</translate>
+                                            </button>
+                                        </td>
+                                        <td style="vertical-align:middle;">
+                                            <button class="btn btn-info btn-xs btn-block btn-checked" ng-show="item.is_correct"><i class="fa fa-check"></i>
+                                                <translate>Correct</translate>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div><!-- END Table -->
+                        <div class="clearfix">
+                            <hr class="darken">
+                            <button id="addAnswer" class="btn btn-default btn-quirk btn-block" ng-click="addOption()"><i class="fa fa-plus"></i>
+                                <translate>Add more an answer option</translate>
+                            </button>
+                            <br>
+                            <div class="pull-left" style="padding-top:9px;">
+                                <label class="ckbox">
+                                    <input type="checkbox" id="has_other_answer" ng-model="questionObj.has_other_answer"><span><translate>Add <strong>other</strong> answer</translate></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    <translate>Cancel</translate>
+                </button>
+                <button type="button" class="btn btn-primary" ng-click="saveQuestion()">
+                    <translate>Save</translate>
+                </button>
+            </div>
+        </div><!-- Edit Question-content -->
+    </div><!-- Edit Question-dialog -->
+</div>
+<!-- Preview survey -->
+<div class="modal bounceIn animated" id="preview-survey-popup" tabindex="-1" role="dialog" aria-labelledby="preview-survey-title" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="preview-survey-title"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="step-content">
+                    <h2 class="text-center">{{ preview_item.survey_title }}</h2>
+                    <hr class="darken">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <table class="table nomargin table-bordered table-sm">
+                                <tr>
+                                    <th width="160px;">
+                                        <translate>Patient code</translate>
+                                    </th>
+                                    <td colspan="2"></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <translate>Patient name</translate>
+                                    </th>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <translate> Visit date</translate>
+                                    </th>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <translate>Answered date</translate>
+                                    </th>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-md-6">
+                            <table class="table nomargin table-bordered table-sm">
+                                <tr>
+                                    <th width="160px;">
+                                        <translate>Hospital</translate>
+                                    </th>
+                                    <td>{{ hospitalObj.hosp_name }}</td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <translate>Address</translate>
+                                    </th>
+                                    <td>{{ hospitalObj.address }}</td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <translate>Contact</translate>
+                                    </th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <translate>Department</translate>
+                                    </th>
+                                    <td>{{ departmentArr[selectedDept] }}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5>
+                                <translate>Survey description</translate>
+                            </h5>
+                            <p class="smalltext">{{preview_item.description }}</p>
+                        </div>
+                    </div>
+                    <hr class="ligher">
+                    <!-- BEGIN List -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="servey-preview-area">
+                                <div ng-repeat="g in group_question">
+                                    <h3>{{ g.title }}</h3>
+                                    <hr class="lighters">
+                                    <div ng-repeat="q in g.question_list">
+                                        <h5><span class="number">{{ $index+1 }}.</span>{{ q.question_content }} <span ng-if="q.required == true" style="color: #9e0505">*</span></h5>
+                                        <!-- BEGIN List Answers-->
+                                        <div class="list-answers" ng-if="q.question_type == 0">
+                                            <!-- BEGIN Row-->
+                                            <div class="row">
+                                                <div class="col-xs-6" ng-repeat="a in q.answer_list track by $index">
+                                                    <p>
+                                                        <label class="rdiobox">
+                                                            <input type="radio" name="rdio1" disabled><span>{{a.title}}</span>
+                                                        </label>
+                                                    </p>
+                                                </div>
+                                            </div><!-- END Row-->
+                                        </div><!-- END List Answers-->
+                                        <div class="list-answers" ng-if="q.question_type==1">
+                                            <!-- BEGIN Row-->
+                                            <div class="row">
+                                                <div class="col-xs-6" ng-repeat="a in q.answer_list track by $index">
+                                                    <p>
+                                                        <label class="ckbox">
+                                                            <input type="checkbox" disabled><span>{{ a.title }}</span>
+                                                        </label>
+                                                    </p>
+                                                </div>
+                                            </div><!-- END Row-->
+                                        </div><!-- END List Answers-->
+                                    </div>
+                                </div>
+                                <hr class="lighters">
+                                <p>
+                                    <label class="ckbox">
+                                        <input type="checkbox" ng-model="surveyActive"><span><translate>Set default health survey, apply immediately</translate></span>
+                                    </label>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END List -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    <translate>Close</translate>
+                </button>
+                <button type="button" class="btn btn-primary">
+                    <translate>Export survey PDF</translate>
+                </button>
+            </div>
+        </div><!-- Preview Survey-content -->
+    </div><!-- Preview Survey-dialog -->
+</div><!-- Preview Survey -->
+
+
+
+<!-- Modal choose question to branching-->
+<div class="modal bounceIn animated" id="choose-question-branching-modal" tabindex="-1" role="dialog" aria-labelledby="edit-survey-title" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="edit-survey-title"><translate>Select question to add the question branching</translate></h4>
+            </div>
+            <div class="modal-body">
+                <!-- BEGIN Step -->
+                <div class="wizard-basic">
+                    <!--step 1-->
+                   <!-- <h3 class="basic-step-title">
+                        <translate>Survey title</translate>
+                    </h3>-->
+                    <div class="basic-step-content">
+                        <!-- BEGIN STEP 2 -->
+                        <!-- BEGIN Form -->
+                        <div class="form-horizontal">
+                            <form name="stepTitlePopupForm">
+                                <div class="form-group" ng-class="{'has-error' : stepTitlePopupForm.titleSurveyPopup.$invalid && !stepTitlePopupForm.titleSurveyPopup.$pristine}">
+                                    <div class="row">
+                                        <label class="col-sm-3 control-label" style="text-align:left;"><sup class="highlight">*</sup>
+                                            <translate>List of questions</translate>
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <!--<select id="selectQuestionBranching" class="form-control" style="width: 100%" data-placeholder="{{'Select department' | translate}}" ng-model="s_department" ui-select2="{minimumResultsForSearch: -1}">-->
+                                            <select id="selectQuestionBranching" class="form-control" style="width: 100%" data-placeholder="{{'Select department' | translate}}" ng-model="md_select_question_branching" ng-change="changeQuestionBranching()">
+                                                <!--<option selected></option>-->
+                                                <!--<option value="-1" ng-bind="'All' | translate"></option>-->
+                                                <option ng-repeat="option in list_question_to_choose" value="{{option.question_id}}">{{ option.question_content }}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </form>
+                        </div><!-- END Form --><!-- END STEP 2 -->
+                    </div>
+                </div><!-- END Step -->
+            </div>
+        </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+</div><!-- modal -->
+
+
+
+
+<style>
+    #question-edit-popup .modal-dialog {
+        width: 80%;
+        height: 80%;
+        z-index: 1050;
+    }
+
+    #preview-survey-popup .modal-dialog {
+        width: 80%;
+        height: 80%;
+        z-index: 1050;
+    }
+
+    .scroll {
+        height: 335px;
+        /* overflow: scroll;  showing scrollbars */
+        overflow: auto;
+    }
+
+</style>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#wizard-step').steps({
+            headerTag: 'h3.step-title',
+            bodyTag: 'div.step-content',
+            transitionEffect: 'slide',
+            autoFocus: true,
+            enableFinishButton: false,
+            enablePreviousButton: false,
+            contentMode: "async",
+            onInit: function (event, currentIndex) {
+                var scope = angular.element($('#survey-view')).scope();
+                setTimeout(function () {
+                    $('.actions > ul > li:first-child a').text(scope.previous_steps);
+                    $('.actions > ul > li:last-child a').text(scope.next_steps);
+                }, 1000);
+                $('#wizard-step .actions').hide();
+            },
+            onStepChanging: function (event, currentIndex, newIndex) {
+                var scope = angular.element($('#survey-view')).scope();
+                if (newIndex === 2) {
+                    if (scope.stepTitleForm.titleSurvey.$error.required) {
+                        scope.stepTitleForm.titleSurvey.$pristine = false;
+                        $('#title-survey').focus();
+                        scope.$apply();
+                    }
+                    var title = $('#title-survey').val();
+                    var description = $('#description-survey').val();
+                    if (title.length <= 0 || title.length > 255 || description.length > 500) {
+                        $('#wizard-step .actions').show();
+                        return;
+                    }
+                    $('html,body').animate({scrollTop: 0}, 0);
+
+                    // No branching then disable step branching
+                    if(!scope.checkedBranchingSurvey) {
+                        $('#wizard-step-t-3').parent().removeClass('done');
+                        $('#wizard-step-t-3').parent().addClass('disabled');
+                    }
+
+                } else if (newIndex === 3) { //mind map
+                    if(scope.checkedBranchingSurvey) {
+                        scope.prepareBranching();
+                    }
+
+                    $('html,body').animate({scrollTop: 0}, 0);
+                } else if (newIndex === 4) { // Confirm
+                    if(scope.checkedBranchingSurvey) {
+                        scope.drawMindmapConfirm();
+                    }
+
+                    if (scope.validate_question() == false) {
+                        $('#wizard-step .actions').show();
+                        return;
+                    }
+                } else if (newIndex === 5) {
+                    scope.create();
+                    if (scope.changeStep == 'stop') {
+                        return false;
+                    }
+                }
+                return true;
+            },
+            onStepChanged: function (event, current, next) {
+                var scope = angular.element($('#survey-view')).scope();
+
+                // Question step
+                if (current == 2 && (current > next) && !scope.checkedBranchingSurvey)
+                {
+                    $('#wizard-step-t-3').parent().removeClass('done');
+                    $('#wizard-step-t-3').parent().addClass('disabled');
+                }
+
+                // Branching step
+                if (current == 3 && (current > next) && !scope.checkedBranchingSurvey)
+                {
+                    $(this).steps("setStep", 4);
+                }
+
+                if(!scope.checkedBranchingSurvey) {
+                    $('#wizard-step-t-3').parent().removeClass('done');
+                    $('#wizard-step-t-3').parent().addClass('disabled');
+                }
+
+                if (current == 1) {
+                    document.getElementById('title-survey').focus();
+                } else if (current == 5) {
+                    $('#wizard-step .actions').hide();
+                    $('#wizard-step-t-0').parent().removeClass('done');
+                    $('#wizard-step-t-0').parent().addClass('disabled');
+                    $('#wizard-step-t-1').parent().removeClass('done');
+                    $('#wizard-step-t-1').parent().addClass('disabled');
+                    $('#wizard-step-t-2').parent().removeClass('done');
+                    $('#wizard-step-t-2').parent().addClass('disabled');
+                    $('#wizard-step-t-3').parent().removeClass('done');
+                    $('#wizard-step-t-3').parent().addClass('disabled');
+                    $('#wizard-step-t-4').parent().removeClass('done');
+                    $('#wizard-step-t-4').parent().addClass('disabled');
+                }
+            }
+        });
+
+        //Scroll Fixed
+        $('.actbar').scrollToFixed({
+            marginTop: $('.headerpanel').outerHeight(true),
+            fixed: function () {
+                $(this).css('top', '64px');
+            },
+            postFixed: function () {
+                $(this).removeClass('scroll-to-fixed-fixed');
+            }
+        });
+
+        /**
+         * Fix bug automatic active button when key press enter key
+         */
+        window.addEventListener('keypress', function (event) {
+            if (event.keyCode == 13) {
+                event.preventDefault();
+            }
+        });
+    });
+</script>

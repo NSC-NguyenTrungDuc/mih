@@ -1,0 +1,297 @@
+syntax = "proto2";
+
+// Nuri Manage allergy List 
+message NuriNUR1016U00ManageAllergyListRequest {	
+	optional string bunho = 1;	
+}
+
+message NuriNUR1016U00ManageAllergyListResponse {
+	repeated NuriNUR1016U00ManageAllergyListItemInfo manage_allergy_list_item = 1;
+	
+}
+
+
+// Validation Duplicate Check 
+message NuriNUR1016U00ValidationDuplicateCheckRequest {
+	
+	optional string bunho = 1;
+	optional string allergy_gubun = 2;
+	optional string start_date = 3;
+	
+}
+
+message NuriNUR1016U00ValidationDuplicateCheckResponse {
+	optional string result = 1;
+}
+
+// NUR1016U00 Insert Nur1016
+message NuriNUR1016U00InsertNur1016Request {
+	optional string user_id = 1;	
+	optional string pknur1016 = 2;
+	optional string bunho = 3;
+	optional string allergy_gubun = 4;
+	optional string allergy_info = 5;
+	optional string start_date = 6;
+	optional string end_date = 7;
+	optional string end_sayu = 8;
+	optional string input_text = 9;
+	
+}
+
+//NUR1016U00 Update Nur1016
+message NuriNUR1016U00UpdateNur1016Request {
+	optional string user_id = 1;	
+	optional string pknur1016 = 2;
+	optional string bunho = 3;
+	optional string allergy_gubun = 4;
+	optional string allergy_info = 5;
+	optional string start_date = 6;
+	optional string end_date = 7;
+	optional string end_sayu = 8;
+	optional string input_text = 9;
+	
+}
+
+
+// NUR1016U00 Update Cancel Status in Nur1016
+message NuriNUR1016U00UpdateCancelStatusRequest {
+	optional string user_id = 1;	
+	optional string pknur1016 = 2;
+	optional string bunho = 3;
+	optional string allergy_gubun = 4;	
+	optional string start_date = 5;	
+	
+}
+
+
+//
+message NuriNUR1016U00NurAlegyMappingRequest {
+	optional string bunho = 1;
+	optional string table_id = 2;
+	optional string user_id = 3;
+	
+}
+
+message NuriNUR1016U00NurAlegyMappingResponse {
+
+	optional string result = 1;
+}
+
+// Get Max Seq in NUR7001
+message NuriNUR7001U00GetMaxSeqInNUR7001Request {
+	
+	optional string bunho = 1;
+	optional string measure_date = 2;
+}
+
+message NuriNUR7001U00GetMaxSeqInNUR7001Response {
+
+	optional string result = 1;
+	
+}
+
+//NUR7001U00 Insert into NUR70001
+message NuriNUR7001U00InsertNUR7001Request {
+
+	optional string user_id = 1;	
+	optional string bunho = 2;
+	optional string measure_date = 3;
+	optional string new_seq = 4;
+	optional string height = 5;
+	optional string weight = 6;
+	optional string bp_from = 7;
+	optional string bp_to = 8;
+	optional string body_heat = 9;
+	optional string pulse = 10;
+	optional string spo2 = 11;
+	optional string measure_time = 12;
+	optional string breath = 13;
+}
+
+//NUR7001U00 Update NUR70001
+message NuriNUR7001U00UpdateNUR7001Request {
+
+	optional string user_id = 1;	
+	optional string bunho = 2;
+	optional string measure_date = 3;
+	optional string seq = 4;
+	optional string height = 5;
+	optional string weight = 6;
+	optional string bp_from = 7;
+	optional string bp_to = 8;
+	optional string body_heat = 9;
+	optional string pulse = 10;
+	optional string spo2 = 11;
+	optional string measure_time = 12;
+	optional string breath = 13;
+}
+
+//NUR7001U00 Update Vald Status in NUR70001
+message NuriNUR7001U00UpdateValdStatusNUR7001Request {
+
+	optional string user_id = 1;	
+	optional string bunho = 2;
+	optional string measure_date = 3;
+	optional string seq = 4;	
+}
+
+//NUR7001U00 Measure Physical condition List
+message NuriNUR7001U00MeasurePhysicalConditionRequest {
+	optional string bunho = 1;
+	
+}
+
+message NuriNUR7001U00MeasurePhysicalConditionResponse {
+	repeated NuriNUR7001U00MeasurePhysicalConditionListItemInfo measure_physical_condition_list_item = 1; 	
+}
+
+// Start NUR7001U00 new 
+
+message NuriNUR7001U00InsertNUR7001NewRequest {
+    optional string user_id = 1;        
+    required string bunho = 2;
+    required string measure_date = 3;
+    optional string breath = 4;
+    optional string height = 5;
+    optional string weight = 6;
+    optional string bp_from = 7;
+    optional string bp_to = 8;
+    optional string body_heat = 9;
+    optional string pulse = 10;
+    optional string spo2 = 11;
+    optional string measure_time = 12;
+}
+
+// End NUR7001U00
+
+
+
+// Start NUR1016U00 new 
+
+message NUR1016U00SelectNextValRequest {
+
+}
+
+message NUR1016U00SelectNextValResponse {
+	optional string next_val = 1;
+}
+
+message NUR1016U00GetComboListRequest {
+	optional string code_type_layComboSet = 1;
+}
+
+message NUR1016U00GetComboListResponse {
+	repeated ComboListItemInfo xEditGridCell7_list = 1;
+	repeated ComboListItemInfo layComboSet_list = 2;
+}
+
+// bat dau gen proto tu day
+message NUR1016U00GrdNUR1016Request {
+	optional string bunho = 1;
+}
+
+message NUR1016U00GrdNUR1016Response {
+	repeated NUR1016U00GrdNUR1016ListItemInfo grdNUR1016_list = 1;
+}
+
+message NUR1016U00PrNurAlergyMappingRequest {
+	repeated NUR1016U00GrdNUR1016ListItemInfo grdNUR1016_list = 1;
+	optional string bunho = 2;
+	optional string user_id = 3;
+	optional string table_id = 4;
+}
+
+message NUR1016U00PrNurAlergyMappingResponse {
+	optional bool saveLayout_result = 1;
+	optional string pr_result = 2;
+}
+
+
+
+// End NUR1016U00
+
+
+// Start Nuri NUR1017U00 new 
+
+message NUR1017U00GrdNUR1017Request {
+    optional string bunho = 1;
+}
+
+message NUR1017U00GrdNUR1017Response {
+    repeated NUR1017U00GrdNUR1017ListItemInfo grdNUR1017_list = 1;
+}
+
+message NUR1017U00GetComboListRequest {
+    optional string code_type_xEditGridCell1 = 1;
+    optional string code_type_xEditGridCell5 = 2;
+    optional string code_type_xEditGridCell6 = 3;
+    optional string code_type_layComboSet = 4;
+}
+
+message NUR1017U00GetComboListResponse {
+    repeated ComboListItemInfo xEditGridCell1_list = 1;
+    repeated ComboListItemInfo xEditGridCell5_list = 2;
+    repeated ComboListItemInfo xEditGridCell6_list = 3;
+    repeated ComboListItemInfo layComboSet_list = 4;
+}
+
+
+message NUR1017U00LayValidationDupchkRequest {
+    optional string infe_code = 1;
+    optional string bunho = 2;
+    optional string start_date = 3;
+}
+
+message NUR1017U00LayValidationDupchkResponse {
+    optional string y_value = 1;
+}
+
+message NUR1017U00SaveLayoutRequest {
+    repeated NUR1017U00GrdNUR1017ListItemInfo grdList = 1;
+    optional string user_id = 2;
+}
+
+message NUR1017U00SaveLayoutResponse {
+	optional bool saveLayout_result = 1;
+}
+
+// End Nuri NUR1017U00 new 
+
+// Start NUR0101U01
+
+message NUR0101U01CheckDetailDBRequest {
+	optional string code_type = 1;
+}
+
+message NUR0101U01CheckYResponse {
+	optional string y_value = 1;
+}
+message NUR0101U01GrdMasterGridColumnChangedRequest {
+	optional string code_type = 1;
+}
+
+message NUR0101U01GrdDetailGridColumnChangedRequest {
+	optional string code_type = 1;
+	optional string code = 2;
+}
+message NUR0101U01GrdDetailRequest{
+	optional string code_type = 1;
+}
+
+message NUR0101U01GrdDetailResponse{
+	repeated NUR0101U01GrdDetailInfo grd_detail_info = 1;
+}
+message NUR0101U01GrdMasterRequest {
+	optional string code_type = 1;
+}
+
+message NUR0101U01GrdMasterResponse{
+	repeated NUR0101U01GrdMasterInfo grd_master_info = 1;
+}
+
+message NUR0101U01SaveLayoutRequest {
+	repeated NUR0101U01GrdDetailInfo grd_detail_info = 1;
+	repeated NUR0101U01GrdMasterInfo grd_master_info = 2;
+	optional string user_id = 3;
+}
+// End NUR0101U01

@@ -1,0 +1,593 @@
+import "rpc.proto";
+import "adma_model.proto";
+import "common_model.proto";
+
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "AdmaServiceProto";
+option (version) = "1.0.0";
+option (service) = "adma";
+//---Common Upadate Reponse
+
+message BAS0230U00XSavePeformerRequest{
+	repeated BAS0230U00GrdBAS0230Info grd_bas0230_info = 1;
+}
+
+message CheckAdminUserRequest{
+	optional string user_id = 1;
+}
+
+message CheckAdminUserResponse {
+	repeated CheckAdminUserInfo user_info = 1;
+}
+
+// ----- [START] ADM103U ----------
+message ADM103UgrdUserGrpRequest{
+	optional string hosp_code = 1;
+}
+
+message ADM103UgrdUserGrpResponse{
+    repeated ADM103UgrdUserGrpInfo user_list =1;
+}
+
+message ADM103SaveLayoutRequest
+{
+    optional string sys_id =1;      
+    repeated ADM103UgrdUserGrpInfo item_info =2;
+	optional string hosp_code = 3;
+}
+
+message ADM103LaySysListGrpRequest{
+	optional string hosp_code = 1;
+}
+
+message ADM103LaySysListGrpResponse {
+	repeated  ADM103LaySysListGrpInfo grp_item = 1;
+}
+
+message ADM103RegSystemFormSaveLayoutRequest{
+	optional string user_id = 1;
+	repeated DataStringListItemInfo sys_id = 2;
+	optional string hosp_code = 3;
+}
+
+message ADM103LayLoginSysListRequest {
+	optional string user_id = 1;
+	optional string hosp_code = 2;
+}
+
+message ADM103LayLoginSysListResponse {
+	repeated ADM103LayLoginSysListInfo item_info = 1;
+}
+// added 
+message ADM103UGetFwkHospitalRequest{ 
+}
+
+message ADM103UGetFwkHospitalResponse{
+        repeated ComboListItemInfo hosp_list = 1;
+}
+
+message ADM103UValidateFwkHospitalRequest{
+        optional string hosp_code = 1;
+}
+
+message ADM103UValidateFwkHospitalResponse{
+        optional string hosp_name = 1;
+}
+// ----- [END] ADM103U ----------
+
+// ----- [START] ADM104U ------
+message ADM104UFindBoxRequest {
+	optional string control_name = 1;
+	optional string hosp_code = 2;
+}
+
+message ADM104UGridUserSaveLayour {
+	repeated ADM104UGridUserInfo item_info = 1;
+	optional string user_id = 2;
+}
+
+message ADM104UGridUserRequest {
+        optional string user_group = 1;
+        optional string search_word = 2;
+        optional string user_gubun = 3;
+        optional string hosp_code = 4;
+}
+
+message ADM104UGridUserResponse {
+    repeated ADM104UGridUserInfo grid_user_info = 1;
+}
+
+message ADM104UFwkBuseoCodeRequest {
+	optional string buseo_code = 1;
+	optional string gwa_name = 2;
+	optional string hosp_code = 3;
+}
+
+message ADM104UFwkBuseoCodeResponse { 
+	repeated ComboListItemInfo item_info = 1;
+}
+
+message ADM104UGridUserSaveLayoutRequest {
+    repeated ADM104UGridUserInfo item_info = 1;
+    optional string user_id = 2;
+    optional string hosp_code = 3;
+}
+// ----- [END] ADM104U ------ 
+// ----- [END] ADM104U ------ 
+
+//[START]ADM107U
+message Adm107ULayDownListRequest
+{
+	optional string user_id          = 1;
+	optional string sys_id           = 2;
+	optional string uppr_menu        = 3;
+	optional string hosp_code        = 4;
+}
+message Adm107ULayDownListResponse
+{
+	repeated Adm107ULayDownListInfo lay_down_list_item = 1;
+}
+message Adm107ULayRootListRequest
+{
+	optional string user_id          = 1;
+	optional string sys_id           = 2;
+	optional string hosp_code        = 3;
+}
+message Adm107ULayRootListResponse
+{
+	repeated Adm107ULayDownListInfo lay_root_list_item = 1;
+}
+message Adm107UFbxSysIDDataValidatingRequest
+{
+	optional string user_id = 1;
+}
+message Adm107UFbxSysIDDataValidatingResponse
+{
+	repeated DataStringListItemInfo fbx_sytem_item = 1;
+}
+message Adm107UFbxIDDataValidatingRequest
+{
+	optional string user_id = 1;
+	optional string hosp_code = 2;
+}
+message Adm107UFbxIDDataValidatingResponse
+{
+	repeated DataStringListItemInfo fbx_item = 1;
+}
+message Adm107USaveLayoutRequest
+{
+	optional string main_user_id = 1;
+	optional string fbx_sys_id = 2;
+	optional string hosp_code = 3;
+	repeated Adm107USaveLayoutInfo save_layout_item = 4;
+}
+message Adm107UFbxHospCodeDataValidatingRequest
+{
+	optional string hosp_code = 1;
+}
+message Adm107UFbxHospCodeDataValidatingResponse
+{
+	optional string yoyang_name = 1;
+}
+message Adm107UFwkUserIdRequest
+{
+	optional string hosp_code = 1;
+}
+
+message Adm107UFwkUserIdResponse
+{
+	repeated Adm107UFwkUserIdInfo list_info = 1;
+}
+
+message ADM107UFwkSysIdRequest
+{
+	optional string hosp_code = 1;
+}
+//[END]ADM107U
+
+
+// ------ [START] ADM106U --------
+message ADM106UFwkPgmIDRequest{
+	optional string pgm_id = 1;
+}
+
+message ADM106UFwkPgmIDResponse{
+	repeated ComboListItemInfo fwk_list = 1;
+}
+
+message ADM106UMakeQueryListItemRequest{
+	optional string sys_id = 1;
+	optional string upper_menu = 2;
+}
+
+message ADM106UMakeQueryListItemResponse{
+	repeated ADM106UMakeQueryListItemInfo list_info = 1;
+}
+message ADM106UGetPgmNameRequest{
+	optional string pgm_id = 1;
+	
+}
+
+message ADM106UGetPgmNameResponse{
+	optional string pgm_nm = 1;
+	
+}
+
+message ADM106UGetSysNameRequest{
+	optional string sys_id = 1;
+	
+}
+
+message ADM106UGetSysNameResponse{
+	optional string sys_nm = 1;
+	
+}
+
+message ADM106USaveLayoutRequest{
+	optional string user_id = 1;
+	optional string user_trm = 2;
+	repeated ADM106UMakeQueryListItemInfo input_list = 3;
+}
+// ------ [END] ADM106U --------
+
+
+// ---- [START] ADM108U ----------
+
+message ADM108UGrdListRequest
+{
+	optional string sys_id 		= 1;
+	optional string hosp_code 	= 2;
+}
+
+message ADM108UGrdListResponse{
+	repeated ADM108UGrdListItemInfo grd_list_item_info = 1;
+}
+
+message ADM108UFwkPgmIDRequest{
+	optional string hosp_code = 1;
+}
+
+message ADM108UFwkPgmIDResponse{
+	repeated ADM108UFwkPgmIdListItemInfo fwk_pgm_id_list_item_info = 1;
+}
+
+message ADM108ULaySysListRequest{
+	optional string hosp_code = 1;
+}
+
+message ADM108ULaySysListResponse{
+	repeated ComboListItemInfo lay_sys_list_item_info = 1;
+}
+
+message ADM108UTvwSystemListRequest{
+	optional string pgm_id = 1;
+}
+
+message ADM108UTvwSystemListResponse{
+	repeated ADM108UTvwSystemListItemInfo tvw_system_list_item_info = 1;
+}
+
+message ADM108USaveLayoutRequest
+{
+	optional string user_id 	= 1;
+    optional string hosp_code 	= 2;
+    repeated ADM108UGrdListItemInfo grd_list_item_info = 3;
+}
+
+// ---- [END] ADM108U ----------
+
+//[START] ADM501U
+message ADM501UKoreaListRequest{
+	optional string msg_gubun = 1;
+	optional string search_msg = 2;
+}
+message ADM501UListResponse{
+	repeated ADM501UListItemInfo list_item_info = 1;
+}
+message ADM501UJapanListRequest{
+	optional string msg_gubun = 1;
+	optional string search_msg = 2;
+}
+message ADM501USpeakListRequest{
+	optional string msg_gubun = 1;
+	optional string search_msg = 2;
+}
+message ADM501UJapanEmptyListRequest{
+	optional string msg_gubun = 1;
+}
+message ADM501USaveLayoutRequest {
+	optional string user_info = 1;
+	repeated ADM501UListItemInfo list_item_info = 2;
+}
+//[END] ADM501U
+// ---- [END] ADM108U ----------
+
+//---- [START] ADM102U ----------
+message ADM102UGrdListRequest{
+	optional string sys_id = 1;
+}
+
+message ADM102UGrdListResponse{
+	repeated ADM102UGrdListItemInfo grd_list = 1;
+}
+
+message ADM102UGetSysNmRequest{
+	optional string sys_id = 1;
+}
+
+message ADM102UGetSysNmResponse{
+	optional string sys_nm = 1;
+}
+
+
+message ADM102USaveLayoutRequest{
+	optional string user_id = 1;
+	repeated ADM102UGrdListItemInfo input_list = 2;
+}
+
+// ---- [END] ADM102U ----------
+//[START] ADM101U
+message ADM101UGrdSystemRequest {
+	optional string grp_id = 1;
+}
+
+message ADM101UGrdSystemResponse {
+	repeated ADM101UgrdSystemItemInfo item_info = 1;
+}
+
+message ADM101UGrdGroupRequest {
+	optional string grp_id = 1;
+	optional string grp_nm = 2;
+}
+
+message ADM101UGrdGroupResponse {
+	repeated ADM101UGrdGroupItemInfo item_info = 1;
+}
+
+message ADM101UGetGrpNmRequest {
+
+}
+
+message ADM101UGetGrpNmResponse {
+	optional string grp_nm = 1;
+}
+
+message ADM101USaveLayoutRequest {
+	repeated ADM101UGrdGroupItemInfo grd_group_item = 1;
+	repeated ADM101UgrdSystemItemInfo grd_system_item = 2;
+	optional string user_id = 3;
+}
+//[END] ADM101U
+
+//[START] ADM201U
+message ADM201UGrdDicDetailRequest{
+    optional string col_id = 1;
+    optional string page_number = 2;
+    optional string offset = 3;
+    
+}
+
+message ADM201UGrdDicDetailResponse{
+    repeated ADM201UGrdDicDetailItemInfo grd_dic_detail_item_info = 1;
+}
+
+message ADM201UGrdDicMasterRequest{
+    optional string col_id = 1;
+    optional string col_nm = 2;
+    optional string page_number = 3;
+    optional string offset = 4;
+}
+
+message ADM201UGrdDicMasterResponse{
+    repeated ADM201UGrdDicMasterItemInfo grd_dic_master_item_info = 1;
+}
+
+message ADM201USaveLayoutRequest{
+    optional string user_id = 1;
+    repeated ADM201UGrdDicMasterItemInfo grd_dic_master_item_info = 2;
+    repeated ADM201UGrdDicDetailItemInfo grd_dic_detail_item_info = 3;
+}		
+//[END] ADM201U
+
+//[START] ADM401U
+message ADM401UGrdSysRequest{
+    optional string grp_id = 1;
+}
+
+message ADM401UGrdSysResponse{
+    repeated ADM401UGrdSysItemInfo grd_sys_item_info = 1;
+}
+
+message ADM401UGrdGrpRequest{
+}
+
+message ADM401UAsmRequest{
+    optional string asm_name = 1;
+}
+
+message ADM401UAsmResponse{
+    repeated ADM401UAsmItemInfo asm_item_info = 1;
+}
+
+message ADM401UUpdateRequest{
+    optional bool has_version = 1;
+    optional string asm_ver = 2;
+    optional string asm_name = 3;
+}
+
+message ADM401UInsertRequest{
+    optional bool has_version = 1;
+    optional string asm_name = 2;
+    optional string asm_type = 3;
+    optional string grp_id = 4;
+    optional string sys_id = 5;
+    optional string asm_ver = 6;
+    optional string asm_path = 7;
+    optional string user_id = 8;
+}
+//[END] ADM401U
+
+//[START] ADMS2015U01
+message ADMS2015U01GetSystemRequest{
+	optional string hosp_code = 1;
+}
+
+message ADMS2015U01GetSystemResponse{
+	repeated ComboListItemInfo system_info = 1;
+}
+
+message ADMS2015U01SystemIdValidatingRequest {
+    optional string hosp_code = 1;
+	optional string sys_id = 2;
+}
+
+message ADMS2015U01SystemIdValidatingResponse {
+	optional string sys_name = 1;
+}
+
+message ADMS2015U01LoadUpperMenuRequest{
+	optional string sys_id = 1;
+	optional string hosp_code = 2;
+}
+
+message ADMS2015U01LoadUpperMenuResponse{
+	repeated ADMS2015U01MenuInfo menu_info = 1;
+}
+
+message ADMS2015U01LoadMenuItemRequest{
+	optional string sys_id = 1;
+	optional string uppr_menu = 2;
+	optional string hosp_code = 3;
+}
+
+message ADMS2015U01LoadMenuItemResponse{
+	repeated ADMS2015U01MenuInfo menu_info = 1;
+}
+
+message ADMS2015U01SettingMenuRequest{
+    optional string hosp_code = 1;
+    optional string system_id = 2;
+    repeated ADMS2015U01SettingMenuInfo menu_info = 3;
+    optional string user_id = 4;
+}
+//[END] ADMS2015U01
+//[START] StartForm
+message ADMSStartFormLoginRequest{
+    optional string sys_id = 1;
+    optional string pwd = 2;
+}
+message ADMSStartFormLoginResponse{
+    repeated ADMSStartFormLoginInfo login_info=1;
+}
+//[END] StartForm
+//[START] ADMS2015U00
+message ADMS2015U00GetGroupListRequest{
+}
+message ADMS2015U00GetGroupListResponse{
+	repeated ADMS2015U00GetGroupListInfo group_list_info = 1;
+	repeated ADMS2015U00GetSystemListInfo system_list_info = 2;
+}
+message ADMS2015U00GetSystemListRequest{
+    optional string grp_id = 1;
+}
+message ADMS2015U00GetSystemListResponse{
+    repeated ADMS2015U00GetSystemListInfo system_list_info = 1;
+}
+message ADMS2015U00LoadGroupSystemHospitalRequest {
+    optional string hosp_code = 1;
+}
+message ADMS2015U00LoadGroupSystemHospitalResponse {
+   repeated ADMS2015U00GroupHospitalInfo group_info = 1;
+   repeated ADMS2015U00SystemHospitalInfo system_info = 2;
+}
+message ADMS2015U00GetSystemHospitalRequest {
+    optional string hosp_code = 1;
+    optional string group_id = 2;
+}
+message ADMS2015U00GetSystemHospitalResponse {
+    repeated ADMS2015U00SystemHospitalInfo system_info = 1;
+}
+message ADMS2015U00CreateGroupHospitalRequest {
+    optional string user_id = 1;
+    optional string hosp_code = 2;
+    optional string group_id = 3;
+    repeated ADMS2015U00GroupHospitalInfo group_list_info = 4;
+    repeated ADMS2015U00SystemHospitalInfo system_list_item = 5;
+}
+//[END] ADMS2015U00
+//[START] ADM104U
+message ADM104UClisComboRequest{
+	optional string hosp_code = 1;
+}
+
+message ADM104UClisComboResponse{
+	repeated ComboListItemInfo dt = 1;
+}
+//[END] ADM104U
+//[START] ADM2016U00
+message ADM2016U00GrdLoadDrgRequest{ 
+        optional string search_name = 1;
+        optional string search_type = 2;
+        optional string search_account = 3;
+        optional string page_number  = 4;
+        optional string offset       = 5;  
+ }
+message ADM2016U00GrdLoadDrgResponse{
+    repeated ADM2016U00GrdLoadDrgInfo item_info = 1;
+ }
+ message HOTCODEMASTERSaveRequest
+{       
+    repeated ADM2016U00GrdLoadDrgInfo hot_code_info = 1; 
+}
+  message ADM2016U00NameTypeRequest{       
+ }
+//[END] ADM2016U00
+  
+  
+  
+  
+  
+//[START] ADM9999U00
+message	ADM9999U00GetInformRequest
+{
+	optional string id = 1;
+}
+
+message	ADM9999U00GetInformResponse
+{
+	repeated ADM9999U00GetInformInfo item_info = 1;
+}
+//[END] ADM9999U00
+message Adms2016U00GetMaintainanceSettingRequest{
+
+}
+
+message Adms2016U00GetMaintainanceSettingResponse {
+	repeated MaintainanceSettingInfo maintainance_settings = 1;
+}
+
+message Adms2016U00SaveMaintainanceSettingRequest{
+	repeated MaintainanceSettingInfo maintainance_settings = 1;
+}
+
+message ADM104QGetPatientRequest
+{
+	optional string user_id = 1;
+}
+message ADM104QGetPatientResponse
+{
+	required bool exist       = 1;
+	optional string user_name = 2;
+}
+
+message ADM3200R00grdADM3200Request {
+	optional string hosp_code  							= 1;
+	optional string user_group 							= 2;
+	optional string ho_dong 							= 3;
+	optional string offset								= 4;
+	optional string page_number							= 5;
+}
+
+message ADM3200R00grdADM3200Response {
+	repeated ADM3200R00grdADM3200Info grd_master_item = 1;
+}

@@ -1,0 +1,171 @@
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "DrugModelProto";
+
+message DRGOCSCHKGrdOcsChkInfo{
+    optional string jaeryo_code = 1;
+    optional string jaeryo_name = 2;
+    optional string drg_pack_yn = 3;
+    optional string phamarcy_yn = 4;
+    optional string power_yn = 5;
+    optional string hubal_change_yn = 6;
+    optional string mayak_yn = 7;
+    optional string small_code = 8;
+    optional string small_code_name = 9;
+    optional string caution_code = 10;
+    optional string caution_name = 11;   
+    optional string row_state = 12;      
+}
+
+
+// ----- [START] DRG0102U00 --------
+
+message DRG0102U00GrdMasterInfo{
+    optional string code_type = 1;
+    optional string code_type_name = 2;
+}
+
+message DRG0102U00GrdDetailInfo{
+    optional string code_type = 1;
+    optional string code = 2;
+    optional string code_name = 3;
+    optional string code_value = 4;
+    optional string row_state = 5;
+}
+
+message DRG0120U00GrdDrg0120ItemInfo{
+    optional string bogyong_code = 1;
+    optional string bogyong_name = 2;
+    optional string pattern = 3;
+    optional string bogyong_gubun = 4;
+    optional string drg_grp = 5;
+    optional string bogyong_name_2 = 6;
+    optional string bogyong_gubun_default = 7;
+    optional string prt_gubun = 8;
+    optional string bunryu1 = 9;
+    optional string bogyong_code_full = 10;
+    optional string sp_bogyong_yn = 11;
+    optional string block_gubun = 12;
+    optional string banghyang = 13;   
+    optional string chiryo_gubun = 14;
+    optional string donbog_yn = 15;
+    optional string pattern1 = 16;
+    optional string pattern2 = 17;
+    optional string pattern3 = 18;
+    optional string pattern4 = 19;
+    optional string pattern5 = 20;
+    optional string bogyong_jo_flag = 21;
+    optional string bogyong_ju_flag = 22;
+    optional string bogyong_seok_flag = 23;
+    optional string bogyong_time1_flag = 24;
+    optional string bogyong_time2_flag = 25;
+    optional string bogyong_time3_flag = 26;
+    optional string bogyong_time4_flag = 27;
+    optional string bogyong_time5_flag = 28;
+    optional string bogyong_time6_flag = 29;
+    optional string bogyong_time7_flag = 30;
+    optional string row_state = 31;
+}
+
+message DRG0120U00GrdDrg0120Item1Info{
+    optional string bogyong_code = 1;
+    optional string bogyong_name = 2;
+    optional string pattern = 3;
+    optional string bogyong_gubun = 4;
+    optional string drg_grp = 5;
+    optional string bogyong_name_2 = 6;
+    optional string bogyong_gubun_default = 7;
+    optional string prt_gubun = 8;
+    optional string bunryu1 = 9;
+    optional string bogyong_code_full = 10;
+    optional string sp_bogyong_yn = 11;
+    optional string block_gubun = 12;
+    optional string banghyang = 13;   
+    optional string chiryo_gubun = 14;
+    optional string donbog_yn = 15;
+    optional string pattern1 = 16;
+    optional string pattern2 = 17;
+    optional string pattern3 = 18;
+    optional string pattern4 = 19;
+    optional string pattern5 = 20;
+}
+
+message DRG0120U00Grd0120Item2Info{
+    optional string bunryu1_name = 1;  
+    optional string bogyong_code = 2;                                              
+    optional string bogyong_name = 3;                                              
+    optional string dv = 4;            
+    optional string bogyong_gubun = 5; 
+    optional string donbog_yn = 6;     
+    optional string af_wake = 7;       
+    optional string morning = 8;       
+    optional string afternoon = 9;     
+    optional string evening = 10;       
+    optional string night = 11;
+}
+
+message DRG0120U00Grd0120Item3Info{
+    optional string bunryu1_name = 1;  
+    optional string bogyong_code = 2;                                              
+    optional string bogyong_name = 3;                                              
+    optional string dv = 4;            
+    optional string banghyang = 5; 
+    optional string buwi = 6;     
+    optional string chiryo = 7;       
+}
+
+
+// ----- [START] DRG0102U00 --------
+
+message DRG9001GetLay9001Info{
+     optional string holi_day = 1;
+     optional string drg_cnt = 2;
+     optional string drg_group_cnt = 3;
+     optional string drg_hangmog_cnt = 4;
+     optional string inj_cnt = 5;
+     optional string inj_group_cnt = 6;
+     optional string inj_hangmog_cnt = 7;
+     optional string drg_inj_cnt = 8;
+     optional string drg_inj_group_cnt = 9;
+     optional string drg_inj_hangmog_cnt = 10;
+}
+
+message DRGOCSCHKgrdOCS0108Info
+ {
+ optional string hangmog_code = 1;
+ optional string ord_danui = 2;
+ optional string seq = 3;
+ optional string change_qty1 = 4;
+ optional string change_qty2 = 5;
+ optional string hosp_code = 6;
+ optional string hangmog_start_date = 7;
+ optional string change_danui1 = 8;
+ optional string change_danui2 = 9;
+ optional string row_state = 10;
+ }
+
+message DRGOCSCHKGrdOcsChkFullInfo{
+    optional string jaeryo_code = 1;
+    optional string jaeryo_name = 2;
+    optional string drg_pack_yn = 3;
+    optional string phamarcy_yn = 4;
+    optional string power_yn = 5;
+    optional string hubal_change_yn = 6;
+    optional string mayak_yn = 7;
+    optional string small_code = 8;
+    optional string small_code_name = 9;
+    optional string caution_code = 10;
+    optional string caution_name = 11; 
+    optional string start_date = 12;       
+    optional string sunab_danui = 13;  
+    optional string sunab_danui_name = 14;  
+    optional string subul_danui = 15;  
+    optional string subul_danui_name  = 16;  
+    optional string stock_yn = 17;  
+    optional string subul_danga = 18;  
+    optional string subul_qcode_out = 19;  
+    optional string subul_qcode_out_name = 20;  
+    optional string subul_qcode_inp = 21;  
+    optional string subul_qcode_inp_name = 22;  
+    optional string row_state = 23;  
+             
+}

@@ -1,0 +1,43 @@
+#!/bin/sh
+PRG="$0"
+while [ -h "$PRG" ]; do
+  ls=`ls -ld "$PRG"`
+  link=`expr "$ls" : '.*-> \(.*\)$'`
+  if expr "$link" : '/.*' > /dev/null; then
+    PRG="$link"
+  else
+    PRG=`dirname "$PRG"`/"$link"
+  fi
+done
+
+PRGDIR=`dirname "$PRG"`
+BASEDIR=`cd "$PRGDIR/.." >/dev/null; pwd`
+PROCNAME="@PROCNAME@"
+cd $BASE_DIR
+CHECKFILE="/tmp/${USER}_${PROCNAME}.lock"
+pid=`ps -ef | grep java | grep ${PROCNAME} | grep -v "grep" | awk '{print $2}'`
+
+if [ `whoami` != "@RUN_AS_USER@" ]; then
+ echo -ne "\n\n\033[1;31;40m PLEASE CKECK USER RUNNING $PROCNAME !!!!! \033[0m\n"
+ echo -ne "\n\033[1;31;40m WRONG USER \033[0m\n\n\n"
+ exit 0
+fi
+
+#echo $pid
+rm -f $CHECKFILE
+if [ -n "$pid" ];then
+        if [ "$1" != "force" ];then
+                kill @KILL_SIGNAL@ $pid && rm -f $CHECKFILE
+        else
+                kill @KILL_SIGNAL@ $pid
+                rm -f $CHECKFILE
+        fi
+        echo "$PROCNAME is stopped."
+else
+        echo -ne "\033[1;31;40m $PROCNAME is not already running.. \033[0m\n"
+        exit 1
+fi
+PID=`ps ux |grep $PROCNAME |grep java |awk '{print $2}'`;
+kill @KILL_SIGNAL@ $PID
+rm -f $CHECKFILE
+exit 0

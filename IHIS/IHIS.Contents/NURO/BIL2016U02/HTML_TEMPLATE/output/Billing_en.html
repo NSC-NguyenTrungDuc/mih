@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>Printing Billing</title>
+        <script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/handlebars.min.js"></script>	
+		<script type="text/javascript" src="../js/common.js"></script>
+		<script type="text/javascript" src="../js/app.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="../css/print_binling_vi.css">
+
+    </head>
+	<body>
+	<form id="myform" action="" method="post">
+ 	<div>
+	
+		<div id="data-template">
+		</div>
+	</div>
+	<script id="some-template" type="text/x-handlebars-template">
+	
+		<div class="billing">
+			
+			<table class="headerbilling"  style="float:left;">
+				<tbody>
+					<tr>
+						<td>Hospital</td>
+						<td>{{Hospital_name}}</td>
+					</tr>
+					<tr>
+						<td>Adress</td>
+						<td>{{Adress}}</td>
+					</tr>
+					<tr>
+						<td>Tel</td>
+						<td>{{Tel}}</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="headerbilling" style="float:right; width:300px;">
+				<tbody>
+					<tr>
+						<td>Email</td>
+						<td>{{Email}}</td>
+					</tr>
+					<tr>
+						<td>Website</td>
+						<td>{{Website}}</td>
+					</tr>
+				</tbody>
+			</table>
+			<h1 class="center">SERVICES LIST</h1>
+			<table width="100%">
+				<tbody>
+					<tr>
+						<td>Patient: <strong>{{Patient}}</strong></td>
+						<td align="right">Age: {{Age}}</td>
+						<td align="right">Invoice no: {{Invoice_no}}</td>
+						<td align="right">Invoice date: {{Invoice_date}}</td>
+					</tr>
+					<tr>
+						<td>Patient code: {{Patient_code}}</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="pull-right currency"><strong>Unit :USD</strong></div>
+			<table class="tbl_table">
+				<thead>
+					<tr>
+						<th width="40%">Services name</th>
+						<th width="10%">Unit</th>
+						<th width="10%">Quantity</th>
+						<th width="12%">Price</th>
+						<th width="110px">Amount</th>
+						<th width="110px">Discount</th>
+						<th width="110px">Patient Pay</th>
+					</tr>
+				</thead>
+				<tbody>
+					{{#each BillingData}}
+					<tr>
+						<td><strong>{{this.Department}}-{{this.DeptReqNm}}</strong></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td align="right"></td>
+					</tr>
+					{{#each InvoiceDetail}}
+					<tr>
+						<td>{{this.HangmogName}}</td>
+						<td align="center">{{this.Unit}}</td>
+						<td align="center">{{this.Quantity}}</td>
+						<td align="center">{{formatCurrencyJP this.Price}}</td>
+						<td class="left">{{formatCurrencyJP this.Amount}}</td>
+						<td align="left">{{formatCurrencyJP this.Discount}}</td>
+						<td align="right">{{formatCurrencyJP PatientPay}}</td>
+					</tr>
+					{{/each}}
+					{{/each}}			
+					<tr>
+						<td align="center" colspan="6"><strong>Total</strong></td>
+						<td align="right">{{Sum_amount_invoice}}</td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="total">
+				<tr>
+					<td><span class="pr1">Pay :</span><span class="pr3">{{Paid_invoice}}</span></td>
+				</tr>
+				<tr>
+					<td><span class="pr1">Discount :</span><span class="pr3">{{Discount_sum}}</span></td>
+				</tr>
+				<tr>
+					<td><span class="pr1">Total Pay:</span><span class="pr3">{{Total_paid}}</span></td>
+				</tr>
+				<tr>
+					<td><span class="pr1">Debt :</span><span class="pr3">{{Total_debt}}</span></td>
+				</tr>
+			</table>
+			<div class="bottom">
+				<table>
+					<tr>
+						<td align="center">
+							<p><strong>Paid Name</strong></p>
+							<p><span>(Sign, Name)</span></p>
+							<p class="name-r">{{Paid_name}}</p>
+						</td>
+						<td align="left">
+							<p><strong>Collecter</strong></p>
+							<p><span>(Sign, Name)</span></p>
+							<p class="name-r">{{User_session}}</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</script>
+</form>
+   	</body>
+</html>

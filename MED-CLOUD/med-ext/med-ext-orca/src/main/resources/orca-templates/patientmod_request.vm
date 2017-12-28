@@ -1,0 +1,160 @@
+<data>
+    <patientmodreq type="record">
+    	#if($rq.modKey)
+            <Mod_Key type="string">$rq.modKey</Mod_Key>
+        #end
+        #if($rq.patientID)
+        	<Patient_ID type="string">$rq.patientID</Patient_ID>
+        #end
+        #if($rq.wholeName)
+        	<WholeName type="string">$rq.wholeName</WholeName>
+        #end
+        #if($rq.wholeNameInKana)
+        	<WholeName_inKana type="string">$rq.wholeNameInKana</WholeName_inKana>
+        #end
+        #if($rq.birthDate)
+        	<BirthDate type="string">$rq.birthDate</BirthDate>
+        #end
+        #if($rq.sex)
+        	<Sex type="string">$rq.sex</Sex>
+        #end
+        #if($rq.houseHolderWholeName)
+        	<HouseHolder_WholeName type="string">$rq.houseHolderWholeName</HouseHolder_WholeName>
+        #end
+        #if($rq.relationship)
+        	<Relationship type="string">$rq.relationship</Relationship>
+        #end
+        #if($rq.occupation)
+        	<Occupation type="string">$rq.occupation</Occupation>
+        #end
+        #if($rq.cellularNumber)
+        	<CellularNumber type="string">$rq.cellularNumber</CellularNumber>
+        #end
+        #if($rq.faxNumber)
+        	<FaxNumber type="string">$rq.faxNumber</FaxNumber>
+        #end
+        #if($rq.emailAddress)
+        	<EmailAddress type="string">$rq.emailAddress</EmailAddress>
+        #end
+        #if($rq.homeAddressInformation)
+	        <Home_Address_Information type="record">
+	        	#if($rq.homeAddressInformation.addressZipCode)
+		        	<Address_ZipCode type="string">$rq.homeAddressInformation.addressZipCode</Address_ZipCode>
+		        #end
+		        #if($rq.homeAddressInformation.wholeAddress1)
+		        	<WholeAddress1 type="string">$rq.homeAddressInformation.wholeAddress1</WholeAddress1>
+		        #end
+		        #if($rq.homeAddressInformation.wholeAddress2)
+		        	<WholeAddress2 type="string">$rq.homeAddressInformation.wholeAddress2</WholeAddress2>
+		        #end
+		        #if($rq.homeAddressInformation.phoneNumber1)
+		        	<PhoneNumber1 type="string">$rq.homeAddressInformation.phoneNumber1</PhoneNumber1>
+		        #end
+		        #if($rq.homeAddressInformation.phoneNumber2)
+		        	<PhoneNumber2 type="string">$rq.homeAddressInformation.phoneNumber2</PhoneNumber2>
+		        #end
+			</Home_Address_Information>
+        #end
+        #if($rq.workPlaceInformation)
+	        <WorkPlace_Information type="record">
+	        	#if($rq.workPlaceInformation.wholeName)
+		        	<WholeName type="string">$rq.workPlaceInformation.wholeName</WholeName>
+		        #end
+		        #if($rq.workPlaceInformation.addressZipCode)
+		        	<Address_ZipCode type="string">$rq.workPlaceInformation.addressZipCode</Address_ZipCode>
+		        #end
+		        #if($rq.workPlaceInformation.wholeAddress1)
+		        	<WholeAddress1 type="string">$rq.workPlaceInformation.wholeAddress1</WholeAddress1>
+		        #end
+		        #if($rq.workPlaceInformation.wholeAddress2)
+		        	<WholeAddress2 type="string">$rq.workPlaceInformation.wholeAddress2</WholeAddress2>
+		        #end
+		        #if($rq.workPlaceInformation.phoneNumber)
+		        	<PhoneNumber type="string">$rq.workPlaceInformation.phoneNumber</PhoneNumber>
+		        #end
+			</WorkPlace_Information>
+		#end
+		#if($rq.contraindication1)
+			<Contraindication1 type="string">$rq.contraindication1</Contraindication1>
+		#end
+		#if($rq.contraindication2)
+			<Contraindication2 type="string">$rq.contraindication2</Contraindication2>
+		#end
+		#if($rq.allergy1)
+	    	<Allergy1 type="string">$rq.allergy1</Allergy1>
+	    #end
+	    #if($rq.allergy2)
+	    	<Allergy2 type="string">$rq.allergy2</Allergy2>
+	    #end
+	    #if($rq.infection1)
+	    	<Infection1 type="string">$rq.infection1</Infection1>
+	    #end
+	    #if($rq.infection2)
+	    	<Infection2 type="string">$rq.infection2</Infection2>
+	    #end
+	    #if($rq.comment1)
+	    	<Comment1 type="string">$rq.comment1</Comment1>
+	    #end
+	    #if($rq.comment2)
+			<Comment2 type="string">$rq.comment2</Comment2>
+		#end
+		
+		#if($rq.healthInsuranceInformation)
+			<HealthInsurance_Information type="record">
+				#if($rq.healthInsuranceInformation.insuranceProviderClass)
+					<InsuranceProvider_Class type="string">$rq.healthInsuranceInformation.insuranceProviderClass</InsuranceProvider_Class>
+				#end
+				#if($rq.healthInsuranceInformation.insuranceProviderNumber)
+                	<InsuranceProvider_Number type="string">$rq.healthInsuranceInformation.insuranceProviderNumber</InsuranceProvider_Number>
+                #end
+                #if($rq.healthInsuranceInformation.insuranceProviderWholeName)
+                	<InsuranceProvider_WholeName type="string">$rq.healthInsuranceInformation.insuranceProviderWholeName</InsuranceProvider_WholeName>
+                #end
+                #if($rq.healthInsuranceInformation.healthInsuredPersonSymbol)
+                	<HealthInsuredPerson_Symbol type="string">$rq.healthInsuranceInformation.healthInsuredPersonSymbol</HealthInsuredPerson_Symbol>
+                #end
+                #if($rq.healthInsuranceInformation.healthInsuredPersonNumber)
+                	<HealthInsuredPerson_Number type="string">$rq.healthInsuranceInformation.healthInsuredPersonNumber</HealthInsuredPerson_Number>
+                #end
+                #if($rq.healthInsuranceInformation.relationToInsuredPerson)
+                	<RelationToInsuredPerson type="string">$rq.healthInsuranceInformation.relationToInsuredPerson</RelationToInsuredPerson>
+                #end
+                #if($rq.healthInsuranceInformation.healthInsuredPersonWholeName)
+                	<HealthInsuredPerson_WholeName type="string">$rq.healthInsuranceInformation.healthInsuredPersonWholeName</HealthInsuredPerson_WholeName>
+                #end
+                #if($rq.healthInsuranceInformation.certificateStartDate)
+                	<Certificate_StartDate type="string">$rq.healthInsuranceInformation.certificateStartDate</Certificate_StartDate>
+        		#end
+        		#if($rq.healthInsuranceInformation.certificateExpiredDate)
+                	<Certificate_ExpiredDate type="string">$rq.healthInsuranceInformation.certificateExpiredDate</Certificate_ExpiredDate>
+        		#end
+        		#if($rq.healthInsuranceInformation.publicInsuranceInformation)
+        			<PublicInsurance_Information type="array">
+        			    #foreach( $pi in $rq.healthInsuranceInformation.publicInsuranceInformation)
+        					<PublicInsurance_Information_child type="record">
+        						#if($pi.publicInsuranceClass)
+	                            	<PublicInsurance_Class type="string">$pi.publicInsuranceClass</PublicInsurance_Class>
+	                            #end
+	                            #if($pi.publicInsuranceName)
+	                            	<PublicInsurance_Name type="string">$pi.publicInsuranceName</PublicInsurance_Name>
+	                            #end
+	                            #if($pi.publicInsurerNumber)
+	                            	<PublicInsurer_Number type="string">$pi.publicInsurerNumber</PublicInsurer_Number>
+	                            #end
+	                            #if($pi.publicInsuredPersonNumber)
+	                            	<PublicInsuredPerson_Number type="string">$pi.publicInsuredPersonNumber</PublicInsuredPerson_Number>
+	                            #end
+	                            #if($pi.certificateIssuedDate)
+	                            	<Certificate_IssuedDate type="string">$pi.certificateIssuedDate</Certificate_IssuedDate>
+	                            #end
+	                            #if($pi.certificateExpiredDate)
+	                            	<Certificate_ExpiredDate type="string">$pi.certificateExpiredDate</Certificate_ExpiredDate>
+	                            #end
+							</PublicInsurance_Information_child>
+        				#end
+        			</PublicInsurance_Information>
+        		#end
+			</HealthInsurance_Information>
+		#end
+    </patientmodreq>
+</data>

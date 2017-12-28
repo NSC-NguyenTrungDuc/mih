@@ -1,0 +1,223 @@
+﻿<header ng-include="'templates/header.html'"></header>
+<section>
+    <div class="leftpanel" ng-include="'templates/left_menu.html'"></div>
+    <div class="mainpanel">
+        <div class="contentpanel">
+            <ol class="breadcrumb breadcrumb-quirk">
+                <li><i class="fa fa-home mr5"></i>
+                    <translate>Dashboard</translate>
+                </li>
+            </ol>
+            <!-- BEGIN Well -->
+            <div class="well well-asset-options clearfix">
+                <!-- BEGIN statistics  -->
+                <div class="statistics pull-left center-stat">
+                    <translate>Answered</translate>
+                    <a href="/#/patient/status/1/{{type}}" class="bigtext" target="_blank">{{ answered }}</a>
+                    <span>&nbsp;</span>
+                    <translate>Waiting</translate>
+                    <a href="/#/patient/status/0/{{type}}" class="bigtext" target="_blank">{{ waiting }}</a>
+                </div><!-- END statistics  -->
+                <!-- BEGIN Filter by Time -->
+                <div class="btn-group pull-right btn-group-allcaps center-stat" data-toggle="buttons">
+                    <label class="btn btn-default-active active" ng-click="chooseDate(1)">
+                        <input type="checkbox">
+                        <translate>Today</translate>
+                    </label>
+                    <label class="btn btn-default-active" ng-click="chooseDate(2)">
+                        <input type="checkbox"/>
+                        <translate>This week</translate>
+                    </label>
+                    <label class="btn btn-default-active" ng-click="chooseDate(3)">
+                        <input type="checkbox"/>
+                        <translate>This Month</translate>
+                    </label>
+                    <label class="btn btn-default-active" ng-click="chooseDate(4)">
+                        <input type="checkbox"/>
+                        <translate>All</translate>
+                    </label>
+                    <button onClick="window.open('/#/patient')" class="btn btn-default-active">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div><!-- END Filter by Time -->
+            </div><!-- END Well -->
+            <!-- BEGIN Row 1 -->
+            <div class="row">
+                <div class="col-md-3 col-sm-6 slider" ng-repeat="i in department_list | limitTo:7">
+                    <!-- BEGIN Panel -->
+                    <div class="panel panel-stastic" ng-class="i.class" data-mh="h-group">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><a href="#/patient/dept/{{ i.department_code }}/{{type}}" target="_blank" title="{{ i.title }}"><img ng-src="/images/panel-icons/{{i.src}}" alt="" class="img">{{ i.name }}</a></h3>
+                        </div>
+                        <div class="panel-body">
+                            <!-- BEGIN Content-->
+                            <div class="row">
+                                <div class="col-xs-6 text-center">
+                                    <a href="#/patient/dept/{{ i.department_code }}/1/{{type}}" target="_blank">
+                                        <strong class="bigtext block">{{ i.answer }}</strong>
+                                        <translate>完了</translate>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 text-center">
+                                    <a href="#/patient/dept/{{ i.department_code }}/0/{{type}}" target="_blank">
+                                        <strong class="bigtext block">{{ i.waiting }}</strong>
+                                        <translate>未完了</translate>
+                                    </a>
+                                </div>
+                            </div><!-- END Content-->
+                        </div>
+                    </div><!-- END Panel -->
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="panel-nav cleafix" data-mh="h-group" id="btn-panel-nav">
+                        <a class="nav-prev" ng-click="previous()"><i class="fa fa-angle-left"></i></a>
+                        <a class="nav-next" ng-click="next()"><i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div> <!-- END Row 1 -->
+            <!-- BEGIN Panel -->
+            <div class="panel panel-default">
+                <div class="panel-heading panel-heading-form">
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-9">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group form-mrgn-bttm">
+                                        <input type="text" ng-model="search_text" class="form-control" placeholder="{{'Enter patient code'|translate}}"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group form-mrgn-bttm">
+                                        <select id="select_department" ng-model="department" class="form-control" style="width: 100%" data-placeholder="{{'Select Department' | translate}}">
+                                            <option></option>
+                                            <option ng-bind="'All' | translate" value="-1"></option>
+                                            <option ng-repeat="item in departmentList" value="{{item.department_code}}" ng-selected="item.department_code==department_code">{{item.department_name}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <button ng-click="search()" class="btn btn-block btn-success" id="btn_search_patient">
+                                            <translate>Search Now</translate>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <h5 class="panel-title mb5">
+                        <translate>Health Survey Waiting Answer</translate>
+                    </h5>
+                    <!-- BEGIN Table -->
+                    <div class="table-responsive">
+                        <table id="table-survey" datatable dt-options="dtOption" dt-columns="dtColumns" dt-column-defs="dtColumnDef" dt-instance="dtInstance" class="table table-bordered nomargin table-kk">
+                            <thead>
+                            <tr>
+                                <th class="text-center" style="width: 1px">
+                                    <translate></translate>
+                                </th>
+                                <th>
+                                    <translate>Department</translate>
+                                </th>
+                                <th>
+                                    <translate>Visit date</translate>
+                                </th>
+                                <th class="text-center">
+                                    <translate>Time</translate>
+                                </th>
+                                <th>
+                                    <translate>Patient code</translate>
+                                </th>
+                                <th>
+                                    <translate>Patient name</translate>
+                                </th>
+                                <th>
+                                    <translate>Survey Title</translate>
+                                </th>
+                                <th>&nbsp;</th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div><!-- BEGIN Table -->
+                </div>
+            </div> <!-- BEGIN Panel -->
+            <!-- content goes here... -->
+        </div><!-- contentpanel -->
+    </div><!-- mainpanel -->
+</section>
+<style>
+    #table-survey_wrapper table {
+        width: 100% !important;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        // Formating return data for datatable
+        function formatRepo(repo) {
+            if (repo.loading) return repo.name;
+            var res = '<span>' + repo.patient_code + '</span>';
+            return res;
+        }
+
+        function formatRepoSelection(repo) {
+            if (repo.id === '') { // adjust for custom placeholder values
+                return 'Select patient';
+            }
+            return repo.patient_code || repo.name;
+        }
+
+        //$('#survey-status').val(2).trigger("change.select2");
+
+        $('#select_department').select2({
+            minimumResultsForSearch: Infinity
+        });
+
+        $("#select_patient").select2({
+            width: '100%',
+            ajax: {
+                url: "/api/getListPatient",
+                dataType: 'json',
+                delay: 250,
+                data: function (params) {
+                    return {
+                        q: params.term, // search term
+                        page: params.page
+                    };
+                },
+                processResults: function (data, params) {
+                    // parse the results into the format expected by Select2
+                    // since we are using custom formatting functions we do not need to
+                    // alter the remote JSON data, except to indicate that infinite
+                    // scrolling can be used
+                    params.page = params.page || 1;
+
+                    return {
+                        //results: data.items,
+                        results: data.data,
+                        pagination: {
+                            //more: (params.page * 30) < data.total_count
+                        }
+                    };
+                },
+                cache: true
+            },
+            escapeMarkup: function (markup) {
+                return markup;
+            }, // let our custom formatter work
+            minimumInputLength: 1,
+            templateResult: formatRepo, // omitted for brevity, see the source of this page
+            templateSelection: formatRepoSelection, // omitted for brevity, see the source of this page
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).keypress(function(e) {
+        if(e.which == 13) {
+            $( "#btn_search_patient" ).trigger( "click" );
+        }
+    });
+</script>

@@ -1,0 +1,3041 @@
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "DrgsModelProto";
+
+//Get Order List
+message DrgsDRG5100P01OrderListItemInfo{
+	optional string bunho = 1;
+	optional string drg_bunho = 2;
+	optional string naewon_date = 3;
+	optional string group_ser = 4;
+	optional string jubsu_date = 5;
+	optional string order_date = 6;
+	optional string jaeryo_code = 7;
+	optional string nalsu = 8;
+	optional string divide = 9;
+	optional string ord_suryang = 10;
+	optional string order_suryang = 11;
+	optional string order_danui = 12;
+	optional string subul_danui = 13;
+	optional string group_yn = 14;
+	optional string jaeryo_gubun = 15;
+	optional string bogyong_code = 16;
+	optional string bogyong_name = 17;
+	optional string caution_name = 18;
+	optional string caution_code = 19;
+	optional string mix_yn = 20;
+	optional string atc_yn = 21;
+	optional string dv = 22;
+	optional string dv_time = 23;
+	optional string dc_yn = 24;
+	optional string bannab_yn = 25;
+	optional string source_fkocs1003 = 26;
+	optional string fkocs1003 = 27;
+	optional string fkout1001 = 28;
+	optional string sunab_date = 29;
+	optional string pattern = 30;
+	optional string jaeryo_name = 31;
+	optional string generic_name = 32;
+	optional string sunab_nalsu = 33;
+	optional string wonyoi_yn = 34;
+	optional string remark = 35;
+	optional string act_date = 36;
+	optional string mayak = 37;
+	optional string tpn_joje_gubun = 38;
+	optional string ui_jusa_yn = 39;
+	optional string subul_suryang = 40;
+	optional string serial_v = 41;
+	optional string powder_yn = 42;
+	optional string gyunbon_yn = 43;
+	optional string print_yn = 44;
+	optional string old_gyunbon_yn = 45;
+	optional string order_remark = 46;
+	optional string drg_remark = 47;
+	optional string hubak_change_yn = 48;
+	optional string pharmacy = 49;
+	optional string drg_pack_yn = 50;
+	optional string mix_group = 51;
+	optional string hope_date = 52;
+	optional string order_gubun = 53;
+	optional string bunryu1 = 54;
+}
+
+//Anti Data
+message DrgsDRG5100P01AntiDataListItemInfo{
+	optional string fkocs = 1;
+	optional string in_out_gubun = 2;
+	optional string order_date = 3;
+	optional string bunho = 4;
+	optional string gwa = 5;
+	optional string doctor = 6;
+	optional string ho_dong = 7;
+	optional string ipwon_date = 8;
+	optional string jubsu_date = 9;
+	optional string v1 = 10;
+	optional string v2 = 11;
+	optional string v3 = 12;
+	optional string v4 = 13;
+	optional string v5 = 14;
+	optional string v6 = 15;
+	optional string v7 = 16;
+	optional string v8 = 17;
+	optional string v9 = 18;
+	optional string check01 = 19;
+	optional string check02 = 20;
+	optional string check03 = 21;
+	optional string check04 = 22;
+	optional string check05 = 23;
+	optional string check06 = 24;
+	optional string check07 = 25;
+	optional string check08 = 26;
+	optional string check09 = 27;
+	optional string check10 = 28;
+	optional string check11 = 29;
+	optional string check12 = 30;
+	optional string check13 = 31;
+	optional string check14 = 32;
+	optional string check15 = 33;
+	optional string check16 = 34;
+	optional string check17 = 35;
+	optional string check18 = 36;
+	optional string check19 = 37;
+	optional string check20 = 38;
+	optional string check21 = 39;
+	optional string check22 = 40;
+	optional string check23 = 41;
+	optional string check24 = 42;
+	optional string check25 = 43;
+	optional string check26 = 44;
+	optional string check27 = 45;
+	optional string check28 = 46;
+	optional string check29 = 47;
+	optional string check30 = 48;
+	optional string check31 = 49;
+	optional string check32 = 50;
+	optional string check33 = 51;
+	optional string check34 = 52;
+	optional string check35 = 53;
+	optional string check36 = 54;
+	optional string check37 = 55;
+	optional string check38 = 56;
+	optional string check39 = 57;
+	optional string check40 = 58;
+	optional string check41 = 59;
+	optional string check42 = 60;
+	optional string check43 = 61;
+	optional string check44 = 62;
+	optional string check45 = 63;
+	optional string check46 = 64;
+	optional string check47 = 65;
+	optional string check48 = 66;
+	optional string check49 = 67;
+	optional string check50 = 68;
+	optional string suname = 69;
+	optional string suname2 = 70;
+}
+
+//layAutoJubsu
+message DrgsDRG5100P01AutoJubsuListItemInfo{
+	optional string bunho = 1;
+	optional string order_date = 2;
+	optional string drg_bunho = 3;
+	optional string suname = 4;
+	optional string boryu_yn = 5;
+	optional string order_remark = 6;
+	optional string drg_remark = 7;
+}
+
+//Label List
+message DrgsDRG5100P01LabelListItemInfo{
+	optional string order_date = 1;
+	optional string danui = 2;
+	optional string danui1 = 3;
+	optional string drg_bunho = 4;
+	optional string bunho = 5;
+	optional string dv = 6;
+	optional string drg_grp = 7;
+	optional string name = 8;
+	optional string gwa = 9;
+	optional string bogyong_code = 10;
+	optional string bogyong_name = 11;
+	optional string nalsu = 12;
+	optional string bunryu1 = 13;
+	optional string caution_nm = 14;
+	optional string jaeryo_name = 15;
+	optional string gyunbon_yn = 16;
+	optional string su = 17;
+	optional string rp = 18;
+	optional string hope_date = 19;
+	optional string donbok = 20;
+}
+
+//layNebokLabel
+message DrgsDRG5100P01NebokLabelListItemInfo{
+	optional string bunho = 1;
+	optional string gwa_name = 2;
+	optional string doctor_name = 3;
+	optional string suname = 4;
+	optional string suname2 = 5;
+	optional string age = 6;
+	optional string sex = 7;
+	optional string birth = 8;
+	optional string drg_bunho = 9;
+	optional string rp_bunho = 10;
+	optional string reser_date = 11;
+	optional string jusa_gubun = 12;
+	optional string jusa_spd_gubun = 13;
+	optional string suryang = 14;
+	optional string ord_danui = 15;
+	optional string dv_time = 16;
+	optional string dv = 17;
+	optional string bogyong_code = 18;
+	optional string subul_suryang = 19;
+	optional string subul_danui = 20;
+	optional string jaeryo_name = 21;
+	optional string nalsu_cnt = 22;
+}
+
+//Get List Paid Order
+message DrgsDRG5100P01PaidOrderListItemInfo{
+	optional string bunho = 1;
+	optional string order_date = 2;
+	optional string drg_bunho = 3;
+	optional string suname = 4;
+	optional string boryu_yn = 5;
+	optional string order_remark = 6;
+	optional string drg_remark = 7;
+}
+
+//Get List Paid Jubsu
+message DrgsDRG5100P01PaidJubsuListItemInfo{
+	optional string bunho = 1;
+	optional string order_date = 2;
+	optional string drg_bunho = 3;
+	optional string suname = 4;
+	optional string boryu_yn = 5;
+	optional string order_remark = 6;
+	optional string drg_remark = 7;
+}
+
+//Get List Order Order
+message DrgsDRG5100P01OrderOrderListItemInfo{
+	optional string drg_bunho          = 1;
+	optional string bunho              = 2;
+	optional string order_date         = 3;
+	optional string jubsu_date         = 4;
+	optional string drg_jubsu_date     = 5;
+	optional string jubsu_time         = 6;
+	optional string doctor             = 7;
+	optional string doctor_name        = 8;
+	optional string gwa                = 9;
+	optional string buseo_name         = 10;
+	optional string act_date           = 11;
+	optional string act_yn             = 12;
+	optional string sunab_date         = 13;
+	optional string chulgo_date        = 14;
+	optional string boryu_yn           = 15;
+	optional string chulgo_buseo       = 16;
+	optional string order_remark       = 17;
+	optional string drg_remark         = 18;
+	optional string wonyoi_order_yn    = 19;
+	optional string fkout1001          = 20;
+	optional string fkocs1003          = 21;
+	optional string naewon_yn          = 22;
+	optional string if_data_send_yn    = 23; 
+}
+
+//Get List Order Jubsu
+message DrgsDRG5100P01OrderJubsuListItemInfo{
+	optional string drg_bunho = 1;
+	optional string bunho = 2;
+	optional string order_date = 3;
+	optional string jubsu_date = 4;
+	optional string drg_jubsu_date = 5;
+	optional string jubsu_time = 6;
+	optional string doctor = 7;
+	optional string doctor_name = 8;
+	optional string gwa = 9;
+	optional string buseo_name = 10;
+	optional string act_date = 11;
+	optional string act_yn = 12;
+	optional string sunab_date = 13;
+	optional string chulgo_date = 14;
+	optional string boryu_yn = 15;
+	optional string chulgo_buseo = 16;
+	optional string order_remark = 17;
+	optional string drg_remark = 18;
+	optional string wonyoi_order_yn = 19;
+	optional string fkout1001 = 20;
+	optional string fkocs1003 = 21;
+	optional string naewon_yn = 22;
+}
+
+
+
+//Order Jungbo List
+message DrgsDRG5100P01OrderJungboListItemInfo{
+	optional string seq_1 = 1;
+	optional string seq_2 = 2;
+	optional string text_1 = 3;
+	optional string text_2 = 4;
+	optional string text_3 = 5;
+	optional string remark = 6;
+	optional string bar_drg_bunho = 7;
+	optional string bunho = 8;
+}
+
+//Get fkocs 
+message DrgsDRG5100P01FkocListItemInfo{
+	optional string fkoc = 1;
+}
+
+//Get Constant Info
+message DrgsDRG5100P01ConstantInfo{
+	optional string code = 1;
+	optional string code_name = 2;
+	optional string code_value = 3;
+}
+
+//Get Anti Data
+message DrgsDRG5100P01LayAntiDataListItemInfo{
+	optional string gwa_name = 1;
+	optional string doctor_name = 2;
+}
+//[START] DRG0130U00
+//grdDrg0130 QuerySQL
+message DrgsDRG0130U00GrdDrg0130ListItemInfo{
+	optional string caution_code = 1;
+	optional string caution_name = 2;
+	optional string caution_name2 = 3;
+	optional string job_type = 4;
+}
+message DRG0130U00SaveLayoutInfo
+{
+	optional string caution_code       = 1;
+	optional string caution_name       = 2;
+	optional string caution_name2      = 3;
+	optional string job_type           = 4;
+	optional string user_id            = 5;
+	optional string row_state          = 6;
+}
+//[END]DRG0130U00
+message DRG0201U00DetailServerCallInfo{
+	optional string drg_bunho = 1;
+	optional string bunho = 2;
+	optional string order_date = 3;
+	optional string jubsu_date = 4;
+	optional string drg_jubsu_date = 5;
+	optional string jubsu_time = 6;
+	optional string doctor = 7;
+	optional string doctor_name = 8;
+	optional string gwa = 9;
+	optional string buseo_name = 10;
+	optional string act_date = 11;
+	optional string act_time = 12;
+	optional string act_yn = 13;
+	optional string sunab_date = 14;
+	optional string chulgo_date = 15;
+	optional string act_user_name = 16;
+	optional string wonyoi_order_yn = 17;
+	optional string dis_gubun = 18;
+	optional string order_remark = 19;
+	optional string drg_remark = 20;
+	optional string fkout1001 = 21;
+}
+
+message DRG0201U00BarCodeInfo{
+        optional string drg_bunho = 1;
+        optional string bunho = 2;
+        optional string order_date = 3;
+        optional string jubsu_date = 4;
+        optional string drg_jubsu_date = 5;
+        optional string jubsu_time = 6;
+        optional string doctor = 7;
+        optional string doctor_name = 8;
+        optional string gwa = 9;
+        optional string buseo_name = 10;
+        optional string act_date = 11;
+        optional string act_time = 12;
+        optional string act_yn = 13;
+        optional string sunab_date = 14;
+        optional string chulgo_date = 15;
+        optional string wonyoi_order_yn = 16;
+        optional string dis_gubun = 17;
+        optional string order_remark = 18;
+        optional string drg_remark = 19;
+        optional string fkout1001 = 20;
+}
+
+
+//Get List Paid Order
+message DrgsDRG5100P01GridPaidListItemInfo {
+	optional string bunho = 1;
+	optional string order_date = 2;
+	optional string drg_bunho = 3;
+	optional string suname = 4;
+	optional string boryu_yn = 5;
+	optional string order_remark = 6;
+	optional string drg_remark = 7;
+	optional string trial_yn = 8;
+}
+
+message DrgsDRG5100P01JungboInfo 
+{
+    optional string height = 1;
+    optional string cm = 2;
+    optional string weight = 3;
+    optional string kg = 4;
+    optional string cpl_result = 5;
+    optional string comments = 6;
+    optional string cnt = 7;
+}
+
+message DrgsDRG5100P01OrderJungboInfo {
+    optional string seq_1 = 1;
+    optional string seq_2 = 2;
+    optional string text_1 = 3;
+    optional string text_2 = 4;
+    optional string text_3 = 5;
+    optional string remark = 6;
+    optional string bar_drg_bunho = 7;
+    optional string bunho = 8;
+    optional DrgsDRG5100P01JungboInfo jungbo_info = 9;
+}
+
+message DrgsDRG5100P01LayBongtuInfo
+{
+    optional string fkocs1003 = 1;
+    optional string jubsu_date_wareki = 2;
+    optional string act_date_wareki = 3;
+    optional string donbok_yn = 4;
+    optional string pattern = 5;
+}
+
+message DrgsDRG5100P01LoadChebangPrintInfo {
+    optional string o_gubun_name = 1;
+    optional string o_johap = 2;
+    optional string o_gaein = 3;
+    optional string o_gaein_no = 4;
+    optional string o_bonin_gubun = 5;
+    optional string o_bon_rate = 6;
+    optional string o_budamja_bunho1 = 7;
+    optional string o_sugubja_bunho1 = 8;
+    optional string o_budamja_bunho2 = 9;
+    optional string o_sugubja_bunho2 = 10;
+    optional string o_sunwon_gubun = 11;
+    optional string o_noin_rate_name = 12;
+    optional string o_err = 13;
+}
+
+message DrgsDRG5100P01LoadMakayJungboInfo {
+    optional string o_mayak_doctor = 1;
+    optional string o_mayak_license = 2;
+    optional string o_mayak_address1 = 3;
+    optional string o_mayak_address2 = 4;
+}
+
+message DrgsDRG5100P01DrgwonneaOWnCurListInfo{
+    optional string bunho = 1;
+    optional string drg_bunho = 2;
+    optional string naewon_date = 3;
+    optional string jubsu_date = 4;
+    optional string order_date = 5;
+    optional string serial_v = 6;
+    optional string serial_text = 7;
+    optional string gwa_name = 8;
+    optional string doctor_name = 9;
+    optional string suname = 10;
+    optional string suname2 = 11;
+    optional string birth = 12;
+    optional string sex_age = 13;
+    optional string other_gwa = 14;
+    optional string do_order = 15;
+    optional string gigam_date = 16;
+    optional string address = 17;
+  	optional string tel = 18;
+}
+
+message DrgsDRG5100P01WnSerialQryListItemInfo{
+    optional string group_ser = 1;
+    optional string jaeryo_code = 2;
+    optional string nalsu = 3;
+    optional string divide = 4;
+    optional string drg_order_suryang = 5;
+    optional string order_suryang = 6;
+    optional string drg_order_danui = 7;
+    optional string subul_danui = 8;
+    optional string group_yn = 9;
+    optional string jaeryo_gubun = 10;
+    optional string bogyong_code = 11;
+    optional string bogyong_name = 12;
+    optional string caution_name = 13;
+    optional string caution_code = 14;
+    optional string mix_yn = 15;
+    optional string atc_yn = 16;
+    optional string dv = 17;
+    optional string dv_time = 18;
+    optional string dc_yn = 19;
+    optional string bannab_yn = 20;
+    optional string source_fkocs1003 = 21;
+    optional string fkocs1003 = 22;
+    optional string sunab_date = 23;
+    optional string pattern = 24;
+    optional string jaeryo_name = 25;
+    optional string sunab_nalsu = 26;
+    optional string wonyoi_yn = 27;
+    optional string act_date = 28;
+    optional string mayak = 29;
+    optional string tpn_joje_gubun = 30;
+    optional string ui_jusa_yn = 31;
+    optional string subul_suryang = 32;
+    optional string serial_v =33;
+    optional string gwa_name = 34;
+    optional string doctor_name = 35;
+    optional string suname = 36;
+    optional string suname2 = 37;
+    optional string birth = 38;
+    optional string sex_age = 39;
+    optional string other_gwa = 40;
+    optional string do_order = 41;
+    optional string hope_date = 42;
+    optional string powder_yn = 43;
+    optional string line = 44;
+    optional string kyukyeok = 45;
+    optional string license = 46;
+    optional string mix_group = 47;
+    optional string donbok = 48;
+    optional string tusuk = 49;
+    optional string caution_nm = 50;
+    optional string order_sort = 51;
+    optional string text_color = 52;
+    optional string changgo = 53;
+    optional string hubal_change_yn = 54;
+    optional string hubal_all_yn = 55;
+    required string o_serial_text = 56;
+}
+//[START] DRG9001R02
+message DRG9001R02Lay9001Info{
+	optional string holi_day                  = 1;
+	optional string drg_cnt                   = 2;
+	optional string drg_group_cnt             = 3;
+	optional string drg_hangmog_cnt           = 4;
+	optional string inj_cnt                   = 5;
+	optional string inj_group_cnt             = 6;
+	optional string inj_hangmog_cnt           = 7;
+	optional string drg_inj_cnt               = 8;
+	optional string drg_inj_group_cnt         = 9;
+	optional string drg_inj_hangmog_cnt       = 10;
+}
+//[END] DRG9001R02
+
+//[START] DRG0201U00---
+message DRG0201U00GrdOrderListInfo
+{
+	optional string bunho                   = 1;
+	optional string drg_bunho               = 2;
+	optional string naewon_date             = 3;
+	optional string group_ser               = 4;
+	optional string jubsu_date              = 5;
+	optional string order_date              = 6;
+	optional string jaeryo_code             = 7;
+	optional string nalsu                   = 8;
+	optional string divide                  = 9;
+	optional string ord_suryang             = 10;
+	optional string order_suryang           = 11;
+	optional string order_danui             = 12;
+	optional string subul_danui             = 13;
+	optional string group_yn                = 14;
+	optional string jaeryo_gubun            = 15;
+	optional string bogyong_code            = 16;
+	optional string bogyong_name            = 17;
+	optional string caution_name            = 18;
+	optional string caution_code            = 19;
+	optional string mix_yn                  = 20;
+	optional string atc_yn                  = 21;
+	optional string remark                  = 22;
+	optional string dv                      = 23;
+	optional string dv_time                 = 24;
+	optional string dc_yn                   = 25;
+	optional string bannab_yn               = 26;
+	optional string source_fkocs1003        = 27;
+	optional string fkocs1003               = 28;
+	optional string fkout1001               = 29;
+	optional string sunab_date              = 30;
+	optional string pattern                 = 31;
+	optional string jaeryo_name             = 32;
+	optional string sunab_nalsu             = 33;
+	optional string wonyoi_yn               = 34;
+	optional string ocs_remark              = 35;
+	optional string act_date                = 36;
+	optional string mayak                   = 37;
+	optional string tpn_joje_gubun          = 38;
+	optional string ui_jusa_yn              = 39;
+	optional string subul_suryang           = 40;
+	optional string serial_v                = 41;        
+	optional string order_remark            = 42;
+	optional string drg_remark              = 43;
+	optional string hubak_change_yn         = 44;
+	optional string pharmacy                = 45;
+	optional string drg_pack_yn             = 46;
+	optional string powder_yn               = 47;
+}
+message DRG0201U00GrdPaidInfo
+{
+	optional string drg_bunho               = 1;
+	optional string bunho                   = 2;
+	optional string order_date              = 3;
+	optional string joje_yn                 = 4;
+	optional string suname                  = 5;
+	optional string order_remark            = 6;
+	optional string drg_remark              = 7;
+	optional string trial_yn                = 8;
+}
+message DRG0201U00GrdOrderInfo
+{
+	optional string drg_bunho              = 1;
+	optional string bunho                  = 2;
+	optional string order_date             = 3;
+	optional string jubsu_date             = 4;
+	optional string drg_jubsu_date         = 5;
+	optional string jubsu_time             = 6;
+	optional string doctor                 = 7;
+	optional string doctor_name            = 8;
+	optional string gwa                    = 9;
+	optional string buseo_name             = 10;
+	optional string act_date               = 11;
+	optional string act_time               = 12;
+	optional string act_yn                 = 13;
+	optional string sunab_date             = 14;
+	optional string chulgo_date            = 15;
+	optional string act_user_name          = 16;
+	optional string wonyoi_order_yn        = 17;
+	optional string dis_gubun              = 18;
+	optional string order_remark           = 19;
+	optional string drg_remark             = 20;
+	optional string fkout1001              = 21;
+	optional string if_data_send_yn        = 22;
+}
+//[END] DRG0201U00---
+
+//[START]DRG0140U00
+// Request info
+message DRG0140U00SaveLayoutInfo
+{
+	optional string code           = 1;
+	optional string code1          = 2;
+	optional string code_name      = 3;
+	optional string code_name1     = 4;
+	optional string row_state      = 5;
+	optional string caller_id      = 6;
+}
+message DRG0140U00GrdDetailInfo
+{
+	optional string code = 1;
+	optional string code1 = 2;
+	optional string code_name1 = 3;
+}
+message DRG0140U00GrdColumnChangedInfo
+{
+	optional string code = 1;
+	optional string code1 = 2;
+}
+//[END]DRG0140U00
+
+// ----- [START] DRG0102U01 --------
+message DRG0102U01GrdMasterItemInfo{
+	optional string code_type = 1;
+	optional string code_type_name = 2;
+	optional string admin_gubun = 3;
+	optional string remark = 4;
+	optional string data_row_state = 5;
+}
+
+message DRG0102U01GrdDetailItemInfo{
+	optional string code_type = 1;
+	optional string code = 2;
+	optional string code2 = 3;
+	optional string code_name = 4;
+	optional string code_value = 5;
+	optional string remark = 6;
+	optional string data_row_state = 7;
+}
+// ----- [END] DRG0102U01 --------
+
+//[START] DRG9040U01
+message DRG9040U01GrdJUSAOrderListInfo{
+    optional string order_date = 1;
+    optional string group_ser = 2;
+    optional string jaeryo_code = 3;
+    optional string jaeryo_name = 4;
+    optional string ord_suryang = 5;
+    optional string dv_time = 6;
+    optional string dv = 7;
+    optional string nalsu = 8;
+    optional string order_danui = 9;
+    optional string danui_name = 10;
+    optional string bogyong_code = 11;
+    optional string bogyong_name = 12;
+    optional string powder_yn = 13;
+    optional string remark = 14;
+    optional string dv_1 = 15;
+    optional string dv_2 = 16;
+    optional string dv_3 = 17;
+    optional string dv_4 = 18;
+    optional string dv_5 = 19;
+    optional string hubal_change_yn = 20;
+    optional string pharmacy = 21;
+    optional string drg_pack_yn = 22;
+    optional string code_name = 23;
+    optional string suname = 24;
+    optional string order_remark = 25;
+    optional string drg_remark = 26;
+    optional string drg_bunho = 27;
+    optional string jubsu_date = 28;
+    optional string bunho = 29;
+    optional string fkocs2003 = 30;
+    optional string data_row_state = 31;
+}
+
+message DRG9040U01GrdOrderInfo{
+    optional string jubsu_date = 1;
+    optional string drg_bunho = 2;
+    optional string bunho = 3;
+    optional string order_date = 4;
+    optional string doctor = 5;
+    optional string doctor_name = 6;
+    optional string gwa = 7;
+    optional string buseo_name = 8;
+    optional string order_remark = 9;
+    optional string drg_remark = 10;
+    optional string magam_gubun = 11;
+    optional string bunryu1 = 12;
+    optional string data_row_state = 13;
+}		
+
+message DRG9040U01GrdOrderListInfo{
+    optional string order_date = 1;
+    optional string group_ser = 2;
+    optional string jaeryo_code = 3;
+    optional string jaeryo_name = 4;
+    optional string ord_suryang = 5;
+    optional string dv_time = 6;
+    optional string dv = 7;
+    optional string nalsu = 8;
+    optional string order_danui = 9;
+    optional string danui_name = 10;
+    optional string bogyong_code = 11;
+    optional string bogyong_name = 12;
+    optional string powder_yn = 13;
+    optional string remark = 14;
+    optional string dv_1 = 15;
+    optional string dv_2 = 16;
+    optional string dv_3 = 17;
+    optional string dv_4 = 18;
+    optional string dv_5 = 19;
+    optional string hubal_change_yn = 20;
+    optional string pharmacy = 21;
+    optional string drg_pack_yn = 22;
+    optional string jusa = 23;
+    optional string suname = 24;
+    optional string order_remark = 25;
+    optional string drg_remark = 26;
+    optional string drg_bunho = 27;
+    optional string jubsu_date = 28;
+    optional string bunho = 29;
+    optional string fkocs2003 = 30;
+    optional string data_row_state = 31;
+}
+
+message DRG9040U01GrdOrderListOutInfo{
+    optional string bunho = 1;
+    optional string drg_bunho = 2;
+    optional string naewon_date = 3;
+    optional string group_ser = 4;
+    optional string jubsu_date = 5;
+    optional string order_date = 6;
+    optional string jaeryo_code = 7;
+    optional string nalsu = 8;
+    optional string divide = 9;
+    optional string ord_suryang = 10;
+    optional string order_suryang = 11;
+    optional string order_danui = 12;
+    optional string subul_danui = 13;
+    optional string group_yn = 14;
+    optional string jaeryo_gubun = 15;
+    optional string bogyong_code = 16;
+    optional string bogyong_name = 17;
+    optional string caution_name = 18;
+    optional string caution_code = 19;
+    optional string mix_yn = 20;
+    optional string atc_yn = 21;
+    optional string dv = 22;
+    optional string dv_time = 23;
+    optional string dc_yn = 24;
+    optional string bannab_yn = 25;
+    optional string source_fkocs1003 = 26;
+    optional string fkocs1003 = 27;
+    optional string fkout1001 = 28;
+    optional string sunab_date = 29;
+    optional string pattern = 30;
+    optional string jaeryo_name = 31;
+    optional string sunab_nalsu = 32;
+    optional string wonyoi_yn = 33;
+    optional string remark = 34;
+    optional string act_date = 35;
+    optional string mayak = 36;
+    optional string tpn_joje_gubun = 37;
+    optional string ui_jusa_yn = 38;
+    optional string subul_suryang = 39;
+    optional string serial_v = 40;
+    optional string powder_yn = 41;
+    optional string gyunbon_yn = 42;
+    optional string print_yn = 43;
+    optional string order_remark = 44;
+    optional string drg_remark = 45;
+    optional string hubak_change_yn = 46;
+    optional string pharmacy = 47;
+    optional string drg_pack_yn = 48;
+    optional string data_row_state = 49;
+}
+
+message DRG9040U01GrdOrderOutInfo{
+    optional string drg_bunho = 1;
+    optional string bunho = 2;
+    optional string order_date = 3;
+    optional string jubsu_date = 4;
+    optional string jubsu_time = 5;
+    optional string doctor = 6;
+    optional string doctor_name = 7;
+    optional string gwa = 8;
+    optional string buseo_name = 9;
+    optional string act_date = 10;
+    optional string act_yn = 11;
+    optional string sunab_date = 12;
+    optional string chulgo_date = 13;
+    optional string boryu_yn = 14;
+    optional string order_remark = 15;
+    optional string drg_remark = 16;
+    optional string wonyoi_order_yn = 17;
+    optional string data_row_state = 18;
+}
+
+message DRG9040U01LayPaCommentInfo {
+	optional string order_remark = 1;
+	optional string  drg_remark = 2;
+}
+
+message DrgsDRG5100P01PrintNameInfo{
+	optional string b_print_name = 1;
+}
+//[END] DRG9040U01
+
+message DRG0201U00InventoryInfo
+{
+    optional string jaeryo_code = 1;
+    optional string ord_suryang = 2;
+    optional string dv_time = 3;
+    optional string dv = 4;
+    optional string nalsu = 5;
+    optional string fkocs1003 = 6;
+}
+
+// Begin MIH
+
+message DRG3041P01grdChulgoListInfo{
+	optional string bunho 		     = 1;
+	optional string jubsu_date 	     = 2;
+	optional string drg_bunho 	     = 3;
+	optional string serial_v 	     = 4;
+	optional string chulgo_date      = 5;
+	optional string chulgo_time      = 6;
+	optional string chulgo_id        = 7;
+	optional string ipgo_date        = 8;
+	optional string ipgo_time        = 9;
+	optional string ipgo_id 	     = 10;
+	optional string acting_date      = 11;
+	optional string acting_time      = 12;
+	optional string acting_id	     = 13;
+	optional string ho_dong          = 14;
+	optional string ho_code          = 15;
+	optional string chulgo_id_name 	 = 16;
+	optional string ipgo_id_name 	 = 17;
+	optional string acting_id_name	 = 18;
+	optional string suname 			 = 19;
+	optional string chulgo_all_yn 	 = 20;
+	optional string magam_gubun 	 = 21;
+	optional string seq 			 = 22;
+	optional string chulgo_date_time = 23;
+}
+
+message DRG3041P01grdChulgoJUSAOrderInfo{
+        optional string order_date 	      = 1;
+        optional string mix_group 	      = 2;
+        optional string jaeryo_code       = 3;
+        optional string jaeryo_name       = 4;
+        optional string ord_suryang       = 5;
+        optional string dv_time 		  = 6;
+        optional string dv 				  = 7;
+        optional string nalsu 			  = 8;
+        optional string order_danui 	  = 9;
+        optional string danui_name 		  = 10;
+        optional string bogyong_code      = 11;
+        optional string bogyong_name      = 12;
+        optional string powder_yn 		  = 13;
+        optional string remark            = 14;
+        optional string dv_1              = 15;
+        optional string dv_2              = 16;
+        optional string dv_3              = 17;
+        optional string dv_4              = 18;
+        optional string dv_5              = 19;
+        optional string hubal_change_yn   = 20;
+        optional string pharmacy 		  = 21;
+        optional string drg_pack_yn 	  = 22;
+        optional string jusa_name 		  = 23;
+        optional string suname 			  = 24;
+        optional string drg_bunho 		  = 25;
+        optional string jubsu_date 		  = 26;
+        optional string bunho 			  = 27;
+        optional string ho_dong 	      = 28;
+        optional string dc_yn 		      = 29;
+        optional string fkocs2003         = 30;
+        optional string fkinp1001         = 31;
+        optional string group_ser         = 32;
+        optional string data 	          = 33;
+}
+
+message DRG3041P05SerialInfo{
+	optional string jaeryo_code       		= 1;
+    optional string nalsu                   = 2;
+    optional string divide                  = 3;
+    optional string order_suryang           = 4;
+    optional string subul_suryang           = 5;
+    optional string ord_suryang             = 6;
+    optional string order_danui             = 7;
+    optional string subul_danui             = 8;
+    optional string bunryu1                 = 9;
+    optional string bunryu2                 = 10;
+    optional string bunryu3                 = 11;
+    optional string bunryu4                 = 12;
+    optional string remark                  = 13;
+    optional string dv_time                 = 14;
+    optional string dv                      = 15;
+    optional string bunryu6                 = 16;
+    optional string mix_group               = 17;
+    optional string dv_1                    = 18;
+    optional string dv_2                    = 19;
+    optional string dv_3                    = 20;
+    optional string dv_4                    = 21;
+    optional string dv_5                    = 22;
+    optional string hubal_change_yn         = 23;
+    optional string pharmacy                = 24;
+    optional string jusa_spd_gubun          = 25;
+    optional string drg_pack_yn             = 26;
+    optional string jusa                    = 27;
+    optional string jaeryo_name             = 28;
+    optional string danui_name              = 29;
+    optional string subul_danui_name        = 30;
+    optional string jusa_name               = 31;
+    optional string rp2                     = 32;
+    optional string barcode_no              = 33;
+    optional string data_gubun              = 34;
+}
+message DRG3041P05LabelInfo{
+        optional string bunho 		          = 1;
+        optional string drg_bunho 	          = 2;
+        optional string order_date_text       = 3;
+        optional string jubsu_date            = 4;
+        optional string order_date            = 5;
+        optional string serial_v 	          = 6;
+        optional string serial_text           = 7;
+        optional string suname 		          = 8;
+        optional string suname2               = 9;
+        optional string sex_age               = 10;
+        optional string ho_code               = 11;
+        optional string ho_dong               = 12;
+        optional string bogyong_name 		  = 13;
+        optional string cnt 				  = 14;
+        repeated DRG3041P05SerialInfo Serials = 15;
+}
+
+message DRG3041P05grdIpgoJUSAOrderInfo{
+        optional string order_date	         = 1;
+        optional string mix_group 	         = 2;
+        optional string jaeryo_code          = 3;
+        optional string jaeryo_name          = 4;
+        optional string ord_suryang          = 5;
+        optional string dv_time 	         = 6;
+        optional string dv 			         = 7;
+        optional string nalsu 		         = 8;
+        optional string order_danui          = 9;
+        optional string danui_name 	         = 10;
+        optional string bogyong_code         = 11;
+        optional string bogyong_name         = 12;
+        optional string powder_yn	         = 13;
+        optional string remark               = 14;
+        optional string dv_1                 = 15;
+        optional string dv_2                 = 16;
+        optional string dv_3                 = 17;
+        optional string dv_4                 = 18;
+        optional string dv_5                 = 19;
+        optional string hubal_change_yn 	= 20;
+        optional string pharmacy 			= 21;
+        optional string drg_pack_yn 	    = 22;
+        optional string usa_name 		    = 23;
+        optional string uname 			    = 24;
+        optional string drg_bunho 		    = 25;
+        optional string jubsu_date 		    = 26;
+        optional string bunho 			    = 27;
+        optional string ho_dong 		    = 28;
+        optional string dc_yn 			    = 29;
+        optional string fkocs2003           = 30;
+        optional string fkinp1001           = 31;
+        optional string group_ser           = 32;
+        optional string ho_code             = 33;
+        optional string doctor              = 34;
+        optional string resident            = 35;
+        optional string gwa 				= 36;
+        optional string jaeryo_gubun 		= 37;
+        optional string divide 			    = 38;
+        optional string order_suryang       = 39;
+        optional string subul_suryang       = 40;
+        optional string subul_danui         = 41;
+        optional string group_yn            = 42;
+        optional string bunryu1             = 43;
+        optional string bunryu2             = 44;
+        optional string bunryu3             = 45;
+        optional string bunryu4             = 46;
+        optional string caution_code 		= 47;
+        optional string mix_yn              = 48;
+        optional string atc_yn              = 49;
+        optional string chulgo_buseo        = 50;
+        optional string chulgo_date         = 51;
+        optional string chulgo_qty          = 52;
+        optional string chulgo_yn           = 53;
+        optional string change_qty          = 54;
+        optional string toiwon_drg_yn 	    = 55;
+        optional string emergency 		    = 56;
+        optional string drg_prn_yn	 	    = 57;
+        optional string drg_prn_time 	    = 58;
+        optional string append_yn 		    = 59;
+        optional string anti_cancer_yn 	    = 60;
+        optional string tpn_yn 		        = 61;
+        optional string self_gubun 	        = 62;
+        optional string magam_gubun         = 63;
+        optional string magam_ser 	        = 64;
+        optional string dc_confirm 	        = 65;
+        optional string bannab_yn 	        = 66;
+        optional string jundal_part         = 67;
+        optional string source_fkocs2003 	= 68;
+        optional string re_use_yn 	        = 69;
+        optional string end_type 	        = 70;
+        optional string input_gubun         = 71;
+        optional string anti_soyu_yn        = 72;
+        optional string wonyoi_order_yn     = 73;
+        optional string wonnae_sayu_code    = 74;
+        optional string wonyoi_act_yn 	    = 75;
+        optional string inv_confirm 	    = 76;
+        optional string ho_dong1 		    = 77;
+        optional string suak_jubsu_date     = 78;
+        optional string suak_ser 		    = 79;
+        optional string bunryu6 		    = 80;
+        optional string tpn_joje_gubun 	    = 81;
+        optional string jubsu_ilsi 		    = 82;
+        optional string drg_prn_date 	    = 83;
+        optional string er_magam_date 	    = 84;
+        optional string er_magam_gubun 	    = 85;
+        optional string er_magam_ser 	    = 86;
+        optional string jundal_part_run     = 87;
+        optional string iu_jusa_date 	    = 88;
+        optional string mayak_print_yn 	    = 89;
+        optional string fkdrg3011           = 90;
+        optional string out_bf_dc           = 91;
+        optional string hope_date           = 92;
+        optional string jusa_spd_gubun      = 93;
+        optional string jusa 				= 94;
+        optional string order_data 			= 95;
+}
+
+message DRG3041P05grdMixListInfo{
+        optional string bunho 		        = 1;
+        optional string jubsu_date 	        = 2;
+        optional string drg_bunho 	        = 3;
+        optional string serial_v 	        = 4;
+        optional string chulgo_date         = 5;
+        optional string chulgo_time         = 6;
+        optional string chulgo_id           = 7;
+        optional string ipgo_date           = 8;
+        optional string ipgo_time           = 9;
+        optional string ipgo_id 			= 10;
+        optional string acting_date         = 11;
+        optional string acting_time         = 12;
+        optional string acting_id           = 13;
+        optional string ho_dong             = 14;
+        optional string ho_code             = 15;
+        optional string chulgo_id_name      = 16;
+        optional string ipgo_id_name 	    = 17;
+        optional string acting_id_name 	    = 18;
+        optional string suname 	            = 19;
+        optional string mix_date            = 20;
+        optional string mix_time            = 21;
+        optional string mix_id_name         = 22;
+        optional string chulgo_all_yn 	    = 23;
+        optional string magam_gubun 	    = 24;
+        optional string order_date 		    = 25;
+        optional string seq 			    = 26;
+        optional string act_yn              = 27;
+        optional string mix_yn              = 28;
+        optional string bannab_yn           = 29;
+        optional string bunryu1 		    = 30;
+}        
+
+message DRG3041P06SerialInfo{
+	optional string jaeryo_code       		= 1;
+    optional string nalsu                   = 2;
+    optional string divide                  = 3;
+    optional string order_suryang           = 4;
+    optional string subul_suryang           = 5;
+    optional string ord_suryang             = 6;
+    optional string order_danui             = 7;
+    optional string subul_danui             = 8;
+    optional string bunryu1                 = 9;
+    optional string bunryu2                 = 10;
+    optional string bunryu3                 = 11;
+    optional string bunryu4                 = 12;
+    optional string remark                  = 13;
+    optional string dv_time                 = 14;
+    optional string dv                      = 15;
+    optional string bunryu6                 = 16;
+    optional string mix_group               = 17;
+    optional string dv_1                    = 18;
+    optional string dv_2                    = 19;
+    optional string dv_3                    = 20;
+    optional string dv_4                    = 21;
+    optional string dv_5                    = 22;
+    optional string hubal_change_yn         = 23;
+    optional string pharmacy                = 24;
+    optional string jusa_spd_gubun          = 25;
+    optional string drg_pack_yn             = 26;
+    optional string jusa                    = 27;
+    optional string jaeryo_name             = 28;
+    optional string danui_name              = 29;
+    optional string subul_danui_name        = 30;
+    optional string jusa_name               = 31;
+    optional string rp2                     = 32;
+    optional string barcode_no              = 33;
+    optional string data_gubun              = 34;
+}
+message DRG3041P06LabelInfo{
+        optional string bunho 			      = 1;
+        optional string drg_bunho 		      = 2;
+        optional string order_date_text       = 3;
+        optional string jubsu_date 		      = 4;
+        optional string order_date            = 5;
+        optional string serial_v              = 6;
+        optional string serial_text           = 7;
+        optional string suname                = 8;
+        optional string suname2               = 9;
+        optional string sex_age               = 10;
+        optional string ho_code               = 11;
+        optional string ho_dong               = 12;
+        optional string bogyong_name          = 13;
+        optional string cnt 			      = 14;
+        repeated DRG3041P06SerialInfo serials = 15;
+}
+
+message DRG3041P06grdActJUSAOrderInfo{
+        optional string order_date 	           = 1;
+        optional string mix_group 	           = 2;
+        optional string jaeryo_code            = 3;
+        optional string jaeryo_name            = 4;
+        optional string ord_suryang            = 5;
+        optional string dv_time 			   = 6;
+        optional string dv                     = 7;
+        optional string nalsu                  = 8;
+        optional string order_danui            = 9;
+        optional string danui_name             = 10;
+        optional string bogyong_code           = 11;
+        optional string bogyong_name           = 12;
+        optional string powder_yn	           = 13;
+        optional string remark 		           = 14;
+        optional string dv_1                   = 15;
+        optional string dv_2                   = 16;
+        optional string dv_3                   = 17;
+        optional string dv_4                   = 18;
+        optional string dv_5                   = 19;
+        optional string hubal_change_yn        = 20;
+        optional string pharmacy 	           = 21;
+        optional string drg_pack_yn            = 22;
+        optional string jusa_name 	           = 23;
+        optional string suname 		           = 24;
+        optional string drg_bunho 	           = 25;
+        optional string jubsu_date 	           = 26;
+        optional string bunho 		           = 27;
+        optional string ho_dong 	           = 28;
+        optional string dc_yn 		           = 29;
+        optional string fkocs2003              = 30;
+        optional string fkinp1001              = 31;
+        optional string group_ser              = 32;
+        optional string ho_code                = 33;
+        optional string doctor                 = 34;
+        optional string resident               = 35;
+        optional string gwa 		           = 36;
+        optional string jaeryo_gubun           = 37;
+        optional string divide 		           = 38;
+        optional string order_suryang          = 39;
+        optional string subul_suryang          = 40;
+        optional string subul_danui            = 41;
+        optional string group_yn               = 42;
+        optional string bunryu1                = 43;
+        optional string bunryu2                = 44;
+        optional string bunryu3                = 45;
+        optional string bunryu4                = 46;
+        optional string caution_code           = 47;
+        optional string mix_yn                 = 48;
+        optional string atc_yn                 = 49;
+        optional string chulgo_buseo           = 50;
+        optional string chulgo_date            = 51;
+        optional string chulgo_qty             = 52;
+        optional string chulgo_yn 	           = 53;
+        optional string change_qty 	           = 54;
+        optional string toiwon_drg_yn          = 55;
+        optional string emergency 	           = 56;
+        optional string drg_prn_yn	           = 57;
+        optional string drg_prn_time           = 58;
+        optional string append_yn 		       = 59;
+        optional string anti_cancer_yn 	       = 60;
+        optional string tpn_yn 			       = 61;
+        optional string self_gubun             = 62;
+        optional string magam_gubun            = 63;
+        optional string magam_ser              = 64;
+        optional string dc_confirm             = 65;
+        optional string bannab_yn              = 66;
+        optional string jundal_part            = 67;
+        optional string source_fkocs2003       = 68;
+        optional string re_use_yn 	           = 69;
+        optional string end_type 	           = 70;
+        optional string input_gubun            = 71;
+        optional string anti_soyu_yn           = 72;
+        optional string wonyoi_order_yn        = 73;
+        optional string wonnae_sayu_code 	   = 74;
+        optional string wonyoi_act_yn 		   = 75;
+        optional string inv_confirm 		   = 76;
+        optional string ho_dong1 			   = 77;
+        optional string suak_jubsu_date 	   = 78;
+        optional string suak_ser 	           = 79;
+        optional string bunryu6 	           = 80;
+        optional string tpn_joje_gubun         = 81;
+        optional string jubsu_ilsi 	           = 82;
+        optional string drg_prn_date           = 83;
+        optional string er_magam_date          = 84;
+        optional string er_magam_gubun         = 85;
+        optional string er_magam_ser 		   = 86;
+        optional string jundal_part_run 	   = 87;
+        optional string iu_jusa_date           = 88;
+        optional string mayak_print_yn 	       = 89;
+        optional string fkdrg3011              = 90;
+        optional string out_bf_dc              = 91;
+        optional string hope_date              = 92;
+        optional string jusa_spd_gubun         = 93;
+        optional string jusa 				   = 94;
+        optional string order_data 			   = 95;
+}
+
+message DRG3041P06grdActListInfo{
+        optional string bunho = 1;
+        optional string jubsu_date = 2;
+        optional string drg_bunho = 3;
+        optional string serial_v = 4;
+        optional string chulgo_date = 5;
+        optional string chulgo_time = 6;
+        optional string chulgo_id = 7;
+        optional string ipgo_date = 8;
+        optional string ipgo_time = 9;
+        optional string ipgo_id = 10;
+        optional string acting_date = 11;
+        optional string acting_time = 12;
+        optional string acting_id = 13;
+        optional string ho_dong = 14;
+        optional string ho_code = 15;
+        optional string chulgo_id_name = 16;
+        optional string ipgo_id_name = 17;
+        optional string acting_id_name = 18;
+        optional string suname = 19;
+        optional string mix_date = 20;
+        optional string mix_time = 21;
+        optional string mix_id_name = 22;
+        optional string chulgo_all_yn = 23;
+        optional string magam_gubun = 24;
+        optional string order_date = 25;
+        optional string seq = 26;
+        optional string act_yn = 27;
+        optional string bannab_yn = 28;
+        optional string bunryu1 = 29;
+}
+
+message DRG9001R03lay9001RInfo{
+        optional string holi_day = 1;
+        optional string drg_cnt = 2;
+        optional string drg_group_cnt = 3;
+        optional string drg_hangmog_cnt = 4;
+        optional string inj_cnt = 5;
+        optional string inj_group_cnt = 6;
+        optional string inj_hangmog_cnt = 7;
+        optional string drg_inj_cnt = 8;
+        optional string drg_inj_group_cnt = 9;
+        optional string drg_inj_hangmog_cnt = 10;
+}
+
+message DRG9001R04lay9001RInfo{
+        optional string holi_day = 1;
+        optional string drg_cnt = 2;
+        optional string drg_group_cnt = 3;
+        optional string drg_hangmog_cnt = 4;
+        optional string inj_cnt = 5;
+        optional string inj_group_cnt = 6;
+        optional string inj_hangmog_cnt = 7;
+        optional string drg_inj_cnt = 8;
+        optional string drg_inj_group_cnt = 9;
+        optional string drg_inj_hangmog_cnt = 10;
+}
+
+message DRG3010Q12grdDrgHistoryInfo{
+    optional string magam_gubun = 1;
+    optional string order_date = 2;
+    optional string group_ser = 3;
+    optional string hangmog_name = 4;
+    optional string suryang = 5;
+    optional string nalsu = 6;
+    optional string danui_name = 7;
+    optional string bogyong_name = 8;
+    optional string bunho = 9;
+    optional string doctor = 10;
+    optional string doctor_name = 11;
+    optional string suname = 12;
+    optional string gwa = 13;
+    optional string yyyymm = 14;
+    optional string donbok_yn = 15;
+    optional string in_out_gubun = 16;
+    optional string mix_group = 17;
+    optional string ho_code = 18;
+    optional string dv_time = 19;
+    optional string dv = 20;
+    optional string antibiotic_yn = 21;
+    optional string cont_key = 22;
+    optional string num01 = 23;
+    optional string num02 = 24;
+    optional string num03 = 25;
+    optional string num04 = 26;
+    optional string num05 = 27;
+    optional string num06 = 28;
+    optional string num07 = 29;
+    optional string num08 = 30;
+    optional string num09 = 31;
+    optional string num10 = 32;
+    optional string num11 = 33;
+    optional string num12 = 34;
+    optional string num13 = 35;
+    optional string num14 = 36;
+    optional string num15 = 37;
+    optional string num16 = 38;
+    optional string num17 = 39;
+    optional string num18 = 40;
+    optional string num19 = 41;
+    optional string num20 = 42;
+    optional string num21 = 43;
+    optional string num22 = 44;
+    optional string num23 = 45;
+    optional string num24 = 46;
+    optional string num25 = 47;
+    optional string num26 = 48;
+    optional string num27 = 49;
+    optional string num28 = 50;
+    optional string num29 = 51;
+    optional string num30 = 52;
+    optional string num31 = 53;
+}
+
+message DRG3010Q12grdPalistInfo{
+    optional string ho_dong1 = 1;
+    optional string ho_code1 = 2;
+    optional string bed_no = 3;
+    optional string bunho = 4;
+    optional string suname = 5;
+    optional string pkinp1001 = 6;
+    optional string age_sex = 7;
+    optional string ipwon_date = 8;
+    optional string doctor_name = 9;
+    optional string ho_sort = 10;
+}
+
+message DRG3010Q12AntibioticListgrdAntibioticListInfo{
+    optional string hangmog_code 	= 1;
+    optional string hangmog_name 	= 2;
+    optional string order_gubun 	= 3;
+    optional string yak_kijun_code 	= 4;
+    optional string small_code 		= 5;
+}
+
+message DRG3010P99grdDcOrderInfo { 
+       optional string order_date 		= 1;
+       optional string group_ser 		= 2;
+       optional string jaeryo_code 		= 3;
+       optional string jaeryo_name 		= 4;
+       optional string ord_suryang 		= 5;
+       optional string dv_time 			= 6;
+       optional string dv 				= 7;
+       optional string nalsu 			= 8;
+       optional string order_danui 		= 9;
+       optional string danui_name 		= 10;
+       optional string bogyong_code 	= 11;
+       optional string bogyong_name 	= 12;
+       optional string powder_yn 		= 13;
+       optional string remark 			= 14;
+       optional string dv_1 			= 15;
+       optional string dv_2 			= 16;
+       optional string dv_3 			= 17;
+       optional string dv_4 			= 18;
+       optional string dv_5 			= 19;
+       optional string hubal_change_yn 	= 20;
+       optional string pharmacy 		= 21;
+       optional string drg_pack_yn 		= 22;
+       optional string jusa 			= 23;
+       optional string suname 			= 24;
+       optional string drg_bunho 		= 25;
+       optional string jubsu_date 		= 26;
+       optional string bunho 			= 27;
+       optional string bannab_yn 		= 28;
+       optional string source_fkocs2003 = 29;
+       optional string fkocs2003 		= 30;
+       optional string hope_date 		= 31;
+       optional string dc_yn 			= 32;
+       optional string order_gubun 		= 33;
+       optional string mix_group 		= 34;
+       optional string brought_drg_yn 	= 35;
+       optional string emergency 		= 36;
+}
+
+message DRG3010P99grdJusaDcOrderInfo { 
+       optional string order_date 		= 1;
+       optional string group_ser 		= 2;
+       optional string jaeryo_code 		= 3;
+       optional string jaeryo_name 		= 4;
+       optional string ord_suryang 		= 5;
+       optional string dv_time 			= 6;
+       optional string dv 				= 7;
+       optional string nalsu 			= 8;
+       optional string order_danui 		= 9;
+       optional string danui_name 		= 10;
+       optional string bogyong_code 	= 11;
+       optional string bogyong_name 	= 12;
+       optional string powder_yn 		= 13;
+       optional string remark 			= 14;
+       optional string dv_1 			= 15;
+       optional string dv_2 			= 16;
+       optional string dv_3 			= 17;
+       optional string dv_4 			= 18;
+       optional string dv_5 			= 19;
+       optional string hubal_change_yn 	= 20;
+       optional string pharmacy 		= 21;
+       optional string drg_pack_yn 		= 22;
+       optional string jusa_name 		= 23;
+       optional string suname 			= 24;
+       optional string drg_bunho 		= 25;
+       optional string jubsu_date 		= 26;
+       optional string bunho 			= 27;
+       optional string bannab_yn 		= 28;
+       optional string source_fkocs2003 = 29;
+       optional string fkocs2003 		= 30;
+       optional string hope_date 		= 31;
+       optional string dc_yn 			= 32;
+       optional string order_gubun 		= 33;
+       optional string mix_group 		= 34;
+       optional string brought_drg_yn 	= 35;
+       optional string emergency 		= 36;
+}
+
+message DRG3010P99grdListInfo { 
+       optional string jubsu_date 		= 1;
+       optional string drg_prn_time 	= 2;
+       optional string drg_bunho 		= 3;
+       optional string bunho 			= 4;
+       optional string suname 			= 5;
+       optional string sex 				= 6;
+       optional string age 				= 7;
+       optional string resident 		= 8;
+       optional string doctor_name 		= 9;
+       optional string ho_dong 			= 10;
+       optional string ho_dong_name 	= 11;
+       optional string ho_code 			= 12;
+       optional string pkinp1001 		= 13;
+       optional string toiwon_yn 		= 14;
+       optional string gwa 				= 15;
+       optional string order_date 		= 16;
+       optional string hope_date 		= 17;
+       optional string magam_gubun 		= 18;
+       optional string jusa_yn 			= 19;
+       optional string chulgo_date 		= 20;
+}
+
+message DRG3010P99grdMagamJusaOrderInfo { 
+       optional string order_date 		= 1;
+       optional string group_ser 		= 2;
+       optional string jaeryo_code 		= 3;
+       optional string jaeryo_name 		= 4;
+       optional string ord_suryang 		= 5;
+       optional string dv_time 			= 6;
+       optional string dv 				= 7;
+       optional string nalsu 			= 8;
+       optional string order_danui 		= 9;
+       optional string danui_name 		= 10;
+       optional string bogyong_code 	= 11;
+       optional string bogyong_name 	= 12;
+       optional string powder_yn 		= 13;
+       optional string remark 			= 14;
+       optional string dv_1 			= 15;
+       optional string dv_2 			= 16;
+       optional string dv_3 			= 17;
+       optional string dv_4 			= 18;
+       optional string dv_5 			= 19;
+       optional string hubal_change_yn 	= 20;
+       optional string pharmacy 		= 21;
+       optional string drg_pack_yn 		= 22;
+       optional string jusa_name 		= 23;
+       optional string suname 			= 24;
+       optional string drg_bunho 		= 25;
+       optional string jubsu_date 		= 26;
+       optional string bunho 			= 27;
+       optional string bannab_yn 		= 28;
+       optional string source_fkocs2003 = 29;
+       optional string fkocs2003 		= 30;
+       optional string hope_date 		= 31;
+       optional string dc_yn 			= 32;
+       optional string order_gubun 		= 33;
+       optional string mix_group 		= 34;
+       optional string brought_drg_yn 	= 35;
+       optional string emergency 		= 36;
+}
+
+message DRG3010P99grdMagamOrderInfo { 
+       optional string order_date 		= 1;
+       optional string group_ser 		= 2;
+       optional string jaeryo_code 		= 3;
+       optional string jaeryo_name 		= 4;
+       optional string ord_suryang 		= 5;
+       optional string dv_time 			= 6;
+       optional string dv 				= 7;
+       optional string nalsu 			= 8;
+       optional string order_danui 		= 9;
+       optional string danui_name 		= 10;
+       optional string bogyong_code 	= 11;
+       optional string bogyong_name 	= 12;
+       optional string powder_yn 		= 13;
+       optional string remark 			= 14;
+       optional string dv_1 			= 15;
+       optional string dv_2 			= 16;
+       optional string dv_3 			= 17;
+       optional string dv_4 			= 18;
+       optional string dv_5 			= 19;
+       optional string hubal_change_yn 	= 20;
+       optional string pharmacy 		= 21;
+       optional string drg_pack_yn 		= 22;
+       optional string jusa 			= 23;
+       optional string suname 			= 24;
+       optional string drg_bunho 		= 25;
+       optional string jubsu_date 		= 26;
+       optional string bunho 			= 27;
+       optional string bannab_yn 		= 28;
+       optional string source_fkocs2003 = 29;
+       optional string fkocs2003 		= 30;
+       optional string hope_date 		= 31;
+       optional string dc_yn 			= 32;
+       optional string order_gubun 		= 33;
+       optional string mix_group 		= 34;
+       optional string re_use_yn 		= 35;
+       optional string brought_drg_yn 	= 36;
+       optional string emergency 		= 37;
+}
+
+message DRG3010P99grdMiMagamJusaOrderInfo { 
+       optional string order_date 		= 1;
+       optional string mix_group 		= 2;
+       optional string jaeryo_code 		= 3;
+       optional string jaeryo_name 		= 4;
+       optional string ord_suryang 		= 5;
+       optional string dv_time 			= 6;
+       optional string dv 				= 7;
+       optional string nalsu 			= 8;
+       optional string order_danui 		= 9;
+       optional string danui_name 		= 10;
+       optional string bogyong_code 	= 11;
+       optional string bogyong_name 	= 12;
+       optional string powder_yn 		= 13;
+       optional string remark 			= 14;
+       optional string dv_1 			= 15;
+       optional string dv_2 			= 16;
+       optional string dv_3 			= 17;
+       optional string dv_4 			= 18;
+       optional string dv_5 			= 19;
+       optional string hubal_change_yn 	= 20;
+       optional string pharmacy 		= 21;
+       optional string drg_pack_yn 		= 22;
+       optional string jusa_name 		= 23;
+       optional string suname 			= 24;
+       optional string drg_bunho 		= 25;
+       optional string fkocs2003 		= 26;
+       optional string append_yn 		= 27;
+       optional string re_use_yn 		= 28;
+       optional string hope_date 		= 29;
+       optional string hope_time 		= 30;
+       optional string group_ser 		= 31;
+       optional string dc_yn 			= 32;
+       optional string order_gubun 		= 33;
+       optional string if_input_control = 34;
+       optional string brought_drg_yn 	= 35;
+       optional string emergency 		= 36;
+}
+
+message DRG3010P99grdMiMagamOrderInfo { 
+       optional string order_date 		= 1;
+       optional string mix_group 		= 2;
+       optional string jaeryo_code 		= 3;
+       optional string jaeryo_name 		= 4;
+       optional string ord_suryang 		= 5;
+       optional string dv_time 			= 6;
+       optional string dv 				= 7;
+       optional string nalsu 			= 8;
+       optional string order_danui 		= 9;
+       optional string danui_name 		= 10;
+       optional string bogyong_code 	= 11;
+       optional string bogyong_name 	= 12;
+       optional string powder_yn 		= 13;
+       optional string remark 			= 14;
+       optional string dv_1 			= 15;
+       optional string dv_2 			= 16;
+       optional string dv_3 			= 17;
+       optional string dv_4 			= 18;
+       optional string dv_5 			= 19;
+       optional string hubal_change_yn 	= 20;
+       optional string pharmacy 		= 21;
+       optional string drg_pack_yn 		= 22;
+       optional string jusa_name 		= 23;
+       optional string suname 			= 24;
+       optional string drg_bunho 		= 25;
+       optional string fkocs2003 		= 26;
+       optional string append_yn 		= 27;
+       optional string re_use_yn 		= 28;
+       optional string hope_date 		= 29;
+       optional string hope_time 		= 30;
+       optional string group_ser 		= 31;
+       optional string dc_yn 			= 32;
+       optional string order_gubun 		= 33;
+       optional string if_input_control = 34;
+       optional string brought_drg_yn 	= 35;
+       optional string emergency 		= 36;
+}
+
+message DRG3010P99grdPaDcListInfo { 
+       optional string jubsu_date 		= 1;
+       optional string drg_bunho 		= 2;
+       optional string bunho 			= 3;
+       optional string suname 			= 4;
+       optional string sex 				= 5;
+       optional string age 				= 6;
+       optional string resident 		= 7;
+       optional string doctor_name 		= 8;
+       optional string ho_dong 			= 9;
+       optional string ho_dong_name		= 10;
+       optional string ho_code 			= 11;
+       optional string toiwon_yn 		= 12;
+       optional string gwa 				= 13;
+       optional string order_date 		= 14;
+       optional string hope_date 		= 15;
+       optional string magam_gubun 		= 16;
+       optional string jusa_yn 			= 17;
+}
+
+message DRG3010P99PaPrnInfo { 
+       optional string bunho 			= 1;
+       optional string suname 			= 2;
+       optional string sex 				= 3;
+       optional string age 				= 4;
+       optional string resident 		= 5;
+       optional string doctor_name 		= 6;
+       optional string magam_yn 		= 7;
+       optional string ho_dong 			= 8;
+       optional string ho_dong_name 	= 9;
+       optional string ho_code 			= 10;
+       optional string juninp_yn 		= 11;
+       optional string hope_date 		= 12;
+       optional string hope_time 		= 13;
+       optional string pkinp1001 		= 14;
+       optional string toiwon_yn 		= 15;
+       optional string gwa 				= 16;
+       optional string order_date 		= 17;
+       optional string emergency 		= 18;
+       optional string magam_gubun 		= 19;
+       optional string jusa_yn 			= 20;
+}
+
+message DRG3010P99grdPaInfo { 
+       optional string bunho 			= 1;
+       optional string suname 			= 2;
+       optional string sex 				= 3;
+       optional string age 				= 4;
+       optional string resident 		= 5;
+       optional string doctor_name 		= 6;
+       optional string magam_yn 		= 7;
+       optional string ho_dong 			= 8;
+       optional string ho_dong_name 	= 9;
+       optional string ho_code 			= 10;
+       optional string juninp_yn 		= 11;
+       optional string hope_date 		= 12;
+       optional string hope_time 		= 13;
+       optional string pkinp1001 		= 14;
+       optional string toiwon_yn 		= 15;
+       optional string gwa 				= 16;
+       optional string order_date 		= 17;
+       optional string emergency 		= 18;
+       optional string magam_gubun 		= 19;
+       optional string jusa_yn 			= 20;
+       optional string act_buseo 		= 21;
+}
+
+message DRG3010P99grdPrnJusaInfo { 
+       optional string order_date 		= 1;
+       optional string mix_group 		= 2;
+       optional string jaeryo_code 		= 3;
+       optional string jaeryo_name 		= 4;
+       optional string ord_suryang 		= 5;
+       optional string dv_time 			= 6;
+       optional string dv 				= 7;
+       optional string nalsu 			= 8;
+       optional string order_danui 		= 9;
+       optional string danui_name 		= 10;
+       optional string bogyong_code 	= 11;
+       optional string bogyong_name 	= 12;
+       optional string powder_yn 		= 13;
+       optional string remark 			= 14;
+       optional string dv_1 			= 15;
+       optional string dv_2 			= 16;
+       optional string dv_3 			= 17;
+       optional string dv_4 			= 18;
+       optional string dv_5 			= 19;
+       optional string hubal_change_yn  = 20;
+       optional string pharmacy 		= 21;
+       optional string drg_pack_yn 		= 22;
+       optional string jusa_name 		= 23;
+       optional string suname 			= 24;
+       optional string drg_bunho 		= 25;
+       optional string fkocs2003 		= 26;
+       optional string append_yn 		= 27;
+       optional string re_use_yn 		= 28;
+       optional string hope_date 		= 29;
+       optional string hope_time 		= 30;
+       optional string group_ser 		= 31;
+       optional string dc_yn 			= 32;
+       optional string order_gubun 		= 33;
+       optional string if_input_control = 34;
+}
+
+message DRG3010P99grdPrnInfo { 
+       optional string order_date 		= 1;
+       optional string mix_group 		= 2;
+       optional string jaeryo_code 		= 3;
+       optional string jaeryo_name 		= 4;
+       optional string ord_suryang 		= 5;
+       optional string dv_time 			= 6;
+       optional string dv 				= 7;
+       optional string nalsu 			= 8;
+       optional string order_danui 		= 9;
+       optional string danui_name 		= 10;
+       optional string bogyong_code 	= 11;
+       optional string bogyong_name 	= 12;
+       optional string powder_yn 		= 13;
+       optional string remark 			= 14;
+       optional string dv_1 			= 15;
+       optional string dv_2 			= 16;
+       optional string dv_3 			= 17;
+       optional string dv_4 			= 18;
+       optional string dv_5 			= 19;
+       optional string hubal_change_yn  = 20;
+       optional string pharmacy 		= 21;
+       optional string drg_pack_yn 		= 22;
+       optional string jusa_name 		= 23;
+       optional string suname 			= 24;
+       optional string drg_bunho 		= 25;
+       optional string fkocs2003 		= 26;
+       optional string append_yn 		= 27;
+       optional string re_use_yn 		= 28;
+       optional string hope_date 		= 29;
+       optional string hope_time 		= 30;
+       optional string group_ser 		= 31;
+       optional string dc_yn 			= 32;
+       optional string order_gubun 		= 33;
+       optional string if_input_control = 34;
+}
+
+message DRG3010P99layConstantInfo { 
+       optional string code 			= 1;
+       optional string code_name 		= 2;
+       optional string code_value 		= 3;
+}
+
+message DRG3010P99OrdPrnCurInfo { 
+       optional string bunho 			= 1;
+       optional string drg_bunho 		= 2;
+       optional string order_date_text	= 3;
+       optional string jubsu_date 		= 4;
+       optional string order_date 		= 5;
+       optional string serial_v 		= 6;
+       optional string serial_text 		= 7;
+       optional string gwa_name 		= 8;
+       optional string doctor_name 		= 9;
+       optional string suname 			= 10;
+       optional string suname2 			= 11;
+       optional string birth 			= 12;
+       optional string sex_age 			= 13;
+       optional string ho_code 			= 14;
+       optional string ho_dong 			= 15;
+       optional string magam_gubun 		= 16;
+       optional string rp_barcode 		= 17;
+}
+
+message DRG3010P99OrdPrnSerialInfo { 
+       optional string bunho 			= 1;
+       optional string drg_bunho 		= 2;
+       optional string group_ser 		= 3;
+       optional string jubsu_date 		= 4;
+       optional string order_date 		= 5;
+       optional string jaeryo_code 		= 6;
+       optional string nalsu 			= 7;
+       optional string divide 			= 8;
+       optional string ord_suryang 		= 9;
+       optional string order_suryang 	= 10;
+       optional string order_danui 		= 11;
+       optional string subul_danui 		= 12;
+       optional string bogyong_code 	= 13;
+       optional string bogyong_name 	= 14;
+       optional string caution_name 	= 15;
+       optional string mix_yn 			= 16;
+       optional string atc_yn 			= 17;
+       optional string dv 				= 18;
+       optional string dv_time 			= 19;
+       optional string dc_yn 			= 20;
+       optional string bannab_yn 		= 21;
+       optional string source_fkocs2003 = 22;
+       optional string fkocs2003 		= 23;
+       optional string sunab_date 		= 24;
+       optional string pattern 			= 25;
+       optional string jaeryo_name 		= 26;
+       optional string sunab_nalsu 		= 27;
+       optional string wonyoi_yn 		= 28;
+       optional string order_remark 	= 29;
+       optional string act_date 		= 30;
+       optional string ui_jusa_yn 		= 31;
+       optional string subul_suryang 	= 32;
+       optional string serial_v 		= 33;
+       optional string gwa_name 		= 34;
+       optional string doctor_name 		= 35;
+       optional string other_gwa 		= 36;
+       optional string hope_date 		= 37;
+       optional string powder_yn 		= 38;
+       optional string line 			= 39;
+       optional string ord_danui2 		= 40;
+       optional string bunryu1 			= 41;
+       optional string ho_dong 			= 42;
+       optional string ho_code 			= 43;
+       optional string donbok 			= 44;
+       optional string tusuk 			= 45;
+       optional string magam_gubun 		= 46;
+       optional string text_color 		= 47;
+       optional string changgo 			= 48;
+       optional string from_order_date 	= 49;
+       optional string to_order_date 	= 50;
+       optional string data_gubun 		= 51;
+       optional string hodong_ord_name 	= 52;
+       optional string max_bannab_yn 	= 53;
+}
+
+message DRG3010P99SerialvInfo { 
+       optional string bunho 			= 1;
+       optional string drg_bunho 		= 2;
+       optional string group_ser 		= 3;
+       optional string jubsu_date 		= 4;
+       optional string order_date 		= 5;
+       optional string jaeryo_code 		= 6;
+       optional string nalsu 			= 7;
+       optional string divide 			= 8;
+       optional string ord_suryang 		= 9;
+       optional string order_suryang 	= 10;
+       optional string order_danui 		= 11;
+       optional string subul_danui 		= 12;
+       optional string bogyong_code 	= 13;
+       optional string bogyong_name 	= 14;
+       optional string caution_name 	= 15;
+       optional string mix_yn 			= 16;
+       optional string atc_yn 			= 17;
+       optional string dv 				= 18;
+       optional string dv_time 			= 19;
+       optional string dc_yn 			= 20;
+       optional string bannab_yn 		= 21;
+       optional string source_fkocs2003 = 22;
+       optional string fkocs2003 		= 23;
+       optional string sunab_date 		= 24;
+       optional string pattern 			= 25;
+       optional string jaeryo_name 		= 26;
+       optional string sunab_nalsu 		= 27;
+       optional string wonyoi_yn 		= 28;
+       optional string order_remark 	= 29;
+       optional string act_date 		= 30;
+       optional string ui_jusa_yn 		= 31;
+       optional string subul_suryang 	= 32;
+       optional string serial_v 		= 33;
+       optional string gwa_name 		= 34;
+       optional string doctor_name 		= 35;
+       optional string other_gwa 		= 36;
+       optional string hope_date 		= 37;
+       optional string powder_yn 		= 38;
+       optional string line 			= 39;
+       optional string ord_danui2 		= 40;
+       optional string bunryu1 			= 41;
+       optional string ho_dong 			= 42;
+       optional string ho_code 			= 43;
+       optional string donbok 			= 44;
+       optional string tusuk 			= 45;
+       optional string magam_gubun 		= 46;
+       optional string text_color 		= 47;
+       optional string changgo 			= 48;
+       optional string from_order_date 	= 49;
+       optional string to_order_date 	= 50;
+       optional string data_gubun 		= 51;
+       optional string hodong_ord_name 	= 52;
+       optional string max_bannab_yn 	= 53;
+}
+
+message DRG3010P99OrdPrnRemarkInfo { 
+       optional string bunho 			= 1;
+       optional string drg_bunho 		= 2;
+       optional string group_ser 		= 3;
+       optional string jubsu_date 		= 4;
+       optional string order_date 		= 5;
+       optional string jaeryo_code 		= 6;
+       optional string nalsu 			= 7;
+       optional string divide 			= 8;
+       optional string ord_suryang 		= 9;
+       optional string order_suryang 	= 10;
+       optional string order_danui 		= 11;
+       optional string subul_danui 		= 12;
+       optional string bogyong_code 	= 13;
+       optional string bogyong_name 	= 14;
+       optional string caution_name 	= 15;
+       optional string mix_yn 			= 16;
+       optional string atc_yn 			= 17;
+       optional string dv 				= 18;
+       optional string dv_time 			= 19;
+       optional string dc_yn 			= 20;
+       optional string bannab_yn 		= 21;
+       optional string source_fkocs2003 = 22;
+       optional string fkocs2003 		= 23;
+       optional string sunab_date 		= 24;
+       optional string pattern 			= 25;
+       optional string jaeryo_name 		= 26;
+       optional string sunab_nalsu 		= 27;
+       optional string wonyoi_yn 		= 28;
+       optional string order_remark 	= 29;
+       optional string act_date 		= 30;
+       optional string ui_jusa_yn 		= 31;
+       optional string subul_suryang 	= 32;
+       optional string serial_v 		= 33;
+       optional string gwa_name 		= 34;
+       optional string doctor_name 		= 35;
+       optional string other_gwa 		= 36;
+       optional string hope_date 		= 37;
+       optional string powder_yn 		= 38;
+       optional string line 			= 39;
+       optional string ord_danui2 		= 40;
+       optional string bunryu1 			= 41;
+       optional string ho_code 			= 42;
+       optional string ho_dong 			= 43;
+       optional string donbok 			= 44;
+       optional string tusuk 			= 45;
+       optional string magam_gubun 		= 46;
+       optional string text_color 		= 47;
+       optional string changgo 			= 48;
+       optional string from_order_date 	= 49;
+       optional string to_order_date 	= 50;
+       optional string data_gubun 		= 51;
+       optional string hodong_ord_name 	= 52;
+       optional string max_bannab_yn 	= 53;
+}
+
+message DRG3010P99layOrderJungboInfo { 
+       optional string seq_1 			= 1;
+       optional string seq_2 			= 2;
+       optional string text_1 			= 3;
+       optional string text_2 			= 4;
+       optional string text_3 			= 5;
+       optional string remark 			= 6;
+       optional string bar_drg_bunho 	= 7;
+       optional string bunho 			= 8;
+}
+
+message DRG3010P99getBodyIndexInfo { 
+       optional string height 			= 1;
+       optional string cm 				= 2;
+       optional string weight 			= 3;
+       optional string kg 				= 4;
+       optional string cpl_result 		= 5;
+       optional string comments 		= 6;
+       optional string cnt 				= 7;
+}
+
+message DRG3010P99layOrderBarcodeInfo { 
+       optional string bar_drg_bunho 	= 1;
+       optional string bar_rp_bunho 	= 2;
+       optional string ser 				= 3;
+       optional string bunho 			= 4;
+}
+
+message DRG3010P99getBodyIndexBarcodeInfo { 
+       optional string height 			= 1;
+       optional string cm 				= 2;
+       optional string weight 			= 3;
+       optional string kg 				= 4;
+       optional string cpl_result 		= 5;
+}
+
+message DRG3010P99JusaCurInfo { 
+       optional string bunho 			= 1;
+       optional string drg_bunho 		= 2;
+       optional string order_date_text 	= 3;
+       optional string jubsu_date 		= 4;
+       optional string hope_date 		= 5;
+       optional string order_date 		= 6;
+       optional string serial_v 		= 7;
+       optional string serial_text 		= 8;
+       optional string gwa_name 		= 9;
+       optional string doctor_name 		= 10;
+       optional string suname 			= 11;
+       optional string suname2 			= 12;
+       optional string birth 			= 13;
+       optional string sex_age 			= 14;
+       optional string ho_code 			= 15;
+       optional string ho_dong 			= 16;
+       optional string magam_gubun 		= 17;
+       optional string rp_barcode 		= 18;
+       optional string barcode 			= 19;
+       optional string key 				= 20;
+}
+
+message DRG3010P99JusaSerialInfo { 
+       optional string jaeryo_code 		= 1;
+       optional string nalsu 			= 2;
+       optional string divide 			= 3;
+       optional string order_suryang 	= 4;
+       optional string subul_suryang 	= 5;
+       optional string ord_suryang 		= 6;
+       optional string order_danui 		= 7;
+       optional string subul_danui 		= 8;
+       optional string bunryu1 			= 9;
+       optional string bunryu2 			= 10;
+       optional string bunryu3 			= 11;
+       optional string bunryu4 			= 12;
+       optional string remark 			= 13;
+       optional string dv_time 			= 14;
+       optional string dv 				= 15;
+       optional string bunryu6 			= 16;
+       optional string mix_group 		= 17;
+       optional string dv_1 			= 18;
+       optional string dv_2 			= 19;
+       optional string dv_3 			= 20;
+       optional string dv_4 			= 21;
+       optional string dv_5 			= 22;
+       optional string hubal_change_yn 	= 23;
+       optional string pharmacy 		= 24;
+       optional string jusa_spd_gubun 	= 25;
+       optional string drg_pack_yn 		= 26;
+       optional string jusa 			= 27;
+       optional string jaeryo_name 		= 28;
+       optional string danui_name 		= 29;
+       optional string subul_danui_name = 30;
+       optional string jusa_name 		= 31;
+       optional string bogyong_name 	= 32;
+       optional string jusa_nalsu 		= 33;
+       optional string data_gubun 		= 34;
+       optional string hodong_ord_name 	= 35;
+       optional string key 				= 36;
+       optional string max_bannab_yn 	= 37;
+       optional string bannab_yn 		= 38;
+       optional string fkocs2003 		= 39;
+}
+
+message DRG3010P99JusaserialvInfo { 
+       optional string jaeryo_code 		= 1;
+       optional string nalsu 			= 2;
+       optional string divide 			= 3;
+       optional string order_suryang 	= 4;
+       optional string subul_suryang 	= 5;
+       optional string ord_suryang 		= 6;
+       optional string order_danui 		= 7;
+       optional string subul_danui 		= 8;
+       optional string bunryu1 			= 9;
+       optional string bunryu2 			= 10;
+       optional string bunryu3 			= 11;
+       optional string bunryu4 			= 12;
+       optional string remark 			= 13;
+       optional string dv_time 			= 14;
+       optional string dv 				= 15;
+       optional string bunryu6 			= 16;
+       optional string mix_group 		= 17;
+       optional string dv_1 			= 18;
+       optional string dv_2 			= 19;
+       optional string dv_3 			= 20;
+       optional string dv_4 			= 21;
+       optional string dv_5 			= 22;
+       optional string hubal_change_yn 	= 23;
+       optional string pharmacy 		= 24;
+       optional string jusa_spd_gubun 	= 25;
+       optional string drg_pack_yn 		= 26;
+       optional string jusa 			= 27;
+       optional string jaeryo_name 		= 28;
+       optional string danui_name 		= 29;
+       optional string subul_danui_name = 30;
+       optional string jusa_name 		= 31;
+       optional string bogyong_name 	= 32;
+       optional string jusa_nalsu 		= 33;
+       optional string data_gubun 		= 34;
+       optional string hodong_ord_name 	= 35;
+       optional string key 				= 36;
+       optional string max_bannab_yn 	= 37;
+       optional string bannab_yn 		= 38;
+       optional string fkocs2003 		= 39;
+}
+
+message DRG3010P99SerRemarkInfo { 
+       optional string jaeryo_code 		= 1;
+       optional string nalsu 			= 2;
+       optional string divide 			= 3;
+       optional string order_suryang 	= 4;
+       optional string subul_suryang 	= 5;
+       optional string ord_suryang 		= 6;
+       optional string order_danui 		= 7;
+       optional string subul_danui 		= 8;
+       optional string bunryu1 			= 9;
+       optional string bunryu2 			= 10;
+       optional string bunryu3 			= 11;
+       optional string bunryu4 			= 12;
+       optional string remark 			= 13;
+       optional string dv_time 			= 14;
+       optional string dv 				= 15;
+       optional string bunryu6 			= 16;
+       optional string mix_group 		= 17;
+       optional string dv_1 			= 18;
+       optional string dv_2 			= 19;
+       optional string dv_3 			= 20;
+       optional string dv_4 			= 21;
+       optional string dv_5 			= 22;
+       optional string hubal_change_yn 	= 23;
+       optional string pharmacy 		= 24;
+       optional string jusa_spd_gubun 	= 25;
+       optional string drg_pack_yn 		= 26;
+       optional string jusa 			= 27;
+       optional string jaeryo_name 		= 28;
+       optional string data_gubun 		= 29;
+       optional string hodong_ord_name 	= 30;
+       optional string key 				= 31;
+}
+
+message DRG3010P99JusaLabelInfo { 
+       optional string bunho 			= 1;
+       optional string drg_bunho 		= 2;
+       optional string order_date_text 	= 3;
+       optional string jubsu_date 		= 4;
+       optional string hope_date 		= 5;
+       optional string order_date 		= 6;
+       optional string serial_v 		= 7;
+       optional string serial_text 		= 8;
+       optional string suname 			= 9;
+       optional string suname2 			= 10;
+       optional string sex_age 			= 11;
+       optional string ho_code 			= 12;
+       optional string ho_dong 			= 13;
+       optional string bogyong_name 	= 14;
+       optional string cnt 				= 15;
+}
+
+message DRG3010P99JusaKInfo { 
+       optional string jaeryo_code 		= 1;
+       optional string nalsu 			= 2;
+       optional string divide 			= 3;
+       optional string order_suryang 	= 4;
+       optional string subul_suryang 	= 5;
+       optional string ord_suryang 		= 6;
+       optional string order_danui 		= 7;
+       optional string subul_danui 		= 8;
+       optional string bunryu1 			= 9;
+       optional string bunryu2 			= 10;
+       optional string bunryu3 			= 11;
+       optional string bunryu4 			= 12;
+       optional string remark 			= 13;
+       optional string dv_time 			= 14;
+       optional string dv 				= 15;
+       optional string bunryu6 			= 16;
+       optional string mix_group 		= 17;
+       optional string dv_1 			= 18;
+       optional string dv_2 			= 19;
+       optional string dv_3 			= 20;
+       optional string dv_4 			= 21;
+       optional string dv_5 			= 22;
+       optional string hubal_change_yn 	= 23;
+       optional string pharmacy 		= 24;
+       optional string jusa_spd_gubun 	= 25;
+       optional string drg_pack_yn 		= 26;
+       optional string jusa 			= 27;
+       optional string jaeryo_name 		= 28;
+       optional string danui_name 		= 29;
+       optional string subul_danui_name = 30;
+       optional string jusa_name 		= 31;
+       optional string rp2 				= 32;
+       optional string barcode_no 		= 33;
+       optional string data_gubun 		= 34;
+}
+
+message DRG3010P99JusaCommentInfo { 
+       optional string jaeryo_code 		= 1;
+       optional string nalsu 			= 2;
+       optional string divide 			= 3;
+       optional string order_suryang 	= 4;
+       optional string subul_suryang 	= 5;
+       optional string ord_suryang 		= 6;
+       optional string order_danui 		= 7;
+       optional string subul_danui 		= 8;
+       optional string bunryu1 			= 9;
+       optional string bunryu2 			= 10;
+       optional string bunryu3 			= 11;
+       optional string bunryu4 			= 12;
+       optional string remark 			= 13;
+       optional string dv_time 			= 14;
+       optional string dv 				= 15;
+       optional string bunryu6 			= 16;
+       optional string mix_group 		= 17;
+       optional string dv_1 			= 18;
+       optional string dv_2 			= 19;
+       optional string dv_3 			= 20;
+       optional string dv_4 			= 21;
+       optional string dv_5 			= 22;
+       optional string hubal_change_yn 	= 23;
+       optional string pharmacy 		= 24;
+       optional string jusa_spd_gubun 	= 25;
+       optional string drg_pack_yn 		= 26;
+       optional string jusa 			= 27;
+       optional string jaeryo_name 		= 28;
+       optional string danui_name 		= 29;
+       optional string subul_danui_name = 30;
+       optional string jusa_name 		= 31;
+       optional string rp2 				= 32;
+       optional string barcode_no 		= 33;
+       optional string data_gubun 		= 34;
+}
+
+message DRG3010P10GrdDcOrderInfo{
+	optional string order_date 	= 1;
+	optional string mix_group 	= 2;
+	optional string jaeryo_code = 3;
+	optional string jaeryo_name = 4;
+	optional string ord_suryang = 5;
+	optional string dv_time 	= 6;
+	optional string dv 			= 7;
+	optional string nalsu 		= 8;
+	optional string order_danui = 9;
+	optional string danui_name 	= 10;
+	optional string bogyong_code = 11;
+	optional string bogyong_name = 12;
+	optional string powder_yn 	= 13;
+	optional string remark = 14;
+	optional string dv_1 = 15;
+	optional string dv_2 = 16;
+	optional string dv_3 = 17;
+	optional string dv_4 = 18;
+	optional string dv_5 = 19;
+	optional string hubal_change_yn = 20;
+	optional string pharmacy = 21;
+	optional string drg_pack_yn = 22;
+	optional string jusa_name = 23;
+	optional string suname = 24;
+	optional string drg_bunho = 25;
+	optional string fkocs2003 = 26;
+	optional string append_yn = 27;
+	optional string re_use_yn = 28;
+	optional string hope_date = 29;
+	optional string hope_time = 30;
+	optional string group_ser = 31;
+	optional string dc_yn = 32;
+	optional string order_gubun = 33;
+	optional string if_input_control = 34;
+	optional string bannab_yn = 35;
+}
+
+
+message DRG3010P10GrdDrgBunhoInfo{
+	optional string order_date 		= 1;
+	optional string jubsu_date 		= 2;
+	optional string drg_bunho 		= 3;
+	optional string bunho 			= 4;
+	optional string ho_dong1 		= 5;
+	optional string ho_dong_name 	= 6;
+	optional string ho_code 		= 7;
+	optional string suname 			= 8;
+	optional string fkinp1001 		= 9;
+	optional string hope_date 		= 10;
+	optional string chulgo_date 	= 11;
+	optional string magam_bunryu 	= 12;
+}
+
+message DRG3010P10GrdJusaDcOrderInfo{
+	optional string order_date 	= 1;
+	optional string mix_group 	= 2;
+	optional string jaeryo_code = 3;
+	optional string jaeryo_name = 4;
+	optional string ord_suryang = 5;
+	optional string dv_time 	= 6;
+	optional string dv 			= 7;
+	optional string nalsu 		= 8;
+	optional string order_danui = 9;
+	optional string danui_name 	= 10;
+	optional string bogyong_code 	= 11;
+	optional string bogyong_name 	= 12;
+	optional string powder_yn 		= 13;
+	optional string remark 			= 14;
+	optional string dv_1 			= 15;
+	optional string dv_2 			= 16;
+	optional string dv_3 			= 17;
+	optional string dv_4 			= 18;
+	optional string dv_5 			= 19;
+	optional string hubal_change_yn = 20;
+	optional string pharmacy 		= 21;
+	optional string drg_pack_yn 	= 22;
+	optional string jusa_name 		= 23;
+	optional string suname 		= 24;
+	optional string drg_bunho 	= 25;
+	optional string fkocs2003 	= 26;
+	optional string append_yn 	= 27;
+	optional string re_use_yn 	= 28;
+	optional string hope_date 	= 29;
+	optional string hope_time 	= 30;
+	optional string group_ser 	= 31;
+	optional string dc_yn 		= 32;
+	optional string order_gubun = 33;
+	optional string if_input_control 	= 34;
+	optional string bannab_yn 			= 35;
+	optional string decode_res 			= 36;
+}
+
+message DRG3010P10GrdMagamJusaOrdInfo{
+	optional string order_date 	= 1;
+	optional string mix_group 	= 2;
+	optional string jaeryo_code = 3;
+	optional string jaeryo_na = 4;
+	optional string ord_suryang = 5;
+	optional string dv_time = 6;
+	optional string dv = 7;
+	optional string nalsu = 8;
+	optional string order_danui = 9;
+	optional string danui_name = 10;
+	optional string bogyong_code = 11;
+	optional string bogyong_name = 12;
+	optional string powder_yn = 13;
+	optional string remark = 14;
+	optional string dv_1 = 15;
+	optional string dv_2 = 16;
+	optional string dv_3 = 17;
+	optional string dv_4 = 18;
+	optional string dv_5 = 19;
+	optional string hubal_change_yn = 20;
+	optional string pharmacy = 21;
+	optional string drg_pack_yn = 22;
+	optional string jusa_name = 23;
+	optional string suname = 24;
+	optional string drg_bunho = 25;
+	optional string jubsu_date = 26;
+	optional string bunho = 27;
+	optional string ho_dong = 28;
+	optional string hope_date = 29;
+	optional string group_ser = 30;
+	optional string dc_yn = 31;
+	optional string order_gubun = 32;
+	optional string query_seq = 33;
+	optional string bannab_yn = 34;
+	optional string source_fkocs2003 = 35;
+	optional string fkocs2003 = 36;
+}
+
+message DRG3010P10GrdMagamOrdInfo{
+    optional string order_date 	= 1;
+    optional string group_ser 	= 2;
+    optional string jaeryo_code = 3;
+    optional string jaeryo_name = 4;
+    optional string ord_suryang = 5;
+    optional string dv_time 	= 6;
+    optional string dv 			= 7;
+    optional string nalsu	 	= 8;
+    optional string order_danui = 9;
+    optional string danui_name 	= 10;
+    optional string bogyong_code = 11;
+    optional string bogyong_name = 12;
+    optional string powder_yn = 13;
+    optional string remark = 14;
+    optional string dv_1 = 15;
+    optional string dv_2 = 16;
+    optional string dv_3 = 17;
+    optional string dv_4 = 18;
+    optional string dv_5 = 19;
+    optional string hubal_change_yn = 20;
+    optional string pharmacy = 21;
+    optional string drg_pack_yn = 22;
+    optional string jusa = 23;
+    optional string suname = 24;
+    optional string drg_bunho = 25;
+    optional string jubsu_date = 26;
+    optional string bunho = 27;
+    optional string ho_dong = 28;
+    optional string bannab_yn = 29;
+    optional string source_fkocs2003 = 30;
+    optional string fkocs2003 = 31;
+    optional string hope_date = 32;
+    optional string dc_yn = 33;
+    optional string order_gubun = 34;
+    optional string mix_group = 35;
+    optional string brought_drg_yn = 36;
+}
+
+message DRG3010P10GrdMagamPaQueryInfo{
+    optional string magam_date = 1;
+    optional string magam_ser = 2;
+    optional string magam_time = 3;
+    optional string magam_gubun = 4;
+    optional string magam_cancel = 5;
+    optional string act_flag = 6;
+    optional string min_drg_bunho = 7;
+    optional string max_drg_bunho = 8;
+    optional string magam_bunryu = 9;
+}
+
+message DRG3010P10GrdMiMaJuOrdInfo{
+    optional string order_date = 1;
+    optional string mix_group = 2;
+    optional string jaeryo_code = 3;
+    optional string jaeryo_name = 4;
+    optional string ord_suryang = 5;
+    optional string dv_time = 6;
+    optional string dv = 7;
+    optional string nalsu = 8;
+    optional string order_danui = 9;
+    optional string danui_name = 10;
+    optional string bogyong_code = 11;
+    optional string bogyong_name = 12;
+    optional string powder_yn = 13;
+    optional string remark = 14;
+    optional string dv_1 = 15;
+    optional string dv_2 = 16;
+    optional string dv_3 = 17;
+    optional string dv_4 = 18;
+    optional string dv_5 = 19;
+    optional string hubal_change_yn = 20;
+    optional string pharmacy = 21;
+    optional string drg_pack_yn = 22;
+    optional string jusa_name = 23;
+    optional string suname = 24;
+    optional string drg_bunho = 25;
+    optional string fkocs2003 = 26;
+    optional string append_yn = 27;
+    optional string re_use_yn = 28;
+    optional string hope_date = 29;
+    optional string hope_time = 30;
+    optional string group_ser = 31;
+    optional string dc_yn = 32;
+    optional string order_gubun = 33;
+    optional string if_input_control = 34;
+    optional string decode_res = 35;
+}
+
+message DRG3010P10GrdMiMaOrdInfo{
+    optional string order_date = 1;
+    optional string mix_group = 2;
+    optional string jaeryo_code = 3;
+    optional string jaeryo_name = 4;
+    optional string ord_suryang = 5;
+    optional string dv_time = 6;
+    optional string dv = 7;
+    optional string nalsu = 8;
+    optional string order_danui = 9;
+    optional string danui_name = 10;
+    optional string bogyong_code = 11;
+    optional string bogyong_name = 12;
+    optional string powder_yn = 13;
+    optional string remark = 14;
+    optional string dv_1 = 15;
+    optional string dv_2 = 16;
+    optional string dv_3 = 17;
+    optional string dv_4 = 18;
+    optional string dv_5 = 19;
+    optional string hubal_change_yn = 20;
+    optional string pharmacy = 21;
+    optional string drg_pack_yn = 22;
+    optional string jusa_name = 23;
+    optional string suname = 24;
+    optional string drg_bunho = 25;
+    optional string fkocs2003 = 26;
+    optional string append_yn = 27;
+    optional string re_use_yn = 28;
+    optional string hope_date = 29;
+    optional string hope_time = 30;
+    optional string group_ser = 31;
+    optional string dc_yn = 32;
+    optional string order_gubun = 33;
+    optional string if_input_control = 34;
+    optional string brought_drg_yn = 35;
+}
+
+message DRG3010P10GrdPaDcInfo{
+    optional string bunho = 1;
+    optional string suname = 2;
+    optional string sex = 3;
+    optional string age = 4;
+    optional string resident = 5;
+    optional string doctor_name = 6;
+    optional string ho_dong = 7;
+    optional string ho_dong_name = 8;
+    optional string append_yn = 9;
+    optional string juninp_yn = 10;
+    optional string hope_date = 11;
+    optional string hope_time = 12;
+    optional string pkinp1001 = 13;
+    optional string toiwon_yn = 14;
+    optional string gwa = 15;
+    optional string magam_bunryu = 16;
+    optional string order_date = 17;
+    optional string ho_code = 18;
+    optional string jubsu_date = 19;
+    optional string drg_bunho = 20;
+}
+
+message DRG3010P10GrdPaInfo{
+    optional string bunho 	 = 1;
+    optional string suname 	 = 2;
+    optional string sex      = 3;
+    optional string age      = 4;
+    optional string resident = 5;
+    optional string doctor_name = 6;
+    optional string magam_yn 	= 7;
+    optional string ho_dong 	= 8;
+    optional string ho_dong_name = 9;
+    optional string append_yn = 10;
+    optional string juninp_yn = 11;
+    optional string hope_date = 12;
+    optional string hope_time = 13;
+    optional string pkinp1001 = 14;
+    optional string toiwon_yn = 15;
+    optional string gwa = 16;
+    optional string magam_bunryu = 17;
+    optional string order_date = 18;
+    optional string ho_code = 19;
+    optional string act_buseo = 20;
+}
+
+message DRG3010P10LayAntiDataInfo{
+    optional string fkocs = 1;
+    optional string in_out_gubun = 2;
+    optional string order_date = 3;
+    optional string bunho = 4;
+    optional string gwa = 5;
+    optional string doctor = 6;
+    optional string ho_dong = 7;
+    optional string ipwon_date = 8;
+    optional string jubsu_date = 9;
+    optional string v1 = 10;
+    optional string v2 = 11;
+    optional string v3 = 12;
+    optional string v4 = 13;
+    optional string v5 = 14;
+    optional string v6 = 15;
+    optional string v7 = 16;
+    optional string v8 = 17;
+    optional string v9 = 18;
+    optional string check01 = 19;
+    optional string check02 = 20;
+    optional string check03 = 21;
+    optional string check04 = 22;
+    optional string check05 = 23;
+    optional string check06 = 24;
+    optional string check07 = 25;
+    optional string check08 = 26;
+    optional string check09 = 27;
+    optional string check10 = 28;
+    optional string check11 = 29;
+    optional string check12 = 30;
+    optional string check13 = 31;
+    optional string check14 = 32;
+    optional string check15 = 33;
+    optional string check16 = 34;
+    optional string check17 = 35;
+    optional string check18 = 36;
+    optional string check19 = 37;
+    optional string check20 = 38;
+    optional string check21 = 39;
+    optional string check22 = 40;
+    optional string check23 = 41;
+    optional string check24 = 42;
+    optional string check25 = 43;
+    optional string check26 = 44;
+    optional string check27 = 45;
+    optional string check28 = 46;
+    optional string check29 = 47;
+    optional string check30 = 48;
+    optional string check31 = 49;
+    optional string check32 = 50;
+    optional string check33 = 51;
+    optional string check34 = 52;
+    optional string check35 = 53;
+    optional string check36 = 54;
+    optional string check37 = 55;
+    optional string check38 = 56;
+    optional string check39 = 57;
+    optional string check40 = 58;
+    optional string check41 = 59;
+    optional string check42 = 60;
+    optional string check43 = 61;
+    optional string check44 = 62;
+    optional string check45 = 63;
+    optional string check46 = 64;
+    optional string check47 = 65;
+    optional string check48 = 66;
+    optional string check49 = 67;
+    optional string check50 = 68;
+    optional string suname = 69;
+    optional string suname2 = 70;
+}
+
+message DRG3010P10LayOrderJungboInfo{
+    optional string seq_1 = 1;
+    optional string seq_2 = 2;
+    optional string text_1 = 3;
+    optional string text_2 = 4;
+    optional string text_3 = 5;
+    optional string remark = 6;
+    optional string bar_drg_bunho = 7;
+    optional string bunho = 8;
+}
+
+message DRG3010P10PostLoadInfo{
+    optional string code = 1;
+    optional string code_name = 2;
+    optional string code_value = 3;
+}
+
+message DRG3010P10BoRyuInfo{
+    optional string fkocs2003 = 1;
+    optional string re_use_yn = 2;
+}
+
+message DRG3010P10DsvOrderPrint1Info{
+    optional string bunho = 1;
+    optional string drg_bunho = 2;
+    optional string order_date_text = 3;
+    optional string jubsu_date = 4;
+    optional string hope_date = 5;
+    optional string order_date = 6;
+    optional string serial_v = 7;
+    optional string serial_text = 8;
+    optional string gwa_name = 9;
+    optional string doctor_name = 10;
+    optional string suname = 11;
+    optional string suname2 = 12;
+    optional string birth = 13;
+    optional string sex_age = 14;
+    optional string ho_code = 15;
+    optional string ho_dong = 16;
+    optional string magam_gubun = 17;
+    optional string rp_barcode = 18;
+}
+
+message DRG3010P10DsvOrderPrint2Info{
+    optional string bunho 		     = 1;
+    optional string drg_bunho        = 2;
+    optional string group_ser        = 3;
+    optional string jubsu_date       = 4;
+    optional string hope_date        = 5;
+    optional string order_date       = 6;
+    optional string jaeryo_code      = 7;
+    optional string nalsu            = 8;
+    optional string divide           = 9;
+    optional string ord_suryang      = 10;
+    optional string order_suryang    = 11;
+    optional string order_danui      = 12;
+    optional string subul_danui      = 13;
+    optional string bogyong_code     = 14;
+    optional string bogyong_name     = 15;
+    optional string caution_name     = 16;
+    optional string mix_yn           = 17;
+    optional string atc_yn           = 18;
+    optional string dv 		         = 19;
+    optional string dv_time          = 20;
+    optional string dc_yn 		     = 21;
+    optional string bannab_yn 	     = 22;
+    optional string source_fkocs2003 = 23;
+    optional string fkocs2003 	     = 24;
+    optional string sunab_date 	     = 25;
+    optional string pattern 	     = 26;
+    optional string jaeryo_name      = 27;
+    optional string sunab_nalsu      = 28;
+    optional string wonyoi_yn 	     = 29;
+    optional string order_remark     = 30;
+    optional string act_date 	     = 31;
+    optional string ui_jusa_yn 	     = 32;
+    optional string subul_suryang    = 33;
+    optional string serial_v         = 34;
+    optional string gwa_name         = 35;
+    optional string doctor_name      = 36;
+    optional string other_gwa        = 37;
+    optional string powder_yn        = 38;
+    optional string line 		     = 39;
+    optional string ord_danui2 	     = 40;
+    optional string bunryu1          = 41;
+    optional string ho_dong          = 42;
+    optional string ho_code          = 43;
+    optional string donbok           = 44;
+    optional string tusuk            = 45;
+    optional string magam_gubun      = 46;
+    optional string text_color 	     = 47;
+    optional string changgo	 	     = 48;
+    optional string from_order_date  = 49;
+    optional string to_order_date 	 = 50;
+    optional string data_gubun 		 = 51;
+    optional string hodong_ord_name  = 52;
+    optional string max_bannab_yn 	 = 53;
+}
+
+message DRG3010P10DsvOrderPrint3Info{
+    optional string bunho = 1;
+    optional string drg_bunho = 2;
+    optional string group_ser = 3;
+    optional string jubsu_date = 4;
+    optional string hope_date1 = 5;
+    optional string order_date = 6;
+    optional string jaeryo_code = 7;
+    optional string nalsu = 8;
+    optional string divide = 9;
+    optional string ord_suryang = 10;
+    optional string order_suryang = 11;
+    optional string order_danui = 12;
+    optional string subul_danui = 13;
+    optional string bogyong_code = 14;
+    optional string bogyong_name = 15;
+    optional string caution_name = 16;
+    optional string mix_yn = 17;
+    optional string atc_yn = 18;
+    optional string dv = 19;
+    optional string dv_time = 20;
+    optional string dc_yn = 21;
+    optional string bannab_yn = 22;
+    optional string source_fkocs2003 = 23;
+    optional string fkocs2003 = 24;
+    optional string sunab_date = 25;
+    optional string pattern = 26;
+    optional string jaeryo_name = 27;
+    optional string sunab_nalsu = 28;
+    optional string wonyoi_yn = 29;
+    optional string order_remark = 30;
+    optional string act_date = 31;
+    optional string ui_jusa_yn = 32;
+    optional string subul_suryang = 33;
+    optional string serial_v = 34;
+    optional string gwa_name = 35;
+    optional string doctor_name = 36;
+    optional string other_gwa = 37;
+    optional string hope_date2 = 38;
+    optional string powder_yn = 39;
+    optional string line = 40;
+    optional string ord_danui2 = 41;
+    optional string bunryu1 = 42;
+    optional string ho_dong = 43;
+    optional string ho_code = 44;
+    optional string donbok = 45;
+    optional string tusuk = 46;
+    optional string magam_gubun = 47;
+    optional string text_color = 48;
+    optional string changgo = 49;
+    optional string from_order_date = 50;
+    optional string to_order_date = 51;
+    optional string data_gubun = 52;
+    optional string hodong_ord_name = 53;
+    optional string max_bannab_yn = 54;
+}
+
+message DRG3010P10DsvOrderPrint4Info{
+        optional string bunho = 1;
+        optional string drg_bunho = 2;
+        optional string group_ser = 3;
+        optional string jubsu_date = 4;
+        optional string hope_date1 = 5;
+        optional string order_date = 6;
+        optional string jaeryo_code = 7;
+        optional string nalsu = 8;
+        optional string divide = 9;
+        optional string ord_suryang = 10;
+        optional string order_suryang = 11;
+        optional string order_danui = 12;
+        optional string subul_danui = 13;
+        optional string bogyong_code = 14;
+        optional string bogyong_name = 15;
+        optional string caution_name = 16;
+        optional string mix_yn = 17;
+        optional string atc_yn = 18;
+        optional string dv = 19;
+        optional string dv_time = 20;
+        optional string dc_yn = 21;
+        optional string bannab_yn = 22;
+        optional string source_fkocs2003 = 23;
+        optional string fkocs2003 = 24;
+        optional string sunab_date = 25;
+        optional string pattern = 26;
+        optional string jaeryo_name = 27;
+        optional string sunab_nalsu = 28;
+        optional string wonyoi_yn = 29;
+        optional string order_remark = 30;
+        optional string act_date = 31;
+        optional string ui_jusa_yn = 32;
+        optional string subul_suryang = 33;
+        optional string serial_v = 34;
+        optional string gwa_name = 35;
+        optional string doctor_name = 36;
+        optional string other_gwa = 37;
+        optional string hope_date2 = 38;
+        optional string powder_yn = 39;
+        optional string line = 40;
+        optional string ord_danui2 = 41;
+        optional string bunryu1 = 42;
+        optional string ho_code = 43;
+        optional string ho_dong = 44;
+        optional string donbok = 45;
+        optional string tusuk = 46;
+        optional string magam_gubun = 47;
+        optional string text_color = 48;
+        optional string changgo = 49;
+        optional string from_order_date = 50;
+        optional string to_order_date = 51;
+        optional string data_gubun = 52;
+        optional string hodong_ord_name = 53;
+        optional string max_bannab_yn = 54;
+}
+
+message DRG3010P10DsvJusaOrderPrint1Info{
+        optional string bunho = 1;
+        optional string drg_bunho = 2;
+        optional string order_date_text = 3;
+        optional string jubsu_date = 4;
+        optional string hope_date = 5;
+        optional string order_date = 6;
+        optional string serial_v = 7;
+        optional string serial_text = 8;
+        optional string gwa_name = 9;
+        optional string doctor_name = 10;
+        optional string suname = 11;
+        optional string suname2 = 12;
+        optional string birth = 13;
+        optional string sex_age = 14;
+        optional string ho_code = 15;
+        optional string ho_dong = 16;
+        optional string magam_gubun = 17;
+        optional string rp_barcode = 18;
+        optional string barcode = 19;
+        optional string key = 20;
+}
+
+message DRG3010P10DsvJusaOrderPrint2Info{
+        optional string jaeryo_code = 1;
+        optional string nalsu = 2;
+        optional string divide = 3;
+        optional string order_suryang = 4;
+        optional string subul_suryang = 5;
+        optional string ord_suryang = 6;
+        optional string order_danui = 7;
+        optional string subul_danui = 8;
+        optional string bunryu1 = 9;
+        optional string bunryu2 = 10;
+        optional string bunryu3 = 11;
+        optional string bunryu4 = 12;
+        optional string remark = 13;
+        optional string dv_time = 14;
+        optional string dv = 15;
+        optional string bunryu6 = 16;
+        optional string mix_group = 17;
+        optional string dv_1 = 18;
+        optional string dv_2 = 19;
+        optional string dv_3 = 20;
+        optional string dv_4 = 21;
+        optional string dv_5 = 22;
+        optional string hubal_change_yn = 23;
+        optional string pharmacy = 24;
+        optional string jusa_spd_gubun = 25;
+        optional string drg_pack_yn = 26;
+        optional string jusa = 27;
+        optional string jaeryo_name = 28;
+        optional string danui_name = 29;
+        optional string subul_danui_name = 30;
+        optional string jusa_name = 31;
+        optional string bogyong_name = 32;
+        optional string jusa_nalsu = 33;
+        optional string data_gubun = 34;
+        optional string hodong_ord_name = 35;
+        optional string key = 36;
+        optional string max_bannab_yn = 37;
+        optional string bannab_yn = 38;
+        optional string fkocs2003 = 39;
+}
+
+message DRG3010P10DsvJusaOrderPrint3Info{
+        optional string jaeryo_code = 1;
+        optional string nalsu = 2;
+        optional string divide = 3;
+        optional string order_suryang = 4;
+        optional string subul_suryang = 5;
+        optional string ord_suryang = 6;
+        optional string order_danui = 7;
+        optional string subul_danui = 8;
+        optional string bunryu1 = 9;
+        optional string bunryu2 = 10;
+        optional string bunryu3 = 11;
+        optional string bunryu4 = 12;
+        optional string remark = 13;
+        optional string dv_time = 14;
+        optional string dv = 15;
+        optional string bunryu6 = 16;
+        optional string mix_group = 17;
+        optional string dv_1 = 18;
+        optional string dv_2 = 19;
+        optional string dv_3 = 20;
+        optional string dv_4 = 21;
+        optional string dv_5 = 22;
+        optional string hubal_change_yn = 23;
+        optional string pharmacy = 24;
+        optional string jusa_spd_gubun = 25;
+        optional string drg_pack_yn = 26;
+        optional string jusa = 27;
+        optional string jaeryo_name = 28;
+        optional string danui_name = 29;
+        optional string subul_danui_name = 30;
+        optional string jusa_name = 31;
+        optional string bogyong_name = 32;
+        optional string jusa_nalsu = 33;
+        optional string data_gubun = 34;
+        optional string hodong_ord_name = 35;
+        optional string key = 36;
+        optional string max_bannab_yn = 37;
+        optional string bannab_yn = 38;
+        optional string fkocs2003 = 39;
+}
+
+message DRG3010P10DsvJusaOrderPrint4Info{
+        optional string jaeryo_code = 1;
+        optional string nalsu = 2;
+        optional string divide = 3;
+        optional string order_suryang = 4;
+        optional string subul_suryang = 5;
+        optional string ord_suryang = 6;
+        optional string order_danui = 7;
+        optional string subul_danui = 8;
+        optional string bunryu1 = 9;
+        optional string bunryu2 = 10;
+        optional string bunryu3 = 11;
+        optional string bunryu4 = 12;
+        optional string remark = 13;
+        optional string dv_time = 14;
+        optional string dv = 15;
+        optional string bunryu6 = 16;
+        optional string mix_group = 17;
+        optional string dv_1 = 18;
+        optional string dv_2 = 19;
+        optional string dv_3 = 20;
+        optional string dv_4 = 21;
+        optional string dv_5 = 22;
+        optional string hubal_change_yn = 23;
+        optional string pharmacy = 24;
+        optional string jusa_spd_gubun = 25;
+        optional string drg_pack_yn = 26;
+        optional string jusa = 27;
+        optional string jaeryo_name = 28;
+        optional string data_gubun = 29;
+        optional string hodong_ord_name = 30;
+        optional string key = 31;
+        optional string max_bannab_yn = 32;
+        optional string bannab_yn = 33;
+        optional string fkocs2003 = 34;
+}
+
+message DRG3010P10DsvJusaLabel1Info{
+        optional string bunho = 1;
+        optional string drg_bunho = 2;
+        optional string order_date_text = 3;
+        optional string jubsu_date = 4;
+        optional string hope_date = 5;
+        optional string order_date = 6;
+        optional string serial_v = 7;
+        optional string serial_text = 8;
+        optional string suname = 9;
+        optional string suname2 = 10;
+        optional string sex_age = 11;
+        optional string ho_code = 12;
+        optional string ho_dong = 13;
+        optional string bogyong_name = 14;
+        optional string cnt = 15;
+}
+
+message DRG3010P10DsvJusaLabel2Info{
+        optional string jaeryo_code = 1;
+        optional string nalsu = 2;
+        optional string divide = 3;
+        optional string order_suryang = 4;
+        optional string subul_suryang = 5;
+        optional string ord_suryang = 6;
+        optional string order_danui = 7;
+        optional string subul_danui = 8;
+        optional string bunryu1 = 9;
+        optional string bunryu2 = 10;
+        optional string bunryu3 = 11;
+        optional string bunryu4 = 12;
+        optional string remark = 13;
+        optional string dv_time = 14;
+        optional string dv = 15;
+        optional string bunryu6 = 16;
+        optional string mix_group = 17;
+        optional string dv_1 = 18;
+        optional string dv_2 = 19;
+        optional string dv_3 = 20;
+        optional string dv_4 = 21;
+        optional string dv_5 = 22;
+        optional string hubal_change_yn = 23;
+        optional string pharmacy = 24;
+        optional string jusa_spd_gubun = 25;
+        optional string drg_pack_yn = 26;
+        optional string jusa = 27;
+        optional string jaeryo_name = 28;
+        optional string danui_name = 29;
+        optional string subul_danui_name = 30;
+        optional string jusa_name = 31;
+        optional string rp2 = 32;
+        optional string barcode_no = 33;
+        optional string data_gubun = 34;
+}
+
+message DRG3010P10LayAntinQueryEndInfo{
+        optional string pkocs = 1;
+        optional string in_out_gubun = 2;
+        optional string order_date = 3;
+        optional string bunho = 4;
+        optional string gwa = 5;
+        optional string doctor = 6;
+        optional string ho_dong = 7;
+        optional string ipwon_date = 8;
+        optional string jubsu_date = 9;
+        optional string gwa_name = 10;
+        optional string doctor_name = 11;
+}

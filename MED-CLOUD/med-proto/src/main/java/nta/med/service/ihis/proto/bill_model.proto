@@ -1,0 +1,128 @@
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "BillModelProto";
+
+message BIL2016U01LoadPatientInfo
+{
+	optional string bill_date    = 1;
+	optional string bill_number  = 2;
+	optional string bunho        = 3;
+	optional string suname       = 4;
+	optional string birth        = 5;
+	optional string sex          = 6;
+	optional string address      = 7;
+	optional string phone        = 8;
+	optional string comming_date = 9;
+	optional string type         = 10;
+	optional string type_name    = 11;
+	optional string fkout        = 12;
+	optional string paid_name    = 13;
+	optional string type_money   = 14;
+	optional string sum_amount   = 15;
+	optional string sum_discount = 16;
+	optional string sum_paid     = 17;
+	optional string sum_debt     = 18;
+	optional string parent_invoiceno = 19;
+	optional string status_flg   = 20;
+}
+
+message LoadGridBIL2016U02Info 
+{
+        optional string hangmog_code            = 1;
+        optional string hangmog_name            = 2;
+        optional string unit                    = 3;
+        optional string price                   = 4;
+        optional string quantity                = 5;        
+        optional string amount                  = 6;
+        optional string insurance_pay           = 7;
+        optional string patient_pay             = 8;
+        optional string discount                = 9;
+        optional string dept_req_cd             = 10; 
+        optional string dept_req_nm             = 11; 
+        optional string doctor_req_cd           = 12;
+        optional string doctor_req_nm           = 13;
+        optional string dept_exc_cd             = 14;
+        optional string dept_exc_nm             = 15;
+        optional string doctor_exc_cd           = 16;
+        optional string doctor_exc_nm           = 17;
+        optional string order_group_cd          = 18;
+        optional string order_group_nm          = 19;
+        optional string order_date              = 20;
+        optional string acting_date             = 21;
+        optional string discount_reason         = 22;
+       	optional string check_yn        		= 23; 
+        optional string fkocs1003       		= 24;
+        optional string amount_paid             = 25;
+        optional string amount_debt             = 26;
+}
+
+message LoadComboBIL2016U02Info
+{
+		optional string code 		= 1;
+        optional string code_name 	= 2;
+}
+
+//------[START]BIL2016R01---------
+
+message BIL2016R01GrdReportInfo
+{
+        optional string service_id           =   1;
+        optional string service_name   		 =   2;
+        optional string execute_dept   		 =   3;
+        optional string execute_doctor       =   4;
+        optional string assign_dept          =   5;
+        optional string assign_doctor        =   6;
+        optional string acting_date          =   7;
+        optional string quantity             =   8;
+        optional string sum                  =   9;
+        optional string discount             =  10;
+        optional string amount_paid 		 = 	11;
+}
+//------[END]BIL2016R01---------	optional string birth        = 13;
+
+message BIL2016U00ServiceInfo
+{
+	optional string hangmog_code = 1;
+ 	optional string hangmog_name = 2;
+ 	optional string code_name = 3;
+ 	optional string price1 = 4;
+ 	optional string price2 = 5;
+ 	optional string price3 = 6;
+}
+
+message BIL2016U00DetailServiceInfo {
+	optional string insurance_price = 1;
+	optional string service_price 	= 2;
+	optional string foreigner_price = 3;
+	optional string hangmog_code 	= 4;
+	optional string row_state 		= 5;
+}
+
+message LoadGridPayHistoryBIL2016U02Info
+{
+	optional string invoice_no              = 1;
+	optional string invoice_date            = 2;        
+	optional string amount                  = 3;
+	optional string discount                = 4;
+	optional string amount_paid             = 5;
+	optional string parent_invoice_no       = 6;                
+	optional string active_flg              = 7;
+	optional string amount_debt             = 8;
+}
+
+message GetDataComboInvoiceBIL2016U02Info
+{
+	optional string invoice_no          = 1;
+	optional string invoice_date        = 2;        
+
+}
+
+message CheckLasteInvoiceBIL2016U02Info
+{
+	optional string  latest_invoice = 1;
+}
+
+message BIL0102U00DataReportInfo
+{
+	optional string department                     = 1;
+	repeated LoadGridBIL2016U02Info invoice_detail = 2;
+}

@@ -1,0 +1,222 @@
+import "rpc.proto";
+import "clis_model.proto";
+import "common_model.proto";
+
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "ClisServiceProto";
+option (version) = "1.0.0";
+option (service) = "clis";
+
+//[START] CLIS2015U09
+message CLIS2015U09GrdRequest{
+}
+
+message CLIS2015U09GrdResponse{
+	repeated CLIS2015U09ItemInfo dt = 1;
+}
+
+message CLIS2015U09SaveRequest{
+	repeated CLIS2015U09ItemInfo dt = 1;
+}
+
+message CLIS2015U09CheckSmoCodeRequest{
+	optional string smo_code = 1;
+}
+
+message CLIS2015U09CheckSmoCodeResponse{
+	optional string cnt = 1;
+}
+
+
+message CLIS2015U09PrefectureCodeRequest{
+	optional string code_type = 1;
+	optional string find1 = 2;
+}
+
+message CLIS2015U09GetCodeNameRequest{
+	optional string code = 1;
+}
+
+message CLIS2015U09GetCodeNameResponse{
+	optional string code_name = 1;
+}
+message CLIS2015U09CheckSmoCodeOnDeleteRequest{
+	optional string clis_smo_id = 1;
+}
+
+
+message CLIS2015U09CheckSmoCodeOnDeleteResponse{
+    optional string cnt= 1;
+}
+//[END] CLIS2015U09
+//[START] CLIS2015U02
+//get grdProtocol
+message CLIS2015U02GrdProtocolRequest
+{
+	optional string protocol_code = 1;
+	optional string protocol_name = 2;
+	optional string from_date = 3;
+	optional string to_date = 4;
+	optional string protocol_status = 5;
+	optional string patient_code = 6;
+}
+
+message CLIS2015U02GrdProtocolResponse
+{
+	repeated CLIS2015U02GrdProtocolInfo grdProtocol_list = 1;
+}
+
+//get grdStatus
+message CLIS2015U02GrdStatusRequest
+{
+	optional string protocol_id = 1;
+}
+
+message CLIS2015U02GrdStatusResponse
+{
+	repeated CLIS2015U02GrdStatusInfo grdStatus_list = 1;
+}
+
+//get combo cboStatus
+message CLIS2015U02CboStatusRequest{
+	optional bool isAll = 1;
+}
+
+//saveLayout
+message CLIS2015U02SaveLayoutRequest
+{
+	optional CLIS2015U02GrdProtocolInfo grdProtocol_list = 1;
+	repeated CLIS2015U02GrdStatusInfo grdStatus_list = 2;
+}
+
+message CLIS2015U02GrdTrialDrgRequest{
+	optional string protocol_id = 1;
+	optional string page_number = 2;
+    optional string offset      = 3;
+}
+message CLIS2015U02GrdTrialDrgResponse{
+	repeated ComboListItemInfo grd_list = 1;
+}
+
+//[END] CLIS2015U02
+
+//[START] CLIS2015U03
+message CLIS2015U03ProtocolListRequest
+{
+	optional string user_id             = 1;
+	optional string hosp_code           = 2;
+}
+message CLIS2015U03ProtocolListResponse
+{
+	repeated CLIS2015U03ProtocolListInfo protocol_list_item = 1;
+}
+message CLIS2015U03PatientListRequest
+{
+	optional string protocol_id         = 1;
+}
+message CLIS2015U03PatientListResponse
+{
+	repeated CLIS2015U03PatientListInfo patient_list_item = 1;
+}
+message CLIS2015U03SearchPatientRequest
+{
+	optional string hosp_code                   = 1;
+	optional string sex                         = 2;
+	optional string from_age                    = 3;
+	optional string to_age                      = 4;
+	optional string naewon_date_from            = 5;
+	optional string naewon_date_to              = 6;
+	optional string maker_yn                    = 7;
+	optional string join                        = 8;
+	optional string patient_code                = 9;
+	optional string filter_string_outsang       = 10;
+	optional string filter_string_ocs1003       = 11;
+	optional string filter_string_view          = 12;
+	optional string filter_string_emr           = 13;
+	optional string filter_command_outsang      = 14;
+	optional string filter_command_ocs1003      = 15;
+	optional string filter_command_view         = 16;
+}
+message CLIS2015U03SearchPatientResponse
+{
+	repeated CLIS2015U03PatientListInfo patient_list_item = 1;
+}
+message CLIS2015U03CheckPatientRequest
+{
+	optional string hosp_code = 1;
+	repeated CLIS2015U03CheckPatientRequestInfo check_item = 2;
+}
+message CLIS2015U03CheckPatientResponse
+{
+	repeated CLIS2015U03CheckPatientResultInfo chk_result = 1;
+}
+message CLIS2015U03SaveLayoutRequest
+{
+	repeated CLIS2015U03PatientListInfo patient_list_item         = 1;
+	optional string hosp_code                                     = 2;
+	optional string user_id                                       = 3;
+}
+message CLIS2015U03PatientListDataValidatingRequest
+{
+	optional string hosp_code   = 1;
+	optional string bunho       = 2;
+	optional string protocol_id = 3;
+}
+message CLIS2015U03PatientListDataValidatingResponse
+{
+	optional string err_msg = 1;
+	optional string bunho = 2;
+	optional string suname = 3;
+	optional string suname2 = 4;
+}
+//[END] CLIS2015U03
+
+//[START] CLIS2015U04
+message CLIS2015U04GetProtocolItemRequest {
+}
+
+message CLIS2015U04GetProtocolItemResponse {
+	repeated CLIS2015U04GetProtocolItemInfo Num = 1; 
+}
+
+message CLIS2015U04GetPatientListItemRequest { 
+	optional string clis_protocol_id = 1;
+}
+
+message CLIS2015U04GetPatientListItemResponse { 
+	repeated CLIS2015U04GetPatientListItemInfo Num = 1; 
+}
+
+message CLIS2015U04GetPatientStatusListItemRequest { 
+	optional string protocol_patient_id = 1;
+}
+
+message CLIS2015U04GetPatientStatusListItemResponse { 
+	repeated CLIS2015U04GetPatientStatusListItemInfo Num = 1; 
+}
+
+message CLIS2015U04GetProtocolListByPatientItemRequest { 
+	optional string patient_code = 1; 
+}
+
+message CLIS2015U04GetProtocolListByPatientItemResponse { 
+	repeated CLIS2015U04GetProtocolListByPatientItemInfo Num = 1; 
+}
+
+message CLIS2015U04UpdateStatusPatientItemRequest {
+       repeated CLIS2015U04GetPatientStatusListItemInfo patient_status = 1;
+}
+
+message UpdateResponse { 
+	required bool result = 1; 
+}
+//[END] CLIS2015U04//[END] CLIS2015U03
+//[START] CLIS2015U13
+message CLIS2015U13TrialItemListRequest{
+	optional string clis_protocol_id = 1;
+}
+
+message CLIS2015U13TrialItemListResponse{
+  repeated ComboListItemInfo trial_list = 1;
+}
+//[END] CLIS2015U13

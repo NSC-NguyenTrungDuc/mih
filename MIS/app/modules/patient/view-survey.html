@@ -1,0 +1,144 @@
+<header ng-include="'templates/header.html'"></header>
+<section>
+    <div class="leftpanel" ng-include="'templates/left_menu.html'"></div>
+    <div class="mainpanel">
+
+        <div class="contentpanel">
+
+            <ol class="breadcrumb breadcrumb-quirk">
+                <li><a href="#/"><i class="fa fa-home mr5"></i> <translate>Dashboard</translate></a></li>
+                <li class="active"><translate>View survey result</translate></li>
+            </ol>
+            <div class="row">
+                <div class="col-md-8">
+                    <!-- BEGIN Heath Servey -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><translate>Heath survey of patient</translate></h3>
+                        </div>
+                        <div class="panel-body">
+                            <h2 class="text-center"><translate>GENERAL HEALTH SURVEY OF</translate> {{surveyObj.survey_title}}</h2>
+                            <hr class="darken">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <table class="table nomargin table-bordered table-sm">
+                                        <tr>
+                                            <th width="160px;"><translate>Patient code</translate></th>
+                                            <td colspan="2" ng-bind="surveyObj.patient_code"></td>
+                                        </tr>
+                                        <tr>
+                                            <th><translate>Patient name</translate></th>
+                                            <td ng-bind="surveyObj.patient_name"></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th><translate>Visit date</translate></th>
+                                            <td ng-bind="surveyObj.reservation_date"></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th><translate>Answered date</translate></th>
+                                            <td ng-bind="surveyObj.answer_date"></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-md-6">
+                                    <table class="table nomargin table-bordered table-sm">
+                                        <tr>
+                                            <th width="160px;"><translate>Hospital</translate></th>
+                                            <td>{{hospitalObj.hosp_name}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th><translate>Address</translate></th>
+                                            <td>{{hospitalObj.address}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th><translate>Contact</translate></th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <translate>Department</translate>
+                                            </th>
+                                            <td>{{ surveyObj.department_name }}</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h5><translate>Survey description</translate></h5>
+                                    <p class="smalltext">{{surveyObj.description}}</p>
+                                </div>
+                            </div>
+                            <hr class="ligher">
+                            <!-- BEGIN List -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="servey-view-area">
+                                        <section ng-repeat="item in surveyObj.group">
+                                            <h3 ng-bind="item.title"></h3>
+                                            <hr class="lighters">
+                                            <section ng-repeat="i in item.question">
+                                                <h5><span class="number">{{$index + 1}}</span>{{i.question_content}}?</h5>
+                                                <!-- BEGIN List Answers-->
+                                                <div class="list-answers">
+                                                    <!-- BEGIN Row-->
+                                                    <div class="row">
+                                                        <div class="col-xs-6" ng-if="i.question_type == '0'" ng-repeat="j in i.answer">
+                                                            <p>
+                                                                <label class="rdiobox">
+                                                                    <input type="radio" ng-model="j.is_selected" ng-value="true" disabled /><span>{{j.content}}</span>
+                                                                </label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-sm-6" ng-if="i.question_type == '1'" ng-repeat="j in i.answer">
+                                                            <p>
+                                                                <label class="ckbox">
+                                                                    <input type="checkbox" ng-model="j.is_selected" disabled="disable" /><span>{{j.content}}</span>
+                                                                </label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-sm-6" ng-if="i.question_type == '2'">
+                                                            <p>
+                                                                <label class="ckbox">
+                                                                    <textarea cols="50" rows="2" id="answer_content" disabled="disabled" ng-model="i.input_text" ></textarea>
+                                                                </label>
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                        <p ng-if="i.has_other_answer == 1">
+                                                            <translate>Other</translate>: <input value="{{i.has_other_text}}" disabled />
+                                                        </p></div>
+                                                    </div><!-- END Row-->
+                                                </div><!-- END List Answers-->
+                                            </section>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END List -->
+                        </div>
+                    </div><!-- END Health Servey -->
+                </div>
+                <div class="col-md-4">
+                    <!-- BEGIN Related -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><translate>Related health survey</translate></h3>
+                        </div>
+                        <div class="panel-body">
+                            <ul class="list-normal">
+                                <li ng-repeat="item in surveyObj.relate_survey.relate_list"><a href="#/patient/view-survey/{{item.survey_patient_id}}">[{{item.department_name}}] {{item.answer_date}}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content goes here... -->
+
+        </div><!-- contentpanel -->
+    </div><!-- mainpanel -->
+</section>

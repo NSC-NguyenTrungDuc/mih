@@ -1,0 +1,442 @@
+<!-- <beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+	
+	<util:constant static-field="nta.mss.misc.navigation.NavigationConfig.NavigationType.FRONT_LEFT_MENU" id="frontLeftMenuNav"/>
+	<util:constant static-field="nta.mss.misc.navigation.NavigationConfig.NavigationType.BOOKING_STEPS" id="bookingStepsNav"/>
+	<util:constant static-field="nta.mss.misc.navigation.NavigationConfig.NavigationType.CHANGE_STEPS" id="changeStepsNav"/>
+	<util:constant static-field="nta.mss.misc.navigation.NavigationConfig.NavigationType.BACK_LEFT_MENU" id="backLeftMenuNav"/>
+	<util:constant static-field="nta.mss.misc.navigation.NavigationConfig.NavigationType.BOOKING_VACCINEE_STEPS" id="bookingVaccineStepsNav"/>
+	
+	<bean id="navigation" class="nta.mss.misc.navigation.Navigation">
+		<property name="navigationsList" ref="navigationsMap" />
+	</bean>
+	
+	<util:map id="navigationsMap">
+		<entry key-ref="frontLeftMenuNav" value-ref="leftMenuItems" />
+		<entry key-ref="bookingStepsNav" value-ref="bookingStepsItems" />
+		<entry key-ref="changeStepsNav" value-ref="changeStepsItems" />
+		<entry key-ref="backLeftMenuNav" value-ref="backLeftMenuItems" />
+		<entry key-ref="bookingVaccineStepsNav" value-ref="bookingVaccineStepsItems" />
+	</util:map>
+	
+	<util:list id="leftMenuItems">
+		<bean class="nta.mss.misc.navigation.NavigationItem">
+			<property name="label">
+				<value>general.menu.top_service_registration</value>
+			</property>
+			<property name="link">
+				<value>/booking/index</value>
+			</property>
+			<property name="iconClass">
+				<value>fa fa-user</value>
+			</property>
+			<property name="group" value="TOP_SERVICE" />
+		</bean>
+		<bean class="nta.mss.misc.navigation.NavigationItem">
+			<property name="label">
+				<value>general.menu.booking_new</value>
+			</property>
+			<property name="link">
+				<value>/booking/booking-new</value>
+			</property>
+			<property name="iconClass">
+				<value>fa fa-key</value>
+			</property>
+			<property name="group" value="BOOKING_NEW" />
+		</bean>
+		<bean class="nta.mss.misc.navigation.NavigationItem">
+			<property name="label">
+				<value>general.menu.reappointment</value>
+			</property>
+			<property name="link">
+				<value>/booking/re-examination</value>
+			</property>
+			<property name="iconClass">
+				<value>fa fa-pencil</value>
+			</property>
+			<property name="group" value="REEXAMINE" />
+		</bean>
+		<bean class="nta.mss.misc.navigation.NavigationItem">
+			<property name="label">
+				<value>general.menu.confirm_edit_booking</value>
+			</property>
+			<property name="link">
+				<value>/booking/authorized-email</value>
+			</property>
+			<property name="iconClass">
+				<value>fa fa-calendar-o</value>
+			</property>
+			<property name="group" value="EDIT_BOOKING" />
+		</bean>
+		<bean class="nta.mss.misc.navigation.NavigationItem">
+			<property name="label">
+				<value>general.menu.schedule_pending_status</value>
+			</property>
+			<property name="link">
+				<value>/booking/pending-status</value>
+			</property>
+			<property name="iconClass">
+				<value>fa fa-calendar</value>
+			</property>
+			<property name="group" value="PENDING_STATUS" />
+		</bean>
+	</util:list>
+	
+	<util:list id="bookingStepsItems">
+		<bean class="nta.mss.misc.navigation.NavigationItem">
+			<property name="label">
+				<value>general.booking.step.choose_department</value>
+			</property>
+			<property name="link">
+				<value>/booking/booking-new</value>
+				<value>/booking/booking-new-breadcrumb</value>
+			</property>
+			<property name="group" value="CHOOSE_DEPARTMENT" />
+		</bean>
+		<bean class="nta.mss.misc.navigation.NavigationItem">
+			<property name="label">
+				<value>general.booking.step.choose_date</value>
+			</property>
+			<property name="link">
+				<value>/booking/booking-time</value>
+			</property>
+			<property name="group" value="CHOOSE_TIME" />
+		</bean>
+		<bean class="nta.mss.misc.navigation.NavigationItem">
+			<property name="label">
+				<value>general.booking.step.input_info</value>
+			</property>
+			<property name="link">
+				<value>/booking/booking-info</value>
+			</property>
+			<property name="group" value="INPUT_INFO" />
+		</bean>
+		<bean class="nta.mss.misc.navigation.NavigationItem">
+			<property name="label">
+				<value>general.booking.step.confirm</value>
+			</property>
+			<property name="link">
+				<value>/booking/booking-info-confirm</value>
+			</property>
+			<property name="group" value="CONFIRM" />
+		</bean>
+		<bean class="nta.mss.misc.navigation.NavigationItem">
+			<property name="label">
+				<value>general.booking.step.temp_schedule</value>
+			</property>
+			<property name="link">
+				<value>/booking/booking-accept</value>
+			</property>
+			<property name="group" value="TEMP_SCHEDULE" />
+		</bean>
+		<bean class="nta.mss.misc.navigation.NavigationItem">
+			<property name="label">
+				<value>general.booking.step.finish_schedule</value>
+			</property>
+			<property name="link">
+				<value>/booking/booking-complete</value>
+			</property>
+			<property name="group" value="FINISH_SCHEDULE" />
+		</bean>
+	</util:list>
+	
+	<util:list id="changeStepsItems">
+		<bean class="nta.mss.misc.navigation.NavigationItem">
+			<property name="label">
+				<value>general.change.step.choose_date</value>
+			</property>
+			<property name="link">
+				<value>/booking/booking-change</value>
+			</property>
+			<property name="group" value="CHANGE_CHOOSE_TIME" />
+		</bean>
+		<bean class="nta.mss.misc.navigation.NavigationItem">
+			<property name="label">
+				<value>general.change.step.confirm_change</value>
+			</property>
+			<property name="link">
+				<value>/booking/booking-change-confirm</value>
+			</property>
+			<property name="group" value="CHANGE_CONFIRM" />
+		</bean>
+		<bean class="nta.mss.misc.navigation.NavigationItem">
+			<property name="label">
+				<value>general.change.step.temp_change</value>
+			</property>
+			<property name="link">
+				<value>/booking/booking-change-accept</value>
+			</property>
+			<property name="group" value="CHANGE_ACCEPT" />
+		</bean>
+		<bean class="nta.mss.misc.navigation.NavigationItem">
+			<property name="label">
+				<value>general.change.step.finish_change</value>
+			</property>
+			<property name="link">
+				<value>/booking/booking-change-complete</value>
+			</property>
+			<property name="group" value="CHANGE_COMPLETE" />
+		</bean>
+	</util:list>
+	
+	<util:list id="backLeftMenuItems">
+		<bean class="nta.mss.misc.navigation.NavigationItem">
+			<property name="label">
+				<value>general.menu.reservation_manage</value>
+			</property>
+			<property name="group" value="MANAGE_RESERVATION" />
+			<property name="iconClass">
+				<value>fa fa-calendar</value>
+			</property>
+			<property name="link">
+				<value>/booking-manage/select-department</value>
+			</property>
+		</bean>
+		<bean class="nta.mss.misc.navigation.NavigationItem">
+			<property name="label">
+				<value>general.menu.search_reservation</value>
+			</property>
+			<property name="group" value="SEARCH_RESERVATION" />
+			<property name="iconClass">
+				<value>fa fa-pencil-square</value>
+			</property>
+			<property name="link">
+				<value>/booking-manage/search-booking</value>
+			</property>
+		</bean>
+		<bean class="nta.mss.misc.navigation.NavigationItem" id="createScheduleNav">
+			<property name="label">
+				<value>general.menu.schedule_management</value>
+			</property>
+			<property name="group" value="SCHEDULE_MANAGEMENT" />
+			<property name="iconClass">
+				<value>fa fa-pencil-square-o</value>
+			</property>
+			<property name="children">
+				<util:list>
+					<ref bean="enterDeptDoctorNav"/>
+					<ref bean="comaSettingNav"/>
+					<ref bean="comaRegisterChangeNav"/>
+					<ref bean="scheduleMailHistoryNav" />
+				</util:list>
+			</property>
+		</bean>
+		<bean class="nta.mss.misc.navigation.NavigationItem" id="createVaccineNav">
+			<property name="label">
+				<value>general.menu.vaccine.management</value>
+			</property>
+			<property name="group" value="VACCINE_MANAGEMENT" />
+			<property name="iconClass">
+				<value>fa fa-medkit</value>
+			</property>
+			<property name="children">
+				<util:list>
+					<ref bean="vaccineListNav"/>
+					<ref bean="vaccineReportNav"/>
+				</util:list>
+			</property>
+		</bean>
+		<bean class="nta.mss.misc.navigation.NavigationItem">
+			<property name="label">
+				<value>general.menu.mail_template</value>
+			</property>
+			<property name="group" value="MAIL_TEMPLATE" />
+			<property name="iconClass">
+				<value>fa fa-envelope</value>
+			</property>
+			<property name="link">
+				<value>/mail/mail-template-list</value>
+			</property>
+		</bean>
+		<bean class="nta.mss.misc.navigation.NavigationItem">
+			<property name="label">
+				<value>general.menu.reminder_email</value>
+			</property>
+			<property name="group" value="REMINDER_MAIL" />
+			<property name="children">
+				<util:list>
+					<ref bean="mailingListNav"/>
+					<ref bean="mailHistoryNav"/>
+				</util:list>
+			</property>
+			<property name="iconClass">
+				<value>fa fa-envelope-o</value>
+			</property>
+		</bean>
+		<bean class="nta.mss.misc.navigation.NavigationItem">
+			<property name="label">
+				<value>general.menu.id_management</value>
+			</property>
+			<property name="group" value="USER_MANAGEMENT" />
+			<property name="iconClass">
+				<value>fa fa-key</value>
+			</property>
+			<property name="link">
+			<value>/account/id-management</value>
+		</property>
+		</bean>
+		<bean class="nta.mss.misc.navigation.NavigationItem">
+			<property name="label">
+				<value>general.menu.account_management</value>
+			</property>
+			<property name="group" value="ACCOUNT_MANAGEMENT" />
+			<property name="iconClass">
+				<value>fa fa-key</value>
+			</property>
+			<property name="link">
+			<value>/account/account-manage</value>
+		</property>
+		</bean>
+	</util:list>
+	
+	Sub menus for create schedule menu
+	<bean class="nta.mss.misc.navigation.NavigationItem" id="enterDeptDoctorNav">
+		<property name="label">
+			<value>general.menu.enter_department_doctor</value>
+		</property>
+		<property name="group" value="INPUT_DEPARTMENT_DOCTOR" />
+		<property name="link">
+			<value>/schedule/view-dept-and-doctor</value>
+		</property>
+	</bean>
+	<bean class="nta.mss.misc.navigation.NavigationItem" id="comaSettingNav">
+		<property name="label">
+			<value>general.menu.coma_setting</value>
+		</property>
+		<property name="group" value="COMA_SETTINGS" />
+		<property name="link">
+			<value>/schedule/schedule-coma-select-department</value>
+		</property>
+	</bean>
+	<bean class="nta.mss.misc.navigation.NavigationItem" id="comaRegisterChangeNav">
+		<property name="label">
+			<value>general.menu.coma_register_change</value>
+		</property>
+		<property name="group" value="COMA_REGISTER_CHANGE" />
+		<property name="link">
+			<value>/schedule/import-department-schedule-csv</value>
+		</property>
+	</bean>
+	<bean class="nta.mss.misc.navigation.NavigationItem" id="scheduleMailHistoryNav">
+		<property name="label">
+			<value>general.menu.schedule_mail_history</value>
+		</property>
+		<property name="group" value="SCHEDULE_MAIL_HISTORY" />
+		<property name="link">
+			<value>/schedule/schedule-mail-history</value>
+		</property>
+	</bean>
+	
+	Sub menus for create vaccine menu
+	<bean class="nta.mss.misc.navigation.NavigationItem" id="vaccineListNav">
+		<property name="label">
+			<value>general.menu.vaccine.list</value>
+		</property>
+		<property name="group" value="VACCINE_LIST" />
+		<property name="link">
+			<value>/vaccine/vaccine-management</value>
+		</property>
+	</bean>
+	<bean class="nta.mss.misc.navigation.NavigationItem" id="vaccineReportNav">
+		<property name="label">
+			<value>general.menu.vaccine.report</value>
+		</property>
+		<property name="group" value="VACCINE_REPORT" />
+		<property name="link">
+			<value>/vaccine/vaccine-report</value>
+		</property>
+	</bean>
+	
+	Sub menus for reminder mail menu
+	<bean class="nta.mss.misc.navigation.NavigationItem" id="mailingListNav">
+		<property name="label">
+			<value>general.menu.mailing_list</value>
+		</property>
+		<property name="group" value="MAILING_LIST" />
+		<property name="link">
+			<value>/mail/mail-reminder-mail-list-check</value>
+		</property>
+	</bean>
+	<bean class="nta.mss.misc.navigation.NavigationItem" id="mailHistoryNav">
+		<property name="label">
+			<value>general.menu.mail_history</value>
+		</property>
+		<property name="group" value="MAIL_HISTORY" />
+		<property name="link">
+			<value>/mail/mail-list-history</value>
+		</property>
+	</bean>
+
+	step for booking vaccine
+	<util:list id="bookingVaccineStepsItems">
+		<bean class="nta.mss.misc.navigation.NavigationItem">
+			<property name="label">
+				<value>general.booking.step.choose_department</value>
+			</property>
+			<property name="link">
+				<value>/booking/booking-new-breadcrumb</value>
+			</property>
+			<property name="group" value="CHOOSE_DEPARTMENT" />
+		</bean>
+		<bean class="nta.mss.misc.navigation.NavigationItem">
+			<property name="label">
+				<value>general.booking.step.vaccine.recommendation</value>
+			</property>
+			<property name="link">
+				<value>/booking/booking-vaccine-recommendation</value>
+			</property>
+			<property name="group" value="VACCINE_RECOMMENDATION" />
+		</bean>
+		<bean class="nta.mss.misc.navigation.NavigationItem">
+			<property name="label">
+				<value>general.booking.step.choose_date</value>
+			</property>
+			<property name="link">
+				<value>/booking/booking-vaccine-select-time</value>
+			</property>
+			<property name="group" value="CHOOSE_TIME" />
+		</bean>
+		<bean class="nta.mss.misc.navigation.NavigationItem">
+			<property name="label">
+				<value>general.booking.step.input_info</value>
+			</property>
+			<property name="link">
+				<value>/booking/booking-vaccine-info</value>
+			</property>
+			<property name="group" value="INPUT_INFO" />
+		</bean>
+		<bean class="nta.mss.misc.navigation.NavigationItem">
+			<property name="label">
+				<value>general.booking.step.confirm</value>
+			</property>
+			<property name="link">
+				<value>/booking/booking-vaccine-info-confirm</value>
+			</property>
+			<property name="group" value="CONFIRM" />
+		</bean>
+		<bean class="nta.mss.misc.navigation.NavigationItem">
+			<property name="label">
+				<value>general.booking.step.temp_schedule</value>
+			</property>
+			<property name="link">
+				<value>/booking/booking-vaccine-accept</value>
+			</property>
+			<property name="group" value="TEMP_SCHEDULE" />
+		</bean>
+		<bean class="nta.mss.misc.navigation.NavigationItem">
+			<property name="label">
+				<value>general.booking.step.finish_schedule</value>
+			</property>
+			<property name="link">
+				<value>/booking/booking-vaccine-complete</value>
+			</property>
+			<property name="group" value="FINISH_SCHEDULE" />
+		</bean>
+	</util:list>
+</beans> -->

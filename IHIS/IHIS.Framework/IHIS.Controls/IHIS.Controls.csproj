@@ -1,0 +1,589 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <DebugType>
+    </DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2E61012D-5AF0-49F3-AB80-DE6F7001BF23}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>IHIS.Controls</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>IHIS.Framework</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleAssemblies>
+    </CodeAnalysisRuleAssemblies>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>Migrated rules for IHIS.Controls.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ColorHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ColorStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DatePickerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DragHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DrawHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IDataControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IFunctionPerformer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ILayoutContainer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImageIndexesEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IMultiLayouts.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IReservedMemoControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ISavePerformer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IUserObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="JapanTextHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="JapanYearHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MaskHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PostCallHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PostCallHelperForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PropertyEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PropertyEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TextEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TextEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TypeCheck.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XButtonMsgBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XCheckedListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XColor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XColorEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XColorTypeConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XColumnHeaders.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XComboItemEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XCTrackBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XDataGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XDataGridColumnStyles.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XDatePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XDateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XDisplayBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XDomainUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XEditMask.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XFlatLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XFlatRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XImageButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XInputMsgBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XMatrix\XMatrix.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XMatrix\XMatrixControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XMatrix\XMatrixItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMatrix\XMatrixItemCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMatrix\XMatrixPrintDocument.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XMatrix\XMatrixUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XMemoBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XMonthBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XMonthCalendar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XNumericUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRichTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRotator\EventNotifier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XRotator\RotatorFrame.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRotator\RotatorFrameContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRotator\RotatorFrameTemplete.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XRotator\TextAnimations.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XRotator\XRotator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRotator\XRotatorBaseControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRotator\XRotatorItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRotator\XRotatorItemCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XRotator\XRotatorUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XRoundPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XTaskBar\XExpando.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XTaskBar\XTaskBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XTaskBar\XTaskBarItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XTaskBar\XTaskBarSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XTaskBar\XTaskBarUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XToolTip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XTrackBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="ColorStyles.xml" />
+    <EmbeddedResource Include="DatePickerForm.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DatePickerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatePickerForm.ja-JP.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DatePickerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatePickerForm.resx">
+      <DependentUpon>DatePickerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatePickerForm.vi-VN.resx">
+      <DependentUpon>DatePickerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatePickerForm.vi.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DatePickerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\Asterisk.gif" />
+    <EmbeddedResource Include="Images\CheckBox.gif" />
+    <EmbeddedResource Include="Images\DragCursor.cur" />
+    <EmbeddedResource Include="Images\DragPoint.bmp" />
+    <EmbeddedResource Include="Images\Error.gif" />
+    <EmbeddedResource Include="Images\Exclamation.gif" />
+    <EmbeddedResource Include="Images\FindImage.gif" />
+    <EmbeddedResource Include="Images\Hand.gif" />
+    <EmbeddedResource Include="Images\Information.gif" />
+    <EmbeddedResource Include="Images\Landscape.gif" />
+    <EmbeddedResource Include="Images\MemoImage.gif" />
+    <EmbeddedResource Include="Images\MemoImages.gif" />
+    <EmbeddedResource Include="Images\NextH.gif" />
+    <EmbeddedResource Include="Images\NextN.gif" />
+    <EmbeddedResource Include="Images\NextP.gif" />
+    <EmbeddedResource Include="Images\PickerImage.gif" />
+    <EmbeddedResource Include="Images\Portrait.gif" />
+    <EmbeddedResource Include="Images\PrevH.gif" />
+    <EmbeddedResource Include="Images\PrevN.gif" />
+    <EmbeddedResource Include="Images\PrevP.gif" />
+    <EmbeddedResource Include="Images\Question.gif" />
+    <EmbeddedResource Include="Images\Stop.gif" />
+    <EmbeddedResource Include="Images\UnCheckBox.gif" />
+    <EmbeddedResource Include="Images\Warning.gif" />
+    <EmbeddedResource Include="Images\XButton.bmp" />
+    <EmbeddedResource Include="Images\XCheckBox.bmp" />
+    <EmbeddedResource Include="Images\XComboBox.bmp" />
+    <EmbeddedResource Include="Images\XDateTimePicker.bmp" />
+    <EmbeddedResource Include="Images\XDisplayBox.bmp" />
+    <EmbeddedResource Include="Images\XGroupBox.bmp" />
+    <EmbeddedResource Include="Images\XMemoBox.bmp" />
+    <EmbeddedResource Include="Images\XTaskBar.bmp" />
+    <EmbeddedResource Include="Images\XTextBox.bmp" />
+    <EmbeddedResource Include="MSG.xml" />
+    <EmbeddedResource Include="PostCallHelperForm.resx">
+      <DependentUpon>PostCallHelperForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PropertyEditorForm.resx">
+      <DependentUpon>PropertyEditorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextEditorForm.resx">
+      <DependentUpon>TextEditorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XButton.resx">
+      <DependentUpon>XButton.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XButtonMsgBox.resx">
+      <DependentUpon>XButtonMsgBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XCheckBox.resx">
+      <DependentUpon>XCheckBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XComboBox.resx">
+      <DependentUpon>XComboBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XComboItemEditorForm.resx">
+      <DependentUpon>XComboItemEditorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XDatePicker.resx">
+      <DependentUpon>XDatePicker.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XInputMsgBox.resx">
+      <DependentUpon>XInputMsgBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XMatrix\XMatrix.resx">
+      <DependentUpon>XMatrix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XMatrix\XMatrixControl.resx">
+      <DependentUpon>XMatrixControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XMessageBox.resx">
+      <DependentUpon>XMessageBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XMonthBox.resx">
+      <DependentUpon>XMonthBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XPictureBox.resx">
+      <DependentUpon>XPictureBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRichTextBox.resx">
+      <DependentUpon>XRichTextBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRotator\XRotatorItem.resx">
+      <DependentUpon>XRotatorItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XTaskBar\XExpandoArrows.resX">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XTextBox.resx">
+      <DependentUpon>XTextBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XTrackBar.resx">
+      <DependentUpon>XTrackBar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XTreeView.resx">
+      <DependentUpon>XTreeView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IHIS.CloudConnector\IHIS.CloudConnector.csproj">
+      <Project>{4424c55d-ebba-4825-aba2-e7718a361f9a}</Project>
+      <Name>IHIS.CloudConnector</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\IHIS.ComFunc\IHIS.ComFunc.csproj">
+      <Project>{719e4bd5-36ad-4ed1-a6c9-5c713911519f}</Project>
+      <Name>IHIS.ComFunc</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\IHIS.Service\IHIS.Service.csproj">
+      <Project>{82a2fa5a-f95e-4e72-950a-1e667522a1d2}</Project>
+      <Name>IHIS.Service</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\IHIS.Win32\IHIS.Win32.csproj">
+      <Project>{2e9338ee-48b0-4c77-95d9-61357b449b96}</Project>
+      <Name>IHIS.Win32</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\IHIS.X\IHIS.X.Magic\IHIS.X.Magic.csproj">
+      <Project>{92f94ea0-9910-4895-b8a1-fed1543a9da1}</Project>
+      <Name>IHIS.X.Magic</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>$(SolutionDir)IHISFrameworkBuild.bat PRE $(SolutionDir) $(TargetDir) $(SolutionName) $(TargetFileName)</PreBuildEvent>
+    <PostBuildEvent>$(SolutionDir)IHISFrameworkBuild.bat POST $(SolutionDir) $(TargetDir) $(SolutionName) $(TargetFileName)</PostBuildEvent>
+  </PropertyGroup>
+</Project>

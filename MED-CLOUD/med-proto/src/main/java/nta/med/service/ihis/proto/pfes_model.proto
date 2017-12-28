@@ -1,0 +1,99 @@
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "PfesModelProto";
+
+//[START]PFE0101U00
+message PFE0101U00GrdMCodeInfo
+{
+	optional string code_type = 1;
+	optional string code_type_name = 2;
+}
+message PFE0101U00GrdDCodeInfo
+{
+	optional string code_type         = 1;
+	optional string code              = 2;
+	optional string code_name         = 3;
+	optional string code_name_re      = 4;
+	optional string code_value        = 5;
+}
+message PFE0101U00SaveLayoutInfo
+{
+	optional string code_type           = 1;
+	optional string code                = 2;
+	optional string code_name           = 3;
+	optional string code_name_re        = 4;
+	optional string code_value          = 5;
+	optional string row_state           = 6;
+}
+//[END]PFE0101U00
+
+//[START] PFE7001Q01
+message PFE7001Q01LayDailyReportInfo
+{
+	optional string gumsa_date        = 1;
+	optional string io_gubun          = 2;
+	optional string bunho             = 3;
+	optional string suname            = 4;
+	optional string gwa               = 5;
+	optional string doctor_name       = 6;
+	optional string jundal_part       = 7;
+	optional string hangmog_code      = 8;
+	optional string hangmog_name      = 9;
+}
+message PFE7001Q02LayMonthlyReportInfo
+{
+	optional string yyyymm           = 1;
+	optional string hangmog_code     = 2;
+	optional string gumsa_name       = 3;
+	optional string d01              = 4;
+	optional string d02              = 5;
+	optional string d03              = 6;
+	optional string d04              = 7;
+	optional string d05              = 8;
+	optional string d06              = 9;
+	optional string d07              = 10;
+	optional string d08              = 11;
+	optional string d09              = 12;
+	optional string d10              = 13;
+	optional string d11              = 14;
+	optional string d12              = 15;
+	optional string d13              = 16;
+	optional string d14              = 17;
+	optional string d15              = 18;
+	optional string d16              = 19;
+	optional string d17              = 20;
+	optional string d18              = 21;
+	optional string d19              = 22;
+	optional string d20              = 23;
+	optional string d21              = 24;
+	optional string d22              = 25;
+	optional string d23              = 26;
+	optional string d24              = 27;
+	optional string d25              = 28;
+	optional string d26              = 29;
+	optional string d27              = 30;
+	optional string d28              = 31;
+	optional string d29              = 32;
+	optional string d30              = 33;
+	optional string d31              = 34;
+	optional string total            = 35;
+}
+//[END] PFE7001Q01
+
+//[START] PFE0101U01
+message PFE0101U01GrdDCodeInfo
+{
+	optional string code_type        = 1;
+	optional string code             = 2;
+	optional string code_name        = 3;
+	optional string code_name_re     = 4;
+	optional string code_value       = 5;
+	optional string row_state        = 6;
+}
+message PFE0101U01GrdMCodeInfo
+{
+	optional string code_type         = 1;
+	optional string code_type_name    = 2;
+	optional string admin_gubun       = 3;
+	optional string row_state         = 4;
+}
+//[END] PFE0101U01

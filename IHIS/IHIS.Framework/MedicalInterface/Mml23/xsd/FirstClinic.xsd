@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<xs:schema xmlns:mmlFc="uri:mmlFc" xmlns:mmlFcl="uri:mmlFcl" xmlns:mmlRd="uri:mmlRd" elementFormDefault="qualified" targetNamespace="uri:mmlFcl" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="uri:mmlFc" />
+  <xs:import namespace="uri:mmlRd" />
+  <xs:element name="FirstClinicModule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlFcl:familyHistory" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlFcl:childhood" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlFcl:pastHistory" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlFcl:chiefComplaints" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlFcl:presentIllnessNotes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="familyHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="mmlFcl:familyHistoryItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="familyHistoryItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mmlFcl:relation" />
+        <!--<xs:element xmlns:q1="uri:mmlRd" ref="q1:RegisteredDiagnosisModule" />-->
+        <xs:element ref="mmlRd:RegisteredDiagnosisModule" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlFcl:age" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlFcl:memo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="relation" type="xs:string" />
+  <xs:element name="age" type="xs:string" />
+  <xs:element name="memo" type="xs:string" />
+  <xs:element name="childhood">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlFcl:birthInfo" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlFcl:vaccination" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="birthInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlFc:Facility" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlFcl:deliveryWeeks" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlFcl:deliveryMethod" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlFcl:bodyWeight" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlFcl:bodyHeight" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlFcl:chestCircumference" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlFcl:headCircumference" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlFcl:memo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deliveryWeeks" type="xs:string" />
+  <xs:element name="deliveryMethod" type="xs:string" />
+  <xs:element name="bodyWeight">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="unit" type="xs:string" use="required" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="bodyHeight">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="unit" type="xs:string" use="required" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chestCircumference">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="unit" type="xs:string" use="required" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="headCircumference">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="unit" type="xs:string" use="required" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="vaccination">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="mmlFcl:vaccinationItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="vaccinationItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mmlFcl:vaccine" />
+        <xs:element ref="mmlFcl:injected" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlFcl:age" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlFcl:memo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="vaccine" type="xs:string" />
+  <xs:element name="injected" type="xs:string" />
+  <xs:element name="pastHistory">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="mmlFcl:freeNotes" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="mmlFcl:pastHistoryItem" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pastHistoryItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mmlFcl:timeExpression" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="mmlFcl:eventExpression" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="timeExpression" type="xs:string" />
+  <xs:element name="eventExpression" type="xs:string" />
+  <xs:element name="chiefComplaints" type="xs:string" />
+  <xs:element name="presentIllnessNotes" type="xs:string" />
+  <xs:element name="freeNotes" type="xs:string" />
+</xs:schema>

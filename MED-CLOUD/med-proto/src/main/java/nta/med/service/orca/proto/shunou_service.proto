@@ -1,0 +1,19 @@
+import "rpc.proto";
+import "shunou_model.proto";
+
+option java_package = "nta.med.service.orca.proto";
+option java_outer_classname = "ShunouServiceProto";
+option (version) = "1.0.0";
+option (service) = "shunou";
+
+message ShunouRequest {
+	required string patient_id = 1;
+	optional string perform_date = 2;
+	optional string perform_month = 3;
+	optional string perform_year = 4;
+}
+
+message ShunouResponse {
+	required PatientInformation patient_info = 1;
+	repeated IncomeInformation income_information = 2;
+}

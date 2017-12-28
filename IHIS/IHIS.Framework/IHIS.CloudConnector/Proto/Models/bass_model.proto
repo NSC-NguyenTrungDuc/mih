@@ -1,0 +1,194 @@
+// --- [Start] BAS0001U00 --- 
+message BAS0001U00GrdBAS0001Info{
+	optional string start_date = 1;
+	optional string end_date = 2;
+	optional string yoyang_giho = 3;
+	optional string yoyang_name = 4;
+	optional string yoyang_name2 = 5;
+	optional string zip_code1 = 6;
+	optional string zip_code2 = 7;
+	optional string zip_code = 8;
+	optional string address = 9;
+	optional string address1 = 10;
+	optional string tel = 11;
+	optional string tel1 = 12;
+	optional string fax = 13;
+	optional string tot_bed = 14;
+	optional string homepage = 15;
+	optional string email = 16;
+	optional string hosp_jin_gubun = 17;
+	optional string dodobuhyeun_no = 18;
+	optional string dodobuhyeun_name = 19;
+	optional string jaedan_name = 20;
+	optional string simple_yoyang_name = 21;
+	optional string bank_name = 22;
+	optional string bank_jijum = 23;
+	optional string bank_no = 24;
+	optional string bank_acc_name = 25;
+	optional string president_name = 26;
+	optional string orca_gigwan_code = 27;
+	optional string data_row_state = 28;
+}
+
+// --- [Start] BAS0260U00 ---
+message BAS0260GrdBuseoListItemInfo{
+        optional string  buseo_code =  1;
+        optional string  buseo_name = 2;
+        optional string  parent_buseo = 3; 
+        optional string  buseo_gubun = 4;  
+        optional string  gwa_gubun = 5 ;   
+        optional string  gwa = 6;       ;
+        optional string  gwa_name = 7;     
+        optional string  parent_gwa = 8 ;  
+        optional string  out_jubsu_yn = 9; 
+        optional string  ipwon_yn = 10;    
+        optional string  out_slip_yn = 11; 
+        optional string  inp_slip_yn = 12; 
+        optional string  euryoseo_yn = 13; 
+        optional string  out_move_yn = 14; 
+        optional string  out_jundal_part_yn = 15;        
+        optional string  inp_jundal_part_yn = 16;        
+        optional string  input_gubun = 17;        
+        optional string  move_comment = 18;        
+        optional string  tel = 19;        
+        optional string  gwa_ename = 20;     
+        optional string  gwa_sname = 21;     
+        optional string  gwa_sort1 = 22;     
+        optional string  gwa_sort2 = 23;     
+        optional string  rmk = 24;        
+        optional string  end_date = 25;      
+        optional string  start_date = 26;    
+        optional string  buseo_name2 = 27;   
+        optional string  gwa_color = 28;     
+        optional string  hpc_ho_dong_yn = 29;
+        optional string  add_doctor = 30;    
+        optional string  gwa_name_kana = 31;     
+        optional string  row_sate = 32;
+}
+// --- [End] BAS0260U00 ---
+
+
+// --- [Start] BAS0123U00 ---
+message BAS0123U00FwkZipCodeInfo {
+	optional string zip_code = 1;
+	optional string zip_name1 = 2;
+	optional string zip_name2 = 3;
+	optional string zip_name3 = 4;
+}
+
+message BAS0123U00GrdBAS0123Info {
+        optional string zip_code = 1;
+        optional string zip_name1 = 2;
+        optional string zip_name2 = 3;
+        optional string zip_name3 = 4;
+        optional string zip_name_gana1 = 5;
+        optional string zip_name_gana2 = 6;
+        optional string zip_name_gana3 = 7;
+        optional string zip_tonggye = 8;
+        optional string zip_code1 = 9;
+        optional string zip_code2 = 10;
+        optional string data_row_state = 11;
+}
+
+// --- [End] BAS0123U00 ---
+
+// --- [Start] BAS0210U00 ---
+message BAS0210U00grdBAS0210ItemInfo{
+	optional string gubun=1;
+	optional string gubun_name=2;
+	optional string retrieve_yn=3;
+	optional string start_date=4;
+	optional string end_date=5;
+	optional string johap_gubun=6;
+	optional string johap_name=7;
+	optional string gonbi_yn=8;
+	optional string validation_check = 9;
+	optional string data_row_state = 10;
+}
+
+message BAS0210U00grdBAS0210GridColumnChangedItemInfo {
+   optional string code = 1;
+   optional string code_name = 2;
+}
+// --- [End] BAS0210U00 ---
+
+// --- [Start] BAS0310U00 ---
+message BAS0310U00GrdListItemInfo{
+        optional string sg_code = 1;
+        optional string group_gubun = 2;
+        optional string sg_name = 3;
+        optional string sg_name_kana = 4;
+        optional string sg_ymd = 5;
+        optional string suga_change = 6;
+        optional string suga_change_nm_d = 7;
+        optional string bulyong_ymd = 8;
+        optional string bulyong_sayu = 9;
+        optional string bulyong_sayu_nm_d = 10;
+        optional string danui = 11;
+        optional string danui_name = 12;
+        optional string bun_code = 13;
+        optional string bun_code_name = 14;
+        optional string marume_gubun = 15;
+        optional string sg_union = 16;
+        optional string remark = 17;
+        optional string marume_name = 18;
+        optional string hubal_drg_yn = 19;
+        optional string sunab_qcode_out = 20;
+        optional string sunab_qcode_inp = 21;
+        optional string tax_yn = 22;
+        optional string row_state = 23;
+}
+
+// --- [End] BAS0310U00 ---
+
+// --- [End] BAS0311Q01 ---
+message BAS0311Q01GrdBAS0311Info {
+	optional string sg_ymd = 1;
+	optional string sg_code = 2;
+	optional string sg_name = 3;
+	optional string sg_name_kana = 4;
+	optional string bun_code = 5;
+	optional string group_gubun = 6;
+	optional string danui = 7;
+	optional string bulyong_ymd = 8;
+}
+// --- [End] BAS0311Q01 ---
+
+// --- [Start] BAS0101U04 ---
+message BAS0101U04GrdDetailInfo{
+	optional string code_type = 1;
+	optional string code = 2;
+	optional string code_name = 3;
+	optional string group_key = 4;
+	optional string remark = 5;
+	optional string sort_key = 6;
+	optional string data_row_state = 7;
+}
+message BAS0101U04GrdMasterInfo{
+	optional string code_type = 1;
+	optional string code_type_name = 2;
+	optional string admin_gubun = 3;
+	optional string data_row_state = 4;
+}
+// --- [End] BAS0101U04 ---
+
+// --- [Start] BAS0110Q00 ---
+message BAS0110Q00GrdBAS0110ItemInfo{
+    optional string johap = 1;
+    optional string start_date = 2;
+    optional string johap_name = 3;
+    optional string johap_gubun = 4;
+    optional string zip_code1 = 5;
+    optional string zip_code2 = 6;
+    optional string address = 7;
+    optional string tel = 8;
+    optional string law_no = 9;
+    optional string dodobuhyeun_no = 10;
+    optional string boheomja_no = 11;
+    optional string cd = 12;
+    optional string giho = 13;
+    optional string remark = 14;
+    optional string check_digit_yn = 15;
+    optional string johap_gubun_name = 16;
+}
+// --- [End] BAS0110Q00 ---

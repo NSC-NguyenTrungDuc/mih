@@ -1,0 +1,552 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnExit.Text" xml:space="preserve">
+    <value>Đóng</value>
+  </data>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>Lưu</value>
+  </data>
+  <data name="grdOrder.QuerySQL" xml:space="preserve">
+    <value>SELECT A.DRG_BUNHO                          DRG_BUNHO
+      ,A.BUNHO                              BUNHO
+      ,MAX(A.ORDER_DATE)                    ORDER_DATE
+      ,A.JUBSU_DATE                         JUBSU_DATE
+      ,MAX(DECODE(NVL(A.PRINT_YN,'N'),'N',' ',
+           TO_CHAR(A.JUBSU_ILSI,'HH24MI'))) JUBSU_TIME
+      ,MAX(A.DOCTOR)                        DOCTOR
+      ,MAX(C.DOCTOR_NAME)                   DOCTOR_NAME
+      ,MAX(A.GWA)                           GWA
+      ,MAX(B.BUSEO_NAME)                    BUSEO_NAME
+      ,MAX(A.ACT_ILSI)                      ACT_DATE
+      ,NVL(A.PRINT_YN, 'N')                 ACT_YN
+      ,MAX(A.SUNAB_DATE)                    SUNAB_DATE
+      ,MAX(A.CHULGO_DATE)                   CHULGO_DATE
+      ,NVL(A.BORYU_YN, 'N')                 BORYU_YN
+      , ''                                  chulgo_buseo
+      ,NVL(A.WONYOI_ORDER_YN, 'N')          WONYOI_ORDER_YN
+      ,MAX(D.ORDER_REMARK)                  ORDER_REMARK
+      ,MAX(D.DRG_REMARK)                    DRG_REMARK
+      ,MAX(E.ORDER_REMARK)                  O_REMARK
+      ,MAX(E.DRG_REMARK)                    D_REMARK
+  FROM DRG9041     E
+      ,DRG9040     D
+      ,BAS0270     C
+      ,VW_GWA_NAME B
+      ,DRG2010     A
+ WHERE A.BUNHO                    = :f_bunho
+   AND A.HOSP_CODE                = :f_hosp_code
+   AND NVL(A.DC_YN,'N')           &lt;&gt; 'Y'
+   AND A.SOURCE_FKOCS1003         IS NULL
+   AND B.BUSEO_CODE               (+)= A.GWA
+   AND C.DOCTOR                   (+)= A.DOCTOR
+   AND D.IN_OUT_GUBUN             (+)= 'O'
+   AND D.JUBSU_DATE               (+)= A.JUBSU_DATE
+   AND D.DRG_BUNHO                (+)= A.DRG_BUNHO
+   AND E.BUNHO                    (+)= A.BUNHO
+   AND E.HOSP_CODE                (+)= A.HOSP_CODE
+   AND D.HOSP_CODE                (+)= A.HOSP_CODE
+   AND C.HOSP_CODE                (+)= A.HOSP_CODE
+   AND B.HOSP_CODE                (+)= A.HOSP_CODE
+ GROUP BY A.BUNHO
+        , A.DRG_BUNHO
+        , A.JUBSU_DATE
+        , NVL(A.WONYOI_ORDER_YN, 'N')
+        , NVL(A.PRINT_YN, 'N')
+        , NVL(A.BORYU_YN, 'N')
+ ORDER BY 4 DESC, 1</value>
+  </data>
+  <data name="grdOrderList.QuerySQL" xml:space="preserve">
+    <value>SELECT DISTINCT
+       A.BUNHO                             BUNHO
+      ,A.DRG_BUNHO                         DRG_BUNHO
+      ,A.NAEWON_DATE                       NAEWON_DATE
+      ,A.GROUP_SER                         GROUP_SER
+      ,A.JUBSU_DATE                        JUBSU_DATE
+      ,A.ORDER_DATE                        ORDER_DATE
+      ,A.JAERYO_CODE                       JAERYO_CODE
+      ,A.NALSU                             NALSU
+      ,A.DIVIDE                            DIVIDE
+      ,A.ORD_SURYANG                       ORD_SURYANG
+      ,A.ORDER_SURYANG                     ORDER_SURYANG
+      ,FN_OCS_LOAD_CODE_NAME('ORD_DANUI', A.ORDER_DANUI, A.HOSP_CODE) ORDER_DANUI
+      ,FN_OCS_LOAD_CODE_NAME('SUBUL_DANUI', A.SUBUL_DANUI, A.HOSP_CODE) SUBUL_DANUI
+      ,A.GROUP_YN                          GROUP_YN
+      ,A.JAERYO_GUBUN                      JAERYO_GUBUN
+      ,A.BOGYONG_CODE                      BOGYONG_CODE
+      ,B.BOGYONG_NAME                      BOGYONG_NAME
+      ,FN_DRG_LOAD_DRG0130( A.CAUTION_CODE, A.HOSP_CODE)   CAUTION_NAME
+      ,A.CAUTION_CODE                      CAUTION_CODE
+      ,A.MIX_YN                            MIX_YN
+      ,E.ATC_YN                            ATC_YN
+      ,A.DV                                DV
+      ,A.DV_TIME                           DV_TIME
+      ,A.DC_YN                             DC_YN
+      ,A.BANNAB_YN                         BANNAB_YN
+      ,A.SOURCE_FKOCS1003                  SOURCE_FKOCS1003
+      ,A.FKOCS1003                         FKOCS1003
+      ,A.FKOUT1001                         FKOUT1001
+      ,A.SUNAB_DATE                        SUNAB_DATE
+      ,B.PATTERN                           PATTERN
+      ,C.JAERYO_NAME                       JAERYO_NAME
+      ,NVL(A.SUNAB_NALSU,0)                SUNAB_NALSU
+      ,NVL(A.WONYOI_ORDER_YN,'N')          WONYOI_YN
+      ,TRIM(D.ORDER_REMARK)                REMARK
+      ,A.ACT_DATE                          ACT_DATE
+      ,A.BUNRYU2                           MAYAK
+      ,A.TPN_JOJE_GUBUN                    TPN_JOJE_GUBUN
+      ,NVL(C.MIX_YN_INP,'N')               UI_JUSA_YN
+      ,A.SUBUL_SURYANG                     SUBUL_SURYANG
+      ,E.SERIAL_V                          SERIAL_V
+      ,A.POWDER_YN                         POWDER_YN
+      ,NVL(A.GYUNBON_YN, 'N')              GYUNBON_YN
+      ,NVL(A.PRINT_YN, 'N')                PRINT_YN
+      ,A.HUBAL_CHANGE_YN                   HUBAK_CHANGE_YN
+      ,A.PHARMACY                          PHARMACY   
+      ,A.DRG_PACK_YN                       DRG_PACK_YN
+      ,G.ORDER_REMARK                      ORDER_REMARK
+      ,G.DRG_REMARK                        DRG_REMARK
+  FROM DRG9042 G
+      ,DRG2030 E
+      ,OCS1003 D
+      ,INV0110 C
+      ,DRG0120 B
+      ,DRG2010 A
+ WHERE A.ORDER_DATE       = TO_DATE(:f_jubsu_date)
+   AND A.DRG_BUNHO        = :f_drg_bunho
+   AND NVL(A.WONYOI_ORDER_YN, 'N') = :f_wonyol_order_yn
+   AND A.BUNHO            = :f_bunho
+   AND A.HOSP_CODE        = :f_hosp_code
+   AND A.SOURCE_FKOCS1003 IS NULL
+   AND A.JUNDAL_PART     IN ('PA')
+   AND B.BOGYONG_CODE  (+)= A.BOGYONG_CODE
+   AND C.JAERYO_CODE      = A.JAERYO_CODE
+   AND D.PKOCS1003        = A.FKOCS1003
+   AND E.FKOCS1003     (+)= A.FKOCS1003
+   AND E.JUBSU_DATE    (+)= A.ORDER_DATE
+   AND E.DRG_BUNHO     (+)= A.DRG_BUNHO
+   AND G.IN_OUT_GUBUN  (+)= 'O'
+   AND G.FKOCS         (+)= A.FKOCS1003
+   AND G.HOSP_CODE     (+)= A.HOSP_CODE
+   AND E.HOSP_CODE     (+)= A.HOSP_CODE
+   AND D.HOSP_CODE        = A.HOSP_CODE
+   AND C.HOSP_CODE        = A.HOSP_CODE
+   AND B.HOSP_CODE     (+)= A.HOSP_CODE
+ ORDER BY TO_NUMBER(E.SERIAL_V), A.FKOCS1003</value>
+  </data>
+  <data name="xEditGridCell1.HeaderText" xml:space="preserve">
+    <value>Ngoài BV</value>
+  </data>
+  <data name="xEditGridCell14.HeaderText" xml:space="preserve">
+    <value>Chỉ thị của BS</value>
+  </data>
+  <data name="xEditGridCell17.HeaderText" xml:space="preserve">
+    <value>Số ngày</value>
+  </data>
+  <data name="xEditGridCell2.HeaderText" xml:space="preserve">
+    <value>Lưu ý RP</value>
+  </data>
+  <data name="xEditGridCell21.HeaderText" xml:space="preserve">
+    <value>Tiếp nhận</value>
+  </data>
+  <data name="xEditGridCell3.HeaderText" xml:space="preserve">
+    <value>MS đơn thuốc</value>
+  </data>
+  <data name="xEditGridCell30.HeaderText" xml:space="preserve">
+    <value>Ngày YC</value>
+  </data>
+  <data name="xEditGridCell31.HeaderText" xml:space="preserve">
+    <value>Ngày tiếp nhận</value>
+  </data>
+  <data name="xEditGridCell37.HeaderText" xml:space="preserve">
+    <value>Số ngày</value>
+  </data>
+  <data name="xEditGridCell38.HeaderText" xml:space="preserve">
+    <value>ATC</value>
+  </data>
+  <data name="xEditGridCell39.HeaderText" xml:space="preserve">
+    <value>Tên mã YC</value>
+  </data>
+  <data name="xEditGridCell4.HeaderText" xml:space="preserve">
+    <value>Khoa khám</value>
+  </data>
+  <data name="xEditGridCell5.HeaderText" xml:space="preserve">
+    <value>BS khám</value>
+  </data>
+  <data name="xEditGridCell59.HeaderText" xml:space="preserve">
+    <value>RP</value>
+  </data>
+  <data name="xEditGridCell6.HeaderText" xml:space="preserve">
+    <value>Thời gian tiếp nhận</value>
+  </data>
+  <data name="xEditGridCell60.HeaderText" xml:space="preserve">
+    <value>Cách dùng</value>
+  </data>
+  <data name="xEditGridCell61.HeaderText" xml:space="preserve">
+    <value>Mã YC</value>
+  </data>
+  <data name="xEditGridCell62.HeaderText" xml:space="preserve">
+    <value>Số lượng</value>
+  </data>
+  <data name="xEditGridCell63.HeaderText" xml:space="preserve">
+    <value>Đơn vị</value>
+  </data>
+  <data name="xEditGridCell64.HeaderText" xml:space="preserve">
+    <value>Loại</value>
+  </data>
+  <data name="xEditGridCell65.HeaderText" xml:space="preserve">
+    <value>Biên nhận</value>
+  </data>
+  <data name="xEditGridCell66.HeaderText" xml:space="preserve">
+    <value>Tán bột</value>
+  </data>
+  <data name="xEditGridCell69.HeaderText" xml:space="preserve">
+    <value>Tình trạng</value>
+  </data>
+  <data name="xEditGridCell7.HeaderText" xml:space="preserve">
+    <value>Ngày nộp</value>
+  </data>
+  <data name="xEditGridCell71.HeaderText" xml:space="preserve">
+    <value>Vật mẫu </value>
+  </data>
+  <data name="xEditGridCell74.HeaderText" xml:space="preserve">
+    <value>Ghi chú TTBN</value>
+  </data>
+  <data name="xEditGridCell75.HeaderText" xml:space="preserve">
+    <value>Bảo hiểm</value>
+  </data>
+  <data name="xEditGridCell76.HeaderText" xml:space="preserve">
+    <value>간이
+현탁</value>
+  </data>
+  <data name="xEditGridCell77.HeaderText" xml:space="preserve">
+    <value>Ghi chú theo từng loại thuốc</value>
+  </data>
+  <data name="xEditGridCell8.HeaderText" xml:space="preserve">
+    <value>Ngày uống thuốc</value>
+  </data>
+  <data name="xEditGridCell86.HeaderText" xml:space="preserve">
+    <value>G
+R</value>
+  </data>
+  <data name="xEditGridCell9.HeaderText" xml:space="preserve">
+    <value>In </value>
+  </data>
+  <data name="xEditGridCell94.HeaderText" xml:space="preserve">
+    <value>Cách dùng</value>
+  </data>
+  <data name="xEditGridCell83.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell84.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell85.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell86.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell87.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell88.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell61.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell17.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell89.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell62.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell90.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell63.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell91.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell92.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell93.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell60.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell94.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell95.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell96.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell97.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell38.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell37.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell64.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell99.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell100.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell101.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell102.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell103.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell104.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell105.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell39.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell65.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell12.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell14.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell36.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell40.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell41.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell67.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell68.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell59.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell66.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell71.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell73.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell72.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell2.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell77.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell75.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell76.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell3.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell29.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell30.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell31.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell6.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell32.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell5.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell33.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell4.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell8.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell21.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell7.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell34.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell69.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell70.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell1.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell74.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xEditGridCell9.HeaderFont" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+</root>

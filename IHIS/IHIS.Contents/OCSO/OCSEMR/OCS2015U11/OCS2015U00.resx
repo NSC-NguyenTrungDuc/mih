@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="ImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="grdPatientList.QuerySQL" xml:space="preserve">
+    <value>SELECT A.BUNHO
+    , A.NAEWON_DATE
+    , A.GWA
+    , A.DOCTOR
+    , A.NAEWON_TYPE
+    , NVL(A.RESER_YN, 'N')                                        RESER_YN
+--    , NVL(A.ARRIVE_TIME, A.JUBSU_TIME)                          JUBSU_TIME
+    , A.JUBSU_TIME                                                JUBSU_TIME
+    , A.ARRIVE_TIME                                               ARRIVE_TIME
+    , DECODE(A.NAEWON_YN 
+                      ,'H', '['||FN_BAS_LOAD_CODE_NAME('NAEWON_YN', A.NAEWON_YN)||'] '
+                      , '')
+   || B.SUNAME                                                    SUNAME
+    , B.SUNAME2
+    , FN_BAS_LOAD_CODE_NAME( 'SEX', B.SEX )                       SEX
+    , FN_BAS_LOAD_AGE ( A.NAEWON_DATE, B.BIRTH, 'XXXX')           AGE
+    , FN_BAS_LOAD_GUBUN_NAME ( A.GUBUN, A.NAEWON_DATE )           GUBUN_NAME
+    , FN_BAS_LOAD_GWA_NAME ( A.GWA, A.NAEWON_DATE )               GWA_NAME
+    , FN_BAS_LOAD_DOCTOR_NAME ( A.DOCTOR, A.NAEWON_DATE )         DOCTOR_NAME
+    , FN_BAS_LOAD_CODE_NAME ( 'CHOJAE', A.CHOJAE )                CHOJAE_NAME
+    , CASE WHEN (A.NAEWON_YN = 'E')
+                THEN 'Y' 
+                ELSE 'N' 
+      END  						          JINRYO_END_YN
+    , A.PKOUT1001                                                 PK_NAEWON
+    , A.NAEWON_YN                                                 NAEWON_YN
+    , A.SUNNAB_YN                                                 SUNNAB_YN
+    , A.JUBSU_GUBUN                                               JUBSU_GUBUN
+    , CASE WHEN (FN_OCS_LOAD_TA_GWA_JINRYO_CNT ( A.BUNHO, A.NAEWON_DATE, A.GWA ) &gt; 0)
+           THEN 'Y'
+           ELSE 'N'
+      END                                                         OTHER_GWA
+    , CASE WHEN (C.PKOCS0503 IS NULL)
+           THEN 'N'
+           ELSE 'Y'
+      END                                                        CONSULT_YN
+    , A.JUBSU_GUBUN                                              JUBSU_GUBUN
+    , NVL(D.COMMON_DOCTOR_YN , 'N')                              COMMON_DOCTOR_YN
+    , A.GUBUN 							 GUBUN
+    , NVL(E.GROUP_KEY, '0')                                      GROUP_KEY
+    , A.KENSA_YN                                                 KENSA_YN
+    , DECODE(FN_OCS_GET_NOTAPPROVE_ORDERCNT(A.HOSP_CODE, 'O', 'Y', 'N', SUBSTR(A.DOCTOR, LENGTH(A.DOCTOR) -4), A.PKOUT1001), 0, 'N', 'Y') UNAPPROVE_YN
+  FROM  BAS0102 E
+      , BAS0270 D
+      , OCS0503 C
+      , OUT0101 B
+      , OUT1001 A
+ WHERE A.HOSP_CODE   = :f_hosp_code
+   AND A.NAEWON_DATE = :f_naewon_date
+
+--診療科関係なくドクター宛に受付された患者さんみんな表示させるように変更。2013/02/10
+--   AND A.GWA         = :f_gwa
+   AND A.NAEWON_YN  IN ('Y', 'E', 'H')    -- 내원확인된 환자.
+   AND CASE WHEN (A.NAEWON_YN IN ('E', 'H')) 
+            THEN 'Y'
+            ELSE 'N'
+       END                  LIKE :f_naewon_yn
+   AND NVL(A.RESER_YN, 'N') LIKE :f_reser_yn
+   AND (
+          ( :f_doctor_mode_yn = 'Y' AND ( A.DOCTOR   LIKE '%'||SUBSTR(:f_doctor, 3) --診療科関係なくドクター宛に受付された患者さんみんな表示させるように変更。2013/02/10
+                                         OR D.COMMON_DOCTOR_YN = 'Y' 
+                                        ) 
+          )
+          OR
+          ( :f_doctor_mode_yn != 'Y' AND ( A.DOCTOR   LIKE '%'||SUBSTR(:f_doctor, 3) ) 
+          )
+       )
+--   AND A.NAEWON_TYPE != '1' -- 검사만의 환자인경우 내원타잎이 1로 저장될것임.
+   AND A.BUNHO LIKE :f_bunho
+   --
+   AND E.HOSP_CODE     = A.HOSP_CODE
+   AND E.CODE      (+) = A.JUBSU_GUBUN
+   AND E.CODE_TYPE (+) = 'JUBSU_GUBUN'
+--   AND NVL(E.GROUP_KEY, '0') = '1' 
+   AND ( (:f_doctor_mode_yn = 'Y' AND NVL(E.GROUP_KEY, '0') = '1') 
+         OR :f_doctor_mode_yn != 'Y')
+   --
+   AND B.HOSP_CODE = A.HOSP_CODE
+   AND B.BUNHO     = A.BUNHO
+   --
+   AND C.HOSP_CODE         (+) = A.HOSP_CODE
+   AND C.CONSULT_FKOUT1001 (+) = A.PKOUT1001 
+   --
+   AND D.HOSP_CODE             = A.HOSP_CODE
+   AND D.DOCTOR                = A.DOCTOR
+   AND A.NAEWON_DATE BETWEEN D.START_DATE 
+                         AND D.END_DATE
+ ORDER BY NVL(A.ARRIVE_TIME, A.JUBSU_TIME), A.BUNHO, A.JUBSU_NO</value>
+  </data>
+  <data name="xEditGrid1.QuerySQL" xml:space="preserve">
+    <value>SELECT A.BUNHO
+    , A.NAEWON_DATE
+    , A.GWA
+    , A.DOCTOR
+    , A.NAEWON_TYPE
+    , NVL(A.RESER_YN, 'N')                                        RESER_YN
+--    , NVL(A.ARRIVE_TIME, A.JUBSU_TIME)                          JUBSU_TIME
+    , A.JUBSU_TIME                                                JUBSU_TIME
+    , A.ARRIVE_TIME                                               ARRIVE_TIME
+    , DECODE(A.NAEWON_YN 
+                      ,'H', '['||FN_BAS_LOAD_CODE_NAME('NAEWON_YN', A.NAEWON_YN)||'] '
+                      , '')
+   || B.SUNAME                                                    SUNAME
+    , B.SUNAME2
+    , FN_BAS_LOAD_CODE_NAME( 'SEX', B.SEX )                       SEX
+    , FN_BAS_LOAD_AGE ( A.NAEWON_DATE, B.BIRTH, 'XXXX')           AGE
+    , FN_BAS_LOAD_GUBUN_NAME ( A.GUBUN, A.NAEWON_DATE )           GUBUN_NAME
+    , FN_BAS_LOAD_GWA_NAME ( A.GWA, A.NAEWON_DATE )               GWA_NAME
+    , FN_BAS_LOAD_DOCTOR_NAME ( A.DOCTOR, A.NAEWON_DATE )         DOCTOR_NAME
+    , FN_BAS_LOAD_CODE_NAME ( 'CHOJAE', A.CHOJAE )                CHOJAE_NAME
+    , CASE WHEN (A.NAEWON_YN = 'E')
+                THEN 'Y' 
+                ELSE 'N' 
+      END  						          JINRYO_END_YN
+    , A.PKOUT1001                                                 PK_NAEWON
+    , A.NAEWON_YN                                                 NAEWON_YN
+    , A.SUNNAB_YN                                                 SUNNAB_YN
+    , A.JUBSU_GUBUN                                               JUBSU_GUBUN
+    , CASE WHEN (FN_OCS_LOAD_TA_GWA_JINRYO_CNT ( A.BUNHO, A.NAEWON_DATE, A.GWA ) &gt; 0)
+           THEN 'Y'
+           ELSE 'N'
+      END                                                         OTHER_GWA
+    , CASE WHEN (C.PKOCS0503 IS NULL)
+           THEN 'N'
+           ELSE 'Y'
+      END                                                        CONSULT_YN
+    , A.JUBSU_GUBUN                                              JUBSU_GUBUN
+    , NVL(D.COMMON_DOCTOR_YN , 'N')                              COMMON_DOCTOR_YN
+    , A.GUBUN 							 GUBUN
+    , NVL(E.GROUP_KEY, '0')                                      GROUP_KEY
+    , A.KENSA_YN                                                 KENSA_YN
+    , DECODE(FN_OCS_GET_NOTAPPROVE_ORDERCNT(A.HOSP_CODE, 'O', 'Y', 'N', SUBSTR(A.DOCTOR, LENGTH(A.DOCTOR) -4), A.PKOUT1001), 0, 'N', 'Y') UNAPPROVE_YN
+  FROM  BAS0102 E
+      , BAS0270 D
+      , OCS0503 C
+      , OUT0101 B
+      , OUT1001 A
+ WHERE A.HOSP_CODE   = :f_hosp_code
+   AND A.NAEWON_DATE = :f_naewon_date
+
+--診療科関係なくドクター宛に受付された患者さんみんな表示させるように変更。2013/02/10
+--   AND A.GWA         = :f_gwa
+   AND A.NAEWON_YN  IN ('Y', 'E', 'H')    -- 내원확인된 환자.
+   AND CASE WHEN (A.NAEWON_YN IN ('E', 'H')) 
+            THEN 'Y'
+            ELSE 'N'
+       END                  LIKE :f_naewon_yn
+   AND NVL(A.RESER_YN, 'N') LIKE :f_reser_yn
+   AND (
+          ( :f_doctor_mode_yn = 'Y' AND ( A.DOCTOR   LIKE '%'||SUBSTR(:f_doctor, 3) --診療科関係なくドクター宛に受付された患者さんみんな表示させるように変更。2013/02/10
+                                         OR D.COMMON_DOCTOR_YN = 'Y' 
+                                        ) 
+          )
+          OR
+          ( :f_doctor_mode_yn != 'Y' AND ( A.DOCTOR   LIKE '%'||SUBSTR(:f_doctor, 3) ) 
+          )
+       )
+--   AND A.NAEWON_TYPE != '1' -- 검사만의 환자인경우 내원타잎이 1로 저장될것임.
+   AND A.BUNHO LIKE :f_bunho
+   --
+   AND E.HOSP_CODE     = A.HOSP_CODE
+   AND E.CODE      (+) = A.JUBSU_GUBUN
+   AND E.CODE_TYPE (+) = 'JUBSU_GUBUN'
+--   AND NVL(E.GROUP_KEY, '0') = '1' 
+   AND ( (:f_doctor_mode_yn = 'Y' AND NVL(E.GROUP_KEY, '0') = '1') 
+         OR :f_doctor_mode_yn != 'Y')
+   --
+   AND B.HOSP_CODE = A.HOSP_CODE
+   AND B.BUNHO     = A.BUNHO
+   --
+   AND C.HOSP_CODE         (+) = A.HOSP_CODE
+   AND C.CONSULT_FKOUT1001 (+) = A.PKOUT1001 
+   --
+   AND D.HOSP_CODE             = A.HOSP_CODE
+   AND D.DOCTOR                = A.DOCTOR
+   AND A.NAEWON_DATE BETWEEN D.START_DATE 
+                         AND D.END_DATE
+ ORDER BY NVL(A.ARRIVE_TIME, A.JUBSU_TIME), A.BUNHO, A.JUBSU_NO</value>
+  </data>
+</root>

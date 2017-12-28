@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="AddNewRemiderFooter">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cm0-Wt-b4j">
+                        <rect key="frame" x="145" y="7" width="30" height="30"/>
+                        <connections>
+                            <action selector="actionAddNewRemider:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="d3s-TD-ezz"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tco-4b-IBM">
+                        <rect key="frame" x="0.0" y="41" width="320" height="2"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="5ik-3E-lO9"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="tco-4b-IBM" secondAttribute="bottom" constant="-8" id="aK1-1S-EUA"/>
+                    <constraint firstItem="cm0-Wt-b4j" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="j1n-mV-YHK"/>
+                    <constraint firstItem="cm0-Wt-b4j" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="m0W-vX-w1D"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="tco-4b-IBM" secondAttribute="trailing" constant="-8" id="tGj-Yl-y8x"/>
+                    <constraint firstItem="tco-4b-IBM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="yoT-Dc-Ze3"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnAddNewDrug" destination="cm0-Wt-b4j" id="KJB-Fx-22I"/>
+            </connections>
+            <point key="canvasLocation" x="169" y="240"/>
+        </tableViewCell>
+    </objects>
+</document>

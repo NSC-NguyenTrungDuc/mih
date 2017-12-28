@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jpa="http://www.springframework.org/schema/data/jpa" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd"
+       default-autowire="byName">
+
+    <context:annotation-config/>
+    <context:property-placeholder location="classpath*:configs.properties"/>
+
+    <bean id="vertx" class="org.vertx.java.core.VertxFactory" factory-method="newVertx">
+        <constructor-arg name="port" value="${vertx.clusterPort}" />
+        <constructor-arg name="hostname" value="${vertx.clusterHost}" />
+    </bean>
+
+<!--     <bean id="configuration" class="nta.med.core.config.Configuration"> -->
+<!--         <constructor-arg name="vertxClusterHost" value="${vertx.clusterHost}" /> -->
+<!--         <constructor-arg name="vertxClusterPort" value="${vertx.clusterPort}" /> -->
+<!--         <constructor-arg name="vertxInstances" value="${vertx.instances}" /> -->
+<!--         <constructor-arg name="vertxThreads" value="${vertx.threads}" /> -->
+<!--         <constructor-arg name="vertxWorker" value="${vertx.worker}" /> -->
+<!--         <constructor-arg name="vertxVerbose" value="${vertx.verbose}" /> -->
+<!--         <constructor-arg name="schema" value="${db.schema}" /> -->
+<!--         <constructor-arg name="loginRequired" value="${vertx.loginRequired}" /> -->
+<!--         <constructor-arg name="shardable" value="${vertx.shardable}" /> -->
+
+<!--         <constructor-arg name="compressThreshold" value="${vertx.compressThreshold}" /> -->
+<!--         <constructor-arg name="compressible" value="${vertx.compressible}" /> -->
+<!--         <constructor-arg name="secretKey" value="${token.secret.key}" /> -->
+<!--         <constructor-arg name="exitOnFailDeployment" value="false" /> -->
+<!--         <constructor-arg name="defaultTimeZone" value="9" /> -->
+<!--     </bean> -->
+    <context:component-scan base-package="nta.med.service,nta.med.orca">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
+    </context:component-scan>
+
+    <bean class="nta.med.core.infrastructure.SpringBeanFactory" />
+
+    <bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean"
+          p:resourceLoaderPath="classpath:orca-templates"
+          p:preferFileSystemAccess="true"/>
+
+</beans>

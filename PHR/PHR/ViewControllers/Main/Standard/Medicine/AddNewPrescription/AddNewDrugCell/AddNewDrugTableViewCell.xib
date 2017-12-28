@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="81" id="KGk-i7-Jjw" customClass="AddNewDrugTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="405" height="81"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="405" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9I-oP-iDt">
+                        <rect key="frame" x="0.0" y="0.0" width="405" height="80"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_Medicine_1" translatesAutoresizingMaskIntoConstraints="NO" id="hPe-cD-KIW">
+                                <rect key="frame" x="15" y="28" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="dbq-AK-lKK"/>
+                                    <constraint firstAttribute="width" constant="25" id="x7T-ym-bY0"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_black_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="mrv-rb-fTo">
+                                <rect key="frame" x="370" y="33" width="9" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="MnM-9S-AZD"/>
+                                    <constraint firstAttribute="width" constant="9" id="NIf-pY-1Vz"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qt-4q-zgs">
+                                <rect key="frame" x="57" y="48" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paradol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17C-l8-dVO">
+                                <rect key="frame" x="55" y="22" width="307" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0TS-Qk-L6F">
+                                <rect key="frame" x="0.0" y="79" width="405" height="1"/>
+                                <color key="backgroundColor" red="1" green="0.53204782439999998" blue="0.51023820440000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="pYr-Xh-rhf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hPe-cD-KIW" firstAttribute="centerY" secondItem="u9I-oP-iDt" secondAttribute="centerY" id="0PT-51-HlZ"/>
+                            <constraint firstItem="hPe-cD-KIW" firstAttribute="top" secondItem="17C-l8-dVO" secondAttribute="bottom" constant="-15" id="K6T-Kb-qs5"/>
+                            <constraint firstItem="17C-l8-dVO" firstAttribute="leading" secondItem="hPe-cD-KIW" secondAttribute="trailing" constant="15" id="OcL-Is-V7B"/>
+                            <constraint firstAttribute="trailing" secondItem="mrv-rb-fTo" secondAttribute="trailing" constant="26" id="Rjc-4w-LqU"/>
+                            <constraint firstItem="4qt-4q-zgs" firstAttribute="top" secondItem="17C-l8-dVO" secondAttribute="bottom" constant="5" id="TnJ-pZ-mcP"/>
+                            <constraint firstItem="mrv-rb-fTo" firstAttribute="leading" secondItem="17C-l8-dVO" secondAttribute="trailing" constant="8" id="UXp-hf-cbj"/>
+                            <constraint firstItem="hPe-cD-KIW" firstAttribute="leading" secondItem="u9I-oP-iDt" secondAttribute="leading" constant="15" id="VdV-MG-pLC"/>
+                            <constraint firstItem="4qt-4q-zgs" firstAttribute="leading" secondItem="hPe-cD-KIW" secondAttribute="trailing" constant="17" id="ZmW-B9-Uoq"/>
+                            <constraint firstAttribute="bottom" secondItem="0TS-Qk-L6F" secondAttribute="bottom" id="e8N-V7-mp6"/>
+                            <constraint firstItem="0TS-Qk-L6F" firstAttribute="leading" secondItem="u9I-oP-iDt" secondAttribute="leading" id="oeE-aK-3JC"/>
+                            <constraint firstItem="mrv-rb-fTo" firstAttribute="centerY" secondItem="u9I-oP-iDt" secondAttribute="centerY" id="sAX-ip-FSx"/>
+                            <constraint firstAttribute="trailing" secondItem="0TS-Qk-L6F" secondAttribute="trailing" id="voH-ff-I6X"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="u9I-oP-iDt" secondAttribute="trailing" constant="-8" id="0qu-zL-Rge"/>
+                    <constraint firstItem="u9I-oP-iDt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="GHZ-oy-Ybn"/>
+                    <constraint firstItem="u9I-oP-iDt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="Hf2-hd-Drw"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="u9I-oP-iDt" secondAttribute="bottom" constant="-8" id="oQP-ir-Zzw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imgDrugIcon" destination="hPe-cD-KIW" id="xt6-a8-bj3"/>
+                <outlet property="lblDrugName" destination="17C-l8-dVO" id="ASZ-x4-5ix"/>
+                <outlet property="lblRemider" destination="4qt-4q-zgs" id="hdJ-sr-tE1"/>
+                <outlet property="viewContent" destination="u9I-oP-iDt" id="hGt-4T-Lm6"/>
+            </connections>
+            <point key="canvasLocation" x="366.5" y="219.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Icon_Medicine_1" width="24" height="24"/>
+        <image name="Icon_black_arrow" width="6" height="10"/>
+    </resources>
+</document>

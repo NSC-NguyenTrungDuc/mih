@@ -1,0 +1,1009 @@
+import "rpc.proto";
+import "inps_model.proto";
+import "common_model.proto";
+
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "InpsServiceProto";
+option (version) = "1.0.0";
+option (service) = "inps";
+
+message INP2004Q01grdINP2004Request {
+	optional string hosp_code 	= 1;
+	optional string from_date	= 2;
+	optional string to_date		= 3;
+	optional string offset		= 4;
+}
+
+message INP2004Q01grdINP2004Response {
+	repeated INP2004Q01grdINP2004Info grd_master_item = 1;
+}
+
+message INP1001Q00grdINP1001Request {
+	optional string hosp_code 	= 1;
+	optional string bunho 		= 2;
+	optional string from_date	= 3;
+	optional string to_date		= 4;
+	optional string offset		= 5;
+	optional string page_number	= 6;
+}
+message INP1001Q00grdINP1001Response {
+	repeated INP1001Q00grdINP1001Info grd_master_item = 1;
+}
+
+message INP2001U02grdOcs2003Request
+{
+	optional string fk_inp1001	= 1;
+	optional string bunho 		= 2;
+}
+
+message INP2001U02grdOcs2003Response
+{
+	repeated INP2001U02grdOcs2003Info grd_2003 = 1;
+}
+
+message INP2001U02layNuGroupRequest
+{
+	optional string bun_ho 		= 1;
+	optional string ipwon_date 	= 2;
+}
+
+message INP2001U02layNuGroupResponse
+{
+	repeated INP2001U02layNuGroupInfo lay_nugroup = 1;
+}
+
+message INP2001U02setIconRequest
+{
+	optional string pk_out1001 	= 1;
+	optional string bunho 		= 2;
+	optional string ipwon_date	= 3;
+}
+
+message INP2001U02setIconResponse
+{
+	optional string icon = 1;
+}
+
+message INP2001U02grdOcs1003Request
+{	optional string pk_out1001 							= 1;
+	optional string ip_won_date 						= 2;
+	optional string kaikei_yn 							= 3;
+	optional string bunho 								= 4;
+	optional string jubsu_gubun 						= 5;
+	optional string page_number							= 6;
+	optional string offset								= 7;
+}
+
+message INP2001U02grdOcs1003Response
+{
+	repeated INP2001U02grdOcs1003Info grd_1003 			= 1;
+}
+
+message INP1001D01cboHodongRequest {
+}
+
+message INP1001D01grdINP1001Request
+{
+    optional string query_date 		= 1;
+    optional string ho_dong 		= 2;
+    optional string su_name 		= 3;
+}
+message INP1001D01grdINP1001Response
+{
+    repeated INP1001D01grdINP1001Info grd_Inp1001 = 1;
+}
+//[START] INP1001R04
+message INP1001R04cboHodongRequest {
+}
+message INP1001R04grdIpToiListRequest
+{
+	optional string from_date   = 1;
+	optional string to_date     = 2;
+	optional string ho_dong     = 3;
+	optional string page_number = 4;
+	optional string offset      = 5;
+}
+message INP1001R04grdIpToiListResponse
+{
+	repeated INP1001R04grdIpToiListInfo grd_IpToi_List = 1;
+}
+//[END] INP1001R04
+
+message INP1003Q00grdINP1003Request {
+        optional string hosp_code 						= 1;
+        optional string reser_end_type					= 2;
+        optional string reser_date						= 3;
+        optional string ho_dong							= 4;
+        optional string offset							= 5;
+        optional string page_number						= 6;
+}
+
+message INP1003Q00grdINP1003Response {
+        repeated INP1003Q00grdINP1003Info grd_master_item = 1;
+}
+
+message INP1003Q00fwkHoDongRequest {
+        optional string hosp_code = 1;
+        optional string find1=2;
+        optional string buseo_ymd=3;
+}
+
+message INP1003Q00fwkHoDongResponse {
+        repeated INP1003Q00fwkHoDongInfo fwk_item = 1;
+}
+
+message INP1003Q00cboReserEndTypeGridCellRequest {
+}
+
+message INP1003Q00cboReserEndTypeGridCellResponse {
+        repeated ComboListItemInfo cbo_item 			= 1;
+        repeated ComboListItemInfo xEditGridCell9		= 2;
+        repeated ComboListItemInfo xEditGridCell15		= 3;
+        repeated ComboListItemInfo xEditGridCell16		= 4;
+        repeated ComboListItemInfo xEditGridCell17		= 5;
+        repeated ComboListItemInfo xEditGridCell19		= 6;
+}
+
+message INP1003Q00MakeHodongComboRequest {
+        optional string hosp_code 						= 1;
+        optional string reser_date						= 2;
+}
+
+message INP1003Q00MakeHodongComboResponse {
+        repeated ComboListItemInfo grd_master_item 	 	= 1;
+}
+
+message INP2001U02ProcessJunipRequest
+{
+	optional string input_1 = 1;
+	optional string input_2 = 2;
+	optional string input_3 = 3;
+	optional string input_4 = 4;
+}
+
+message INP2001U02ProcessJunipResponse
+{
+	optional string outlist = 1;
+}
+
+message INP2004Q00grdHoCodeListRequest {
+        optional string hosp_code 						= 1;
+        optional string ho_dong							= 2;
+        optional string jukyong_date					= 3;
+}
+message INP2004Q00grdHoCodeListResponse {
+        repeated INP2004Q00grdHoCodeListInfo grd_master_item = 1;
+}
+
+message INP2004Q00grdINP2004Request {
+        optional string hosp_code 						= 1;
+        optional string ho_dong							= 2;
+        optional string ho_code							= 3;
+        optional string from_date						= 4;
+        optional string to_date							= 5;
+}
+message INP2004Q00grdINP2004Response {
+        repeated INP2004Q00grdINP2004Info grd_master_item = 1;
+}
+
+message INP1001U01MultiComboRequest {
+	optional string kaikei_hodong = 1;
+}
+
+message INP1001U01MultiComboResponse {
+	repeated ComboListItemInfo cbo_kaikei_hocode 	= 1;
+	repeated ComboListItemInfo cbo_emergency_gubun 	= 2;
+	repeated ComboListItemInfo cbo_chojae 			= 3;
+	repeated ComboListItemInfo cbo_baby_status 		= 4;
+	repeated ComboListItemInfo cbo_ipwon_rtn_2 		= 5;
+	repeated ComboListItemInfo cbo_ho_grade_1 		= 6;
+	repeated ComboListItemInfo cbo_ipwon_type 		= 7;
+}
+
+message INP1001U01LayLastCheckDateRequest {
+	optional string bunho 	= 1;
+	optional string gubun 	= 2;
+	optional string date 	= 3;
+}
+
+message INP1001U01LayCheckEctIpwonRequest {
+	optional string bunho 		= 1;
+	optional string ipwon_date 	= 2;
+}
+
+message INP1001U01FwkGubunRequest {
+	optional string bunho 		= 1;
+	optional string naewon_date = 2;
+	optional string find_1 		= 3;
+}
+
+message INP1001U01FwkGubunResponse {
+	repeated INP1001U01FwkGubunInfo fwk_list = 1;
+}
+
+message INP1001U01GrdInp1001Request {
+	optional string pkinp1001 	= 1;
+	optional string page_number = 2;
+	optional string offset 		= 3;
+}
+
+message INP1001U01GrdInp1001Response{
+	repeated INP1001U01GrdInp1001Info grd_list = 1;
+}
+
+message INP1001U01GrdInp1004Request{
+	optional string bunho 		= 1;
+	optional string page_number = 2;
+	optional string offset 		= 3;
+}
+
+message INP1001U01GrdInp1004Response{
+	repeated INP1001U01GrdInp1004Info grd_list = 1;
+}
+
+message INP1001U01GrdInp1008Request{
+	optional string pkinp1002 			= 1;
+	optional string bunho 				= 2;
+	optional string gubun 				= 3;
+	optional string ipwon_date 			= 4;
+	optional string gubun_ipwon_date 	= 5;
+	optional string page_number 		= 6;
+	optional string offset 				= 7;
+}
+
+message INP1001U01GrdInp1008Response{
+	repeated INP1001U01GrdInp1008Info grd_info = 1;
+}
+
+//[START] INP3003U00
+message INP3003U00grdINP1001Request {
+	optional string hosp_code    = 1;
+	optional string pkinp1001    = 2;
+	optional string offset       = 3;
+	optional string page_number  = 4;
+}
+message INP3003U00grdINP1001Response {
+	repeated INP3003U00grdINP1001Info grd_master_item = 1;
+}
+message INP3003U00grdINP1001PastRequest {
+	optional string hosp_code    = 1;
+	optional string bunho        = 2;
+	optional string offset       = 3;
+	optional string page_number  = 4;
+}
+message INP3003U00grdINP1001PastResponse {
+	repeated INP3003U00grdINP1001PastInfo grd_master_item = 1;
+}
+message INP3003U00grdINP2002Request {
+	optional string hosp_code     = 1;
+	optional string bunho         = 2;
+	optional string gwa           = 3;
+	optional string offset        = 4;
+	optional string page_number   = 5;
+}
+message INP3003U00grdINP2002Response {
+	repeated INP3003U00grdINP2002Info grd_master_item = 1;
+}
+message INP3003U00layLoadToiwonResDateRequest {
+	optional string hosp_code = 1;
+	optional string pkinp1001 = 2;
+}
+message INP3003U00layLoadToiwonResDateResponse {
+	repeated INP3003U00layLoadToiwonResDateInfo grd_master_item = 1;
+}
+message INP3003U00cboSimsaMagamGubunresultAfterDisRequest {
+}
+message INP3003U00cboSimsaMagamGubunresultAfterDisResponse {
+	repeated ComboListItemInfo cboSimsaMagamGubun = 1;
+	repeated ComboListItemInfo result_after_dis   = 2;
+}
+message INP3003U00SakuraToiwonInputRequest {
+    optional string hosp_code  = 1;
+    optional string pkinp1001  = 2;
+}
+message INP3003U00SakuraToiwonInputResponse {
+    repeated DataStringListItemInfo grd_master_item = 1;
+}
+message INP3003U00ToiwonCancelRequest {
+    optional string hosp_code = 1;
+    optional string pkinp1001 = 2;
+}
+message INP3003U00ToiwonCancelResponse {
+    repeated DataStringListItemInfo grd_master_item = 1;
+}
+message INP3003U00SaveLayoutRequest {
+    repeated INP3003U00grdINP1001Info grd_save = 1;
+}
+message INP3003U00ExecuteProcedureRequest{
+    repeated DataStringListItemInfo inp_list = 1;
+    optional string proc_name                = 2;
+}
+message INP3003U00ExecuteProcedureResponse{
+    repeated DataStringListItemInfo out_list = 1;
+}
+//[END] INP3003U00
+
+//[START] INP1001U01
+
+message INP1001U01EtcIpwongrdHistoryRequest {
+    optional string hosp_code			= 1;
+    optional string bunho				= 2;
+    optional string offset				= 3;
+    optional string page_number			= 4;
+}
+
+message INP1001U01EtcIpwongrdHistoryResponse {
+    repeated INP1001U01EtcIpwongrdHistoryInfo grd_master_item = 1;
+}
+
+message INP1001U01GrdOut0103Request{
+	optional string bunho 		= 1;
+	optional string page_number = 2;
+	optional string offset 		= 3;
+}
+
+message INP1001U01GrdOut0103Response{
+	repeated INP1001U01GrdOut0103Info grd_list = 1;
+}
+
+message INP1001U01GrdOut0106Request{
+	optional string bunho 		= 1;
+	optional string ipwon_date 	= 2;
+	optional string page_number = 3;
+	optional string offset 		= 4;
+}
+
+message INP1001U01GrdOut0106Response{
+	repeated INP1001U01GrdOut0106Info grd_list = 1;
+}
+
+message INP1001U01LayInp1002Request{
+	optional string fkinp1001 = 1;
+}
+
+message INP1001U01LayInp1002Response{
+	repeated INP1001U01LayInp1002Info lay_list = 1;
+}
+
+message INP1001U01ExecuteProcedureRequest{
+	repeated DataStringListItemInfo inp_list 	= 1;
+	optional string proc_name				 	= 2;
+}
+
+message INP1001U01ExecuteProcedureResponse{
+	repeated DataStringListItemInfo out_list = 1;
+}
+
+message INP1001U01MakeIpwonTypeComboRequest{
+	optional string combo_gubun = 1;
+}
+
+message INP1001U01DefaultSettingINP1001Request{
+
+}
+
+message INP1001U01LoadGongbiQueryRequest{
+	repeated DataStringListItemInfo gongbi_code_list 	= 1;
+	optional string fkinp1002 							= 2;
+}
+
+message INP1001U01LoadIpwonTypeListRequest{
+	optional string bunho = 1;
+}
+
+message INP1001U01LoadIpwonTypeListResponse{
+	repeated INP1001U01LoadIpwonTypeListInfo lay_list = 1;
+}
+
+message INP1001U01LoadBoheomChildListRequest{
+	optional string fkinp1001 = 1;
+}
+
+message INP1001U01LoadBoheomChildListResponse{
+	repeated INP1001U01LoadBoheomChildListInfo lay_list = 1;
+}
+
+message INP1001U01IpwonCancelRequest{
+	optional string pkinp1001 	= 1;
+	optional string bunho 		= 2;
+}
+
+message INP1001U01FindBoxFindClickRequest{
+	optional string control_name 	= 1;
+	optional string find_1 			= 2;
+	optional string buseo_ymd 		= 3;
+	optional string gwa 			= 4;
+	optional string ipwon_date 		= 5;
+	optional string code_type 		= 6;
+}
+
+message INP1001U01DtpBirthDataValidatingRequest{
+	optional string birth = 1;
+}
+
+message INP1001U01SaveLayoutRequest{
+	optional string user_id 								= 1;
+	repeated INP1001U01GrdInp1004Info grd_inp1004_list 		= 2;
+	repeated DataStringListItemInfo input_proc 				= 3;
+	repeated INP1001U01GrdInp1001Info grd_inp1001_list 		= 4;
+}
+
+message INP1001U01ChangeGubunGrdHistoryRequest{
+	optional string fkinp1001 = 1;
+}
+
+message INP1001U01ChangeGubunGrdHistoryResponse{
+	repeated INP1001U01ChangeGubunGrdHistoryInfo grd_list = 1;
+}
+
+
+
+message INP1001U01ChangeGubunLayGubunRequest{
+	optional string bunho 		= 1;
+	optional string naewon_date = 2;
+	optional string gubun 		= 3;
+}
+//[END] INP1001U01
+
+//[START] INPBATCHTRANS
+message INPBATCHTRANScbxBuseoRequest {
+}
+message INPBATCHTRANScbxBuseoResponse {
+    repeated ComboListItemInfo cbo_item = 1;
+}
+
+message INPBATCHTRANSlayOut0101Request {
+    optional string hosp_code			= 1;
+    optional string bunho				= 2;
+}
+message INPBATCHTRANSlayOut0101Response {
+    repeated INPBATCHTRANSlayOut0101Info lay_item = 1;
+}
+
+message INPBATCHTRANSisJaewonPatientRequest {
+    optional string bunho				= 1;
+    optional string query_date			= 2;
+}
+message INPBATCHTRANSisJaewonPatientResponse {
+    repeated INPBATCHTRANSisJaewonPatientInfo rtnVal_item = 1;
+}
+
+message INPBATCHTRANSOrderTransRequest {
+    optional string hosp_code			= 1;
+    optional string fkinp3010			= 2;
+    optional string trans_gubun			= 3;
+}
+message INPBATCHTRANSOrderTransResponse {
+    repeated INPBATCHTRANSOrderTransInfo Order_item = 1;
+}
+
+message INPBATCHTRANSgrdInpListQueryStartingrbnMiTransRequest {
+    optional string hosp_code			= 1;
+    optional string bunho				= 2;
+    optional string ho_dong1			= 3;
+    optional string query_date			= 4;
+    optional string from_date			= 5;
+}
+message INPBATCHTRANSgrdInpListQueryStartingrbnMiTransResponse {
+    repeated INPBATCHTRANSgrdInpListQueryStartingrbnMiTransInfo grd_Master_item = 1;
+}
+
+message INPBATCHTRANSgrdInpListQueryStartingrbnTransRequest {
+    optional string hosp_code			= 1;
+    optional string bunho				= 2;
+    optional string ho_dong1			= 3;
+    optional string query_date			= 4;
+    optional string from_date			= 5;
+}
+message INPBATCHTRANSgrdInpListQueryStartingrbnTransResponse {
+    repeated INPBATCHTRANSgrdInpListQueryStartingrbnTransInfo grd_Master_item = 1;
+}
+
+message INPBATCHTRANSExecuteProcedureRequest{
+    repeated DataStringListItemInfo inp_list = 1;
+    optional string proc_name = 2;
+}
+message INPBATCHTRANSExecuteProcedureResponse{
+    repeated DataStringListItemInfo out_list = 1;
+}
+//[END] INPBATCHTRANS
+
+message INP1001U01ChangeGubunSaveLayoutRequest{
+    optional string fkinp1001 					= 1;
+    optional string mBunho 						= 2;
+    optional string gubun 						= 3;
+    optional string gubun_ipwon_date 			= 4;     
+    optional string gubun_start_2 				= 5;   
+    optional string fkinp1001_proc	 			= 6;
+    optional string gubun_proc = 7;      
+}
+
+//[BEGIN] INP1003U01
+
+message INP1003U01grdINP1003Request
+{
+        optional string bunho 							= 1;
+        optional string page_number						= 2;
+        optional string offset							= 3;
+}
+
+message INP1003U01grdINP1003Response
+{
+        repeated INP1003U01grdINP1003Info grd_INP 		= 1;
+}
+
+message INP1003U01layBunhoValidationRequest
+{
+        optional string bunho 							= 1;
+}
+
+message INP1003U01layBunhoValidationResponse
+{
+        repeated INP1003U01layBunhoValidationInfo lay_BunhoVa = 1;
+}
+
+message INP1003U01cboEmergencyRequest
+{
+}
+
+message INP1003U01cboEmergencyResponse
+{
+        repeated INP1003U01cboEmergencyInfo cbo_Emer = 1;
+}
+
+message INP1003U01fbxInp1003Request
+{
+        optional string find 						= 1;
+        optional string buseo_ymd 					= 2;
+        optional string gwa 						= 3;
+        optional string doctor_ymd 					= 4;
+        optional string name_control 				= 5;
+}
+
+message INP1003U01fbxInp1003Response
+{
+        repeated INP1003U01fbxInp1003Info fbx_Inp1003 = 1;
+}
+
+message INP1003U01CancelReserRequest
+{
+        optional string pkinp1003 					= 1;
+        optional string ipwonsi_order_yn 			= 2;
+}
+
+message INP1003U01CheckBoolRequest
+{
+        optional string gwa 						= 1;
+        optional string buseo_ymd 					= 2;
+}
+
+
+message INP1003U01CheckBoolResponse
+{
+        optional string result 						= 1;
+}
+
+message INP1003U01SaveLayoutGrdRequest
+{
+        repeated INP1003U01grdINP1003Info grd_save 	= 1; 
+        optional string userid 						= 2;
+        optional string fkout1001 					= 3;   
+}
+
+message INP1003U01ProcedureRequest
+{
+        optional string gubun 						= 1;
+        optional string bunho 						= 2;
+        optional string ipwon_date 					= 3;
+        optional string ipwon_type 					= 4;
+        optional string user_id 					= 5;
+        optional string fkinp1001 					= 6;
+        optional string name_control  				= 7;
+}
+
+message INP1003U01ProcedureResponse
+{
+        optional string msg 						= 1;
+        optional string result 						= 2;
+}
+
+message INP1003U01layDeleteRequest
+{
+        optional string pkinp1003 					= 1;
+}
+
+message INP1003U01layDeleteResponse
+{
+        repeated INP1003U01layDeleteInfo layDelete = 1;
+}
+
+message INP1003U01layIpWonRequest
+{
+        optional string pkinp1003 					= 1;
+}
+
+message INP1003U01layIpWonResponse
+{
+        repeated INP1003U01layIpWonInfo layIpWon 	= 1;
+}
+
+//[END] INP1003U01
+
+message INP1001U01EtcIpwonSaveLayoutRequest {
+    repeated INP1001U01EtcIpwongrdHistoryInfo grd_save 	= 1;
+    optional string user_id								= 2;
+    optional string ho_code1							= 3;
+    optional string ho_dong1							= 4;
+    optional string doctor								= 5;        
+    optional string bunho								= 6;  
+}
+message INP1001U01EtcIpwonxEditGridCellRequest {
+}
+message INP1001U01EtcIpwonxEditGridCellResponse {
+    repeated ComboListItemInfo xEditGridCell3			= 1;
+    repeated ComboListItemInfo xEditGridCell5			= 2;
+}
+
+message INP1001U01EtcIpwonlayCommonDoctorRequest {
+    optional string hosp_code							= 1;
+    optional string gwa									= 2;
+}
+message INP1001U01EtcIpwonlayCommonDoctorResponse {
+    repeated INP1001U01EtcIpwonlayCommonDoctorInfo lay_item = 1;
+}
+
+message INP1001U01INPDateFormExeProcRequest{
+	repeated DataStringListItemInfo inp_list 	= 1;
+    optional string proc_name 					= 2;
+}
+
+message INP1001U01INPDateFormExeProcResponse{
+	repeated DataStringListItemInfo out_list 	= 1;
+}
+message INP1001U01IpwonSelectFormgrdIpwonHistoryRequest {
+    optional string hosp_code							= 1;
+    optional string bunho								= 2;
+    optional string offset								= 3;
+    optional string page_number							= 4;
+}
+message INP1001U01IpwonSelectFormgrdIpwonHistoryResponse {
+    repeated INP1001U01IpwonSelectFormgrdIpwonHistoryInfo grd_master_item = 1;
+}
+
+message INP1001U01IpwonSelectFormxEditGridCellRequest{
+}
+message INP1001U01IpwonSelectFormxEditGridCellResponse{
+    repeated ComboListItemInfo cbo_item = 1;
+}
+
+// [START] INPORDERTRAN
+message INPORDERTRANSGrdOutSangRequest{
+	optional string io_gubun     = 1;
+	optional string bunho        = 2;
+	optional string gijun_date   = 3;
+}
+message INPORDERTRANSGrdOutSangResponse{
+	repeated INPORDERTRANSGrdOutSangInfo grd_list = 1;
+}
+message INPORDERTRANSGrdWoiChulRequest{
+	optional string send_yn      = 1;
+	optional string bunho        = 2;
+	optional string pk1001       = 3;
+	optional string order_date   = 4;
+}
+message INPORDERTRANSGrdWoiChulResponse{
+	repeated INPORDERTRANSGrdWoiChulInfo grd_list = 1;
+}
+message INPORDERTRANSLayOut0101Request{
+	optional string bunho = 1;
+}
+message INPORDERTRANSLayOut0101Response{
+	repeated INPORDERTRANSLayOut0101Info lay_list = 1;
+}
+message INPORDERTRANSProcessRequisRequest{
+	optional string pkINP1001     = 1;
+	optional string gubun         = 2;
+	optional string chojae        = 3;
+	optional string sanjung_gubun = 4;
+	optional string pkinp1002     = 5;
+}
+message INPORDERTRANSSetProcessGongbiRequest{
+	optional string pkINP1001 = 1;
+	optional string pkinp1002 = 2;
+	optional string sys_id    = 3;
+	optional string bunho     = 4;
+	repeated INPORDERTRANSSetProcessGongbiInfo insert_list = 5;
+}
+message INPORDERTRANSSangTransRequest{
+	optional string fkINP3010    = 1;
+	optional string trans_gubun  = 2;
+}
+message INPORDERTRANSSangTransResponse{
+	repeated DataStringListItemInfo pkifs3014_list = 1;
+}
+message INPORDERTRANSIsJaewonPatientRequest{
+	optional string bunho = 1;
+}
+message INPORDERTRANSGrdWoiChul2Request{
+	optional string bunho       = 1;
+	optional string send_yn     = 2;
+	optional string ymd_first   = 3;
+	optional string ymd_last    = 4;
+	optional string page_number = 5;
+	optional string offset      = 6;
+}
+message INPORDERTRANSGrdWoiChul2Response{
+	repeated INPORDERTRANSGrdWoiChulInfo grd_list = 1;
+}
+message INPORDERTRANSGrdOCS2003Request{
+	optional string bunho         = 1;
+	optional string acting_date   = 2;
+	optional string pkinp3010     = 3;
+	optional string send_yn       = 4;
+	optional string page_number   = 5;
+	optional string offset        = 6;
+}
+message INPORDERTRANSGrdOCS2003Response{
+	repeated INPORDERTRANSGrdOCS2003Info grd_list = 1;
+}
+message INPORDERTRANSGrdSiksaRequest{
+	optional string send_yn     = 1;
+	optional string bunho       = 2;
+	optional string ymd_first   = 3;
+	optional string ymd_last    = 4;
+	optional string page_number = 5;
+	optional string offset      = 6;
+}
+message INPORDERTRANSGrdSiksaResponse{
+	repeated INPORDERTRANSGrdSiksaInfo grd_list = 1;
+}
+message INPORDERTRANSSelectListSQL0Request{
+	optional string m_send_yn       = 1;
+	optional string order_from_date = 2;
+	optional string order_to_date   = 3;
+	optional string bunho           = 4;
+}
+message INPORDERTRANSSelectListSQL0Response{
+	repeated INPORDERTRANSSelectListSQL0Info grd_list = 1;
+}
+message INPORDERTRANSSelectListSQL1Request{
+	optional string ym        = 1;
+	optional string ymd_first = 2;
+	optional string ymd_last  = 3;
+	optional string bunho     = 4;
+}
+message INPORDERTRANSSelectListSQL1Response{
+	repeated INPORDERTRANSSelectListSQL1Info grd_list = 1;
+}
+message INPORDERTRANSSelectListSQL2Request{
+	optional string ym         = 1;
+	optional string ymd_first  = 2;
+	optional string ymd_last   = 3;
+	optional string bunho      = 4;
+}
+message INPORDERTRANSSelectListSQL2Response{
+	repeated INPORDERTRANSSelectListSQL1Info grd_list = 1;
+}
+message INPORDERTRANSSelectListSQL3Request{
+	optional string io_gubun     = 1;
+	optional string send_yn      = 2;
+	optional string bunho        = 3;
+	optional string acting_date  = 4;
+}
+message INPORDERTRANSSelectListSQL3Response{
+	repeated INPORDERTRANSSelectListSQL3Info grd_list = 1;
+}
+// [END] INPORDERTRAN
+message INP1003U00grdCSC0108Request {
+    optional string hosp_code 			= 1;
+    optional string category_gubun		= 2;
+}
+message INP1003U00grdCSC0108Response {
+    repeated INP1003U00grdCSC0108Info grd_master_item = 1;
+}
+message INP1003U00cboCategoryGubunRequest {
+}
+message INP1003U00cboCategoryGubunResponse {
+    repeated ComboListItemInfo cbo_item = 1;
+}
+message INP1003U00fwkDoctorRequest {
+    optional string hosp_code 			= 1;
+    optional string gwa					= 2;
+    optional string find				= 3;
+    optional string doctor_ymd			= 4;
+}
+message INP1003U00fwkDoctorResponse {
+    repeated INP1003U00fwkDoctorInfo fwk_item = 1;
+}
+message INP1003U00fwkGwaRequest {
+    optional string hosp_code 			= 1;
+    optional string buseo_ymd			= 2;
+    optional string find1				= 3;
+}
+message INP1003U00fwkGwaResponse {
+    repeated INP1003U00fwkGwaInfo fwk_item = 1;
+}
+
+message INP1003U00grdInpReserRequest {
+	optional string hosp_code = 1;
+	optional string reser_date = 2;
+	optional string ho_dong = 3;
+}
+
+message INP1003U00grdInpReserResponse {
+	repeated INP1003U00grdInpReserInfo grd_master_item = 1;
+}
+message INP1003U00xEditGridCellRequest {
+
+}
+message INP1003U00xEditGridCellResponse {
+    repeated ComboListItemInfo xEditGridCell20		= 1;
+    repeated ComboListItemInfo xEditGridCell9		= 2;
+    repeated ComboListItemInfo xEditGridCell13		= 3;
+    repeated ComboListItemInfo xEditGridCell26		= 4;
+    repeated ComboListItemInfo xEditGridCell28		= 5;
+}
+message INP1003U00cboHodongRequest {
+    optional string hosp_code 						= 1;
+    optional string reser_date						= 2;
+}
+message INP1003U00cboHodongResponse {
+    repeated ComboListItemInfo grd_master_item 		= 1;
+}
+message INP1003U00MakeHodongComboRequest {
+    optional string hosp_code 						= 1;
+    optional string reser_date						= 2;
+}
+message INP1003U00MakeHodongComboResponse {
+    repeated ComboListItemInfo grd_master_item 		= 1;
+}
+message INP1003U00grdInpReserGridColumnChangeddtBunhoRequest {
+    optional string hosp_code 						= 1;
+    optional string bunho							= 2;
+}
+message INP1003U00grdInpReserGridColumnChangeddtBunhoResponse {
+    repeated INP1003U00grdInpReserGridColumnChangeddtBunhoInfo grd_master_item = 1;
+}
+
+message INP1003U00grdInpReserGridColumnChangeddtReserRequest {
+    optional string hosp_code 						= 1;
+    optional string bunho							= 2;
+}
+message INP1003U00grdInpReserGridColumnChangeddtReserResponse {
+    repeated INP1003U00grdInpReserGridColumnChangeddtReserInfo grd_master_item 	= 1;
+}
+message INP1003U00grdInpReserGridColumnChangedrtnresultRequest {
+	optional string hosp_code 						= 1;
+	optional string bunho							= 2;
+}
+message INP1003U00grdInpReserGridColumnChangedrtnresultResponse {
+	repeated INP1003U00grdInpReserGridColumnChangedrtnresultInfo grd_master_item = 1;
+}
+message INP1003U00grdInpReserGridColumnChangeddtHoSilRequest {
+    optional string hosp_code 						= 1;
+    optional string ho_code_ymd						= 2;
+    optional string ho_dong							= 3;
+    optional string ho_code							= 4;
+}
+message INP1003U00grdInpReserGridColumnChangeddtHoSilResponse {
+	repeated ComboListItemInfo grd_master_item 									= 1;
+}
+message INP1003U00grdInpReserGridColumnChangeddtGwaRequest {
+    optional string hosp_code 						= 1;
+    optional string gwa								= 2;
+    optional string reser_date						= 3;
+}
+message INP1003U00grdInpReserGridColumnChangeddtGwaResponse {
+	repeated INP1003U00grdInpReserGridColumnChangeddtGwaInfo grd_master_item 	= 1;
+}
+message INP1003U00grdInpReserGridColumnChangedrtndoctornameRequest {
+	optional string jisi_doctor 					= 1;
+	optional string reser_date						= 2;
+}
+message INP1003U00grdInpReserGridColumnChangedrtndoctornameResponse {
+	repeated INP1003U00grdInpReserGridColumnChangedrtndoctornameInfo grd_master_item = 1;
+}
+
+message INP1003U00SaveLayoutRequest {
+    repeated INP1003U00grdInpReserInfo grd_save 	= 1;
+}
+
+message INP1001U01DoubleMultiCboRequest{   
+}
+message INP1001U01DoubleMultiCboResponse{
+    repeated ComboListItemInfo cbo_ipwon_type 		= 1;
+    repeated ComboListItemInfo cbo_hi_age 			= 2;
+}
+
+message INP1001U01DoubleLoadDataRequest{
+    optional string bunho = 1;
+}
+
+message INP1001U01DoubleFindClickRequest{
+    optional string control_name 					= 1;
+    optional string buseo_ymd 						= 2;
+    optional string find_1 							= 3;
+    optional string gwa 							= 4;
+    optional string ipwon_date 						= 5;
+}
+//[START]  INP1001U01
+message INP1001U01ReserSelectgrdINP1003Request
+{
+	optional string bunho = 1;
+	optional string page_number = 2;
+	optional string offset = 3;
+}
+message INP1001U01ReserSelectgrdINP1003Response
+{
+	repeated INP1001U01ReserSelectgrdINP1003Info grd_1003 = 1;
+}
+//[END]  INP1001U01
+
+message INP1001U01DoubleGrdINP1002Request{
+    optional string exist_double_type = 1;
+	optional string bunho = 2;
+	optional string gubun_ipwon_date = 3;
+	optional string double_pkinp1001 = 4;
+	optional string offset = 5;
+	optional string page_number = 6;
+}
+
+message INP1001U01DoubleGrdINP1002Response{
+	repeated INP1001U01DoubleGrdINP1002Info grdList = 1;
+}
+
+message INP1001U01DoubleGrdINP1008Request{
+    	optional string gubun = 1;
+        optional string bunho = 2;
+        optional string gubun_ipwon_date = 3;
+        optional string ipwon_date = 4;
+        optional string offset = 5;
+        optional string page_number = 6;
+        optional string fkinp1002 = 7;
+}
+message INP1001U01DoubleGrdINP1008Response{
+    repeated INP1001U01DoubleGrdINP1008Info grd_list = 1;
+}
+
+
+message INP1001U01DoubleSaveLayoutRequest{
+    optional string user_id 							= 1;
+    optional string pkinp1001_for_c2 					= 2;
+    optional string pkinp1002_for_c3 					= 3;
+    repeated INP1001U01DoubleLayINP1001Info lay_inp1001 = 4;
+    repeated INP1001U01DoubleLayINP1002Info lay_inp1002 = 5;
+    repeated INP1001U01DoubleGrdINP1008Info grd_inp1008 = 6; 
+}
+
+message INPORDERTRANSExecuteProcRequest{
+	optional string proc_name 				= 1;
+	repeated DataStringListItemInfo in_list = 2;
+}
+
+message INPORDERTRANSExecuteProcResponse{
+	repeated DataStringListItemInfo out_list = 1;
+}
+
+message INPORDERTRANSAccountCompleteRequest{
+	repeated DataStringListItemInfo input_proc1 			= 1;
+	repeated INPORDERTRANSAccountCompleteInfo update_list 	= 2;
+	repeated DataStringListItemInfo input_proc2 			= 3;
+	repeated DataStringListItemInfo input_proc3 			= 4;
+}
+
+message INPORDERTRANSAccountCompleteResponse{
+	optional string sang_cnt 	= 1;
+	optional string order_cnt 	= 2;
+	optional string pkINP3010 	= 3;
+}
+
+message INP1001D00grdINP1001Request{
+        optional string ho_dong1 	= 1;
+        optional string send_yn 	= 2;
+        optional string query_date 	= 3;
+}
+
+message INP1001D00grdINP1001Response{
+        repeated INP1001D00grdINP1001Info items = 1;
+}
+

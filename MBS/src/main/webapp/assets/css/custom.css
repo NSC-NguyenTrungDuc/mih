@@ -1,0 +1,386 @@
+.breadcrumb>li.active a {
+	color: #777;
+	pointer-events: none;
+   	cursor: default;
+}
+.breadcrumb>li a:hover {
+   	cursor: default;
+   	text-decoration: none;
+}
+
+.table > .row > .cell > .valid {
+    cursor: pointer;
+}
+.table > .row {
+    cursor: default;
+}
+/* Customize css for left menu */
+.list-group .panel-heading {
+	background: none;
+	border: none;
+}
+
+.list-group .panel-heading:hover {
+	background-color: #f5f5f5;
+	cursor: pointer;
+}
+.no-padding {
+	padding: 0px;
+}
+
+.panel-heading a, .panel-body a{
+	color: #555;;
+}
+
+.panel-heading a:hover{
+	text-decoration: none;
+}
+
+.panel-heading.active, .panel-body.active{
+	background-color: #4f6070;
+	color: #fff;
+	border-top: solid 1px;
+}
+
+.panel-heading.active:hover{
+	background-color: #4f6070;
+}
+
+.list-group .panel-default >.panel-heading.active a, .list-group .panel-body.active a{
+	background-color: #4f6070;
+	color: #fff;
+}
+.list-group .panel-default >.panel-heading.active a i, .list-group .panel-body.active a i{
+	color: #fff;
+}
+
+.panel-heading.active a:hover{
+	text-decoration: none;
+	color: #fff;
+}
+
+.list-group .panel-body {
+	padding: 5px 5px 5px 25px;	
+}
+.icon-angle-right {
+	display: block;
+	content: " ";
+	float: left;
+	width: 0;
+	height: 0;
+	border-color: transparent;
+	border-style: solid;
+	border-width: 5px 0 5px 5px;
+	border-left-color: #cccccc;
+	margin-top: 5px;
+	margin-right: 5px;
+}
+
+.panel-heading.accordion-toggle .caret {
+	float: right;
+	margin-top: 8px;
+}
+
+.panel-body {
+	padding-bottom: 0px;
+}
+
+.new-booking-btn {
+	margin-bottom: 5px;
+}
+
+.table .row div.cell.selected {
+	background-color: #6495ed !important;
+}
+
+.table .row div.cell.selected a {
+	color: white;
+}
+
+div.text-content {
+	margin-top: 10px;
+	font-size: 16px;
+}
+
+.btn-120 {
+	width: 120px;
+	margin-right: 10px;
+}
+.btn-140 {
+	width: 140px;
+	margin-right: 10px;
+}
+.btn-90 {
+	width: 90px;
+}
+.btn-60 {
+	width: 60px;
+	margin-top: 2px;
+}
+
+#divViewDeptAndDoctor {
+    overflow-y:scroll;
+    height:500px;
+    width:100%;
+}
+
+.message-alert-dialog {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+div.table div.row div.cell.firstSpanCell {
+	border-bottom: none;
+}
+
+div.table div.row div.cell.spanCell {
+	border-top: none;
+	border-bottom: none;
+}
+
+div.table div.row:last-child div.cell.spanCell {
+	border-bottom: 1px solid #ECECEC;
+}
+
+div.table div.row div.cell.emptyCell {
+	background-color: #ECECEC;
+}
+
+div.table div.row div.cell.weekendCell {
+	background-color: #FFFFEE;
+}
+
+.editable-click, a.editable-click, a.editable-click:hover {
+border-bottom: none;
+}
+
+div.p-alert {
+	position: fixed;
+	min-width: 300px;
+	right: 2px;
+	margin-top: 5px;
+	z-index: 999;
+	bottom: 20px;
+}
+
+div#ajax-alert-error, div#ajax-alert-success {
+	position: fixed;
+	min-width: 300px;
+	right: 2px;
+	margin-top: 5px;
+	z-index: 999;
+	bottom: 20px;
+}
+
+#booking-slt-doctor {
+	display: inline;
+}
+
+span input[type=radio][name=reminderTime] {
+	margin-top: 0px;
+}
+
+span:not(:first-child) input[type=radio][name=reminderTime] {
+	margin-left: 10px;
+}
+
+.placeholdersjs {
+	color: #ccc;
+}
+
+
+
+/* ---------------------------------------------------------------------- */
+/*	Calendar
+/* ---------------------------------------------------------------------- */
+#calendar {
+	position: relative;
+}
+.fc-event {
+	padding: 2px;
+}
+.fc-day-number {
+	margin: 2px 2px 0 0;
+}
+.fc-header-title h2 {
+	color: #666666;
+	font-family: 'Roboto', Arial, sans-serif;
+	font-weight: 200;
+	letter-spacing: -1px;
+}
+.fc-today .fc-day-number {
+	font-weight: bold;
+}
+
+.fc-state-highlight {
+	background: #F5F5F5 !important;
+}
+.fc-button {
+	color: #666666 !important;
+}
+.fc-state-default {
+	background-color: #ffffff !important;
+	background-image: none !important;
+	border-color: #666666 !important;
+	box-shadow: none !important;
+	color: #666666;
+	text-shadow: none !important;
+}
+.fc-state-down, .fc-state-active {
+	box-shadow: none !important;
+	outline: 0 none;
+	background-color: #569099 !important;
+	border-color: #4D8189 !important;
+	color: #FFFFFF !important;
+}
+.fc-header-left {
+	position: absolute !important;
+	top: 0;
+	left: 0;
+	width: 50% !important;
+}
+.fc-header-right {
+	position: absolute !important;
+	top: 0;
+	right: 0;
+	width: 50% !important;
+}
+.fc-header-center {
+	display: block !important;
+	padding-top: 40px !important;
+}
+.event-category {
+	color: #ffffff;
+	padding: 5px;
+	border-radius: 3px;
+	margin: 5px 0;
+}
+.label-default, .badge-default {
+	color: #3A87AD !important;
+	border-color: #3A87AD !important;
+}
+.label-orange, .badge-orange {
+	color: #EB5837 !important;
+	border-color: #EB5837 !important;
+}
+.label-purple, .badge-purple {
+	color: #57517B !important;
+	border-color: #57517B !important;
+}
+.label-yellow, .badge-yellow {
+	color: #FFB848 !important;
+	cursor: pointer !important;
+}
+.label-teal, .badge-teal {
+	color: #569099 !important;
+	border-color: #569099 !important;
+}
+.label-beige, .badge-beige {
+	color: #CCCC99 !important;
+	border-color: #CCCC99 !important;
+}
+.label-green, .badge-green {
+	color: #3D9400 !important;
+	cursor: pointer !important;
+}
+
+/* week-view */
+.fc-event.week-view {
+	padding: 0px;
+	margin: 0px;
+	border-radius: 0px;
+	background-color: white !important;
+	display: table;
+}
+.week-view.label-orange, .week-view.badge-orange {
+	border: 1px solid #EB5837 !important;
+}
+.week-view.label-yellow, .week-view.badge-yellow {
+	border: 1px solid #FFB848 !important;
+}
+.week-view.label-green, .week-view.badge-green {
+	border: 1px solid #3D9400 !important;
+}
+.week-view .fc-event-inner {
+	display: table;
+}
+.week-view .fc-event-inner .fc-event-time {
+	display: table-row;
+}
+.week-view .fc-event-inner .fc-event-title {
+	display: table-row;
+	vertical-align: middle;
+}
+.week-view .fc-event-time {
+	color: #4f6070;
+}
+/* all Mobile */
+@media only screen and (min-width:320px) and (max-width:359px) {
+	.fc-event.week-view {
+	min-width: 30px;
+	margin: 0px;
+	border-radius: 0px;
+	}
+}
+
+@media only screen and (min-width:360px) and (max-width:479px) {
+	.fc-event.week-view {
+	min-width: 30px;
+	margin: 0px;
+	border-radius: 0px;
+	}
+}
+
+/* ---------------------------------------------------------------------- */
+/*	Calendar week
+/* ---------------------------------------------------------------------- */
+.cl-calendar table{width:100%; border-collapse:collapse}
+.cl-calendar table td{
+	border:1px solid #ddd;
+	width:14.5%;
+	height:45px;
+	text-align:center;
+	color: #4f6070;
+	vertical-align:top;
+	font-size:1em;
+	font-size:14px;
+	background:#F5F5F5;
+	float: left;
+}
+.cl-calendar table td.first-day{
+	padding: 2px 0px;
+	color: #4f6070;
+	vertical-align:middle;
+	font-size:1em;
+	font-weight:bold;
+	background:#ECECEC;
+	width:13%;
+}
+.cl-calendar table td.first-day div.row-day{
+	height: 20px;
+	margin-top: -12px;
+}
+.cl-calendar table td.h-yellow{
+	background:#fff;
+	cursor: pointer;
+}
+.cl-calendar table td.h-yellow i{
+	color:#ffc000;
+}
+.cl-calendar table td.h-blue,.cl-calendar table td.h-full{
+	background:#fff;
+	cursor: pointer;
+}
+.cl-calendar table td.h-blue i{
+	color:#008000;	
+}
+.cl-calendar table td.h-full i{color:#F00}
+.cl-calendar table td i {
+    bottom: -120%;
+	left: 33%;
+	position: absolute;
+}
+.cl-calendar table td span{
+	position:relative;
+}

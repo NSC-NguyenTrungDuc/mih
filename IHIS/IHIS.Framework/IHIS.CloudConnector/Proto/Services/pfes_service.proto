@@ -1,0 +1,74 @@
+syntax = "proto2";
+
+
+// -- PFE0101U00 START --
+message PFE0101U00GrdDCodeRequest
+{
+	optional string code_type         = 1;
+	optional string code              = 2;
+	optional string code_name         = 3;
+}
+
+message PFE0101U00GrdDCodeResponse
+{
+	repeated PFE0101U00GrdDCodeInfo dcode_item = 1;
+}
+
+message PFE0101U00GrdMCodeRequest
+{
+	optional string code_type = 1;
+}
+
+message PFE0101U00GrdMCodeResponse
+{
+	repeated PFE0101U00GrdMCodeInfo mcode_item = 1;
+}
+
+message PFE0101U00LayDupMRequest
+{
+	optional string code_type = 1;
+}
+
+message PFE0101U00LayDupDRequest
+{
+	optional string code_type         = 1;
+	optional string code              = 2;
+}
+
+message PFE0101U00LayDupDResponse
+{
+	optional string result = 1;
+}
+
+message PFE0101U00LayUserNameRequest
+{
+	optional string code = 1;
+}
+
+message PFE0101U00LayUserNameResponse
+{
+	optional string user_name = 1;
+}
+
+message PFE0101U00GrdDcodeColumnChangedRequest
+{
+	optional string row_state          = 1;
+	optional string col_name           = 2;
+	optional string code_type          = 3;
+	optional string code               = 4;
+	optional bool m_code_type          = 5;
+}
+
+message PFE0101U00GrdDcodeColumnChangedResponse
+{
+	optional string dup_yn = 1;
+	optional string user_name = 2;
+}
+
+message PFE0101U00SaveLayoutRequest
+{
+	optional string user_id = 1;
+	repeated PFE0101U00SaveLayoutInfo save_layout_item = 2;
+}
+
+// -- PFE0101U00 END --

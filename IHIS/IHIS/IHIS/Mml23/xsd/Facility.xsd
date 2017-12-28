@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<xs:schema xmlns:mmlFc="uri:mmlFc" xmlns:mmlCm="uri:mmlCm" elementFormDefault="qualified" targetNamespace="uri:mmlFc" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="uri:mmlCm" />
+  <xs:element name="Facility">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="mmlFc:name" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlCm:Id" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="name">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="repCode" use="required">
+            <xs:simpleType>
+              <xs:restriction base="xs:NMTOKEN">
+                <xs:enumeration value="I" />
+                <xs:enumeration value="A" />
+                <xs:enumeration value="P" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="tableId" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

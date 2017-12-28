@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <script src="../libs/jquery/jquery-1.9.1.js"></script>
+  <script src="../libs/highcharts/highcharts.js"></script>
+  <script src="../libs/utils.js"></script>
+  <script src="../jsUtilities/DateFormat.js"></script>
+  <script src="../jsUtilities/DataManipulate.js"></script>
+
+</head>
+<body style="background-color: transparent; padding: 0px;">
+  <div id="container" style="width: 100%; height: 100%; position:absolute; margin-right:10px;"></div>
+  <script type="text/javascript">
+  var highchart;
+  function changeDimension(width, height){
+    $('#container').height(height);
+    window.location = "phr-js-log:" + height;
+  }
+  /*
+  {
+  bmi = 0;
+  "chest_size" = 85;
+  "datetime_record" = "2016-01-28T10:30:09Z";
+  height = 168;
+  "high_blood_press" = 110;
+  id = 28;
+  "low_blood_press" = 70;
+  note = Note;
+  "perc_fat" = "<null>";
+  "profile_id" = 278;
+  "waist_line" = 65;
+  weight = 54;
+}
+
+*/
+
+/*
+[
+[Date.UTC(1970, 9, 21), 0],
+[Date.UTC(1970, 10, 4), 0.28],
+[Date.UTC(1970, 10, 9), 0.25]
+]
+*/
+
+function drawGraph(base64Data) {
+  var heighColor = '#00edb1';
+  var weightColor = '#517fff';
+  var headSizeColor = '#ff3970';
+  var fontSizeConfig = '7px';
+  var areaColor1 = '#85C715';
+  var areaColor2 = '#DAEEB8';
+  var lineColor = '#42630A';
+  var whiteColor = '#FFFFFF';
+  var bmiLineColor = '#9966cc';
+  /*
+  BMI Weight Status
+  Below 18.5 Underweight
+  18.5 – 24.9 Normal
+  25.0 – 29.9 Overweight
+  30.0 and Above Obese
+  */
+  var stageBMI = [10.0,18.5,24.9,29.9,34.9,40.0];
+  var UnderweightColor = '#00c8ff';
+  var NormalColor = '#00ff00';
+  var OverweightColor = '#ffff00';
+  var ObesityColor = '#ff8000';
+  var AboveObeseColor = '#ff0000';
+  //
+  var type = 2;
+  var offsetConfigZero = 0;
+  var offsetConfig = 5;
+  var offsetConfigHeadSize = 10;
+  var offsetConfigNegative = -10;
+  //get data
+  var data = Base64.decode(base64Data);
+  var json = JSON.parse(data);
+  var arrayHealth = json["content"];
+  var arrayBMI = [];
+  var lastIndex = arrayHealth.length - 1;
+  // // end init
+  for (i = lastIndex; i >= 0; i--) {
+    var health = arrayHealth[i]; // get an object
+    var height = parseFloat(health["height"]);
+    var weight = parseFloat(health["weight"]);
+    height = height / 100; // cm -> m
+    height = height * height; // exp 2
+    var bmi_topush = weight / height;
+    bmi_topush = parseFloat(bmi_topush.toFixed(2));
+    var timeRecord = health["datetime_record"];
+    var timeRecordUTC = processingDateToUTC(timeRecord);
+    arrayBMI.push([timeRecordUTC,bmi_topush]);
+  }
+  $('#container').highcharts({
+    chart: {
+      zoomType: 'x',
+      backgroundColor: 'transparent',
+      type: 'scatter'
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ''
+    },
+    xAxis: {
+      type: 'datetime',
+      tickLength: 0,
+      labels: {
+        style: {
+          color: areaColor2,
+          font: '11px Trebuchet MS, Verdana, sans-serif'
+        }
+      }
+    },
+    yAxis: {
+      //tickPositions: stageBMI,
+      gridLineWidth: 0.5,
+      min: 10,
+      max: 40,
+      // tickPixelInterval: 10,
+      // plotBands: [{ // mark the weekend
+      //   color: UnderweightColor,
+      //   from: 10.0,
+      //   to: 18.5
+      // },{ // mark the weekend
+      //   color: NormalColor,
+      //   from: 18.5,
+      //   to: 24.9
+      // },{ // mark the weekend
+      //   color: OverweightColor,
+      //   from: 24.9,
+      //   to: 30.0
+      // },{ // mark the weekend
+      //   color: AboveObeseColor,
+      //   from: 30,
+      //   to: 40.0
+      // }],
+      title: {
+        text: 'BMI',
+        style: {
+          color: areaColor2,
+          //fontSize: fontSizeConfig
+        }
+      },
+      labels: {
+        //format: '{value}',
+        style: {
+          color: areaColor2,
+          //fontSize: fontSizeConfig
+        }
+      },
+      opposite: true,
+    },
+    legend: {
+      enabled: false
+    },
+    tooltip: {
+      hideDelay: 100,
+      formatter: function () {
+        var dateTime = new Date(this.x);
+        var newDate = dateFormat(dateTime, "dd/mm h:MM:ss TT");
+        return '<b>' + newDate + '</b><br/>' + this.series.name + ': <b>'+ this.y + '</b>';
+      }
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          align: 'center',
+          enabled: false,
+          style: {
+            color: areaColor2
+          }
+        }
+      }
+    },
+    series: [{
+      //type: 'line',
+      name: 'BMI',
+      data: arrayBMI,
+      dashStyle: 'shortdot',
+      color: 'transparent',
+      lineWidth: 1,
+      zones: [{
+        value: 18.5,
+        color: UnderweightColor
+      }, {
+        value: 24.9,
+        color: NormalColor
+      }, {
+        value: 29.9,
+        color: OverweightColor
+      }, {
+        value: 34.9,
+        color: ObesityColor
+      },{
+        value: 40.0,
+        color: AboveObeseColor
+      }]
+    }]
+  });
+};
+</script>
+</body>
+</html>

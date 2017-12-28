@@ -1,0 +1,14 @@
+<data>
+    <private_objects type="record">
+        <Patient_ID type="string">$rq.patientId</Patient_ID>
+        #if($rq.performDate)
+        <Perform_Date type="string">$rq.performDate</Perform_Date>
+        #end
+        #if($rq.performMonth)
+            <Perform_Month type="string">$rq.performMonth</Perform_Month>
+        #end
+        #if($rq.performYear)
+            <Perform_Year type="string">$rq.performYear</Perform_Year>
+        #end
+    </private_objects>
+</data>

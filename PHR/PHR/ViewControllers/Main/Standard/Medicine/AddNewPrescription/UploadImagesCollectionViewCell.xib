@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="UploadImagesCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e4a-iG-lNn">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ib1-La-eAU">
+                        <rect key="frame" x="30" y="0.0" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="hhf-oG-GhY"/>
+                            <constraint firstAttribute="width" constant="20" id="sIw-TQ-tWn"/>
+                        </constraints>
+                        <state key="normal" image="ic_remove_image">
+                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="OnClickBtnClose:" destination="gTV-IL-0wX" eventType="touchUpInside" id="aGy-Nh-Hja"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXo-WK-SZA">
+                        <rect key="frame" x="12" y="13" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="JTh-VV-uka"/>
+                            <constraint firstAttribute="height" constant="25" id="k9w-0y-v41"/>
+                        </constraints>
+                        <state key="normal" image="ic_add_image">
+                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="e4a-iG-lNn" secondAttribute="trailing" id="8He-gB-YAT"/>
+                <constraint firstItem="mXo-WK-SZA" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="AVy-yS-AcT"/>
+                <constraint firstAttribute="bottom" secondItem="e4a-iG-lNn" secondAttribute="bottom" id="AzU-op-pYX"/>
+                <constraint firstItem="ib1-La-eAU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Fbh-Os-PNd"/>
+                <constraint firstItem="e4a-iG-lNn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Tsq-IB-aDI"/>
+                <constraint firstAttribute="trailing" secondItem="ib1-La-eAU" secondAttribute="trailing" id="pzd-Jh-D3g"/>
+                <constraint firstItem="mXo-WK-SZA" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="w8k-Mu-v0c"/>
+                <constraint firstItem="e4a-iG-lNn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="yxE-q6-QZP"/>
+            </constraints>
+            <connections>
+                <outlet property="btnAdd" destination="mXo-WK-SZA" id="GO8-Fq-P7Y"/>
+                <outlet property="btnClose" destination="ib1-La-eAU" id="8E4-zT-GYP"/>
+                <outlet property="imgUpload" destination="e4a-iG-lNn" id="tfQ-zl-3N3"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_add_image" width="42" height="42"/>
+        <image name="ic_remove_image" width="42" height="42"/>
+    </resources>
+</document>

@@ -1,0 +1,218 @@
+message PHY8002U01GrdPHY8002Request{
+        optional string fk_ocs = 1;
+}
+
+message PHY8002U01GrdPHY8002Response{
+        repeated PHY8002U01GrdPHY8002LisItemInfo list = 1;
+}
+
+message PHY8002U01GrdPHY8003Request{
+        optional string kanja_no = 1;
+        optional string fk_ocs_irai = 2;
+}
+
+message PHY8002U01GrdPHY8003Response{
+         repeated PHY8002U01GrdPHY8003LisItemInfo list = 1;
+}
+
+message PHY8002U01GrdPHY8004Request{
+        optional string fk_ocs_irai = 1;
+}
+
+
+message PHY8002U01GrdPHY8004Response{
+      repeated PHY8002U01GrdPHY8004LisItemInfo list = 1;
+}
+
+message PHY8002U01MultiGrdRequest{
+    
+}
+
+message PHY8002U01MultiGrdResponse{
+    repeated PHY8002U01GrdOTListItemInfo grdOT_list = 1;
+    repeated PHY8002U01GrdOTListItemInfo grdPT_list = 2;
+    repeated PHY8002U01GrdOTListItemInfo grdST_list = 3;
+}
+
+message PHY8002U01PHY1000U00ScreenOpenRequest{
+
+}
+
+message PHY8002U01PHY1000U00ScreenOpenResponse{
+        optional string code_name = 1;
+}
+
+message PHY8002U01BtnPrintGetGwaNameRequest{
+        optional string col_name = 1;
+        optional string start_date = 2;
+        optional string end_date = 3;
+        optional string gwa = 4;
+        
+        optional string irai_date = 5;
+}
+
+message PHY8002U01BtnPrintGetGwaNameResponse{
+        optional string gwa_name = 1;
+}
+
+message PHY8002U01BtnPrintGetDataWindowRequest{
+        
+}
+
+message PHY8002U01BtnPrintGetDataWindowResponse{
+        repeated PHY8002U01BtnPrintGetDataWindowInfo info_list = 1;
+}
+
+message PHY8002U01GetLayJissekiDataRequest{
+            optional string fkocs = 1;
+                        optional string in_out_gubun = 2;
+}
+
+message PHY8002U01GetLayJissekiDataResponse{
+            optional string result = 1;
+}
+
+message PHY8002U01GetPhy8002SeqRequest{
+
+}
+
+message PHY8002U01GetPhy8002SeqResponse{
+            optional string seq = 1;
+}
+
+message PHY8002U01SaveLayoutRequest{
+        optional string user_id = 1;
+        optional string fk_ocs = 2;
+        optional string io_kubun = 3;
+        
+        repeated PHY8002U01GrdPHY8002LisItemInfo input_8002 = 4;
+        repeated PHY8002U01GrdPHY8003LisItemInfo input_8003 = 5;
+        repeated PHY8002U01GrdPHY8004LisItemInfo input_8004 = 6;
+        
+        optional string approve_doctor_gwa = 7;
+        optional string approve_doctor_id = 8;
+        optional string pk_scan001 = 9;
+        optional string bunho = 10;
+        optional string copy_pkocskey = 11;
+        optional string user_gubun = 12;
+}
+
+message PHY8002U01SaveLayoutResponse{
+        optional bool result_8002 = 1;
+        optional bool result_8003 = 2;
+        optional bool result_8004 = 3;
+        optional string pk_phy8002 = 4;
+        optional string msg_case3 = 5;
+}
+
+
+message PHY8002U01GetScan001SeqRequest{
+
+}
+
+message PHY8002U01GetScan001SeqResponse{
+            optional string seq = 1;
+}
+
+message PHY8002U01LoadFnInpRequest{
+        optional string bunho = 1;
+}
+
+message PHY8002U01LoadFnInpResponse{
+        optional string value_jaewon = 1;
+        optional string value_last = 2;
+}
+
+
+message PHY0001U00GrdRehaSinryouryouCodeRequest
+{
+}
+message PHY0001U00GrdRehaSinryouryouCodeResponse {
+	repeated PHY0001U00GrdRehaSinryouryouCodeInfo grd_info = 1;
+}
+message PHY0001U00GrdOCS0132Request
+{
+	optional string code_type = 1;
+}
+
+message PHY0001U00GrdOCS0132Response
+{
+	repeated PHY0001U00GrdOCS0132Info grd_info = 1;
+}
+
+message PHY0001U00SaveLayoutRequest
+{
+	repeated PHY0001U00GrdRehaSinryouryouCodeInfo grd_reha_info = 1;
+	repeated PHY0001U00GrdOCS0132Info grd_ocs_info = 2;
+	optional string data_row_state = 3;
+}
+
+// --- [START] PHY8002U00 ---
+message PHY8002U00GrdPHYRequest {
+	optional string fk_ocs = 1;
+	optional string kanja_no = 2;
+	optional string fk_ocs_irai = 3;
+}
+
+message PHY8002U00GrdPHYResponse {
+	repeated PHY8002U00GrdPHY8002Info grd8002_info = 1;
+	repeated PHY8002U00GrdPHY8003Info grd8003_info = 2;
+	repeated PHY8002U00GrdPHY8004Info grd8004_info = 3;
+}
+
+message PHY8002U00PrintRequest {
+	optional string gwa = 1;
+}
+
+message PHY8002U00PrintResponse {
+	repeated DataStringListItemInfo info = 1;
+	repeated PHY8002U00DtHospInfo dt_info = 2;
+}
+
+message PHY8002U00SaveLayoutRequest {
+    optional string user_id = 1;
+    optional string fk_ocs = 2;
+    optional string io_kubun = 3;
+
+    repeated PHY8002U00GrdPHY8002Info phy8002_info = 4;
+    repeated PHY8002U00GrdPHY8003Info phy8003_info = 5;
+    repeated PHY8002U00GrdPHY8004Info phy8004_info = 6;
+
+    optional string approve_doctor_gwa = 7;
+    optional string approve_doctor_id = 8;
+    optional string pk_scan001 = 9;
+    optional string bunho = 10;
+    optional string copy_pkocskey = 11;
+    optional string user_gubun = 12;
+    optional string leave_cnt = 13;
+}
+
+message PHY8002U00SaveLayoutResponse {
+    optional bool result_8002 = 1;
+    optional bool result_8003 = 2;
+    optional bool result_8004 = 3;
+    optional string pk_phy8002 = 4;
+    optional string msg_case3 = 5;
+    repeated PHY8002U00GrdPHY8002Info setPHY8002Info = 6;
+}
+
+message PHY8002U00InsertInitValueRequest {
+}
+
+message PHY8002U00InsertInitValueResponse {
+	optional string t_chk = 1;
+	optional string ret_val = 2;
+}
+
+message PHY8002U00GrdQueryRequest {
+	optional string code_type = 1;
+}
+
+message PHY8002U00GrdGroupQueryRequest {
+	optional string code_type = 1;
+}
+
+message PHY8002U00GrdQueryResponse {
+	repeated PHY8002U00GrdQueryInfo grd_info = 1;
+}
+// --- [END] PHY8002U00 ---

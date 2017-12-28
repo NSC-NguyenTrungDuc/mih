@@ -1,0 +1,570 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnSindanmei.Text" xml:space="preserve">
+    <value>Patient</value>
+  </data>
+  <data name="grbIsihenoDengon.Text" xml:space="preserve">
+    <value>Message for doctor</value>
+  </data>
+  <data name="grbKensachi.Text" xml:space="preserve">
+    <value>Laboratory data</value>
+  </data>
+  <data name="grbSidoueiyouryou.Text" xml:space="preserve">
+    <value>Indication nutrition amount</value>
+  </data>
+  <data name="grbSidounaiyou.Text" xml:space="preserve">
+    <value>Instruction contents</value>
+  </data>
+  <data name="grbSijijikou.Text" xml:space="preserve">
+    <value>Instructions item</value>
+  </data>
+  <data name="grbSindanmei.Text" xml:space="preserve">
+    <value>Diease name</value>
+  </data>
+  <data name="rbtDrink_n.Text" xml:space="preserve">
+    <value>Impossible</value>
+  </data>
+  <data name="rbtDrink_y.Text" xml:space="preserve">
+    <value>Possible</value>
+  </data>
+  <data name="rbtSaikai.Text" xml:space="preserve">
+    <value>Re-Instruction</value>
+  </data>
+  <data name="rbtSport_n.Text" xml:space="preserve">
+    <value>Kh?ng th?</value>
+  </data>
+  <data name="rbtSport_y.Text" xml:space="preserve">
+    <value>Impossible</value>
+  </data>
+  <data name="rbtSyokai.Text" xml:space="preserve">
+    <value>Initial Instruction</value>
+  </data>
+  <data name="xEditGridCell1.HeaderText" xml:space="preserve">
+    <value>Created date</value>
+  </data>
+  <data name="xEditGridCell10.HeaderText" xml:space="preserve">
+    <value>Item name</value>
+  </data>
+  <data name="xEditGridCell11.HeaderText" xml:space="preserve">
+    <value>Requested date</value>
+  </data>
+  <data name="xEditGridCell110.HeaderText" xml:space="preserve">
+    <value>Created date</value>
+  </data>
+  <data name="xEditGridCell111.HeaderText" xml:space="preserve">
+    <value>User ID</value>
+  </data>
+  <data name="xEditGridCell112.HeaderText" xml:space="preserve">
+    <value>Updated date</value>
+  </data>
+  <data name="xEditGridCell113.HeaderText" xml:space="preserve">
+    <value>Hospital date</value>
+  </data>
+  <data name="xEditGridCell114.HeaderText" xml:space="preserve">
+    <value>Table basic key</value>
+  </data>
+  <data name="xEditGridCell115.HeaderText" xml:space="preserve">
+    <value>Request key</value>
+  </data>
+  <data name="xEditGridCell117.HeaderText" xml:space="preserve">
+    <value>IN- Out hospital classfy</value>
+  </data>
+  <data name="xEditGridCell12.HeaderText" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="xEditGridCell121.HeaderText" xml:space="preserve">
+    <value>Injuries , diease name code</value>
+  </data>
+  <data name="xEditGridCell122.HeaderText" xml:space="preserve">
+    <value>Date of onset</value>
+  </data>
+  <data name="xEditGridCell123.HeaderText" xml:space="preserve">
+    <value>Date of diagnosis</value>
+  </data>
+  <data name="xEditGridCell124.HeaderText" xml:space="preserve">
+    <value>Prefix name</value>
+  </data>
+  <data name="xEditGridCell125.HeaderText" xml:space="preserve">
+    <value>Display injuries diease name</value>
+  </data>
+  <data name="xEditGridCell126.HeaderText" xml:space="preserve">
+    <value>pr1</value>
+  </data>
+  <data name="xEditGridCell127.HeaderText" xml:space="preserve">
+    <value>pr2</value>
+  </data>
+  <data name="xEditGridCell128.HeaderText" xml:space="preserve">
+    <value>pr3</value>
+  </data>
+  <data name="xEditGridCell129.HeaderText" xml:space="preserve">
+    <value>pr4</value>
+  </data>
+  <data name="xEditGridCell13.HeaderText" xml:space="preserve">
+    <value>Patient number</value>
+  </data>
+  <data name="xEditGridCell130.HeaderText" xml:space="preserve">
+    <value>pr5</value>
+  </data>
+  <data name="xEditGridCell131.HeaderText" xml:space="preserve">
+    <value>pr6</value>
+  </data>
+  <data name="xEditGridCell132.HeaderText" xml:space="preserve">
+    <value>pr7</value>
+  </data>
+  <data name="xEditGridCell133.HeaderText" xml:space="preserve">
+    <value>pr8</value>
+  </data>
+  <data name="xEditGridCell134.HeaderText" xml:space="preserve">
+    <value>pr9</value>
+  </data>
+  <data name="xEditGridCell135.HeaderText" xml:space="preserve">
+    <value>pr10</value>
+  </data>
+  <data name="xEditGridCell136.HeaderText" xml:space="preserve">
+    <value>po1</value>
+  </data>
+  <data name="xEditGridCell137.HeaderText" xml:space="preserve">
+    <value>po2</value>
+  </data>
+  <data name="xEditGridCell138.HeaderText" xml:space="preserve">
+    <value>po3</value>
+  </data>
+  <data name="xEditGridCell139.HeaderText" xml:space="preserve">
+    <value>po4</value>
+  </data>
+  <data name="xEditGridCell14.HeaderText" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="xEditGridCell140.HeaderText" xml:space="preserve">
+    <value>po5</value>
+  </data>
+  <data name="xEditGridCell141.HeaderText" xml:space="preserve">
+    <value>po6</value>
+  </data>
+  <data name="xEditGridCell142.HeaderText" xml:space="preserve">
+    <value>po7</value>
+  </data>
+  <data name="xEditGridCell143.HeaderText" xml:space="preserve">
+    <value>po8</value>
+  </data>
+  <data name="xEditGridCell144.HeaderText" xml:space="preserve">
+    <value>po9</value>
+  </data>
+  <data name="xEditGridCell145.HeaderText" xml:space="preserve">
+    <value>po10</value>
+  </data>
+  <data name="xEditGridCell146.HeaderText" xml:space="preserve">
+    <value>Suffix name</value>
+  </data>
+  <data name="xEditGridCell147.HeaderText" xml:space="preserve">
+    <value>Injuries , diease name</value>
+  </data>
+  <data name="xEditGridCell15.HeaderText" xml:space="preserve">
+    <value>Doctors diagnose</value>
+  </data>
+  <data name="xEditGridCell150.HeaderText" xml:space="preserve">
+    <value>Data classification</value>
+  </data>
+  <data name="xEditGridCell16.HeaderText" xml:space="preserve">
+    <value>Physique Index</value>
+  </data>
+  <data name="xEditGridCell17.HeaderText" xml:space="preserve">
+    <value>Instructions item</value>
+  </data>
+  <data name="xEditGridCell18.HeaderText" xml:space="preserve">
+    <value>Target weight</value>
+  </data>
+  <data name="xEditGridCell19.HeaderText" xml:space="preserve">
+    <value>Exercise load</value>
+  </data>
+  <data name="xEditGridCell2.HeaderText" xml:space="preserve">
+    <value>ID user</value>
+  </data>
+  <data name="xEditGridCell20.HeaderText" xml:space="preserve">
+    <value>Drinking</value>
+  </data>
+  <data name="xEditGridCell21.HeaderText" xml:space="preserve">
+    <value>Energy</value>
+  </data>
+  <data name="xEditGridCell22.HeaderText" xml:space="preserve">
+    <value>Protein</value>
+  </data>
+  <data name="xEditGridCell23.HeaderText" xml:space="preserve">
+    <value>fkoutsang</value>
+  </data>
+  <data name="xEditGridCell24.HeaderText" xml:space="preserve">
+    <value>Fat</value>
+  </data>
+  <data name="xEditGridCell25.HeaderText" xml:space="preserve">
+    <value>P / S ratio</value>
+  </data>
+  <data name="xEditGridCell26.HeaderText" xml:space="preserve">
+    <value>Carbohydrate</value>
+  </data>
+  <data name="xEditGridCell27.HeaderText" xml:space="preserve">
+    <value>Salt</value>
+  </data>
+  <data name="xEditGridCell28.HeaderText" xml:space="preserve">
+    <value>Moisture</value>
+  </data>
+  <data name="xEditGridCell29.HeaderText" xml:space="preserve">
+    <value>B�EP</value>
+  </data>
+  <data name="xEditGridCell3.HeaderText" xml:space="preserve">
+    <value>Date Modified</value>
+  </data>
+  <data name="xEditGridCell30.HeaderText" xml:space="preserve">
+    <value>The average blood sugar</value>
+  </data>
+  <data name="xEditGridCell31.HeaderText" xml:space="preserve">
+    <value>A1C</value>
+  </data>
+  <data name="xEditGridCell32.HeaderText" xml:space="preserve">
+    <value>TCH</value>
+  </data>
+  <data name="xEditGridCell33.HeaderText" xml:space="preserve">
+    <value>Neutral fat (triglyceride)</value>
+  </data>
+  <data name="xEditGridCell34.HeaderText" xml:space="preserve">
+    <value>High density lipoprotein</value>
+  </data>
+  <data name="xEditGridCell35.HeaderText" xml:space="preserve">
+    <value>Low-density lipoprotein</value>
+  </data>
+  <data name="xEditGridCell36.HeaderText" xml:space="preserve">
+    <value>Hemoglobin</value>
+  </data>
+  <data name="xEditGridCell37.HeaderText" xml:space="preserve">
+    <value>albumin</value>
+  </data>
+  <data name="xEditGridCell38.HeaderText" xml:space="preserve">
+    <value>Blood urea nitrogen</value>
+  </data>
+  <data name="xEditGridCell39.HeaderText" xml:space="preserve">
+    <value>creatinine</value>
+  </data>
+  <data name="xEditGridCell4.HeaderText" xml:space="preserve">
+    <value>Hospital code</value>
+  </data>
+  <data name="xEditGridCell40.HeaderText" xml:space="preserve">
+    <value>Liver test  1</value>
+  </data>
+  <data name="xEditGridCell41.HeaderText" xml:space="preserve">
+    <value>Liver test 2</value>
+  </data>
+  <data name="xEditGridCell42.HeaderText" xml:space="preserve">
+    <value>Liver test 3</value>
+  </data>
+  <data name="xEditGridCell43.HeaderText" xml:space="preserve">
+    <value>Instruction nutritionist</value>
+  </data>
+  <data name="xEditGridCell44.HeaderText" xml:space="preserve">
+    <value>Instruction nutritionist name</value>
+  </data>
+  <data name="xEditGridCell45.HeaderText" xml:space="preserve">
+    <value>Instruction contents</value>
+  </data>
+  <data name="xEditGridCell46.HeaderText" xml:space="preserve">
+    <value>Implementation date</value>
+  </data>
+  <data name="xEditGridCell47.HeaderText" xml:space="preserve">
+    <value>Message for doctor</value>
+  </data>
+  <data name="xEditGridCell48.HeaderText" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="xEditGridCell49.HeaderText" xml:space="preserve">
+    <value>First division</value>
+  </data>
+  <data name="xEditGridCell5.HeaderText" xml:space="preserve">
+    <value>Table primary key</value>
+  </data>
+  <data name="xEditGridCell50.HeaderText" xml:space="preserve">
+    <value>Reservation date</value>
+  </data>
+  <data name="xEditGridCell6.HeaderText" xml:space="preserve">
+    <value>Data classification</value>
+  </data>
+  <data name="xEditGridCell7.HeaderText" xml:space="preserve">
+    <value>Order key</value>
+  </data>
+  <data name="xEditGridCell8.HeaderText" xml:space="preserve">
+    <value>In-out hospital classfy</value>
+  </data>
+  <data name="xEditGridCell9.HeaderText" xml:space="preserve">
+    <value>Item code</value>
+  </data>
+  <data name="xFlatLabel1.Text" xml:space="preserve">
+    <value>kcal</value>
+  </data>
+  <data name="xFlatLabel10.Text" xml:space="preserve">
+    <value>mg/dl</value>
+  </data>
+  <data name="xFlatLabel11.Text" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="xFlatLabel12.Text" xml:space="preserve">
+    <value>mg/dl</value>
+  </data>
+  <data name="xFlatLabel13.Text" xml:space="preserve">
+    <value>mm/Hg</value>
+  </data>
+  <data name="xFlatLabel14.Text" xml:space="preserve">
+    <value>IU/I</value>
+  </data>
+  <data name="xFlatLabel15.Text" xml:space="preserve">
+    <value>IU/I</value>
+  </data>
+  <data name="xFlatLabel16.Text" xml:space="preserve">
+    <value>IU/I</value>
+  </data>
+  <data name="xFlatLabel17.Text" xml:space="preserve">
+    <value>g/dl</value>
+  </data>
+  <data name="xFlatLabel18.Text" xml:space="preserve">
+    <value>mg/dl</value>
+  </data>
+  <data name="xFlatLabel19.Text" xml:space="preserve">
+    <value>g/dl</value>
+  </data>
+  <data name="xFlatLabel2.Text" xml:space="preserve">
+    <value>g</value>
+  </data>
+  <data name="xFlatLabel20.Text" xml:space="preserve">
+    <value>mg/dl</value>
+  </data>
+  <data name="xFlatLabel21.Text" xml:space="preserve">
+    <value>mg/dl</value>
+  </data>
+  <data name="xFlatLabel3.Text" xml:space="preserve">
+    <value>g</value>
+  </data>
+  <data name="xFlatLabel39.Text" xml:space="preserve">
+    <value>kg</value>
+  </data>
+  <data name="xFlatLabel4.Text" xml:space="preserve">
+    <value>mg/dl</value>
+  </data>
+  <data name="xFlatLabel5.Text" xml:space="preserve">
+    <value>g</value>
+  </data>
+  <data name="xFlatLabel6.Text" xml:space="preserve">
+    <value>g</value>
+  </data>
+  <data name="xFlatLabel7.Text" xml:space="preserve">
+    <value>Department:</value>
+  </data>
+  <data name="xFlatLabel8.Text" xml:space="preserve">
+    <value>ml</value>
+  </data>
+  <data name="xFlatLabel9.Text" xml:space="preserve">
+    <value>mg/dl</value>
+  </data>
+  <data name="xLabel1.Text" xml:space="preserve">
+    <value>Reservation date</value>
+  </data>
+  <data name="xLabel10.Text" xml:space="preserve">
+    <value>Carbohydrate</value>
+  </data>
+  <data name="xLabel11.Text" xml:space="preserve">
+    <value>Salt</value>
+  </data>
+  <data name="xLabel12.Text" xml:space="preserve">
+    <value>Moisture</value>
+  </data>
+  <data name="xLabel13.Text" xml:space="preserve">
+    <value>Fat</value>
+  </data>
+  <data name="xLabel14.Text" xml:space="preserve">
+    <value>Protein</value>
+  </data>
+  <data name="xLabel15.Text" xml:space="preserve">
+    <value>FBS</value>
+  </data>
+  <data name="xLabel16.Text" xml:space="preserve">
+    <value>A1C</value>
+  </data>
+  <data name="xLabel17.Text" xml:space="preserve">
+    <value>LDL</value>
+  </data>
+  <data name="xLabel18.Text" xml:space="preserve">
+    <value>HDL</value>
+  </data>
+  <data name="xLabel19.Text" xml:space="preserve">
+    <value>TG</value>
+  </data>
+  <data name="xLabel2.Text" xml:space="preserve">
+    <value>BMI</value>
+  </data>
+  <data name="xLabel20.Text" xml:space="preserve">
+    <value>TCH</value>
+  </data>
+  <data name="xLabel21.Text" xml:space="preserve">
+    <value>B�EP</value>
+  </data>
+  <data name="xLabel22.Text" xml:space="preserve">
+    <value>Hb</value>
+  </data>
+  <data name="xLabel23.Text" xml:space="preserve">
+    <value>CRE</value>
+  </data>
+  <data name="xLabel24.Text" xml:space="preserve">
+    <value>AST(GOT)</value>
+  </data>
+  <data name="xLabel25.Text" xml:space="preserve">
+    <value>ALT(GPT)</value>
+  </data>
+  <data name="xLabel26.Text" xml:space="preserve">
+    <value>��GT</value>
+  </data>
+  <data name="xLabel27.Text" xml:space="preserve">
+    <value>BUN</value>
+  </data>
+  <data name="xLabel28.Text" xml:space="preserve">
+    <value>ALB</value>
+  </data>
+  <data name="xLabel29.Text" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="xLabel3.Text" xml:space="preserve">
+    <value>Target weight</value>
+  </data>
+  <data name="xLabel30.Text" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="xLabel4.Text" xml:space="preserve">
+    <value>Exercise load</value>
+  </data>
+  <data name="xLabel5.Text" xml:space="preserve">
+    <value>Drinking</value>
+  </data>
+  <data name="xLabel6.Text" xml:space="preserve">
+    <value>Implementation date</value>
+  </data>
+  <data name="xLabel7.Text" xml:space="preserve">
+    <value>Instruction nutritionist name</value>
+  </data>
+  <data name="xLabel8.Text" xml:space="preserve">
+    <value>Energy</value>
+  </data>
+  <data name="xLabel9.Text" xml:space="preserve">
+    <value>P / S ratio</value>
+  </data>
+</root>

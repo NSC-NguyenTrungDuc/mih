@@ -1,0 +1,117 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C1A1EC82-BF66-4C2C-A378-110BDC78ACFD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IHIS.ORCA</RootNamespace>
+    <AssemblyName>ORCA.S02</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DataWindow, Version=1.5.8018.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da" />
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="IHIS.BizObjects, Version=1.0.5471.38202, Culture=neutral, processorArchitecture=x86" />
+    <Reference Include="IHIS.Controls, Version=1.0.5471.38237, Culture=neutral, processorArchitecture=x86" />
+    <Reference Include="IHIS.DbControls, Version=1.0.5471.38238, Culture=neutral, processorArchitecture=x86" />
+    <Reference Include="IHIS.Forms, Version=1.0.5471.38201, Culture=neutral, processorArchitecture=x86" />
+    <Reference Include="IHIS.Service, Version=1.0.5471.38237, Culture=neutral, processorArchitecture=x86" />
+    <Reference Include="IHIS.Win32, Version=1.0.5471.38237, Culture=neutral, processorArchitecture=x86" />
+    <Reference Include="IHIS.CloudConnector"><HintPath>C:\IHISIHIS.CloudConnector.dll</HintPath><Private>False</Private></Reference>
+<Reference Include="IHIS.ComFunc">
+<HintPath>C:\IHIS\IHIS.ComFunc.dll</HintPath><Private>False</Private></Reference> <Reference Include="IHIS.X.Magic, Version=1.0.5471.38237, Culture=neutral, processorArchitecture=x86" />
+    <Reference Include="Interop.Excel, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="Interop.Office, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="protobuf-net, Version=2.0.0.668, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\IHIS.Cloud\IHIS.CloudConnector\libs\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="JapaneseDateTime.cs" />
+    <Compile Include="P2003.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P2003.Designer.cs">
+      <DependentUpon>P2003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P0031.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P0031.Designer.cs">
+      <DependentUpon>P0031.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="S02.cs">
+    </Compile>
+    <Compile Include="S02.Designer.cs">
+      <DependentUpon>S02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="P2003.resx">
+      <DependentUpon>P2003.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P0031.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>P0031.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="S02.en-US.resx">
+      <DependentUpon>S02.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="S02.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>S02.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)" c:\IHIS\ORCA\.</PostBuildEvent>
+  </PropertyGroup>
+</Project>

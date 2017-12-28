@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <msgs>
+    <msg ID="M001" K="이전비밀번호를 입력하십시오." J="前回パスワードを入力してください。" E="Please enter the password once before" V="Hãy nhập mật khẩu lần trước"  CID="ChangePswdForm,UserInfo"/>
+    <msg ID="M002" K="신규비밀번호를 입력하십시오." J="新規パスワードを入力してください。" E="Please enter your new password" V="Hãy nhập mật khẩu mới" CID="ChangePswdForm,UserInfo"/>
+    <msg ID="M003" K="확인비밀번호를 입력하십시오." J="確認パスワードを入力してください。" E="Please enter your password" V="Hãy nhập lại mật khẩu" CID="ChangePswdForm"/>
+    <msg ID="M004" K="신규비밀번호와 확인비밀번호가 일치하지 않습니다." J="新規パスワードと確認パスワードが一致しません。" E="The new password and password confirmation are not the same" V="Mật khẩu mới và mật khảu xác nhận không giống nhau" CID="ChangePswdForm"/>
+    <msg ID="M005" K="사용자ID가 입력되지 않았습니다." J="ユーザーＩＤを入力したください。" E="Enter User ID" V="Nhập User ID" CID="ChangeUserForm,LogoutUserForm,UserInfo"/>
+    <msg ID="M006" K="비밀번호가 입력되지 않았습니다." J="パスワードを入力してください。" E="Enter the password" V="Nhập mật khẩu" CID="ChangeUserForm,LogoutUserForm,UserInfo"/>
+    <msg ID="M007" K="시스템 에러" J="システムエラー" E="System error" V="Lỗi hệ thống" CID="ErrorLogForm"/>
+    <msg ID="M008" K="시스템에서  다음과  같은  에러가  발생하였습니다." J="ご迷惑をおかけして申し訳ありません。" E="System errors arising as below" V="Một lỗi không mong muốn đã xảy ra." CID="ErrorLogForm"/>
+    <msg ID="M009" K="지원되는 유형의 화면이 아닙니다." J="支援しない画面です。" E="The screen is not supported" V="Màn hình không được hỗ trợ" CID="MdiChild,MdiForm,XDynamicScreenControl"/>
+    <msg ID="M010" K="화면 인쇄시 오류가 발생하였습니다." J="画面印刷の際、エラーが発生しました。" E="Print error" V="Lỗi khi in" CID="MdiChild"/>
+    <msg ID="M011" K="열려있는 화면이 없습니다." J="" E="" V="" CID="MdiForm"/>
+    <msg ID="M012" K="환자리스트에 등록된 화면만 Docking으로 오픈가능합니다." J="患者リストに登録された画面のみDockingでオープン可能です。" E="Expenses can open the registration screen in the patient list" V="Chi có thể mở màn hình đăng ký trong DS BN" CID="MdiForm"/>
+    <msg ID="M013" K="타이틀은 20자리를 초과할 수 없습니다." J="タイトルは２０桁以下入力してください。" E="Expenses are entered under the 20-character title" V="Chi được nhập tiêu đề dưới 20 ký tự" CID="MenuViewForm"/>
+    <msg ID="M014" K="타이틀이 제대로 입력되지 않았습니다." J="タイトル入力が間違いました。" E="Enter the wrong title" V="Nhập sai tiêu đề" CID="MenuViewForm"/>
+    <msg ID="M015" K="타이틀이 입력되지 않았습니다." J="タイトルを入力して下さい。" E="Please enter a title" V="Hãy nhập tiêu đề" CID="MenuViewForm"/>
+    <msg ID="M016" K="마이메뉴에서 시스템메뉴로는 Drop할수 없습니다." J="移動不可です。" E="Unable to move" V="Không thể di chuyển" CID="MenuViewForm"/>
+    <msg ID="M017" K="시스템메뉴에서 시스템메뉴로는 Drop할수 없습니다." J="移動不可です。" E="Unable to move" V="Không thể di chuyển" CID="MenuViewForm"/>
+    <msg ID="M018" K="화면메뉴아래에는 DragDrop할 수 없습니다." J="移動不可です。" E="Unable to move" V="Không thể di chuyển" CID="MenuViewForm"/>
+    <msg ID="M019" K="화면메뉴는 마이메뉴 바로아래에 Drop할 수 없습니다." J="移動不可です。" E="Unable to move" V="Không thể di chuyển" CID="MenuViewForm"/>
+    <msg ID="M020" K="부모노드를 자식노드에 Drop할 수 없습니다." J="移動不可です。" E="Unable to move" V="Không thể di chuyển" CID="MenuViewForm"/>
+    <msg ID="M021" K="해당 화면이 없습니다." J="該当画面がありません。" E="The screen does not exist" V="Màn hình không tồn tại" CID="MenuViewForm,XDynamicScreenControl"/>
+    <msg ID="M022" K="추가할 수 없는 메뉴입니다." J="追加できません。" E="Unable to add" V="Không thể thêm" CID="MenuViewForm"/>
+    <msg ID="M023" K="삭제할 수 없는 메뉴입니다." J="削除できません。" E="Unable to delete" V="Không thể xóa" CID="MenuViewForm"/>
+    <msg ID="M024" K="타이틀을 편집할 수 없는 메뉴입니다." J="タイトルを変更できません。" E="Unable to change the title" V="Không thể thay đổi tiêu đề" CID="MenuViewForm"/>
+    <msg ID="M025" K="파일수신에러" J="ファイル受信エラー" E="Get file error" V="Nhận file lỗi" CID="ScreenLoader"/>
+    <msg ID="M026" K="파일을 다운로드하는데 실패하였습니다." J="ファイルのダウンロードに失敗しました。" E="Unable to download" V="Download thất bại" CID="ScreenLoader,XDynamicScreenControl"/>
+    <msg ID="M027" K="프로그램 종료후에 다시 한번 실행해 주십시오." J="プログラムを終了後にもう一度、実行して下さい。" E="Upon exiting the application, go again" V="Sau khi kết thoát khỏi ứng dụng, hãy vào lại" CID="ScreenLoader,XDynamicScreenControl"/>
+    <msg ID="M028" K="계속 다운로드가 실패하면 전산실로 문의하시기 바랍니다." J="ダウンロード失敗が続くと電算室に問い合わせしてください。" E="Please contact Karte.Clinic if downloads continue to fail" V="Xin hãy liên lạc với Karte.Clinic nếu download tiếp tục thất bại" CID="ScreenLoader,XDynamicScreenControl"/>
+    <msg ID="M029" K="다운로드 디렉토리에 있는 파일을 삭제하지 못했습니다." J="ダウンロードフォルダのファイルが削除できませんでした。" E="Do not delete files in the download directory" V="Không xóa được file trong thư mục download" CID="ScreenLoader,XDynamicScreenControl"/>
+    <msg ID="M030" K="화면이 업데이트되었습니다." J="画面がアップデートされました。" E="The screen has been updated" V="Màn hình đã được udpate" CID="ScreenLoader,XDynamicScreenControl"/>
+    <msg ID="M031" K="해당 화면을 찾을 수 없습니다." J="該当画面が見つかりません。" E="Did not find the corresponding screen" V="Không tìm thấy màn hình tương ứng" CID="ScreenLoader,XDynamicScreenControl"/>
+    <msg ID="M032" K="해당 화면을 Load할 수 없습니다." J="当該画面がロードできません。" E="Cannot load screen" V="Không tải được màn hình" CID="ScreenLoader"/>
+    <msg ID="M033" K="해당 화면의 객체를 생성할 수 없습니다." J="当該画面のオブジェクトが生成できません。" E="Cannot initialize screen" V="Không khởi tạo được màn hình" CID="ScreenLoader,XDynamicScreenControl"/>
+    <msg ID="M034" K="화면 로드" J="画面ロード" E="Load screen" V="Tải màn hình" CID="ScreenLoader"/>
+    <msg ID="M035" K="서버시간" J="サーバー時間" E="Server time" V="Giờ trên server" CID="SetTimeForm"/>
+    <msg ID="M036" K="PC  시간" J="ＰＣ時間" E="" V="PC time" CID="SetTimeForm"/>
+    <msg ID="M037" K="시간을 맞추지 않을 경우 잘못된 날짜(시간)으로 인해 데이타 오류가 발생할 수 있습니다." J="時間を合わせないと間違った日付（時間）によってデータエラー発生の恐れがあります" 
+         E="If time is not synchronized, will likely generate errors days" V="Nếu thời gian không đồng bộ, sẽ có khả năng phát sinh lỗi sai ngày" CID="SetTimeForm"/>
+    <msg ID="M038" K="PC 시간을 서버시간에 맞추겠습니까?" J="ＰＣ時間をサーバー時間に合わせますか。" E="Want to synchronize time with the PC?" V="Có muốn đồng bộ thời gian với PC?" CID="SetTimeForm"/>
+    <msg ID="M039" K="에러" J="" E="" V="" CID="SystemExceptionHandler"/>
+    <msg ID="M040" K="에러 발생 객체" J="エラー発生オブジェクト" E="Object Initialization Error" V="Lỗi khi Khởi tạo đối tượng" CID="SystemExceptionHandler"/>
+    <msg ID="M041" K="에러 발생 메서드" J="エラー発生メソッド" E="Initialization method error" V="Khởi tạo method lỗi" CID="SystemExceptionHandler"/>
+    <msg ID="M042" K="업무시스템 실행간 에러가 발생했습니다." J="業務システム実行にてエラーが発生しました。" E="Errors arise when implementing operations" V="Phát sinh lỗi khi thực thi nghiệp vụ" CID="SystemExceptionHandler"/>
+    <msg ID="M043" K="업무시스템 에러" J="業務システムエラー" E="System operation errors" V="Lỗi nghiệp vụ hệ thống" CID="SystemExceptionHandler"/>
+    <msg ID="M044" K="사용자정보 생성에러" J="ユーザー情報生成エラー" E="Error initializing information users" V="Lỗi khởi tạo thông tin NSD" CID="UserInfo"/>
+    <msg ID="M045" K="화면정보를 얻는데 실패하였습니다." J="画面情報を呼出に失敗しました。" E="Can not get information screen" V="Không gọi được thông tin màn hình" CID="XDynamicScreenControl"/>
+    <msg ID="M046" K="파일이 존재하지 않습니다." J="ファイルが存在しません。" E="File does not exist" V="File không tồn tại" CID="XDynamicScreenControl"/>
+    <msg ID="M047" K="전산실에 문의하시기 바랍니다." J="전산실에 문의하시기 바랍니다." E="Please contact to Karte.Clinic" V="Vui lòng liên hệ Karte.Clinic" CID="XDynamicScreenControl"/>
+    <msg ID="M048" K="생성중에 에러가 발생했습니다." J="実行にてエラーが発生しました。" E="" V="Execution exception" CID="XDynamicScreenControl"/>
+    <msg ID="M049" K="처리가 완료되었습니다." J="処理が完了しました。" E="End process" V="Kết thúc xử lý" CID="XForm,XScreen"/>
+    <msg ID="M050" K="조회가 완료되었습니다." J="照会が完了しました。" E="End of reference" V="Kết thúc tham chiếu" CID="XForm,XScreen"/>
+    <msg ID="M051" K="처리할 대상이 없습니다..." J="処理対象がありません。" E="No object handling" V="Không có đối tượng xử lý" CID="XForm,XScreen"/>
+    <msg ID="M052" K="조회할 내역이 없습니다." J="照会内訳がありません。" E="No queries" V="Không có truy vấn" CID="XForm,XScreen"/>
+    <msg ID="M053" K="자료를 찾을 수 없습니다." J="資料が見つかりません。" E="Document Not Found" V="Không tìm thấy tài liệu" CID="XForm,XScreen"/>
+    <msg ID="M054" K="처리 중입니다..." J="処理しています。" E="Processing" V="Đang xử lý" CID="XForm,XScreen"/>
+    <msg ID="M055" K="조회 중입니다..." J="照会しています。" E="Querying" V="Đang truy vấn" CID="XForm,XScreen"/>
+    <msg ID="M056" K="조회가 계속됩니다..." J="照会が続きます。" E="Continue query" V="Tiếp tục truy vấn" CID="XForm,XScreen"/>
+    <msg ID="M057" K="FTP 서버에 접속하지 못했습니다.[사용자,비밀번호 확인]" J="FTP サーバーに繋がりません。[ＩＤ、パスワード確認]" E="Failed to connect to FTP server (ID / password)" V="Không kết nối được đến FTP server (ID / mật khẩu)" CID="XFTPWorker"/>
+    <msg ID="M058" K="디렉토리 변경에러" J="フォルダ変更エラー" E="Error changing directory" V="Lỗi khi thay đổi thư mục" CID="XFTPWorker"/>
+    <msg ID="M059" K="서버 리스트를 구성하는데 실패하였습니다." J="サーバーリストの構成に失敗しました。" E="Error in server architecture" V="Lỗi trong cấu trúc máy chủ" CID="XFTPWorker"/>
+    <msg ID="M060" K="파일이 존재하지 않습니다." J="ファイルが存在しません。" E="Directory not exist " V="Không tồn tại thư mục" CID="XFTPWorker"/>
+    <msg ID="M061" K="파일전송에러" J="ファイル伝送エラー" E="Send file error" V="Lỗi gửi file" CID="XFTPWorker"/>
+    <msg ID="M062" K="서버파일을 잘못 지정하였습니다." J="サーバーファイルの指定が間違いました。" E="Specify a file server error" V="Chỉ định sai file server" CID="XFTPWorker"/>
+    <msg ID="M063" K="파일수신에러" J="ファイル受信エラー" E="Error getting file" V="Lỗi nhận file" CID="XFTPWorker"/>
+    <msg ID="M064" K="파일삭제에러" J="ファイル削除エラー" E="Error deleting file" V="Lỗi xóa file" CID="XFTPWorker"/>
+    <msg ID="M065" K="디렉토리생성에러" J="フォルダ生成エラー" E="Generate folder error" V="Lỗi sinh folder" CID="XFTPWorker"/>
+    <msg ID="M066" K="디렉토리삭제에러" J="フォルダ削除エラー" E="Delete folder error" V="Lỗi xóa folder" CID="XFTPWorker"/>
+    <msg ID="M067" K="파일명변경에러" J="ファイル名変更エラー" E="Change file name error" V="Lỗi thay đổi tên tệp tin" CID="XFTPWorker"/>
+    <msg ID="M068" K="화면 Load시 에러가 발생했습니다." J="画面ロード時、エラーが発生しました。" E="Load screen error" V="Khi tải màn hình đã xảy ra lỗi" CID="XScreen"/>
+    <msg ID="M069" K="화면 로드" J="画面ロード" E="Load screen" V="Tải màn hình" CID="XScreen"/>
+    <msg ID="M070" K="변경된 내역이 있습니다." J="変更した内訳があります。" E="Content changes" V="Có nội dung thay đổi"  CID="XScreen"/>
+    <msg ID="M071" K="저장후 닫으시겠습니까?" J="保存後に閉じますか" E="Do you want to close after saving?" V="Bạn có muốn đóng sau khi lưu?"  CID="XScreen"/>
+    <msg ID="M072" K="변경내역 확인" J="変更内訳確認" E="Confirm the content changes" V="Xác nhận nội dung thay đổi" CID="XScreen"/>
+    <msg ID="M073" K="메인화면은 닫을 수 없습니다." J="メイン画面は閉めることができません。" E="Unable to close the main screen" V="Không thể đóng được màn hình chính"  CID="XScreen"/>
+    <msg ID="M074" K="시스템메세지를 처리할 파일이 존재하지 않습니다." J="システムメッセージを処理するファイルがありません。" E="No file system message processing" V="Không có tệp tin xử lý tin nhắn hệ thống" CID="MdiForm"/>
+    <msg ID="M075" K="시스템메세지를 처리하지 못했습니다[처리Class미존재]" J="システムメッセージが処理できませんでした。[処理Class未存在]" E="Unable to process the message system [Not exist Class handle]" V="Không thể xử lý tin nhắn hệ thống [Không tồn tại Class xử lý]" CID="MdiForm"/>
+    <msg ID="M076" K="시스템메세지를 처리하지 못했습니다[처리메서드미존재]" J="システムメッセージが処理できませんでした。[処理Method未存在]" E="Unable to process the message system [Not exist Method handle]" V="Không thể xử lý tin nhắn hệ thống [Không tồn tại Method xử lý]" CID="MdiForm"/>
+    <msg ID="M077" K="시스템메세지를 처리하지 못했습니다." J="システムメッセージが処理できませんでした。" E="Unable to process the message system." V="Không thể xử lý tin nhắn hệ thống." CID="MdiForm"/>
+    <msg ID="M078" K="진료과 정보를 조회하지 못했습니다." J="診療科情報が照会できません。" E="No query is information clinics" V="Không truy vấn được thông tin khoa khám" CID="LoginForm"/>
+    <msg ID="M079" K="진료과 정보가 없는 사용자입니다.\n\n사용자ID를 확인하여 주십시오" J="ユーザの診療科情報がありません。\n\nユーザＩＤを確認してください。" E="No information of user consultation departments. \ N \ n Please check the ID" V="Không có thông tin khoa khám của user. \n\n hãy kiểm tra lại ID" CID="MdiForm"/>
+    <msg ID="M080" K="" J="" E="" CID="MdiForm"/>
+    <msg ID="M081" K="" J="新規パスワードは前回パスワードと重複してはいけません。もう一度入力して下さい。" E="New passwords must not be identical to the old password. Please re-enter" V="Password mới không được trùng với password cữ. Vui lòng nhập lại" CID="ChangePswdForm"/>
+    <msg ID="M082" K="" J="新規パスワードは最近使用した ３つのパスワードと異なる必要があります。" E="New password must be different from the nearest 3 password. Please re-enter" V="Password mới phải khác với 3 password gần nhất. Vui lòng nhập lại" CID="ChangePswdForm"/>
+    <msg ID="M083" K="" J="新規パスワードは8文字以上でなければなりません。" E="Password must be at least 8 characters. Please re-enter" V="Password phải có ít nhất 8 kí tự. Vui lòng nhập lại" CID="ChangePswdForm"/>
+    <msg ID="M084" K="" J="前回パスワードを入力間違えました。もう一度入力して下さい。" E="Current password is incorrect. Please re-enter." V="Password hiện tại không đúng. Vui lòng nhập lại." CID="ChangePswdForm"/>
+    
+  </msgs>
+  <fids>
+	<fid ID="F001" K="취 소" J="取消" E="Cancel" V="Hủy" CID="ChangePswdForm,ChangeUserForm,LeavePassForm"/>
+  <fid ID="F002" K="변 경" J="変更" E="Change" V="Thay đổi"  CID="ChangePswdForm"/>
+  <fid ID="F003" K="비밀번호 변경" J="パスワード変更" E="Change password" V="Thay đổi mật khẩu" CID="ChangePswdForm"/>
+  <fid ID="F004" K="이전비밀번호" J="前回パスワード" E="Previous password" V="Mật khẩu trước" CID="ChangePswdForm"/>
+	<fid ID="F005" K="신규비밀번호" J="新規パスワード" E="New password" V="Mật khẩu mới" CID="ChangePswdForm"/>
+	<fid ID="F006" K="확인비밀번호" J="確認パスワード" E="Confirm password" V="Xác nhận mật khẩu" CID="ChangePswdForm"/>
+  <fid ID="F007" K="확 인" J="ログイン" E="Login" V="Đăng nhập" CID="ChangeUserForm,LeavePassForm,LogoutUserForm"/>
+	<fid ID="F008" K="ID 저장" J="ＩＤ保存" E="Remember me" V="Lưu ID" CID="ChangeUserForm,LogoutUserForm"/>
+	<fid ID="F009" K="사용자 변경" J="ユーザー変更" E="Change user" V="Đổi người dùng" CID="ChangeUserForm"/>
+  <fid ID="F010" K="종 료" J="終 了" E="Exit" V="Kết thúc" CID="ErrorLogForm,LogoutUserForm"/>
+	<fid ID="F011" K="계 속" J="継 続" E="Continue" V="Tiếp tục" CID="ErrorLogForm"/>
+  <fid ID="F012" K="오류전송" J="エラー伝送" E="Transfer error" V="Lỗi truyền" CID="ErrorLogForm"/>
+	<fid ID="F013" K="비밀번호 입력" J="" E="Please enter password" V="Hãy nhập mật khẩu" CID="LeavePassForm"/>
+	<fid ID="F014" K="시스템 종료" J="終了" E="Quit all KCCK" V="Tắt máy" CID="LeavePassForm"/>
+  <fid ID="F015" K="비밀번호" J="" E="Password" V="Mật khẩu" CID="LeavePassForm"/>
+	<fid ID="F016" K="사용자 LOGOUT" J="ユーザーログアウト" E="Logout" V="Thoát người dùng" CID="LogoutUserForm"/>
+	<fid ID="F017" K="업무관리" J="業務管理" E="Business management" V="Quản lý nghiệp vụ" CID="MdiForm,MenuViewForm"/>
+  <fid ID="F018" K="업무전환" J="業務転換" E="Change Business" V="Thay đổi nghiệp vụ" CID="MdiForm"/>
+	<fid ID="F019" K="메세지보기" J="メッセージ一覧" E="List Message" V="Danh sách tin nhắn" CID="MdiForm"/>
+	<fid ID="F020" K="메뉴보기" J="メニュー一覧" E="List menu" V="Danh sách menu" CID="MdiForm,MenuViewForm"/>
+  <fid ID="F021" K="메뉴재생성" J="メニュー再生成" E="Re-create menu" V="Tạo lại menu" CID="MdiForm"/>
+	<fid ID="F022" K="사용자로그아웃" J="ユーザーログアウト" E="Logout" V="Đăng xuất" CID="MdiForm"/>
+	<fid ID="F023" K="사용자변경" J="ユーザー変更" E="Change user" V="Thay đổi người dùng" CID="MdiForm"/>
+  <fid ID="F024" K="비밀번호변경" J="バスワード変更" E="Change password" V="Thay đổi mật khẩu" CID="MdiForm"/>
+  <fid ID="F025" K="화면잠금" J="画面ロック" E="Lock screen" V="Khóa màn hình" CID="MdiForm"/>
+  <fid ID="F026" K="화면인쇄" J="画面印刷" E="Print screen" V="In màn hình" CID="MdiForm"/>
+	<fid ID="F027" K="화면캡쳐" J="画面キャプチャー" E="Capture screen" V="Chụp màn hình" CID="MdiForm"/>
+  <fid ID="F028" K="전체화면닫기" J="全体画面閉じる" E="Close all screens" V="Đóng toàn bộ màn hình" CID="MdiForm"/>
+  <fid ID="F029" K="사용자정보" J="ユーザー情報" E="User information" V="Thông tin người dùng" CID="MdiForm"/>
+	<fid ID="F030" K="끝내기" J="システム終了" E="Exit system" V="Kết thúc hệ thống" CID="MdiForm"/>
+	<fid ID="F031" K="님즐겨찾기" J="様のお気に入り" E="Common" V="Thường dùng" CID="MdiForm,MenuViewForm"/>
+	<fid ID="F032" K="화면닫기" J="画面閉じる" E="Close" V="Đóng màn hình" CID="MdiForm"/>
+	<fid ID="F033" K="새메뉴" J="新メニュー" E="New menu" V="Menu mới" CID="MenuViewForm"/>
+	<fid ID="F034" K="타이틀바꾸기" J="タイトル変更" E="Change title" V="Thay đổi tiêu đề" CID="MenuViewForm"/>
+	<fid ID="F035" K="메뉴삭제" J="メニュー削除" E="Delete menu" V="Xóa menu" CID="MenuViewForm"/>
+  <fid ID="F036" K="[업무시스템 메뉴]" J="[業務システムメニュー]" E="[Business System Menu]" V="[Menu nghiệp vụ hệ thống]" CID="MenuViewForm"/>
+	<fid ID="F037" K="환자리스트" J="患者リスト" E="Patient list" V="Danh sách bệnh nhân" CID="MenuViewForm"/>
+	<fid ID="F038" K="검색대상 화면명" J="検索対象の画面名" E="Screen Name Object search" V="Tên màn hình đối tượng tìm" CID="MenuViewForm"/>
+	<fid ID="F039" K="검색" J="検索" E="Search" V="Tìm kiếm" CID="MenuViewForm"/>
+	<fid ID="F040" K="검색결과" J="検索結果" E="Search result" V="Kết quả tìm kiếm" CID="MenuViewForm"/>
+  <fid ID="F041" K="화면명" J="画面名" E="Screen name" V="Tên màn hình" CID="MenuViewForm"/>
+  <fid ID="F042" K="닫 기" J="閉じる" E="Close" V="Đóng" CID="MenuViewForm"/>
+	<fid ID="F043" K="즐겨찾기 메뉴에 적용" J="お気に入りをメニューに適用" E="For frequently used menu" V="Cho vào menu thường dùng" CID="MenuViewForm"/>
+	<fid ID="F044" K="PC시간 동기화" J="" E="Time Synchronization PC" V="Đồng bộ thời gian PC" CID="SetTimeForm"/>
+	<fid ID="F045" K="확 인" J="確 認" E="Confirm" V="Xác nhận" CID="SetTimeForm"/>
+  <fid ID="F046" K="취 소" J="取消" E="Cancel" V="Hủy" CID="SetTimeForm"/>
+	<fid ID="F047" K="환자번호" J="患者番号" E="Patient code" V="Mã bệnh nhân" CID="XScreen"/>
+	<fid ID="F048" K="이 름" J="名 前" E="Name" V="Tên" CID="XScreen"/>
+	<fid ID="F049" K="화 면 명" J="画 面 名" E="Screen name" V="Tên màn hình" CID="XScreen"/>
+	<fid ID="F050" K="환 자 번 호 선 택" J="患者番号選択" E="Select patient code" V="Chọn mã bệnh nhân" CID="XScreen"/>
+	<fid ID="F051" K="모니터 설정" J="モニター設定" E="Monitor settings" V="Thiết lập màn hình" CID="SelectMonitorForm"/>
+  <fid ID="F052" K="모니터" J="モニター" E="Monitor" V="Màn hình" CID="SelectMonitorForm"/>
+  <fid ID="F053" K="지정안함" J="指定なし" E="Not specify" V="Không chỉ định" CID="SelectMonitorForm"/>
+  <fid ID="F054" K="확 인" J="確 認" E="Confirm" V="Xác nhận" CID="SelectMonitorForm"/>
+  <fid ID="F055" K="취 소" J="取消" E="Cancel" V="Hủy" CID="SelectMonitorForm"/>
+  <fid ID="F056" K="" J="エラー記述" E="Error description" V="Chi tiết lỗi" CID="ErrorLogForm"/>
+  <fid ID="F057" K="" J="(日本語) " E="(for Japanese)" V="(tiếng Nhật)" CID="ErrorLogForm"/>
+  <fid ID="F058" K="" J="(ベトナム語)" E="(for Vietnamese)" V="(tiếng Việt)" CID="ErrorLogForm"/>
+    <fid ID="F059" K="" J="ユーザーID" E="User ID)" V="ID người dùng" CID="ChangeUserForm"/>
+    <fid ID="F060" K="" J="パスワード" E="Password" V="Mật khẩu" CID="ChangeUserForm"/>
+    <fid ID="F061" K="" J="1st" E="1st" V="Số 1" CID="SelectMoniorForm"/>
+    <fid ID="F062" K="" J="2nd" E="2nd" V="Số 2" CID="SelectMoniorForm"/>
+    <fid ID="F063" K="" J="3nd" E="3nd" V="Số 3" CID="SelectMoniorForm"/>
+    <fid ID="F064" K="" J="4th" E="4th" V="Số 4" CID="SelectMoniorForm"/>
+  </fids>
+</config>

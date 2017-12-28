@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<xs:schema xmlns:mmlPh="uri:mmlPh" elementFormDefault="qualified" targetNamespace="uri:mmlPh" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Phone">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mmlPh:area" />
+        <xs:element ref="mmlPh:city" />
+        <xs:element ref="mmlPh:number" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlPh:extension" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlPh:country" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlPh:memo" />
+      </xs:sequence>
+      <xs:attribute name="telEquipType">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="PH" />
+            <xs:enumeration value="FX" />
+            <xs:enumeration value="MD" />
+            <xs:enumeration value="CP" />
+            <xs:enumeration value="BP" />
+            <xs:enumeration value="Internet" />
+            <xs:enumeration value="X.400" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="memo" type="xs:string" />
+  <xs:element name="country" type="xs:string" />
+  <xs:element name="extension" type="xs:string" />
+  <xs:element name="number" type="xs:string" />
+  <xs:element name="city" type="xs:string" />
+  <xs:element name="area" type="xs:string" />
+</xs:schema>

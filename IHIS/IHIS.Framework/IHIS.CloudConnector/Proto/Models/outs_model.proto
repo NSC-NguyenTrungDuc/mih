@@ -1,0 +1,53 @@
+// --- [START] OUT1001P01 ---
+message OUT1001P01GrdOUT1001ListItemInfo{
+	optional string pkout1001 = 1;
+	optional string bunho = 2;
+	optional string gwa = 3;
+	optional string gwa_name = 4;
+	optional string doctor = 5;
+	optional string doctor_name = 6;
+	optional string jubsu_no = 7;
+}
+
+// --- [END] OUT1001P01 ---
+
+
+// --- [START] OUT0106U00 ---
+
+message OUT0106U00GridItemInfo {
+	optional string comments = 1;
+	optional string ser = 2;
+	optional string bunho = 3;
+	optional string display_yn = 4;
+	optional string data_row_state = 5;
+}
+
+message OUT0106U00PatientCommentItemInfo {
+	optional string patient_info = 1;
+	optional string patient_info_name = 2;
+	optional string start_date = 3;
+	optional string end_date = 4;
+	optional string comments = 5;
+	optional string bunho = 6;
+	optional string cont_key = 7;
+	optional string data_row_state = 8;
+}
+
+message OUT0106U00PatientItemInfo {
+	optional string patient_info = 1;
+	optional string patient_info_name = 2;
+	optional string cont_key = 3;
+}
+
+// --- [END] OUT0106U00 ---
+
+// --- [Start] OUT1001U01 ---
+message NuroOUT1001U01LoadCheckChojaeJpnInfo
+{
+        optional string chojae = 1;         
+        optional string cht_chojae = 2;      
+        optional string gajubsu_gubun  = 3;  
+        optional string err = 4;
+}
+
+// --- [End] OUT1001U01 ---

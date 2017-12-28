@@ -1,0 +1,230 @@
+/* Style CSS */
+/* ---------------------------
+	CSS
+--------------------------- */
+body a {
+    cursor: pointer;
+}
+
+input[type=text]:focus {
+    border-color: rgba(82, 168, 236, .8) !important;
+    outline: thin dotted \9 !important;
+    -webkit-box-shadow: 0 0 8px rgba(82, 168, 236, .6) !important;
+    -moz-box-shadow: 0 0 8px rgba(82, 168, 236, .6) !important;
+    box-shadow: 0 0 8px rgba(82, 168, 236, .6) !important;
+}
+
+/*.error:focus {
+    border-color: #d9534f !important;
+    outline: thin dotted \9 !important;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483 !important;
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483 !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483 !important;
+}*/
+
+/*textarea:focus {
+    border-color: rgba(82, 168, 236, .8) !important;
+    outline: thin dotted \9 !important;
+    -webkit-box-shadow: 0 0 8px rgba(82, 168, 236, .6) !important;
+    -moz-box-shadow: 0 0 8px rgba(82, 168, 236, .6) !important;
+    box-shadow: 0 0 8px rgba(82, 168, 236, .6) !important;
+}*/
+
+#table-list tbody td {
+    background-color: #f0f1f4;
+}
+
+#table-list_wrapper tbody td {
+    background-color: #f0f1f4;
+}
+
+/*for button arrow at dashboarh screen*/
+
+.panel-nav.cleafix {
+    margin-bottom: 20px;
+}
+
+.panel-nav.cleafix#btn-panel-nav {
+    height: 140px;
+    cursor: pointer;
+}
+
+.panel-nav.cleafix .fa {
+    margin-top: 36px;
+}
+
+table.dataTable tbody tr {
+    background-color: #f0f1f4 !important;
+}
+
+table.dataTable.no-footer {
+    border-bottom: none;
+}
+
+table#qlib thead tr th {
+    width: 100%;
+}
+
+table#qlib tbody {
+    display: block;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 355px;
+}
+
+table#qlib tbody::-webkit-scrollbar {
+    width: 2px;
+}
+
+table#qlib tbody::-webkit-scrollbar-thumb {
+    width: 2px;
+    background-color: #ddd;
+}
+
+table.table {
+    margin-bottom: 0px !important;
+}
+
+.dataTables_length select {
+    background-color: #fcfcfd;
+    background-image: none;
+    border: 1px solid #bdc3d1;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #262b36;
+    font-size: 12px;
+    height: 38px;
+    line-height: 1.42857;
+    padding: 10px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 100%;
+}
+
+.correctAnswer {
+    background-color: #0b708e;
+}
+
+.question-group table thead tr th:first-child {
+    /*width: 15px;*/
+    padding: 0 0 20px 0;
+}
+
+.question-group table thead tr th:last-child {
+    width: 15%;
+    padding: 0 0 20px 0;
+}
+
+.question-group table thead tr th textarea {
+    width: 100%;
+    box-sizing: border-box;
+    max-height: 250px;
+    min-height: 30px !important;
+    overflow-x: hidden;
+    background-color: #505b72;
+    border: none !important;
+    text-transform: uppercase;
+    color: #ffffff !important;
+    padding: 6px 0 0 10px;
+}
+
+.question-group.active table thead tr th textarea {
+    width: 100%;
+    box-sizing: border-box;
+    max-height: 250px;
+    min-height: 30px !important;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    border: none !important;
+    text-transform: uppercase;
+    color: #000000 !important;
+    padding: 6px 0 0 10px;
+}
+
+#dept_survey {
+    height: 450px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#clearfix {
+    margin-bottom: 10px;
+}
+
+.dropdown-menu.pull-right {
+    cursor: pointer;
+}
+
+.error {
+    font-size: 18px;
+}
+
+/*Form input focus*/
+.focus-input {
+    border-color: #ccc !important;
+    border-color: rgba(82, 168, 236, .8) !important;
+    outline: thin dotted \9 !important;
+    -webkit-box-shadow: 0 0 8px rgba(82, 168, 236, .6) !important;
+    box-shadow: 0 0 8px rgba(82, 168, 236, .6) !important;
+}
+
+.error-input {
+    display: none;
+    color: #d9534f;
+    padding-top: 5px;
+}
+
+/*scroll to top button*/
+.scrollToTop {
+    /*width: 40px;*/
+    /*height: 40px;*/
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: none;
+}
+
+.well.well-asset-options.clearfix {
+    padding: 19px;
+}
+
+.help-error {
+    color: #d9534f;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.term-area h5 {
+    padding-left: 20px;
+}
+
+.term-area p:first-child, .term-area p:nth-child(2) {
+    padding-left: 0;
+}
+
+.term-area p {
+    padding-left: 40px;
+}
+.modal-footer {
+    border-top: hidden !important;
+}
+
+span.select2-container:not(.select2) {
+    z-index: 3000 !important;
+}
+
+#loadingIcon {
+    margin-left: 100px;
+    margin-bottom: 20px;
+}
+
+#input-addon {
+    background-color: #505B72;
+    border: 1px solid #505B72;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.btn-xs {
+    margin-top: 10px;
+}

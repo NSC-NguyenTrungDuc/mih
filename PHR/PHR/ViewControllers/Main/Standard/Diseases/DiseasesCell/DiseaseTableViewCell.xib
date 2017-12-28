@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Aileron-Regular.otf">
+            <string>Aileron-Regular</string>
+            <string>Aileron-Regular</string>
+            <string>Aileron-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="68" id="KGk-i7-Jjw" customClass="DiseaseTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="67.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_black_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="RpV-gU-pbS">
+                        <rect key="frame" x="294" y="28" width="6" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="7lh-L0-Dwv"/>
+                            <constraint firstAttribute="width" constant="6" id="eVi-LR-if1"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8I-HF-Gq0">
+                        <rect key="frame" x="13" y="23" width="38" height="18"/>
+                        <fontDescription key="fontDescription" name="Aileron-Regular" family="Aileron" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZj-X7-1vb">
+                        <rect key="frame" x="13" y="41" width="31" height="15"/>
+                        <fontDescription key="fontDescription" name="Aileron-Regular" family="Aileron" pointSize="12"/>
+                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b46-Vb-Zx0">
+                        <rect key="frame" x="-2" y="68" width="322" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="FV3-Ae-Miv"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zJ-Io-iDq">
+                        <rect key="frame" x="247" y="26" width="31" height="15"/>
+                        <fontDescription key="fontDescription" name="Aileron-Regular" family="Aileron" pointSize="12"/>
+                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="kZj-X7-1vb" firstAttribute="top" secondItem="2zJ-Io-iDq" secondAttribute="bottom" id="IGn-8w-DxA"/>
+                    <constraint firstItem="kZj-X7-1vb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="Imu-XD-lnm"/>
+                    <constraint firstItem="RpV-gU-pbS" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Jan-6v-61i"/>
+                    <constraint firstItem="2zJ-Io-iDq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Q8n-ve-QDY"/>
+                    <constraint firstItem="d8I-HF-Gq0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="Sqf-aK-zT3"/>
+                    <constraint firstItem="RpV-gU-pbS" firstAttribute="leading" secondItem="2zJ-Io-iDq" secondAttribute="trailing" constant="16" id="VAN-Md-uyp"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="b46-Vb-Zx0" secondAttribute="bottom" constant="-10" id="XbP-dQ-jDU"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="b46-Vb-Zx0" secondAttribute="trailing" constant="-8" id="Zdh-6t-IHY"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="RpV-gU-pbS" secondAttribute="trailing" constant="12" id="au6-6F-uI8"/>
+                    <constraint firstItem="kZj-X7-1vb" firstAttribute="top" secondItem="d8I-HF-Gq0" secondAttribute="bottom" constant="-14" id="cDe-DN-kbW"/>
+                    <constraint firstItem="RpV-gU-pbS" firstAttribute="top" secondItem="d8I-HF-Gq0" secondAttribute="bottom" constant="-15" id="gq8-gQ-x5w"/>
+                    <constraint firstItem="kZj-X7-1vb" firstAttribute="top" secondItem="d8I-HF-Gq0" secondAttribute="bottom" id="gqq-3c-mIf"/>
+                    <constraint firstItem="b46-Vb-Zx0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-10" id="qwm-Wa-4gG"/>
+                    <constraint firstItem="kZj-X7-1vb" firstAttribute="top" secondItem="RpV-gU-pbS" secondAttribute="bottom" constant="-15" id="rrh-YL-1m1"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="cDe-DN-kbW"/>
+                        <exclude reference="rrh-YL-1m1"/>
+                        <exclude reference="gq8-gQ-x5w"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lblDateTime" destination="2zJ-Io-iDq" id="fV6-BH-3uh"/>
+                <outlet property="lblDiseasesName" destination="d8I-HF-Gq0" id="VDZ-5V-THZ"/>
+                <outlet property="lblHospiatalName" destination="kZj-X7-1vb" id="nHT-vg-tAA"/>
+            </connections>
+            <point key="canvasLocation" x="269" y="210"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Icon_black_arrow" width="6" height="10"/>
+    </resources>
+</document>

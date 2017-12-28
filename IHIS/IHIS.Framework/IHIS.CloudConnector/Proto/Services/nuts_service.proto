@@ -1,0 +1,60 @@
+syntax = "proto2";
+
+message NUT0001U00LoadDoctorGwaRequest{
+	optional string in_out_gubun = 1; 
+	optional string pkocskey = 2;
+}
+
+message NUT0001U00LoadDoctorGwaResponse{
+	repeated ComboListItemInfo doctor_gwa_info = 1;
+}
+
+message NUT0001U00InitializeScreenRequest{
+        optional string doctor_gwa_name = 1;
+        optional string gwa_code = 2;
+
+        optional string pkocskey = 3;
+
+        optional string in_out_gubun = 4;
+
+        optional string hangmog_code = 5;
+}
+
+message NUT0001U00InitializeScreenResponse{
+        optional string sys_date = 1;
+        optional string gwa_name = 2;
+        repeated NUT0001U00GrdNUT0001ItemInfo grd001_item_info = 3;
+        optional string seq = 4;
+        optional string hangmog_name = 5;
+        optional bool is_possible_instead_order = 6;
+}
+
+message NUT0001U00Grd0002Request{
+        optional string fknut0001 = 1;
+}
+
+message NUT0001U00Grd0002Response{
+        repeated NUT0001U00GrdNUT0002ItemInfo grd002_item_info = 1;
+}
+
+message NUT0001U00SaveLayoutRequest{
+	repeated NUT0001U00GrdNUT0001ItemInfo grd001_item_info = 1;
+	repeated NUT0001U00GrdNUT0002ItemInfo grd002_item_info = 2;
+}
+
+message NUT0001U00LoadDoctorNameRequest{
+	optional string param = 1;
+}
+
+message NUT0001U00LoadDoctorNameResponse{
+	optional string result = 1;
+}
+
+message NUT0001U00GetNaewonKeyRequest{
+	optional string pkocs = 1;
+	optional string io_kubun = 2;
+}
+
+message NUT0001U00GetNaewonKeyResponse{
+	optional string result = 1;
+}

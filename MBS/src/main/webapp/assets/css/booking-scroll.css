@@ -1,0 +1,52 @@
+
+:root {
+   --main-schedule-color: #27ae61;
+}
+@media (min-width: 768px){
+	.table .row .cell.cell-fix1 {
+		left: 51px;
+		position: absolute;
+		width:120px !important;
+		display:block;
+		min-width: inherit !important;
+		border-left: 1px solid #ececec;
+		background:#F9F9F9;
+	}
+	.table .row.head .cell.cell-fix1,.table .row.head .cell.cell-fix2  {
+		background: #27ae61 none repeat scroll 0 0;
+	}
+	.table .row .cell.cell-fix2 {
+		left: 171px;
+		position: absolute;
+		width:70px !important;display:block;
+		min-width: inherit !important;
+		background:#F9F9F9;
+	}
+	.table .row:not(.head) .cell.cell-fix1:first-child{
+		width:120px !important;
+	}
+	.table .row .cell{min-width:70px;}
+	.table {margin:20px 0 0;}
+	.booking-time-s{margin-left:190px;}
+	.table .row.head .cell:first-child{
+		border-left: 1px solid #778a9b;
+	}
+}
+@media (min-width: 1200px){
+	.booking-time-s{margin-left:210px;}
+}
+@media (min-width: 992px) and (max-width: 1199px){
+	.booking-time-s{margin-left:190px;}
+	.table .row .cell.cell-fix2{left:151px;}
+	.table .row .cell.cell-fix1{left:31px;}
+}
+@media (min-width: 768px) and (max-width: 991px){
+	.booking-time-s{margin-left:175px;}
+	.table .row .cell.cell-fix2{left:136px;}
+	.table .row .cell.cell-fix1{left:16px;}
+}
+
+#mn-time-slot-list{
+	max-height: 200px;
+	overflow-y: auto;
+}

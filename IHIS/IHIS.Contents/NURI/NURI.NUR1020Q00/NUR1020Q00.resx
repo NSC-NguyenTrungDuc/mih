@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="ImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="ImageList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABY
+        PQAAAk1TRnQBSQFMAgEBDwEAAcABCgEwAQwBEAEAARABAAT/ASEBEAj/AUIBTQE2BwABNgMAASgDAAFA
+        AwABQAMAAQEBAAEgBgABQB4AA/4B/wHWAeUB1wH/AXQBqQF3Af8BJAF8ASoB/wEFAWUBCgH/ASIBcwEl
+        Af8BagGYAWwB/wHFAdMBxgH/AfsB/AH7Af8QAAFnAWgBaQH/AWcBaAFpAf8BhAGCAYQB/wGEAYIBhAH/
+        AYQBggGEAf8BhAGCAYQB/wGEAYIBhAH/AYQBggGEAf8BhAGCAYQB/wGEAYIBhAH/AYQBggGEAf8BhAGC
+        AYQB/wGEAYIBhAH/AYQBggGEAf8BhAGCAYQB/wGEAYIBhAH/AaMBzgHdAf8BIQGvAdgB/wEZAaoB1gH/
+        ARkBqgHWAf8BGQGqAdYB/wEZAaoB1gH/ARkBqgHWAf8BGQGqAdYB/wEZAaoB1gH/ARkBqgHWAf8BGQGq
+        AdYB/wEZAaoB1gH/ARkBqgHWAf8BGQGqAdYB/wEfAa0B1wH/AYQBxwHcAf9IAAHvAfUB8AH/AW4BrgFx
+        Af8BCwGYASEB/wEQAbYBLgH/AQwBtAEkAf8BCAGyARsB/wEFAbABFQH/AQABrgEKAf8BAAGRAQYB/wFY
+        AZUBWwH/AeMB6gHkAf8MAAFTAVQBVQH/AVMBVAFVAf8BRAFDAUQB/wE0ATMBNAH/AyUB/xQAAakBpwGp
+        Af8BqQGnAakB/wGpAacBqQH/AakBpwGpAf8BhAGCAYQB/wGEAYIBhAH/AT8BswHZAf8BjAHvAf4B/wF7
+        AcMB1wH/AYcBqgG0Af8BhgGpAbMB/wGGAakBswH/AYYBqQGzAf8BhgGpAbMB/wGGAakBswH/AYYBqQGz
+        Af8BhgGpAbMB/wF2AZsBqwH/AW0B2gH5Af8BbQHaAfkB/wGCAegB/AH/AVUBxAHjAf9EAAHyAfgB9AH/
+        AUYBpAFQAf8BGwG2AUQB/wEaAboBQwH/ARYBuAE5Af8BXAHNAXEB/wF4AdUBiAH/AQoBswEgAf8BBwGy
+        ARoB/wEDAa8BEAH/AQABrQEIAf8BNQGIATkB/wHjAeoB5AH/CAABQQFAAUEB/wFBAUABQQH/AzEB/wEi
+        ASEBIgH/AhUBFAH/AgkBCgH/AQABmQHMAf8BAAGZAcwB/wEAAZkBzAH/FAABqQGnAakB/wGpAacBqQH/
+        AT8BswHZAf8BnQHxAv8BlQGxAbwB/wHaAa4BoQH/AegBvQGvAf8B6AG9Aa8B/wHoAb0BrwH/AegBvQGv
+        Af8B6AG9Aa8B/wHoAb0BrwH/AcYBmgGRAf8BnAJvAf8BeAFyAYcB/wF6AeAC/wGRAewC/wFZAcQB4wH/
+        QAAB/QL+Af8BeAG+AX0B/wEiAbcBUgH/ASMBvgFXAf8BIAG9AVAB/wEbAboBRAH/AdQB8gHcBf8BpgHk
+        AbEB/wENAbQBJQH/AQkBsgEcAf8BBgGxARcB/wEBAa4BDAH/AVgBlwFbAf8B+wH8AfsB/wgAAh8BIAH/
+        Ah8BIAH/ARECEgH/AwcB/wMAAf8BtQHXAfIB/wGuAdMB9AH/AacB0AHzAf8BAAGZAcwB/wEAAZkBzAH/
+        AQABmQHMAf8QAAE/AbMB2QH/AagB9AL/AZ0BuAG+Af8B7QHOAbcC/wHlAcsC/wHlAcsC/wHlAcsC/wHl
+        AcsC/wHlAcsC/wHlAcsB/wHRAa4BoAH/AegB3QHcAf8BowF2AXMB/wF8AXUBhwH/AZwB7wL/AVwBxAHj
+        Af9AAAHhAfAB4wH/ARYBpAE2Af8BLQHCAWoB/wErAcEBZQH/ASQBvwFZAf8BGwG7AUYB/wF0AdYBlAn/
+        AaYB5AGxAf8BEAG2AS0B/wEKAbMBIAH/AQgBsgEbAf8BBAGXAREB/wG/AdEBwAH/CAACHwEgAf8DDwH/
+        AQUBBgEFAf8DAAH/AcgB5QH9Af8BwgHiAf4B/wG7Ad4B/gH/AbMB2wH+Af8BlgHKAfYB/wGOAccB+AH/
+        AQABmQHMAf8BXgGpAWIB/wwAAT8BswHZAf8BsQH1Av8BpQG+AcAB/wHwAdMBvQL/AdgBsgL/AdgBsgL/
+        AdgBsgL/AdgBsgL/AdgBsgL/AdgBsgH/Ad0BtgGfAf8BugGUAY0B/wG6AY4BiAH/AZwBlAGXAf8BowHy
+        Av8BXwHFAeMB/0AAAZ0B0wGfAf8BJwG7AV0B/wEtAcIBagH/AS0BwgFqAf8BGwG7AUYB/wEbAbsBRgH/
+        ASQBvgFYAf8BdQHWAZcJ/wGmAeQBsQH/ARMBtwEzAf8BDgG1ASkB/wEJAbIBHAH/AWwBpwFvAf8MAAED
+        AQQBAwH/AwAB/wHJAeQB/gH/AcIB4gH+Af8BuwHfAf4B/wGzAdsB/gH/AasB2AH+Af8BpAHUAv8BnQHS
+        Af4B/wEAAZkBzAH/AZcB9wG3Af8BXgGpAWIB/wgAAT8BswHZAf8BugH3Av8BrQHGAcIB/wHyAdgBxAL/
+        Ad4BvgL/Ad4BvgL/Ad4BvgL/Ad4BvgL/Ad4BvgL/Ad4BvgL/Ad4BvgL/Ad4BvgL/AdQBwgH/AZ4BlgGX
+        Af8BqwH1Av8BYQHFAeMB/0AAAVYBugFWAf8BLQHCAWoB/wFhAdEBkCH/AagB5QG2Af8BEwG3ATMB/wEQ
+        AbYBLgH/ASYBiwEwAf8MAAErAbcB5QH/AbYB1gHzAf8BwgHiAf4B/wG7Ad8B/QH/AbMB2wH+Af8BqwHY
+        Af4B/wGkAdUC/wGdAdIC/wGYAc8C/wEAAZkBzAH/AZcB9wG3Af8BlwH3AbcB/wFeAakBYgH/BAABPwGz
+        AdkB/wHDAfoC/wGzAcwBxAH/AfUB3gHMAv8B6gHVAv8B6gHVAv8B6gHVAv8B6gHVAv8B6gHVAv8B6gHV
+        Av8B6gHVAv8B6gHVAv8B1AHCAf8BnwKXAf8BswH4Av8BZAHFAeMB/0AAAT4BtgE/Af8BLQHCAWoB/wFh
+        AdEBkCH/AdUB8wHeAf8BGgG6AUMB/wEWAbgBOQH/AQ0BjwEeAf8MAAErAbcB5QH/Aa4B0wH0Af8BuwHf
+        Af0B/wGzAdsB/gH/AawB2AL/AaQB1QL/AZ4B0gL/AZgBzwL/AZQBzgL/AQABmQHMAf8BlwH3AbcB/wGX
+        AfcBtwH/AZcB9wG3Af8BXgGpAWIB/wE/AbMB2QH/Ab4B+QL/AbEBygHCAf8B8wHaAccC/wHSAaYC/wHS
+        AaYC/wHSAaYC/wHSAaYC/wHSAaYC/wHSAaYC/wHSAaYC/wHSAaYC/wHUAcIB/wGfApcB/wGwAfgC/wFi
+        AcUB4wH/QAABVgHCAVYB/wEyAcMBbQH/AS0BwgFqAf8BLQHCAWoB/wEtAcIBagH/AS0BwgFqAf8BLQHC
+        AWoB/wGJAd0BrAn/AdcB8wHiAf8BLQHCAWoB/wEgAb0BUAH/ARsBugFEAf8BKAGRATIB/wwAASsBtwHl
+        Af8BpwHPAfMB/wGzAdwB/gH/AasB2QL/AaQB1QL/AZ4B0gL/AZcB0AL/AZQBzgL/AT4BsQHZAf8BPgGx
+        AdkB/wGXAfcBtwH/AZcB9wG3Af8BlwH3AbcB/wGXAfcBtwH/AT8BswHZAf8BwwH6Av8BswHMAcQB/wH1
+        Ad4BzAL/AeoB1QL/AeoB1QL/AeoB1QL/AeoB1QL/AeoB1QL/AeoB1QL/AeoB1QL/AeoB1QL/AdQBwgH/
+        AZ8ClwH/AbMB+AL/AWQBxQHjAf9AAAGnAeEBpwH/AUMBxgFkAf8BPgHHAXUB/wEtAcIBagH/AS0BwgFq
+        Af8BLQHCAWoB/wFUAc0BhwH/AfIB+wH2Bf8B2AH0AeMB/wEtAcIBagH/ASsBwQFlAf8BJAG/AVkB/wEi
+        Ab4BVgH/AXYBugF7Af8QAAErAbcB5QH/AZYBygH2Af8BpAHVAf4B/wGeAdIC/wGYAdAC/wGUAc4C/wE+
+        AbEB2QH/AT4BsQHZAf8BeQHvAv8BXgGpAWIB/wGXAfcBtwH/AZcB9wG3Af8BlwH3AbcB/wE/AbMB2QH/
+        AcEB+gL/AbMBzAHDAf8B9AHfAc4C/wHlAcsC/wHlAcsC/wHlAcsC/wHlAcsC/wHlAcsC/wHlAcsC/wHl
+        AcsC/wHlAcsC/wHUAcIB/wGfApcB/wGyAfgC/wFjAcUB4wH/QAAB7gH3Ae4B/wEwAb4BOwH/AXEB1QGV
+        Af8BUQHMAYIB/wE0AcQBbwH/AS0BwgFqAf8BvgHsAdEF/wHYAfQB4wH/AS0BwgFqAf8BLQHCAWoB/wEt
+        AcIBagH/ASwBwgFpAf8BGQGnAT0B/wHQAeYB0QH/EAABKwG3AeUB/wGPAcgB9wH/AZ4B0wH+Af8BmAHQ
+        Af4B/wGUAc4C/wE+AbEB2QH/AT4BsQHZAf8BeQHvAv8BeQHvAv8BeQHvAv8BXgGpAWIB/wGXAfcBtwH/
+        AZcB9wG3Af8BPwGzAdkB/wHJAfwC/wG5AdEBxQH/AfYB5QHYAv8B2wG4Av8B2wG4Av8B2wG4Av8B2wG4
+        Av8B2wG4Av8B2wG4Av8B2wG4Av8B2wG4Av8B1AHCAf8BoQGYAZcB/wG5AfoC/wFmAcUB4wH/QAAD/gH/
+        AZgB3wGZAf8BdAHWAYMB/wGCAdoBoAH/AWUB0gGOAf8BLQHCAWoB/wEtAcIBagH/AZcB4QG1Af8BLQHC
+        AWoB/wEtAcIBagH/AS0BwgFqAf8BLQHCAWoB/wEqAb8BYwH/AWQBtgFpAf8D/QH/FAABKwG3AeUB/wE+
+        AbEB2QH/AT4BsQHZAf8BPgGxAdkB/wE+AbEB2QH/AXkB7wL/AXkB7wL/AXkB7wL/AXkB7wL/AXkB7wL/
+        AV4BqQFiAf8BlwH3AbcB/wE/AbMB2QH/Ac8B/AL/Ab0B1AHGAf8B9wHmAdki/wHUAcIB/wGhAZgBlwH/
+        Ab4B+wL/AWcBxQHjAf9EAAH3AfsB+AH/AWIB0wFjAf8BdgHXAYEB/wGYAeABrQH/AXUB1wGYAf8BWQHO
+        AYYB/wE5AcUBcgH/AS0BwgFqAf8BLQHCAWoB/wEtAcIBagH/AScBvQFdAf8BRwGzAVEB/wHvAfcB8AH/
+        HAABXgGpAWIB/wGXAfcBtwH/AZcB9wG3Af8BlwH3AbcB/wEAAZkBzAH/AXkB7wL/AXkB7wL/AXkB7wL/
+        AXkB7wL/AXkB7wL/AV4BqQFiAf8BPwGzAdkB/wHTAf0C/wGiAcwBywH/AaIBmQGXAf8BpgF5AXQB/wG6
+        AY4BiAH/AboBjgGIAf8BugGOAYgB/wG6AY4BiAH/AboBjgGIAf8BugGOAYgB/wGrAX4BeQH/AaIBmQGX
+        Af8BogGzAbEB/wHCAf4C/wFoAcUB4wH/SAAB9wH7AfgB/wGYAeABmQH/AUYBywFIAf8BhAHaAZEB/wGM
+        AdwBpgH/AWkB0wGRAf8BTQHLAYAB/wEsAb8BYAH/ARYBsQE1Af8BeQHKAXwB/wHvAfcB8AH/JAABXgGp
+        AWIB/wGXAfcBtwH/AZcB9wG3Af8BlwH3AbcB/wEAAZkBzAH/AXkB7wL/AXkB7wL/AXkB7wL/AXkB7wL/
+        AXkB7wL/AUUBYgFrAYABjAHZAewB/wFvAdkB7AH/AW8B2QHsAf8BiAGqAa4B/wHoAb8BrAL/Ad8BzAL/
+        Ad8BzAL/Ad8BzAL/Ad8BzAH/AfABygG3Af8BnwGtAasB/wFvAdkB7AH/AW8B2QHsAf8BgwHZAewB/wFY
+        AX4BigGgTAAD/gH/Ae4B+AHvAf8BpwHkAagB/wFWAc4BVgH/AT4BwQE/Af8BVgHIAVYB/wGdAdwBnwH/
+        AeIB8wHjAf8D/gH/LAABXgGpAWIB/wGXAfcBtwH/AZcB9wG3Af8BlwH3AbcB/wEAAZkBzAH/AXkB7wL/
+        AXkB7wL/AXkB7wL/AXkB7wL/BAABKwEzATUBQAErATMBNQFAASsBMwE1AUABLQE0ATYBQAHYAbQBoQL/
+        AfgB8AH/AbUBlwGZAf8BnAF2AXwB/wG1AZgBmwH/AeYBywG8Af8BUgFWAVQBcAErATMBNQFAASsBMwE1
+        AUABKwEzATUBQAEMAg0BEKAAAV4BqQFiAf8BlwH3AbcB/wGXAfcBtwH/AZcB9wG3Af8BAAGZAcwB/wF5
+        Ae8C/wF5Ae8C/wF5Ae8C/xQAATUBMgEwAUAB3QGsAYsB/wHfAa4BjAH/AdsBqgGKAf8B3wGuAYwB/wFt
+        AWABWAGAVAABoQFpAV8B/wGhAWkBXwH/AaEBaQFfAf8BoQFpAV8B/wGhAWkBXwH/AaEBaQFfAf8BoQFp
+        AV8B/wGhAWkBXwH/AaEBaQFfAf8BoQFpAV8B/wGhAWkBXwH/AaEBaQFfAf8BoQFpAV8B/wGhAWkBXwH/
+        AaEBaQFfAf8BoQFpAV8B/wMqAUABqgFxAbwB/wGqAXEBvAH/AaoBcQG8Af8BqgFxAbwB/wGqAXEBvAH/
+        AaYBdAGYAf8BtAGIAXoB/wG6AY0BgAH/AboBjQGAAf8BugGNAYAB/wG6AY0BgAH/AacBeAFzAf8BtwGI
+        AXgB/wG3AYgBeAH/AUECQAFwBP8DwDn/BAADDAEQAVgBWQFYAaABqgHLAacB/wFtAaoBaQH/AUUBkQE/
+        Af8BWQGeAVQB/wGWAcABlAH/AbUB0wGzAf8DIQEwBAADIQEwAyoBQAMqAUADKgFAAwwBEAGwAYMBdQL/
+        AeoB3AL/AeoB3AL/AeoB3AL/AeoB3AL/AeoB3AL/AeoB3AL/AeoB3AL/AeoB3AL/AeoB3AL/AeoB3AL/
+        AeoB3AL/AeoB3AL/AeoB3AL/AeoB3AH/AaEBaQFfAf8BngFnAaYB/wHSAZsC/wHEAY0B6QH/AbYBfAHT
+        Af8BtgF8AdMB/wGVAZIB4gH/AbEBoQHDAf8B8QHNAbQB/wH8AdQBtAH/AfsB0QGuAf8B+QHNAakB/wH+
+        Ac8BpAH/AasBfAF1Af8B7wG7AZIB/wHvAboBkgH/AboBiwF6Cf8DwDX/BAABWAFZAVcBoAFxAa4BbgH/
+        AWIBpQFgAf8BjQG+AYwB/wGfAcgBnQH/AZUBwgGTAf8BbgGtAWwB/wFMAZkBSQH/AX0BjQF8Ad8DKgFA
+        AW8BcgFvAb8BOgGlAUgB/wE6AaUBSAH/AV4BugFtAf8DKgFAAbABgwF1Av8B9gHsAv8B3wHOAv8B4AHR
+        Av8B4AHRAv8B3gHPAv8B3wHNAv8B3gHOAv8B3AHNAv8B3QHKAv8B3AHJAv8B2gHIAv8B2wHJAv8B2QHG
+        Av8B5wHbAf8BoQFpAV8B/wGeAWcBpgH/AdIBoAHvAf8BvgGMAdMB/wHQAZ8B6QH/AZ4BZwGmAf8BfAG1
+        AeUB/wGtAbsBzgH/AfwB4QHUAf8B+gHcAcsB/wH4AdYBwQH/AfUBzwG1Af8B/AHPAacB/wGxAYQBdwH/
+        AfABxAGhAf8B8AHEAaEB/wG9AZEBgw3/A8Ax/wQAAY0BvgGMAf8BXgGnAV8B/wHJAeEBygH/AfYB+gH2
+        Bf8B+gH8AfoB/wHoAfIB6AH/AXgBtAF4Af8BYQGoAWAB/wFIAUkBSAGAAW4BcgFsAb8BPQGRAToB/wE9
+        AZEBOgH/AVEBVgFRAaADDAEQAbABgwF1Av8B9wHsAv8B3wHQAv8B4AHRAv8B4QHRAv8B3wHRAv8B4AHQ
+        Av8B3wHOAv8B3QHNAv8B3gHNAv8B3QHMAv8B3AHJAv8B2gHIAv8B2gHIAv8B6AHcAf8BoQFpAV8B/wGe
+        AWcBpgH/AewBwQL/AewBwQL/AewBwQL/AZ4BZwGmAf8BmQHRAf4B/wF4AbEB4QH/AdYB0QHWAf8B+wHh
+        AdMB/wH8Ad8B0AH/AfkB2AHFAf8B/QHRAakB/wG3AYoBegH/AfQBzQGxAf8B9AHNAbEB/wHDAZcBiBH/
+        AwAB/wOAAf8DwCX/BAABVgGmAVoB/wGMAcIBjwH/AfYB+gH2Ef8B2QHsAdsB/wFMAaIBUAH/AUcBSAFH
+        AYABVwFlAVcBvwE8AZUBPQH/AWIBqQFhAf8DSQGABAABsAGDAXUC/wH9AfcC/wHlAdcB/wFmAR8BAwL/
+        AeEB0wH/AWYBHwEDAv8B4QHSAv8B3wHRAv8B3gHQAv8B3wHNAv8B3gHNAv8B3QHMAf8BZgEfAQMC/wHa
+        AcgC/wHoAdwB/wGhAWkBXwH/AWUBWwFnAb8B5AG9Ae4B/wHbAckB5AH/AVYBqQFiAf8BNAGhAUAB/wEl
+        AZIBJQH/AS0BmgEzAf8BNAGhAUAB/wHJAdIBrwH/Af0B5QHYAf8B/AHgAdEB/wH+AdMBrgH/AcIBlAGA
+        Af8B9wHWAb8B/wH3AdgBvwH/AckBoAGOEf8DAAH/AwAB/wMAAf8DwCH/BAABRQGiAU0B/wGYAcwBngH/
+        AfwB/QH8Bf8B8QH6AfMB/wHxAfoB8wH/AfEB+gHzAf8B7AH4AfAB/wFfAbIBaAH/AVABpwFXAf8BPAGb
+        AUIB/wE8AZsBQgH/A1ABjwgAAbABgwF1A/8B+wH/AWYBHwEDAv8B6wHjAf8BOAFaA/8B4wHUAf8BZgEf
+        AQMC/wHiAdEB/wFmAR8BAwH/AWYBHwEDAv8B3wHNAf8BZgEfAQMC/wHbAcoB/wFmAR8BAwL/AegB3QH/
+        AaEBaQFfAf8EAAFWAVUBVgGgAVoBpAFbAf8BOwGpAU4B/wFDAbABWwH/AV4BsgGTAf8BUQGxAXYB/wFD
+        AbABWwH/AUYBSAFGAYAB3QG/AbYB/wH9AeYB2gL/AdUBsAH/AcYBlwGCAf8B9AHPAbIB/wHzAc0BrgH/
+        Ac8BogGMBf8EAAj/AwAB/wMAAv8CAAH/AwAB/wPAHf8EAAFnAbsBdAH/AXUBxQGGAf8B7AH3Ae4F/wGC
+        AcUBjAH/AYIBxQGMAf8BggHFAYwB/wGCAcUBjAH/AYIBxgGNAf8BXgGzAWcB/wE7AZ4BRAH/AUYBSAFH
+        AYAMAAGwAYMBdQP/Af4C/wHuAeYB/wE4AVoD/wHuAeYB/wE4AVoD/wHiAdQB/wFmAR8BAwL/AeIB0QL/
+        Ad8B0QH/AWYBHwEDAv8B3gHOAv8B3QHMAv8B2wHJAv8B6QHdAf8BoQFpAV8B/wQAAyoBQAFUAWoBTgH/
+        AU4BhwGJAf8BhAHEAckB/wGgAdMC/wF1AbIBzgH/A0ABcAQAAUECQAFwAdwBvwG3Af8BywGkAZgB/wHo
+        AcMBqQH/Ae4BxQGmAf8B0QGkAY0B/wFBAkABcAT/BAAM/wMAAf8DAAL/AgAB/wMAAf8DwBn/BAABpQHa
+        AbAB/wFOAbsBZgH/AZIB1QGiAf8B4gH1AecB/wE6AagBSwH/AToBpwFKAf8BOgGmAUkB/wE3AbABUQH/
+        AToBpQFJAf8BOgGoAUsB/wNAAXAQAAGwAYMBdQX/ATgBWgP/AfEB6gL/Ae8B6QL/AewB5AH/ATgBWgP/
+        AeIB0wL/AeEB0gL/AeAB0QL/AeAB0QL/Ad8BzwL/Ad4BzQL/AdsBygL/AekB3gH/AaEBaQFfAf8EAAJf
+        AV4B/wJeAV0B/wGbAbwB1wH/Aa0B2QH+Af8BSQFiAYAB/wF0AZ0BwAH/AWsBoQHTAf8IAAFIAkcBgAGj
+        AXQBcQH/AaMBdAFxAf8BowF0AXEB/wFIAkcBgAQABP8IAAz/AwAB/wMAAv8CAAH/AwAB/wPAFf8EAAMq
+        AUABiAHVAZwB/wE8AcUBZAH/ATQBxAFfAf8BOAGsAU4B/wGBAcwBkQH/AcYB7AHQAf8BxgHsAdAB/wHG
+        AewB0AH/AUgCSQGAFAABsAGDAXUG/wHyAewB/wJhAQAC/wHyAewC/wHwAekC/wHvAegB/wE4AVoD/wHm
+        AdsB/wJhAQAC/wHgAdAC/wHeAc4C/wHdAcwB/wJhAQAC/wHrAeEB/wGhAWkBXwH/A2AB/wFwAXEBcgH/
+        AZwBsQHDAf8BuAHeAf4B/wG1AdwB/gH/AbAB2gH+Af8BrgHaAf4B/wF8AbAB3gH/AyoBQBwAHP8DAAH/
+        AwAB/wPAAf8DAAH/A8AR/wgAAzoBYAFsAXUBbwG/AWABcAFlAb8BNwG0AVMB/wE3AbUBVAH/ATYBtgFV
+        Af8BNgG2AVUB/wE2AbYBVQH/AUYBSAFHAYAUAAGwAYMBdQX/AmEBAAL/AfQB7wH/AmEBAAL/AfIB6wL/
+        AfEB6gL/AfAB6AH/AmEBAAL/AekB3AH/AmEBAAL/AeUB2AH/AmEBAAL/AeQB1gL/AfMB6wH/AaEBaQFf
+        Af8DYAH/AYkBjwGUAf8BxAHjAf0B/wHAAeIB/QH/AYEBoQG/Af8BuwHfAf0B/wGaAb8B3wH/AaQBzAHv
+        Af8BWQGQAcQB/xwAIP8DAAH/AwAB/wPAAf8DAAH/A4AB/wMACf8UAAE2AbgBVQH/AVMBawFYAcABRgFI
+        AUcBgAFGAUgBRwGAAUYBSAFHAYADKgFAFAABsAGDAXUG/wH2AfIC/wH3AfMC/wH1AfMB/wJhAQAC/wH1
+        AfMB/wJhAQAC/wHyAe0B/wE4AVoD/wHzAfAB/wJhAQAC/wHzAe0B/wE4AVoD/wHzAesB/wGhAWkBXwH/
+        A2AB/wGEAYUBhwH/AXkBgwGKAf8BtQHMAeEB/wGlAcMB3gH/AcEB4gH9Af8BsgHSAe4B/wG0AdcB9gH/
+        AV4BawF4Af8DTQGPGAAI/wIAAv8CABb/AwAF/wMAAf8DgAH/A4AJ/xAAAXABdQFyAb8BOAGtAU4B/wFQ
+        AX0BVAHfAVkBaQFdAb8BcAFyAXABvxwAAbABgwF1Bv8B9wH0Av8B+AH1Av8B+AH0Av8B9gHyAf8CYQEA
+        Av8B9gHyAv8B9QHvAv8B+AH0Af8BOAFaA/8B9QHvAf8BOAFaA/8B9AHuAv8B8wHrAf8BoQFpAV8B/wNg
+        Af8DjwH/AoIBgQH/A2YB/wHNAeYB/QH/AckB5QH9Af8BxgHkAf0B/wF4AYMBigH/A2AB/wNZAb8YAAOA
+        Af8DgAH/AgAC/wIAAv8DgAH/A4AR/wMABf8DAA3/EAABagG7AXUB/wE9AZEBOgH/AT0BkQE6Af8BPQGR
+        AToB/wFqAbsBdQH/HAABsAGDAXUG/wH4AfUC/wH5AfYC/wH5AfQC/wH3AfMC/wH5AfQC/wH3AfMC/wH2
+        AfIC/wH5AfQC/wH3AfMB/wE4AVoD/wH1AfEC/wH1AfAC/wHzAesB/wGhAWkBXwH/A2AB/wOQAf8DiwH/
+        A4YB/wNqAf8BdwF8AYQB/wGMAZcBoAH/AWgBZwFmAf8BZAJjAf8DWQG/GAADgAH/AgAC/wIAAv8CAAL/
+        AgAC/wOAGf8DAAH/AwAB/wMAAf8DwAH/EAABQAGeAUYB/wE9AZIBOwH/AT0BkwE8Af8BPQGRAToB/wFA
+        AZ4BRgH/HAABsAGDAXUG/wH6AfgC/wH6AfcC/wH6AfcC/wH4AfQC/wH6AfcC/wH4AfQC/wH3AfMC/wH6
+        AfcC/wH4AfQC/wH3AfMC/wH2AfIC/wH2AfIC/wHzAesB/wGhAWkBXwH/A0cBgAOBAf8DlAH/A5IB/wOJ
+        Af8DegH/AnYBdQH/AngBdwH/A2cB/wM6AWAYAAOAAf8DgAH/AgAC/wIAAv8DgAH/A4Ad/wMAAf8DwAX/
+        EAABVQGtAV4B/wE9AZIBOwH/AT0BkwE8Af8BPQGSATsB/wFVAa0BXgH/HAABsAGDAXUv/wH+Bv8B8wHr
+        Af8BoQFpAV8B/wQAA0ABcANtAf8DhQH/A5MB/wOOAf8DhwH/Am8BbgH/AyoBQBwACP8CAAL/AgAy/xAA
+        Ab4B3gHCAf8BVwGsAV4B/wE/AZsBRAH/AVcBqwFdAf8BvgHeAcIB/xwAAbABgwF1Af8BsAGDAXUB/wGw
+        AYMBdQH/AbABgwF1Af8BsAGDAXUB/wGwAYMBdQH/AbABgwF1Af8BsAGDAXUB/wGwAYMBdQH/AbABgwF1
+        Af8BsAGDAXUB/wGwAYMBdQH/AbABgwF1Af8BsAGDAXUB/wGwAYMBdQH/AaEBaQFfAf8MAANZAb8DYAH/
+        A2AB/wNgAf8DKgFAIABA/8QAAmABAAH/AmABAAH/AmABAAH/AmABAAH/AmABAAH/AmABAAH/AmABAAH/
+        AmABAAH/AmABAAH/AmABAAH/AmABAAH/AmABAAH/AmABAAH/AmABAAH/AmABAAH/EAABwQHMAc4B/wHB
+        AcwBzgH/AcEBzAHOAf8BwQHMAc4B/wHBAcwBzgH/AcEBzAHOAf8BwQHMAc4B/wHBAcwBzgH/AcEBzAHO
+        Af8BwQHMAc4B/4gAATYB8wH+Af8BOgHxAf4B/wE+Ae8C/wFCAewB/gH/AUcB6gH+Af8BTAHnAv8BUAHk
+        Av8BVAHiAf4B/wFYAeAC/wFcAd4C/wFfAdsC/wFjAdoC/wFlAdkC/wFoAdcC/wFqAdYC/wJgAQAB/xAA
+        AcwBYQEAAf8BzAFhAQAB/wHMAWEBAAH/AcwBYQEAAf8BzAFhAQAB/wHMAWEBAAH/AcwBYQEAAf8BzAFh
+        AQAB/wHMAWEBAAH/AcwBYQEAAf8BwQHMAc4B/4QAATMB9QH+Af8BNwHzAv8BOgHxAv8BPgHuAf4B/wFD
+        AewB/gH/AUgB6gH+Af8BTAHnAv8BUAHkAv8BVAHiAv8BWAHgAv8BXAHeAv8BYAHcAv8BYwHaAv8BZgHY
+        Av8BaAHXAv8CYAEAAf8QAAHMAWEBAAL/AfYB7AH/Af4B8QHjAf8B/gHsAdkB/wH+AegBzwH/Af4B4wHF
+        Af8B/QHfAbwB/wH9AdsBtAH/Af0B2AGtAf8BzAFhAQAB/wHBAcwBzgH/IAADeQH/EAADeQH/HAADeQH/
+        EAADeQH/GAABLwH3Af4B/wEyAfUB/gH/ATcB8gH+Af8BOwHwAf4B/wE/Ae4B/gH/AUQB7AL/ASQBOwHV
+        Af8BJAE7AdUB/wEkATsB1QH/AVQB4gL/AVkB4AH+Af8BXQHdAv8BYAHbAv8BYwHZAv8BZgHYAv8CYAEA
+        Af8EAAHBAcwBzgH/AcEBzAHOAf8BwQHMAc4B/wHMAWEBAAL/AfkB8gH/Af4B9AHpAf8B/gHwAeAB/wH+
+        AesB1gH/Af4B5wHLAf8B/QHiAcMB/wH+Ad0BuQH/Af0B2QGyAf8BzAFhAQAB/wHBAcwBzgH/HAADeQH/
+        A3kB/wwAA3kB/wN5Af8cAAN5Af8DeQH/DAADeQH/A3kB/xgAAS8B9wH+Af8BNAH1Af4B/wE3AfMB/gH/
+        ATsB8QH+Af8BQAHuAv8BJAE7AdUB/wEkATsB1QH/ASQBOwHVAf8BUQHkAv8BVQHhAv8BWQHgAv8BXgHd
+        Av8BYQHcAf4B/wJgAQAB/wgAATIBsQHdAf8BMgGxAd0B/wEyAbEB3QH/AcwBYQEAAf8B/gH8AfcB/wH+
+        AfcB8AH/Af4B8wHnAf8B/gHuAd4B/wH+AeoB0wH/Af0B5QHJAf8B/gHgAcAB/wH9Ad0BtwH/AcwBYQEA
+        Af8BwQHMAc4B/xgAA3kB/wOaAf8DeQH/CAADeQH/A5oB/wN5Af8cAAN5Af8DmgH/A3kB/wgAA3kB/wOa
+        Af8DeQH/FAABLAH5Af4B/wEwAfcB/gH/ATQB9QH+Af8BNwHyAf4B/wE8AfAB/gH/AT8B7gH+Af8BRAHr
+        Af4B/wFIAekB/gH/AU0B5wL/AVEB5AL/AVUB4gL/AVoB3wL/AV4B3QL/AmABAAH/CAABMgGxAd0B/wFZ
+        AcUB8QH/AVkBxQHxAf8BzAFhAQAC/wH+AfwC/wH7AfUC/wH2Ae4B/wH+AfIB5AH/Af4B7gHaAf8B/gHo
+        AdAB/wH9AeQBxgH/Af4B4AG9Af8BzAFhAQAB/wHBAcwBzgH/FAADeQH/A5oB/wOaAf8DeQH/BAADeQH/
+        A5oB/wOaAf8DeQH/HAADeQH/A5oB/wOaAf8DeQH/BAADeQH/A5oB/wOaAf8DeQH/FAABLQH5Af4B/wEw
+        AfcB/gH/ATQB9AL/ATgB8gH+Af8BPAHvAv8BQAHuAv8BRQHrAf4B/wFJAekC/wFOAeYC/wFSAeQC/wFW
+        AeIB/gH/AmABAAH/DAABMgGxAd0B/wFgAcsB8gH/AWABygHyAf8BzAFhAQAG/wH9AfkB/wH+AfkB8wH/
+        Af4B9QHrAv8B8QHhAf8B/gHrAdgB/wH+AecBzQH/Af0B4gHDAf8BzAFhAQAB/wHBAcwBzgH/EAADeQH/
+        A5oB/wOaAf8DmgH/A3kB/wN5Af8DmgH/A5oB/wOaAf8DeQH/HAADeQH/A5oB/wOaAf8DmgH/A3kB/wN5
+        Af8DmgH/A5oB/wOaAf8DeQH/EAABKgH7Af4B/wEtAfgC/wEwAfYB/gH/ATQB9AH+Af8BJAE7AdUB/wEk
+        ATsB1QH/ASQBOwHVAf8BRQHrAf4B/wFKAegC/wFOAeYC/wFSAeMB/gH/AmABAAH/DAABMgGxAd0B/wFq
+        AdEB9AH/AWoB0QH0Af8BzAFhAQAB/wHMAWEBAAH/AcwBYQEAAf8BzAFhAQAB/wHMAWEBAAH/AcwBYQEA
+        Af8BzAFhAQAB/wHMAWEBAAH/AcwBYQEAAf8BzAFhAQAB/wHBAcwBzgH/FAADeQH/A5oB/wOaAf8DeQH/
+        BAADeQH/A5oB/wOaAf8DeQH/HAADeQH/A5oB/wOaAf8DeQH/BAADeQH/A5oB/wOaAf8DeQH/GAABKgH6
+        Af4B/wEtAfkB/gH/ATEB9gH+Af8BJAE7AdUB/wEkATsB1QH/ASQBOwHVAf8BQQHtAf4B/wFFAeoC/wFK
+        AegC/wJgAQAB/xAAATIBsQHdAf8BdQHYAfUB/wF1AdkB9QH/AcwBYQEAAf8BzAFhAQAB/wHMAWEBAAH/
+        AcwBYQEAAf8BzAFhAQAB/wHMAWEBAAH/AcwBYQEAAf8BzAFhAQAB/wHMAWEBAAH/AcwBYQEAAf8BwQHM
+        Ac4B/xgAA3kB/wOaAf8DeQH/CAADeQH/A5oB/wN5Af8cAAN5Af8DmgH/A3kB/wgAA3kB/wOaAf8DeQH/
+        HAABKAH7Af4B/wEqAfoC/wEtAfgB/gH/ASQBOwHVAf8BJAE7AdUB/wEkATsB1QH/AT0B7wL/AUIB7QH+
+        Af8BRgHrAf4B/wJgAQAB/xAAATIBsQHdAf8BhgHgAfcB/wGGAeAB9wH/AcwBYQEAAf8BRQF1Av8BRQF1
+        Av8BRQF1Av8BRQF1Av8BzAFhAQAF/wHMAWEBAAX/AcwBYQEAAf8BwQHMAc4B/xwAA3kB/wN5Af8MAAN5
+        Af8DeQH/HAADeQH/A3kB/wwAA3kB/wN5Af8kAAEoAfwB/gH/ASoB+gH+Af8BJAE7AdUB/wEkATsB1QH/
+        ASQBOwHVAf8BOQHxAf4B/wE9Ae8C/wJgAQAB/xQAATIBsQHdAf8BkQHoAfkB/wGRAegB+QH/AcwBYQEA
+        Af8BzAFhAQAB/wHMAWEBAAH/AcwBYQEAAf8BzAFhAQAB/wHMAWEBAAH/AcwBYQEAAf8BzAFhAQAB/wHM
+        AWEBAAH/AcwBYQEAAf8BwQHMAc4B/yAAA3kB/xAAA3kB/xwAA3kB/xAAA3kB/ygAASYB/QH+Af8BKAH7
+        Af4B/wEkATsB1QH/ASQBOwHVAf8BJAE7AdUB/wE2AfMC/wE5AfEC/wJgAQAB/xQAATIBsQHdAf8BnAHv
+        AfoB/wGbAe8B+wH/AZwB7wH6Af8BnAHvAfsB/wGcAe8B+wH/AZwB7wH6Af8BnAHvAfoB/wGcAe8B+wH/
+        AZsB7wH6Af8BnAHvAfsB/wEyAbEB3QH/AcEBzAHOAf+cAAEmAf0B/gH/ASQBOwHVAf8BJAE7AdUB/wEk
+        ATsB1QH/ATIB9QL/AmABAAH/GAABMgGxAd0B/wEyAbEB3QH/ATIBsQHdAf8BMgGxAd0B/wEyAbEB3QH/
+        ATIBsQHdAf8BMgGxAd0B/wEyAbEB3QH/ATIBsQHdAf8BMgGxAd0B/wEyAbEB3QH/ATIBsQHdAf8BwQHM
+        Ac4B/5wAASMB/QH+Af8BJgH9Af4B/wEoAfsB/gH/ASsB+gH+Af8BLgH3Af4B/wJgAQAB/xgAATIBsQHd
+        Af8BswH/Af4B/wGzAf8B/gH/AbMB/wH+Af8BswH/Af4B/wGzAf8B/gH/ATIBsQHdAf8BwQHMAc4B/7QA
+        ASQC/gH/ASYB/AH+Af8BKQH7Av8CYAEAAf8cAAEyAbEB3QH/ATIBsQHdAf8BMgGxAd0B/wEyAbEB3QH/
+        ATIBsQHdAf8BMgGxAd0B/wHBAcwBzgH/vAABJAH9Af4B/wJgAQAB/6gAA7UB/wO1Af8DtQH/A7UB/wO1
+        Af8DtQH/A7UB/wO1Af8DtQH/A7UB/wO1Af8DtQH/jAAB/gGfAWUB/wH+AZ8BZQH/Af4BnwFlAf8B/gGf
+        AWUB/wH+AZ8BZQH/Af4BnwFlAf8B/gGfAWUB/wH+AZ8BZQH/Af4BnwFlAf8B/gGfAWUB/wH+AZ8BZQH/
+        Af4BnwFlAf8MAAE/AZgB6wH/AV4BagGsAf8BvgGdAZQB/wGIAVUBUgH/AYgBVQFSAf8BiAFVAVIB/wGI
+        AVUBUgH/AYgBVQFSAf8BiAFVAVIB/wGIAVUBUgH/AYgBVQFSAf8BiAFVAVIB/wGIAVUBUgH/A7UB/4gA
+        AfkBmAFzAv8B7AHKAv8B7AHKAv8B8AHPAv8B8gHQAv8B8gHRAv8B8wHSAv8B8wHTAv8B9AHTAv8B9QHW
+        Av8B9wHWAv8B+AHYAv8B+AHYAf8B+QGYAXMB/wgAAUoBlwHdAf8BPwGYAesB/wFeAWoBrAH/Ab4BnQGU
+        Af8B9wHdAcwB/wH0AdYBxAH/AfYB1QG/Af8B9gHSAbwB/wH2Ac8BswH/AfUBzQGvAf8B9QHLAawB/wH2
+        AcsBsgH/AYgBVQFSAf8DtQH/KAADeQH/A3kB/ygAA3kB/wN5Af8oAAH5AZgBcwL/AewBygL/AewBygL/
+        AfABzwL/AfIB0AL/AfIB0QL/AfMB0gL/AfMB0wL/AfQB0wL/AfUB1gL/AfcB1gL/AfgB2AL/AfgB2AH/
+        AfkBmAFzAf8MAAFKAZcB3QH/AT8BmAHrAf8BXgFqAawB/wG+AZ0BlAL/AewB1gL/AeYBzQL/AeQByAL/
+        Ad8BugL/AdwBtgH/Af4B2AGvAv8B1wGyAf8BiAFVAVIB/wO1Af8kAAN5Af8DmgH/A3kB/ygAA3kB/wOa
+        Af8DeQH/JAAB+QGYAXMC/wHrAcoC/wHrAcoC/wHuAc4C/wHvAc8C/wHxAdAC/wHyAdIB/wH+AfMB0wL/
+        AfUB0wH/Af4B9wHXAv8B+QHYAv8B+gHaAv8B+gHaAf8B+QGYAXMB/wwAAfABvwGRA/8B/gH/AT8BmAHr
+        Af8BXgFqAawB/wHJAaMBqAH/Ab4BnQGUAf8BvgGdAZQB/wG+AZ0BlAL/AeABvwL/Ad8BuAL/AdoBuQH/
+        AYgBVQFSAf8DtQH/IAADeQH/A5oB/wOaAf8DeQH/KAADeQH/A5oB/wOaAf8DeQH/IAAB+QGYAXMC/wHt
+        Ac0C/wHtAc0C/wHvAc8B/wH+AfAB0QH/Af4B8wHSAv8B9AHUAf8B/gH2AdYB/wH+AfgB2AH/Af4B/QHb
+        Av8B/gHdAf8C/gHfAf8C/gHfAf8B+QGYAXMB/wwAAfABvwGRA/8B/gP/Af4B/wE/AZgB6wH/Ab4BnQGU
+        Af8B2QG3AaMB/wHsAdwBtQP/AfwB/wG+AZ0BlAH/Af4B3gG+Av8B3gG/Af8BiAFVAVIB/wO1Af8cAAN5
+        Af8DmgH/A5oB/wOaAf8DeQH/KAADeQH/A5oB/wOaAf8DmgH/A3kB/xwAAfkBmAFzAf8B/gHvAc4C/wHy
+        AdEC/wH0AdQB/wH+AfYB1QH/Af4B9wHYAv8B+gHZAv8B+wHaAf8B/gH9Ad0D/wHfA/8B4QH/Af4B/wHj
+        Af8B/gH/AeMB/wH5AZgBcwH/DAAB8AG/AZEB/wH+Bf8B/gH/Ab4BnQGUAf8B2QG0AaEC/wH1AcID/wHU
+        A/8B/AP/AfwB/wG+AZ0BlAL/Ad8BxAH/AYgBVQFSAf8DtQH/GAADeQH/A5oB/wOaAf8DmgH/A5oB/wN5
+        Af8oAAN5Af8DmgH/A5oB/wOaAf8DmgH/A3kB/xgAAfkBmAFzAv8B9AHTAv8B9QHUAv8B9wHXAv8B+AHY
+        Av8B+wHaAv8B/AHcAf8C/gHdAv8B/gHfAf8B/gH/AeID/wHkAv8B/gHmAv8B/gHmAf8B+QGYAXMB/wwA
+        AfABvwGRAf8B/gX/Af4B/wG+AZ0BlAH/AfMB3wG0Av8B7AG4Af8C/gHUAf8B/gH/Ae0B/wL8Ad8B/wG+
+        AZ0BlAL/AeEByQH/AYgBVQFSAf8DtQH/FAADeQH/A5oB/wOaAf8DmgH/A5oB/wOaAf8DeQH/KAADeQH/
+        A5oB/wOaAf8DmgH/A5oB/wOaAf8DeQH/FAAB+QGYAXMB/wH+AfcB1gL/AfcB1gH/Af4B+gHaAv8B+wHb
+        Av8B/gHcAf8C/gHeAv8B/gHgAv8B/gHhA/8B5QP/AecC/wH+AekC/wH+AekB/wH5AZgBcwH/DAAB8AG/
+        AZEB/wH+B/8BvgGdAZQB/wH2AeQBuQH/Af4B4wGwAf8C/gHOAf8B/gH/AeQB/wL+AdcB/wG+AZ0BlAL/
+        AeQBzQH/AYgBVQFSAf8DtQH/GAADeQH/A5oB/wOaAf8DmgH/A5oB/wN5Af8oAAN5Af8DmgH/A5oB/wOa
+        Af8DmgH/A3kB/xgAAfkBmAFzAv8B+gHaAv8B+gHaAf8B/gH9AdwB/wH+Af8B3gP/AeAC/wH+AeEB/wH+
+        Af8B4wH/Af4B/wHlAv8B/gHnA/8B6QH/Av4B6wH/Av4B6wH/AfkBmAFzAf8MAAHwAb8BkQH/Af4H/wG+
+        AZ0BlAP/AfwC/wHwAdAC/wHpAbUC/wH7AckB/wH2AekBvgH/Ab4BnQGUAv8B5QHRAf8BiAFVAVIB/wO1
+        Af8cAAN5Af8DmgH/A5oB/wOaAf8DeQH/KAADeQH/A5oB/wOaAf8DmgH/A3kB/xwAAfkBmAFzA/8B4QP/
+        AeEB/wH+Af8B4wL/Af4B5QL/Af4B5gL/Af4B6AL/Af4B6gL/Af4B6wL/Af4B7wL/Af4B8QH/Av4B8gH/
+        Av4B8gH/AfkBmAFzAf8MAAHwAb8BkQH/Af4H/wH+Af8B/gH/Ab4BnQGUA/8B/AH/Af4B7QHIAf8B+AHk
+        AbYB/wG+AZ0BlAL/AdoBywL/AdoBywH/AYgBVQFSAf8DtQH/IAADeQH/A5oB/wOaAf8DeQH/KAADeQH/
+        A5oB/wOaAf8DeQH/IAAB+QGYAXMD/wHpAf8B/gH5Ad4B/wH+AfgB4AH/Af4B+AHhAf8B/gH4AeIB/wH+
+        AfcB4wH/Af4B9wHkAf8B/gH3AeYB/wH+AfUB5wH/Af4B9QHpAv8B9QHqAv8B9QHqAf8B+QGYAXMB/wwA
+        AfABvwGRAf8B/gP/Af4D/wH+Af8B/gX/Ab4BnQGUAf8BvgGdAZQB/wG+AZ0BlAH/AYgBVQFSAf8BiAFV
+        AVIB/wGIAVUBUgH/AYgBVQFSAf8oAAN5Af8DmgH/A3kB/ygAA3kB/wOaAf8DeQH/JAAB9gF2AW8B/wH5
+        AUQBAAH/AfkBRAEAAf8B+QFEAQAB/wH5AUQBAAH/AfkBRAEAAf8B+QFEAQAB/wH5AUQBAAH/AfkBRAEA
+        Af8B+QFEAQAB/wH5AUQBAAH/AfkBRAEAAf8B+QFEAQAB/wH2AXYBbwH/DAAB8AG/AZEB/wH+B/8B/g//
+        Af4B/wH+Af8BiAFVAVIB/wH+AcMBZAH/AfABvwGRAf8B3gGoAYkB/ywAA3kB/wN5Af8oAAN5Af8DeQH/
+        LAAB9gF3AXAB/wH2AXcBcAH/AfYBdwFwAf8B9gF3AXAB/wH2AXcBcAH/AfYBdwFwAf8B9gF3AXAB/wH2
+        AXcBcAH/AfYBdwFwAf8B9gF3AXAB/wH2AXcBcAH/AfYBdwFwAf8QAAHwAb8BkQH/Af4b/wGIAVUBUgH/
+        AfABvwGRAf8B3gGoAYkB/9QAAfABvwGRAf8B8AG/AZEB/wHwAb8BkQH/AfABvwGRAf8B8AG/AZEB/wHw
+        Ab8BkQH/AfABvwGRAf8B8AG/AZEB/wGIAVUBUgH/Ad4BqAGJAf8EAAH/Af4C//8AiQABQgFNAT4HAAE+
+        AwABKAMAAUADAAFAAwABAQEAAQEGAAECFgAD/wEAAeABDwYAAcACBwHABAABgAEDAQABfAUAAQEBgAEP
+        BQABAQGAAQcFAAEBAcABAwUAAQEBwAEBBQABAQHABgABAQHABgABAQHgBgABAQHgBgABAQHwBQABgAED
+        AfgFAAHAAQcB/AUAAeABDwH+AQABgAMAA/8BAAH4AR8IAAGAASAGAAGABwABgAcAAYABAQYAAYABAwIA
+        AYABAAFAAQABgAEHAgACgAFAAQABgAEPAgABgAHBAWABAAGAAR8DAAF/AgABwAEfAwABfwIAAfgBHwMA
+        AT8CAAHwAX8DAAE/AgAB8AF/AwABPwIAAfABfwMAAT8CAAHwAX8CAAGAAX8CAAHwAX8CAAHgAf8CAAb/
+        AYABAAHwAQME/wIAAfABAQT/AgAB8AEBAf4C9wG/AgABgAEBAfwB5wHzAZ8BgAEBAYABAQH4AccB8QGP
+        AYABAQGAAQEB8AGHAfABhwHAAQMBgAEBAeABBwHwAQMBwAEDAYABAQHwAYcB8AGHAeABBwGAAQEB+AHH
+        AfEBjwHgAQcBgAEBAfwB5wHzAZ8B8AEPAYABAQH+AvcBvwHwAQ8BgAEDBP8B+AEfAYABAwT/AfgBHwGA
+        AX8E/wH8AT8BgAX/Af4BfwT/AeABAQT/AcABAwGAAQEE/wGAAQEBgAEBAf8BnwH5Af8BgAEBAcABAQH/
+        AR8B+AH/AYABAQHAAQEB/gEfAfgBfwGAAQEBwAEBAfwBHwH4AT8BgAEBAcABAQH4AR8B+AEfAYABAQHA
+        AQEB8AEfAfgBDwGAAQEBwAEBAfgBHwH4AR8BgAEBAcABAQH8AR8B+AE/AYABAQHAAQEB/gEfAfgBfwGA
+        AQEBwAEDAf8BHwH4Af8BgAEBAcABAwH/AZ8B+QH/AcABAwHAAQcG/wHAAQsM/xYACw==
+</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnPrint.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhEAAQAIQAAKurq+Dg4P///8HBwUxNUsPh/6rX/peXubnS8eLy/6mpqb7F3fD5/7Gyy/H5/+Px
+        /+Py/7zB2Li50MHh//b2+ez0/KyxzZubvL3Z+NPZ6Pj5+6+xy6Kpybi+1qGmxv///yH/C05FVFNDQVBF
+        Mi4wAwEBAAAh+QQBAAAfACwAAAAAEAAQAAAIhAA/CBxIsODABgcSJrwggYLBDxoaMHDggEGFDBsefoiw
+        AEKCBwkSWOigccEEDAhSIvBQsoDLlxwKApg504DNmzMFAhAQoCfNnzk/AFDQs6jRogCEKhDAtKnTpjOX
+        +gSAlGoAATR5Hj2KVSiAAWDDih0QICnQszQHAiDAtq3bpATR/hQYEAA7
+</value>
+  </data>
+  <data name="btnRecord7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAVNJREFUOE+VkT1L
+        w1AUhjPUGuoSLHauFjI5BTuLxf4DdXXov3CUzLqI1cFOhRAUQUQ7uLlYRWyxfrQoCmJnwYp16X3NuTdJ
+        E5Om9YV3ubnPw7kn0rAUzFVUukW317sS8LHm1r4WnmFwpGAUeKBgVJju2Ug/7cosWkfzvg6CSW5jIgR3
+        q5tgjRJYfQe42QqVeCe0URESfF9tg92XgdsSECL5+zwbFXCnZoA9HwOtfcCVFH0SLxwQfDUO0Xs9A3uy
+        JM2DvqQmJqFlemHfEvkED6dgb+euhDWdSfa4xCsI/IHYWIwOwN4vuYR5JXdlMEviCALwdDoNRVEQH49z
+        Sa9dFZIXIaHF/lxscEEAppCAmkxOQpZlLvl8POE76dQNDjoVhCe5hRyomqYhM5PBVCqFiUQiGrJiGiao
+        0sryEqj5xTyyc1moqhoJONXXdV77syQ5B/+rjl/vCh5e2TjsDQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnRecord6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAVNJREFUOE+VkT1L
+        w1AUhjPUGuoSLHauFjI5BTuLxf4DdXXov3CUzLqI1cFOhRAUQUQ7uLlYRWyxfrQoCmJnwYp16X3NuTdJ
+        E5Om9YV3ubnPw7kn0rAUzFVUukW317sS8LHm1r4WnmFwpGAUeKBgVJju2Ug/7cosWkfzvg6CSW5jIgR3
+        q5tgjRJYfQe42QqVeCe0URESfF9tg92XgdsSECL5+zwbFXCnZoA9HwOtfcCVFH0SLxwQfDUO0Xs9A3uy
+        JM2DvqQmJqFlemHfEvkED6dgb+euhDWdSfa4xCsI/IHYWIwOwN4vuYR5JXdlMEviCALwdDoNRVEQH49z
+        Sa9dFZIXIaHF/lxscEEAppCAmkxOQpZlLvl8POE76dQNDjoVhCe5hRyomqYhM5PBVCqFiUQiGrJiGiao
+        0sryEqj5xTyyc1moqhoJONXXdV77syQ5B/+rjl/vCh5e2TjsDQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnRecord5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAVNJREFUOE+VkT1L
+        w1AUhjPUGuoSLHauFjI5BTuLxf4DdXXov3CUzLqI1cFOhRAUQUQ7uLlYRWyxfrQoCmJnwYp16X3NuTdJ
+        E5Om9YV3ubnPw7kn0rAUzFVUukW317sS8LHm1r4WnmFwpGAUeKBgVJju2Ug/7cosWkfzvg6CSW5jIgR3
+        q5tgjRJYfQe42QqVeCe0URESfF9tg92XgdsSECL5+zwbFXCnZoA9HwOtfcCVFH0SLxwQfDUO0Xs9A3uy
+        JM2DvqQmJqFlemHfEvkED6dgb+euhDWdSfa4xCsI/IHYWIwOwN4vuYR5JXdlMEviCALwdDoNRVEQH49z
+        Sa9dFZIXIaHF/lxscEEAppCAmkxOQpZlLvl8POE76dQNDjoVhCe5hRyomqYhM5PBVCqFiUQiGrJiGiao
+        0sryEqj5xTyyc1moqhoJONXXdV77syQ5B/+rjl/vCh5e2TjsDQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnRecord4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAVNJREFUOE+VkT1L
+        w1AUhjPUGuoSLHauFjI5BTuLxf4DdXXov3CUzLqI1cFOhRAUQUQ7uLlYRWyxfrQoCmJnwYp16X3NuTdJ
+        E5Om9YV3ubnPw7kn0rAUzFVUukW317sS8LHm1r4WnmFwpGAUeKBgVJju2Ug/7cosWkfzvg6CSW5jIgR3
+        q5tgjRJYfQe42QqVeCe0URESfF9tg92XgdsSECL5+zwbFXCnZoA9HwOtfcCVFH0SLxwQfDUO0Xs9A3uy
+        JM2DvqQmJqFlemHfEvkED6dgb+euhDWdSfa4xCsI/IHYWIwOwN4vuYR5JXdlMEviCALwdDoNRVEQH49z
+        Sa9dFZIXIaHF/lxscEEAppCAmkxOQpZlLvl8POE76dQNDjoVhCe5hRyomqYhM5PBVCqFiUQiGrJiGiao
+        0sryEqj5xTyyc1moqhoJONXXdV77syQ5B/+rjl/vCh5e2TjsDQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnRecord3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAVNJREFUOE+VkT1L
+        w1AUhjPUGuoSLHauFjI5BTuLxf4DdXXov3CUzLqI1cFOhRAUQUQ7uLlYRWyxfrQoCmJnwYp16X3NuTdJ
+        E5Om9YV3ubnPw7kn0rAUzFVUukW317sS8LHm1r4WnmFwpGAUeKBgVJju2Ug/7cosWkfzvg6CSW5jIgR3
+        q5tgjRJYfQe42QqVeCe0URESfF9tg92XgdsSECL5+zwbFXCnZoA9HwOtfcCVFH0SLxwQfDUO0Xs9A3uy
+        JM2DvqQmJqFlemHfEvkED6dgb+euhDWdSfa4xCsI/IHYWIwOwN4vuYR5JXdlMEviCALwdDoNRVEQH49z
+        Sa9dFZIXIaHF/lxscEEAppCAmkxOQpZlLvl8POE76dQNDjoVhCe5hRyomqYhM5PBVCqFiUQiGrJiGiao
+        0sryEqj5xTyyc1moqhoJONXXdV77syQ5B/+rjl/vCh5e2TjsDQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnRecord2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAVNJREFUOE+VkT1L
+        w1AUhjPUGuoSLHauFjI5BTuLxf4DdXXov3CUzLqI1cFOhRAUQUQ7uLlYRWyxfrQoCmJnwYp16X3NuTdJ
+        E5Om9YV3ubnPw7kn0rAUzFVUukW317sS8LHm1r4WnmFwpGAUeKBgVJju2Ug/7cosWkfzvg6CSW5jIgR3
+        q5tgjRJYfQe42QqVeCe0URESfF9tg92XgdsSECL5+zwbFXCnZoA9HwOtfcCVFH0SLxwQfDUO0Xs9A3uy
+        JM2DvqQmJqFlemHfEvkED6dgb+euhDWdSfa4xCsI/IHYWIwOwN4vuYR5JXdlMEviCALwdDoNRVEQH49z
+        Sa9dFZIXIaHF/lxscEEAppCAmkxOQpZlLvl8POE76dQNDjoVhCe5hRyomqYhM5PBVCqFiUQiGrJiGiao
+        0sryEqj5xTyyc1moqhoJONXXdV77syQ5B/+rjl/vCh5e2TjsDQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnRecord1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAVNJREFUOE+VkT1L
+        w1AUhjPUGuoSLHauFjI5BTuLxf4DdXXov3CUzLqI1cFOhRAUQUQ7uLlYRWyxfrQoCmJnwYp16X3NuTdJ
+        E5Om9YV3ubnPw7kn0rAUzFVUukW317sS8LHm1r4WnmFwpGAUeKBgVJju2Ug/7cosWkfzvg6CSW5jIgR3
+        q5tgjRJYfQe42QqVeCe0URESfF9tg92XgdsSECL5+zwbFXCnZoA9HwOtfcCVFH0SLxwQfDUO0Xs9A3uy
+        JM2DvqQmJqFlemHfEvkED6dgb+euhDWdSfa4xCsI/IHYWIwOwN4vuYR5JXdlMEviCALwdDoNRVEQH49z
+        Sa9dFZIXIaHF/lxscEEAppCAmkxOQpZlLvl8POE76dQNDjoVhCe5hRyomqYhM5PBVCqFiUQiGrJiGiao
+        0sryEqj5xTyyc1moqhoJONXXdV77syQ5B/+rjl/vCh5e2TjsDQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <metadata name="layIO.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>128, 17</value>
+  </metadata>
+  <data name="layIO.QuerySQL" xml:space="preserve">
+    <value>SELECT A.YMD      YMD,
+       A.IO_TYPE  IO_TYPE,
+       A.IO_GUBN  IO_GUBUN,
+       A.IO_VALUE IO_VALUE
+  FROM NUR1022 A , NUR0102 B
+ WHERE A.HOSP_CODE = :f_hosp_code
+   AND B.HOSP_CODE = A.HOSP_CODE
+   AND A.BUNHO = :f_bunho   
+   AND A.FKINP1001 = :f_fkinp1001
+   AND B.CODE_TYPE    = DECODE(A.IO_GUBN, 'I', 'VSPATN_IN', 'O', 'VSPATN_OUT')
+   AND B.CODE         = A.IO_TYPE
+   AND A.YMD   BETWEEN TO_DATE(:f_ymd,'YYYY/MM/DD') - 6 AND TO_DATE(:f_ymd,'YYYY/MM/DD')
+ ORDER BY A.YMD, A.IO_TYPE, A.IO_GUBN</value>
+  </data>
+  <metadata name="layNut.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>211, 17</value>
+  </metadata>
+  <data name="layNut.QuerySQL" xml:space="preserve">
+    <value>SELECT A.NUT_DATE                                YMD,
+       DECODE(A.BLD_GUBUN, 1, 'T1', 2, 'T2', 3, 'T3')                           NUT_GUBUN,
+       DECODE(B.NUT_VALUE, 99, '少量', B.NUT_VALUE)                          NUT_VALUE,
+       DECODE(B.NUT_VALUE2, 99, '少量', B.NUT_VALUE2)                         NUT_VALUE2,
+       ''                                   SIKSA_GUBUN,
+       NVL(A.SIK_JONG_NAME_S, A.SIK_JONG_NAME)                      SIKSA_JONG_NAME,
+       NVL(A.SIK_JUSIK_NAME_S, A.SIK_JUSIK_NAME)                    SIKSA_JUSIK_NAME,
+       NVL(A.SIK_BUSIK_NAME_S, A.SIK_BUSIK_NAME)                    SIKSA_BUSIK_NAME
+  FROM NUR1021 B, VW_OCS_OCS2005_NUT A
+ WHERE A.HOSP_CODE      = :f_hosp_code
+   AND B.HOSP_CODE(+)   = A.HOSP_CODE
+   AND A.BUNHO          = :f_bunho
+   AND A.FKINP1001      = :f_fkinp1001
+   AND A.NUT_DATE   BETWEEN TO_DATE(:f_ymd,'YYYY/MM/DD') - 6 AND TO_DATE(:f_ymd,'YYYY/MM/DD')
+   AND B.YMD(+)    = A.NUT_DATE   
+   AND B.BUNHO(+)       = A.BUNHO
+   AND B.FKINP1001(+)   = A.FKINP1001 
+   AND SUBSTR(B.NUT_GUBN(+), 2, 1)   = A.BLD_GUBUN
+   --AND SUBSTR(A.NUT_GUBN, -1, 1) = SUBSTR(B.SIKSA_CODE(+), -1,1)
+ ORDER BY A.NUT_DATE, A.BLD_GUBUN
+
+
+
+/*
+SELECT A.YMD                                YMD,
+       A.NUT_GUBN                           NUT_GUBUN,
+       A.NUT_VALUE                          NUT_VALUE,
+       A.NUT_VALUE2			    NUT_VALUE2,
+       ''                                   SIKSA_GUBUN,
+       FN_NUR_LOAD_SIKSA_NAME(SIKSA_CODE)   SIKSA_NAME
+  FROM NUR1021 A, OCS2015 B
+ WHERE A.HOSP_CODE      = :f_hosp_code
+   AND B.HOSP_CODE(+)   = A.HOSP_CODE
+   AND A.BUNHO          = :f_bunho
+   AND A.FKINP1001      = :f_fkinp1001
+   AND A.YMD   BETWEEN TO_DATE(:f_ymd,'YYYY/MM/DD') - 6 AND TO_DATE(:f_ymd,'YYYY/MM/DD')
+   AND B.ACT_DATE(+)    = A.YMD   
+   AND B.BUNHO(+)       = A.BUNHO
+   AND B.FKINP1001(+)   = A.FKINP1001 
+   AND SUBSTR(A.NUT_GUBN, -1, 1) = SUBSTR(B.SIKSA_CODE(+), -1,1)
+ ORDER BY A.YMD, A.NUT_GUBN 
+*/</value>
+  </data>
+  <metadata name="layGraph.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>301, 17</value>
+  </metadata>
+  <data name="layGraph.QuerySQL" xml:space="preserve">
+    <value>SELECT TO_CHAR(A.YMD, 'MM/DD') YMD1,
+       A.TIME_GUBUN            TIME_GUBUN,
+       A.PR_GUBUN              PR_GUBUN,
+       NVL(A.PR_VALUE,0)       PR_VALUE,
+       A.YMD                   YMD
+  FROM NUR1020 A
+ WHERE A.HOSP_CODE = :f_hosp_code
+   AND A.HOSP_CODE = A.HOSP_CODE 
+   AND A.FKINP1001 = :f_fkinp1001
+   AND A.BUNHO = :f_bunho
+   AND A.YMD   BETWEEN TO_DATE(:f_ymd, 'YYYY/MM/DD') - 6 AND TO_DATE(:f_ymd,'YYYY/MM/DD')
+ ORDER BY A.YMD, A.TIME_GUBUN</value>
+  </data>
+  <metadata name="laySusulInfo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>406, 17</value>
+  </metadata>
+  <data name="laySusulInfo.QuerySQL" xml:space="preserve">
+    <value>SELECT DISTINCT A.OP_DATE OP_DATE
+     , ''                 OP_NAME
+  FROM (SELECT OP_RESER_DATE OP_DATE
+              ,DECODE(PRE_OP_NAME1,NULL,'',FN_ADM_MSG(3257)||': '||PRE_OP_NAME1||CHR(10)||CHR(13))||
+               DECODE(POST_OP_NAME1,NULL,'',FN_ADM_MSG(3258)||': '||POST_OP_NAME1) OP_NAME
+          FROM OPR1001
+         WHERE HOSP_CODE = :f_hosp_code 
+           AND BUNHO = :f_bunho
+	   AND FKINP1001 = :f_fkinp1001
+           AND OP_RESER_DATE  BETWEEN TO_DATE(:f_from_op_date, 'YYYY/MM/DD')
+                              AND TO_DATE(:f_to_op_date, 'YYYY/MM/DD')
+           AND NVL(OP_CANCEL_YN, 'N') = 'N'
+         UNION
+        SELECT DISTINCT ORDER_DATE OP_DATE
+             , '' OP_NAME
+          FROM OCS2003
+         WHERE HOSP_CODE = :f_hosp_code 
+           AND BUNHO = :f_bunho
+	   AND FKINP1001 = :f_fkinp1001
+           AND ORDER_DATE BETWEEN TO_DATE(:f_from_op_date, 'YYYY/MM/DD')
+                          AND TO_DATE(:f_to_op_date, 'YYYY/MM/DD')
+           AND INPUT_GUBUN = 'D8') A</value>
+  </data>
+  <metadata name="layInOutTotal.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>531, 17</value>
+  </metadata>
+  <data name="layInOutTotal.QuerySQL" xml:space="preserve">
+    <value>SELECT YMD      YMD
+      ,SUM(DECODE(IO_GUBN,'I',NVL(IO_VALUE,0),0)) IN_TOTAL
+--      ,SUM(DECODE(IO_GUBN,'O', DECODE(IO_TYPE, 'A1', 0, DECODE(IO_TYPE, 'A3', 0, NVL(IO_VALUE, 0))))) OUT_TOTAL
+      ,SUM(DECODE(IO_GUBN,'O', NVL(IO_VALUE, 0),0)) OUT_TOTAL
+--      ,SUM(DECODE(IO_GUBN,'I',NVL(IO_VALUE,0),0)) -
+--       SUM(DECODE(IO_GUBN,'O', DECODE(IO_TYPE, 'A1', 0, DECODE(IO_TYPE, 'A3', 0, NVL(IO_VALUE, 0))))) INOUT_MINUS
+      ,SUM(DECODE(IO_GUBN,'I',NVL(IO_VALUE,0),0)) -
+       SUM(DECODE(IO_GUBN,'O', NVL(IO_VALUE, 0),0)) INOUT_MINUS
+  FROM NUR1022
+ WHERE HOSP_CODE = :f_hosp_code 
+   AND BUNHO = :f_bunho
+   AND FKINP1001 = :f_fkinp1001
+   AND YMD   BETWEEN TO_DATE(:f_from_op_date,'YYYY/MM/DD') +1
+                 AND :f_to_op_date
+   AND ((IO_GUBN = 'O' AND IO_TYPE NOT LIKE '%X')
+    OR (IO_GUBN='I' AND IO_TYPE NOT LIKE '%X'))
+ GROUP BY YMD
+ ORDER BY YMD</value>
+  </data>
+  <metadata name="layFlagQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>664, 17</value>
+  </metadata>
+  <data name="layFlagQuery.QuerySQL" xml:space="preserve">
+    <value>SELECT DISTINCT TO_DATE(INPUT_DATE, 'YYYY/MM/DD') - TO_DATE(:f_start_date, 'YYYY/MM/DD') NUM
+  FROM NUR9002
+ WHERE HOSP_CODE = :f_hosp_code
+   AND BUNHO = :f_bunho
+   AND INPUT_DATE   BETWEEN TO_DATE(:f_start_date, 'YYYY/MM/DD') - 6 AND TO_DATE(:f_start_date,'YYYY/MM/DD')
+   AND IN_OUT_GUBUN = 'I'
+ ORDER BY 1</value>
+  </data>
+  <metadata name="layIpwonInfo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>794, 17</value>
+  </metadata>
+  <data name="layIpwonInfo.QuerySQL" xml:space="preserve">
+    <value>SELECT PKINP1001
+     , IPWON_DATE
+     , TRUNC(SYSDATE) - IPWON_DATE + 1 JAEWON_ILSU
+     , HO_DONG1
+  FROM VW_OCS_INP1001_02
+ WHERE HOSP_CODE            = :f_hosp_code 
+   AND NVL(CANCEL_YN,'N')   = 'N'
+   AND NVL(JAEWON_FLAG,'N') = 'Y'
+   AND IPWON_TYPE           = '0'
+   AND BUNHO                = :f_bunho</value>
+  </data>
+  <metadata name="laySiksaNote.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>925, 17</value>
+  </metadata>
+  <data name="laySiksaNote.QuerySQL" xml:space="preserve">
+    <value>SELECT TRIM(FN_NUT_LOAD_NUT0101(A.NUT_GUBUN))||CHR(13)||CHR(10)||
+       TRIM(FN_NUT_LOAD_NUT0002('04', A.NUT_GIHO_CODE, ''))||' '||
+       TRIM(FN_NUT_LOAD_NUT0002('04', A.NUT_GIHO_CODE2, ''))||' '||
+       TRIM(FN_NUT_LOAD_NUT0002('13', A.NUT_GIHO_CODE3, ''))||CHR(13)||CHR(10)||
+       TRIM(A.NUT_COMMENT)||CHR(13)||CHR(10)||
+       TRIM(FN_NUT_LOAD_NUT0002('12', A.GUMGI1, ''))||' '||
+       TRIM(FN_NUT_LOAD_NUT0002('12', A.GUMGI2, ''))||' '||
+       TRIM(FN_NUT_LOAD_NUT0002('12', A.GUMGI3, ''))||' '||
+       TRIM(FN_NUT_LOAD_NUT0002('12', A.GUMGI4, ''))
+  FROM OCS3003 A
+ WHERE A.HOSP_CODE     = :f_hosp_code 
+   AND A.FKINP1001     = :f_fkinp1001
+   AND A.BUNHO         = :f_bunho
+   AND A.ORDER_DATE    = TRUNC(TO_DATE(:f_order_date,'YYYY/MM/DD'))
+   AND A.KI_GUBUN      = :f_ki_gubun</value>
+  </data>
+  <metadata name="layQueryRemark.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1053, 17</value>
+  </metadata>
+  <data name="layQueryRemark.QuerySQL" xml:space="preserve">
+    <value>SELECT FN_NUR_MERGE_REMARK(:f_hosp_code, :f_bunho, :f_input_date) FROM DUAL
+
+/*
+SELECT REMARK
+  FROM NUR9002
+ WHERE HOSP_CODE    = :f_hosp_code 
+   AND BUNHO        = :f_bunho
+   AND INPUT_DATE   = TO_DATE(:f_input_date, 'YYYY/MM/DD')
+   AND IN_OUT_GUBUN = 'I'
+   AND ROWNUM       = 1*/</value>
+  </data>
+  <metadata name="layNUR1122.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1205, 17</value>
+  </metadata>
+  <data name="layNUR1122.QuerySQL" xml:space="preserve">
+    <value>SELECT  A.YMD             YMD
+      , B.ROW_NUM         HANGMOG_CODE
+      , A.HANGMOG_VALUE1  HANGMOG_VALUE1
+      , A.HANGMOG_VALUE2  HANGMOG_VALUE2
+      , A.HANGMOG_VALUE3  HANGMOG_VALUE3
+  FROM  NUR1122 A
+     , (SELECT ROWNUM ROW_NUM, Y.HANGMOG_NAME FROM                                                              
+        (SELECT Z.HANGMOG_NAME FROM NUR1122 Z
+         WHERE  Z.HOSP_CODE = :f_hosp_code
+           AND  Z.BUNHO     = :f_bunho
+           AND  Z.FKINP1001 = :f_fkinp1001
+           AND  Z.YMD       BETWEEN TO_DATE(:f_ymd, 'YYYY/MM/DD')-6 AND TO_DATE(:f_ymd, 'YYYY/MM/DD')
+           GROUP BY Z.HANGMOG_NAME
+           HAVING NOT (COUNT(Z.HANGMOG_VALUE1) = 0 AND COUNT(Z.HANGMOG_VALUE2) = 0 AND COUNT(Z.HANGMOG_VALUE3) = 0)
+           ORDER BY 1 ) Y) B
+ WHERE A.HOSP_CODE = :f_hosp_code
+   AND A.BUNHO     = :f_bunho
+   AND A.FKINP1001 = :f_fkinp1001
+   AND A.YMD       BETWEEN TO_DATE(:f_ymd, 'YYYY/MM/DD')-6 AND TO_DATE(:f_ymd, 'YYYY/MM/DD')
+   AND A.HANGMOG_NAME = B.HANGMOG_NAME
+ORDER BY A.HANGMOG_NAME</value>
+  </data>
+  <metadata name="layNUR1122List.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 58</value>
+  </metadata>
+  <data name="layNUR1122List.QuerySQL" xml:space="preserve">
+    <value>SELECT '観察項目' HANGMOG_NAME, 0 SORT_KEY FROM DUAL
+ UNION ALL 
+SELECT Y.HANGMOG_NAME, ROWNUM FROM                                                              
+(SELECT Z.HANGMOG_NAME FROM NUR1122 Z
+ WHERE  Z.HOSP_CODE = :f_hosp_code
+   AND  Z.BUNHO     = :f_bunho
+   AND  Z.FKINP1001 = :f_fkinp1001
+   AND  Z.YMD       BETWEEN TO_DATE(:f_ymd, 'YYYY/MM/DD')-6 AND TO_DATE(:f_ymd, 'YYYY/MM/DD')
+   GROUP BY Z.HANGMOG_NAME
+   HAVING NOT (COUNT(Z.HANGMOG_VALUE1) = 0 AND COUNT(Z.HANGMOG_VALUE2) = 0 AND COUNT(Z.HANGMOG_VALUE3) = 0)
+   ORDER BY 1 ) Y</value>
+  </data>
+  <metadata name="layNUR7002.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>164, 58</value>
+  </metadata>
+  <data name="layNUR7002.QuerySQL" xml:space="preserve">
+    <value>SELECT A.FKINP1001 FKINP1001
+       , A.YMD - TO_DATE (:f_ymd, 'YYYY/MM/DD') + 6 DIFF
+       , A.HANGMOG_GUBUN HANGMOG_GUBUN
+       , TO_CHAR (A.HANGMOG_SEQ) HANGMOG_SEQ
+       , CASE A.HANGMOG_GUBUN
+              WHEN 'WRITER'
+	      THEN NVL(FN_ADM_LOAD_USER_NAME_SHORT (A.HANGMOG_VALUE), A.HANGMOG_VALUE)
+              ELSE A.HANGMOG_VALUE
+       END          HANGMOG_VALUE
+  FROM NUR7002 A
+ WHERE A.HOSP_CODE = :f_hosp_code
+   AND A.YMD BETWEEN TO_DATE (:f_ymd, 'YYYY/MM/DD') - 6                     AND TO_DATE (:f_ymd, 'YYYY/MM/DD')
+   AND A.FKINP1001 = :f_fkinp1001
+
+UNION ALL
+
+SELECT B.FKINP1001 FKINP1001
+       , B.YMD - TO_DATE (:f_ymd, 'YYYY/MM/DD') + 6 DIFF
+       , B.IO_TYPE HANGMOG_GUBUN
+       , '1' HANGMOG_SEQ
+       , CASE WHEN B.IO_TYPE = 'AS' THEN FN_NUR_LOAD_VSPATN_AS (B.IO_VALUE)
+             WHEN B.IO_TYPE = 'UX' AND B.IO_VALUE = 99 THEN '+α'
+             ELSE TO_CHAR(B.IO_VALUE)
+             END          HANGMOG_VALUE
+  FROM NUR1022 B
+ WHERE B.HOSP_CODE = :f_hosp_code
+   AND B.YMD BETWEEN TO_DATE (:f_ymd, 'YYYY/MM/DD') - 6                     AND TO_DATE (:f_ymd, 'YYYY/MM/DD')
+   AND B.FKINP1001 = :f_fkinp1001
+
+UNION ALL
+  
+SELECT C.FKINP1001 FKINP1001
+       , C.YMD - TO_DATE (:f_ymd, 'YYYY/MM/DD') + 6 DIFF
+       , C.PR_GUBUN HANGMOG_GUBUN
+       , C.HANGMOG_SEQ
+       , CASE WHEN C.PR_VALUE = 1 AND C.PR_GUBUN = 'BS' THEN 'Lo'
+              WHEN C.PR_VALUE = 999 AND C.PR_GUBUN = 'BS' THEN 'Hi'
+              WHEN C.PR_VALUE = 1 AND C.PR_GUBUN = 'SPO2' THEN '-'
+	      WHEN C.PR_VALUE &lt; 1 THEN '0' || TO_CHAR(NVL(C.PR_VALUE, 0))
+              ELSE TO_CHAR(NVL(C.PR_VALUE, 0))
+          END 
+  FROM VW_NUR_NUR1020_LASTPART_3 C
+ WHERE C.HOSP_CODE = :f_hosp_code
+   AND C.YMD BETWEEN TO_DATE (:f_ymd, 'YYYY/MM/DD') - 6                     AND TO_DATE (:f_ymd, 'YYYY/MM/DD')
+   AND C.FKINP1001 = :f_fkinp1001
+   AND PR_GUBUN IN ('SPO2', 'O2', 'BS')
+ ORDER BY 2, 3, 4</value>
+  </data>
+  <data name="grdPalist.QuerySQL" xml:space="preserve">
+    <value>SELECT A.HO_CODE1                                                              HO_CODE
+     , A.BUNHO                                                                 BUNHO
+     , A.SUNAME                                                                SUNAME
+     , A.PKINP1001                                                             PKINP1001
+     , FN_BAS_LOAD_AGE(:f_date,A.BIRTH,'')||'/'||A.SEX                   AGE_SEX
+     --, NVL(A.SIL_IPWON_DATE,NVL(A.CHT_IPWON_DATE, A.IPWON_DATE))               IPWON_DATE
+     , A.IPWON_DATE                                                            IPWON_DATE
+     , FN_BAS_LOAD_DOCTOR_NAME(A.DOCTOR, TO_DATE(:f_date, 'YYYY/MM/DD')) DOCTOR_NAME
+     , b.team
+  FROM VW_OCS_INP1001_01 A
+     , BAS0250           B
+ WHERE A.HOSP_CODE     = :f_hosp_code
+   AND A.HO_DONG1      = :f_ho_dong
+   AND A.IPWON_DATE   &lt;= TO_DATE(:f_date, 'YYYY/MM/DD')
+   AND A.JAEWON_FLAG   = 'Y'
+   AND B.HOSP_CODE = A.HOSP_CODE
+   AND B.HO_DONG = A.HO_DONG1
+   AND B.HO_CODE = A.HO_CODE1  
+   AND ((NVL(:f_a, 'N') = 'Y' and B.TEAM = 'A') OR
+        (NVL(:f_b, 'N') = 'Y' and B.TEAM = 'B') OR
+        (NVL(:f_c, 'N') = 'Y' and B.TEAM = 'C') OR
+        (NVL(:f_d, 'N') = 'Y' and B.TEAM = 'D') OR        
+        (NVL(:f_a, 'N') = 'N' AND 
+         NVL(:f_b, 'N') = 'N' AND
+         NVL(:f_c, 'N') = 'N' AND
+         NVL(:f_d, 'N') = 'N' )
+       )
+    
+ ORDER BY B.HO_SORT, A.BED_NO</value>
+  </data>
+  <metadata name="ToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>290, 58</value>
+  </metadata>
+  <metadata name="layConment.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>386, 58</value>
+  </metadata>
+</root>

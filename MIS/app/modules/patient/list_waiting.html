@@ -1,0 +1,71 @@
+<div class="headerpanel">
+  <div class="logopanel" style="padding: 10px 15px; background: none;">
+    <h2><a href="#/"><img ng-src="{{ hospitalObj.logo}}" height="45"/></a></h2>
+  </div><!-- logopanel -->
+
+  <div class="headerbar">
+    <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
+    <div class="header-right">
+      <ul class="headermenu">
+        <li>
+          <div class="btn-group">
+            <button type="button" class="btn btn-logged" data-toggle="dropdown">
+              <!--<img src="images/photos/default_profile_picture.png" alt="" />-->
+              {{globals.currentUser.full_name}}
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu pull-right">
+              <li><a ng-click="logout()"><i class="glyphicon glyphicon-log-out"></i>
+                <translate>Sign out</translate>
+              </a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div><!-- header-right -->
+  </div><!-- headerbar -->
+</div><!-- header-->
+
+<div class="mainpanel">
+  <div class="contentpanel">
+    <div class="well well-asset-options clearfix well-form" id="quickSurveyForm">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label>
+              <translate>Department</translate>
+            </label>
+            <select id="department_code" ng-model="selectedId" data-placeholder="{{'Select department'|translate}}" style="width: 100%" ui-select2>
+              <option></option>
+              <option ng-bind="'All' | translate" value="-1" ng-selected="true"></option>
+              <option ng-repeat="option in departmentList" value="{{option.department_code}}" ng-selected="option.department_code == selectedId">{{ option.department_name}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label>
+              <translate>Patient code</translate>
+            </label>
+            <input type="text" id="patient_code" class="form-control" placeholder="{{'Input patient\'s code'|translate}}"/>
+          </div>
+        </div>
+      </div><!-- END Row 2 -->
+      <div class="row">
+        <div class="col-md-12">
+          <button class="btn btn-success btn-block search_btn" ng-click="quickSurvey()">
+            <translate>Search</translate>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(document).keypress(function(e) {
+  if(e.which == 13) {
+    $( ".search_btn" ).trigger( "click" );
+  }
+  });
+</script>

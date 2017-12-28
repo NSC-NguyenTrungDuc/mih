@@ -1,0 +1,321 @@
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "InvsModelProto";
+
+message LoadGrdMasterINV0101Info
+{
+    optional string code_type = 1;
+    optional string code_name = 2;
+    optional string row_state = 3;                
+}
+
+message LoadGrdDetailINV0101Info
+{
+    optional string code_type = 1;
+    optional string code      = 2;
+    optional string code_name = 3;        
+    optional string sort_key  = 4;        
+    optional string code2     = 5;        
+    optional string code3     = 6;        
+    optional string remark    = 7;        
+    optional string row_state = 8;        
+}
+
+//[START] INV4001U00
+message INV4001U00Grd4001Info
+{
+	optional string pkinv4001             = 1;
+	optional string churi_date            = 2;
+	optional string import_time           = 3;
+	optional string churi_buseo           = 4;
+	optional string ipgo_type             = 5;
+	optional string import_code           = 6;
+	optional string churi_seq             = 7;
+	optional string jaeryo_gubun          = 8;
+	optional string remark                = 9;
+	optional string in_out_gubun          = 10;
+	optional string ipchul_type           = 11;
+	optional string row_state             = 12;
+}
+message INV4001U00Grd4002Info
+{
+	optional string pkinv4002    = 1;
+	optional string fkinv4001    = 2;
+	optional string jaeryo_code  = 3;
+	optional string jaeryo_name  = 4;
+	optional string ipgo_qty     = 5;
+	optional string ipgo_danui   = 6;
+	optional string ipgo_danga   = 7;
+	optional string remark       = 8;
+	optional string sum_danga    = 9;
+	optional string start_date   = 10;
+    optional string lot          = 11;
+    optional string end_date     = 12;
+    optional string row_state    = 13;
+}
+message INV4001U00DrugUserInfo
+{
+	optional string user_id = 1;
+	optional string user_nm = 2;
+}
+message INV4001U00LoadCodeNameInfo
+{
+	optional string code      = 1;
+	optional string code_name = 2;
+}
+message INV4001LoadBuseoInfo
+{
+	optional string buseo_code = 1;
+	optional string buseo_name = 2;
+}
+// [END] INV4001U00
+
+//START INV6000U00U
+message INV6000U00GrdINV6001Info
+{
+	optional string jaeryo_code                 = 1;
+	optional string jaeryo_name                 = 2;
+	optional string pre_m_jaego_qty             = 3;
+	optional string ipgo_qty                    = 4;
+	optional string chulgo_qty                  = 5;
+	optional string jaego_qty                   = 6;
+	optional string exist_cnt                   = 7;
+	optional string delta_qty                   = 8;
+	optional string subul_danui_name            = 9;
+	optional string danga                       = 10;
+	optional string adj_amt                     = 11;
+}
+message INV6000U00LaySummaryDetailInfo
+{
+	optional string slip_code                     = 1;
+	optional string jaeryo_code                   = 2;
+	optional string jaeryo_name                   = 3;
+	optional string subul_danga                   = 4;
+	optional string danui                         = 5;
+	optional string jaego_qty                     = 6;
+	optional string sougaku                       = 7;
+}
+message INV6000U00LayINV6000Info
+{
+optional string pkinv6001 = 1;
+optional string magam_month = 2;
+optional string input_date = 3;
+optional string user_name = 4;
+optional string remark = 5;
+optional string process_time = 6;
+}
+message INV6000U00LaySummaryMasterInfo
+{
+	optional string slip_code                     = 1;
+    optional string slip_name                     = 2;
+    optional string drg_count                     = 3;
+    optional string sougaku                       = 4;
+    optional string magam_date                    = 5;
+    optional string magam_month_jp                = 6;
+}
+
+message INV6002U00GrdINV6002LoadcbxActorInfo
+{
+        optional string user_id=1;
+        optional string user_nm=2;
+}
+//END
+
+//INV2003U00
+message INV2003U00GrdINV2003Info
+{
+    optional string pkinv2003            = 1;
+    optional string churi_date           = 2;
+    optional string churi_time           = 3;
+    optional string churi_buseo          = 4;
+    optional string chulgo_type          = 5;
+    optional string export_code          = 6;
+    optional string churi_seq            = 7;
+    optional string jaeryo_gubun         = 8;
+    optional string ipchul_type          = 9;
+    optional string in_out_gubun         = 10;
+    optional string remark               = 11;
+    optional string row_state            = 12;
+}
+
+message INV2003U00INV2003Info
+{
+	optional string sys_date = 1;
+	optional string sys_id = 2;
+	optional string upd_date = 3;
+	optional string upd_id = 4;
+	optional string hosp_code = 5;
+	optional string pkinv2003 = 6;
+	optional string churi_date = 7;
+	optional string churi_buseo = 8;
+	optional string chulgo_type = 9;
+	optional string churi_seq = 10;
+	optional string jaeryo_gubun = 11;
+	optional string ipchul_type = 12;
+	optional string in_out_gubun = 13;
+	optional string remark = 14;
+	optional string data_row_state= 15;
+}
+message INV2003U00INV2004Info
+{
+	optional string hosp_code = 1;
+	optional string fkinv2004 = 2;
+	optional string jaeryo_code = 3;
+	optional string sys_date = 4;
+	optional string sys_id = 5;
+	optional string upd_date = 6;
+	optional string upd_id = 7;
+	optional string pkinv2004 = 8;
+	optional string fkinv2003 = 9;
+	optional string chulgo_qty = 10;
+	optional string chulgo_danga = 11;
+	optional string remark = 12;
+	optional string data_row_state =13;
+}
+
+message INV2003U00GrdINV2004Info
+{
+    optional string pkinv2004          = 1;
+    optional string fkinv2003          = 2;
+    optional string jaeryo_code        = 3;
+    optional string jaeryo_name        = 4;
+    optional string chulgo_qty         = 5;
+    optional string chulgo_danui_name  = 6;
+    optional string chulgo_danga       = 7;
+    optional string remark             = 8;
+    optional string row_state          = 9;
+}
+
+message INV2003U00GetCbxChulgoTypeInfo
+{
+	optional string code = 1;
+	optional string code_name = 2;
+}
+
+message INV2003U00ExportCSVInfo
+{
+    optional string row_num          = 1;
+    optional string churi_date       = 2;
+    optional string export_time      = 3;
+    optional string jaeryo_code      = 4;
+    optional string jaeryo_name      = 5;
+    optional string chulgo_qty       = 6;
+    optional string ipgo_danui_name  = 7;
+    optional string chulgo_type      = 8;
+    optional string upd_id           = 9;
+    optional string export_code      = 10;
+    optional string comment          = 11;
+}
+
+//END
+
+//START INV4001U00
+message INV4001U00ExportCSVInfo
+{
+	optional string row_num                    = 1;
+	optional string churi_date                 = 2;
+	optional string import_time                = 3;
+	optional string jaeryo_code                = 4;
+	optional string jaeryo_name                = 5;
+	optional string start_date                 = 6;
+	optional string lot                        = 7;
+	optional string expired_date               = 8;
+	optional string ipgo_qty                   = 9;
+	optional string ipgo_danui_name            = 10;
+	optional string ipgo_type                  = 11;
+	optional string upd_id                     = 12;
+	optional string ipgo_danga                 = 13;
+	optional string qty_ipgo_danga             = 14;
+	optional string import_code                = 15;
+	optional string comment                    = 16;
+}
+//END INV4001U00
+
+//START INV6002U00
+message INV6002U00GrdINV6002BeforeInfo
+{
+	optional string	jaeryo_code			= 1;
+	optional string jaeryo_name 		= 2;
+	optional string subul_danui_name	= 3;
+	optional string jaryo_gubun			= 4;
+}
+
+message INV6002U00GrdINV6002AfterInfo
+{               
+	optional string jaeryo_code = 1;                                        
+    optional string jaeryo_name = 2;
+    optional string exist_count = 3;
+    optional string subul_danui_name = 4;
+    optional string input_date = 5;
+    optional string input_user = 6;
+    optional string jaryo_gubun = 7;
+}
+
+message INV6002U00GrdINV6002Info
+{
+	optional string jaeryo_code                 = 1;
+	optional string jaeryo_name                 = 2;
+	optional string exist_count                 = 3;
+	optional string subul_danui_name            = 4;
+	optional string input_date                  = 5;
+	optional string input_user                  = 6;
+	optional string jaryo_gubun                 = 7;
+	optional string magam_month                 = 8;
+}
+//END INV6002U00
+
+// START INV0110Q00
+message LoadINV0110Q00Info
+{
+	optional string jaeryo_code       = 1;
+	optional string jaeryo_name       = 2;
+	optional string subul_danui       = 3;
+	optional string subul_danui_name  = 4;
+	optional string subul_danga       =5;
+}
+// END INV0110Q00
+
+// [START] INV0101U01
+
+message INV0101U01GridMasterInfo
+{
+        optional string code_type = 1;
+        optional string code_type_name = 2;
+        optional string admin_gubun = 3;
+        optional string row_state = 4;
+}
+
+message INV0101U01GridDetailInfo
+{
+        optional string code_type = 1;
+        optional string code      = 2;
+        optional string code_name = 3;
+        optional string sort_key  = 4;
+        optional string key       = 5;
+        optional string row_state = 6;
+}
+// [END] INV0101U01
+
+message INV6002U00GrdINV6002ExcuteInfo
+{
+        optional string user_id=1;
+        optional string hosp_code =2;
+        optional string magam_month=3;
+        optional string jaeryo_code=4;
+        optional string exist_count=5;
+        optional string input_date=6;
+        optional string input_user=7;
+}
+message INV6000U00ExportCSVInfo
+{
+	optional string row_num                   = 1;
+	optional string jaeryo_code               = 2;
+	optional string jaeryo_name               = 3;
+	optional string ipgo_danui_name           = 4;
+	optional string danga                     = 5;
+	optional string pre_m_jaego_qty           = 6;
+	optional string ipgo_qty                  = 7;
+	optional string chulgo_qty                = 8;
+	optional string jaego_qty                 = 9;
+	optional string adj_amt                   = 10;
+	optional string danga_jaego_qty           = 11;
+}

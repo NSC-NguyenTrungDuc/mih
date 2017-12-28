@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{80CCB691-CC2F-410E-AAAC-FE238CB7FE06}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>IHIS.BizObjects</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>IHIS.Framework</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <DebugType>
+    </DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleAssemblies>
+    </CodeAnalysisRuleAssemblies>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>Migrated rules for IHIS.BizObjects.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DataWindow">
+      <HintPath>REF\DataWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Ink, Version=1.0.2201.2, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>REF\Microsoft.Ink.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BizCodeHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustomFunctionItemEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataWindowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailPaInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EkgCallHelper.cs" />
+    <Compile Include="EMRHelper.cs" />
+    <Compile Include="FindHospitalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindHospitalForm.Designer.cs">
+      <DependentUpon>FindHospitalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindPatientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PACSCallHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrintHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Twain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XBuseoCombo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XButtonList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XCalendar\XCalendar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XCalendar\XCalendarDate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XCalendar\XCalendarDateCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XCalendar\XCalendarDay.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XCalendar\XCalendarFooter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XCalendar\XCalendarHeader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XCalendar\XCalendarImageEditorControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XCalendar\XCalendarImageMapEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XCalendar\XCalendarMonth.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XCalendar\XCalendarUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XCalendar\XCalendarWeekDay.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XDWWorker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XHospBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XImageEditor\BandRectangle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XImageEditor\DrawItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XImageEditor\XImageEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XImageEditor\XImageEditorPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XInfoCombo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XOCXWorker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XPaInfoBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XPatientBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XPersonCombo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XPrintScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XRichTextEditor\XRichTextEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XPaComment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CustomFunctionItemEditorForm.resx">
+      <DependentUpon>CustomFunctionItemEditorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataWindowForm.resx">
+      <DependentUpon>DataWindowForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailPaInfoForm.en.resx">
+      <DependentUpon>DetailPaInfoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailPaInfoForm.ja-JP.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DetailPaInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailPaInfoForm.resx">
+      <DependentUpon>DetailPaInfoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailPaInfoForm.vi-VN.resx">
+      <DependentUpon>DetailPaInfoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindHospitalForm.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FindHospitalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindHospitalForm.ja-JP.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FindHospitalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindHospitalForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FindHospitalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindHospitalForm.vi-VN.resx">
+      <DependentUpon>FindHospitalForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindPatientForm.en.resx">
+      <DependentUpon>FindPatientForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindPatientForm.ja-JP.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FindPatientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindPatientForm.resx">
+      <DependentUpon>FindPatientForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindPatientForm.vi-VN.resx">
+      <DependentUpon>FindPatientForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\Cancel.gif" />
+    <EmbeddedResource Include="Images\Close.gif" />
+    <EmbeddedResource Include="Images\Delete.gif" />
+    <EmbeddedResource Include="Images\InHospital.gif" />
+    <EmbeddedResource Include="Images\Insert.gif" />
+    <EmbeddedResource Include="Images\Preview.gif" />
+    <EmbeddedResource Include="Images\Print.gif" />
+    <EmbeddedResource Include="Images\Process.gif" />
+    <EmbeddedResource Include="Images\Query.gif" />
+    <EmbeddedResource Include="Images\Reset.gif" />
+    <EmbeddedResource Include="Images\SelPointer.bmp" />
+    <EmbeddedResource Include="Images\Update.gif" />
+    <EmbeddedResource Include="Images\XBuseoCombo.bmp" />
+    <EmbeddedResource Include="Images\XButtonList.bmp" />
+    <EmbeddedResource Include="Images\XCalendar.bmp" />
+    <EmbeddedResource Include="Images\XDWWorker.bmp" />
+    <EmbeddedResource Include="Images\XInfoCombo.bmp" />
+    <EmbeddedResource Include="Images\XPersonCombo.bmp" />
+    <EmbeddedResource Include="Images\XRichTextEditor.bmp" />
+    <EmbeddedResource Include="Images\XSerialWorker.bmp" />
+    <EmbeddedResource Include="MSG.xml" />
+    <EmbeddedResource Include="Properties\Resource.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resource.ja-JP.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resource.en.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resource.vi-VN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XButtonList.resx">
+      <DependentUpon>XButtonList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XCalendar\XCalendar.resx">
+      <DependentUpon>XCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XDWWorker.resx">
+      <DependentUpon>XDWWorker.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XHospBox.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>XHospBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XHospBox.ja-JP.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>XHospBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XHospBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>XHospBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XHospBox.vi-VN.resx">
+      <DependentUpon>XHospBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XImageEditor\XImageEditor.resx">
+      <DependentUpon>XImageEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XPaComment.en.resx">
+      <DependentUpon>XPaComment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XPaComment.ja-JP.resx">
+      <DependentUpon>XPaComment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XPaComment.vi-VN.resx">
+      <DependentUpon>XPaComment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XPaInfoBox.resx">
+      <DependentUpon>XPaInfoBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XPatientBox.en.resx">
+      <DependentUpon>XPatientBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XPatientBox.ja-JP.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>XPatientBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XPatientBox.resx">
+      <DependentUpon>XPatientBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XPatientBox.vi-VN.resx">
+      <DependentUpon>XPatientBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XPrintScreen.resx">
+      <DependentUpon>XPrintScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRichTextEditor\Excel.rtf" />
+    <EmbeddedResource Include="XRichTextEditor\XRichTextEditor.resx">
+      <DependentUpon>XRichTextEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XPaComment.resx">
+      <DependentUpon>XPaComment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IHIS.CloudConnector\IHIS.CloudConnector.csproj">
+      <Project>{4424c55d-ebba-4825-aba2-e7718a361f9a}</Project>
+      <Name>IHIS.CloudConnector</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\IHIS.ComFunc\IHIS.ComFunc.csproj">
+      <Project>{719e4bd5-36ad-4ed1-a6c9-5c713911519f}</Project>
+      <Name>IHIS.ComFunc</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\IHIS.Controls\IHIS.Controls.csproj">
+      <Project>{2e61012d-5af0-49f3-ab80-de6f7001bf23}</Project>
+      <Name>IHIS.Controls</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\IHIS.DbControls\IHIS.DbControls.csproj">
+      <Project>{10529fa8-29d0-4fed-882e-fec8e26ad1cd}</Project>
+      <Name>IHIS.DbControls</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\IHIS.Forms\IHIS.Forms.csproj">
+      <Project>{3238e165-5344-4da3-a724-222e8b4cde22}</Project>
+      <Name>IHIS.Forms</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\IHIS.Service\IHIS.Service.csproj">
+      <Project>{82a2fa5a-f95e-4e72-950a-1e667522a1d2}</Project>
+      <Name>IHIS.Service</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\IHIS.Win32\IHIS.Win32.csproj">
+      <Project>{2e9338ee-48b0-4c77-95d9-61357b449b96}</Project>
+      <Name>IHIS.Win32</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\IHIS.X\IHIS.X.Magic\IHIS.X.Magic.csproj">
+      <Project>{92f94ea0-9910-4895-b8a1-fed1543a9da1}</Project>
+      <Name>IHIS.X.Magic</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>$(SolutionDir)IHISFrameworkBuild.bat PRE $(SolutionDir) $(TargetDir) $(SolutionName) $(TargetFileName)</PreBuildEvent>
+    <PostBuildEvent>$(SolutionDir)IHISFrameworkBuild.bat POST $(SolutionDir) $(TargetDir) $(SolutionName) $(TargetFileName)</PostBuildEvent>
+  </PropertyGroup>
+</Project>

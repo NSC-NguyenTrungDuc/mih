@@ -1,0 +1,45 @@
+import "rpc.proto";
+import "order_model.proto";
+
+option java_package = "nta.med.ext.support.proto";
+option java_outer_classname = "OrderServiceProto";
+
+option (version) = "1.0.0";
+option (service) = "order";
+
+message UpdatePaidOrderRequest {
+	required string hosp_code 		= 1;
+	required string reception_date 	= 2;
+	repeated string recept_ref_id 	= 3;
+}
+
+message UpdatePaidOrderResponse {
+	required bool result 	= 1;
+	optional string message	= 2;
+}
+
+message OrderTranferRequest {
+	required int64 id 										= 1;
+    required string hosp_code 								= 2;
+	optional string in_out									= 3;
+	optional string patient_id								= 4;
+	optional string perform_date							= 5;
+    optional string perform_time							= 6;
+    optional string medical_uid								= 7;
+	optional DiagnosisInformation diagnosis_information		= 8; 
+	required Action action									= 9;
+	enum Action { SEND_ORDER_DISEASE = 1; SEND_DISEASE_ONLY = 2; RETRANSFER_ORDER = 3; CANCEL_ORDER = 4; }
+}
+
+message OrderTranferResponse {
+	required int64 id 						= 1;
+    required string hosp_code 				= 2;
+	required bool result 					= 3;
+	optional string api_result				= 4;
+	optional string api_result_message 		= 5;
+	optional string medical_uid				= 6;
+	optional string medical_result			= 7;
+	optional string medical_result_message	= 8;
+	optional string disease_result			= 9;
+	optional string disease_result_message	= 10;
+}

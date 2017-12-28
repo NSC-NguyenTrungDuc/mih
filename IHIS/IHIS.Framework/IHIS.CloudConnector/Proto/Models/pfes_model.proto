@@ -1,0 +1,27 @@
+syntax = "proto2";
+
+message PFE0101U00GrdDCodeInfo
+{
+	optional string code_type         = 1;
+	optional string code              = 2;
+	optional string code_name         = 3;
+	optional string code_name_re      = 4;
+	optional string code_value        = 5;
+}
+
+message PFE0101U00GrdMCodeInfo
+{
+	optional string code_type = 1;
+	optional string code_type_name = 2;
+}
+
+// Request info
+message PFE0101U00SaveLayoutInfo
+{
+	optional string code_type           = 1;
+	optional string code                = 2;
+	optional string code_name           = 3;
+	optional string code_name_re        = 4;
+	optional string code_value          = 5;
+	optional string row_state           = 6;
+}

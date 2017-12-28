@@ -1,0 +1,400 @@
+import "rpc.proto";
+import "xrts_model.proto";
+import "system_model.proto";
+
+
+// --- [START] XRT0000Q00 ---
+
+message XRT0000Q00InitializeRequest{
+	optional string sort_layOrder = 1;
+	optional string bunho_layOrder = 2;
+	optional string jundal_part_layOrder = 3;
+	
+}
+
+message XRT0000Q00InitializeResponse{
+	repeated XRT0000Q00LayOrderListItemInfo layOrder_list = 1;
+	repeated XRT0000Q00LayMakeTabPageListItemInfo layMakeTabPage_list = 2;
+}
+
+message XRT0000Q00LayPacsInfoRequest{
+	optional string code_type = 1;
+}
+
+message XRT0000Q00LayPacsInfoResponse{
+	repeated XRT0000Q00LayPacsInfoListItemInfo layPacsInfo_list = 1;
+}
+
+message XRT0000Q00GetModalityCodeRequest{
+	optional string hangmog_code = 1;
+}
+
+message XRT0000Q00GetModalityCodeResponse{
+	optional string modality = 1;
+}
+
+// --- [END] XRT0000Q00 ---
+
+
+
+// --- [START] XRT7001Q01 ---
+
+message XRT7001Q01CboPartRequest{
+	optional string code_type = 1;
+}
+
+message XRT7001Q01CboPartResponse{
+	repeated ComboListItemInfo cboPart_list = 1;
+}
+
+message XRT7001Q01LayRadioHistoryRequest{
+	optional string bunho = 1;
+	optional string part_code = 2;
+}
+
+message XRT7001Q01LayRadioHistoryResponse{
+	repeated XRT7001Q01LayRadioHistoryListItemInfo layRadioHistory_list = 1;
+}
+
+// --- [END] XRT7001Q01 ---
+
+
+
+
+// --- [START] XRT9001R01 ---
+
+message XRT9001R01Lay9001RRequest{
+	optional string date = 1;
+}
+
+message XRT9001R01Lay9001RResponse{
+	repeated XRT9001R01Lay9001RListItemInfo lay9001R_list = 1;
+}
+
+// --- [END] XRT9001R01 ---
+
+
+
+
+// --- [START] XRT9001R03 ---
+
+message XRT9001R03Lay9003RRequest{
+	optional string date = 1;
+}
+
+message XRT9001R03Lay9003RResponse{
+	repeated XRT9001R03Lay9003RListItemInfo lay9003R_list = 1;
+}
+
+// --- [END] XRT9001R03 ---
+
+
+// --- [START] XRT0101U00 ---
+
+message XRT0101U00InitializeRequest{
+	optional string code_type_grdDcode = 1;
+	
+	optional string code_type_grdMcode = 2;
+	
+	optional string code_type_layDupD = 3;
+	optional string code_layDupD = 4;
+	
+	optional string code_type_layDupM = 5;
+}
+
+message XRT0101U00InitializeResponse{
+	repeated XRT0101U00GrdDCodeListItemInfo grdDcode_list = 1;
+	repeated XRT0101U00GrdMCodeListItemInfo grdMcode_list = 2;
+	optional string y_value_layDupD = 3;
+	optional string y_value_layDupM = 4;
+}
+
+message XRT0101U00ExecuteCase1Request{
+	optional string row_state = 1;
+	
+	optional string code_type = 2;
+	optional string code_type_name = 3;
+	optional string user_id = 4;
+}
+
+message XRT0101U00ExecuteCase2Request{
+	optional string row_state = 1;
+	
+	optional string code_type = 2;
+	optional string code_name = 3;
+	optional string user_id = 4;
+	optional string code2 = 5;
+	optional string seq = 6;
+	optional string code_value = 7;
+	optional string code = 8;
+}
+
+// --- [END] XRT0101U00 ---
+
+
+// --- [START] XRT0001U00 ---
+message XRT0001U00GrdRadioListRequest
+{
+    optional string xray_code = 1;
+}
+
+message XRT0001U00GrdRadioListResponse
+{
+    repeated XRT0001U00GrdRadioListInfo grd_radio_item = 1;
+}
+
+message XRT0001U00GrdXRTRequest
+{
+    optional string txtParam              = 1;
+    optional string xray_gubun            = 2;
+    optional string special_yn            = 3;
+}
+
+message XRT0001U00GrdXRTResponse
+{
+    repeated XRT0001U00GrdXRTInfo grd_xrt_item = 1;
+}
+
+message XRT0001U00LayDupRequest
+{
+    optional string xray_code = 1;
+}
+
+message XRT0001U00LayDupResponse
+{
+    optional string result = 1;
+}
+
+message XRT0001U00FbxDataValidatingRequest
+{
+    optional string fb_name = 1;
+    optional string code = 2;
+}
+
+message XRT0001U00FbxDataValidatingResponse
+{
+    optional string code_name = 1;
+}
+
+message XRT0001U00MakeFindWorkerRequest
+{
+    optional string ctr_name = 1;
+    optional string find1 = 2;
+}
+
+message XRT0001U00SaveLayoutRequest
+{
+    optional string user_id = 1;
+    repeated XRT0001U00SaveLayoutInfo save_layout_item = 2;
+}
+// --- [END] XRT0001U00 ---
+
+// --- [START] XRT0122U00 ---
+message XRT0122U00GrdMcodeRequest
+{
+    optional string buwi_bunryu = 1;
+}
+
+message XRT0122U00GrdMcodeResponse
+{
+    repeated XRT0122U00GrdMcodeInfo mcode_item = 1;
+}
+
+message XRT0122U00GrdDcodeRequest
+{
+    optional string buwi_name            = 1;
+    optional string buwi_code            = 2;
+    optional string flag                 = 3;
+    optional string buwi_bunryu          = 4;
+}
+
+message XRT0122U00GrdDcodeResponse
+{
+    repeated XRT0122U00GrdDcodeInfo dcode_item = 1;
+}
+
+message XRT0122U00LayDupMRequest
+{
+    optional string buwi_bunryu = 1;
+}
+
+message XRT0122U00LayDupResponse
+{
+    optional string dup_yn = 1;
+}
+
+message XRT0122U00SaveLayoutRequest
+{
+    optional string user_id = 1;
+    repeated XRT0122U00SaveLayoutInfo save_layout_item = 2;
+}
+// --- [END] XRT0122U00 ---
+
+// --- [START] XRT0201U00 ---
+message XRT0201U00LoadScreenRequest {
+    optional string query_date = 1;
+    optional string io_gubun = 2;
+    optional string act_gubun = 3;
+    optional string jundal_table_code = 4;
+    optional string jundal_part = 5;
+    optional string bunho = 6;
+    optional string from_date = 7;
+    optional string to_date = 8;
+}
+
+message XRT0201U00LoadScreenResponse {
+    repeated XRT0201U00CbxActorItemInfo cbx_actor_item_info = 1;
+    repeated XRT0201U00GrdPaListItemInfo grd_pa_list_item_info = 2;
+}
+
+message XRT0201U00GrdPaListRequest {
+    optional string io_gubun = 1;
+    optional string act_gubun = 2;
+    optional string jundal_table_code = 3;
+    optional string jundal_part = 4;
+    optional string bunho = 5;
+    optional string from_date = 6;
+    optional string to_date = 7;
+}
+
+message XRT0201U00GrdPaListResponse {
+    repeated XRT0201U00GrdPaListItemInfo grd_pa_list_item_info = 1;
+}
+
+message XRT0201U00GrdOrderRequest{
+    optional string io_gubun = 1;
+    optional string act_gubun = 2;
+    optional string reser_yn = 3;
+    optional string order_date = 4;
+    optional string from_date = 5;
+    optional string to_date = 6;
+    optional string naewon_key = 7;
+    optional string emergency = 8;
+    optional string jundal_table_code = 9;
+    optional string jundal_part = 10;
+    optional string bunho = 11;
+    optional string doctor = 12;
+}
+
+message XRT0201U00GrdOrderResponse{
+    repeated XRT0201U00GrdOrderItemInfo grd_order_item_info = 1;
+}
+
+message XRT0201U00GrdOrderRowFocusChangedRequest{
+    optional string bunho = 1;
+    optional string order_date = 2;
+    optional string io_gubun = 3;
+    optional string jundal_part = 4;
+    optional string fkocs = 5;
+
+    optional string grd_order_row_count = 6;
+    optional string hangmog_code = 7;
+}
+
+message XRT0201U00GrdOrderRowFocusChangedResponse{
+    repeated XRT0201U00GrdJaeryoItemInfo grd_jaeryo_item_info = 1;
+    repeated DataStringListItemInfo sang_name = 2;
+    repeated XRT0201U00DefaultJearyoItemInfo default_jearyo_item_info = 3;
+}
+
+message XRT0201U00LayPacsRequest{
+    optional string hangmog_code = 1;
+}
+
+message XRT0201U00LayPacsResponse{
+    repeated XRT0000Q00LayPacsInfoListItemInfo lay_pacs_item_info = 1;
+    optional string modality = 2;
+}
+
+message XRT0201U00DataSendYnRequest{
+    optional string in_out_gubun = 1;
+    optional string pkocs = 2;
+}
+
+message XRT0201U00DataSendYnResponse{
+    optional string result = 1;
+}
+
+message XRT0201U00FwkOrdDanuiRequest{
+    optional string hangmog_code = 1;
+}
+
+message XRT0201U00FwkOrdDanuiNameRequest{
+    optional string hangmog_code = 1;
+}
+
+message XRT0201U00FwkOrdDanuiResponse{
+    repeated XRT0201U00FwkOrdDanuiItemInfo fwk_ord_danui_item_info = 1;
+}
+
+message XRT0201U00NaewonDateRequest{
+    optional string naewon_key = 1;
+}
+
+message XRT0201U00NaewonDateResponse{
+    optional string naewon_date = 1;
+}
+
+message XRT0201U00MentRequest{
+}
+
+message XRT0201U00MentResponse{
+    optional string ment = 1;
+}
+
+message XRT0201U00GrdJaeryoColumnChangedRequest{
+    optional string hangmog_code = 1;
+    optional string s_hangmog_code = 2;
+}
+
+message XRT0201U00GrdJaeryoColumnChangedResponse{
+    repeated XRT0201U00GrdJaeryoColumnChangedItemInfo grd_jaeryo_item_info = 1;
+}
+
+message XRT0201U00FwkActorRequest{
+}
+
+message XRT0201U00FwkActorResponse{
+    repeated ComboListItemInfo user_item_info = 1;
+}
+
+message XRT0201U00OcsCommonRequest{
+    optional string user_id = 1;
+}
+
+message XRT0201U00OcsCommonResponse{
+    repeated DataStringListItemInfo user_name_item_info = 1;
+}
+
+message XRT0201U00CheckNaewonYnRequest{
+    optional string pkout1001 = 1;
+}
+
+message XRT0201U00CheckNaewonYnResponse{
+    optional string result = 1;
+}
+
+message XRT0201U00LayConstantRequest{
+}
+
+message XRT0201U00LayConstantResponse{
+    repeated XRT0000Q00LayPacsInfoListItemInfo lay_constant_item_info = 1;
+    optional string alarm_file_path_xrt = 2;
+    optional string alarm_file_path_xrt_em = 3;
+}
+
+message XRT0201U00GrdRadioListRequest{
+	optional string order_date = 1;
+	optional string bunho = 2;
+	optional string in_out_gubun = 3;
+}
+
+message XRT0201U00GrdRadioListResponse{
+    repeated XRT0201U00GrdRadioListItemInfo grd_radio_list_item_info = 1;
+}
+
+message XRT0201U00RadioSaveLayoutRequest{
+    repeated XRT0201U00GrdRadioListItemInfo grd_radio_list_item_info = 1;
+    optional string user_id = 2;
+}
+// --- [END] XRT0201U00 ---

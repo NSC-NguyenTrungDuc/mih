@@ -1,0 +1,161 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+	http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
+
+    <context:annotation-config/>
+    <context:component-scan base-package="nta.sfd">
+    	<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+    <context:property-placeholder location="file:${configPath}/configs.properties"/>
+
+    <!-- Enable @AspectJ support -->
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+    <aop:config>
+
+    </aop:config>
+
+    <jpa:repositories base-package="nta.sfd.core.repository.main" entity-manager-factory-ref="mainEntityManagerFactory" transaction-manager-ref="mainTransactionManager"/>
+    <jpa:repositories base-package="nta.sfd.core.repository.ihis" entity-manager-factory-ref="ihisEntityManagerFactory" transaction-manager-ref="ihisTransactionManager"/>
+    <!-- <import resource="securityContext.xml"/> -->
+
+    <bean id="abstractDataSource" abstract="true">
+        <property name="driverClassName" value="${jdbc.driverClassName}"/>
+        <property name="maxActive" value="${jdbc.maxActive}"/>
+        <property name="maxIdle" value="${jdbc.maxIdle}"/>
+        <property name="testOnBorrow" value="true"/>
+        <property name="testOnReturn" value="true"/>
+        <property name="validationQuery" value="select 1"/>
+        <property name="minEvictableIdleTimeMillis" value="${jdbc.minEvictableIdleTimeMillis}" />
+        <property name="timeBetweenEvictionRunsMillis" value="${jdbc.timeBetweenEvictionRunsMillis}" />
+        <property name="removeAbandoned" value="true" />
+    </bean>
+
+    <bean id="mainDataSource" parent="abstractDataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="url" value="${jdbc.main.url}"/>
+        <property name="username" value="${jdbc.main.username}"/>
+        <property name="password" value="${jdbc.main.password}"/>
+    </bean>
+
+    <bean id="mainEntityManagerFactory"
+          class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="dataSource" ref="mainDataSource"/>
+        <property name="jpaVendorAdapter">
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+                <property name="databasePlatform" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
+                <property name="generateDdl" value="false"/>
+                <property name="showSql" value="true"/>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="mainTransactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <qualifier value="MAIN" />
+        <property name="entityManagerFactory" ref="mainEntityManagerFactory"/>
+    </bean>
+
+    <!--IHIS DataSource Config-->
+<!--     <bean id="ihisDataSource" parent="abstractDataSource" class="org.apache.commons.dbcp.BasicDataSource"> -->
+<!--         <property name="url" value="${jdbc.ihis.url}"/> -->
+<!--         <property name="username" value="${jdbc.ihis.username}"/> -->
+<!--         <property name="password" value="${jdbc.ihis.password}"/> -->
+<!--     </bean> -->
+
+<!--     <bean id="ihisEntityManagerFactory" -->
+<!--           class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"> -->
+<!--         <property name="dataSource" ref="ihisDataSource"/> -->
+<!--         <property name="jpaVendorAdapter"> -->
+<!--             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"> -->
+<!--                 <property name="databasePlatform" value="org.hibernate.dialect.MySQL5InnoDBDialect"/> -->
+<!--                 <property name="generateDdl" value="false"/> -->
+<!--                 <property name="showSql" value="true"/> -->
+<!--             </bean> -->
+<!--         </property> -->
+<!--     </bean> -->
+
+<!--     <bean id="ihisTransactionManager" class="org.springframework.orm.jpa.JpaTransactionManager"> -->
+<!--         <qualifier value="IHIS" /> -->
+<!--         <property name="entityManagerFactory" ref="ihisEntityManagerFactory"/> -->
+<!--     </bean> -->
+
+    <tx:annotation-driven proxy-target-class="true"/>
+
+    <bean id="mapper" class="org.dozer.DozerBeanMapper" lazy-init="true">
+        <property name="mappingFiles">
+            <list>
+                <value>dozer-mappings.xml</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+        <property name="velocityPropertiesMap">
+            <map>
+                <entry key="resource.loader">
+                    <value>ds</value>
+                </entry>
+                <entry key="ds.resource.loader.instance">
+                    <ref bean="templateLoader"/>
+                </entry>
+                <entry key="ds.resource.loader.resource.table">
+                    <value>MAIL_TEMPLATE</value>
+                </entry>
+                <entry key="ds.resource.loader.resource.keycolumn">
+                    <value>MAIL_TEMPLATE_ID</value>
+                </entry>
+                <entry key="ds.resource.loader.resource.templatecolumn">
+                    <value>CONTENT</value>
+                </entry>
+                <entry key="ds.resource.loader.resource.timestampcolumn">
+                    <value>UPDATED</value>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+    <!-- Velocity Database Template Loader -->
+    <bean id="templateLoader" scope="singleton"
+          class="org.apache.velocity.runtime.resource.loader.DataSourceResourceLoader">
+        <property name="dataSource" ref="mainDataSource" />
+    </bean>
+
+    <!-- Mail sender configured for using Gmail -->
+    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl"
+          p:host="${mail.smtp.host}"
+          p:username="${mail.username}"
+          p:password="${mail.password}"
+          p:port="${mail.smtp.port}">
+        <property name="javaMailProperties">
+            <props>
+                <prop key="mail.smtp.auth">${mail.smtp.auth}</prop>
+                <prop key="mail.smtp.starttls.enable">${mail.smtp.starttls.enable}</prop>
+                <prop key="mail.smtp.sendpartial">true</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="templateMessage" class="org.springframework.mail.SimpleMailMessage"
+          p:from="${mail.sender}" p:bcc="${mail.bcc}"/>
+
+    <bean id="executorService" class="java.util.concurrent.Executors" factory-method="newFixedThreadPool"
+          destroy-method="shutdown">
+        <constructor-arg value="10"/>
+    </bean>
+
+    <task:executor id="threadPoolTaskExecutor" pool-size="10"/>
+
+    <task:scheduler id="threadPoolTaskScheduler" pool-size="10"/>
+
+    <task:annotation-driven executor="executorService" proxy-target-class="true" mode="proxy"/>
+
+</beans>

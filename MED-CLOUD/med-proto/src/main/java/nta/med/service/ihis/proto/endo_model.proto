@@ -1,0 +1,54 @@
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "EndoModelProto";
+
+//[START] END1001U02
+message END1001U02DsvDwInfo
+{
+	optional string pkpfe1000           = 1;
+	optional string c3                  = 2;
+	optional string fkocs               = 3;
+	optional string bunho               = 4;
+	optional string hangmog_code        = 5;
+	optional string hangmog_name        = 6;
+	optional string resident_yn         = 7;
+}
+message END1001U02DsvLDOCS0801Info
+{
+	optional string pat_status                   = 1;
+	optional string pat_status_name        = 2;
+	optional string pat_status_code        = 3;
+	optional string pat_status_code_name   = 4;
+	optional string indispensable_yn       = 5;
+}
+message END1001U02GrdComment3Info
+{
+	optional string comments                      = 1;
+	optional string numb                          = 2;
+	optional string ser                           = 3;
+}
+message END1001U02GrdPaStatusInfo
+{
+	optional string bunho                              = 1;
+	optional string pat_status                         = 2;
+	optional string pat_status_name                    = 3;
+	optional string pat_status_code                    = 4;
+	optional string pat_status_code_name               = 5;
+	optional string ment                               = 6;
+	optional string seq                                = 7;
+	optional string indispensable_yn                   = 8;
+	optional string cont_key                                      = 9;
+}
+message END1001U02GrdPurposeInfo
+{
+	optional string n                              = 1;
+	optional string code_name                      = 2;
+}
+message END1001U02LayOrderDateInfo
+{
+	optional string order_date                              = 1;
+}
+message END1001U02StrInfo 
+{
+	optional string value                                  = 1;
+}
+//[END] END1001U02

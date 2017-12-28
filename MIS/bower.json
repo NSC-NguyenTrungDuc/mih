@@ -1,0 +1,151 @@
+{
+  "name": "test",
+  "version": "0.0.0",
+  "dependencies": {
+    "jquery-v1": "https://code.jquery.com/jquery-1.12.4.min.js",
+    "angular": "^1.5.0",
+    "bootstrap": "^3.3.4",
+    "angular-resource": "^1.3.0",
+    "angular-route": "^1.4.8",
+    "angular-ui-router": "^0.2.17",
+    "angular-cookies": "*",
+    "angular-css-injector": "^1.0.4",
+    "angular-local-storage": "0.2.7",
+    "angular-ui-sortable": "*",
+    "jquery-ui": "1.11.4",
+    "jquery-toggles": "^3.1.5",
+    "angular-gettext": "~2.1.0",
+    "select2": "4.0.2",
+    "rowsorter": "2.1.1",
+    "datatables-bootstrap3": "*",
+    "font-awesome": "*",
+    "weather-icons": "2.0.10",
+    "moment": "^2.10.6",
+    "angular-datatables": "*",
+    "jquery.steps": "jquery-steps#^1.1.0",
+    "jquery.gritter": "1.7.4",
+    "bootstrap-datepicker": "*",
+    "angular-ui-select2": "*",
+    "jquery.cookie": "1.4.1",
+    "pdfmake": "0.1.20",
+    "html2canvas": "0.4.1",
+    "canvas2image": "*",
+    "ScrollToFixed": "*",
+    "angular-elastic": "^2.5.1",
+    "html5shiv": "*",
+    "respond": "*"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.3.0"
+  },
+  "appPath": "app",
+  "moduleName": "testApp",
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "less/bootstrap.less",
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
+    },
+    "jquery-toggles": {
+      "main": [
+        "less/toggles.less",
+        "css/toggles-full.css",
+        "toggles.js"
+      ]
+    },
+    "select2": {
+      "main": [
+        "dist/js/select2.full.min.js",
+        "dist/js/i18n/ja.js",
+        "src/scss/core.scss",
+        "dist/css/select2.min.css"
+      ]
+    },
+    "datatables-bootstrap3": {
+      "main": [
+        "BS3/assets/css/datatables.css",
+        "BS3/assets/images/sort_asc.png",
+        "BS3/assets/images/sort_asc_disabled.png",
+        "BS3/assets/images/sort_both.png",
+        "BS3/assets/images/sort_desc.png",
+        "BS3/assets/images/sort_desc_disabled.png",
+        "BS3/assets/js/datatables.js"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.css",
+        "fonts/fontawesome-webfont.woff2"
+      ]
+    },
+    "weather-icons": {
+      "main": [
+        "css/weather-icons.min.css"
+      ]
+    },
+    "rowsorter": {
+      "main": [
+        "dist/RowSorter.js"
+      ]
+    },
+    "angular-datatables": {
+      "main": [
+        "dist/angular-datatables.min.js"
+      ]
+    },
+    "jquery-ui": {
+      "main": [
+        "./jquery-ui.js",
+        "ui/core.js",
+        "ui/widget.js",
+        "ui/menu.js",
+        "ui/position.js",
+        "ui/selectmenu.js",
+        "ui/tabs.js",
+        "ui/autocomplete.js",
+        "themes/base/jquery-ui.min.css"
+      ]
+    },
+    "jquery.steps": {
+      "main": [
+        "build/jquery.steps.js",
+        "demo/css/jquery.steps.css"
+      ]
+    },
+    "jquery.gritter": {
+      "main": [
+        "./js/jquery.gritter.js",
+        "./css/jquery.gritter.css"
+      ]
+    },
+    "bootstrap-datepicker": {
+      "main": [
+        "dist/css/bootstrap-datepicker3.css",
+        "dist/js/bootstrap-datepicker.min.js",
+        "dist/locales/bootstrap-datepicker.ja.min.js",
+        "dist/locales/bootstrap-datepicker.vi.min.js"
+      ]
+    },
+    "pdfmake": {
+      "main": [
+        "build/pdfmake.js"
+      ]
+    },
+    "moment": {
+      "main": [
+        "moment.js",
+        "locale/ja.js",
+        "locale/vi.js"
+      ]
+    },
+    "canvas2image": {
+      "main": "canvas2image/canvas2image.js"
+    }
+  },
+  "resolutions": {
+    "select2": "4.0.2",
+    "angular": ">=1.4.0"
+  }
+}

@@ -1,0 +1,183 @@
+<data>
+    <medicalreq type="record">
+        #if($rq.inOut)
+            <InOut type="string">$rq.inOut</InOut>
+        #end
+        #if($rq.patientID)
+            <Patient_ID type="string">$rq.patientID</Patient_ID>
+        #end
+        #if($rq.performDate)
+            <Perform_Date type="string">$rq.performDate</Perform_Date>
+        #end
+        #if($rq.performTime)
+            <Perform_Time type="string">$rq.performTime</Perform_Time>
+        #end
+        #if($rq.medicalUid)
+            <Medical_Uid type="string">$rq.medicalUid</Medical_Uid>
+        #end
+        #if($rq.diagnosisInformation)
+            <Diagnosis_Information type="record">
+                #if($rq.diagnosisInformation.departmentCode)
+                    <Department_Code type="string">$rq.diagnosisInformation.departmentCode</Department_Code>
+                #end
+                #if($rq.diagnosisInformation.physicianCode)
+                    <Physician_Code type="string">$rq.diagnosisInformation.physicianCode</Physician_Code>
+                #end
+                #if($rq.diagnosisInformation.healthInsuranceInfo)
+                    <HealthInsurance_Information type="record">
+                        #if($rq.diagnosisInformation.healthInsuranceInfo.insuranceCombinationNumber)
+                            <Insurance_Combination_Number type="string">$rq.diagnosisInformation.healthInsuranceInfo.insuranceCombinationNumber</Insurance_Combination_Number>
+                        #end
+                        #if($rq.diagnosisInformation.healthInsuranceInfo.insuranceProviderClass)
+                            <InsuranceProvider_Class type="string">$rq.diagnosisInformation.healthInsuranceInfo.insuranceProviderClass</InsuranceProvider_Class>
+                        #end
+                        #if($rq.diagnosisInformation.healthInsuranceInfo.insuranceProviderNumber)
+                            <InsuranceProvider_Number type="string">$rq.diagnosisInformation.healthInsuranceInfo.insuranceProviderNumber</InsuranceProvider_Number>
+                        #end
+                        #if($rq.diagnosisInformation.healthInsuranceInfo.insuranceProviderWholeName)
+                            <InsuranceProvider_WholeName type="string">$rq.diagnosisInformation.healthInsuranceInfo.insuranceProviderWholeName</InsuranceProvider_WholeName>
+                        #end
+                        #if($rq.diagnosisInformation.healthInsuranceInfo.healthInsuredPersonSymbol)
+                            <HealthInsuredPerson_Symbol type="string">$rq.diagnosisInformation.healthInsuranceInfo.healthInsuredPersonSymbol</HealthInsuredPerson_Symbol>
+                        #end
+                        #if($rq.diagnosisInformation.healthInsuranceInfo.healthInsuredPersonNumber)
+                            <HealthInsuredPerson_Number type="string">$rq.diagnosisInformation.healthInsuranceInfo.healthInsuredPersonNumber</HealthInsuredPerson_Number>
+                        #end
+                        #if($rq.diagnosisInformation.healthInsuranceInfo.healthInsuredPersonContinuation)
+                            <HealthInsuredPerson_Continuation type="string">$rq.diagnosisInformation.healthInsuranceInfo.healthInsuredPersonContinuation</HealthInsuredPerson_Continuation>
+                        #end
+                        #if($rq.diagnosisInformation.healthInsuranceInfo.healthInsuredPersonAssistance)
+                            <HealthInsuredPerson_Assistance type="string">$rq.diagnosisInformation.healthInsuranceInfo.healthInsuredPersonAssistance</HealthInsuredPerson_Assistance>
+                        #end
+                        #if($rq.diagnosisInformation.healthInsuranceInfo.relationToInsuredPerson)
+                            <RelationToInsuredPerson type="string">$rq.diagnosisInformation.healthInsuranceInfo.relationToInsuredPerson</RelationToInsuredPerson>
+                        #end
+                        #if($rq.diagnosisInformation.healthInsuranceInfo.healthInsuredPersonWholeName)
+                            <HealthInsuredPerson_WholeName type="string">$rq.diagnosisInformation.healthInsuranceInfo.healthInsuredPersonWholeName</HealthInsuredPerson_WholeName>
+                        #end
+                        #if($rq.diagnosisInformation.healthInsuranceInfo.certificateStartDate)
+                            <Certificate_StartDate type="string">$rq.diagnosisInformation.healthInsuranceInfo.certificateStartDate</Certificate_StartDate>
+                        #end
+                        #if($rq.diagnosisInformation.healthInsuranceInfo.certificateExpiredDate)
+                            <Certificate_ExpiredDate type="string">$rq.diagnosisInformation.healthInsuranceInfo.certificateExpiredDate</Certificate_ExpiredDate>
+                        #end
+                        <PublicInsurance_Information type="array">
+                            #foreach( $pi in $rq.diagnosisInformation.healthInsuranceInfo.publicInsuranceInformation)
+                                <PublicInsurance_Information_child type="record">
+                                    #if($pi.publicInsuranceClass)
+                                        <PublicInsurance_Class type="string">$pi.publicInsuranceClass</PublicInsurance_Class>
+                                    #end
+                                    #if($pi.publicInsuranceName)
+                                        <PublicInsurance_Name type="string">$pi.publicInsuranceName</PublicInsurance_Name>
+                                    #end
+                                    #if($pi.publicInsurerNumber)
+                                        <PublicInsurer_Number type="string">$pi.publicInsurerNumber</PublicInsurer_Number>
+                                    #end
+                                    #if($pi.publicInsuredPersonNumber)
+                                        <PublicInsuredPerson_Number type="string">$pi.publicInsuredPersonNumber</PublicInsuredPerson_Number>
+                                    #end
+                                    #if($pi.certificateIssuedDate)
+                                        <Certificate_IssuedDate type="string">$pi.certificateIssuedDate</Certificate_IssuedDate>
+                                    #end
+                                    #if($pi.certificateExpiredDate)
+                                        <Certificate_ExpiredDate type="string">$pi.certificateExpiredDate</Certificate_ExpiredDate>
+                                    #end
+                                </PublicInsurance_Information_child>
+                            #end
+                        </PublicInsurance_Information>
+                    </HealthInsurance_Information>
+                #end
+                <Medical_Information type="array">
+                    #foreach( $mi in $rq.diagnosisInformation.medicalInformation)
+                        <Medical_Information_child type="record">
+                            #if($mi.medicalClass)
+                                <Medical_Class type="string">$mi.medicalClass</Medical_Class>
+                            #end
+                            #if($mi.medicalClassName)
+                                <Medical_Class_Name type="string">$mi.medicalClassName</Medical_Class_Name>
+                            #end
+                            #if($mi.medicalClassNumber)
+                                <Medical_Class_Number type="string">$mi.medicalClassNumber</Medical_Class_Number>
+                            #end
+                            <Medication_info type="array">
+                                #foreach( $mid in $mi.medicationInfos)
+                                	<Medication_info_child type="record">
+	                                    #if($mid.medicationCode)
+	                                        <Medication_Code type="string">$mid.medicationCode</Medication_Code>
+	                                    #end
+	                                    #if($mid.medicationName)
+	                                        <Medication_Name type="string">$mid.medicationName</Medication_Name>
+	                                    #end
+	                                    #if($mid.medicationNumber)
+	                                        <Medication_Number type="string">$mid.medicationNumber</Medication_Number>
+	                                    #end
+	                                    #if($mid.medicationGenericFlg)
+	                                        <Medication_Generic_Flg type="string">$mid.medicationGenericFlg</Medication_Generic_Flg>
+	                                    #end
+                                	</Medication_info_child>
+                                #end
+                            </Medication_info>
+                        </Medical_Information_child>
+                    #end
+                </Medical_Information>
+                <Disease_Information type="array">
+                    #foreach( $di in $rq.diagnosisInformation.diseaseInformation)
+                        <Disease_Information_child type="record">
+                            #if($di.diseaseInOut)
+                                <Disease_InOut type="string">$di.diseaseInOut</Disease_InOut>
+                            #end
+                            #if($di.diseaseCode)
+                                <Disease_Code type="string">$di.diseaseCode</Disease_Code>
+                            #end
+                            #if($di.diseaseName)
+                                <Disease_Name type="string">$di.diseaseName</Disease_Name>
+                            #end
+                            #if($di.diseaseSuspectedFlag)
+                                <Disease_SuspectedFlag type="string">$di.diseaseSuspectedFlag</Disease_SuspectedFlag>
+                            #end
+                            #if($di.diseaseStartDate)
+                                <Disease_StartDate type="string">$di.diseaseStartDate</Disease_StartDate>
+                            #end
+                            #if($di.diseaseEndDate)
+                                <Disease_EndDate type="string">$di.diseaseEndDate</Disease_EndDate>
+                            #end
+                            #if($di.diseaseOutCome)
+                                <Disease_OutCome type="string">$di.diseaseOutCome</Disease_OutCome>
+                            #end
+                            #if($di.diseaseSupplement)
+                                <Disease_Supplement type="string">$di.diseaseSupplement</Disease_Supplement>
+                            #end
+                            #if($di.diseaseScode1)
+                                <Disease_Scode1 type="string">$di.diseaseScode1</Disease_Scode1>
+                            #end
+                            #if($di.diseaseScode2)
+                                <Disease_Scode2 type="string">$di.diseaseScode2</Disease_Scode2>
+                            #end
+                            #if($di.diseaseScode3)
+                                <Disease_Scode3 type="string">$di.diseaseScode3</Disease_Scode3>
+                            #end
+                            #if($di.diseaseSname)
+                                <Disease_Sname type="string">$di.diseaseSname</Disease_Sname>
+                            #end
+                            #if($di.diseaseCategory)
+                                <Disease_Category type="string">$di.diseaseCategory</Disease_Category>
+                            #end
+                            <Disease_Single type="array">
+                                #foreach( $ds in $di.diseaseSingles)
+                                    <Disease_Single_child type="record">
+                                        #if($ds.diseaseSingleCode)
+                                            <Disease_Single_Code type="string">$ds.diseaseSingleCode</Disease_Single_Code>
+                                        #end
+                                        #if($ds.diseaseSingleName)
+                                            <Disease_Single_Name type="string">$ds.diseaseSingleName</Disease_Single_Name>
+                                        #end
+                                    </Disease_Single_child>
+                                #end
+                            </Disease_Single>
+                        </Disease_Information_child>
+                    #end
+                </Disease_Information>
+            </Diagnosis_Information>
+        #end
+    </medicalreq>
+</data>

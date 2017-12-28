@@ -1,0 +1,94 @@
+import "system_model.proto";
+import "outs_model.proto";
+
+
+
+// --- [START] OUT1001P01 ---
+message OUT1001P01GrdOUT1001Request{
+	optional string naewon_date = 1;
+	optional string bunho = 2;
+	optional string pkout1001 = 3;
+}
+
+message OUT1001P01GrdOUT1001Response{
+	repeated OUT1001P01GrdOUT1001ListItemInfo grdOUT1001_list = 1;
+}
+
+message OUT1001P01PrOutChangeGwaDoctorRequest{
+	optional string gwa = 1;
+	optional string bunho = 2;
+	optional string pkout1001 = 3;
+	optional string doctor = 4;
+	optional string user_id = 5;
+}
+
+message OUT1001P01PrOutChangeGwaDoctorResponse{
+	optional string error = 1;
+}
+
+message OUT1001P01FindboxValidatingRequest{
+    optional string start_date = 1;
+    optional string find1 = 2;
+    optional string gwa = 3;
+    optional string control_name = 4;
+}
+
+message OUT1001P01FindboxValidatingResponse{
+	optional string gwa_name = 1;
+	optional string doctor_name = 2;
+}
+
+// --- [END] OUT1001P01 ---
+
+// --- [START] OUT0106U00 ---
+
+message OUT0106U00GridListRequest {
+    required string bunho = 1;
+    optional string naewon_date = 2;
+}
+
+message OUT0106U00GridListResponse {
+        repeated OUT0106U00GridItemInfo grid_item_info = 1;
+        repeated OUT0106U00PatientCommentItemInfo patient_comment_item_info = 2;
+}
+
+message OUT0106U00PatientListRequest {
+	required string patient_info = 1;
+	optional string naewon_date = 2;
+}
+
+message OUT0106U00PatientListResponse {
+	repeated OUT0106U00PatientItemInfo item_info = 1;
+}
+
+message OUT0106U00PatientInfoNameRequest {
+	required string patient_info = 1;
+	optional string naewon_date = 2;
+}
+
+message OUT0106U00PatientInfoNameResponse {
+	optional string patient_info_name = 1;
+}
+
+message OUT0106U00SaveCommentsRequest {
+	repeated OUT0106U00GridItemInfo grid_item_info = 1;
+	repeated OUT0106U00PatientCommentItemInfo patient_comment_item_info = 2;
+	required string user_id = 3; 
+}
+
+// --- [END] OUT0106U00 ---
+
+// --- [Start] OUT1001U01 ---
+message NuroOUT1001U01LoadCheckChojaeJpnRequest
+{
+        required string naewon_date = 1;
+        required string bunho = 2;
+        required string gubun = 3;
+        required string gwa = 4;
+        required string jubsu_no = 5;
+}
+message NuroOUT1001U01LoadCheckChojaeJpnResponse
+{
+        required NuroOUT1001U01LoadCheckChojaeJpnInfo chojae_jpn_item = 1;
+}
+// --- [End] OUT1001U01 ---

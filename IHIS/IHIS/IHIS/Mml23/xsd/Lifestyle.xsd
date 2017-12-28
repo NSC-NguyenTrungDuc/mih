@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<xs:schema xmlns:mmlLs="uri:mmlLs" elementFormDefault="qualified" targetNamespace="uri:mmlLs" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="LifestyleModule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mmlLs:occupation" />
+        <xs:element ref="mmlLs:tobacco" />
+        <xs:element ref="mmlLs:alcohol" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlLs:other" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="occupation" type="xs:string" />
+  <xs:element name="tobacco" type="xs:string" />
+  <xs:element name="alcohol" type="xs:string" />
+  <xs:element name="other" type="xs:string" />
+</xs:schema>

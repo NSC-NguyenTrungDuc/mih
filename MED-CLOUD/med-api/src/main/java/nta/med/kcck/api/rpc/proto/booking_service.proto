@@ -1,0 +1,117 @@
+import "rpc.proto";
+import "booking_model.proto";
+
+option java_package = "nta.med.kcck.api.rpc.proto";
+option java_outer_classname = "BookingServiceProto";
+
+option (version) = "1.0.0";
+option (service) = "booking";
+
+message BookingExaminationRequest {
+    optional string hosp_code				= 1;
+    optional string department_code			= 2;
+    optional string doctor_code				= 3;
+    optional string reservation_date		= 4;
+    optional string reservation_time		= 5;
+    optional string patient_code			= 6;
+    optional string patient_name_kanji 		= 7;
+    optional string patient_name_kana		= 8;
+    optional string patient_tel				= 9;
+    optional string patient_email			= 10;
+    optional string patient_sex				= 11;
+    optional string patient_birthday		= 12;
+    optional string locale					= 13;
+	optional string patient_type			= 14;
+	optional string type					= 15;
+	optional string user_id					= 16;
+	optional string reservation_code		= 17;
+	optional string parent_code				= 18;
+	optional string child_code_list			= 19;
+	optional string hangmog_code			= 20;
+	optional string hangmog_name			= 21;
+	optional Action action 					= 22;
+	optional string survey_yn				= 23;
+    enum Action { BOOKING = 0; CHANGE_BOOKING = 1; CANCEL_BOOKING = 2; }
+}
+
+message BookingExaminationResponse {
+    required bool result 				= 1;
+    optional string doctor_name 		= 2;
+    optional string department_name		= 3;
+    optional string reservation_code 	= 4;
+    optional string new_patient_code 	= 5;
+    optional string err_code 			= 6;
+    optional string doctor_code 		= 7;
+    optional string reservation_time 	= 8;
+    optional string mis_survey_link 	= 9;
+}
+
+message SubscribeBookingEventRequest {
+    optional int64 event_id = 1;
+}
+
+message SubscribeBookingEventResponse {
+    required Result result 			= 1;
+    repeated BookingEvent events 	= 2;
+    enum Result { SUCCESS = 0; HAS_SUBSCRIBED = 1; INTERNAL_ERROR = 99; }
+}
+
+message BookingEvent {
+    required int64 id 						= 1;
+    required string type 					= 2;
+    required int64 timestamp 				= 3;
+    required int32 booking_id 				= 4;
+    optional BookingExamInfo booking_exam 	= 5;
+}
+
+message ChangeBookingExaminationRequest
+{
+	optional string hosp_code				= 1;
+	optional string department_code			= 2;
+	optional string doctor_code				= 3;
+	optional string patient_code			= 4;
+	optional string reservation_code		= 5;
+	optional string reservation_date		= 6;
+	optional string reservation_time		= 7;
+	optional string locale					= 8;
+}
+
+message ChangeBookingExaminationResponse{
+    optional string doctor_code 		= 1;
+    optional string doctor_name			= 2;
+	optional string department_code		= 3;
+    optional string department_name		= 4;
+	required bool result		 		= 5;
+	optional string err_code 			= 6;
+}
+
+message CancelBookingExaminationRequest
+{
+	optional string hosp_code				= 1;
+	optional string patient_code			= 2;
+	optional string reservation_code		= 3;
+	optional string locale					= 4;
+}
+
+message CancelBookingExaminationResponse
+{
+	required bool result		 		= 1;
+	optional string err_code 			= 2;
+}
+
+message GetMisSurveyLinkRequest
+{
+	required int64 id 							= 1;
+	optional string hosp_code 					= 2;
+	optional string patient_code 				= 3;
+	optional string department_code 			= 4;
+	optional string reservation_code 			= 5;
+	optional BookingExamInfo booking_exam_info 	= 6;
+}
+
+message GetMisSurveyLinkResponse
+{
+	required int64 id 					= 1;
+	optional string survey_link 		= 2;
+	optional string result 				= 3;
+}

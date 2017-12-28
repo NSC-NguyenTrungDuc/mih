@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Direction For Home Nursing</title>
+	<script src="../js/pikaday.js"></script>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/handlebars.min.js"></script>	
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+ 
+ 
+<form id="myform" action="" method="post">
+ 	<div>
+	
+		<div id="data-template">
+		</div>
+	</div>
+
+	<script id="some-template" type="text/x-handlebars-template">
+ 
+ 
+	<div class="wrapper">
+
+		<h1 class="page-title text-center">在宅患者訪問点滴注射指示書</h1>
+		<table class="table" border="0" align="" cellpadding="0" cellspacing="0"> 	
+			<tr><td style="width:60%"></td><td></td>
+		</tr>
+
+		</table>
+		<table class="table" border="0" align="" cellpadding="0" cellspacing="0"> 
+		<tr><td style="width:55%"></td><td>点滴注射指示期間　（　{{make-date}} ～　{{valid-date}}）</td>
+		</tr>
+
+		</table>
+		
+		<table class="table full-w" border="1" >
+			<tr>
+				<td style="width:20%;">患者氏名</td>
+				<td style="width:30%;">{{PatientName1}} </td>
+				<td>生年月日</td>
+				<td>{{Birth}}　（{{YearAge}}　歳）</td>
+			</tr>
+			
+			<tr>
+				<td>患　者　住　所 : </td>
+				<td>〒{{ZipCode1}}-{{ZipCode2}}&nbsp;&nbsp;{{Address1}}</td>
+				<td colspan="2">電話 {{Tel}}</td> 
+			</tr>
+			
+			<tr>
+				<td>主たる傷病名</td>
+				<td colspan="4">{{#each Diseases}}
+								<mark>{{this}}</mark>          
+								{{/each}}	
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="5" style="padding:0 !important;">
+					<table class="table" border="1" frame="void">
+						<tr>
+							<td rowspan="7" style="width:4%;">現在の状況</td>
+							<td style="width:20%;">病状・治療状態</td>
+							<td colspan="2">{{item_3_2}}</td>
+						</tr>
+						<tr>
+							<td>投与中の薬剤 の用法･用量・用法</td>
+							<td colspan="2" style="padding:0 !important;" >
+								<table class="table" frame="void" border="0">
+									<tr><td style="width:30%;">{{item_3_3}}</td>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>日常生活 自立度</td>
+							<td colspan="2" style="padding:0 !important;" >
+								<table class="table" frame="void" border="1">
+									<tr>
+										<td style="width:30%;">寝たきり度</td>
+										<td>  
+											{{item_3_4}}  
+											{{#if item_3_4_Other}}
+												<div>
+												その他: {{item_3_4_OtherText}}
+												</div>
+											{{/if}}	
+										</td>
+									</tr>
+									<tr>
+										<td>認知病の状況</td>
+										<td>
+											{{item_3_5}} 
+											{{#if item_3_5_Other}}
+												<div>
+												その他: {{item_3_5_OtherText}}
+												<div>
+											{{/if}}	
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>要介護認定の状況</td>
+							<td>
+								{{item_1_23}} {{item_1_24_0}} {{item_1_24_1}}
+								{{#if item_1_24_Other}}
+									<div>
+									その他: {{item_1_24_OtherText}}
+									</div>
+								{{/if}}	
+							</td>
+						</tr>
+						<tr>
+							<td>褥瘡の深さ</td>
+							<td> 
+								{{#if item_3_6}} DESIGN分類 &nbsp; {{/if}} {{item_3_6}} &nbsp;  
+								{{#if item_3_7}} NPUAP分類 &nbsp; {{/if}} 　{{item_3_7}}　
+								{{#if item_3_7_Other}}
+									<div>
+									その他: {{item_3_7_OtherText}}
+									</div>
+								{{/if}}	
+							</td>
+						</tr>	
+						<tr>
+							<td>装着・使用医療機器等</td>
+							<td colspan=4">
+								{{item_3_8_1}}{{#if item_3_8_1}}&nbsp;&nbsp;{{/if}}
+								{{item_3_8_2}}{{#if item_3_8_2}}&nbsp;&nbsp;{{/if}} 
+								{{item_3_8_3}}{{#if item_3_8_3}}&nbsp;&nbsp;{{/if}} 
+								{{#if item_3_8_14 }}({{/if}}{{item_3_8_14}}{{#if item_3_8_14 }}l/min){{/if}} 								
+								{{item_3_8_4}} {{#if item_3_8_4}}&nbsp;&nbsp; {{/if}}
+								{{item_3_8_5}} {{#if item_3_8_5}}&nbsp;&nbsp; {{/if}} 
+								{{item_3_8_6}} {{#if item_3_8_6}}&nbsp;&nbsp; {{/if}} 
+								
+								{{item_3_8_7}}{{#if item_3_8_7}}（{{/if}}{{item_3_8_15}}{{#if item_3_8_7}}）{{/if}} 
+								{{item_3_8_8}}{{#if item_3_8_8}}（{{/if}}{{item_3_8_16}}{{#if item_3_8_8}}）{{/if}} 
+								{{item_3_8_9}}{{#if item_3_8_9}}（{{/if}}{{item_3_8_9_1}}{{#if item_3_8_9}}）{{/if}}
+								{{item_3_8_10}}{{#if item_3_8_10}}（{{/if}}{{item_3_8_10_1}}{{#if item_3_8_10}}）{{/if}}  
+								
+								{{item_3_8_11}} {{#if item_3_8_11}}&nbsp;&nbsp; {{/if}}
+								{{item_3_8_12}} {{#if item_3_8_12}}&nbsp;&nbsp; {{/if}}
+								{{item_3_8_13}}{{#if item_3_8_13}}（{{/if}}{{item_3_8_17}}{{#if item_3_8_13}}）{{/if}}
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>			
+			
+			<tr>
+				<td colspan="5" >
+				留意事項及び指示事項 <br/>
+				Ⅰ　療養生活指導上の留意事項
+				<br/>
+				<br/>
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="5" >
+				Ⅱ １．リハビリテーション <br/> 
+				{{item_3_9}}<br/>
+				２．褥瘡の処置等<br/>
+				{{item_3_10}}<br/>
+				３．装着・使用医療機器等の操作援助・管理<br/>
+					{{item_3_11}}<br/>
+				４．その他<br/>
+					{{item_3_12}} <br/>
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="5">
+				在宅患者訪問点滴注射に関する指示（投与薬剤・投与量・投与方法等）
+				{{item_3_13}}
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="5">
+				緊急時の連絡先<br/>不在時の対応法
+				{{item_3_14}}
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="5">特記すべき事項　（注：薬の相互作用・副作用についての留意点、薬物アレルギーの既往、定期巡回・臨時対応型訪問介護看護及び複合型サービス利用時の留意事項等があれば記載してください。）
+		`		{{item_3_15}}
+
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="5">
+				他の訪問介護ステーションへの支持 &nbsp;:&nbsp;
+				{{item_3_16}}&nbsp;
+				{{item_3_17}}
+				</td>
+			</tr>			
+		</table>
+		<br/>
+		<table class="table" border="0">
+			<tr>
+				<!-- <td style="width:60%;"></td> -->
+				<td style="text-align:right;">上記のとおり、指定訪問看護の実施を指示いたします。&nbsp;&nbsp;&nbsp;&nbsp;{{PrintDate}}<br/>
+						医療機関名: {{Hospital.YoyangName}}<br/>
+						住所: {{Hospital.Address}}<br/>
+						電話・ＦＡＸ: {{Hospital.Fax}}<br/>
+						医師氏名: {{DoctorName}}<br/>  印     
+				
+				</td>
+			</tr>
+		</table>
+		<br/>
+		
+		  
+
+		
+	 </div>
+ 
+	</script>
+
+</form>
+ 
+</body>
+</html>

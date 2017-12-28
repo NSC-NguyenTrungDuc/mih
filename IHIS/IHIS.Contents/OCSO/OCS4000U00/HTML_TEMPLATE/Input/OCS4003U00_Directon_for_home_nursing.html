@@ -1,0 +1,664 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Directon for home nursing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	  <script src="../js/moment.min.js"></script>
+      <script src="../js/pikaday.js"></script>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/handlebars.min.js"></script>	
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/app.js"></script>
+	<link rel="stylesheet" href="../css/style.css">
+  <style>
+  	body{
+  		font-size: 15px;
+  	}
+    hr{
+      border-width: 0;
+      height: 1px;
+      background-color: #ccc;
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+  	
+  	.wrapper{
+  		width: 820px;
+  		margin-top: 0;
+  		margin-right: auto;
+  		margin-left: auto;
+  		margin-bottom: 0;
+  	}
+    .page-title{
+      font-size: 40px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+    .title{
+      font-size: 24px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    .text-center{
+      text-align: center;
+    }
+    .text-right{
+      text-align: right;
+    }
+    .uppercase{
+      text-transform: uppercase;
+    }
+    .table {
+      border-spacing: 0;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    .table .td-title{
+      width: 200px;
+      padding-right: 20px;
+    }
+    .table .td-content {
+      width: 600px;
+    }
+    .table tr th {
+      text-align: left;
+      vertical-align: top;    
+    }
+    .table tr td {
+      vertical-align: top;
+    }
+    .table tr.row > td,
+    .table tr.row > th{
+      padding-bottom: 20px;
+    }
+
+    .label{
+      margin-top: 3px;
+      margin-bottom: 7px;
+    }
+    .input{
+      border-width: 1px;
+      border-style: solid;
+      border-color: #ccc;
+      padding-top: 7px;
+      padding-left: 12px;
+      padding-right: 12px;
+      padding-bottom: 7px;
+    }
+    .input:focus{
+      border-color: #666;
+    }
+    .input:disabled{
+      background-color: #f5f5f5;
+      color: #666;
+    }
+    .table .td-content .input-block{
+      width: 574px;
+    }
+    .table .td-full .input-block{
+      width: 774px;
+    }
+    select.input{
+      padding-left: 11px;
+      padding-right: 11px;
+    }
+    .table .td-content .select-block {
+      width: 100%;
+    }
+    select.input option {
+      padding-left: 13px;
+      padding-right: 13px;
+    }
+    .box{
+      background-color: #f5f5f5;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-width: 1px;
+      border-style: dashed;
+      border-color: #ccc;
+    }
+    .button{
+      font-size: 18px;
+      background-color: #2a75a9;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 25px;
+      padding-right: 25px;
+      color: #fff;
+      border-width: 0;
+      cursor: pointer;
+    }
+    .pika-single {
+        z-index: 9999;
+        display: block;
+        position: relative;
+        color: #333;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-bottom-color: #bbb;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    /*
+    clear child float (pika-lendar), using the famous micro clearfix hack
+    http://nicolasgallagher.com/micro-clearfix-hack/
+    */
+    .pika-single:before,
+    .pika-single:after {
+        content: " ";
+        display: table;
+    }
+    .pika-single:after { clear: both }
+    .pika-single { *zoom: 1 }
+
+    .pika-single.is-hidden {
+        display: none;
+    }
+
+    .pika-single.is-bound {
+        position: absolute;
+        box-shadow: 0 5px 15px -5px rgba(0,0,0,.5);
+    }
+
+    .pika-lendar {
+        float: left;
+        width: 240px;
+        margin: 8px;
+    }
+
+    .pika-title {
+        position: relative;
+        text-align: center;
+    }
+
+    .pika-label {
+        display: inline-block;
+        *display: inline;
+        position: relative;
+        z-index: 9999;
+        overflow: hidden;
+        margin: 0;
+        padding: 5px 3px;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: bold;
+        background-color: #fff;
+    }
+    .pika-title select {
+        cursor: pointer;
+        position: absolute;
+        z-index: 9998;
+        margin: 0;
+        left: 0;
+        top: 5px;
+        filter: alpha(opacity=0);
+        opacity: 0;
+    }
+
+    .pika-prev,
+    .pika-next {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        outline: none;
+        border: 0;
+        padding: 0;
+        width: 20px;
+        height: 30px;
+        /* hide text using text-indent trick, using width value (it's enough) */
+        text-indent: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        background-color: transparent;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 75% 75%;
+        opacity: .5;
+        *position: absolute;
+        *top: 0;
+    }
+
+    .pika-prev:hover,
+    .pika-next:hover {
+        opacity: 1;
+    }
+
+    .pika-prev,
+    .is-rtl .pika-next {
+        float: left;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAUklEQVR42u3VMQoAIBADQf8Pgj+OD9hG2CtONJB2ymQkKe0HbwAP0xucDiQWARITIDEBEnMgMQ8S8+AqBIl6kKgHiXqQqAeJepBo/z38J/U0uAHlaBkBl9I4GwAAAABJRU5ErkJggg==');
+        *left: 0;
+    }
+
+    .pika-next,
+    .is-rtl .pika-prev {
+        float: right;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAU0lEQVR42u3VOwoAMAgE0dwfAnNjU26bYkBCFGwfiL9VVWoO+BJ4Gf3gtsEKKoFBNTCoCAYVwaAiGNQGMUHMkjGbgjk2mIONuXo0nC8XnCf1JXgArVIZAQh5TKYAAAAASUVORK5CYII=');
+        *right: 0;
+    }
+
+    .pika-prev.is-disabled,
+    .pika-next.is-disabled {
+        cursor: default;
+        opacity: .2;
+    }
+
+    .pika-select {
+        display: inline-block;
+        *display: inline;
+    }
+
+    .pika-table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 0;
+    }
+
+    .pika-table th,
+    .pika-table td {
+        width: 14.285714285714286%;
+        padding: 0;
+    }
+
+    .pika-table th {
+        color: #999;
+        font-size: 12px;
+        line-height: 25px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .pika-button {
+        cursor: pointer;
+        display: block;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        outline: none;
+        border: 0;
+        margin: 0;
+        width: 100%;
+        padding: 5px;
+        color: #666;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: right;
+        background: #f5f5f5;
+    }
+
+    .pika-week {
+        font-size: 11px;
+        color: #999;
+    }
+
+    .is-today .pika-button {
+        color: #33aaff;
+        font-weight: bold;
+    }
+
+    .is-selected .pika-button {
+        color: #fff;
+        font-weight: bold;
+        background: #33aaff;
+        box-shadow: inset 0 1px 3px #178fe5;
+        border-radius: 3px;
+    }
+
+    .is-inrange .pika-button {
+        background: #D5E9F7;
+    }
+
+    .is-startrange .pika-button {
+        color: #fff;
+        background: #6CB31D;
+        box-shadow: none;
+        border-radius: 3px;
+    }
+
+    .is-endrange .pika-button {
+        color: #fff;
+        background: #33aaff;
+        box-shadow: none;
+        border-radius: 3px;
+    }
+
+    .is-disabled .pika-button {
+        pointer-events: none;
+        cursor: default;
+        color: #999;
+        opacity: .3;
+    }
+
+    .pika-button:hover {
+        color: #fff;
+        background: #ff8000;
+        box-shadow: none;
+        border-radius: 3px;
+    }
+
+    /* styling for abbr */
+    .pika-table abbr {
+        border-bottom: none;
+        cursor: help;
+    }
+    	mark {
+    background-color: #effeff;
+    color: #000000;
+	padding:5px;
+	}
+  </style>
+</head>
+<body>
+<form id="myform" action="" method="post">
+ 	<div>	
+		<div id="data-template">
+		</div>
+	</div>
+	
+	<script id="some-template" type="text/x-handlebars-template">
+	<div class="wrapper">
+    <h1 class="page-title text-center">訪問看護指示書</h1>
+    <hr>
+    <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+        <tr class="row">
+            <th class="td-title">
+                <div class="label">&nbsp;</div>
+            </th>
+            <td class="td-content">
+                <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td>
+                      <div class="label">開始日</div>
+                      <input id="make-date" type="text" value="{{make-date}}" name = "make-date" class="input date-picker" style="width: 266px" />
+                      
+                    </td>
+                    <td style="width: 14px">
+					</td>
+                    <td>
+                      <div class="label">終了日</div>
+                      <input id="valid-date" type="text" value="{{valid-date}}" name = "valid-date" class="input date-picker" style="width: 266px" />
+                      
+                    </td>
+                  </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <hr> 
+    <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+      <tr class="row">
+        <th class="td-title"><div class="label">患者情報</div></th>
+        <td class="td-content">
+          <table class="table">
+            <tr class="row">
+              <td colspan="3">
+                <div class="label">氏名</div>
+                	<mark style="width: 534px;display: inline-block;">{{PatientName1}}</mark>                
+                    <div style="width: 30px;text-align: right;display: inline-block;">様</div>
+              </td>
+            </tr>
+            <tr class="row">
+              <td>
+                <div class="label">性別</div>
+                <div class="label"><input type="checkbox" name="Sex" value="M" disabled="disabled" {{{setChecked 'M' Sex}}}/> 男性 &nbsp;&nbsp;
+				<input type="checkbox" name="Sex" value="F" disabled="disabled" {{{setChecked 'F' Sex}}}/> 女性</div>
+              </td>
+              <td>
+                <div class="label">生年月日</div>
+                <input type="text" value="{{Birth}}" class="input" disabled="disabled"/>
+              </td>
+              <td>
+                <div class="label">年齢</div>
+                <div class="label">{{YearAge}}</div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3">
+                <div class="label">住所</div>
+                <input type="text" value="{{Address1}}" class="input input-block" disabled="disabled"/>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>  
+      <tr class="row">
+        <th class="td-title"><div class="label">主たる傷病名</div></th>
+        <td class="td-content">
+        	{{#each Diseases}}
+        		<mark>{{this}}</mark>          
+        	{{/each}}	
+        </td>
+      </tr>    
+    </table>
+    <hr>
+    <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+      <tr class="row">
+        <th class="td-title"><div class="label">現在の状況</div></th>
+        <td class="td-content"><input type="text" name="current-situation" value="{{current-situation}}" class="input input-block" /></td>
+      </tr>
+      <tr class="row">
+        <th class="td-title"><div class="label">病状・治療・状態</div></th>
+        <td class="td-content"><input type="text" name = "item_3_2" value="{{item_3_2}}" class="input input-block" /></td>
+      </tr> 
+      <tr class="row">
+        <th class="td-title"><div class="label">投与中の薬剤の用法・用量</div></th>
+        <td class="td-content">
+          <input type="text" name = "item_3_3" value="{{item_3_3}}" class="input input-block" />
+        </td>
+      </tr>
+      <tr class="row">
+        <th class="td-title"><div class="label">日常生活自立度/寝たきり度</div></th>
+        <td class="td-content">
+          <div class="label"><strong>自立</strong>:　<input type="radio" name="item_3_4" value="J1" {{{setChecked 'J1' item_3_4}}}/> J1　&nbsp;<input type="radio"  name="item_3_4" value="J2" {{{setChecked 'J2' item_3_4}}}/> J2　&nbsp;<input type="radio"  name="item_3_4" value="A1" {{{setChecked 'A1' item_3_4}}}/> A1　&nbsp;&nbsp;<input type="radio" name="item_3_4" value="A2" {{{setChecked 'A2' item_3_4}}}/> A2　&nbsp;<input type="radio" name="item_3_4" value="B1" {{{setChecked 'B1' item_3_4}}}/> B1　&nbsp;<input type="radio" name="item_3_4" value="B2" {{{setChecked 'B2' item_3_4}}}/> B2　&nbsp;<input type="radio" name="item_3_4" value="C1" {{{setChecked 'C1' item_3_4}}}/> C1　&nbsp;<input type="radio" type="radio" name="item_3_4" value="C2" {{{setChecked 'C2' item_3_4}}}/> C2</div>
+        
+			<table class="table">
+				<tr>
+					<td><div class="label" style="width: 70px; padding-top:3px;"><input type="checkbox" name="item_3_4_Other" value="その他" {{{setChecked 'その他' item_3_4_Other}}}/>その他</div></td>
+					<td style="width:100%"><div><input style="width:500px" type="text" group="item_3_4_Other" name="item_3_4_OtherText" value="{{item_3_4_OtherText}}" class="input"/></div></td>
+				</tr>
+			</table>
+		</td>
+      </tr>
+	  
+      <tr class="row">
+        <th class="td-title"><div class="label">日常生活自立度/認知症の状況</div></th>
+        <td class="td-content">
+          <div class="label"><strong>自立</strong>:　<input type="radio" name="item_3_5" value="I" {{{setChecked 'I' item_3_5}}}/> I　&nbsp;<input type="radio" type="radio" name="item_3_5" value="IIa" {{{setChecked 'IIa' item_3_5}}}/> IIa　&nbsp;<input type="radio" name="item_3_5" value="IIb" {{{setChecked 'IIb' item_3_5}}}/> IIb　&nbsp;&nbsp;<input type="radio" name="item_3_5" value="A2" {{{setChecked 'A2' item_3_5}}}/> A2　&nbsp;<input type="radio" name="item_3_5" value="IIIa" {{{setChecked 'IIIa' item_3_5}}}/> IIIa　&nbsp;<input type="radio" name="item_3_5" value="B2" {{{setChecked 'B2' item_3_5}}}/> B2　&nbsp;<input type="radio" name="item_3_5" value="IIIb" {{{setChecked 'IIIb' item_3_5}}}/> IIIb　&nbsp;<input type="radio" name="item_3_5" value="IV" {{{setChecked 'IV' item_3_5}}}/> IV &nbsp;<input type="radio" name="item_3_5" value="M" {{{setChecked 'M' item_3_5}}}/> M</div>
+        
+			<table class="table">
+				<tr>
+					<td><div class="label" style="width: 70px; padding-top:3px;"><input type="checkbox" name="item_3_5_Other" value="その他" {{{setChecked 'その他' item_3_5_Other}}}/>その他</div></td>
+					<td style="width:100%"><div><input style="width:500px" type="text" group="item_3_5_Other" name="item_3_5_OtherText" value="{{item_3_5_OtherText}}" class="input"/></div></td>
+				</tr>
+			</table>
+		</td>
+      </tr> 
+	  
+      <tr class="row">
+        <th class="td-title"><div class="label">要介護認定の状況</div></th>
+        <td class="td-content">
+           <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <!-- <td>
+                                <div class="label"><input type="radio" name="item_1_23" value = "自立" {{{setChecked '自立' item_1_23}}}/> 自立</div>
+                            </td>
+                            <td style="width: 30px;">&nbsp;</td> -->
+                            <td>
+                                <div class="label"><input type="radio"  name="item_1_23" value = "要支援" {{{setChecked '要支援' item_1_23}}} /> 要支援</div>
+                                <select group="item_1_23" disabled group-value="要支援" name="item_1_24_0" id="item_1_24_0" class="input select-block">
+								{{#select item_1_24_0}}
+                                    <option value="">---</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+								{{/select}}
+                                </select>
+                            </td>
+                            <td style="width: 30px;">&nbsp;</td>
+                            <td>
+                                <div class="label"><input type="radio" name="item_1_23" value = "経過的要介護" {{{setChecked '経過的要介護' item_1_23}}} /> 経過的要介護</div>
+                                <select group="item_1_23" disabled group-value="経過的要介護" name="item_1_24_1" id="item_1_24_1" class="input select-block">
+								{{#select item_1_24_1}}
+                                    <option value="">---</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+									{{/select}}
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+					<br />
+					<table class="table">
+						<tr>
+							<td><div class="label" style="width: 70px; padding-top:3px;"><input type="checkbox" name="item_1_24_Other" value="その他" {{{setChecked 'その他' item_1_24_Other}}}/>その他</div></td>
+							<td style="width:100%"><div><input style="width:500px" type="text" group="item_1_24_Other" name="item_1_24_OtherText" value="{{item_1_24_OtherText}}" class="input"/></div></td>
+						</tr>
+					</table>
+        </td>
+      </tr>  
+	  
+      <tr class="row">
+        <th class="td-title"><div class="label">褥瘡の深さ</div></th>
+        <td class="td-content">
+          <table class="table">
+            <tr>
+              <th><div class="label">DESIGN分類</div></th>
+              <td>
+                <input type="radio" name="item_3_6" value="D3" {{{setChecked 'D3' item_3_6}}}> D3 &nbsp;<input type="radio" name="item_3_6" value="D4" {{{setChecked 'D4' item_3_6}}}> D4 &nbsp;<input type="radio" name="item_3_6" value="D5" {{{setChecked 'D5' item_3_6}}}> D5
+              </td>
+            </tr>
+            <tr>
+              <th><div class="label">NPUAP分類</div></th>
+              <td>
+                <input type="radio" name="item_3_7" value="III度" {{{setChecked 'III度' item_3_7}}}> III度 &nbsp;<input type="radio" name="item_3_7" value="IV度" {{{setChecked 'IV度' item_3_7}}}> IV度 
+              </td>
+            </tr>
+          </table>
+			<table class="table">
+				<tr>
+					<td><div class="label" style="width: 70px; padding-top:3px;"><input type="checkbox" name="item_3_7_Other" value="その他" {{{setChecked 'その他' item_3_7_Other}}}/>その他</div></td>
+					<td style="width:100%"><div><input style="width:500px" type="text" group="item_3_7_Other" name="item_3_7_OtherText" value="{{item_3_7_OtherText}}" class="input"/></div></td>
+				</tr>
+			</table>
+        </td>
+      </tr> 
+	  
+      <tr class="row">
+        <th class="td-title"><div class="label">褥瘡の深さ</div></th>
+        <td class="td-content">
+          <div class="label">装着・使用医療機器等</div>
+          <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+            <tr>
+              <td><div class="label"><input type="checkbox" name="item_3_8_1" value="１．自動腹膜灌流装置" {{{setChecked '１．自動腹膜灌流装置' item_3_8_1}}}/> １．自動腹膜灌流装置</div></td>
+              <td>&nbsp;</td>
+              <td><div class="label"><input type="checkbox" name="item_3_8_2" value="２．透析液供給装置" {{{setChecked '２．透析液供給装置' item_3_8_2}}}> ２．透析液供給装置</div></td>
+            </tr> 
+            <tr>
+              <td><div class="label"><input type="checkbox" name="item_3_8_3" value="３．酸素療法" {{{setChecked '３．酸素療法' item_3_8_3}}}> ３．酸素療法 （ <input type="text" name = "item_3_8_14" group="item_3_8_3"  value="{{item_3_8_14}}" class="input input-block" style="width: 40px;" /> l/min）</div></td>
+              <td>&nbsp;</td>
+              <td><div class="label"><input type="checkbox" name="item_3_8_4" value="４．吸引器" {{{setChecked '４．吸引器' item_3_8_4}}}> ４．吸引器</div></td>
+            </tr>
+            <tr>
+              <td><div class="label"><input type="checkbox" name="item_3_8_5" value="５．中心静脈栄養" {{{setChecked '５．中心静脈栄養' item_3_8_5}}}/> ５．中心静脈栄養</div></td>
+              <td>&nbsp;</td>
+              <td><div class="label"><input type="checkbox" name="item_3_8_6" value="６．輸液ポンプ" {{{setChecked '６．輸液ポンプ' item_3_8_6}}}/> ６．輸液ポンプ</div></td>
+            </tr> 
+            <tr>
+              <td><div class="label"><input type="checkbox" name="item_3_8_7" value="７．経管栄養" {{{setChecked '７．経管栄養' item_3_8_7}}}/> 7．経管栄養（チューブサイズ・交換頻度）</div>
+					<div class="label"><input type="text" class="input" group="item_3_8_7" style="width: 260px;" name = "item_3_8_15" value="{{item_3_8_15}}"></div>
+			  </td>
+              <td>&nbsp;</td>
+              <td><div class="label"><input type="checkbox" name="item_3_8_8" value="８．留置カテーテル" {{{setChecked '８．留置カテーテル' item_3_8_8}}}/> 8．留置カテーテル（部位・サイズ・交換頻度）</div>
+					<div class="label"><input type="text" group="item_3_8_8" class="input" style="width: 260px;" name = "item_3_8_16" value="{{item_3_8_16}}"></div>
+			  </td>
+            </tr>
+            <tr>
+              <td><div class="label"><input type="checkbox" name="item_3_8_9" value="９．人工呼吸器" {{{setChecked '９．人工呼吸器' item_3_8_9}}}/> ９．人工呼吸器</div>
+              	<div class="label"><input type="text" name="item_3_8_9_1" class="input" group="item_3_8_9" style="width: 260px;" value="{{item_3_8_9_1}}"></div>
+              	</td>
+              <td>&nbsp;</td>
+              <td><div class="label"><input type="checkbox" name="item_3_8_10" value="１０．気管カニューレ" {{{setChecked '１０．気管カニューレ' item_3_8_10}}}/> １０．気管カニューレ</div>
+              	<div class="label"><input type="text" class="input" group="item_3_8_10" style="width: 260px;" name = "item_3_8_10_1" value="{{item_3_8_10_1}}"></div>
+              </td>
+            </tr>
+            <tr>
+              <td><div class="label"><input type="checkbox" name="item_3_8_11" value="１１．人工肛門" {{{setChecked '１１．人工肛門' item_3_8_11}}}/> １１．人工肛門</div></td>
+              <td>&nbsp;</td>
+              <td><div class="label"><input type="checkbox" name="item_3_8_12" value="１２．人工膀胱" {{{setChecked '１２．人工膀胱' item_3_8_12}}}/> １２．人工膀胱</div></td>
+            </tr>
+            <tr>
+              <td colspan="3"><div class="label"><input type="checkbox" name="item_3_8_13" value="１３．その他" {{{setChecked '１３．その他' item_3_8_13}}}/> １３．その他</div>
+					<div class="label"><input type="text" class="input" group="item_3_8_13" style="width: 260px;" name = "item_3_8_17" value="{{item_3_8_17}}"></div>
+			  </td>
+            </tr>              
+          </table>
+        </td>
+      </tr>  
+    </table>
+    <hr>
+    <div class="label">留意事項及び指示事項</div>
+    <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+      <tr class="row">        
+        <td class="td-full">
+          <div class="label">１．リハビリテーション</div>
+          <textarea name = "item_3_9" class="input input-block" cols="1" rows="2">{{item_3_9}}</textarea>
+          <div>&nbsp;</div>
+          <div class="label">２．褥瘡の処置等</div>
+          <textarea name = "item_3_10" class="input input-block" cols="1" rows="2">{{item_3_10}}</textarea>
+          <div>&nbsp;</div>
+          <div class="label">３．装着・使用医療機器等の操作援助・管理</div>
+          <textarea name = "item_3_11" class="input input-block" cols="1" rows="2">{{item_3_11}}</textarea>
+          <div>&nbsp;</div>
+          <div class="label">４．その他</div>
+          <textarea name = "item_3_12" class="input input-block" cols="1" rows="2">{{item_3_12}}</textarea>
+          <div>&nbsp;</div>
+        </td>
+      </tr>
+      <tr class="row">
+        <td class="td-full">
+          <div class="label">在宅患者訪問点滴注射に関する指示（投与薬剤・投与量・投与方法等）</div>
+          <input type="text" name = "item_3_13" value="{{item_3_13}}" class="input input-block" />
+        </td>
+      </tr>
+      <tr class="row">
+        <td class="td-full">
+          <div class="label">緊急時の連絡先 不在時の対応法</div>
+          <input type="text" name = "item_3_14" value="{{item_3_14}}" class="input input-block" />
+        </td>
+      </tr>
+      <tr class="row">
+        <td class="td-full">
+          <div class="label">特記すべき事項　（注：薬の相互作用・副作用についての留意点、薬物アレルギーの既往、定期巡回・臨時対応型訪問介護看護及び複合型サービス利用時の留意事項等があれば記載してください。）</div>
+          <input type="text" name = "item_3_15" value="{{item_3_15}}" class="input input-block" />
+        </td>
+      </tr>
+      <tr class="row">
+       
+			<table>
+				<tr>
+					<td><div class="label">他の訪問看護ステーションへの指示</div></td>
+					<td>
+						  <div class="label">
+						  <input type="radio" name="item_3_16" value="有" {{{setChecked '有' item_3_16}}}/> 有
+						  <input type="radio" name="item_3_16" value="無" {{{setChecked '無' item_3_16}}}/> 無
+						  </div>
+						  <input type="text" style ="width : 600px" name = "item_3_17" value="{{item_3_17}}" class="input input-block" />
+					</td>
+				</tr>          
+		  </table>
+    
+      </tr>
+    </table>
+    <hr>
+    
+	</div>
+			</script>
+ 
+</form>
+</body>
+</html>

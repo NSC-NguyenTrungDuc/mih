@@ -1,0 +1,513 @@
+<div class="headerpanel">
+    <div class="logopanel" style="padding: 10px 15px; background: none;">
+        <h2><a href="#/"><img ng-src="{{ hospitalObj.logo}}" height="45"/></a></h2>
+    </div><!-- logopanel -->
+
+    <div class="headerbar">
+        <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
+        <div class="header-right">
+            <ul class="headermenu">
+                <li>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-logged" data-toggle="dropdown">
+                            <!--<img src="images/photos/default_profile_picture.png" alt="" />-->
+                            {{globals.currentUser.full_name}}
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a ng-click="logout()"><i class="glyphicon glyphicon-log-out"></i>
+                                <translate>Sign out</translate>
+                            </a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div><!-- header-right -->
+    </div><!-- headerbar -->
+</div><!-- header-->
+<section id="doSurvey">
+    <div class="mainpanel">
+        <div class="contentpanel">
+            <!-- BEGIN Well -->
+            <!-- content goes here... -->
+            <div id="wizard-step" class="wizard-style2 wizard-style2-kk">
+                <h3 class="step-title">
+                    <translate>Answer health survey</translate>
+                    <small>&nbsp;</small>
+                </h3>
+                <div class="step-content">
+                    <!-- BEGIN Step1-->
+                    <h2 class="text-center">
+                        <translate>GENERAL HEALTH SURVEY OF</translate>
+                        {{surveyObj.department_name}}
+                    </h2>
+                    <hr class="darken">
+                    <div class="row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <table class="table nomargin table-bordered table-sm">
+                                <tr>
+                                    <th width="160px;">
+                                        <translate>Patient code</translate>
+                                    </th>
+                                    <td colspan="2" ng-bind="surveyObj.patient_code"></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <translate>Patient name</translate>
+                                    </th>
+                                    <td ng-bind="surveyObj.patient_name"></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <translate>Visit date</translate>
+                                    </th>
+                                    <td ng-bind="surveyObj.reservation_date"></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <translate>Answered date</translate>
+                                    </th>
+                                    <td ng-bind="surveyObj.answer_date"></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-md-5">
+                            <table class="table nomargin table-bordered table-sm">
+                                <tr>
+                                    <th width="160px;">
+                                        <translate>Hospital</translate>
+                                    </th>
+                                    <td ng-bind="hospitalObj.hosp_name"></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <translate>Address</translate>
+                                    </th>
+                                    <td ng-bind="hospitalObj.address"></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <translate>Contact</translate>
+                                    </th>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <translate>Department</translate>
+                                    </th>
+                                    <td ng-bind="surveyObj.department_name"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <h5>
+                                <translate>Survey description</translate>
+                            </h5>
+                            <p class="smalltext">{{surveyObj.survey_information.description}}</p>
+                        </div>
+                    </div>
+                    <hr class="ligher">
+                    <!-- BEGIN List -->
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <form id="form" action="" method="post">
+                                <!-- BEGIN Servery Edit Area -->
+                                <div class="servey-edit-area">
+                                    <h5><span class="number"></span>{{question.question_content}}
+                                        <label ng-if="question.required_flg == true" class="error">*
+                                            <translate>This is required item</translate>
+                                        </label></h5>
+                                    <!-- BEGIN List Answers-->
+                                    <div class="list-answers" id="questionIdx{{question.question_id}}Wrapper">
+                                        <!-- BEGIN Row-->
+                                        <div class="row">
+                                            <div class="col-xs-6" ng-if="question.question_type == '0'" ng-repeat="j in question.answer_list" ng-init="$idxAnswer = $index">
+                                                <p>
+                                                    <label class="rdiobox">
+                                                        <input type="radio" name="rdio{{indexGroup}}{{indexQuestionList}}" ng-model="j.is_selected" ng-click="setCorrectForRadio(indexGroup,indexQuestionList,$idxAnswer)" ng-value="true"/>
+                                                        <span>{{j.title}}</span>
+                                                    </label>
+                                                </p>
+                                            </div>
+                                            <div class="col-sm-6" ng-if="question.question_type == '1'" ng-repeat="j in question.answer_list" ng-init="$idxAnswer = $index">
+                                                <p>
+                                                    <label class="ckbox">
+                                                        <input type="checkbox" name="answer_list" ng-model="j.is_selected" ng-click="setCorrectForCheckbox(indexGroup,indexQuestionList,$idxAnswer)"/>
+                                                        <span>{{j.title}}</span>
+                                                    </label>
+                                                </p>
+                                            </div>
+                                            <div class="col-sm-6" ng-if="question.question_type == '2'"  ng-init="$idxAnswer = $index">
+                                                <p>
+                                                    <label class="ckbox">
+                                                        <textarea cols="50" rows="3" id="answer_content" ng-model="question.input_text" ng-change="setCorrectForInput2(indexGroup,indexQuestionList,$idxAnswer)"></textarea>
+                                                    </label>
+                                                </p>
+                                            </div>
+                                            <!--<div class="col-sm-6" ng-if="i.question_type == '2'" ng-init="$idxAnswer = $index">
+                                                <p>
+                                                    <label class="ckbox">
+                                                        <textarea cols="50" rows="4" name="answer_content" ng-model="i.input_text" ng-change="setCorrectForInput2($idxGroup, $idxQuestion, $idxAnswer)"></textarea>
+                                                    </label>
+                                                </p>
+                                            </div>-->
+                                            <p ng-if="question.has_other_answer == 1" ng-init="$idxAnswer = $index">
+                                                <label>
+                                                    <span style="float: left;"><translate>Other</translate> :&nbsp;</span>
+                                                    <input type="text" ng-model="question.has_other_text" ng-change="setCorrectForInput(indexGroup, indexQuestionList, $idxAnswer)"/>
+                                                </label>
+                                            </p>
+                                        </div><!-- END Row-->
+                                        <input ng-if="question.required_flg == 1" id="group{{indexGroup}}questionIdx{{indexQuestionList}}Input"
+                                               type="hidden" name="required_question" ng-value="(question.question_type == '1') ? 1 : 0"/>
+                                    </div><!-- END List Answers-->
+
+                                </div><!-- BEGIN Servery Edit Area -->
+                            </form><!-- END Form -->
+                        </div>
+                    </div><!-- END List -->
+                </div><!-- END Step1-->
+                <!--Step 2-->
+                <h3 class="step-title">
+                    <translate>Confirm result</translate>
+                    <small>&nbsp;</small>
+                </h3>
+                <div class="step-content">
+                    <!-- BEGIN Step2-->
+                    <h2 class="text-center">
+                        <translate>GENERAL HEALTH SURVEY OF</translate>
+                        {{surveyObj.department_name}}
+                    </h2>
+                    <hr class="darken">
+                    <div class="row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <table class="table nomargin table-bordered table-sm">
+                                <tr>
+                                    <th width="160px;">
+                                        <translate>Patient code</translate>
+                                    </th>
+                                    <td colspan="2" ng-bind="surveyObj.patient_code"></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <translate>Patient name</translate>
+                                    </th>
+                                    <td ng-bind="surveyObj.patient_name"></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <translate>Visit date</translate>
+                                    </th>
+                                    <td ng-bind="surveyObj.reservation_date"></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <translate>Answered date</translate>
+                                    </th>
+                                    <td ng-bind="surveyObj.answer_date"></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-md-5">
+                            <table class="table nomargin table-bordered table-sm">
+                                <tr>
+                                    <th width="160px;">
+                                        <translate>Hospital</translate>
+                                    </th>
+                                    <td ng-bind="hospitalObj.hosp_name"></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <translate>Address</translate>
+                                    </th>
+                                    <td ng-bind="hospitalObj.address"></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <translate>Contact</translate>
+                                    </th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <translate>Department</translate>
+                                    </th>
+                                    <td ng-bind="surveyObj.department_name"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <h5>
+                                <translate>Survey description</translate>
+                            </h5>
+                            <p class="smalltext">{{surveyObj.survey_information.description}}</p>
+                        </div>
+                    </div>
+                    <hr class="ligher">
+                    <!-- BEGIN List -->
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="servey-preview-area">
+                                <section ng-repeat="item in surveyObj.survey_information.question_group">
+                                    <h3 ng-bind="item.title"></h3>
+                                    <hr class="lighters">
+                                    <section ng-repeat="i in item.question_list" ng-init="$indexQuestionConfirm = $index">
+                                        <div ng-if="listQuestionAnswered.indexOf(i.question_id) != -1">
+                                        <h5><span class="number"></span>{{i.question_content}} <span ng-if="i.required_flg"
+                                                                                                                   style="color: red;">*</span></h5>
+                                        <!-- BEGIN List Answers-->
+                                        <div class="list-answers">
+                                            <!-- BEGIN Row-->
+                                            <div class="row">
+                                                <div class="col-xs-6" ng-if="i.question_type == '0'" ng-repeat="j in i.answer_list">
+                                                    <p>
+                                                        <label class="rdiobox">
+                                                            <input type="radio" name="rdio{{$indexQuestionConfirm}}" ng-model="j.is_selected" ng-value="true" disabled><span>{{j.title}}</span>
+                                                        </label>
+                                                    </p>
+                                                </div>
+                                                <div class="col-sm-6" ng-if="i.question_type == '1'" ng-repeat="j in i.answer_list">
+                                                    <p>
+                                                        <label class="ckbox">
+                                                            <input type="checkbox" disabled ng-model="j.is_selected"/><span>{{j.title}}</span>
+                                                        </label>
+                                                    </p>
+                                                </div>
+                                                <div class="col-sm-6" ng-if="i.has_other_answer == 1">
+                                                    <p>
+                                                        <label>
+                                                            <translate>Other</translate>
+                                                            : <input type="text" ng-model="i.has_other_text" value="i.has_other_text" disabled/>
+                                                        </label>
+                                                    </p>
+                                                </div>
+                                            </div><!-- END Row-->
+                                        </div><!-- END List Answers-->
+                                        </div>
+                                    </section>
+                                </section>
+                            </div>
+                        </div>
+                    </div><!-- END List -->
+                </div>
+                <h3 class="step-title">
+                    <translate>User agreement term</translate>
+                    <small>&nbsp;</small>
+                </h3>
+                <div class="step-content">
+                    <!-- BEGIN User Agreement term -->
+                    <div class="term-area" ng-if="langGlobal == 'ja'">
+                        <div ng-include="'views/term/term_ja.html'"></div>
+                    </div>
+                    <div class="term-area" ng-if="langGlobal == 'en'">
+                        <div ng-include="'views/term/term_en.html'"></div>
+                    </div>
+                    <div class="term-area" ng-if="langGlobal == 'vi'">
+                        <div ng-include="'views/term/term_vi.html'"></div>
+                    </div>
+                    <!-- END User Agreement term -->
+                    <div class="term-area-comfirm clearfix">
+                        <label class="ckbox">
+                            <input type="checkbox" checked id="agreeTerm"><span> <translate>I agree with your policy of clinic
+                        </translate></span></label>
+                    </div>
+                </div>
+                <h3 class="step-title">
+                    <translate>Interview Exit</translate>
+                    <small>&nbsp;</small>
+                </h3>
+                <div class="step-content">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <div class="clearfix pa-icon">
+                                <img src="images/icon-completed.png" class="icon" alt=""/>
+
+                                <h3>
+                                    <translate>Thanks you for completed our health survey. <br>Your rusult will be send to your doctor.</translate>
+                                </h3>
+                            </div>
+                            <!--Fix bug MED-11150 : remove link and text-->
+                            <hr class="lighter">
+                            <div class="clearfix">
+                                <div class="pull-left" ng-controller="GlobalController">
+                                    <button class="btn btn-info exportPdfCls" ng-click="exportPdf(surveyObj.survey_patient_id)" id="pdf_{{surveyObj.survey_patient_id}}"><i class="fa fa-file-pdf-o"></i>
+                                        <translate>Export survey PDF</translate>
+                                    </button>
+                                    <button class="btn btn-info exportPhrCls" ng-click="exportPhr(surveyObj.survey_patient_id)" id="phr_{{surveyObj.survey_patient_id}}">
+                                        <translate>Export PHR Account</translate>
+                                    </button>
+                                </div>
+                                <div class="pull-right">
+                                    <button class="btn btn-default" onclick="window.location='#/patient/list_wating';"><i class="fa fa-home"></i>
+                                        <translate>Back to home page</translate>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- END Step -->
+        </div><!-- contentpanel -->
+    </div><!-- mainpanel -->
+</section>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#wizard-step').steps({
+            headerTag: 'h3.step-title',
+            bodyTag: 'div.step-content',
+            transitionEffect: 'fade',
+            autoFocus: true,
+            enableFinishButton: false,
+            onInit: function (event, currentIndex) {
+                var scope = angular.element($('#doSurvey')).scope();
+                setTimeout(function () {
+                    $('.actions > ul > li:first-child a').text(scope.previous_steps);
+                    $('.actions > ul > li:last-child a').text(scope.next_steps);
+                    scope.main_title = scope.answer_title;
+                    document.title = scope.answer_title;
+                }, 1);
+            },
+            onStepChanging: function (event, currentIndex, newIndex) {
+                var scope = angular.element($("#doSurvey")).scope();
+                $('.actions > ul > li:first-child').removeClass('disabled');
+                $("a[href='#previous']").attr('onclick','prevQuestion();');
+                if(scope.nextQuestion()){
+                    $('#form').hide().fadeOut(1000);
+                    scope.$apply();
+                    //document.getElementById("answer_content").value='';
+                    $('#form').hide().fadeIn(1000);
+
+
+                    return false;
+                }
+                else {
+                switch (newIndex) {
+                    case 0 :
+                        setTimeout(function () {
+                            scope.main_title = scope.answer_title;
+                            document.title = scope.answer_title;
+                            scope.$apply();
+                        }, 1);
+                        break;
+                    case  1 :
+                        setTimeout(function () {
+                            scope.main_title = scope.confirm_title;
+                            document.title = scope.confirm_title;
+                            scope.$apply();
+                        }, 1);
+                        break;
+                    case 2 :
+                        setTimeout(function () {
+                            scope.main_title = scope.agreement_title;
+                            document.title = scope.agreement_title;
+                            scope.$apply();
+                        }, 1);
+                        break;
+                    case 3 :
+                        setTimeout(function () {
+                            scope.main_title = scope.exit_title;
+                            document.title = scope.exit_title;
+                            scope.$apply();
+                        }, 1);
+                        break;
+                }
+                if (newIndex == 1) { // Validating data
+                    var scope = angular.element($("#doSurvey")).scope();
+                    var passed = true;
+                    $('input[type="hidden"]').each(function () {
+                        parentId = $(this).parent().attr('id');
+                        if ($(this).val() == 0) { // Radio
+                            if ($('#' + parentId + " input:radio").is(":checked") == false) { // Count selected item
+                                if ($('#' + parentId + " input:text").val() == '' || typeof($('#' + parentId + " input:text").val()) == 'undefined') { // If does not input to other answer
+                                    passed = false;
+                                }
+                            }
+                        } else { // Check for checkbox
+                            // Count selected item
+                            var len = $('#' + parentId + " input[name='answer_list']:checked").length;
+                            if (len <= 0) {
+                                if ($('#' + parentId + " input:text").val() == '' || typeof($('#' + parentId + " input:text").val()) == 'undefined') { // If does not input to other answer
+                                    passed = false;
+                                }
+                            }
+                        }
+                    });
+                    if (passed == false) { // If all required question is not answered
+                        $.gritter.add({
+                            title: scope.missing_answer,
+                            text: scope.missing_answer_text,
+                            class_name: 'with-icon exclamation-circle warning'
+                        });
+                        return false;
+                    }
+                } else if (newIndex == 3) {
+                    var scope = angular.element($("#doSurvey")).scope();
+                    scope.finishedSurvey();
+                }
+                if (newIndex === 3) {
+                    $('#wizard-step .actions ul').hide();
+                } else {
+                    $('#wizard-step .actions').show();
+                }
+                return true;
+                }
+            },
+            onStepChanged : function (event, current, next) {
+                if (current == 3) {
+                    $('#wizard-step .actions').hide();
+                    $('#wizard-step-t-0').parent().removeClass('done');
+                    $('#wizard-step-t-0').parent().addClass('disabled');
+                    $('#wizard-step-t-1').parent().removeClass('done');
+                    $('#wizard-step-t-1').parent().addClass('disabled');
+                    $('#wizard-step-t-2').parent().removeClass('done');
+                    $('#wizard-step-t-2').parent().addClass('disabled');
+                }
+                if(current== 2)
+                {
+                    $("a[href='#previous']").removeAttr('onclick');
+                }
+                if(current== 1)
+                {
+                    $("a[href='#previous']").attr('onclick','prevQuestion();');
+
+                }
+            }
+        });
+
+        $('#agreeTerm').click(function () {
+            if ($(this).is(':checked') == false) {
+                $(this).next().addClass('requiredAgree');
+            } else {
+                $(this).next().removeClass('requiredAgree');
+            }
+        })
+    });
+    function prevQuestion() {
+        var scope = angular.element($("#doSurvey")).scope();
+        if(scope.previewQuestion())
+        {
+            $('#form').hide().fadeOut(1000);
+            scope.$apply();
+            $('#form').hide().fadeIn(1000);
+            $('.actions > ul > li:first-child').removeClass('disabled');
+            if(scope.listQuestionAnswered.length ==0)
+            {
+                $("a[href='#previous']").removeAttr('onclick');
+                $('.actions > ul > li:first-child').addClass('disabled');
+            }
+        }
+    }
+</script>

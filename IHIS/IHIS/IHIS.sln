@@ -1,0 +1,44 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IHIS.StartModules", "IHIS.StartModules\IHIS.StartModules.csproj", "{A1194753-1970-4159-94F2-94F6A3583588}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IHIS", "IHIS\IHIS.csproj", "{F767298D-BCAA-4A1D-8426-62DFF4CDF2AE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A1194753-1970-4159-94F2-94F6A3583588} = {A1194753-1970-4159-94F2-94F6A3583588}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D9D365F7-E068-4730-B10A-153824F95A47}"
+	ProjectSection(SolutionItems) = preProject
+		IHIS-BuildEventScript(OLD).bat = IHIS-BuildEventScript(OLD).bat
+		IHISFrameworkBuild.bat = IHISFrameworkBuild.bat
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1194753-1970-4159-94F2-94F6A3583588}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1194753-1970-4159-94F2-94F6A3583588}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1194753-1970-4159-94F2-94F6A3583588}.Debug|x86.ActiveCfg = Debug|x86
+		{A1194753-1970-4159-94F2-94F6A3583588}.Debug|x86.Build.0 = Debug|x86
+		{A1194753-1970-4159-94F2-94F6A3583588}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1194753-1970-4159-94F2-94F6A3583588}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1194753-1970-4159-94F2-94F6A3583588}.Release|x86.ActiveCfg = Release|Any CPU
+		{A1194753-1970-4159-94F2-94F6A3583588}.Release|x86.Build.0 = Release|Any CPU
+		{F767298D-BCAA-4A1D-8426-62DFF4CDF2AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F767298D-BCAA-4A1D-8426-62DFF4CDF2AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F767298D-BCAA-4A1D-8426-62DFF4CDF2AE}.Debug|x86.ActiveCfg = Debug|x86
+		{F767298D-BCAA-4A1D-8426-62DFF4CDF2AE}.Debug|x86.Build.0 = Debug|x86
+		{F767298D-BCAA-4A1D-8426-62DFF4CDF2AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F767298D-BCAA-4A1D-8426-62DFF4CDF2AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F767298D-BCAA-4A1D-8426-62DFF4CDF2AE}.Release|x86.ActiveCfg = Release|Any CPU
+		{F767298D-BCAA-4A1D-8426-62DFF4CDF2AE}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

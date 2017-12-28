@@ -1,0 +1,154 @@
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "NutsModelProto";
+
+// -- [START] NUT0001U00 -------
+message NUT0001U00GrdNUT0001ItemInfo{
+	optional string sys_date = 1;
+	optional string user_id = 2;
+	optional string upd_date = 3;
+	optional string hosp_code = 4;
+	optional string pknut0001 = 5;
+	optional string data_kubun = 6;
+	optional string fk_ocs = 7;
+	optional string io_kubun = 8;
+	optional string hangmog_code = 9;
+	optional string hangmog_name = 10;
+	optional string irai_date = 11;
+	optional string kanja_no = 12;
+	optional string sinryouka = 13;
+	optional string sindanisi = 14;
+	optional string bmi = 15;
+	optional string sijijikou = 16;
+	optional string targetweight = 17;
+	optional string sport_yn = 18;
+	optional string drink_yn = 19;
+	optional string energy = 20;
+	optional string protein = 21;
+	optional string fat = 22;
+	optional string ps = 23;
+	optional string sugar = 24;
+	optional string salt = 25;
+	optional string water = 26;
+	optional string bp = 27;
+	optional string fbs = 28;
+	optional string a1c = 29;
+	optional string tch = 30;
+	optional string tg = 31;
+	optional string hdl = 32;
+	optional string ldl = 33;
+	optional string hb = 34;
+	optional string alb = 35;
+	optional string bun = 36;
+	optional string cre = 37;
+	optional string ast_got = 38;
+	optional string alt_gpt = 39;
+	optional string gammagt = 40;
+	optional string nutritionist = 41;
+	optional string nutritionist_name = 42;
+	optional string nutrition_object = 43;
+	optional string acting_date = 44;
+	optional string remark = 45;
+	optional string weight = 46;
+	optional string height = 47;
+	optional string syokai_gubun = 48;
+	optional string reser_date = 49;
+	optional string data_row_state = 50;
+}
+
+message NUT0001U00GrdNUT0002ItemInfo{
+	optional string sys_date = 1;
+	optional string user_id = 2;
+	optional string upd_date = 3;
+	optional string hosp_code = 4;
+	optional string pknut0002 = 5;
+	optional string data_kubun = 6;
+	optional string fknut0001 = 7;
+	optional string io_kubun = 8;
+	optional string sang_code = 9;
+	optional string display_syoubyoumei = 10;
+	optional string pre_modifier1 = 11;
+	optional string pre_modifier2 = 12;
+	optional string pre_modifier3 = 13;
+	optional string pre_modifier4 = 14;
+	optional string pre_modifier5 = 15;
+	optional string pre_modifier6 = 16;
+	optional string pre_modifier7 = 17;
+	optional string pre_modifier8 = 18;
+	optional string pre_modifier9 = 19;
+	optional string pre_modifier10 = 20;
+	optional string post_modifier1 = 21;
+	optional string post_modifier2 = 22;
+	optional string post_modifier3 = 23;
+	optional string post_modifier4 = 24;
+	optional string post_modifier5 = 25;
+	optional string post_modifier6 = 26;
+	optional string post_modifier7 = 27;
+	optional string post_modifier8 = 28;
+	optional string post_modifier9 = 29;
+	optional string post_modifier10 = 30;
+	optional string sang_start_date = 31;
+	optional string sang_jindan_date = 32;
+	optional string pre_modifier_name = 33;
+	optional string post_modifier_name = 34;
+	optional string sang_name = 35;
+	optional string fkoutsang = 36;
+	optional string data_row_state = 37;
+}
+
+message NUT9001U00grdINP5001Info { 
+  optional string magam_date =1;
+  optional string charge_yn =2;
+  optional string nut_jo_magam_yn =3;
+  optional string nut_ju_magam_yn =4;
+  optional string nut_seok_magam_yn =5;
+  optional string b_seq =6;
+  optional string l_seq =7;
+  optional string d_seq =8;
+}
+
+message NUT9001U00PRNutMagamInfo { 
+  optional string fknut2011 =1;
+  optional string magam_seq =2;
+  optional string flag =3;
+}
+
+message NUT9001U00PRIfsNutProcMainInfo { 
+  optional string cnt =1;
+  optional string flag =2;
+  optional string msg =3;
+}
+
+message NUT9001Q01grdListInfo { 
+   optional string ipwon =1;
+   optional string toiwon =2;
+   optional string trans_nut =3;
+   optional string trans_room =4;
+   optional string cancel =5;
+   optional string hosp_code =6;
+   optional string bunho =7;
+   optional string suname =8;
+   optional string nut_date =9;
+   optional string bld_gubun =10;
+   optional string to_ho_dong =11;
+   optional string to_ho_code =12;
+   optional string to_direct_code_d =13;
+   optional string to_direct_code1_d =14;
+   optional string to_direct_code2_d =15;
+   optional string to_direct_code3_d =16;
+   optional string to_nomimono =17;
+   optional string to_kumjisik =18;
+   optional string from_nut_date =19;
+   optional string from_bld_gubun =20;
+   optional string from_ho_dong =21;
+   optional string from_ho_code =22;
+   optional string from_direct_code_d =23;
+   optional string from_direct_code1_d =24;
+   optional string from_direct_code2_d =25;
+   optional string from_direct_code3_d =26;
+   optional string from_nomimono =27;
+   optional string from_kumjisik =28;
+}
+
+
+
+// -- [END] NUT0001U00 -------

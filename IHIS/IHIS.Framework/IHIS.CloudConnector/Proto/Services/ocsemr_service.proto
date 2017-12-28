@@ -1,0 +1,171 @@
+message OCS2015U07EmrRecordInsertRequest
+{
+        optional string hosp_code = 1;
+        optional string bunho = 2;
+        optional string pkout1001= 3;    
+        optional string naewon_date = 4;
+        optional string content = 5;
+        optional string metadata = 6;
+        optional string version = 7;
+        optional string sys_id = 8;
+}
+message OCS2015U44EmrHistoricRecordUpdateRequest
+{
+        optional string record_id = 1;
+        optional string upd_id = 2;
+        optional string content = 3;    
+        optional string metadata = 4;
+        optional string record_log = 5;
+        optional string email_flg = 6;
+}
+
+message OCS2015U00EmrRecordUnlockRequest
+{
+    optional string record_id = 1;
+    optional string upd_id = 2;
+    optional string screen_id = 3;
+}
+message OCS2015U00EmrRecordLockRequest
+{
+    optional string record_id = 1;
+    optional string upd_id = 2;
+    optional string screen_id = 3;
+}
+
+message OCS2015U00EmrGetTimeoutSpanRequest
+{
+}
+
+message OCS2015U00EmrGetTimeoutSpanResponse
+{
+	optional string timespan = 1;
+}
+message OcsEmrPatientReceptionHistoryListRequest {
+        required string patient_code = 1;
+}
+message OcsEmrPatientReceptionHistoryListResponse {
+        repeated OcsEmrPatientReceptionHistoryListItemInfo patient_reception_history_list_item = 1;
+}
+message OCS2015U00EmrGetNoticeEditTimeRequest
+{
+}
+message OCS2015U00EmrGetNoticeEditTimeResponse
+{
+    optional string timespan = 1;
+}
+message OCS2015U04LoadBookmarkByPk0ut1001Request
+{
+        optional string emr_record_id = 1;
+        optional string pkout1001 = 2;
+        optional string sys_id = 3;
+}
+message OCS2015U04EmrRecordLoadBookmarkContentRequest
+{
+        optional string emr_record_id = 1;
+}
+message OCS2015U04LoadExaminationRequest
+{
+        optional string patient_code = 1;
+}
+message OCS2015U04EditBookmarkRequest
+{
+        optional string bookmark_text = 1;
+        optional string upd_id = 2;
+        optional string emr_bookmark_id = 3;
+}
+message OCS2015U04EditBookmarkByPkout1001Request
+{
+        optional string bookmark_text = 1;
+        optional string upd_id = 2;
+        optional string emr_bookmark_id = 3;
+        optional string pkout1001 = 4;
+}
+message OCS2015U04DeleteBookmarkRequest
+{
+        optional string emr_bookmark_id = 1;
+}
+message OCS2015U04AddBookmarkRequest
+{
+        optional string emr_record_id        =        1        ;
+        optional string bookmark_text        =        2        ;
+        optional string naewon_date        =        3        ;
+        optional string pkout1001        =        4        ;
+        optional string upd_id        =        5        ;
+}
+
+
+
+message OCS2015U04LoadBookmarkByPk0ut1001Response
+{
+        repeated OCS2015U04LoadBookmarkByPk0ut1001Info emr_one_bookmark_list = 1;
+}
+message OCS2015U04EmrRecordLoadBookmarkContentResponse
+{
+        repeated OCS2015U04EmrRecordLoadBookmarkContentInfo emr_bookmark_content_list = 1;
+}
+message OCS2015U04LoadExaminationResponse
+{
+        repeated OCS2015U04LoadExaminationInfo emr_load_examination_list = 1;
+}
+message OCS2015U09EmrRecordUpdateRequest
+{
+        optional string bunho = 1; 
+        optional string content = 2;
+        optional string metadata = 3;
+        optional string sys_id = 4;
+        optional string record_log = 5;
+        repeated OCS2015U09EmrBookmarkInfo bookmark = 6;
+}
+
+
+message OCS2015U09GetTemplateComboBoxRequest
+{
+        optional string user_id = 1;
+}
+message OCS2015U09GetTemplateComboBoxResponse
+{
+        repeated OCS2015U09GetTemplateComboBoxInfo template_list = 1;
+}
+
+
+message OCS2015U09GetRootTagsForContextRequest
+{
+}
+message OCS2015U09GetRootTagsForContextResponse
+{
+	repeated OCS2015U09GetTagsForContextInfo root_tag_list = 1;
+}
+message OCS2015U09GetNodeTagsForContextRequest
+{
+	optional string f_parent_tag_code = 1;
+	optional string f_user_id = 2;
+}
+message OCS2015U09GetNodeTagsForContextResponse
+{
+	repeated OCS2015U09GetTagsForContextInfo root_tag_list = 1;
+}
+message OCS2015U07GetChildTagOfParentRequest
+{
+     optional string f_parent_tag = 1;
+}
+message OCS2015U07GetChildTagOfParentResponse
+{
+     repeated OCS2015U07TagChildInfo tag_child_list = 1;
+}
+message OCS2015U03OrderGubunRequest
+{
+        optional string f_hopital_code = 1;
+        optional string f_patient_code = 2;
+        optional string f_reservation_code = 3;
+}
+message OCS2015U03OrderGubunResponse
+{
+        repeated OCS2015U03OrderGubunInfo order_gubun_list = 1;
+}
+message OCS2015U06OrderTypeComboRequest
+{
+}
+message OCS2015U06OrderTypeComboResponse
+{
+        repeated OCS2015U06OrderTypeComboInfo order_types = 1;
+}

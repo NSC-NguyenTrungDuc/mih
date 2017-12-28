@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="ImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="grdNUR2017.QuerySQL" xml:space="preserve">
+    <value>SELECT E.HO_CODE1,
+       C.BUNHO,
+       E.SUNAME,
+       FN_BAS_LOAD_GWA_NAME(E.GWA, B.ORDER_DATE) GWA_NAME,
+       B.HANGMOG_CODE,
+       A.HANGMOG_NAME ,
+       DECODE(SUBSTR(NVL(B.ACTING_SURYANG,0),1,1),'.','0'||ROUND(B.ACTING_SURYANG,3) , ROUND(B.ACTING_SURYANG,3)) SURYANG ,
+       C.ORD_DANUI,
+       C.DV_TIME,
+       1,
+       C.JUSA,
+       C.BOGYONG_CODE,
+       B.ACTING_DATE,
+       NVL(B.ACTING_TIME, '0000'),
+       B.ACT_USER   ,
+       DECODE(B.ACTING_DATE,  NULL,'N','Y')   ACTING_YN ,
+       B.FKOCS2003,
+       B.SEQ,
+       B.ORDER_DATE,
+       NVL(F.BOGYONG_NAME,' ') BOGYONG_NAME,
+       C.DC_YN,
+       C.GROUP_SER,
+       C.MIX_GROUP,
+       C.HOPE_DATE,
+       FN_OCSI_LOAD_OCS0132_CODE_NAME('JUSA', C.JUSA) JUSA_TEXT,
+       FN_OCSI_LOAD_OCS0132_CODE_NAME('ORD_DANUI', C.ORD_DANUI) DANUI_TEXT,
+       C.ORDER_REMARK,
+       C.NURSE_REMARK,
+       FN_OCSI_LOAD_OCS0132_CODE_NAME('INPUT_GUBUN', C.INPUT_GUBUN) INPUT_GUBUN_TEXT,
+       C.JUSA_SPD_GUBUN                                             JUSA_SPD_GUBUN,
+       FN_BAS_LOAD_SABUN_NAME(B.ACT_USER)                           ACT_USER_NAME,
+--       ''                                                           BANNAB_YN,
+--       B.FKOCS2003                                                  FKOCS2003,
+--       ''                                                           OLD_BANNAB_YN       
+       B.BANNAB_YN                                                  BANNAB_YN,
+       B.BANNAB_FKOCS2003                                           BANNAB_FKOCS2003,
+       NVL(B.BANNAB_YN, 'N')                                        OLD_BANNAB_YN
+  FROM OCS0103        A,
+       OCS2017        B,
+       OCS2003        C,
+       --OCS2021        D,
+       DRG0120        F, /*복용법*/
+       VW_OCS_INP1001 E
+ WHERE A.HOSP_CODE    = :f_hosp_code
+   AND B.HOSP_CODE    = A.HOSP_CODE
+   AND C.HOSP_CODE    = A.HOSP_CODE
+   AND E.HOSP_CODE    = A.HOSP_CODE
+  -- AND D.HOSP_CODE(+) = E.HOSP_CODE
+   AND F.HOSP_CODE(+) = C.HOSP_CODE
+   AND C.FKINP1001    = E.PKINP1001
+   AND C.HANGMOG_CODE = A.HANGMOG_CODE
+   AND C.PKOCS2003 = B.FKOCS2003
+   AND NVL(C.PRN_YN,'N') = 'N'
+   AND (C.INPUT_GUBUN LIKE 'D%' OR C.INPUT_GUBUN = 'NR')
+   /* 추후 하트라이프병원에서 마약을 하면 마약까지 추가 */
+   AND ((NVL('', 'A')  = 'A' AND B.DISPLAY_SEQ IN( 3, 4, 5)) -- 병상관리서 오픈시
+    OR  (NVL('', 'A')  = 'C' AND B.DISPLAY_SEQ = 5)      -- 내복약
+    OR  (NVL('', 'A') != 'C' AND B.DISPLAY_SEQ IN( 3, 4))) -- 주사,수액
+   --AND D.PKINP1001(+) = E.PKINP1001
+   AND C.ORDER_DATE  = TO_DATE(:f_order_date, 'YYYY/MM/DD')
+   AND E.BUNHO       = :f_bunho
+   --AND B.DRUG_ACTING_CODE IS NULL
+   AND NVL(C.ERROR_FLAG, 'N') = 'N'
+   AND C.OCS_FLAG &gt; '0'
+   AND NVL(C.TOIWON_DRG_YN, 'N') = 'N'
+   AND C.BOGYONG_CODE = F.BOGYONG_CODE(+)
+   AND C.PKOCS2003 IN ( SELECT X.PKOCS2003
+                          FROM OCS2003 X
+                         WHERE X.HOSP_CODE  = A.HOSP_CODE
+                           AND X.BUNHO      = :f_bunho
+                           AND X.ORDER_DATE = TO_DATE(:f_order_date, 'YYYY/MM/DD')
+                           AND EXISTS ( SELECT 'X'
+                                          FROM OCS2003 Y
+                                         WHERE Y.HOSP_CODE  = X.HOSP_CODE
+                                           AND Y.PKOCS2003  LIKE :f_pkocs2003||'%'
+                                           AND Y.GROUP_SER  = X.GROUP_SER
+                                           AND Y.INPUT_GUBUN = X.INPUT_GUBUN
+                                           AND Y.ORDER_DATE = X.ORDER_DATE ))
+ ORDER BY E.BUNHO,C.ORDER_DATE, B.SEQ, FN_OCS_LOAD_ORDER_SORT('I',   C.INPUT_GUBUN, C.ORDER_GUBUN, C.GROUP_SER, C.MIX_GROUP,
+                                 C.SEQ, C.PKOCS2003,   C.SOURCE_FKOCS2003)</value>
+  </data>
+  <metadata name="imageListMixGroup.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>118, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>51</value>
+  </metadata>
+</root>

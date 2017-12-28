@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<xs:schema xmlns:mmlRp="uri:mmlRp" xmlns:mmlCm="uri:mmlCm" elementFormDefault="qualified" targetNamespace="uri:mmlRp" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="uri:mmlCm" />
+  <xs:element name="ReportModule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mmlRp:information" />
+        <xs:element ref="mmlRp:reportBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="information">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mmlRp:reportStatus" />
+        <xs:element ref="mmlRp:testClass" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlRp:testSubclass" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlRp:organ" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlRp:consultFrom" />
+        <xs:element ref="mmlRp:perform" />
+      </xs:sequence>
+      <xs:attribute name="performTime" type="xs:string" use="required" />
+      <xs:attribute name="reportTime" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="reportStatus">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="statusCode" type="xs:string" use="required" />
+          <xs:attribute name="statusCodeId" type="xs:string" use="required" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="testClass">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="testClassCode" type="xs:string" use="required" />
+          <xs:attribute name="testClassCodeId" type="xs:string" use="required" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="testSubclass">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="testSubclassCode" type="xs:string" />
+          <xs:attribute name="testSubclassCodeId" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="organ" type="xs:string" />
+  <xs:element name="consultFrom">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlRp:conFacility" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlRp:conDepartment" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlRp:conWard" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlRp:client" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="conFacility">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="facilityCode" type="xs:string" />
+          <xs:attribute name="facilityCodeId" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="conDepartment">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="depCode" type="xs:string" />
+          <xs:attribute name="depCodeId" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="conWard">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="wardCode" type="xs:string" />
+          <xs:attribute name="wardCodeId" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="client">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="clientCode" type="xs:string" />
+          <xs:attribute name="clientCodeId" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="perform">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mmlRp:pFacility" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlRp:pDepartment" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlRp:pWard" />
+        <xs:element ref="mmlRp:performer" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlRp:supervisor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pFacility">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="facilityCode" type="xs:string" use="required" />
+          <xs:attribute name="facilityCodeId" type="xs:string" use="required" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pDepartment">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="depCode" type="xs:string" />
+          <xs:attribute name="depCodeId" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pWard">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="wardCode" type="xs:string" />
+          <xs:attribute name="wardCodeId" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="performer">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="performerCode" type="xs:string" use="required" />
+          <xs:attribute name="performerCodeId" type="xs:string" use="required" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="supervisor">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="supervisorCode" type="xs:string" />
+          <xs:attribute name="supervisorCodeId" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="reportBody">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlRp:chiefComplaints" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlRp:testPurpose" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlRp:testDx" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlRp:testNotes" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="mmlRp:testMemo" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlRp:testMemoF" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chiefComplaints" type="xs:string" />
+  <xs:element name="testPurpose" type="xs:string" />
+  <xs:element name="testDx" type="xs:string" />
+  <xs:element name="testNotes">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <!--<xs:element xmlns:q1="uri:mmlCm" ref="q1:extRef" />-->
+        <xs:element ref="mmlCm:extRef" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="testMemo">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="tmCodeName" type="xs:string" />
+          <xs:attribute name="tmCode" type="xs:string" />
+          <xs:attribute name="tmCodeId" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="testMemoF" type="xs:string" />
+</xs:schema>

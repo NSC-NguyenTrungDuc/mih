@@ -1,0 +1,51 @@
+<div class="headerpanel">
+    <div class="logopanel" style="padding: 10px 15px; background: none; float: left;">
+        <h2><a href="#/"><img ng-src="{{ hospitalObj.logo}}" height="45"/></a></h2>
+    </div><!-- logopanel -->
+    <div class="hidden-sm hidden-xs header_home">
+        <h2>
+            <translate>Medical Interview System</translate>
+        </h2>
+    </div>
+    <div class="headerbar">
+        <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
+        <div class="header-right">
+            <ul class="headermenu">
+                <!--<li>-->
+                    <!--<div class="btn-group" id="language_btn" ng-controller="GlobalController">-->
+                        <!--<button type="button" class="btn btn-languages" data-toggle="dropdown">-->
+                            <!--<img src="images/flags/Japan.png" alt=""/>-->
+                            <!--<span id="language_test"><translate>Japanese</translate></span>-->
+                            <!--<span class="caret"></span>-->
+                        <!--</button>-->
+                        <!--<ul class="dropdown-menu pull-right">-->
+                            <!--<li rel="ja" id="lang_ja"><a ng-click="changeLanguage('ja')"><img src="images/flags/Japan.png" alt=""/>-->
+                                <!--日本語-->
+                            <!--</a></li>-->
+                            <!--<li rel="en" id="lang_en"><a ng-click="changeLanguage('en')"><img src="images/flags/UK.png" alt=""/>-->
+                                <!--English-->
+                            <!--</a></li>-->
+                            <!--<li rel="en" id="lang_vi"><a ng-click="changeLanguage('vi')"><img src="images/flags/VN.png" alt=""/>-->
+                                <!--Tiếng Việt-->
+                            <!--</a></li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                <!--</li>-->
+                <li>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-logged" data-toggle="dropdown">
+                            <!--<img src="images/photos/default_profile_picture.png" alt="" />-->
+                            {{globals.currentUser.full_name}}
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a ng-click="logout()"><i class="glyphicon glyphicon-log-out"></i>
+                                <translate>Logout</translate>
+                            </a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div><!-- header-right -->
+    </div><!-- headerbar -->
+</div><!-- header-->

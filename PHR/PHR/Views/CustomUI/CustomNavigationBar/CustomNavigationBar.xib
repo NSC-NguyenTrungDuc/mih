@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <development version="7000" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="CustomNavigationBar">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCr-0i-zgx">
+                    <rect key="frame" x="0.0" y="20" width="40" height="40"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Xec-vg-dvt"/>
+                        <constraint firstAttribute="width" constant="40" id="ohw-yl-TPx"/>
+                    </constraints>
+                    <state key="normal" image="icon_menu"/>
+                    <connections>
+                        <action selector="actionMenu:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="lvf-ia-SRb"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="center" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIj-1I-thg">
+                    <rect key="frame" x="40" y="20" width="240" height="40"/>
+                    <accessibility key="accessibilityConfiguration" label=""/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="HNJ-mY-hg5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="actionHome:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="NW2-Ei-4YQ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QoW-Zk-lmD">
+                    <rect key="frame" x="270" y="20" width="50" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="8gm-gd-Yng"/>
+                        <constraint firstAttribute="height" constant="40" id="kHb-Th-0Hj"/>
+                    </constraints>
+                    <connections>
+                        <action selector="actionFamily:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="cbm-qD-sz1"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYo-ug-A2w">
+                    <rect key="frame" x="40" y="20" width="50" height="40"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="Max-Wz-8fP"/>
+                        <constraint firstAttribute="height" constant="40" id="flk-TX-dVS"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="actionBack:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="HoQ-ZN-xsM"/>
+                        <action selector="actionChangeAvatar:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="ZTc-Vw-mbW"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="cYo-ug-A2w" firstAttribute="leading" secondItem="sCr-0i-zgx" secondAttribute="trailing" id="3AK-ap-KOx"/>
+                <constraint firstAttribute="trailing" secondItem="tIj-1I-thg" secondAttribute="trailing" constant="40" id="7NE-8D-PDg"/>
+                <constraint firstAttribute="trailing" secondItem="QoW-Zk-lmD" secondAttribute="trailing" id="Aap-9Y-grH"/>
+                <constraint firstItem="tIj-1I-thg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="LWx-j7-EDy"/>
+                <constraint firstItem="QoW-Zk-lmD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="P75-ec-SRJ"/>
+                <constraint firstItem="cYo-ug-A2w" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="awk-t7-LgK"/>
+                <constraint firstItem="sCr-0i-zgx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="eqf-xn-1KK"/>
+                <constraint firstItem="tIj-1I-thg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="f9E-wA-bQs"/>
+                <constraint firstItem="sCr-0i-zgx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gOA-HM-cLJ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnBack" destination="cYo-ug-A2w" id="Rtu-4V-OrM"/>
+                <outlet property="btnMenuRight" destination="QoW-Zk-lmD" id="gg8-cA-e86"/>
+                <outlet property="buttonTitle" destination="tIj-1I-thg" id="Ro5-zx-psR"/>
+            </connections>
+            <point key="canvasLocation" x="260" y="152"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_menu" width="13" height="12"/>
+    </resources>
+</document>

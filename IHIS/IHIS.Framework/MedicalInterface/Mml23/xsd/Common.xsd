@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<xs:schema xmlns:mmlCm="uri:mmlCm" elementFormDefault="qualified" targetNamespace="uri:mmlCm" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Id">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="type" type="xs:string" use="required" />
+          <xs:attribute name="checkDigitSchema">
+            <xs:simpleType>
+              <xs:restriction base="xs:NMTOKEN">
+                <xs:enumeration value="M10" />
+                <xs:enumeration value="M11" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="checkDigit" type="xs:string" />
+          <xs:attribute name="tableId" type="xs:string" use="required" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="extRef">
+    <xs:complexType>
+      <xs:attribute name="contentType" type="xs:string" />
+      <xs:attribute name="medicalRole" type="xs:string" />
+      <xs:attribute name="title" type="xs:string" />
+      <xs:attribute name="href" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="email" type="xs:string" />
+</xs:schema>

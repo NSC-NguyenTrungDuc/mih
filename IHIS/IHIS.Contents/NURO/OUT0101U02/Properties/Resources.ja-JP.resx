@@ -1,0 +1,674 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ADDRESS1_TEXT" xml:space="preserve">
+    <value>주소1</value>
+  </data>
+  <data name="ADDRESS2_TEXT" xml:space="preserve">
+    <value>주소2</value>
+  </data>
+  <data name="AGE_TEXT" xml:space="preserve">
+    <value>나이</value>
+  </data>
+  <data name="BIRTH_TEXT" xml:space="preserve">
+    <value>생년월일</value>
+  </data>
+  <data name="BONIN_GUBUN_NAME_TEXT" xml:space="preserve">
+    <value>관계명</value>
+  </data>
+  <data name="BONIN_GUBUN_TEXT" xml:space="preserve">
+    <value>관계</value>
+  </data>
+  <data name="BUNHO_DUPLICATE_MSG" xml:space="preserve">
+    <value>患者コードが既に登録されています。{0}が代わりに使用します。</value>
+  </data>
+  <data name="BUNHO_EXISTS" xml:space="preserve">
+    <value>既に同じ患者番号が保存されています。別の患者番号を入力して保存してください。</value>
+  </data>
+  <data name="BUNHO_NOT_EXIST_MSG" xml:space="preserve">
+    <value>この患者さんがいません。</value>
+  </data>
+  <data name="BUNHO_OVERLOAD_MSG" xml:space="preserve">
+    <value>過負荷シーケンスID。</value>
+  </data>
+  <data name="BUNHO_TEXT" xml:space="preserve">
+    <value>환자번호</value>
+  </data>
+  <data name="BUNHO_TYPE_TEXT" xml:space="preserve">
+    <value>bunho_type</value>
+  </data>
+  <data name="CAN_NOT_DELETE_INSURANCE_MGS" xml:space="preserve">
+    <value>会計システムで保険情報を削除できません</value>
+  </data>
+  <data name="CAP_002" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="CAP_ERROR" xml:space="preserve">
+    <value>エラー</value>
+  </data>
+  <data name="Caption17" xml:space="preserve">
+    <value>保存失敗</value>
+  </data>
+  <data name="caption20" xml:space="preserve">
+    <value>患者番号</value>
+  </data>
+  <data name="caption24_Jp" xml:space="preserve">
+    <value>確認</value>
+  </data>
+  <data name="caption24_Ko" xml:space="preserve">
+    <value>변경정보존재</value>
+  </data>
+  <data name="CheckBillingType" xml:space="preserve">
+    <value>経済区分を選択してください！</value>
+  </data>
+  <data name="CHUIDUK_DATE_TEXT" xml:space="preserve">
+    <value>chuiduk_date</value>
+  </data>
+  <data name="COMMENT_TEXT" xml:space="preserve">
+    <value>特異事項</value>
+  </data>
+  <data name="DefaultJapanPeriod" xml:space="preserve">
+    <value>昭和</value>
+  </data>
+  <data name="DELETE_YN_TEXT" xml:space="preserve">
+    <value>삭제여부</value>
+  </data>
+  <data name="DONG_NAME_TEXT" xml:space="preserve">
+    <value>동이름</value>
+  </data>
+  <data name="EMAIL_TEXT" xml:space="preserve">
+    <value>이메일</value>
+  </data>
+  <data name="EmptyFileName" xml:space="preserve">
+    <value>ファイル名を選択してください</value>
+  </data>
+  <data name="END_YN_TEXT" xml:space="preserve">
+    <value>end_yn</value>
+  </data>
+  <data name="fbxGaeinCode" xml:space="preserve">
+    <value>記号</value>
+  </data>
+  <data name="GAEIN_NO_TEXT" xml:space="preserve">
+    <value>개인번호</value>
+  </data>
+  <data name="GAEIN_TEXT" xml:space="preserve">
+    <value>개인기호</value>
+  </data>
+  <data name="gongbi_code" xml:space="preserve">
+    <value>公費コード</value>
+  </data>
+  <data name="gongbi_name" xml:space="preserve">
+    <value>公費名</value>
+  </data>
+  <data name="GONGBI_TEXT" xml:space="preserve">
+    <value>公費名</value>
+  </data>
+  <data name="gubun" xml:space="preserve">
+    <value>保険区分</value>
+  </data>
+  <data name="gubun_name" xml:space="preserve">
+    <value>保険名</value>
+  </data>
+  <data name="GUBUN_NAME_TEXT" xml:space="preserve">
+    <value>보험종별명</value>
+  </data>
+  <data name="GUBUN_NAME1_TEXT" xml:space="preserve">
+    <value>種別名称</value>
+  </data>
+  <data name="GUBUN_TEXT" xml:space="preserve">
+    <value>보험종별</value>
+  </data>
+  <data name="IU_GUBUN_TEXT" xml:space="preserve">
+    <value>iu_gubun</value>
+  </data>
+  <data name="JOHAP_GUBUN_TEXT" xml:space="preserve">
+    <value>조합구분</value>
+  </data>
+  <data name="JOHAP_NAME_TEXT" xml:space="preserve">
+    <value>보험자명칭</value>
+  </data>
+  <data name="JOHAP_TEXT" xml:space="preserve">
+    <value>보험자번호</value>
+  </data>
+  <data name="LABEL1_TEXT" xml:space="preserve">
+    <value>才</value>
+  </data>
+  <data name="LABEL11" xml:space="preserve">
+    <value>住 所</value>
+  </data>
+  <data name="LABEL12_TEXT" xml:space="preserve">
+    <value>連絡先1</value>
+  </data>
+  <data name="LABEL13_TEXT" xml:space="preserve">
+    <value>連絡先3</value>
+  </data>
+  <data name="LABEL14_TEXT" xml:space="preserve">
+    <value>E-Mail</value>
+  </data>
+  <data name="LABEL15_TEXT" xml:space="preserve">
+    <value>最終確認日</value>
+  </data>
+  <data name="LABEL18_TEXT" xml:space="preserve">
+    <value>当院ペースメーカー</value>
+  </data>
+  <data name="LABEL2_TEXT" xml:space="preserve">
+    <value>氏名(ｶﾅ)</value>
+  </data>
+  <data name="LABEL20_TEXT" xml:space="preserve">
+    <value>被保険者名</value>
+  </data>
+  <data name="LABEL21_TEXT" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="LABEL26_TEXT" xml:space="preserve">
+    <value>性 別</value>
+  </data>
+  <data name="LABEL27_TEXT" xml:space="preserve">
+    <value>本人区分</value>
+  </data>
+  <data name="LABEL28" xml:space="preserve">
+    <value>番号</value>
+  </data>
+  <data name="LABEL29_TEXT" xml:space="preserve">
+    <value>記号</value>
+  </data>
+  <data name="LABEL3_TEXT" xml:space="preserve">
+    <value> 基本情報</value>
+  </data>
+  <data name="LABEL30_TEXT" xml:space="preserve">
+    <value>保険者番号</value>
+  </data>
+  <data name="LABEL31_TEXT" xml:space="preserve">
+    <value>保険種別</value>
+  </data>
+  <data name="LABEL32_TEXT" xml:space="preserve">
+    <value>有効期限</value>
+  </data>
+  <data name="LABEL33_TEXT" xml:space="preserve">
+    <value>開始日付</value>
+  </data>
+  <data name="LABEL34_TEXT" xml:space="preserve">
+    <value> 保険情報</value>
+  </data>
+  <data name="LABEL35_TEXT" xml:space="preserve">
+    <value>取得日付</value>
+  </data>
+  <data name="LABEL36_TEXT" xml:space="preserve">
+    <value> 公費情報</value>
+  </data>
+  <data name="LABEL38_TEXT" xml:space="preserve">
+    <value>備考</value>
+  </data>
+  <data name="LABEL4_TEXT" xml:space="preserve">
+    <value>ペースメーカー装着</value>
+  </data>
+  <data name="LABEL42_TEXT" xml:space="preserve">
+    <value>受給者番号</value>
+  </data>
+  <data name="LABEL43_TEXT" xml:space="preserve">
+    <value>負担者番号</value>
+  </data>
+  <data name="LABEL44_TEXT" xml:space="preserve">
+    <value>公費コード</value>
+  </data>
+  <data name="LABEL47_TEXT" xml:space="preserve">
+    <value>適用日付</value>
+  </data>
+  <data name="LABEL5_TEXT" xml:space="preserve">
+    <value>患者区分</value>
+  </data>
+  <data name="LABEL52_TEXT" xml:space="preserve">
+    <value>連絡先2</value>
+  </data>
+  <data name="LABEL53_TEXT" xml:space="preserve">
+    <value>有効区分</value>
+  </data>
+  <data name="LABEL6_TEXT" xml:space="preserve">
+    <value>患者番号</value>
+  </data>
+  <data name="LABEL7_TEXT" xml:space="preserve">
+    <value>氏名(漢字)</value>
+  </data>
+  <data name="LABEL8_TEXT" xml:space="preserve">
+    <value>患者特記事項</value>
+  </data>
+  <data name="LABEL9_TEXT" xml:space="preserve">
+    <value>生年月日</value>
+  </data>
+  <data name="LAST_CHECK_DATE_TEXT" xml:space="preserve">
+    <value>최종확인일</value>
+  </data>
+  <data name="MessageExportFail" xml:space="preserve">
+    <value>ファイル出力が失敗します。</value>
+  </data>
+  <data name="MessageExportSuccessfully" xml:space="preserve">
+    <value>ファイル出力が成功しました。</value>
+  </data>
+  <data name="MessageSelectOne" xml:space="preserve">
+    <value>出力データをご選択ください。</value>
+  </data>
+  <data name="MessageStartDateEndDate" xml:space="preserve">
+    <value>までの日付はからの日付より将来の日です。</value>
+  </data>
+  <data name="MSG_001" xml:space="preserve">
+    <value>該当のデータを見つかりません。</value>
+  </data>
+  <data name="MSG_002" xml:space="preserve">
+    <value>生年月日を正しく入力してください 。</value>
+  </data>
+  <data name="MSG_CONFIRM_AUTO_GEN" xml:space="preserve">
+    <value>患者コードがまだありません。新規患者コードを作成しますか？</value>
+  </data>
+  <data name="MSG_CONFIRM_UPLOAD" xml:space="preserve">
+    <value>データ保存しますか？</value>
+  </data>
+  <data name="MSG_CSV_BAD_COLUMN" xml:space="preserve">
+    <value>CSVカラム形式が正しくありません。</value>
+  </data>
+  <data name="MSG_DUPLICATE" xml:space="preserve">
+    <value>{0}が重複です。</value>
+  </data>
+  <data name="MSG_FORMAT_DATE" xml:space="preserve">
+    <value>{0}のフォーマットが{1}</value>
+  </data>
+  <data name="MSG_FORMAT_SEX" xml:space="preserve">
+    <value>性別がFあるいはMです。</value>
+  </data>
+  <data name="MSG_GENPASS" xml:space="preserve">
+    <value>パスワードを変更しました</value>
+  </data>
+  <data name="MSG_GENPASS_CAP" xml:space="preserve">
+    <value>通知</value>
+  </data>
+  <data name="MSG_GENPASS_FAIL" xml:space="preserve">
+    <value>パスワード変更は失敗しました。</value>
+  </data>
+  <data name="MSG_IMPORT_FAIL" xml:space="preserve">
+    <value>ファイルアップロードが失敗します。</value>
+  </data>
+  <data name="MSG_IMPORT_SUCCESS" xml:space="preserve">
+    <value>ファイルアップロードが成功します。</value>
+  </data>
+  <data name="MSG_MAX_LEN" xml:space="preserve">
+    <value>{0}の長さが{1}文字以内です</value>
+  </data>
+  <data name="MSG_NOT_CSV" xml:space="preserve">
+    <value>アップロード用ファイルはCSV形式でなければなりません。</value>
+  </data>
+  <data name="MSG_NOT_SELECTED" xml:space="preserve">
+    <value>アップロードの行をご選択ください。</value>
+  </data>
+  <data name="MSG_ORCA" xml:space="preserve">
+    <value>テスト患者さんを登録したい場合、ORCAから登録してください。</value>
+  </data>
+  <data name="MSG_ORCA_CAP" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="MSG_PHONE_ERR" xml:space="preserve">
+    <value>電話番号を正しく入力してください。</value>
+  </data>
+  <data name="MSG_REQUIRED" xml:space="preserve">
+    <value>{0}が必須です。</value>
+  </data>
+  <data name="MSG_REQUIRED_FILE" xml:space="preserve">
+    <value>ファイルを選択してください。</value>
+  </data>
+  <data name="NO_CBO_TEXT" xml:space="preserve">
+    <value>可</value>
+  </data>
+  <data name="OLD_GUBUN_TEXT" xml:space="preserve">
+    <value>old_gubun</value>
+  </data>
+  <data name="OLD_START_DATE_TEXT" xml:space="preserve">
+    <value>old_start_date</value>
+  </data>
+  <data name="PACE_MAKER_YN_TEXT" xml:space="preserve">
+    <value>pace_maker_yn</value>
+  </data>
+  <data name="PI_NAME_TEXT" xml:space="preserve">
+    <value>피보험자명</value>
+  </data>
+  <data name="REG_BTN_TEXT" xml:space="preserve">
+    <value>登録</value>
+  </data>
+  <data name="RETRIEVE_YN_TEXT" xml:space="preserve">
+    <value>재조회여부</value>
+  </data>
+  <data name="RETRIEVE_YN1_TEXT" xml:space="preserve">
+    <value>retrieve_yn</value>
+  </data>
+  <data name="SaveSuccess" xml:space="preserve">
+    <value>成功を保存</value>
+  </data>
+  <data name="SELF_PACE_MAKER_TEXT" xml:space="preserve">
+    <value>self_pace_maker</value>
+  </data>
+  <data name="SER_TEXT" xml:space="preserve">
+    <value>순번</value>
+  </data>
+  <data name="SEX_TEXT" xml:space="preserve">
+    <value>성별</value>
+  </data>
+  <data name="SU_NAME_TEXT" xml:space="preserve">
+    <value>환자명</value>
+  </data>
+  <data name="SU_NAME2_TEXT" xml:space="preserve">
+    <value>이름2</value>
+  </data>
+  <data name="TEL_GUBUN_TEXT" xml:space="preserve">
+    <value>전화구분</value>
+  </data>
+  <data name="TEL_GUBUN2_TEXT" xml:space="preserve">
+    <value>전화구분2</value>
+  </data>
+  <data name="TEL_GUBUN3_TEXT" xml:space="preserve">
+    <value>전화구분3</value>
+  </data>
+  <data name="TEL_HP_TEXT" xml:space="preserve">
+    <value>핸드폰</value>
+  </data>
+  <data name="TEL_TEXT" xml:space="preserve">
+    <value>전화E번호</value>
+  </data>
+  <data name="TEL1_TEXT" xml:space="preserve">
+    <value>전호번호1</value>
+  </data>
+  <data name="TEL2_TEXT" xml:space="preserve">
+    <value>보험자전화</value>
+  </data>
+  <data name="TXT_HOTEN" xml:space="preserve">
+    <value>Họ và tên</value>
+  </data>
+  <data name="TXT_LINE" xml:space="preserve">
+    <value>{0}行目:</value>
+  </data>
+  <data name="TXT_PROCESS" xml:space="preserve">
+    <value>処 理</value>
+  </data>
+  <data name="TXT_ROW_NUM" xml:space="preserve">
+    <value>順番</value>
+  </data>
+  <data name="VALID_SEX" xml:space="preserve">
+    <value>F|M|男性|女性</value>
+  </data>
+  <data name="XMessageBox1_JP" xml:space="preserve">
+    <value>同じ患者が存在します。ご確認ください。
+</value>
+  </data>
+  <data name="XMessageBox1_Ko" xml:space="preserve">
+    <value>동일한 환자가 존재합니다.확인해 주시기 바랍니다.
+</value>
+  </data>
+  <data name="XMessageBox10_Jp" xml:space="preserve">
+    <value>保険開始日付を入力してください。</value>
+  </data>
+  <data name="XMessageBox10_Ko" xml:space="preserve">
+    <value>개시일자를 입력해 주십시오.</value>
+  </data>
+  <data name="XMessageBox11_Jp" xml:space="preserve">
+    <value>保険情報</value>
+  </data>
+  <data name="XMessageBox11_Ko" xml:space="preserve">
+    <value>보험정보</value>
+  </data>
+  <data name="XMessageBox12_Jp" xml:space="preserve">
+    <value>公費コードを入力してください。</value>
+  </data>
+  <data name="XMessageBox12_Ko" xml:space="preserve">
+    <value>공비코드를 입력해 주세요</value>
+  </data>
+  <data name="XMessageBox13_Jp" xml:space="preserve">
+    <value>公費適用日を入力してください。</value>
+  </data>
+  <data name="XMessageBox13_Ko" xml:space="preserve">
+    <value>적용일자를 입력해 주십시오.</value>
+  </data>
+  <data name="XMessageBox14_Jp" xml:space="preserve">
+    <value>公費情報</value>
+  </data>
+  <data name="XMessageBox14_Ko" xml:space="preserve">
+    <value>공비정보</value>
+  </data>
+  <data name="XMessageBox15_Jp" xml:space="preserve">
+    <value>郵便番号が有効ではありません。 ご確認ください。</value>
+  </data>
+  <data name="XMessageBox15_Ko" xml:space="preserve">
+    <value>우편번호가 정확하지않습니다. 확인바랍니다.</value>
+  </data>
+  <data name="XMessageBox16_Jp" xml:space="preserve">
+    <value>保険者番号が有効ではありません。</value>
+  </data>
+  <data name="XMessageBox16_Ko" xml:space="preserve">
+    <value>보험자번호가 정확하지 않습니다.</value>
+  </data>
+  <data name="XMessageBox17" xml:space="preserve">
+    <value>保存に失敗しました。
+</value>
+  </data>
+  <data name="XMessageBox18_Jp" xml:space="preserve">
+    <value>保存が完了しました。</value>
+  </data>
+  <data name="XMessageBox18_Ko" xml:space="preserve">
+    <value>정상적으로 저장 되었습니다.</value>
+  </data>
+  <data name="XMessageBox19_Jp" xml:space="preserve">
+    <value>保存完了</value>
+  </data>
+  <data name="XMessageBox19_Ko" xml:space="preserve">
+    <value>저장완료</value>
+  </data>
+  <data name="XMessageBox2_Jp" xml:space="preserve">
+    <value>新患患者登録しますか？</value>
+  </data>
+  <data name="XMessageBox2_Ko" xml:space="preserve">
+    <value>신환환자로 등록 하시겠습니까?</value>
+  </data>
+  <data name="XMessageBox20_Jp" xml:space="preserve">
+    <value>登録されている患者番号ではありません。新患登録を行いますか？</value>
+  </data>
+  <data name="XMessageBox20_Ko" xml:space="preserve">
+    <value>입력한 환자번호의 대상이 존재하지 않습니다. 신환 등록을 하시겠습니까?</value>
+  </data>
+  <data name="XMessageBox21_Jp" xml:space="preserve">
+    <value>取得日付には開始日付以前の日付を入力してください。</value>
+  </data>
+  <data name="XMessageBox21_Ko" xml:space="preserve">
+    <value>취득일은 개시일보다 미래일 수 없습니다.</value>
+  </data>
+  <data name="XMessageBox22_Jp" xml:space="preserve">
+    <value>開始日付には取得日付以降の日付を入力してください。</value>
+  </data>
+  <data name="XMessageBox22_Ko" xml:space="preserve">
+    <value>개시일은 취득일 보다 커야 합니다</value>
+  </data>
+  <data name="XMessageBox23" xml:space="preserve">
+    <value>有効期限の日付は開始日付以降の日付を入力してください。</value>
+  </data>
+  <data name="XMessageBox24_Jp" xml:space="preserve">
+    <value>保存されていないデータがあります。保存して次に進みますか？
+
+「Yes」：保存する　　「No」：保存しない　　「Cancel」：取り消す　</value>
+  </data>
+  <data name="XMessageBox24_Ko" xml:space="preserve">
+    <value>변경된 정보가 존재합니다.화면을 닫으시겠습니까?</value>
+  </data>
+  <data name="XMessageBox25" xml:space="preserve">
+    <value>既に同じ患者番号が存在します。 ご確認ください。</value>
+  </data>
+  <data name="XMessageBox26" xml:space="preserve">
+    <value>登録されていない患者番号です。ご確認ください。</value>
+  </data>
+  <data name="XMessageBox27" xml:space="preserve">
+    <value>同じ取得日付に同じ保険種別が存在します。ご確認ください。</value>
+  </data>
+  <data name="XMessageBox28" xml:space="preserve">
+    <value>同じ取得日付に同じ公費が存在します。ご確認ください。</value>
+  </data>
+  <data name="XMessageBox3_Jp" xml:space="preserve">
+    <value>患者番号を入力してください。</value>
+  </data>
+  <data name="XMessageBox3_Ko" xml:space="preserve">
+    <value>환자번호가 부여되지 않았습니다.</value>
+  </data>
+  <data name="XMessageBox4_Jp" xml:space="preserve">
+    <value>患者名を入力してください。</value>
+  </data>
+  <data name="XMessageBox4_Ko" xml:space="preserve">
+    <value>환자성명을 입력해주세요.</value>
+  </data>
+  <data name="XMessageBox5_Jp" xml:space="preserve">
+    <value>患者生年月日を入力してください。</value>
+  </data>
+  <data name="XMessageBox5_ko" xml:space="preserve">
+    <value>생년월일을 입력해 주세요.</value>
+  </data>
+  <data name="XMessageBox6_Jp" xml:space="preserve">
+    <value>性別を入力してください。</value>
+  </data>
+  <data name="XMessageBox6_Ko" xml:space="preserve">
+    <value>성별을 입력해 주세요.</value>
+  </data>
+  <data name="XMessageBox7_Jp" xml:space="preserve">
+    <value>患者情報</value>
+  </data>
+  <data name="XMessageBox7_Ko" xml:space="preserve">
+    <value>환자정보</value>
+  </data>
+  <data name="XMessageBox8_Jp" xml:space="preserve">
+    <value>患者情報を削除しますか？</value>
+  </data>
+  <data name="XMessageBox8_Ko" xml:space="preserve">
+    <value>환자정보를 삭제 하시겠습니까?</value>
+  </data>
+  <data name="XMessageBox9_Jp" xml:space="preserve">
+    <value>保険種別を入力してください。</value>
+  </data>
+  <data name="XMessageBox9_Ko" xml:space="preserve">
+    <value>보험종류를 입력해 주세요.</value>
+  </data>
+  <data name="YES_CBO_TEXT" xml:space="preserve">
+    <value>否</value>
+  </data>
+  <data name="ZIP_CODE1_TEXT" xml:space="preserve">
+    <value>우편번호1</value>
+  </data>
+  <data name="ZIP_CODE2_TEXT" xml:space="preserve">
+    <value>우편번호2</value>
+  </data>
+</root>

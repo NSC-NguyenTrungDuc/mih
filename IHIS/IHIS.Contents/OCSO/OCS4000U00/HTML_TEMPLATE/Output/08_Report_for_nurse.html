@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Report For Nurse</title>
+	<script src="../js/pikaday.js"></script>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/handlebars.min.js"></script>	
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/app.js"></script>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<form id="myform" action="" method="post">
+ 	<div>
+	
+		<div id="data-template">
+		</div>
+	</div>
+
+
+	<script id="some-template" type="text/x-handlebars-template"> 
+	
+<div class="wrapper">
+
+	<h1 class="page-title text-center">訪問看護報告書</h1>
+	
+	
+	<table class="table full-w" border="1" align="" cellpadding="0" cellspacing="0">
+		<tr>
+			<td style="width:25%;">患者氏名 </td>
+			
+			<td style="width:30%;"> {{PatientName1}}  様</td>
+			<td>生年月日　{{Birth}} （{{YearAge}}歳）</td>
+		</tr>
+		
+		<tr>
+			<td>要介護認定の状況</td>
+			<td colspan="2">
+				{{CareDegree}}{{#if CareDegree}} {{CareDegree_0}} {{CareDegree_1}} {{CareDegree_2}} {{CareDegree_3}} {{/if}}
+				{{#if CareDegreeOther}}
+					<div>
+					その他: {{CareDegreeOtherText}}
+					</div>
+				{{/if}}
+			</td>
+		</tr>
+		<tr>
+			<td>住所 </td>
+			<td colspan="2">〒{{ZipCode1}}-{{ZipCode2}}&nbsp;&nbsp;{{Address1}}</td>
+		</tr>
+		<tr>
+			<td>訪問日</td>
+			<td colspan="2">
+				{{{arrayFormat "訪問日→○: " visit_date "<br/>"}}}
+				{{{arrayFormat "特別訪問看護指示書による訪問→△: " visit_especially "<br/>"}}}
+				{{{arrayFormat "緊急時訪問→×: " visit_emergency "<br/>"}}}
+				{{{arrayFormat "1日に2回以上の訪問→◎: " visit_2more "<br/>"}}}
+			</td>
+		</tr>
+		<tr>
+			<td>病状の経過</td>
+			<td colspan="2">{{item_8_2}}</td>
+		</tr>
+		<tr>
+			<td>家庭での介護の状況</td>
+			<td colspan="2">{{item_8_3}}{{item_8_4}}</td>
+		</tr>
+		<tr>
+			<td>衛生材料等の使用量及び使用状況</td>
+			<td colspan="2">
+				衛生材料等の名称：{{item_8_5}}<br/>
+				使用及び交換頻度：{{item_8_6}}<br/>
+				使用量：{{item_8_7}}<br/>
+			</td>
+		</tr>
+		<tr>
+			<td>衛生材料の種類・量の変更</td>
+			<td colspan="2">
+				衛生材料等（種類・サイズ・必要量等）の変更の必要性：{{item_8_8}}<br/>
+				変更内容：{{item_8_9}}<br/>
+			</td>
+		</tr>
+		<tr>
+			<td>特記すべき事項</td>
+			<td colspan="2">{{item_8_10}}</td>
+		</tr>
+		
+
+	</table><br/>	
+	上記の通り、指定訪問看護の実施について報告いたします。<br/>
+	{{PrintDate}}
+	<br/><br/>
+	<table  border="0" class="table">
+	<tr>
+	<td style="width:20%;"></td>
+		<td style="width:60%;">
+		指定訪問看護ステーション名：<br/>
+		管理者氏名： {{Person1}}<br/>
+		担当者氏名： {{Person2}}<br/>
+		</td>
+	<td style="width:20%;">
+	<br />
+	印<br />
+	</td>
+	</tr>
+	</table>
+ </div>
+ 
+	</script> 
+
+</form>
+ 
+</body>
+</html>

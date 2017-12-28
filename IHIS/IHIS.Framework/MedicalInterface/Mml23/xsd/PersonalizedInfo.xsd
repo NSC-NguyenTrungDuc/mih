@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<xs:schema xmlns:mmlNm="uri:mmlNm" xmlns:mmlFc="uri:mmlFc" xmlns:mmlCm="uri:mmlCm" xmlns:mmlPh="uri:mmlPh" xmlns:mmlDp="uri:mmlDp" xmlns:mmlPsi="uri:mmlPsi" xmlns:mmlAd="uri:mmlAd" elementFormDefault="qualified" targetNamespace="uri:mmlPsi" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="uri:mmlCm" />
+  <xs:import namespace="uri:mmlFc" />
+  <xs:import namespace="uri:mmlDp" />
+  <xs:import namespace="uri:mmlPh" />
+  <xs:import namespace="uri:mmlCm" />
+  <xs:import namespace="uri:mmlAd" />
+  <xs:import namespace="uri:mmlNm" />
+  <xs:element name="PersonalizedInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mmlCm:Id" />
+        <xs:element ref="mmlPsi:personName" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlFc:Facility" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlDp:Department" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlPsi:addresses" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlPsi:emailAddresses" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlPsi:phones" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="phones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="mmlPh:Phone" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="emailAddresses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="mmlCm:email" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addresses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="mmlAd:Address" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="personName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="mmlNm:Name" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Plan Docoment for Home Care</title>
+	<script src="../js/pikaday.js"></script>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/handlebars.min.js"></script>	
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body> 
+
+
+<form id="myform" action="" method="post">
+ 	<div>
+	
+		<div id="data-template">
+		</div>
+	</div>
+	<script id="some-template" type="text/x-handlebars-template">
+	<div class="wrapper">
+
+		<h1 class="page-title text-center">在宅医療計画書(訪問診療同意書)</h1>
+		<!-- （新規・変更）←新規と3～6ヶ月ごとに見直しする -->
+		<table class="table" border="0" align="" cellpadding="0" cellspacing="0"> 
+		<tr><td style="width:80%">
+		<!-- ☆患者へのサービス、患者情報の管理として毎月交付する部分は掛けとしている。</td><td>平成</td><td>{{PrintDate}}</td> -->
+		</tr>
+		</table>
+
+		<br/>
+		
+		<table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>{{PatientName1}}  様</td>
+				<td>ID  {{PatientCode}}</td>
+			</tr>
+			<tr>
+				<td>  {{PatientName1}}  様</p></td>
+				<td>の今後の訪問診療については以下のとおりに計画的に実施させていただきます。</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+				なお、ご質問、ご相談等ございましたら遠慮なくお尋ねください。<br/>
+				{{Hospital.YoyangName}} &nbsp;&nbsp;　　{{DoctorName}}　　　　　院長
+				</td>
+			
+		</table>
+			
+		<br/>
+		
+		<table class="table full-w" border="1" >
+			<tr>
+				<td class="col-highlight">主たる病名</td>
+				<td colspan="4">
+					{{#each Diseases}}
+						{{this}} <br/>
+					{{/each}}
+				</td>
+			</tr>
+			<tr>
+				<td class="col-highlight">訪問診療予定日</td>
+				<td colspan="4">{{item_1_14}}</td>
+			</tr>
+			<tr>
+				<td class="col-highlight">服薬に係る留意事項</td>
+				<td colspan="4">{{item_1_15}}</td>
+			</tr>
+			<tr>
+				<td colspan="5">寝たきり度　</td>
+			</tr>
+			<tr class="row" border="0">
+				<td colspan="5">
+					{{item_1_16}}
+					{{#if item_1_16_Other}}
+						<br />
+						その他: {{item_1_16_OtherText}}
+					{{/if}}
+				</td>
+			</tr>
+			<tr>
+				<td colspan="5">日常生活活動（ADL)の状況　</td>
+			</tr>
+			<tr>
+				<td style="width:20%">移動</td>
+				<td colspan="2">{{item_1_17}}</td>
+				<td>食事</td>
+				<td>{{item_1_20}}</td>
+			</tr>
+			<tr>
+				<td>排泄</td>
+				<td colspan="2">{{item_1_18}}</td>
+				<td>入浴</td>
+				<td>{{item_1_21}}</td>
+			</tr>
+			<tr>
+				<td>着替え</td>
+				<td colspan="2">{{item_1_19}}</td>
+				<td>整容</td>
+				<td>{{item_1_22}}</td>
+			</tr>
+			{{#if item_1_Other}}
+			<tr>
+				<td colspan = "5">
+					その他: {{item_1_OtherText}}
+				</td>
+			</tr>
+			{{/if}}
+			
+			<tr>
+				<td colspan="5">認知症老人の日常生活自立度</td>
+			</tr>
+			<tr>
+				<td colspan="5">
+					{{item_1_38}}
+					{{#if item_1_38_Other}}
+						<br />
+						その他: {{item_1_38_OtherText}}
+					{{/if}}
+				</td>
+			</tr>
+			<tr>
+				<td>要介護認定の状況</td>
+				<td colspan="4">
+					{{CareDegree}}{{#if CareDegree}} {{CareDegree_0}} {{CareDegree_1}} {{CareDegree_2}} {{CareDegree_3}} {{/if}}
+					{{#if CareDegreeOther}}
+						<br />
+						その他: {{CareDegreeOtherText}}
+					{{/if}}
+				</td>
+			</tr>
+			<tr>
+				<td>訪問診療計画</td>
+				<td colspan="4">{{item_1_25}}</td>
+			</tr>
+			<tr>
+				<td class="col-highlight">最近の寝たきり度、ADL状況、認知症度の変化</td>
+				<td colspan="4">{{item_1_26}}</td>
+			</tr>
+			<tr>
+				<td class="col-highlight">必要と考える保健福祉サービスの内容</td>
+				<td colspan="4">
+					{{item_1_27_1}} {{#if item_1_27_1}}&nbsp;&nbsp;{{/if}}
+					{{item_1_27_2}} {{#if item_1_27_2}}&nbsp;&nbsp;{{/if}}
+					{{item_1_27_3}} {{#if item_1_27_3}}&nbsp;&nbsp;{{/if}}
+					{{item_1_27_4}} {{#if item_1_27_4}}&nbsp;&nbsp;{{/if}}
+					{{item_1_27_5}} {{#if item_1_27_5}}&nbsp;&nbsp;{{/if}}
+					{{item_1_27_6}} {{#if item_1_27_6}}&nbsp;&nbsp;{{/if}}
+					{{item_1_27_7}} {{#if item_1_27_7}}&nbsp;&nbsp;{{/if}}
+					{{item_1_27_8}} {{#if item_1_27_8}}&nbsp;&nbsp;{{/if}}
+					{{item_1_27_9}} {{#if item_1_27_9}}&nbsp;&nbsp;{{/if}}
+					{{item_1_27_10}} {{#if item_1_27_10}}&nbsp;&nbsp;{{/if}}
+					{{item_1_27_11}}{{#if item_1_27_11}}（{{/if}}{{item_1_27_11_1}}{{#if item_1_27_11}}）{{/if}}
+				</td>
+			</tr>
+			<tr>
+				<td class="col-highlight">緊急時の連絡先<br/>不在時の対応法
+</td>
+				<td colspan="4">{{item_1_29}}</td>
+			</tr>
+			<tr>
+				<td class="col-highlight">
+					その他
+				</td>
+				<td colspan="4">{{item_1_30}}</td>
+			</tr>
+			<tr>
+				<td class="col-highlight">看護必要度</td>
+					<td colspan="4">
+						{{item_1_28_0}} {{#if item_1_28_0}}&nbsp;&nbsp;{{/if}}
+						{{item_1_28_1}} {{#if item_1_28_1}}&nbsp;&nbsp;{{/if}}
+						{{item_1_28_2}} {{#if item_1_28_2}}&nbsp;&nbsp;{{/if}}
+						{{item_1_28_3}}{{#if item_1_28_3}}（{{/if}}{{item_1_28_3_1}}{{#if item_1_28_3}}）{{/if}}
+					</td>
+				</tr>
+			<tr>
+				<td colspan="5">
+				上記、訪問診療の計画の内容について説明を受け、居宅での療養を行っていただくことに同意いたします。<br/>
+				患者氏名  <br/>
+				家族氏名（代表者）  <br/>
+				※患者ご本人がサインできない場合は、家族氏名欄に記載する。<br/>
+				</td>
+			</tr>
+		</table>
+		
+		<p>{{Hospital.YoyangName}}</p>
+		
+		<hr>	
+		内科・整形外科・リハビリテーション科<br/>
+		電話：{{Hospital.Tel}}FAX:{{Hospital.Fax}}　往診、訪問診療、訪問看護も実施しております。<br/>
+		標榜時間　月曜日から金曜日　午前9時～午後1時　午後3時～午後5時<br/>
+		休診日　土曜日午後と日曜日、祝日、年末年始<br/>
+		
+		<hr>
+	
+	</div>
+	</script>
+
+</form>
+ 
+</body>
+</html>

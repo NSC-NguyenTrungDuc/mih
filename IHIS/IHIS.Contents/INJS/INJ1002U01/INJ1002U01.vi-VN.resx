@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnPrintCalendar.Text" xml:space="preserve">
+    <value>In lịch</value>
+  </data>
+  <data name="btnReserOrder.Text" xml:space="preserve">
+    <value>Phiếu hẹn khám</value>
+  </data>
+  <data name="grdOrder.QuerySQL" xml:space="preserve">
+    <value>SELECT F.GROUP_SER
+     , A.PKINJ1002
+     , A.FKINJ1001
+     , E.FKOCS1003
+     , C.HANGMOG_NAME
+     , A.SEQ
+     , A.TONGGYE_CODE
+     , A.MAGAM_DATE
+     , A.MAGAM_JANGSO
+     , A.MAGAM_SER
+     , TO_CHAR(A.RESER_DATE, 'YYYY/MM/DD')
+     , A.RESER_TIME
+     , TO_CHAR(A.JUBSU_DATE, 'YYYY/MM/DD')
+     , A.HANGMOG_CODE
+     , A.JUSA_BUUI
+     , A.ACTING_JANGSO
+     , TO_CHAR(A.ACTING_DATE, 'YYYY/MM/DD')
+     , A.ACTING_TIME
+     , A.COMPANY_CODE
+     , A.LOT_NO
+     , A.CHASU_CODE
+     , A.PW_RESULT
+     , A.CS_RESULT
+     , A.AST
+     , NVL(A.ACTING_FLAG,'N')  ACTING_FLAG
+     , A.SUNAB_SURYANG
+     , TO_CHAR(A.SUNAB_DATE, 'YYYY/MM/DD')
+     , A.FKOUT1001  FKOUT1001
+     , DECODE(D.BUNRYU2, '05', '1', DECODE(NVL(F.ANTI_CANCER_YN,'N'), 'X', '1', 'Y', '2', '0')) CANCER_YN
+     , E.BUNHO      BUNHO
+     , F.ORDER_REMARK    REMARK_CHK
+     , A.DC_YN
+     , A.JUSA_TONG_CNT
+     , A.OTHER_BUSEO_YN
+     , A.JUJONGJA
+     , FN_ADM_LOAD_USER_NAME(A.JUJONGJA) JUJONGJA_NAME
+     , FN_INJ_YEBANG_CHK(A.HANGMOG_CODE) YEBANG_JUJONG_CHK
+     , FN_INJ_LOAD_BANNAB_ACTDAY(E.FKOCS1003, A.RESER_DATE) ACTDAY_CHK
+     , FN_BAS_LOAD_GWA_NAME(A.GWA, A.RESER_DATE)
+     , NVL(F.BANNAB_YN,'N') BANNAB_YN
+     , FN_INJ_SKIN_JUSA_CHK(A.HANGMOG_CODE) SKIN_YN
+     , TO_CHAR(E.CHUNGGU_DATE, 'YYYY/MM/DD') CHUNGGU_DATE
+     , TO_CHAR(E.ORDER_DATE, 'YYYY/MM/DD')   ORDER_DATE
+     , FN_BAS_LOAD_DOCTOR_NAME(E.DOCTOR, A.RESER_DATE)       DOCTOR
+     , FN_OCS_LOAD_CODE_NAME('ORD_DANUI',F.ORD_DANUI)    ORD_DANUI
+     , DECODE(F.HOPE_DATE,NULL,'N','Y')     HOPE_DATE_YN
+     , F.BOGYONG_CODE || FN_OCS_LOAD_CODE_NAME('JUSA_SPD_GUBUN',NVL(F.JUSA_SPD_GUBUN,'0'))    BOGYONG_CODE
+     , F.SURYANG
+     , F.DV
+     , DECODE(F.DV_TIME, '#', '/', F.DV_TIME)
+     , F.SLIP_CODE
+     , F.ORDER_DATE
+     , A.MIX_GROUP
+     , F.HOPE_DATE
+     , F.ORDER_GUBUN
+  FROM OCS1003 F
+     , INJ1001 E
+     , INV0110 D
+     , OCS0103 C
+     , INJ1002 A
+ WHERE A.HOSP_CODE      = :f_hosp_code
+   AND C.HOSP_CODE      = A.HOSP_CODE
+   AND D.HOSP_CODE(+)   = C.HOSP_CODE
+   AND E.HOSP_CODE      = A.HOSP_CODE
+   AND F.HOSP_CODE      = A.HOSP_CODE
+   AND E.BUNHO          = :f_bunho
+   AND E.NALSU          &gt; 0
+   AND NVL(E.DC_YN,'N') = 'N'
+   AND A.FKINJ1001      = E.PKINJ1001
+   AND A.RESER_DATE     = TO_DATE(:f_reser_date, 'YYYY/MM/DD')
+   AND C.HOSP_CODE      = :f_hosp_code
+   AND TO_DATE(:f_reser_date, 'YYYY/MM/DD') BETWEEN C.START_DATE AND C.END_DATE
+   AND C.HANGMOG_CODE   = A.HANGMOG_CODE
+   AND D.JAERYO_CODE(+) = C.JAERYO_CODE
+   AND F.PKOCS1003      = E.FKOCS1003
+   AND NVL(F.WONYOI_ORDER_YN,'N') != 'Y'
+   AND NVL(A.ACTING_FLAG,'N') = 'N'
+ ORDER BY E.GWA, E.DOCTOR, F.GROUP_SER , A.MIX_GROUP, A.HANGMOG_CODE</value>
+  </data>
+  <data name="xEditGridCell10.HeaderText" xml:space="preserve">
+    <value>Ngày tiêm</value>
+  </data>
+  <data name="xEditGridCell11.HeaderText" xml:space="preserve">
+    <value>Mã danh mục</value>
+  </data>
+  <data name="xEditGridCell15.HeaderText" xml:space="preserve">
+    <value>SL</value>
+  </data>
+  <data name="xEditGridCell16.HeaderText" xml:space="preserve">
+    <value>ĐV</value>
+  </data>
+  <data name="xEditGridCell17.HeaderText" xml:space="preserve">
+    <value>Tốc độ</value>
+  </data>
+  <data name="xEditGridCell18.HeaderText" xml:space="preserve">
+    <value>ST</value>
+  </data>
+  <data name="xEditGridCell19.HeaderText" xml:space="preserve">
+    <value>Phương pháp tiêm</value>
+  </data>
+  <data name="xEditGridCell21.HeaderText" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="xEditGridCell22.HeaderText" xml:space="preserve">
+    <value>Y tá</value>
+  </data>
+  <data name="xEditGridCell23.HeaderText" xml:space="preserve">
+    <value>Act</value>
+  </data>
+  <data name="xEditGridCell24.HeaderText" xml:space="preserve">
+    <value>Chống ung thư
+Thuốc gây mê</value>
+  </data>
+  <data name="xEditGridCell25.HeaderText" xml:space="preserve">
+    <value>Số lần</value>
+  </data>
+  <data name="xEditGridCell26.HeaderText" xml:space="preserve">
+    <value>Loại</value>
+  </data>
+  <data name="xEditGridCell4.HeaderText" xml:space="preserve">
+    <value>Tên yêu cầu</value>
+  </data>
+  <data name="xEditGridCell53.HeaderText" xml:space="preserve">
+    <value>Khoa</value>
+  </data>
+  <data name="xEditGridCell57.HeaderText" xml:space="preserve">
+    <value>Ngày yêu cầu</value>
+  </data>
+  <data name="xEditGridCell58.HeaderText" xml:space="preserve">
+    <value>Chỉ thị của BS</value>
+  </data>
+  <data name="xEditGridCell60.HeaderText" xml:space="preserve">
+    <value>SL</value>
+  </data>
+  <data name="xEditGridCell8.HeaderText" xml:space="preserve">
+    <value>G
+R</value>
+  </data>
+  <data name="xEditGridCell9.HeaderText" xml:space="preserve">
+    <value>Ngày hẹn khám</value>
+  </data>
+  <data name="xButtonList1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="patInfo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+</root>

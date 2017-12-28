@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="grdPa.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="grdPa.Size" type="System.Drawing.Size, System.Drawing">
+    <value>534, 445</value>
+  </data>
+  <data name="grdResult.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+  <data name="grdResult.Size" type="System.Drawing.Size, System.Drawing">
+    <value>647, 0</value>
+  </data>
+  <data name="splitter2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>647, 3</value>
+  </data>
+  <data name="grdHangmog.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+  <data name="grdHangmog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>647, 324</value>
+  </data>
+  <data name="xPanel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>539, 52</value>
+  </data>
+  <data name="xPanel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>649, 447</value>
+  </data>
+  <data name="splitter1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>536, 52</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cboMasterType.MaxDropDownItems" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="cboMasterType.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+  <data name="xLabel9.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="btnFile.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhEAAQAIMAABRJpQJlzSmH4TuW6xl52Qtt0kql8lix+kqk8xp62TuW6kuk8ymI4mK5/xl62f//
+        /yH/C05FVFNDQVBFMi4wAwEBAAAh+QQBAAAPACwAAAAAEAAQAAAIXwAfCBwIoKBBAAMTEnRQIEAAhAoV
+        Amj4MGJCAAQoQrQIQECCghU5DmAAsSBHAwo2WnwA4AAClRwbHFgw4CBMljYHCCAQciXLnT1XdiRwU6LO
+        ohcN1PQpsKUBpAQNrgwIADs=
+</value>
+  </data>
+  <data name="btnIfHistory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>475, 3</value>
+  </data>
+  <data name="btnIfHistory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 28</value>
+  </data>
+  <data name="chkAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 24</value>
+  </data>
+  <data name="chkSend.Location" type="System.Drawing.Point, System.Drawing">
+    <value>235, 6</value>
+  </data>
+  <data name="chkSend.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 24</value>
+  </data>
+  <data name="chkEmergency.Location" type="System.Drawing.Point, System.Drawing">
+    <value>174, 6</value>
+  </data>
+  <data name="chkEmergency.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 24</value>
+  </data>
+  <data name="btnPrePrint.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhEAAQAIQAAKurq+Dg4P///8HBwUxNUsPh/6rX/peXubnS8eLy/6mpqb7F3fD5/7Gyy/H5/+Px
+        /+Py/7zB2Li50MHh//b2+ez0/KyxzZubvL3Z+NPZ6Pj5+6+xy6Kpybi+1qGmxv///yH/C05FVFNDQVBF
+        Mi4wAwEBAAAh+QQBAAAfACwAAAAAEAAQAAAIhAA/CBxIsODABgcSJrwggYLBDxoaMHDggEGFDBsefoiw
+        AEKCBwkSWOigccEEDAhSIvBQsoDLlxwKApg504DNmzMFAhAQoCfNnzk/AFDQs6jRogCEKhDAtKnTpjOX
+        +gSAlGoAATR5Hj2KVSiAAWDDih0QICnQszQHAiDAtq3bpATR/hQYEAA7
+</value>
+  </data>
+  <data name="btnResultLoad.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABU0lEQVQ4T5WRPUvDUBSGM9Qa6hIsdq4W
+        MjkFO4vF/gN1dei/cJTMuojVwU6FEBRBRDu4uVhFbLF+tCgKYmfBinXpfc25N0kTk6b1hXe5uc/DuSfS
+        sBTMVVS6RbfXuxLwsebWvhaeYXCkYBR4oGBUmO7ZSD/tyixaR/O+DoJJbmMiBHerm2CNElh9B7jZCpV4
+        J7RRERJ8X22D3ZeB2xIQIvn7PBsVcKdmgD0fA619wJUUfRIvHBB8NQ7Rez0De7IkzYO+pCYmoWV6Yd8S
+        +QQPp2Bv566ENZ1J9rjEKwj8gdhYjA7A3i+5hHkld2UwS+IIAvB0Og1FURAfj3NJr10VkhchocX+XGxw
+        QQCmkICaTE5ClmUu+Xw84Tvp1A0OOhWEJ7mFHKiapiEzk8FUKoWJRCIasmIaJqjSyvISqPnFPLJzWaiq
+        Ggk41dd1XvuzJDkH/6uOX+8KHl7ZOOwNAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnResultLoad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>418, 3</value>
+  </data>
+  <data name="laySpecimenInfo.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+  <data name="layResult.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+  <data name="layPrint2.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+  <data name="btnDel.Text" xml:space="preserve">
+    <value>del</value>
+  </data>
+  <data name="btnDel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnFile.Text" xml:space="preserve">
+    <value>電文作成＆印刷</value>
+  </data>
+  <data name="btnFile.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnIfHistory.Text" xml:space="preserve">
+    <value>電文送信履歴照会</value>
+  </data>
+  <data name="btnIfHistory.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnList.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPrePrint.Text" xml:space="preserve">
+    <value>依頼リスト印刷</value>
+  </data>
+  <data name="btnPrePrint.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnResultLoad.Text" xml:space="preserve">
+    <value>結果LOAD</value>
+  </data>
+  <data name="btnResultLoad.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cboMasterType.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbxJubsuDate.Text" xml:space="preserve">
+    <value>受付  日時</value>
+  </data>
+  <data name="cbxJubsuDate.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbxSpecimenSer.Text" xml:space="preserve">
+    <value>検体  番号</value>
+  </data>
+  <data name="cbxSpecimenSer.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkAll.Text" xml:space="preserve">
+    <value>全体</value>
+  </data>
+  <data name="chkAll.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkEmergency.Text" xml:space="preserve">
+    <value>緊急</value>
+  </data>
+  <data name="chkEmergency.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkSend.Text" xml:space="preserve">
+    <value>未転送</value>
+  </data>
+  <data name="chkSend.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dbxAge.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dbxDoctorName.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dbxGwa.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dbxHoCode.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dbxHoDong.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dbxInOutGubun.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dbxJu.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dbxJubsuDate.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dbxJubsujaName.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dbxJubsuTime.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dbxMaxDate.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dbxMaxSpecimenSer.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dbxMaxTime.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dbxSex.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dbxSpecimenCode.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dbxSpecimenName.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dbxSuname.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dtpJubsuDate.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dtpToJubsuDate.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="grdHangmog.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="grdPa.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="grdResult.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>自動転送チェック</value>
+  </data>
+  <data name="label2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="splitter1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="splitter2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtFromSeq.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtFromSpecimenSer.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtJubsuja.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtToSeq.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtToSpecimenSer.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="xComboItem1.DisplayItem" xml:space="preserve">
+    <value>院内</value>
+  </data>
+  <data name="xComboItem4.DisplayItem" xml:space="preserve">
+    <value>Sanritsu</value>
+  </data>
+  <data name="xComboItem5.DisplayItem" xml:space="preserve">
+    <value>BML</value>
+  </data>
+  <data name="xComboItem6.DisplayItem" xml:space="preserve">
+    <value>SRL</value>
+  </data>
+  <data name="xEditGridCell1.HeaderText" xml:space="preserve">
+    <value>区分</value>
+  </data>
+  <data name="xEditGridCell10.HeaderText" xml:space="preserve">
+    <value>患者番号</value>
+  </data>
+  <data name="xEditGridCell11.HeaderText" xml:space="preserve">
+    <value>転送</value>
+  </data>
+  <data name="xEditGridCell12.HeaderText" xml:space="preserve">
+    <value>転送
+完了</value>
+  </data>
+  <data name="xEditGridCell14.HeaderText" xml:space="preserve">
+    <value>診療カード</value>
+  </data>
+  <data name="xEditGridCell15.HeaderText" xml:space="preserve">
+    <value>患者氏名</value>
+  </data>
+  <data name="xEditGridCell16.HeaderText" xml:space="preserve">
+    <value>性別</value>
+  </data>
+  <data name="xEditGridCell17.HeaderText" xml:space="preserve">
+    <value>受付</value>
+  </data>
+  <data name="xEditGridCell18.HeaderText" xml:space="preserve">
+    <value>区分</value>
+  </data>
+  <data name="xEditGridCell19.HeaderText" xml:space="preserve">
+    <value>センターコード</value>
+  </data>
+  <data name="xEditGridCell2.HeaderText" xml:space="preserve">
+    <value>センターコード</value>
+  </data>
+  <data name="xEditGridCell21.HeaderText" xml:space="preserve">
+    <value>年齢区分</value>
+  </data>
+  <data name="xEditGridCell22.HeaderText" xml:space="preserve">
+    <value>依頼キー</value>
+  </data>
+  <data name="xEditGridCell23.HeaderText" xml:space="preserve">
+    <value>項目コード</value>
+  </data>
+  <data name="xEditGridCell24.HeaderText" xml:space="preserve">
+    <value>年齢</value>
+  </data>
+  <data name="xEditGridCell25.HeaderText" xml:space="preserve">
+    <value>誕生日</value>
+  </data>
+  <data name="xEditGridCell26.HeaderText" xml:space="preserve">
+    <value>誕生日Data区分</value>
+  </data>
+  <data name="xEditGridCell27.HeaderText" xml:space="preserve">
+    <value>採取日</value>
+  </data>
+  <data name="xEditGridCell28.HeaderText" xml:space="preserve">
+    <value>採取時間</value>
+  </data>
+  <data name="xEditGridCell29.HeaderText" xml:space="preserve">
+    <value>項目個数</value>
+  </data>
+  <data name="xEditGridCell3.HeaderText" xml:space="preserve">
+    <value>依頼キー</value>
+  </data>
+  <data name="xEditGridCell30.HeaderText" xml:space="preserve">
+    <value>身長</value>
+  </data>
+  <data name="xEditGridCell31.HeaderText" xml:space="preserve">
+    <value>体重</value>
+  </data>
+  <data name="xEditGridCell32.HeaderText" xml:space="preserve">
+    <value>尿量</value>
+  </data>
+  <data name="xEditGridCell33.HeaderText" xml:space="preserve">
+    <value>尿単位</value>
+  </data>
+  <data name="xEditGridCell34.HeaderText" xml:space="preserve">
+    <value>妊娠週数</value>
+  </data>
+  <data name="xEditGridCell35.HeaderText" xml:space="preserve">
+    <value>透析前後</value>
+  </data>
+  <data name="xEditGridCell36.HeaderText" xml:space="preserve">
+    <value>緊急</value>
+  </data>
+  <data name="xEditGridCell37.HeaderText" xml:space="preserve">
+    <value>コメント</value>
+  </data>
+  <data name="xEditGridCell38.HeaderText" xml:space="preserve">
+    <value>space</value>
+  </data>
+  <data name="xEditGridCell39.HeaderText" xml:space="preserve">
+    <value>区分</value>
+  </data>
+  <data name="xEditGridCell4.HeaderText" xml:space="preserve">
+    <value>科名</value>
+  </data>
+  <data name="xEditGridCell40.HeaderText" xml:space="preserve">
+    <value>センターコード</value>
+  </data>
+  <data name="xEditGridCell41.HeaderText" xml:space="preserve">
+    <value>依頼キー</value>
+  </data>
+  <data name="xEditGridCell42.HeaderText" xml:space="preserve">
+    <value>項目コード</value>
+  </data>
+  <data name="xEditGridCell43.HeaderText" xml:space="preserve">
+    <value>SANコード</value>
+  </data>
+  <data name="xEditGridCell44.HeaderText" xml:space="preserve">
+    <value>検体コード</value>
+  </data>
+  <data name="xEditGridCell45.HeaderText" xml:space="preserve">
+    <value>至急</value>
+  </data>
+  <data name="xEditGridCell46.HeaderText" xml:space="preserve">
+    <value>space</value>
+  </data>
+  <data name="xEditGridCell47.HeaderText" xml:space="preserve">
+    <value>検体番号</value>
+  </data>
+  <data name="xEditGridCell48.HeaderText" xml:space="preserve">
+    <value>SRLコード</value>
+  </data>
+  <data name="xEditGridCell49.HeaderText" xml:space="preserve">
+    <value>検体コード</value>
+  </data>
+  <data name="xEditGridCell5.HeaderText" xml:space="preserve">
+    <value>病棟名</value>
+  </data>
+  <data name="xEditGridCell50.HeaderText" xml:space="preserve">
+    <value>救急</value>
+  </data>
+  <data name="xEditGridCell51.HeaderText" xml:space="preserve">
+    <value>space</value>
+  </data>
+  <data name="xEditGridCell52.HeaderText" xml:space="preserve">
+    <value>specimen_ser</value>
+  </data>
+  <data name="xEditGridCell53.HeaderText" xml:space="preserve">
+    <value>負荷時間</value>
+  </data>
+  <data name="xEditGridCell54.HeaderText" xml:space="preserve">
+    <value>結果</value>
+  </data>
+  <data name="xEditGridCell55.HeaderText" xml:space="preserve">
+    <value>類型</value>
+  </data>
+  <data name="xEditGridCell56.HeaderText" xml:space="preserve">
+    <value>コメント</value>
+  </data>
+  <data name="xEditGridCell57.HeaderText" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="xEditGridCell58.HeaderText" xml:space="preserve">
+    <value>項目名</value>
+  </data>
+  <data name="xEditGridCell59.HeaderText" xml:space="preserve">
+    <value>検体</value>
+  </data>
+  <data name="xEditGridCell6.HeaderText" xml:space="preserve">
+    <value>外/入</value>
+  </data>
+  <data name="xEditGridCell60.HeaderText" xml:space="preserve">
+    <value>項目名</value>
+  </data>
+  <data name="xEditGridCell61.HeaderText" xml:space="preserve">
+    <value>検体</value>
+  </data>
+  <data name="xEditGridCell62.HeaderText" xml:space="preserve">
+    <value>hospital_code</value>
+  </data>
+  <data name="xEditGridCell7.HeaderText" xml:space="preserve">
+    <value>負荷時間</value>
+  </data>
+  <data name="xEditGridCell8.HeaderText" xml:space="preserve">
+    <value>result_yn</value>
+  </data>
+  <data name="xEditGridCell9.HeaderText" xml:space="preserve">
+    <value>医師名</value>
+  </data>
+  <data name="xLabel1.Text" xml:space="preserve">
+    <value>コメント</value>
+  </data>
+  <data name="xLabel1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="xLabel10.Text" xml:space="preserve">
+    <value>診療科</value>
+  </data>
+  <data name="xLabel10.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="xLabel11.Text" xml:space="preserve">
+    <value>End No.</value>
+  </data>
+  <data name="xLabel11.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="xLabel2.Text" xml:space="preserve">
+    <value>医師名</value>
+  </data>
+  <data name="xLabel2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="xLabel3.Text" xml:space="preserve">
+    <value>氏名</value>
+  </data>
+  <data name="xLabel3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="xLabel4.Text" xml:space="preserve">
+    <value>検体日付</value>
+  </data>
+  <data name="xLabel4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="xLabel5.Text" xml:space="preserve">
+    <value>性別/年齢</value>
+  </data>
+  <data name="xLabel5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="xLabel6.Text" xml:space="preserve">
+    <value>区分</value>
+  </data>
+  <data name="xLabel6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="xLabel7.Text" xml:space="preserve">
+    <value>検体</value>
+  </data>
+  <data name="xLabel7.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="xLabel9.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="xPanel1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="xPanel2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="xPanel3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="xPanel4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="xPanel5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="xPanel8.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+</root>

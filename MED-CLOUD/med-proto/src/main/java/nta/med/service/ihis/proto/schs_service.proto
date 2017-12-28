@@ -1,0 +1,887 @@
+import "rpc.proto";
+import "schs_model.proto";
+import "common_model.proto";
+import "ocso_model.proto";
+
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "SchsServiceProto";
+option (version) = "1.0.0";
+option (service) = "schs";
+
+// SchsSCH0201Q01SCH0109ComboListRequest
+message SchsSCH0201Q01SCH0109ComboListRequest{
+}
+
+// Combo List by Code Type Response
+
+//SchsSCH0201Q01SCH0001ComboListRequest
+message SchsSCH0201Q01SCH0001ComboListRequest{
+        optional string jundal_table = 1;
+}
+
+
+//SchsSCH0201Q01ExitsJundalTableRequest
+message SchsSCH0201Q01ExitsJundalTableRequest{        
+    optional string hangmog_code = 1;
+    optional string jundal_table = 2;
+}
+
+//SchsSCH0201Q01ExitsJundalTableResponse
+message SchsSCH0201Q01ExitsJundalTableResponse{        
+    optional string result = 1;        
+}
+
+//SchsSCH0201Q01ReserListRequest
+message SchsSCH0201Q01ReserListRequest{
+    optional string from_date = 1;
+    optional string to_date = 2;
+    optional string jundal_table = 3;
+    optional string jundal_part = 4;
+    optional bool checked = 5;
+}
+
+//SchsSCH0201Q01ReserListResponse
+message SchsSCH0201Q01ReserListResponse{
+	repeated SchsSCH0201Q01ReserListItemInfo reser_list_item = 1;
+}
+// new SchsSCH0201Q01ReserListCboRequest
+message SchsSCH0201Q01ReserListCboRequest{
+	optional string from_date = 1;
+	optional string to_date = 2;
+	optional string jundal_table = 3;
+	optional string jundal_part = 4;
+	optional bool chkchecked = 5;
+	optional bool is_selected_gumsa = 6;
+}
+message SchsSCH0201Q01ReserListCboResponse{
+	repeated SchsSCH0201Q01ReserListItemInfo reser_list_item = 1;
+	repeated ComboListItemInfo combo_list_item = 2;
+}
+
+//SchsSCH0201Q01GumsaComboListRequest
+message SchsSCH0201Q01GumsaComboListRequest{
+	optional string hangmog_code = 1;
+}
+//SchsSCH0201Q01GumsaComboListResponse
+message SchsSCH0201Q01GumsaComboListResponse{
+	repeated ComboListItemInfo gumsa_combo_item = 1;
+	optional string selected_value = 2;
+}
+
+//SchsSCH0201Q02JundalComboListRequest
+	message SchsSCH0201Q02JundalComboListRequest{
+}
+
+//SchsSCH0201Q02JundalComboListResponse
+message SchsSCH0201Q02JundalComboListResponse{
+	repeated ComboListItemInfo combo_list_item = 1;
+}
+
+//SchsSCH0201Q02ReserList02Request
+message SchsSCH0201Q02ReserList02Request{
+    optional string from_date = 1;
+    optional string to_date = 2;
+    optional string gwa = 3;
+}
+
+
+//SchsSCH0201Q02ReserList02Response
+message SchsSCH0201Q02ReserList02Response{
+	repeated SchsSCH0201Q02ReserList02ItemInfo reser_list02_item = 1;
+}
+
+message SchsSCH0201Q02ReserList03Request{
+    optional string from_date = 1;
+    optional string to_date = 2;
+    optional string gwa = 3;
+        
+}
+
+
+//SchsSCH0201Q02ReserList03Response
+message SchsSCH0201Q02ReserList03Response{
+    repeated SchsSCH0201Q02ReserList03ItemInfo reser_list03_item = 1;
+}
+
+
+//SchsSCH0201Q04PrartListRequest
+message SchsSCH0201Q04PrartListRequest{
+	optional string jundal_table = 1;
+}
+
+
+//SchsSCH0201Q04PrartListResponse
+message SchsSCH0201Q04PrartListResponse{
+	repeated SchsSCH0201Q04PrartListItemInfo prart_list_item = 1;
+}
+
+
+//SchsSCH0201Q04GetMonthReserListInfoRequest
+message SchsSCH0201Q04GetMonthReserListInfoRequest{
+	optional string month = 1;
+	optional string jundal_table = 2;
+	optional string jundal_part = 3;
+
+}
+
+
+//SchsSCH0201Q04GetMonthReserListInfoResponse
+message SchsSCH0201Q04GetMonthReserListInfoResponse{
+	repeated SchsSCH0201Q04GetMonthReserListInfo month_reser_list_item = 1;
+}
+
+
+//SchsSCH0201Q04ReserTimeListRequest
+message SchsSCH0201Q04ReserTimeListRequest{
+	optional string ip_addr = 1;
+}
+
+
+//SchsSCH0201Q04ReserTimeListResponse
+message SchsSCH0201Q04ReserTimeListResponse{
+	repeated SchsSCH0201Q04ReserTimeListInfo reser_time_list_item = 1;
+}
+
+//SchsSCH0201Q04PrSchTimeListRequest
+message SchsSCH0201Q04PrSchTimeListRequest{
+	optional string ip_addr = 1;
+	optional string jundal_table = 2;
+	optional string jundal_part = 3;
+	optional string gumsaja = 4;
+	optional string reser_date = 5;
+}
+
+
+//SchsSCH0201Q04PrSchTimeListResponse
+message SchsSCH0201Q04PrSchTimeListResponse{
+	required bool result = 1; 
+}
+
+//SCH0201Q12OutpatientInspectionOrderListRequest
+message SCH0201Q12OutpatientInspectionOrderListRequest {
+    optional string bunho = 1;
+    optional string stat_flg = 2;
+    optional string naewon_date = 3;
+    optional string gwa = 4;
+    optional string doctor = 5;
+    optional string reser_gubun = 6;
+}
+
+
+// SCH0201Q12OutpatientInspectionOrderListResponse
+message SCH0201Q12OutpatientInspectionOrderListResponse {
+    repeated SCH0201Q12OutpatientInspectionOrderListItemInfo outpatient_list_item = 1;
+}
+
+//Common Data
+message SchsSCH0201U99CommonDataRequest {
+	optional string jundal_table = 1;
+}
+
+
+message SchsSCH0201U99CommonDataResponse {
+	repeated ComboGumsaListItemInfo combo_list1 = 1;
+	repeated ComboGumsaPartListItemInfo combo_list2 = 2;
+}
+
+//Grd Order List
+message SchsSCH0201U99GrdOrderListRequest {
+	optional string f_bunho = 1;
+	optional string f_fkocs = 2;
+	optional string f_reser_status = 3;
+	optional string f_flag = 4;
+	optional string f_reser_gubun = 5;
+	optional string f_reser_part = 6;
+    optional string is_my_clinnic = 7;
+}
+
+message SchsSCH0201U99GrdOrderListResponse {
+	repeated SchsSCH0201U99GrdOrderListInfo order_list = 1;
+}
+
+//Grd Time List
+message SchsSCH0201U99GrdTimeListRequest {
+	optional string ip_addr = 1;
+    optional string out_hospcode =2;
+
+}
+
+message SchsSCH0201U99GrdTimeListResponse {
+	repeated SchsSCH0201U99GrdTimeListInfo order_list = 1;
+}
+
+//Date Schedule
+message SchsSCH0201U99DateScheduleListRequest {
+	optional string f_start_date   = 1;
+	optional string f_jundal_table = 2;
+	optional string f_jundal_part  = 3;
+	optional string f_hangmog_code = 4;
+	optional string out_hosp_link  = 5;
+}
+
+message SchsSCH0201U99DateScheduleListResponse {
+	repeated SchsSCH0201U99DateScheduleItemInfo date_schedule_item = 1;
+}
+
+//Reser List
+message SchsSCH0201U99ReserListRequest {
+	optional string bunho = 1;
+}
+
+message SchsSCH0201U99ReserListResponse {
+	repeated SchsSCH0201U99ReserListInfo reser_list = 1;
+}
+
+message SchsSCH0201U99ReserTimeChkRequest {
+	optional string bunho = 1;
+	optional string reser_date = 2;
+	optional string reser_time = 3;
+	optional string pksch0201 = 4;
+}
+
+message SchsSCH0201U99ReserTimeChkResponse {
+	repeated DataStringListItemInfo chk_check = 1;
+}
+
+//Layout Time List
+message SchsSCH0201U99LayoutTimeListRequest {
+	optional string ip_addr = 1;
+}
+
+message SchsSCH0201U99LayoutTimeListResponse {
+	repeated SchsSCH0201U99LayoutTimeListInfo lTime_list = 1;
+}
+
+//Layout Common
+message SchsSCH0201U99LayoutCommonListRequest {
+	optional string doctor = 1;
+	optional string f_gwa = 2;
+}
+
+
+message SchsSCH0201U99LayoutCommonListResponse {
+	repeated SchsSCH0201U99LayoutCommonListInfo common_list = 1;
+}
+
+//GWA_NAME
+message SchsSCH0201U99GetGwaNameRequest {
+	optional string gwa = 1;
+	optional string today = 2;
+}
+
+message SchsSCH0201U99GetGwaNameResponse {
+	optional string gwa_name = 1;
+}
+
+//Jundal part name
+message SchsSCH0201U99GetJundalPartNameRequest {
+	optional string io_gubun = 1;
+	optional string jundal_part = 2;
+	optional string today = 3;
+}
+
+message SchsSCH0201U99GetJundalPartNameResponse {
+	optional string jundal_part_name = 1;
+}
+
+//PR_SCH_SCH0201_IUD
+message SchsSCH0201U99ExecIUDRequest {
+    optional string i_iud_gubun = 1;
+    repeated SCH0201U99ListFkschInfo lstFksch = 2;
+    optional string i_reser_date = 3;
+    optional string i_reser_time = 4;
+    optional string i_input_id = 5;
+    optional string jundal_table = 6;
+    optional string jundal_part = 7;
+    optional string out_hospcode = 8;
+}
+message SchsSCH0201U99ExecIUDResponse{
+   optional string io_err = 1;
+}
+
+
+//Exec PR_SCH_TIME_LIST
+message SchsSCH0201U99ExecTimeListRequest {
+    optional string i_ip_address   = 1;
+    optional string i_jundal_table = 2;
+    optional string i_jundal_part  = 3;
+    optional string i_gumsaja      = 4;
+    optional string i_reser_date   = 5;
+    optional string hosp_code_link = 6;
+}
+
+
+// Exec PR_IFS_MAKE_YOYAKU
+message SchsSCH0201U99ExecMakeYoyakuRequest {
+    optional string i_pkout1001 = 1;
+    optional string i_proc_gubun = 2;
+    optional string i_yoyaku_gubun = 3;
+    optional string i_io_gubun = 4;
+    optional string i_user_id = 5;
+    optional string i_bunho = 6;
+    optional string i_gwa   = 7;
+    optional string i_doctor = 8;
+    optional string i_naewon_date = 9;
+    optional string i_jubsu_time = 10;
+}
+
+//PR_SCH_SCH0201_ETC_INSERT
+message SchsSCH0201U99ExecEtcInsertRequest {
+    optional string i_bunho = 1;
+    optional string i_jundal_table = 2;
+    optional string i_jundal_part = 3;
+    optional string i_hangmog_code = 4;
+    optional string i_user_id = 5;
+}
+
+
+message SchsSCH0201U99StoreProcedureResponse {
+	required bool result = 1;
+}
+
+
+//DELETE FROM SCH0201
+message SchsSCH0201U99DeleteSCH0201Request {
+	optional string f_pksch = 1;
+}
+
+message SCH0201U99BookingDetailRequest
+{
+        optional string jundal_table                             = 1;
+        optional string jundal_part                              = 2;
+        optional string reservation                              = 3;
+        optional string reser_date                               = 4;
+        repeated SCH0201U99EMRLinkInfo emr_link_item             = 5;
+}
+message SCH0201U99BookingDetailResponse
+{
+        repeated SCH0201U99BookingDetailInfo detail_info = 1;
+}
+
+// Update Response
+
+message SCH0109U00GrdMasterRequest{
+    optional string code_type = 1;
+    optional string code_type_name = 2;
+}
+
+message SCH0109U00GrdMasterResponse{
+    repeated SCH0109U00GrdMasterInfo grd_master_list = 1;
+}
+
+message SCH0109U00LayDupMRequest{
+    optional string code_type = 1;
+}
+
+message SCH0109U00LayDupMResponse{
+    optional string ret_value = 1;
+}
+
+message SCH0109U00GrdDetailRequest{
+    optional string code_type = 1;
+}
+
+message SCH0109U00GrdDetailResponse{
+    repeated SCH0109U00GrdDetailInfo grd_detail_list = 1;
+}
+
+message SCH0109U00LayDupDRequest{
+    optional string code = 1;
+    optional string code_type = 2;
+}
+
+message SCH0109U00LayDupDResponse{
+    optional string ret_value = 1;
+}
+message SCH0109U00XSavePerformerRequest{
+	repeated SCH0109U00GrdDetailInfo grd_detail_list = 1;
+	optional string user_id = 2;
+}
+
+message SCH0201Q05LayReserListRequest{
+	optional string bunho = 1;
+}
+
+message SCH0201Q05LayReserListResponse{
+    repeated SCH0201Q05LayReserListInfo reser_list_item = 1;
+}
+
+message SCH3001U00GrdJukyongDateRequest{
+    optional string jundal_table = 1;
+    optional string jundal_part = 2;
+    optional string gumsaja = 3;
+}
+
+message SCH3001U00GrdJukyongDateResponse{
+    repeated SCH3001U00GrdJukyongDateInfo grd_jukyong_date_list = 1;
+}
+
+message SCH3001U00GrdSCH0001Request{
+    optional string jundal_table = 1;
+}
+
+message SCH3001U00GrdSCH0001Response{
+    repeated SCH3001U00GrdSCH0001Info grd_sch0001_list = 1;
+}
+
+message SCH3001U00GrdSCH0002Request{
+    optional string jundal_table = 1;
+    optional string jundal_part = 2;
+}
+
+message SCH3001U00GrdSCH0002Response{
+    repeated SCH3001U00GrdSCH0002Info grd_sch0002_list = 1;
+}
+
+message SCH3001U00GrdSCH3100Request{
+    optional string jundal_table = 1;
+    optional string jundal_part = 2;
+    optional string gumsaja = 3;
+}
+
+message SCH3001U00GrdSCH3100Response{
+    repeated SCH3001U00GrdSCH3100Info grd_sch3001_list = 1;
+}
+
+message SCH3001U00GrdSCH3101Request{
+    optional string jundal_table = 1;
+    optional string jundal_part = 2;
+    optional string gumsaja = 3;
+    optional string reser_date = 4;
+}
+
+message SCH3001U00GrdSCH3101Response{
+    repeated SCH3001U00GrdSCH3101Info grd_sch3101_list = 1;
+}
+
+message SCH3001U00GetCboGumsaRequest{
+}
+
+message SCH3001U00GetCboGumsaResponse{
+    repeated ComboListItemInfo list_item = 1;
+}
+
+message SCH3001U00VsvHangmogCodeRequest{
+    optional string code = 1;
+}
+
+message SCH3001U00VsvHangmogCodeResponse{
+    optional string hangmog_name = 1;
+}
+
+message SCH3001U00VsvUserNameRequest{
+    optional string code = 1;
+}
+
+message SCH3001U00VsvUserNameResponse{
+    optional string user_name = 1;
+}
+
+message SCH3001U00GrdSCH0002ValidateGridColumnChangedRequest{
+    optional string hangmog_code = 1;
+}
+
+message SCH3001U00GrdSCH0002ValidateGridColumnChangedResponse{
+    optional string hangmog_name = 1;
+}
+
+message SCH3001U00GrdSCH3000Request{
+    optional string jukyong_date = 1;
+    optional string jundal_table = 2;
+    optional string jundal_part = 3;
+    optional string gumsaja = 4;
+    optional string yoil_gubun = 5;
+}
+
+message SCH3001U00GrdSCH3000Response{
+    repeated SCH3001U00GrdSCH3000Info grd_sch3000_list = 1;
+}
+
+message SCH3001U00DeleteSelectedYoilRequest{
+    optional string jukyong_date = 1;
+    optional string jundal_table = 2;
+    optional string jundal_part = 3;
+    repeated DataStringListItemInfo selected_yoil = 4;
+    optional string gumsaja = 5;
+}
+message SCH3001U00XSavePerformerCase1Request{
+    repeated SCH3001U00XSavePerformerCase1Info item_case_1 = 1;
+}
+
+message SCH3001U00XSavePerformerCase2Request{
+    repeated SCH3001U00XSavePerformerCase2Info item_case_2 = 1;
+    repeated DataStringListItemInfo selected_yoil = 2;
+}
+
+message SCH3001U00XSavePerformerCase3Request{
+    repeated SCH3001U00XSavePerformerCase3Info item_case_3 = 1;        
+}
+
+message SCH3001U00XSavePerformerCase4Request{
+    repeated SCH3001U00XSavePerformerCase4Info item_case_4 = 1;        
+}
+
+message SCH3001U00XSavePerformerCase5Request{
+    repeated SCH3001U00XSavePerformerCase5Info item_case_5 = 1;        
+}
+
+message SCH3001U00XSavePerformerCase6Request{
+    repeated SCH3001U00XSavePerformerCase6Info item_case_6 = 1;        
+}
+
+message SCH3001U00XSavePerformerCase7Request{
+    repeated SCH3001U00XSavePerformerCase7Info item_case_7 = 1;        
+    repeated DataStringListItemInfo selected_yoil = 2;
+}
+
+//--------------------------------- NEW ---------------------------------------------------------
+
+
+//--[START] SCH0201Q12
+
+message SCH0201Q12ComboListRequest {
+}
+
+message SCH0201Q12ComboListResponse {
+    repeated ComboListItemInfo cbo_gumsa = 1;
+    repeated ComboListItemInfo cbo_gwa = 2;
+}
+
+message SCH0201Q12GrdListRequest {
+    optional string gwa = 1;
+    optional string doctor = 2;
+    optional string reser_gubun = 3;
+    optional string stat_flg = 4;
+    optional string naewon_date = 5;
+    optional string bunho = 6;
+}
+
+message SCH0201Q12GrdListResponse {
+    repeated SCH0201Q12GrdListItemInfo grd_list_item = 1;
+}
+
+message SCH0201Q12FindBoxRequest {
+    optional string gwa = 1;
+    optional string doctor = 2;
+}
+
+message SCH0201Q12FindBoxResponse {
+    optional string doctor_name = 1;
+}
+message SCH0201Q12FwkDoctorListRequest {
+	optional string gwa   = 1;
+	optional string find1 = 2;
+}
+message SCH0201Q12FwkDoctorListResponse {
+	repeated ComboListItemInfo fwk_doctor_item = 1;
+}
+
+//Update Reser data
+message SCH0201Q12UpdateReserDataRequest {
+    // Update
+    optional string gubun = 1;
+    optional string user_id = 2;
+    optional string reser_date = 3;
+    repeated SCH0201Q12UpdateReserData update_data = 4;
+    optional string iud_gubun = 5;
+    optional string pkout1001 = 6;
+    // Search params
+    optional string gwa = 7;
+    optional string doctor = 8;
+    optional string reser_gubun = 9;
+    optional string stat_flg = 10;
+    optional string naewon_date = 11;
+    optional string bunho = 12;
+}
+
+message SCH0201Q12UpdateReserDataResponse {
+    optional bool reser_result = 1;
+    optional bool kensa_result = 2;
+    optional string msg = 3;
+    repeated SCH0201Q12GrdListItemInfo grd_list_item = 4;
+}
+
+// Update KENSA Flag
+message SCH0201Q12UpdateKensaYnRequest {
+    optional string pkout1001 = 1;        
+        
+}
+//--[END] SCH0201Q12
+
+//--[START] SCH0201Q04
+message SchsSCH0201Q04GetCalReserRequest {
+    optional string ip_addr = 1;
+    optional string jundal_table = 2;
+    optional string jundal_part = 3;
+    optional string gumsaja = 4;
+    optional string reser_date = 5;
+}
+
+message SchsSCH0201Q04GetCalReserResponse {
+    repeated SchsSCH0201Q04ReserTimeListInfo reser_time_list_item = 1;
+    required bool result = 2;
+}
+
+message SchsSCH0201Q04GetFormLoadRequest {
+    optional string month = 1;
+    optional string jundal_table = 2;
+    optional string jundal_part = 3;
+}
+
+message SchsSCH0201Q04GetFormLoadResponse {
+    repeated SchsSCH0201Q04GetMonthReserListInfo month_reser_item = 1;
+    repeated SchsSCH0201Q04PrartListItemInfo prart_item = 2;
+}
+
+message SchsSCH0201Q04GetCboListRequest {
+}
+
+message SchsSCH0201Q04GetCboListResponse {
+    repeated ComboListItemInfo cbo_item = 1;
+}
+//--[END]   SCH0201Q04
+//[START] SCH0201U99
+message SchsSCH0201U99ComboGumsaPartRequest
+{
+    optional string jundal_table = 1;
+}
+//[END] SCH0201U99
+
+message SCH3001U00GrdSCH0001RowFocusChangedRequest
+{
+    optional string jundal_table = 1;
+    optional string jundal_part = 2;
+    optional string gumsaja = 3;
+}
+
+message SCH3001U00GrdSCH0001RowFocusChangedResponse
+{
+    repeated SCH3001U00GrdJukyongDateInfo jukyong_date_info = 1;
+    repeated SCH3001U00GrdSCH0002Info grd_sch0002_info = 2;
+    repeated SCH3001U00GrdSCH3100Info grd_sch3100_info = 3;
+}
+
+message SCH3001U00LoadDataForGridRequestInCaseDeleteRequest
+{
+    optional string jukyong_date = 1;
+    optional string jundal_table = 2;
+    optional string jundal_part = 3;
+    optional string gumsaja = 4;
+    optional string yoil_gubun = 5;
+}
+
+message SCH3001U00LoadDataForGridRequestInCaseDeleteResponse
+{
+    repeated SCH3001U00GrdSCH3000Info grd_sch3000_list = 1;
+    repeated SCH3001U00GrdSCH0002Info grd_sch0002_info = 2;
+    repeated SCH3001U00GrdSCH3100Info grd_sch3100_info = 3;
+}
+
+message SCH3001U00LayDupOCS0103Request
+{
+    optional string jundal_part = 1;
+}
+
+message SCH3001U00LayDupOCS0103Response
+{
+    repeated DataStringListItemInfo item_info = 1;
+}
+
+message SCH3001U00BtnMake2SaveLayoutRequest
+{	
+    repeated SCH3001U00GrdSCH3101Info grd_sch3101_info = 1;
+    repeated SCH3001U00GrdSCH3100Info grd_sch_3100_info = 2;
+	optional string sys_id = 3; 
+}
+
+message SCH3001U00BtnBtnListUpdateRequest
+{
+    repeated SCH3001U00GrdSCH0001Info grd_sch0001_info          = 1;
+    repeated SCH3001U00GrdSCH0002Info grd_sch0002_info          = 2;
+    repeated SCH3001U00GrdJukyongDateInfo grd_jukyong_date_info = 3;
+    repeated SCH3001U00GrdSCH3000Info grd_sch3000_info          = 4;
+    repeated SCH3001U00GrdSCH3100Info grd_sch3100_info          = 5;
+    repeated SCH3001U00GrdSCH3101Info grd_sch3101_info          = 6;
+    optional string user_id                                     = 7;
+    repeated DataStringListItemInfo selected_yoil               = 8;
+    optional string out_hosp_code_slot                          = 9;
+}
+
+//[START]SCH0109U01
+message SCH0109U01GrdMasterRequest
+{
+	optional string code_type            = 1;
+	optional string code_type_name       = 2;
+}
+message SCH0109U01GrdMasterResponse
+{
+	repeated SCH0109U01GrdMasterInfo grd_mst_item  = 1;
+}
+message SCH0109U01LayDupDRequest
+{
+	optional string code_type             = 1;
+	optional string code                  = 2;
+}
+message SCH0109U01StringResponse
+{
+	optional string res_str = 1;
+}
+message SCH0109U01GrdDetailRequest
+{
+	optional string code_type = 1;
+}
+message SCH0109U01GrdDetailResponse
+{
+	repeated SCH0109U01GrdDetailInfo grd_detail_item = 1;
+}
+message SCH0109U01LayDupMRequest
+{
+	optional string code_type = 1;
+}
+message SCH0109U01SaveLayoutRequest
+{
+	optional string user_id = 1;
+	repeated SCH0109U01GrdMasterInfo grd_mst_item = 2;
+	repeated SCH0109U01GrdDetailInfo grd_detail_item = 3;
+}
+//[END]SCH0109U01
+
+// [START] SCH0201U10
+message SCH0201U10GrdOrderListRequest{
+	optional string bunho = 1;
+	optional string reser_date = 2;
+}
+message SCH0201U10GrdOrderListResponse{
+	repeated SCH0201U10GrdOrderListInfo grdOrder_list = 1;
+}
+message SCH0201U10LayReserInfoRequest{
+	optional string bunho = 1;
+	optional string reser_date = 2;
+}
+message SCH0201U10LayReserInfoResponse{
+	repeated SCH0201U10LayReserInfo lay_list = 1;
+}
+message SCH0201U10LayReserInfoQueryEndRequest{
+	optional string bunho = 1;
+	optional string reser_date = 2;
+	optional string gwa= 3;
+}
+message SCH0201U10LayReserInfoQueryEndResponse{
+	optional string reser_move_name = 1;
+}
+message SCH0201U10GrdReserListRequest{
+	optional string bunho = 1;
+}
+message SCH0201U10GrdReserListResponse{
+	repeated DataStringListItemInfo date_value = 1;
+}
+// [END] SCH0201U10
+
+// [START] SCH0201U00
+message SCH0201U99GetListBookingRequest {
+    optional string hosp_code_link = 1;
+    optional string bunho_link = 2;
+    optional string reser_date = 3;
+    optional string reser_time = 4;
+    optional string hangmog_code = 5;
+}
+
+message SCH0201U99GetListBookingResponse {
+	optional string yoyang_name_link = 1;
+	optional string suname = 2;
+	optional string birth = 3;
+	optional string age = 4;
+	optional string bunho = 5;
+	optional string yoyang_name = 6;
+	optional string gwa_name = 7;
+	optional string doctor_name = 8;
+	optional string bunho_link = 9;
+	optional string address_link = 10;
+	optional string tel_link = 11;
+	repeated SCH0201U99BookingInfo booking_list = 12;
+}
+
+
+// [END] SCH0201U00
+
+// [START] SCH0201U99
+message Schs0201U99CheckInsertRequest
+{
+        optional string doctor    = 1;
+        optional string gwa       = 2;
+        optional string bunho = 3;
+        optional string hosp_code   = 4;
+        optional string naewon_date = 5;        
+}
+
+message Schs0201U99CheckInsertResponse
+{
+    optional string chk_result = 1;
+}
+message Schs0201U99CheckReserRequest
+{
+    optional string doctor    = 1;
+    optional string gwa       = 2;
+    optional string bunho_link = 3;
+    optional string hosp_code   = 4;
+    optional string naewon_date = 5;
+    optional string f_fksch0201  = 6;
+    optional string pkout1001 = 7;
+}
+message Schs0201U99CheckReserResponse
+{
+    repeated Schs0201U99InsertResultInfo ins_item = 1;
+    optional OCS1003P01LaySaveLayoutListItemInfo save_item = 2;
+}
+
+message Schs0201U99CheckORCAEnvInfoRequest
+{
+	optional string hosp_code   =1;
+	optional string code_type  =2;
+	optional string doctor    =3;
+	optional string gwa    =4;
+	optional string bunho_link   =5;
+	optional string naewon_date  =6;
+	optional string hangmog_code  =7;
+	optional string jundal_table    =8;
+	optional string jundal_part     =9;
+	optional string reser_date      =10;
+	optional string reser_time      =11;
+	optional string input_gubun     =12;
+}
+
+message Schs0201U99CheckORCAEnvInfoResponse
+{
+	repeated Schs0201U99CheckORCAEnvInfoInfo lstData = 1;
+	optional string err_code = 2; 
+}
+// [END] SCH0201U99// [END] SCH0201U99
+
+message Schs0201U99BookingLabRequest
+{
+    optional string doctor    = 1;
+    optional string gwa       = 2;
+    optional string bunho_link = 3;
+    optional string hosp_code   = 4;
+    optional string naewon_date = 5;
+    repeated SCH0201U99ListFkschInfo lstFksch = 6;
+    optional string pkout1001 = 7;
+    optional string changu = 8;
+    optional string chojae = 9;
+    optional string gubun = 10;
+    optional string input_gubun = 11;
+    optional string reser_comment = 12;
+    optional string out_hospcode = 13;
+    optional string iud_gubun = 14;
+    optional string res_gubun = 15;
+    optional string reser_date = 16;
+    optional string reser_time = 17;
+    optional string input_id = 18;
+    optional string reser_yn = 19;
+    optional string name_kana = 20;
+    optional string name_kanji = 21;
+}
+message Schs0201U99BookingLabResponse
+{
+    optional string err_code = 1;
+}

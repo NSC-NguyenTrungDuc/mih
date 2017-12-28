@@ -1,0 +1,146 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:sec="http://www.springframework.org/schema/security"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+	<sec:global-method-security secured-annotations="enabled" />
+	<sec:http pattern="/access-denied" security="none"/>
+	<sec:http pattern="/page-not-found" security="none"/>
+	<sec:http pattern="/assets/**" security="none"/>
+	<!-- Back authentication -->
+	<sec:http auto-config="false" use-expressions="true" pattern="/back/*" entry-point-ref="backLoginUrlAuthenticationEntryPoint">
+        <sec:intercept-url pattern="/back/login" access="permitAll" />
+		<sec:custom-filter ref="backAuthenticationFilter" position="FORM_LOGIN_FILTER"/>
+		<!-- <sec:logout logout-success-url="/back/login" logout-url="/back/logout" delete-cookies="JSESSIONID" invalidate-session="true"/> -->
+		<sec:access-denied-handler error-page="/access-denied" />
+		<sec:remember-me token-validity-seconds="86400" remember-me-parameter="back-remember-me" user-service-ref="backAuthenticationService"/>
+	</sec:http>
+	<sec:http auto-config="false" use-expressions="true" pattern="/account/*" entry-point-ref="backLoginUrlAuthenticationEntryPoint">
+		<sec:intercept-url pattern="/account/**" access="isAuthenticated() and hasRole('ROLE_BACK_END')" />
+		<sec:access-denied-handler error-page="/access-denied" />
+	</sec:http>
+	<sec:http auto-config="false" use-expressions="true" pattern="/booking-manage/*" entry-point-ref="backLoginUrlAuthenticationEntryPoint">
+		<sec:intercept-url pattern="/booking-manage/**" access="isAuthenticated() and hasRole('ROLE_BACK_END')" />
+		<sec:access-denied-handler error-page="/access-denied" />
+	</sec:http>
+	<sec:http auto-config="false" use-expressions="true" pattern="/mail/*" entry-point-ref="backLoginUrlAuthenticationEntryPoint">
+		<sec:intercept-url pattern="/mail/**" access="isAuthenticated() and hasRole('ROLE_BACK_END')" />
+		<sec:access-denied-handler error-page="/access-denied" />
+	</sec:http>
+	<sec:http auto-config="false" use-expressions="true" pattern="/schedule/*" entry-point-ref="backLoginUrlAuthenticationEntryPoint">
+		<sec:intercept-url pattern="/schedule/**" access="isAuthenticated() and hasRole('ROLE_BACK_END')" />
+		<sec:access-denied-handler error-page="/access-denied" />
+	</sec:http>
+	<sec:http auto-config="false" use-expressions="true" pattern="/vaccine/*" entry-point-ref="backLoginUrlAuthenticationEntryPoint">
+		<sec:intercept-url pattern="/vaccine/**" access="isAuthenticated() and hasRole('ROLE_BACK_END')" />
+		<sec:access-denied-handler error-page="/access-denied" />
+	</sec:http>
+	<sec:http auto-config="false" use-expressions="true" pattern="/back/payment-history/*" entry-point-ref="backLoginUrlAuthenticationEntryPoint">
+		<sec:intercept-url pattern="/back/payment-history/**" access="isAuthenticated() and hasRole('ROLE_BACK_END')" />
+		<sec:access-denied-handler error-page="/access-denied" />
+	</sec:http>
+	<!-- Back authentication configuration -->
+	<bean id="backAuthenticationFilter" class="nta.mss.custom.authentication.UsernamePasswordAuthenticationFilter">
+	    <property name="sessionAuthenticationStrategy" ref="sas"/>
+	    <property name="authenticationManager" ref="backAuthenticationManager"/>
+	    <property name="filterProcessesUrl" value="/back/j_spring_security_check_for_backend" />
+	    <property name="authenticationFailureHandler" ref="backAuthenticationFailureHandler"/>
+	    <property name="authenticationSuccessHandler" ref="backAuthenticationSuccessHandler"/>
+	</bean>
+
+	<bean id="backLoginUrlAuthenticationEntryPoint" class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint">
+    	<property name="loginFormUrl" value="/back/login" />
+	</bean>
+
+	<bean id="sas" class="org.springframework.security.web.authentication.session.ConcurrentSessionControlStrategy">
+	    <property name="maximumSessions" value="1" />
+	    <property name="exceptionIfMaximumExceeded" value="true" />
+	    <constructor-arg name="sessionRegistry" ref="sessionRegistry" />
+	</bean>
+	<bean id="sessionRegistry" class="org.springframework.security.core.session.SessionRegistryImpl" />
+
+	<sec:authentication-manager id="backAuthenticationManager">
+		<sec:authentication-provider user-service-ref="backAuthenticationService">
+		<sec:password-encoder hash="md5"/>
+		</sec:authentication-provider>
+	</sec:authentication-manager>
+
+	<bean id="backAuthenticationService" class="nta.mss.security.WebSysUserDetailsService">
+	</bean>
+
+	<bean id="backAuthenticationFailureHandler" class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
+    	<property name="defaultFailureUrl" value="/back/login?error_login=true"/>
+	</bean>
+
+	<bean id="backAuthenticationSuccessHandler" class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
+	    <property name="defaultTargetUrl" value="/booking-manage/search-booking"/>
+       	<property name="alwaysUseDefaultTargetUrl" value="true"/>
+	</bean>
+
+	<!-- Front authentication -->
+	<sec:http auto-config="false" use-expressions="true" pattern="/booking/*" entry-point-ref="userLoginUrlAuthenticationEntryPoint">
+    		<sec:intercept-url pattern="/booking/login" access="permitAll" />
+		    <sec:intercept-url pattern="/booking/profile-management" access="isAuthenticated() and hasRole('ROLE_FRONT_END')" />
+				<sec:intercept-url pattern="/booking/vaccine-history" access="isAuthenticated() and hasRole('ROLE_FRONT_END')" />
+				<sec:intercept-url pattern="/booking/add-child" access="isAuthenticated() and hasRole('ROLE_FRONT_END')" />
+				<sec:intercept-url pattern="/booking/change-user-child" access="isAuthenticated() and hasRole('ROLE_FRONT_END')" />
+				<sec:intercept-url pattern="/booking/add-history-vaccine" access="isAuthenticated() and hasRole('ROLE_FRONT_END')" />
+				<sec:intercept-url pattern="/booking/change-history-vaccine" access="isAuthenticated() and hasRole('ROLE_FRONT_END')" />
+				<sec:intercept-url pattern="/booking/submit-change-history-vaccine" access="isAuthenticated() and hasRole('ROLE_FRONT_END')" />
+		    <sec:intercept-url pattern="/booking/booking-vaccine-recommendation" access="isAuthenticated() and hasRole('ROLE_FRONT_END')" />
+        <sec:intercept-url pattern="/booking/booking-vaccine-select-time" access="isAuthenticated() and hasRole('ROLE_FRONT_END')" />
+        <sec:intercept-url pattern="/booking/booking-vaccine-info" access="isAuthenticated() and hasRole('ROLE_FRONT_END')" />
+        <sec:intercept-url pattern="/booking/booking-vaccine-info-confirm" access="isAuthenticated() and hasRole('ROLE_FRONT_END')" />
+        <sec:intercept-url pattern="/booking/booking-vaccine-accept" access="isAuthenticated() and hasRole('ROLE_FRONT_END')" />
+
+        <!-- <sec:intercept-url pattern="/booking/booking-vaccine-complete" access="isAuthenticated() and hasRole('ROLE_FRONT_END')" /> -->
+		<sec:custom-filter ref="userAuthenticationFilter" position="FORM_LOGIN_FILTER"/>
+		<!-- <sec:logout logout-success-url="/booking/index" logout-url="/booking/logout" delete-cookies="JSESSIONID" invalidate-session="true"/> -->
+		<sec:access-denied-handler error-page="/access-denied" />
+	</sec:http>
+	<sec:http auto-config="false" use-expressions="true" pattern="/movie-talk/*" entry-point-ref="userLoginUrlAuthenticationEntryPoint">
+	  <sec:intercept-url pattern="/movie-talk/index" access="isAuthenticated() and hasRole('ROLE_FRONT_END')" />
+	  <sec:intercept-url pattern="/movie-talk/movietalk-history" access="isAuthenticated() and hasRole('ROLE_FRONT_END')" />
+	</sec:http>
+	<sec:http auto-config="false" use-expressions="true" pattern="/payment-history/*" entry-point-ref="userLoginUrlAuthenticationEntryPoint">
+	  <sec:intercept-url pattern="/payment-history/index" access="isAuthenticated() and hasRole('ROLE_FRONT_END')" />
+	</sec:http>
+	<sec:http auto-config="false" use-expressions="true" pattern="/payment-process/*" entry-point-ref="userLoginUrlAuthenticationEntryPoint">
+	  <sec:intercept-url pattern="/payment-process/index" access="isAuthenticated() and hasRole('ROLE_FRONT_END')" />
+	</sec:http>
+	<!-- Front authentication configuration -->
+	<bean id="userAuthenticationFilter" class="nta.mss.custom.authentication.UsernamePasswordAuthenticationFilter">
+	    <property name="sessionAuthenticationStrategy" ref="sas"/>
+	    <property name="authenticationManager" ref="userAuthenticationManager"/>
+	    <property name="filterProcessesUrl" value="/booking/j_spring_security_check_for_frontend" />
+	    <property name="authenticationFailureHandler" ref="userAuthenticationFailureHandler"/>
+	    <property name="authenticationSuccessHandler" ref="userAuthenticationSuccessHandler"/>
+	</bean>
+
+	<bean id="userLoginUrlAuthenticationEntryPoint" class="nta.mss.custom.authentication.LoginUrlAuthenticationEntryPoint">
+    	<property name="loginFormUrl" value="/booking/login" />
+	</bean>
+
+	<sec:authentication-manager alias="userAuthenticationManager">
+		<sec:authentication-provider user-service-ref="userAuthenticationService">
+		<sec:password-encoder hash="md5"/>
+		</sec:authentication-provider>
+	</sec:authentication-manager>
+
+	<bean id="userAuthenticationService" class="nta.mss.security.WebUserDetailsService">
+	</bean>
+
+	<bean id="userAuthenticationFailureHandler" class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
+    	<property name="defaultFailureUrl" value="/booking/login?error_login=true"/>
+	</bean>
+
+	<bean id="userAuthenticationSuccessHandler" class="nta.mss.custom.authentication.ForwardRequestAuthenticationSuccessHandler">
+			 <property name="defaultTargetUrl" value="/booking/index"/>
+	</bean>
+</beans>

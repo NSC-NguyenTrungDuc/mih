@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Information Report</title>
+	<script src="../js/pikaday.js"></script>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/handlebars.min.js"></script>	
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+ 
+<form id="myform" action="" method="post">
+ 	<div>
+	
+		<div id="data-template">
+		</div>
+	</div>
+	<script id="some-template" type="text/x-handlebars-template"> 
+<div class="wrapper">
+
+	<h1 class="page-title text-center">居宅介護支援事業者向け診療情報提供書</h1>
+	
+	<table class="table" border="0" align="" cellpadding="0" cellspacing="0"> 
+		<tr>
+			<td style="width:70%">{{item_2_20}}</td>
+			<td style="width:10%"></td>
+			<td style="width:20%">{{PrintDate}}</td>
+		</tr>
+		<tr>
+			<td>{{item_2_21}}</td>
+			<td></td>
+			<td></td></td>
+		</tr>
+		<tr>
+			<td>{{item_2_22}}</td>
+			<td></td>
+			<td>{{Hospital.YoyangName}}</td>
+		</tr>
+		<tr>
+			<td>{{item_2_23}}&nbsp;&nbsp;  様</td>
+			<td></td>
+			<td>{{DoctorName}}</td>
+		</tr>
+	</table>
+		
+		
+	<br/>
+	
+	<table class="table full-w" border="1" >
+	
+		<tr>
+			<td>患者氏名</td>
+			<td style="width:30%;">{{PatientName1}} &nbsp;&nbsp;様</td>
+			<td>{{{getSex Sex}}}</td>
+			<td>生年月日 {{Birth}}（{{YearAge}} 歳）</td>
+		</tr>
+		
+		
+	</table>
+	
+	<!-- <table class="table full-w" border="1" >
+	
+		<tr>
+			<td style="width:20%;">患者氏名</td>
+			<td>{{PatientName1}} </td>
+			<td style="width:20%;">性別</td>
+			<td style="width:20%;">{{Sex}}</td>
+		</tr>
+		
+		<tr>
+			<td style="width:20%;">生年月日</td>
+			<td>{{Birth}}（{{YearAge}}　歳）</td>
+			<td style="width:20%;">職業</td>
+			<td style="width:20%;"></td>
+		</tr>
+		
+	</table>
+	 -->
+	<br/>
+	
+	<table class="table full-w" border="1" >		
+		<tr>
+		  <td>傷病名</td>
+		  <td colspan="4" style="height:2em;">
+		  	{{#each Diseases}}
+						{{this}} <br/>
+					{{/each}}
+		  </td>
+		</tr>
+
+		<tr>
+			<td colspan="5">寝たきり度</td>
+		</tr>
+		<tr>
+			<td colspan="5">
+				{{item_1_16}}
+				{{#if item_1_16_Other}}
+					<br />
+					その他: {{item_1_16_OtherText}}
+				{{/if}}			
+			</td>
+		</tr>
+			
+		<tr>
+			<td colspan="5">日常生活活動（ADL)の状況</td>
+		</tr>
+		
+		<tr>
+			<td style="width:20%">移動</td>
+			<td colspan="2">{{item_1_17}}</td>
+			<td>食事</td>
+			<td>{{item_1_20}}</td>
+		</tr>
+		<tr>
+			<td>排泄</td>
+			<td colspan="2">{{item_1_18}}</td>
+			<td>入浴</td>
+			<td>{{item_1_21}}</td>
+		</tr>
+		<tr>
+			<td>着替え</td>
+			<td colspan="2">{{item_1_19}}</td>
+			<td>整容</td>
+			<td>{{item_1_22}}</td>
+		</tr>
+		{{#if item_1_Other}}
+		<tr style="">
+			<td colspan = "5">その他: {{item_1_OtherText}}</td>
+		</tr>
+		{{/if}}
+		
+	
+		<tr>
+			<td colspan="5">認知症老人の日常生活自立度</td>
+		</tr>
+		<tr>
+			<td colspan="5">
+				{{item_2_1}}
+				{{#if item_2_1_Other}}
+					<br />
+					その他: {{item_2_1_OtherText}}
+				{{/if}}
+			</td>
+		</tr>
+		
+		
+		<tr>
+			<td colspan="5">
+				<div>病状・既往歴・治療内容・退院の年月日等<div>
+				<span style="text-align:left; display: block;">{{item_2_2}}</span>
+				<div>最近の寝たきり度、ADL状況、認知症度の変化</div>
+						<div class="item9">
+							<div>{{item_2_3_1}}</div>
+							<div>{{item_2_3_1_1}}</div>
+							<div>{{#if item_2_3_1_1_1}}（月{{item_2_3_1_1_1}}回程度）{{/if}}</div>
+						</div>
+						<div class="item9">
+							<div>{{item_2_3_2}}</div>
+							<div>{{item_2_3_2_1}}</div>
+							<div>{{#if item_2_3_2_1_1}}（月{{item_2_3_2_1_1}}回程度）{{/if}}</div>
+						</div>		
+				{{#if item_2_3_Other}}
+					<div style="clear:both;">
+					その他: {{item_2_3_OtherText}}
+					</div>
+				{{/if}}
+			</td>
+		</tr>
+
+		<tr>
+			<td colspan="5">
+				必要と考える保健福祉サービスの内容等、提供する情報の内容<br/>
+				ケアプラン作成上の留意点など<br/>
+			  {{item_2_4_1}} {{#if item_2_4_1}}&nbsp;&nbsp; {{/if}}
+				{{item_2_4_2}} {{#if item_2_4_2}}&nbsp;&nbsp; {{/if}}
+				{{item_2_4_3}} {{#if item_2_4_3}}&nbsp;&nbsp; {{/if}}
+				{{item_2_4_4}} {{#if item_2_4_4}}&nbsp;&nbsp; {{/if}}
+				{{item_2_4_5}} {{#if item_2_4_5}}&nbsp;&nbsp; {{/if}}
+				{{item_2_4_6}} {{#if item_2_4_6}}&nbsp;&nbsp; {{/if}} 
+				{{item_2_4_7}} {{#if item_2_4_7}}&nbsp;&nbsp; {{/if}}
+				{{item_2_4_8}} {{#if item_2_4_8}}&nbsp;&nbsp; {{/if}}
+				{{item_2_4_9}} {{#if item_2_4_9}}&nbsp;&nbsp; {{/if}}
+				{{item_2_4_10}} {{#if item_2_4_10}}&nbsp;&nbsp; {{/if}}				
+				{{item_2_4_11}}{{#if item_2_4_11}}（{{/if}}{{item_2_4_11_1}}{{#if item_2_4_11}}）{{/if}}
+			</td>
+		</tr>
+		
+		<tr>
+			<td  style="width:20%" >上記サービス利用上での問題点等
+			</td>
+			<td colspan="4"> {{item_2_5}}</td>
+		</tr>
+		<tr>
+			<td  style="width:20%">担当ケアマネージャーへの一言アドバイス
+			</td >
+			<td colspan="4"> {{item_2_6}}</td>
+		</tr>
+		
+	</table>
+	
+	<hr>
+	注意　1．必要がある場合には、神に記載して添付すること。　2．わかりやすく記入すること。　3．必要な場合は家庭環境などについても記載すること。
+	
+		</div>
+ 
+	</script> 
+
+</form>
+ 
+</body>
+</html>

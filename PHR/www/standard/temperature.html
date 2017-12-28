@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <script src="../libs/jquery/jquery-1.9.1.js"></script>
+  <script src="../libs/highcharts/highcharts.js"></script>
+  <script src="../libs/utils.js"></script>
+  <script src="../jsUtilities/DateFormat.js"></script>
+  <script src="../jsUtilities/DataManipulate.js"></script>
+
+</head>
+<body style="background-color: transparent; padding: 0px;">
+  <div id="container" style="width: 100%; height: 100%; position:absolute; margin-right:10px;"></div>
+  <script type="text/javascript">
+  var highchart;
+  function changeDimension(width, height){
+    $('#container').height(height);
+    window.location = "phr-js-log:" + height;
+  }
+
+  /*
+  {
+  "date_measure" = "2016-02-16T13:43:19Z";
+  id = 85;
+  note = Note;
+  "profile_id" = 278;
+  temperature = "38.3";
+  unit = C;
+},
+{
+"date_measure" = "2016-02-16T13:43:14Z";
+id = 84;
+note = Note;
+"profile_id" = 278;
+temperature = 34;
+unit = C;
+},
+{
+"date_measure" = "2016-02-16T13:43:02Z";
+id = 83;
+note = Note;
+"profile_id" = 278;
+temperature = "35.7";
+unit = C;
+}
+
+
+*/
+
+/*
+[
+[Date.UTC(1970, 9, 21), 0],
+[Date.UTC(1970, 10, 4), 0.28],
+[Date.UTC(1970, 10, 9), 0.25]
+]
+*/
+
+function drawGraph(base64Data) {
+  var heighColor = '#00edb1';
+  var weightColor = '#517fff';
+  var headSizeColor = '#ff3970';
+  var fontSizeConfig = '7px';
+  // temperature color
+  var colorF = '#E9F625';
+  var colorC = '#F67851';
+  var colorFCxAxis = '#FFFFFF';
+  var lineColor = '#42630A';
+  var whiteColor = '#FFFFFF';
+  //
+  var type = 2;
+  var offsetConfigZero = 0;
+  var offsetConfig = 5;
+  var offsetConfigHeadSize = 10;
+  var offsetConfigNegative = -10;
+  //get data
+  var data = Base64.decode(base64Data);
+  var json = JSON.parse(data);
+  var arrayTemperature = json;
+  var arrayHeatC = [];
+  var arrayHeatF = [];
+  var lastIndex = arrayTemperature.length - 1;
+
+  for (i = lastIndex; i >= 0; i--) {
+    var temperature = arrayTemperature[i]; // get an object
+    if (temperature["unit"] == 'C') {
+      var temperature_topushC = parseFloat(temperature["temperature"]);
+      var date_measure = temperature["date_measure"];
+      var date_measure_UTC = processingDateToUTC(date_measure);
+      // PUSH DATA
+      arrayHeatC.push([date_measure_UTC,temperature_topushC]);
+    } else if (temperature["unit"] == 'F') {
+      var temperature_topushF = parseFloat(temperature["temperature"]);
+      var date_measure = temperature["date_measure"];
+      var date_measure_UTC = processingDateToUTC(date_measure);
+      // PUSH DATA
+      arrayHeatF.push([date_measure_UTC,temperature_topushF]);
+    }
+  }
+  $('#container').highcharts({
+    chart: {
+      zoomType: 'x',
+      backgroundColor: 'transparent'
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ''
+    },
+    xAxis: {
+      type: 'datetime',
+      tickLength: 0,
+      labels: {
+        style: {
+          color: colorFCxAxis,
+          font: '11px Trebuchet MS, Verdana, sans-serif'
+        }
+      }
+    },
+    yAxis: [{
+      gridLineWidth: 0.5,
+      min: 0,
+      title: {
+        text: 'Fahrenheit(°F)',
+        style: {
+          color: colorF,
+          //fontSize: fontSizeConfig
+        }
+      },
+      labels: {
+        //format: '{value}',
+        style: {
+          color: colorF,
+          //fontSize: fontSizeConfig
+        }
+      },
+      opposite: true,
+    }, {
+      gridLineWidth: 0.5,
+      min: 0,
+      title: {
+        text: 'Celsius(°C)',
+        style: {
+          color: colorC,
+          //fontSize: fontSizeConfig
+        }
+      },
+      labels: {
+        //format: '{value}',
+        style: {
+          color: colorC,
+          //fontSize: fontSizeConfig
+        }
+      },
+    }
+  ],
+  legend: {
+    enabled: false
+  },
+  tooltip: {
+    hideDelay: 100,
+    formatter: function () {
+      var dateTime = new Date(this.x);
+      var newDate = dateFormat(dateTime, "dd/mm h:MM:ss TT");
+      return '<b>' + newDate + '</b><br/>' + this.series.name + ': <b>'+ this.y + '</b>';
+    }
+  },
+  plotOptions: {
+    series: {
+      dataLabels: {
+        align: 'center',
+        enabled: false,
+        style: {
+          color: whiteColor
+        }
+      }
+    },
+  },
+  series: [{
+    type: 'scatter',
+    lineWidth: 0.5,
+    yAxis: 0,
+    name: 'Fahrenheit',
+    data: arrayHeatF,
+    color: colorF
+  },{
+    type: 'scatter',
+    lineWidth: 0.5,
+    yAxis: 1,
+    name: 'Celsius',
+    data: arrayHeatC,
+    color: colorC
+  }]
+});
+};
+</script>
+</body>
+</html>

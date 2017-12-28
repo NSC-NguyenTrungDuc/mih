@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="BookingHistoryTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="334" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="334" height="89.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="BookingHistoryTableViewCell" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsU-nX-rTp">
+                        <rect key="frame" x="15" y="34" width="150" height="20.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="lRG-nQ-Euc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOP-ax-QOz">
+                        <rect key="frame" x="169" y="34" width="150" height="20.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="G7h-Un-vhW"/>
+                            <constraint firstAttribute="width" constant="150" id="qeX-hS-2fQ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="G7h-Un-vhW"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dyA-fx-Ztf">
+                        <rect key="frame" x="0.0" y="89" width="334" height="1"/>
+                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="GOF-Av-emn"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="MOP-ax-QOz" firstAttribute="leading" secondItem="LsU-nX-rTp" secondAttribute="trailing" constant="20" id="Np2-Mc-vNx"/>
+                    <constraint firstItem="LsU-nX-rTp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Odm-Wy-aMU"/>
+                    <constraint firstItem="MOP-ax-QOz" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="jef-aq-IpM"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="Np2-Mc-vNx"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="MOP-ax-QOz" secondAttribute="trailing" constant="15" id="71u-j8-dy8"/>
+                <constraint firstAttribute="bottom" secondItem="dyA-fx-Ztf" secondAttribute="bottom" id="FpX-BV-Ww8"/>
+                <constraint firstItem="LsU-nX-rTp" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" constant="15" id="c09-eu-3s6"/>
+                <constraint firstAttribute="trailing" secondItem="dyA-fx-Ztf" secondAttribute="trailing" id="h7l-gA-ez7"/>
+                <constraint firstItem="dyA-fx-Ztf" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" id="t0P-Xr-yyI"/>
+            </constraints>
+            <connections>
+                <outlet property="lblDay" destination="LsU-nX-rTp" id="idJ-tQ-JYm"/>
+                <outlet property="lblLength" destination="MOP-ax-QOz" id="hBw-xs-r74"/>
+            </connections>
+            <point key="canvasLocation" x="45" y="232"/>
+        </tableViewCell>
+    </objects>
+</document>

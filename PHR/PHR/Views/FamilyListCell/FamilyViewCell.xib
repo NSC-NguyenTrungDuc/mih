@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Aileron-Light.otf">
+            <string>Aileron-Light</string>
+            <string>Aileron-Light</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="FamilyViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="126" height="140"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="126" height="140"/>
+                <subviews>
+                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile_Add" translatesAutoresizingMaskIntoConstraints="NO" id="TfS-OB-TQN" userLabel="avatar">
+                        <rect key="frame" x="25.5" y="0.0" width="75" height="75"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="75" id="NyS-0H-cvq"/>
+                            <constraint firstAttribute="height" constant="75" id="VWP-vE-Pui"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vdv-rP-PB6">
+                        <rect key="frame" x="25.5" y="0.0" width="75" height="75"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_Tick_Family" translatesAutoresizingMaskIntoConstraints="NO" id="gzd-90-mP8">
+                        <rect key="frame" x="51.5" y="27.5" width="23" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="7Cy-QP-T0W"/>
+                            <constraint firstAttribute="width" constant="23" id="aZH-i2-Pqr"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sonnv1368" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5u-Sr-SQf" userLabel="name">
+                        <rect key="frame" x="0.0" y="80" width="126" height="16"/>
+                        <fontDescription key="fontDescription" name="Aileron-Light" family="Aileron" pointSize="13"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYq-3A-b0m" userLabel="title">
+                        <rect key="frame" x="0.0" y="96" width="126" height="0.0"/>
+                        <fontDescription key="fontDescription" name="Aileron-Light" family="Aileron" pointSize="9"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_Flag" translatesAutoresizingMaskIntoConstraints="NO" id="GCf-HS-AWV">
+                        <rect key="frame" x="30.5" y="0.0" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="mgh-6H-mrf"/>
+                            <constraint firstAttribute="width" constant="25" id="nF9-B7-jeE"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="TfS-OB-TQN" firstAttribute="leading" secondItem="GCf-HS-AWV" secondAttribute="trailing" constant="-30" id="9Mz-D7-pXd"/>
+                <constraint firstItem="TfS-OB-TQN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="AVA-iq-nIe"/>
+                <constraint firstItem="CYq-3A-b0m" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="CSR-Zh-RM5"/>
+                <constraint firstItem="Vdv-rP-PB6" firstAttribute="leading" secondItem="TfS-OB-TQN" secondAttribute="leading" id="J6k-lf-OUy"/>
+                <constraint firstItem="CYq-3A-b0m" firstAttribute="top" secondItem="U5u-Sr-SQf" secondAttribute="bottom" id="L8O-7Q-nsA"/>
+                <constraint firstItem="Vdv-rP-PB6" firstAttribute="width" secondItem="TfS-OB-TQN" secondAttribute="width" id="QuU-bX-Rrz"/>
+                <constraint firstAttribute="trailing" secondItem="U5u-Sr-SQf" secondAttribute="trailing" id="Rbc-Lp-KdS"/>
+                <constraint firstItem="gzd-90-mP8" firstAttribute="centerY" secondItem="TfS-OB-TQN" secondAttribute="centerY" id="UH5-oa-1Sf"/>
+                <constraint firstItem="TfS-OB-TQN" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="VF3-aS-Y6t"/>
+                <constraint firstItem="Vdv-rP-PB6" firstAttribute="height" secondItem="TfS-OB-TQN" secondAttribute="height" id="Xzt-WK-b9X"/>
+                <constraint firstItem="U5u-Sr-SQf" firstAttribute="top" secondItem="TfS-OB-TQN" secondAttribute="bottom" constant="5" id="aTc-Lh-lwu"/>
+                <constraint firstItem="Vdv-rP-PB6" firstAttribute="top" secondItem="TfS-OB-TQN" secondAttribute="top" id="c6j-bd-ldt"/>
+                <constraint firstAttribute="trailing" secondItem="CYq-3A-b0m" secondAttribute="trailing" id="dJe-a8-mKZ"/>
+                <constraint firstItem="GCf-HS-AWV" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ep2-Uu-Kvx"/>
+                <constraint firstItem="Vdv-rP-PB6" firstAttribute="trailing" secondItem="TfS-OB-TQN" secondAttribute="trailing" id="eqI-wV-Opw"/>
+                <constraint firstItem="U5u-Sr-SQf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="htA-RK-5NS"/>
+                <constraint firstItem="Vdv-rP-PB6" firstAttribute="bottom" secondItem="TfS-OB-TQN" secondAttribute="bottom" id="nJV-JV-J4k"/>
+                <constraint firstItem="gzd-90-mP8" firstAttribute="centerX" secondItem="TfS-OB-TQN" secondAttribute="centerX" id="z9K-VT-gFg"/>
+            </constraints>
+            <size key="customSize" width="126" height="140"/>
+            <connections>
+                <outlet property="avatarFamilyMember" destination="TfS-OB-TQN" id="Or1-tp-q2L"/>
+                <outlet property="imageFlag" destination="GCf-HS-AWV" id="WmU-fA-eLE"/>
+                <outlet property="imageViewTick" destination="gzd-90-mP8" id="XaJ-sE-wpY"/>
+                <outlet property="nameFamilyMember" destination="U5u-Sr-SQf" id="ISD-U4-fxj"/>
+                <outlet property="titleFamilyMember" destination="CYq-3A-b0m" id="9EL-2c-6ZH"/>
+                <outlet property="viewChoosen" destination="Vdv-rP-PB6" id="dWD-cd-BYX"/>
+            </connections>
+            <point key="canvasLocation" x="193" y="259"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Icon_Flag" width="85" height="85"/>
+        <image name="Icon_Tick_Family" width="16" height="13"/>
+        <image name="Profile_Add" width="80" height="80"/>
+    </resources>
+</document>

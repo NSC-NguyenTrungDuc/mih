@@ -1,0 +1,195 @@
+syntax = "proto2";
+
+message InjsINJ1001U01ActorListItemInfo {
+	optional string user_id = 1;
+	optional string user_nm = 2;
+	optional string dept_code = 3;
+}
+
+message InjsINJ1001U01DetailListItemInfo {
+	optional string group_ser = 1;
+	optional string pkinj1002 = 2;
+	optional string fkinj1001 = 3;
+	optional string fkocs1003 = 4;
+	optional string hangmog_name = 5;
+	optional string seq = 6;
+	optional string tonggye_code = 7;
+	optional string magam_date = 8;
+	optional string magam_jangso = 9;
+	optional string magam_ser = 10;
+	optional string reser_date_char = 11;
+	optional string reser_time = 12;
+	optional string jubsu_date_char = 13;
+	optional string hangmog_code = 14;
+	optional string jusa_buui = 15;
+	optional string acting_jangso = 16;
+	optional string acting_date_char = 17;
+	optional string acting_time = 18;
+	optional string company_code = 19;
+	optional string lot_no = 20;
+	optional string chasu_code = 21;
+	optional string pw_result = 22;
+	optional string cs_result = 23;
+	optional string ast = 24;
+	optional string acting_flag = 25;
+	optional string sunab_date_char = 26;
+	optional string sunab_suryang = 27;
+	optional string fkout1001  = 28;
+	optional string cancer_yn = 29;
+	optional string bunho = 30;
+	optional string remark_chk = 31;
+	optional string dc_yn  = 32;
+	optional string jusa_tong_cnt = 33;
+	optional string other_buseo_yn = 34;
+	optional string jujongja = 35;
+	optional string jujongja_name = 36;
+	optional string yebang_jujong_chk = 37;
+	optional string actday_chk = 38;
+	optional string gwa = 39;
+	optional string bannab_yn = 40;
+	optional string skin_yn = 41;
+	optional string chunggu_date = 42;
+	optional string order_date  = 43;
+	optional string doctor  = 44;
+	optional string danui_name  = 45;
+	optional string hope_date_yn = 46;
+	optional string bogyong_code = 47;
+	optional string suryang  = 48;
+	optional string dv  = 49;
+	optional string dv_time = 50;
+	optional string slip_code  = 51;
+	optional string jusa_yn  = 52;
+	optional string mix_group  = 53;
+	optional string old_acting_flag  = 54;
+	optional string silsi_remark  =  55;
+	optional string hope_date  =  56;
+	optional string order_gubun  = 57;
+	optional string tonggye_code_name = 58;
+	optional string key = 59; 
+}
+
+message InjsINJ1001U01MasterListItemInfo {
+	optional string reser_gubun = 1;
+	optional string bunho = 2;
+	optional string suname = 3;
+	optional string order_date = 4;
+	optional string reser_date = 5;
+}
+
+message InjsINJ1001U01InfectionListItemInfo {
+	optional string infe_jaeryo = 1;
+	optional string infe_code = 2;
+}
+
+message InjsINJ1001U01ScheduleItemInfo {
+	optional string reser_date = 1;
+	optional string order_date = 2;
+	optional string acting_date = 3;
+	optional string gwa = 4;
+	optional string gwa_name  = 5;
+	optional string doctor = 6;
+	optional string doctor_name = 7;
+}
+
+message InjsINJ1001U01DiseaseListItemInfo {
+	optional string pk_seq = 1;
+	optional string sang_name = 2;
+	optional string ju_sang_yn = 3;
+	optional string sang_start_date = 4;
+}
+
+message InjsINJ1001U01LabelNewListItemInfo {
+	optional string bunho = 1;
+	optional string suname = 2;
+	optional string suname2 = 3;
+	optional string age = 4;
+	optional string sex = 5;
+	optional string jubsu_date = 6;
+	optional string cnt = 7;
+	optional string suryang = 8;
+	optional string danui_name = 9;
+	optional string bogyong_name = 10;
+	optional string jusa_name  = 11;
+	optional string jaeryo_name = 12;
+	optional string order_remark = 13;
+	optional string data_gubun = 14;
+	optional string mix_yn = 15;
+}
+
+message InjsINJ1001U01TempListItemInfo {
+	optional string serial_v = 1;
+	optional string bunho = 2;
+	optional string suname = 3;
+	optional string suname2 = 4;
+	optional string age = 5;
+	optional string sex = 6;
+	optional string order_date = 7;
+	optional string jubsu_date = 8;
+	optional string cnt = 9;
+	optional string suryang = 10;
+	optional string danui_name = 11;
+	optional string bogyong_name = 12;
+	optional string jusa_name = 13;
+	optional string jaeryo_name = 14;
+	optional string order_remark = 15;
+	optional string data_gubun  = 16;
+	optional string birth = 17;
+	optional string doctor_name = 18;
+	optional string gwa_name = 19;
+}
+
+message INJ1001U01GrdSangItemInfo {
+  optional string pk_seq = 1;
+  optional string sang_name = 2;
+  optional string ju_sang_yn = 3;
+  optional string sang_start_date = 4;  
+ }
+
+ message INJ1001FormJusaBedLayPatientItemInfo {
+  optional string code_type = 1;
+  optional string code = 2;
+  optional string code_name = 3;
+  optional string suname = 4;  
+  optional string sex = 5;
+ }
+   
+message INJ1001U01FormJusaBedLayHosilItemInfo {
+  optional string code_type = 1;
+  optional string one = 2;
+  optional string su = 3;
+ }
+
+message INJ1001U01GrdOCS1003ItemInfo {
+  optional string reser_date = 1;
+  optional string order_date = 2;
+  optional string acting_date = 3;
+  optional string gwa = 4;
+  optional string gwa_name = 5;
+  optional string doctor = 6;
+  optional string doctor_name = 7;
+ }
+
+message INJ1001U01CboTimeItemInfo {
+  optional string code = 1;
+  optional string code_name = 2;
+ }
+
+// --- [Start] INJ0101U01 ---
+
+message INJ0101U01GrdMasterItemInfo{
+    optional string code_type = 1;
+    optional string code_type_name = 2;
+    optional string admin_gubun = 3;
+    optional string remark = 4;
+    optional string data_row_state = 5;
+}
+
+message INJ0101U01GrdDetailItemInfo{
+    optional string code_type = 1;
+    optional string code = 2;
+    optional string code_name = 3;
+    optional string remark = 4;
+    optional string data_row_state = 5;
+}
+
+// --- [End] INJ0101U01 ---

@@ -1,0 +1,119 @@
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "ClisModelProto";
+
+//[START]  CLIS2015U00
+message CLIS2015U09ItemInfo{
+	optional string clis_smo_id = 1;
+	optional string smo_code = 2;
+	optional string start_date = 3;
+	optional string end_date = 4;
+	optional string smo_name = 5;
+	optional string smo_name1 = 6;
+	optional string zip_code1 = 7;
+	optional string zip_code2 = 8;
+	optional string address = 9;
+	optional string address1 = 10;
+	optional string tel = 11;
+	optional string tel1 = 12;
+	optional string fax = 13;
+	optional string dodobuhyeun_no = 14;
+	optional string code_name = 15;
+	optional string homepage = 16;
+	optional string email = 17;
+	optional string row_state = 18;
+}
+
+//[END]  CLIS2015U00
+
+//[START] CLIS2015U02
+message CLIS2015U02GrdProtocolInfo
+{
+    optional string protocol_id = 1;
+	optional string protocol_code = 2;
+	optional string protocol_name = 3;
+	optional string from_date = 4;
+	optional string to_date = 5;
+	optional string protocol_status = 6;
+	optional string description = 7;
+	optional string resource = 8;
+	optional string row_state = 9;
+}
+
+message CLIS2015U02GrdStatusInfo
+{
+	optional string protocol_id = 1;
+	optional string status_id = 2;
+	optional string status_code = 3;
+	optional string status_name = 4;
+	optional string sort_no = 5;
+	optional string display_flg = 6;
+	optional string row_state = 7;
+}
+//[END] CLIS2015U02
+
+//[START] CLIS2015U03
+message CLIS2015U03ProtocolListInfo
+{
+	optional string clis_protocol_id          = 1;
+	optional string protocol_code             = 2;
+	optional string protocol_name             = 3;
+}
+message CLIS2015U03PatientListInfo
+{
+	optional string bunho                           = 1;                        
+	optional string surname                         = 2;                        
+	optional string surname2                        = 3;
+	optional string full_name                       = 4;                                
+	optional string sex                             = 5;                
+	optional string birth                           = 6;                        
+	optional string clis_protocol_id                = 7; 
+    optional string row_state                       = 8;	
+}
+message CLIS2015U03CheckPatientRequestInfo
+{
+	optional string bunho = 1;
+}
+message CLIS2015U03CheckPatientResultInfo
+{
+	optional string chk_result = 1;
+}
+//[END] CLIS2015U03
+
+
+//[START] CLIS2015U04
+message CLIS2015U04GetProtocolItemInfo { 
+	optional string clis_protocol_id = 1; 
+	optional string protocol_code = 2; 
+	optional string protocol_name = 3; 
+	optional string start_date = 4; 
+	optional string end_date = 5; 
+}
+
+message CLIS2015U04GetPatientListItemInfo { 
+	optional string protocol_patient_id = 1; 
+	optional string bunho = 2; 
+	optional string suname = 3; 
+	optional string suname2 = 4; 
+}
+
+message CLIS2015U04GetPatientStatusListItemInfo { 
+	optional string patient_status_id = 1; 
+	optional string description = 2; 
+	optional string updated = 3; 
+	optional string code_name = 4; 
+	optional string sort_no = 5; 
+	optional string sys_id = 6; 
+	optional string update_date = 7;
+	optional string code = 8;
+	optional string protocol_patient_id = 9;  
+    optional string row_state = 10;  
+}
+
+message CLIS2015U04GetProtocolListByPatientItemInfo { 
+	optional string clis_protocol_id = 1; 
+	optional string protocol_code = 2; 
+	optional string protocol_name = 3; 
+	optional string start_date = 4; 
+	optional string end_date = 5; 
+}
+//[END] CLIS2015U04

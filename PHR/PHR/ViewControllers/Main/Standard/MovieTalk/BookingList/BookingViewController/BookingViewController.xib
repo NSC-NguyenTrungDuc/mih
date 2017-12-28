@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookingViewController">
+            <connections>
+                <outlet property="carouselView" destination="sJz-aQ-pcv" id="I4n-te-DjB"/>
+                <outlet property="imageBackground" destination="97n-dZ-R75" id="6ut-Cz-tVp"/>
+                <outlet property="tabbarType" destination="hoE-nq-rSg" id="Ld6-yo-3Z8"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="97n-dZ-R75">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hoE-nq-rSg" customClass="TopMenuScrollView">
+                    <rect key="frame" x="0.0" y="60" width="600" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="tCw-J1-H0c"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJz-aQ-pcv" userLabel="ContentView" customClass="iCarousel">
+                    <rect key="frame" x="0.0" y="110" width="600" height="490"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="97n-dZ-R75" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4fx-CK-otw"/>
+                <constraint firstItem="sJz-aQ-pcv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="6v9-xi-FN4"/>
+                <constraint firstAttribute="trailing" secondItem="sJz-aQ-pcv" secondAttribute="trailing" id="GO2-EI-miz"/>
+                <constraint firstItem="hoE-nq-rSg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="QWT-Vv-VWR"/>
+                <constraint firstAttribute="bottom" secondItem="hoE-nq-rSg" secondAttribute="bottom" id="Wuf-9B-6Qr"/>
+                <constraint firstItem="hoE-nq-rSg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eAe-Uh-sib"/>
+                <constraint firstAttribute="bottom" secondItem="sJz-aQ-pcv" secondAttribute="bottom" id="hFN-ua-CLn"/>
+                <constraint firstAttribute="trailing" secondItem="hoE-nq-rSg" secondAttribute="trailing" id="hqc-Jl-Fa2"/>
+                <constraint firstAttribute="trailing" secondItem="97n-dZ-R75" secondAttribute="trailing" id="mAs-zC-Nfk"/>
+                <constraint firstItem="97n-dZ-R75" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mDn-qY-A0V"/>
+                <constraint firstItem="sJz-aQ-pcv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mUd-mp-ujV"/>
+                <constraint firstAttribute="bottom" secondItem="97n-dZ-R75" secondAttribute="bottom" id="v6Z-mp-sVn"/>
+                <constraint firstItem="sJz-aQ-pcv" firstAttribute="top" secondItem="hoE-nq-rSg" secondAttribute="bottom" id="xaU-If-YjY"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Wuf-9B-6Qr"/>
+                    <exclude reference="6v9-xi-FN4"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

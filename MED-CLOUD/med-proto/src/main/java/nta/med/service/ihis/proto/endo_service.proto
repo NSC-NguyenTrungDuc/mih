@@ -1,0 +1,148 @@
+import "rpc.proto";
+import "endo_model.proto";
+import "common_model.proto";
+
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "EndoServiceProto";
+option (version) = "1.0.0";
+option (service) = "endo";
+
+//[START] END1001U02
+message END1001U02DsvDwRequest
+{
+	optional string fkocs               = 1;
+	optional string hosp_code           = 2;
+}
+
+message END1001U02DsvDwResponse
+{
+	repeated END1001U02DsvDwInfo dsv_dw_item = 1;
+}
+
+message END1001U02DsvLDOCS0801Request
+{
+	optional string hangmog_code              = 1;
+	optional string hosp_code                 = 2;
+}
+message END1001U02DsvLDOCS0801Response
+{
+	repeated END1001U02DsvLDOCS0801Info dsv_ldocs_0801_item = 1;
+}
+message END1001U02GrdComment3Request
+{                                                
+	optional string hosp_code                     = 1;
+	optional string bunho                         = 2;
+	optional string order_date                    = 3;
+
+}
+message END1001U02GrdComment3Response
+{
+	repeated END1001U02GrdComment3Info grd_comment3_item = 1;
+}
+message END1001U02GrdPaStatusRequest
+{                                                
+	optional string bunho                       = 1;
+	optional string hosp_code                   = 2;
+	optional string hangmog_code                = 3;
+}
+message END1001U02GrdPaStatusResponse
+{
+	repeated END1001U02GrdPaStatusInfo grd_pastatus_item = 1;
+}
+message END1001U02GrdPurposeRequest
+{                                                
+	optional string hosp_code                       = 1;
+}
+message END1001U02GrdPurposeResponse
+{
+	repeated END1001U02GrdPurposeInfo grd_purpose_item = 1;
+}
+message END1001U02LayOrderDateRequest
+{                                                
+	optional string hosp_code                       = 1;
+	optional string bunho                           = 2;
+}
+message END1001U02LayOrderDateResponse
+{
+	repeated END1001U02LayOrderDateInfo lay_order_date_item = 1;
+}
+message END1001U02UpdateMerGrdRequest 
+{
+	repeated END1001U02DsvDwInfo           dsvdw_obj                        = 1;
+	repeated END1001U02GrdPaStatusInfo     grdpa_status_obj                 = 2;
+	optional string upd_id                                                  = 3;
+	optional string resident_yn                                             = 4;
+	optional string hosp_code                                               = 5;
+	optional string fk_ocs                                                  = 6;
+	optional string c3                                                      = 7;
+    optional string bunho                                                   = 8;
+    optional string hangmog_code                                            = 9;
+}
+message END1001U02GrdComment1Request 
+{
+	optional string hosp_code                                                                = 1;
+	optional string bunho                                                                    = 2;
+}
+message END1001U02GrdComment1Response 
+{
+	repeated END1001U02StrInfo grd_comment1_item = 1;
+}
+message END1001U02GrdComment2Request 
+{
+	optional string hosp_code                                                                = 1;
+	optional string bunho                                                                    = 2;
+}
+message END1001U02GrdComment2Response 
+{
+	repeated END1001U02StrInfo grd_comment2_item = 1;
+}
+message END1001U02DsvGumsaNameRequest 
+{
+	optional string code                                                                = 1;
+	optional string hosp_code                                                           = 2;
+}
+message END1001U02DsvGumsaNameResponse 
+{
+	repeated END1001U02StrInfo dsv_gumsa_name_item = 1;
+}
+message END1001U02OnLoadRequest 
+{
+	optional string fkocs                                      = 1;
+	optional string hosp_code                                  = 2;
+	optional string hangmog_code                               = 3;
+	optional string bunho                                      = 4;
+	optional string code                                       = 5;
+}
+message END1001U02OnLoadResponse 
+{
+	repeated END1001U02DsvDwInfo onload_dsvdw_item                                  = 1;
+	repeated END1001U02StrInfo onload_dsvgumsaname_item                             = 2;
+	repeated END1001U02GrdPurposeInfo onload_grdpurpose_item                        = 3;
+	repeated END1001U02DsvLDOCS0801Info onload_dsvldocs0801_item                    = 4;
+	repeated END1001U02GrdPaStatusInfo onload_grdpastatus_item                      = 5;
+}
+message END1001U02BtnQueryRequest 
+{
+	optional string fkocs                                      = 1;
+	optional string hosp_code                                  = 2;
+	optional string hangmog_code                               = 3;
+	optional string bunho                                      = 4;
+}
+message END1001U02BtnQueryResponse 
+{
+	repeated END1001U02DsvDwInfo dsvdw_item                                = 1;
+	repeated END1001U02GrdPaStatusInfo grdpastatus_item                    = 2;
+}
+message END1001U02LoadCommentsRequest 
+{
+	optional string hosp_code                    = 1;
+    optional string bunho                        = 2;
+	
+}
+message END1001U02LoadCommentsResponse 
+{
+	 repeated END1001U02StrInfo grdcomment1_item                              = 1;
+     repeated END1001U02StrInfo grdcomment2_item                              = 2;
+     repeated END1001U02LayOrderDateInfo layorderdate_item                    = 3;
+}
+//[END] END1001U02

@@ -1,0 +1,286 @@
+import "rpc.proto";
+import "bill_model.proto";
+import "common_model.proto";
+
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "BillServiceProto";
+option (version) = "1.0.0";
+option (service) = "bill";
+
+message BIL2016U01LoadPatientRequest
+{
+    optional string comming_date     = 1;
+    optional string bunho            = 2;
+    optional string suname           = 3;
+    optional string bill_number      = 4;
+    optional string tab              = 5;
+    optional string to_date          = 6;
+}
+
+message BIL2016U01LoadPatientResponse
+{
+	repeated BIL2016U01LoadPatientInfo lst = 1;
+	optional string total_patient          = 2;
+	optional string revenue                = 3;
+}
+
+message LoadGridBIL2016U02Request
+{
+        optional string invoice_no               = 1;                
+        optional string invoice_date             = 2;
+        optional string patient_code             = 3;
+        optional string pkout1001                = 4;
+        optional string bunho_type               = 5;
+        optional string pay_yn                   = 6;
+        optional string type                     = 7;
+        optional string bunho                    = 8;        
+        optional string patient_nm               = 9;                
+        optional string parent_invoice_no        = 10;                                
+        optional string status_flg               = 11;                
+        optional string amount_debt              = 12;                
+        optional string amount_paid              = 13;                
+        optional string amount                   = 14;        
+        optional string discount                 = 15;               
+}
+
+message LoadGridBIL2016U02Response
+{
+	repeated LoadGridBIL2016U02Info invoice_detail = 1;
+	optional string invoice_no                     = 2;
+	optional string yoyang_name                    = 3;
+	optional string adress                         = 4;
+	optional string tel                            = 5;
+	optional string email                          = 6;
+	optional string website                        = 7;
+	optional string payment_name                   = 8;
+	optional string payment_code                   = 9;
+	optional string paid_name                      = 10;
+	optional string total_discount                 = 11;
+	optional string discount_type                  = 12;
+	optional string discount_reason_total          = 13;
+	optional string revert_type                    = 14;
+	optional string revert_comment                 = 15;
+	optional string total_amount                   = 16;         //Tong thanh tien
+	optional string total_patient_discount         = 17;        //Tong mien giam
+	optional string total_patient_pay              = 18;        //Tong benh nhan tra        
+	optional string total_amount_paid              = 19;        //Tong benh nhan da tra (*)
+	optional string total_amount_debt              = 20;        //Tong benh nhan con no
+}
+
+message LoadComboBIL2016U02Request
+{
+	optional string combo_type = 1;
+}
+
+
+
+message SaveBIL2016U02Request
+{
+	repeated LoadGridBIL2016U02Info list_info         = 1;
+	optional string invoice_no                        = 2;        
+	optional string invoice_date                      = 3;        
+	optional string payment_code                      = 4;
+	optional string bunho                             = 5;        
+	optional string suname                            = 6;
+	optional string address                           = 7;
+	optional string sex                               = 8;
+	optional string birth                             = 9;
+	optional string naewon_date                       = 10;
+	optional string gwa                               = 11;
+	optional string doctor                            = 12;
+	optional string gwa_name                          = 13;
+	optional string doctor_name                       = 14;
+	optional string bunho_type                        = 15;
+	optional string paid_name                         = 16;        
+	optional string payment_name                      = 17;        
+	optional string fkout1001                         = 18;
+	optional string amount                            = 19;        
+	optional string discount                          = 20;        
+	optional string revert_type                       = 21;
+	optional string revert_comment                    = 22;        
+	optional string bunho_type_name                   = 23;
+	optional string phone                             = 24;      
+	optional string discount_type                     = 25;        
+	optional string row_state                         = 26;
+	optional string discount_reason_total             = 27;        
+	optional string parent_invoice_no                 = 28;
+	optional string status_flg                        = 29;
+	optional string type                              = 30;
+	optional string status_flg_parent_no_null         = 31;
+	optional string revert_reason                     = 32;
+	optional string amount_debt_latest                = 33;     
+	optional string pay_money                         = 34;        
+}
+
+//------[START]BIL2016R01---------
+
+message BIL2016R01CboAllRequest
+{
+
+}
+message BIL2016R01CboAllResponse
+{
+    repeated ComboListItemInfo cbo_assign_dept = 1;
+    repeated ComboListItemInfo cbo_exe_dept = 2;
+}
+
+message BIL2016R01GrdReportRequest
+{
+        optional string from_month           =   1;
+        optional string to_month   			 =   2;
+        optional string from_date   		 =   3;
+        optional string to_date        		 =   4;
+        optional string assign_dept          =   5;
+        optional string assign_doctor        =   6;
+        optional string exe_dept             =   7;
+        optional string exe_doctor           =   8;
+        optional string service_id           =   9;
+        optional string person_id            =   10;
+        optional string page_number 		 =   11;
+        optional string offset 				 =   12;
+}
+
+message BIL2016R01GrdReportResponse
+{
+        repeated BIL2016R01GrdReportInfo grd_list = 1;
+        optional string sum_discount              = 2;
+		optional string sum_amount_paid           = 3;
+}
+
+message BIL2016R01FbxPersonRequest
+{
+
+}
+
+//------[END]BIL2016R01-----------
+
+message BIL2016U00CboGroupTypeRequest
+{
+}
+
+
+message BIL2016U00GrdMasterRequest
+{
+	optional string hangmog_name_inx = 1;
+    optional string order_gubun = 2;
+    optional string hosp_code = 3;
+    optional string code_type = 4;
+    optional string language = 5;
+    optional string page_number = 6;
+    optional string offset = 7;
+}
+
+message BIL2016U00GrdMasterResponse
+{
+	repeated BIL2016U00ServiceInfo list_info = 1;
+}
+
+message BIL2016U00SaveGrdMasterRequest
+{
+	repeated BIL2016U00DetailServiceInfo info = 1;
+}
+message BIL2016U00DetailServiceRequest
+{
+	optional string hangmog_code = 1;
+}
+message BIL2016U00DetailServiceResponse
+{
+	optional BIL2016U00DetailServiceInfo info = 1;
+}
+
+message BIL2016R01CboExeDeptRequest
+{
+        
+}
+message BIL2016R01FbxExeDoctorRequest
+{
+        optional string gwa = 1;
+}
+message GetDataComboInvoiceBIL2016U02Request
+{
+	optional string parent_invoice_no              = 1;                
+	
+}
+message GetDataComboInvoiceBIL2016U02Response
+{
+	repeated GetDataComboInvoiceBIL2016U02Info combo_invoice = 1;
+}
+message LoadGridPayHistoryBIL2016U02Request
+{
+	optional string parent_invoice_no = 1;
+}
+message LoadGridPayHistoryBIL2016U02Response
+{
+	repeated LoadGridPayHistoryBIL2016U02Info grd_pay_history = 1;
+}
+
+message CheckLasteInvoiceBIL2016U02Request
+{
+	optional string  parent_invoice_no = 1;
+}
+message CheckLasteInvoiceBIL2016U02Response
+{
+	repeated CheckLasteInvoiceBIL2016U02Info check_laste_invoice = 1;
+}
+
+message BIL0102U00DataReportRequest
+{
+	optional string invoice_no         = 1;
+	optional string parent_invoice_no  = 2;
+}
+message BIL0102U00DataReportResponse
+{
+	repeated BIL0102U00DataReportInfo invoice_detail = 1;
+	optional string sum_amount_invoice               = 2;
+	optional string paid_invoice                     = 3;
+	optional string total_paid                       = 4;
+	optional string total_debt                       = 5;
+	
+}
+
+
+message SaveBIL0102U00Request
+{
+	repeated LoadGridBIL2016U02Info list_info         = 1;
+	optional string invoice_no                        = 2;        
+	optional string invoice_date                      = 3;        
+	optional string payment_code                      = 4;
+	optional string bunho                             = 5;        
+	optional string suname                            = 6;
+	optional string address                           = 7;
+	optional string sex                               = 8;
+	optional string birth                             = 9;
+	optional string naewon_date                       = 10;
+	optional string gwa                               = 11;
+	optional string doctor                            = 12;
+	optional string gwa_name                          = 13;
+	optional string doctor_name                       = 14;
+	optional string bunho_type                        = 15;
+	optional string paid_name                         = 16;        
+	optional string payment_name                      = 17;        
+	optional string fkout1001                         = 18;
+	optional string amount                            = 19;        
+	optional string discount                          = 20;        
+	optional string revert_type                       = 21;
+	optional string revert_comment                    = 22;        
+	optional string bunho_type_name                   = 23;
+	optional string phone                             = 24;      
+	optional string discount_type                     = 25;        
+	optional string row_state                         = 26;
+	optional string discount_reason_total             = 27;        
+	optional string parent_invoice_no                 = 28;
+	optional string status_flg                        = 29;
+	optional string type                              = 30;
+	optional string status_flg_parent_no_null         = 31;
+	optional string revert_reason                     = 32;
+	optional string amount_debt_latest                = 33;     
+	optional string pay_money                         = 34;        
+}
+
+message BIL0102U00PrintTemplateRequest
+{
+}
+message BIL0102U00PrintTemplateResponse
+{
+	optional string template = 1;
+}

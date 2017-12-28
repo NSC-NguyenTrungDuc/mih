@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="orcaData" targetNamespace="http://tempuri.org/orcaData.xsd" xmlns:mstns="http://tempuri.org/orcaData.xsd" xmlns="http://tempuri.org/orcaData.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="ConnectionString (Settings)" PropertyReference="ApplicationSettings.IHIS.BASS.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.Odbc">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbl_byomeiTableAdapter" GeneratorDataComponentClassName="tbl_byomeiTableAdapter" Name="tbl_byomei" UserDataComponentName="tbl_byomeiTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>SELECT "byomeicd", "byomei", "byomeimoji", "tanbyomei", "tanbyomeimoji", "byomeikana", "ikosakicd", "tokskncd", "utagaiflg", "tandokukbn", "hknskykbn", "hyojuncd", "saitakukbn", "byomeichgcd", "icd10", "syusaiymd", "chgymd", "haisiymd", "termid", "opid", "creymd", "upymd", "uphms" FROM "public"."tbl_byomei"</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbl_tensuTableAdapter" GeneratorDataComponentClassName="tbl_tensuTableAdapter" Name="tbl_tensu" UserDataComponentName="tbl_tensuTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="False">
+                    <CommandText>SELECT "srycd", "yukostymd", "yukoedymd", "srykbn", "srysyukbn", "yukoketa", "name", "kanayukoketa", "kananame", "formalyukoketa", "formalname", "tensikibetu", "ten", "tanicd", "tanimojisu", "taniname", "datakbn", "hkntekkbn", "nyugaitekkbn", "routekkbn", "hospsrykbn", "osinkbn", "houksnkbn", "byokanrenkbn", "sdokanryo", "jituday", "daycnt", "ykzknrkbn", "kzmcompsikibetu", "kzmkgn", "kzmjgn", "kzm", "kzmten", "kzmerr", "jgncnt", "jgncnt1d", "jgncnt1w", "jgncntetcm", "jgncntetc", "jgncnterr", "chuksncd", "chuksntsuban", "tsusokuage", "kgnage", "jgnage", "timeksnkbn", "kijunteigenkbn", "kijunteigencd", "laserksn", "chpmesuksn", "micmesuksn", "donorkbn", "knsjiskbn", "knsjisgrpkbn", "teigenkbn", "sekizuisokutei", "keibujyutu", "autohougo", "gaikanrikbn", "tusokugaikbn", "hokatuteigenkbn", "chpnaisiksn", "autofungo", "chiikiksn", "byosyokbn", "chpgyokosotiksn", "shortstayope", "buikbn", "santeirrkkbn", "sstkijuncd1", "sstkijuncd2", "sstkijuncd3", "sstkijuncd4", "sstkijuncd5", "sstkijuncd6", "sstkijuncd7", "sstkijuncd8", "sstkijuncd9", "sstkijuncd10", "ageksnkgn1", "ageksnjgn1", "ageksnsrycd1", "ageksnkgn2", "ageksnjgn2", "ageksnsrycd2", "ageksnkgn3", "ageksnjgn3", "ageksnsrycd3", "ageksnkgn4", "ageksnjgn4", "ageksnsrycd4", "kentaicomment", "nyukhnkbn", "nyukhnksnkbn", "kangoksn", "oldtenskb", "oldten", "madokukbn", "sinkeihakaikbn", "seibutugakukbn", "zoeizaikbn", "csyyouryo", "ykzkbn", "zaigatakbn", "kouhatukbn", "longtoyokbn", "meiuseskb", "tokukizaiageksnkbn", "sansokbn", "tokukizaisbt1", "tokukizaisbt2", "jgnten", "gaitenttlkbn", "nyutenttlkbn", "cdkbn_kbn", "cdkbn_syo", "cdkbn_bu", "cdkbn_kbnnum", "cdkbn_kbnnum_eda", "cdkbn_kouban", "kokuchi_kbn", "kokuchi_syo", "kokuchi_bu", "kokuchi_kbnnum", "kokuchi_kbnnum_eda", "kokuchi_kouban", "kokujiskbkbn1", "kokujiskbkbn2", "namechgkbn", "kananamechgkbn", "idokanren", "kouhyojyunnum", "yakkakjncd", "syusaiskb", "syomeikanren", "chgymd", "haisiymd", "keikasochiymd", "termid", "opid", "creymd", "upymd", "uphms", "hospnum", "gazoopesup", "iryokansatukbn", "masuiskbkbn" FROM "public"."tbl_tensu"</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="orcaData" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="orcaData" msprop:Generator_DataSetName="orcaData">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbl_byomei" msprop:Generator_UserTableName="tbl_byomei" msprop:Generator_RowDeletedName="tbl_byomeiRowDeleted" msprop:Generator_TableClassName="tbl_byomeiDataTable" msprop:Generator_RowChangedName="tbl_byomeiRowChanged" msprop:Generator_RowClassName="tbl_byomeiRow" msprop:Generator_RowChangingName="tbl_byomeiRowChanging" msprop:Generator_RowEvArgName="tbl_byomeiRowChangeEvent" msprop:Generator_RowEvHandlerName="tbl_byomeiRowChangeEventHandler" msprop:Generator_TablePropName="tbl_byomei" msprop:Generator_TableVarName="tabletbl_byomei" msprop:Generator_RowDeletingName="tbl_byomeiRowDeleting">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl_tensu" msprop:Generator_UserTableName="tbl_tensu" msprop:Generator_RowDeletedName="tbl_tensuRowDeleted" msprop:Generator_TableClassName="tbl_tensuDataTable" msprop:Generator_RowChangedName="tbl_tensuRowChanged" msprop:Generator_RowClassName="tbl_tensuRow" msprop:Generator_RowChangingName="tbl_tensuRowChanging" msprop:Generator_RowEvArgName="tbl_tensuRowChangeEvent" msprop:Generator_RowEvHandlerName="tbl_tensuRowChangeEventHandler" msprop:Generator_TablePropName="tbl_tensu" msprop:Generator_TableVarName="tabletbl_tensu" msprop:Generator_RowDeletingName="tbl_tensuRowDeleting">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

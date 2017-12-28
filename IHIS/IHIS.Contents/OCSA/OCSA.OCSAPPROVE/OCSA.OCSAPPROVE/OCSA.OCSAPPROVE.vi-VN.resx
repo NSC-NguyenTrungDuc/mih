@@ -1,0 +1,582 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnProcessD0.Text" xml:space="preserve">
+    <value>Phê duyệt [Thông thường]</value>
+  </data>
+  <data name="btnProcessD4.Text" xml:space="preserve">
+    <value>Phê duyệt [Lâm thời]</value>
+  </data>
+  <data name="btnProcessD7.Text" xml:space="preserve">
+    <value>Phê duyệt [Khi rời viện]</value>
+  </data>
+  <data name="btnSpecificComment.Text" xml:space="preserve">
+    <value>Phiếu YC</value>
+  </data>
+  <data name="rbtIn.Text" xml:space="preserve">
+    <value>Nội trú</value>
+  </data>
+  <data name="rbtOut.Text" xml:space="preserve">
+    <value>Ngoại trú</value>
+  </data>
+  <data name="tabPost.Title" xml:space="preserve">
+    <value>Phê duyệt
+ sau</value>
+  </data>
+  <data name="tabPre.Title" xml:space="preserve">
+    <value>Phê duyệt trước</value>
+  </data>
+  <data name="xComboItem1.DisplayItem" xml:space="preserve">
+    <value>Sau</value>
+  </data>
+  <data name="xComboItem10.DisplayItem" xml:space="preserve">
+    <value>hr</value>
+  </data>
+  <data name="xComboItem2.DisplayItem" xml:space="preserve">
+    <value>Trước</value>
+  </data>
+  <data name="xComboItem3.DisplayItem" xml:space="preserve">
+    <value>Đợi</value>
+  </data>
+  <data name="xComboItem4.DisplayItem" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="xComboItem5.DisplayItem" xml:space="preserve">
+    <value>Thông thường</value>
+  </data>
+  <data name="xComboItem6.DisplayItem" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="xComboItem7.DisplayItem" xml:space="preserve">
+    <value>Định kỳ</value>
+  </data>
+  <data name="xComboItem8.DisplayItem" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="xComboItem9.DisplayItem" xml:space="preserve">
+    <value>ml/hr</value>
+  </data>
+  <data name="xEditGridCell1.HeaderText" xml:space="preserve">
+    <value>Ngày yêu ầu</value>
+  </data>
+  <data name="xEditGridCell10.HeaderText" xml:space="preserve">
+    <value>bun_code</value>
+  </data>
+  <data name="xEditGridCell102.HeaderText" xml:space="preserve">
+    <value>Phân loại yc</value>
+  </data>
+  <data name="xEditGridCell11.HeaderText" xml:space="preserve">
+    <value>Nơi chuyển tới</value>
+  </data>
+  <data name="xEditGridCell12.HeaderText" xml:space="preserve">
+    <value>P ban chuyển</value>
+  </data>
+  <data name="xEditGridCell127.HeaderText" xml:space="preserve">
+    <value>Mã khoa khám</value>
+  </data>
+  <data name="xEditGridCell128.HeaderText" xml:space="preserve">
+    <value>ord_danui_bas</value>
+  </data>
+  <data name="xEditGridCell129.HeaderText" xml:space="preserve">
+    <value>jubsu_no</value>
+  </data>
+  <data name="xEditGridCell13.HeaderText" xml:space="preserve">
+    <value>B phận chuyển</value>
+  </data>
+  <data name="xEditGridCell131.HeaderText" xml:space="preserve">
+    <value>Tên thông thường</value>
+  </data>
+  <data name="xEditGridCell132.HeaderText" xml:space="preserve">
+    <value>tel_yn</value>
+  </data>
+  <data name="xEditGridCell134.HeaderText" xml:space="preserve">
+    <value>specimen_code</value>
+  </data>
+  <data name="xEditGridCell135.HeaderText" xml:space="preserve">
+    <value>ord_danui</value>
+  </data>
+  <data name="xEditGridCell136.HeaderText" xml:space="preserve">
+    <value>jusa</value>
+  </data>
+  <data name="xEditGridCell137.HeaderText" xml:space="preserve">
+    <value>bogyong_code</value>
+  </data>
+  <data name="xEditGridCell138.HeaderText" xml:space="preserve">
+    <value>Mã vị trí</value>
+  </data>
+  <data name="xEditGridCell139.HeaderText" xml:space="preserve">
+    <value>Ngày mong
+ muốn</value>
+  </data>
+  <data name="xEditGridCell14.HeaderText" xml:space="preserve">
+    <value>P ban chuyển</value>
+  </data>
+  <data name="xEditGridCell140.HeaderText" xml:space="preserve">
+    <value>Thực hiện 
+trong ngày</value>
+  </data>
+  <data name="xEditGridCell141.HeaderText" xml:space="preserve">
+    <value>Kết quả 
+trong ngày</value>
+  </data>
+  <data name="xEditGridCell143.HeaderText" xml:space="preserve">
+    <value>Tên bộ phận</value>
+  </data>
+  <data name="xEditGridCell144.HeaderText" xml:space="preserve">
+    <value>Ngày đã
+ mong muốn</value>
+  </data>
+  <data name="xEditGridCell145.HeaderText" xml:space="preserve">
+    <value>Phân loại 
+nhập</value>
+  </data>
+  <data name="xEditGridCell146.HeaderText" xml:space="preserve">
+    <value>Phân loại BH</value>
+  </data>
+  <data name="xEditGridCell147.HeaderText" xml:space="preserve">
+    <value>Tái khám
+ lần đầu</value>
+  </data>
+  <data name="xEditGridCell148.HeaderText" xml:space="preserve">
+    <value>io_yn</value>
+  </data>
+  <data name="xEditGridCell149.HeaderText" xml:space="preserve">
+    <value>input_tab</value>
+  </data>
+  <data name="xEditGridCell15.HeaderText" xml:space="preserve">
+    <value>fk_key1001</value>
+  </data>
+  <data name="xEditGridCell151.HeaderText" xml:space="preserve">
+    <value>Thuốc 
+mang tới</value>
+  </data>
+  <data name="xEditGridCell153.HeaderText" xml:space="preserve">
+    <value>Tại 
+nhà</value>
+  </data>
+  <data name="xEditGridCell154.HeaderText" xml:space="preserve">
+    <value>Giờ 
+quy định</value>
+  </data>
+  <data name="xEditGridCell155.HeaderText" xml:space="preserve">
+    <value>BHNN</value>
+  </data>
+  <data name="xEditGridCell156.HeaderText" xml:space="preserve">
+    <value>BHNN</value>
+  </data>
+  <data name="xEditGridCell16.HeaderText" xml:space="preserve">
+    <value>wonnae_drg_yn</value>
+  </data>
+  <data name="xEditGridCell162.HeaderText" xml:space="preserve">
+    <value>toiwon_drg</value>
+  </data>
+  <data name="xEditGridCell163.HeaderText" xml:space="preserve">
+    <value>ml
+hr</value>
+  </data>
+  <data name="xEditGridCell164.HeaderText" xml:space="preserve">
+    <value>Không thể 
+phát hành sau</value>
+  </data>
+  <data name="xEditGridCell165.HeaderText" xml:space="preserve">
+    <value>Đơn giản</value>
+  </data>
+  <data name="xEditGridCell166.HeaderText" xml:space="preserve">
+    <value>Bao thuốc</value>
+  </data>
+  <data name="xEditGridCell167.HeaderText" xml:space="preserve">
+    <value>input_tab</value>
+  </data>
+  <data name="xEditGridCell169.HeaderText" xml:space="preserve">
+    <value>donbog_yn</value>
+  </data>
+  <data name="xEditGridCell17.HeaderText" xml:space="preserve">
+    <value>dc_yn</value>
+  </data>
+  <data name="xEditGridCell170.HeaderText" xml:space="preserve">
+    <value>dv_name</value>
+  </data>
+  <data name="xEditGridCell171.HeaderText" xml:space="preserve">
+    <value>drg_info</value>
+  </data>
+  <data name="xEditGridCell172.HeaderText" xml:space="preserve">
+    <value>drg_bunryu</value>
+  </data>
+  <data name="xEditGridCell173.HeaderText" xml:space="preserve">
+    <value>Tán 
+thuốc</value>
+  </data>
+  <data name="xEditGridCell175.HeaderText" xml:space="preserve">
+    <value>io_gubun</value>
+  </data>
+  <data name="xEditGridCell18.HeaderText" xml:space="preserve">
+    <value>confirm_check</value>
+  </data>
+  <data name="xEditGridCell19.HeaderText" xml:space="preserve">
+    <value>G
+R</value>
+  </data>
+  <data name="xEditGridCell2.HeaderText" xml:space="preserve">
+    <value>Khoa khám</value>
+  </data>
+  <data name="xEditGridCell20.HeaderText" xml:space="preserve">
+    <value>Mã YC</value>
+  </data>
+  <data name="xEditGridCell21.HeaderText" xml:space="preserve">
+    <value>Tên YC</value>
+  </data>
+  <data name="xEditGridCell22.HeaderText" xml:space="preserve">
+    <value>Dịch thể</value>
+  </data>
+  <data name="xEditGridCell23.HeaderText" xml:space="preserve">
+    <value>Số lượng</value>
+  </data>
+  <data name="xEditGridCell24.HeaderText" xml:space="preserve">
+    <value>Đơn vị</value>
+  </data>
+  <data name="xEditGridCell25.HeaderText" xml:space="preserve">
+    <value>dv_time</value>
+  </data>
+  <data name="xEditGridCell26.HeaderText" xml:space="preserve">
+    <value>dv</value>
+  </data>
+  <data name="xEditGridCell27.HeaderText" xml:space="preserve">
+    <value>Số ngày</value>
+  </data>
+  <data name="xEditGridCell28.HeaderText" xml:space="preserve">
+    <value>Tiêm</value>
+  </data>
+  <data name="xEditGridCell29.HeaderText" xml:space="preserve">
+    <value>Phương pháp</value>
+  </data>
+  <data name="xEditGridCell3.HeaderText" xml:space="preserve">
+    <value>Bác sỹ</value>
+  </data>
+  <data name="xEditGridCell30.HeaderText" xml:space="preserve">
+    <value>Ngoài 
+BV</value>
+  </data>
+  <data name="xEditGridCell31.HeaderText" xml:space="preserve">
+    <value>result_date</value>
+  </data>
+  <data name="xEditGridCell32.HeaderText" xml:space="preserve">
+    <value>Khẩn 
+cấp</value>
+  </data>
+  <data name="xEditGridCell33.HeaderText" xml:space="preserve">
+    <value>Phân loại 
+YC</value>
+  </data>
+  <data name="xEditGridCell34.HeaderText" xml:space="preserve">
+    <value>Tên BN</value>
+  </data>
+  <data name="xEditGridCell35.HeaderText" xml:space="preserve">
+    <value>Phiếu YC</value>
+  </data>
+  <data name="xEditGridCell36.HeaderText" xml:space="preserve">
+    <value>Thuốc chống
+ ung thư</value>
+  </data>
+  <data name="xEditGridCell37.HeaderText" xml:space="preserve">
+    <value>muhyo</value>
+  </data>
+  <data name="xEditGridCell38.HeaderText" xml:space="preserve">
+    <value>Chụp 
+di động</value>
+  </data>
+  <data name="xEditGridCell39.HeaderText" xml:space="preserve">
+    <value>Người thay thế</value>
+  </data>
+  <data name="xEditGridCell4.HeaderText" xml:space="preserve">
+    <value>Số ngày</value>
+  </data>
+  <data name="xEditGridCell40.HeaderText" xml:space="preserve">
+    <value>ocs_flag</value>
+  </data>
+  <data name="xEditGridCell41.HeaderText" xml:space="preserve">
+    <value>order_gubun</value>
+  </data>
+  <data name="xEditGridCell42.HeaderText" xml:space="preserve">
+    <value>input_gubun</value>
+  </data>
+  <data name="xEditGridCell43.HeaderText" xml:space="preserve">
+    <value>after_act_yn</value>
+  </data>
+  <data name="xEditGridCell44.HeaderText" xml:space="preserve">
+    <value>jundal_table</value>
+  </data>
+  <data name="xEditGridCell45.HeaderText" xml:space="preserve">
+    <value>jundal_part</value>
+  </data>
+  <data name="xEditGridCell46.HeaderText" xml:space="preserve">
+    <value>move_part</value>
+  </data>
+  <data name="xEditGridCell47.HeaderText" xml:space="preserve">
+    <value>bunho</value>
+  </data>
+  <data name="xEditGridCell48.HeaderText" xml:space="preserve">
+    <value>Ngày YC</value>
+  </data>
+  <data name="xEditGridCell49.HeaderText" xml:space="preserve">
+    <value>gwa</value>
+  </data>
+  <data name="xEditGridCell5.HeaderText" xml:space="preserve">
+    <value>Mã số BN</value>
+  </data>
+  <data name="xEditGridCell50.HeaderText" xml:space="preserve">
+    <value>doctor</value>
+  </data>
+  <data name="xEditGridCell51.HeaderText" xml:space="preserve">
+    <value>naewon_type</value>
+  </data>
+  <data name="xEditGridCell52.HeaderText" xml:space="preserve">
+    <value>pk_order</value>
+  </data>
+  <data name="xEditGridCell53.HeaderText" xml:space="preserve">
+    <value>seq</value>
+  </data>
+  <data name="xEditGridCell54.HeaderText" xml:space="preserve">
+    <value>pkocs1003</value>
+  </data>
+  <data name="xEditGridCell55.HeaderText" xml:space="preserve">
+    <value>sub_susul</value>
+  </data>
+  <data name="xEditGridCell56.HeaderText" xml:space="preserve">
+    <value>sutak_yn</value>
+  </data>
+  <data name="xEditGridCell57.HeaderText" xml:space="preserve">
+    <value>Phân loại 
+trước sau</value>
+  </data>
+  <data name="xEditGridCell59.HeaderText" xml:space="preserve">
+    <value>amt</value>
+  </data>
+  <data name="xEditGridCell6.HeaderText" xml:space="preserve">
+    <value>Bác sỹ khám</value>
+  </data>
+  <data name="xEditGridCell64.HeaderText" xml:space="preserve">
+    <value>dv_1</value>
+  </data>
+  <data name="xEditGridCell65.HeaderText" xml:space="preserve">
+    <value>dv_2</value>
+  </data>
+  <data name="xEditGridCell66.HeaderText" xml:space="preserve">
+    <value>dv_3</value>
+  </data>
+  <data name="xEditGridCell67.HeaderText" xml:space="preserve">
+    <value>dv_4</value>
+  </data>
+  <data name="xEditGridCell68.HeaderText" xml:space="preserve">
+    <value>mix_group</value>
+  </data>
+  <data name="xEditGridCell69.HeaderText" xml:space="preserve">
+    <value>slip_code</value>
+  </data>
+  <data name="xEditGridCell7.HeaderText" xml:space="preserve">
+    <value>naewon_type</value>
+  </data>
+  <data name="xEditGridCell70.HeaderText" xml:space="preserve">
+    <value>group_yn</value>
+  </data>
+  <data name="xEditGridCell71.HeaderText" xml:space="preserve">
+    <value>sg_code</value>
+  </data>
+  <data name="xEditGridCell72.HeaderText" xml:space="preserve">
+    <value>order_gubun_bas</value>
+  </data>
+  <data name="xEditGridCell73.HeaderText" xml:space="preserve">
+    <value>input_control</value>
+  </data>
+  <data name="xEditGridCell75.HeaderText" xml:space="preserve">
+    <value>sunab_check</value>
+  </data>
+  <data name="xEditGridCell76.HeaderText" xml:space="preserve">
+    <value>suga_yn</value>
+  </data>
+  <data name="xEditGridCell77.HeaderText" xml:space="preserve">
+    <value>emergency_check</value>
+  </data>
+  <data name="xEditGridCell79.HeaderText" xml:space="preserve">
+    <value>dv_5</value>
+  </data>
+  <data name="xEditGridCell8.HeaderText" xml:space="preserve">
+    <value>pk_order</value>
+  </data>
+  <data name="xEditGridCell80.HeaderText" xml:space="preserve">
+    <value>limit_suryang</value>
+  </data>
+  <data name="xEditGridCell81.HeaderText" xml:space="preserve">
+    <value>specimen_yn</value>
+  </data>
+  <data name="xEditGridCell82.HeaderText" xml:space="preserve">
+    <value>jaeryo_yn</value>
+  </data>
+  <data name="xEditGridCell83.HeaderText" xml:space="preserve">
+    <value>ord_danui_check</value>
+  </data>
+  <data name="xEditGridCell84.HeaderText" xml:space="preserve">
+    <value>P ban chuyển</value>
+  </data>
+  <data name="xEditGridCell85.HeaderText" xml:space="preserve">
+    <value>B phận chuyển</value>
+  </data>
+  <data name="xEditGridCell86.HeaderText" xml:space="preserve">
+    <value>dv_6</value>
+  </data>
+  <data name="xEditGridCell87.HeaderText" xml:space="preserve">
+    <value>bulyong_check</value>
+  </data>
+  <data name="xEditGridCell88.HeaderText" xml:space="preserve">
+    <value>wonyoi_order_cr_yn</value>
+  </data>
+  <data name="xEditGridCell89.HeaderText" xml:space="preserve">
+    <value>default_wonyoi_order_yn</value>
+  </data>
+  <data name="xEditGridCell9.HeaderText" xml:space="preserve">
+    <value>input_gubun</value>
+  </data>
+  <data name="xEditGridCell90.HeaderText" xml:space="preserve">
+    <value>dv_7</value>
+  </data>
+  <data name="xEditGridCell91.HeaderText" xml:space="preserve">
+    <value>dv_8</value>
+  </data>
+  <data name="xEditGridCell92.HeaderText" xml:space="preserve">
+    <value>nday_yn</value>
+  </data>
+  <data name="xEditGridCell93.HeaderText" xml:space="preserve">
+    <value>muhyo_yn</value>
+  </data>
+  <data name="xEditGridCell94.HeaderText" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="xEditGridCell95.HeaderText" xml:space="preserve">
+    <value>Lựa chọn</value>
+  </data>
+  <data name="xEditGridCell96.HeaderText" xml:space="preserve">
+    <value>Hiển thị 
+tên thông thường</value>
+  </data>
+  <data name="xEditGridCell97.HeaderText" xml:space="preserve">
+    <value>Lựa chọn</value>
+  </data>
+  <data name="xGridHeader1.HeaderText" xml:space="preserve">
+    <value>Số lần</value>
+  </data>
+</root>

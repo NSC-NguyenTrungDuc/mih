@@ -1,0 +1,599 @@
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "CommonModelProto";
+
+// ComboListItemInfo
+message ComboListItemInfo {
+	optional string code = 1;
+	optional string code_name = 2;
+}
+
+//Common DataStringListItemInfo
+message DataStringListItemInfo{
+	optional string data_value = 1;
+}
+
+message TripleListItemInfo {
+    optional string item_1 = 1;
+    optional string item_2 = 2;
+    optional string item_3 = 3;
+}
+
+// ---- [START] OCS.lib -------
+
+message ComboDataSourceInfo{
+	required string col_name = 1;
+	optional string arg1 = 2;
+	optional string arg2 = 3;
+	optional string arg3 = 4;
+}
+
+message NaewonYNInfo1{
+	optional string bunho = 1;
+	optional string naewon_date = 2;
+	optional string pkout1001 = 3;
+}
+
+message NaewonYNInfo2{
+	optional string pkout1001 = 1;
+}
+
+message NotApproveOrderCntInfo{
+	optional string io_gubun = 1;
+	optional string user_id = 2;
+	optional string instead_yn = 3;
+	optional string approve_yn = 4;
+	optional string key = 5;
+}
+message OcsOrderBizGetUserOptionInfo
+{
+	optional string doctor = 1;
+	optional string gwa = 2;
+    optional string keyword = 3;
+    optional string ioGubun = 4;
+}
+message GetUserOptionInfo
+{
+	optional string doctor = 1;
+	optional string gwa = 2;
+    optional string keyword = 3;
+    optional string ioGubun = 4;
+}
+message LoadColumnCodeNameInfo
+{
+	optional string col_name = 1;
+	optional string arg1 = 2;
+	optional string arg2 = 3;
+	optional string arg3 = 4;
+	optional string value = 5;
+}
+message GetMainGwaDoctorCodeInfo
+{
+	optional string memb = 1;
+}
+
+message LoadOftenUsedTabResponseInfo
+{
+	optional string order_gubun  = 1;
+    optional string order_gubun_name = 2;
+    optional string memb = 3;
+    optional string yn_value = 4;
+    optional string sort = 5;
+}
+
+message LoadOftenUsedTabInfo{
+    optional string memb = 1;
+    optional string input_tab = 2;
+}
+
+message GetFindWorkerInfo {
+    optional string col_name = 1;
+    optional string arg1 = 2;
+    optional string arg2 = 3;
+    optional string arg3 = 4;
+}
+message FnCplLoadDupGrdHangmogInfo
+{
+	optional string hangmog_code1 = 1;
+	optional string specimen_code1 = 2;
+	optional string hangmog_code2 = 3;
+	optional string specimen_code2 = 4;
+}
+message GetDefaultOrdDanuiInfo
+{
+	optional string ord_danui = 1;
+	optional string code_name = 2;
+}
+message PrOcsInterfaceInsertInfo
+{
+	optional string io_gubun = 1;
+    optional string pk_key = 2;
+    optional string user_id = 3;
+}
+message OCSLibOrderBizGetJundaTableListItemInfo{
+    optional string jundal_table_out = 1;
+    optional string jundal_part_out = 2;
+    optional string move_part = 3;
+    optional string jundal_table_inp = 4;
+    optional string jundal_part_inp = 5;
+}
+
+message OcsoGetNotApproveOrderCntInfo{
+	optional string io_gubun = 1; 
+	optional string user_id = 2;
+	optional string instead_yn = 3; 
+	optional string approve_yn = 4;
+	optional string key = 5;
+}
+
+message LoadSearchOrderInfo{
+	optional string slip_code       = 1;
+	optional string slip_name       = 2;
+	optional string hangmog_code    = 3;
+	optional string hangmog_name    = 4;
+	optional string wonnae_drg_yn   = 5;
+	optional string yak_kijun_code  = 6;
+	optional string trial_flag      = 7;
+}
+
+message LoadSearchOrder1RequestInfo
+{
+	optional string search_word     = 1;
+	optional string gijun_date      = 2;
+	optional string input_tab       = 3;
+	optional string wonnae_drg_yn   = 4;
+	optional string page_number     = 5;
+	optional string offset          = 6;
+	optional string protocol_id     = 7;
+}
+
+message LoadSearchOrder2RequestInfo
+{
+	optional string search_word       = 1;
+	optional string gijun_date        = 2;
+	optional string input_tab         = 3;
+	optional string wonnae_drg_yn     = 4;
+	optional string search_condition  = 5;
+}
+
+message SaveRegularOrderInfo{
+    optional string aWorkGubun = 1;
+    optional string aPkKey     = 2;
+}
+
+message GetJundaPartAndTableRequestInfo{
+	optional string hangmog_code = 1;
+	optional string input_part = 2;
+	optional string input_gwa = 3;
+	optional string app_date = 4;
+}
+
+message IsResultToConsultRequestInfo{
+	optional string pkocskey = 1;
+	optional string io_gubun = 2;
+}
+
+message IsOrderDataChangedEnabledRequestInfo
+{
+	optional string iud_gubun = 1;
+	optional string aioe_gubun = 2;
+	optional string pkocskey = 3;
+}
+
+message PrOcsLoadNaewonInfo{
+	optional string chisik_yn = 1;
+	optional string weight_input_yn = 2;
+	optional string wonyoi_order_yn = 3;
+	optional string wonnae_sayu_code = 4;
+	optional string wonnae_sayu_name = 5;
+	optional string inp_bonin = 6;
+	optional string sabun = 7;
+	optional string sabun_name = 8;
+	optional string ga_jubsu_gubun = 9;
+	optional string out_toiwon_yn = 10;
+	optional string drg_nalsu = 11;
+	optional string jinryo_result = 12;
+	optional string soa_nutjido_yn = 13;
+	optional string atc_yn = 14;
+	optional string sunnab_yn = 15;
+	optional string hubal_change_yn = 16;
+	optional string next_jinryo_yn = 17;
+	optional string dangil_gumsa_yn = 18;
+	optional string flag = 19;
+}
+
+message LoadPatientNaewonListInfo{
+	optional string ioe_gubun = 1;
+	optional string data_gubun = 2;
+	optional string bunho = 3;
+	optional string naewon_date = 4;
+	optional string gwa = 5;
+	optional string doctor = 6;
+	optional string doctor_name = 7;
+	optional string naewon_type = 8;
+	optional string jubsu_no = 9;
+	optional string jinryo_time = 10;
+	optional string pk_key = 11;
+	optional string reser_data_yn = 12;
+	optional string gubun = 13;
+	optional string gubun_name = 14;
+	optional string chojae = 15;
+	optional string chojae_name = 16;
+	optional string special_yn = 17;
+	optional string naewon_yn = 18;
+	optional string sunnab_yn = 19;
+	optional string ho_dong = 20;
+	optional string ho_code = 21;
+	optional string jaewon_flag = 22;
+	optional string ipwon_reser_yn = 23;
+	optional string real_naewon_yn = 24;
+	optional string approve_doctor = 25;
+}
+message SaveOfenUsedHangmogInfo
+{
+	optional string IUD_gubun = 1;
+	optional string memb_gubun = 2;
+	optional string memb = 3;
+	optional string hangmog_code = 4;
+	optional string seq = 5;
+	optional string often_use = 6;
+	optional string user_info = 7;
+}
+
+
+message IsToiwonGojiYNandEndOrderRequestInfo{
+	optional string pkinp1001 = 1;
+}
+
+message HIOcsCheckJundalPartLoadJaeryoJundalInfo{
+	optional string check_jundal = 1;
+	optional string load_jaeryo_jundal = 2;
+}
+message CheckPatientStatusRequestInfo{
+    optional string bunho = 1;
+    optional string hangmog_code = 2;
+}
+message DupCheckCPLOrder1RequestInfo{
+    optional string newHangmog_code = 1;
+    optional string newSpecimen_code = 2;
+    optional string oldHangmog_code = 3;
+    optional string oldSpecimen_code = 4;
+    
+}
+message DupCheckCPLOrder2RequestInfo{
+    optional string io_gubun = 1;
+    optional string bunho = 2;
+    optional string hangmog_code = 3;
+    optional string specimen_code = 4;
+    optional string check_date = 5;
+}
+message DupCheckInputInpOrderRequestInfo{
+    optional string bunho = 1;
+    optional string fkinp1001 = 2;
+    optional string orderDate = 3;
+    optional string hangmog_Code = 4;
+    optional string hopeDate = 5;
+}
+
+message OCS0103U12GrdGeneralInfo{
+	optional string slip_code = 1;
+	optional string slip_name = 2;
+	optional string hangmog_code = 3;
+	optional string hangmog_name = 4;
+	optional string wonnae_drg_yn = 5;
+}
+
+message OCS0103U12SetTabWonnaeDrugInfo{
+	optional string filter = 1;
+	optional string count = 2;
+	optional string yak_kijun_code = 3;
+}
+
+message CheckHangSangInfo {
+    optional string hangmog_code = 1;
+    optional string hangmog_name = 2;
+    optional string sang_code = 3;
+    optional string sang_name = 4;
+    optional string app_date = 5;
+    optional string in_out_gubun = 6;
+    optional string gwa = 7;
+    optional string birth_date = 8;
+}
+
+message GetFindWorkerRequestInfo{
+    optional string colname = 1;
+    optional string argu1 = 2;
+    optional string argu2 = 3;
+    optional string argu3 = 4;
+}
+
+message GetFindWorkerResponseInfo{
+    optional string code = 1;
+    optional string name = 2;
+    optional string value1 = 3;
+    optional string value2 = 4;
+}
+message LoadHangmogInfo
+{
+	optional string hangmog_code          = 1;
+	optional string hangmog_name          = 2;
+	optional string slip_code             = 3;
+	optional string group_yn              = 4;
+	optional string input_tab             = 5;
+	optional string order_gubun           = 6;
+	optional string input_control         = 7;
+	optional string jundal_table_out      = 8;
+	optional string jundal_table_inp      = 9;
+	optional string jundal_part_out       = 10;
+	optional string jundal_part_inp       = 11;
+	optional string jaeryo_jundal_yn_out  = 12;
+	optional string jaeryo_jundal_yn_inp  = 13;
+	optional string move_part             = 14;
+	optional string suryang               = 15;
+	optional string ord_danui             = 16;
+	optional string dv_time               = 17;
+	optional string dv                    = 18;
+	optional string jusa                  = 19;
+	optional string bogyong_code          = 20;
+	optional string suga_yn               = 21;
+	optional string sg_code               = 22;
+	optional string jaeryo_yn             = 23;
+	optional string jaeryo_code           = 24;
+	optional string bulyong_ymd           = 25;
+	optional string bulyong_check         = 26;
+	optional string bulyong_check_out     = 27;
+	optional string specimen_yn           = 28;
+	optional string specimen_default      = 29;
+	optional string portable_yn           = 30;
+	optional string portable_check        = 31;
+	optional string xray_buwi             = 32;
+	optional string reser_yn_out          = 33;
+	optional string reser_yn_inp          = 34;
+	optional string emergency             = 35;
+	optional string emergency_check       = 36;
+	optional string bom_yn                = 37;
+	optional string bichi_yn              = 38;
+	optional string wonyoi_order_yn       = 39;
+	optional string wonyoi_check          = 40;
+	optional string powder_yn             = 41;
+	optional string powder_check          = 42;
+	optional string nday_yn               = 43;
+	optional string chisik_yn             = 44;
+	optional string muhyo_yn              = 45;
+	optional string nurse_input_yn        = 46;
+	optional string supply_input_yn       = 47;
+	optional string limit_suryang         = 48;
+	optional string limit_nalsu           = 49;
+	optional string remark                = 50;
+	optional string nurse_confirm_gubun   = 51;
+	optional string specific_comment      = 52;
+	optional string hubal_change_check    = 53;
+	optional string pharmacy_check        = 54;
+	optional string drg_pack_check        = 55;
+	optional string dummy                 = 56;
+	optional string dummy1                = 57;
+	optional string dummy2                = 58;
+	optional string dummy3                = 59;
+	optional string dummy4                = 60;
+	optional string dummy5                = 61;
+	optional string dummy6                = 62;
+	optional string dummy7                = 63;
+	optional string dummy8                = 64;
+	optional string dummy9                = 65;
+	optional string flag                  = 66;
+	optional string msg                   = 67;
+	optional string yj_code               = 68;
+	optional string common_yn             = 69;
+}
+message OBCheckRegularDrugInfo
+{
+	optional string suryang = 1;
+	optional string danui = 2;
+	optional string dv = 3;
+	optional string dv_time = 4;
+	optional string jusa = 5;
+	optional string bogyong_code = 6;
+}
+message OBLoadSearchOrderInfoDRGInfo
+{
+	optional string slip_code                     = 1;
+	optional string slip_name                     = 2;
+	optional string hangmog_code                  = 3;
+	optional string hangmog_name                  = 4;
+	optional string wonnae_drg_yn                 = 5;
+	optional string generic_name                  = 6;
+	optional string empty_str                     = 7;
+	optional string generic_code_org_substr       = 8;
+	optional string generic_code_org              = 9;
+	optional string yak_kijun_code                = 10;
+	optional string trial_flg                     = 11;
+}
+message OBGetBogyongInfo
+{
+	optional string bogyong_name = 1;
+	optional string nvl = 2;
+	optional string donbog_yn = 3;
+}
+message OBGetJundaTable1Info
+{
+	optional string jundal_table_out          = 1;
+	optional string jundal_part_out           = 2;
+	optional string move_part                 = 3;
+	optional string jundal_table_inp          = 4;
+	optional string jundal_part_inp           = 5;
+}
+
+message LoadOftenUsedInfo 
+{
+	optional string memb_gubun = 1;
+	optional string memb = 2;
+	optional string order_gubun = 3;
+	optional string wonnae_drg_yn = 4;
+	optional string search_word = 5;
+}
+
+message LoadOftenUsedResponseInfo 
+{
+	optional string memb = 1;
+	optional string slip_code = 2;
+	optional string slip_name = 3;
+	optional string hangmog_code = 4;
+	optional string hangmog_name = 5;
+	optional string seq = 6;
+	optional string hosp_code = 7;
+	optional string memb_gubun = 8;
+	optional string wonnae_drg_yn = 9;
+	optional string order_by_key = 10;
+}
+
+// ----[END] OCS.lib -------
+
+//---[START]HangmogInfo------
+message HILoadCodeNameInfo
+{
+	optional string order_gubun_name          = 1;
+	optional string specimen_name             = 2;
+	optional string jusa_name                 = 3;
+	optional string pay_name                  = 4;
+	optional string bogyong_name              = 5;
+	optional string jundal_part_out_name      = 6;
+	optional string jundal_part_inp_name      = 7;
+	optional string ord_danui_name            = 8;
+	optional string mayak_yn                  = 9;
+}
+//---[END]HangmogInfo------
+//[START] OrderFunc----
+message OFMakeTreeViewInfo
+{
+	optional string memb                   = 1;
+	optional string pk_seq                 = 2;
+	optional string yaksok_gubun           = 3;
+	optional string yaksok_gubun_name      = 4;
+	optional string seq                    = 5;
+	optional string memb_gubun             = 6;
+	optional string input_tab              = 7;
+	optional string exist_data             = 8;
+}
+message OFUpdateOCS0303UpdateDataInfo
+{
+	optional string group_ser                 = 1;
+	optional string suryang                   = 2;
+	optional string jusa                      = 3;
+	optional string pay                       = 4;
+	optional string dv_3                      = 5;
+	optional string order_gubun               = 6;
+	optional string hubal_change_yn           = 7;
+	optional string hosp_code                 = 8;
+	optional string nday_yn                   = 9;
+	optional string user_id                   = 10;
+	optional string hangmog_code              = 11;
+	optional string ord_danui                 = 12;
+	optional string bogyong_code              = 13;
+	optional string prn_yn                    = 14;
+	optional string dv_4                      = 15;
+	optional string wonyoi_order_yn           = 16;
+	optional string pharmacy                  = 17;
+	optional string memb_gubun                = 18;
+	optional string fkocs0300_seq             = 19;
+	optional string seq                       = 20;
+	optional string dv_time                   = 21;
+	optional string emergency                 = 22;
+	optional string powder_yn                 = 23;
+	optional string mix_group                 = 24;
+	optional string dangil_gumsa_order_yn     = 25;
+	optional string jusa_spd_gubun            = 26;
+	optional string hangmog_name              = 27;
+	optional string memb                      = 28;
+	optional string pkocs0303                 = 29;
+	optional string dv                        = 30;
+	optional string muhyo                     = 31;
+	optional string dv_1                      = 32;
+	optional string order_remark              = 33;
+	optional string dangil_gumsa_result_yn    = 34;
+	optional string drg_pack_yn               = 35;
+	optional string amt                       = 36;
+	optional string yaksok_code               = 37;
+	optional string specimen_code             = 38;
+	optional string nalsu                     = 39;
+	optional string portable_yn               = 40;
+	optional string dv_2                      = 41;
+	optional string nurse_remark              = 42;
+	optional string input_tab                 = 43;
+	optional string bom_source_key            = 44;
+}
+//[END] OrderFunc------
+
+// [START]CommonForms
+message ReservedCommentDloOCS0221Info
+{
+	optional string memb                   = 1;
+	optional string seq                    = 2;
+	optional string category_gubun         = 3;
+	optional string category_name          = 4;
+	optional string comment_limit          = 5;
+}
+message ReservedCommentGrdOCS0222Info
+{
+	optional string memb                        = 1;
+	optional string seq                         = 2;
+	optional string serial                      = 3;
+	optional string comment_title               = 4;
+	optional string comment_text                = 5;
+}
+// [END]CommonForms
+
+// [START] convert
+message BAS0230U00GrdBAS0230Info{
+ optional string bun_code = 1;
+ optional string bun_name = 2;
+ optional string bun_ymd = 3;
+ optional string row_state = 4;
+}
+message GetOrderCountInfo {
+    optional string io_gubun = 1;
+    optional string bunho = 2;
+    optional string order_date = 3;
+}
+message GetOutJinryoCommentCntInfo {
+    optional string bunho = 1;
+    optional string naewon_date = 2;
+    optional string gwa = 3;
+    optional string doctor = 4;
+}
+message IpwonReserStatusInfo{
+    optional string doctor = 1;
+    optional string bunho = 2;
+}
+message KensaReserInfo {
+    optional string bunho = 1;
+    optional string naewon_date = 2;
+}
+message LoadConsultEndYNInfo 
+{
+    optional string bunho = 1;
+    optional string req_doctor = 2;
+}
+message NoConfirmConsultInfo {
+    optional string bunho = 1;
+    optional string naewondate = 2;
+    optional string gwa = 3;
+    optional string doctor = 4;
+    optional string io_gubun = 5;
+}
+message OutTaGwaJinryoCntInfo{
+    optional string bunho = 1;
+    optional string naewon_date = 2;
+    optional string gwa = 3;
+}
+enum KinkiType {
+	KINKI_MSG = 0;
+	KINKI_DIEASE = 1;
+	DOSAGE = 2;
+	DRUG_CHECKING = 3;
+	INTERATION = 4;
+	GENERIC_NAME = 5;
+}
+enum ActionType {
+IMPORT = 0;
+EXPORT = 1;
+}
+// [END] convert

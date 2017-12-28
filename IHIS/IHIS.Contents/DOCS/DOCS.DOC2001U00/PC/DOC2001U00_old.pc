@@ -1,0 +1,2206 @@
+/*
+ *
+ * 1. System  ID   : DOC
+ * 2. Product ID   : DOCS50
+ * 3. Service ID   : DOC2001U00.pc
+ * 4. Service Name : 제증명요청관리
+ * 5. 관련Client   :
+ * 6. 관련테이블   : DOC1001, DOC2001
+ * 7. 기능         : 제증명작성을 관리한다.
+ * 8. 작성자       : 이동국
+ * 9. 작성일       : 2006.02.08
+ *10. 수정History  :
+ *
+ */
+
+#include "commsvc.h"    /* COMMON HEADER */
+
+/* Image Path */
+#define IMAGE_PATH "/MEDI/IFC/DOCSImages"
+
+/* Image 를 담을 변수의 MAX Size */
+#define MAXBUFLEN 1000000
+
+long message_length = 0;  /* Binary 데이타를 포함한 총 길이 정보, service_end_bin으로 Binary Data의 총 길이를 넘김 */
+
+
+int DOC2001U00_BUNHOBASEINFO(msg_in_st *MessageIn, msg_out_st *MessageOut);
+int DOC2001U00_DOC1001QUERY(msg_in_st *MessageIn, msg_out_st *MessageOut);
+int DOC2001U00_PASTHISTQUERY(msg_in_st *MessageIn, msg_out_st *MessageOut);
+int DOC2001U00_CERTWRDTJAPANDATE(msg_in_st *MessageIn, msg_out_st *MessageOut);
+int DOC2001U00_DOC2001Update(msg_in_st *MessageIn, msg_out_st *MessageOut);
+int DOC2001U00_DOC2001PASTQUERY(msg_in_st *MessageIn, msg_out_st *MessageOut);
+int DOC2001U00_PRINTCHECK(msg_in_st *MessageIn, msg_out_st *MessageOut);
+int DOC2001U00_SETPRINTFLAG(msg_in_st *MessageIn, msg_out_st *MessageOut);
+int DOC2001U00_Base_info_Query(msg_in_st *MessageIn, msg_out_st *MessageOut);
+int DOC2001U00_GetGumsaInfo(msg_in_st *MessageIn, msg_out_st *MessageOut);
+int DOC2001U00_Query_Sogye_doctor(msg_in_st *MessageIn, msg_out_st *MessageOut);
+int DOC2001U00_Doctor_List(msg_in_st *MessageIn, msg_out_st *MessageOut);
+int DOC2001U00_ImageSave(msg_in_st *MessageIn, msg_out_st *MessageOut);
+int DOC2001U00_ImageLoad(msg_in_st *MessageIn, msg_out_st **pMessageOut);
+
+void DOC2001U00(TPSVCINFO *transb)
+{
+    /* LOCAL VALUES */
+    int  rtn = 0;
+
+    msg_in_st        *MessageIn;
+    msg_out_st       *MessageOut;
+
+    /* Service Start */
+    if (service_start(transb, &MessageIn, &MessageOut) < 0)
+        return;
+
+    /* Service 시작시에 Image관련 message_lenght 초기화 */
+    message_length = 0;
+
+    /* WORK DIVISION */
+    switch(MessageIn->work_tp)
+    {
+        case 'B':    /* BUNHO BASE INFOMATION QUERY(퇴원증명서는 제외) */
+            rtn = DOC2001U00_BUNHOBASEINFO(MessageIn,MessageOut);
+            break;
+        case '1':    /* DOC1001 QUERY */
+            rtn = DOC2001U00_DOC1001QUERY(MessageIn,MessageOut);
+            break;
+        case '2':    /* PAST HIST QUERY */
+            rtn = DOC2001U00_PASTHISTQUERY(MessageIn,MessageOut);
+            break;
+        case 'D':    /* CERT_WRDT JAPAN DATE QUERY */
+            rtn = DOC2001U00_CERTWRDTJAPANDATE(MessageIn,MessageOut);
+            break;
+        case 'U':    /* UPDATE */
+            rtn = DOC2001U00_DOC2001Update(MessageIn,MessageOut);
+            break;
+        case 'P':    /* DOC2001 PAST QUERY */
+            rtn = DOC2001U00_DOC2001PASTQUERY(MessageIn,MessageOut);
+            break;
+        case 'C':    /* PRINT CHECK QUERY */
+            rtn = DOC2001U00_PRINTCHECK(MessageIn,MessageOut);
+            break;
+        case 'S':    /* SET PRINT FLAG */
+            rtn = DOC2001U00_SETPRINTFLAG(MessageIn,MessageOut);
+            break;
+        case '3':    /* Base Info Query(퇴원증명서인 경우) */
+            rtn = DOC2001U00_Base_info_Query(MessageIn,MessageOut);
+            break;
+        case 'G':    /*입원진료계획서에 검사내용및일정란에 외래검사중 미래예약건 검사명칭으로 초기값세팅 */
+            rtn = DOC2001U00_GetGumsaInfo(MessageIn,MessageOut);
+            break;
+        case 'Y':    /* 소개탁터명을 조회한다. */
+            rtn = DOC2001U00_Query_Sogye_doctor(MessageIn,MessageOut);
+            break;
+        case 'Q':    /* 해당진료과의 의사리스트를 조회한다. */
+            rtn = DOC2001U00_Doctor_List(MessageIn,MessageOut);
+            break;
+        case 'I':    /* Image Save */
+            rtn = DOC2001U00_ImageSave(MessageIn,MessageOut);
+            break;
+        case 'L':    /* Image Load */
+            rtn = DOC2001U00_ImageLoad(MessageIn, &MessageOut);
+            break;
+        default:     /* WORK DIVISION ERROR */
+            rtn = SysErr(MessageOut, "99999", "WORK DIVISION ERROR", NULL, 0);
+            break;
+    }
+    service_end(rtn, MessageOut);
+}
+
+/*
+ * 목적     : 환자의 디폴트 정보를 조회한다.(퇴원증명서는 제외)
+ * 입력     : BUNHO, GWA
+ * 출력     :
+ * 작성일자 : 2006년 2월 09 목요일
+ */
+int DOC2001U00_BUNHOBASEINFO(MessageIn, MessageOut)
+msg_in_st    *MessageIn;
+msg_out_st   *MessageOut;
+{
+    /* LOCAL VALUES */
+    char    i_bunho          [   9 + 1];	/* 등록번호      */
+    char    i_gwa            [  10 + 1];	/* 과            */
+    chardt  i_cert_wrdt;
+
+    char    o_suname         [  30 + 1];	/* 환자명        */
+    char    o_sujumin1       [   6 + 1];	/* 주민등록번호1 */
+    char    o_sujumin2       [   7 + 1];	/* 주민등록번호2 */
+    char    o_sex            [   1 + 1];	/* 환자성별      */
+    charnum o_age                      ;	/* 환자연령      */
+    char    o_ho_dong1       [  30 + 1];	/* 병동코드      */
+    char    o_ho_code        [   5 + 1];	/* 병실코드      */
+    char    o_gubun          [   2 + 1];	/* 환자유형      */
+    char    o_gubun_name     [  80 + 1];	/* 환자유형명    */
+    char    o_gwa            [  10 + 1];	/* 과            */
+    char    o_gwa_name       [  80 + 1];	/* 과명          */
+    char    o_doctor         [   5 + 1];	/* 의사사번      */
+    char    o_doctor_name    [  80 + 1];	/* 의사명        */
+    char    o_resident       [   5 + 1];	/* 레지던트사번  */
+    char    o_resident_name  [  80 + 1];	/* 레지던트명    */
+    char    o_tel            [  20 + 1];	/* 전화번호      */
+    char    o_in_out_gubun   [   1 + 1];	/* 입원외래구분  */
+    char    o_address        [ 200 + 1];	/* 주소          */
+    char    o_ipwon_date     [  20 + 1];	/* 입원일자      */
+    charnum o_fkinp1001                ;	/* 외래키        */
+    char    o_fkout1001      [  30 + 1];	/* 외래키        */
+    char    o_birth          [  20 + 1];	/* 생년월일(와력)*/
+    char    o_dummy          [  80 + 1];	/* 더미          */
+    char    o_err_flag       [ 200 + 1];	/* 에러          */
+    charnum o_age_month                ;
+    charnum o_age_day                  ;
+    char    o_sang_name      [4000 + 1];
+    char    o_toiwon_res_date[  20 + 1];
+    char    o_op_reser_date  [  20 + 1];	/* 수술예약일자  */
+
+    int     i, svcm = 0;
+    char    *rec, *sp1, OutData[DATA_SIZE+1024];
+    int     idx = 0;
+
+    lprintf("Start DOC2001U00_BUNHOBASEINFO \n");
+
+    memset(OutData          , 0x00, sizeof(OutData          ));
+    memset(o_suname         , 0x00, sizeof(o_suname         ));
+    memset(o_sujumin1       , 0x00, sizeof(o_sujumin1       ));
+    memset(o_sujumin2       , 0x00, sizeof(o_sujumin2       ));
+    memset(o_sex            , 0x00, sizeof(o_sex            ));
+    memset(o_age            , 0x00, sizeof(o_age            ));
+    memset(o_ho_dong1       , 0x00, sizeof(o_ho_dong1       ));
+    memset(o_ho_code        , 0x00, sizeof(o_ho_code        ));
+    memset(o_gubun          , 0x00, sizeof(o_gubun          ));
+    memset(o_gubun_name     , 0x00, sizeof(o_gubun_name     ));
+    memset(o_gwa            , 0x00, sizeof(o_gwa            ));
+    memset(o_gwa_name       , 0x00, sizeof(o_gwa_name       ));
+    memset(o_doctor         , 0x00, sizeof(o_doctor         ));
+    memset(o_doctor_name    , 0x00, sizeof(o_doctor_name    ));
+    memset(o_resident       , 0x00, sizeof(o_resident       ));
+    memset(o_resident_name  , 0x00, sizeof(o_resident_name  ));
+    memset(o_tel            , 0x00, sizeof(o_tel            ));
+    memset(o_in_out_gubun   , 0x00, sizeof(o_in_out_gubun   ));
+    memset(o_address        , 0x00, sizeof(o_address        ));
+    memset(o_ipwon_date     , 0x00, sizeof(o_ipwon_date     ));
+    memset(o_fkinp1001      , 0x00, sizeof(o_fkinp1001      ));
+    memset(o_fkout1001      , 0x00, sizeof(o_fkout1001      ));
+    memset(o_birth          , 0x00, sizeof(o_birth          ));
+    memset(o_dummy          , 0x00, sizeof(o_dummy          ));
+    memset(o_err_flag       , 0x00, sizeof(o_err_flag       ));
+    memset(o_age_month      , 0x00, sizeof(o_age_month      ));
+    memset(o_age_day        , 0x00, sizeof(o_age_day        ));
+    memset(o_sang_name      , 0x00, sizeof(o_sang_name      ));
+    memset(o_toiwon_res_date, 0x00, sizeof(o_toiwon_res_date));
+    memset(o_op_reser_date  , 0x00, sizeof(o_op_reser_date  ));
+    sp1 = MessageIn -> data;
+
+    /* Parsing... */
+    sp1 = ParsStr(sp1, TAB, i_bunho);
+    sp1 = ParsStr(sp1, TAB, i_gwa);
+    sp1 = ParsStr(sp1, TAB, i_cert_wrdt);
+
+    TrimStr(i_bunho);
+    TrimStr(i_gwa);
+    lprintf("i_bunho : [%s]...\n", i_bunho);
+    lprintf("i_gwa : [%s]...\n", i_gwa);
+    lprintf("i_cert_wrdt : [%s]...\n", i_cert_wrdt);
+
+    /* 환자의 기본정보를 조회한다. */
+    EXEC SQL EXECUTE
+      BEGIN
+        PR_DOC_LOAD_BUNHO_INFO(:i_bunho       , :i_gwa          , :i_cert_wrdt  , :o_suname     ,
+                               :o_sujumin1    , :o_sujumin2     , :o_sex        ,
+                               :o_age         , :o_ho_dong1     , :o_ho_code    ,
+                               :o_gubun       , :o_gubun_name   , :o_gwa        ,
+                               :o_gwa_name    , :o_doctor       , :o_doctor_name,
+                               :o_resident    , :o_resident_name, :o_tel        ,
+                               :o_in_out_gubun, :o_address      , :o_ipwon_date ,
+                               :o_fkinp1001   , :o_fkout1001    , :o_birth      ,
+                               :o_dummy       , :o_dummy        , :o_dummy      ,
+                               :o_dummy       , :o_dummy        , :o_err_flag
+                              );
+      END;
+    END-EXEC;
+
+    lprintf("sqlca.sqlcode1 : [%d]...\n", sqlca.sqlcode);
+    lprintf("o_address_PR      : %s\n", o_address      );
+    lprintf("o_in_out_gubun : [%s]...\n", o_in_out_gubun);
+
+    if ((sqlca.sqlcode != 0) && (sqlca.sqlcode != EXC_COLUMN_NULL) &&(sqlca.sqlcode != EXC_NO_DATA_FOUND))
+        return (SqlMsgErr(MessageOut, sqlca.sqlerrm.sqlerrmc, sizeof(sqlca.sqlerrm.sqlerrmc), "1", 0 ));
+
+    memset(o_age      , 0x00, sizeof(o_age      ));
+    memset(o_sex      , 0x00, sizeof(o_sex      ));
+    memset(o_age_month, 0x00, sizeof(o_age_month));
+    memset(o_age_day  , 0x00, sizeof(o_age_day  ));
+    memset(o_err_flag , 0x00, sizeof(o_err_flag ));
+
+    /* 환자의 성별과 나이를 조회한다. */
+    EXEC SQL EXECUTE
+      BEGIN
+        PR_BAS_LOAD_SEX_AGE(:i_bunho       , :i_cert_wrdt, :o_age,
+                            :o_age_month, :o_age_day, :o_sex,
+                            :o_err_flag
+                           );
+      END;
+    END-EXEC;
+
+    lprintf("sqlca.sqlcode2 : [%d]...\n", sqlca.sqlcode);
+    lprintf("o_err_flag     : [%s]...\n", o_err_flag);
+
+    if ((sqlca.sqlcode != 0) && (sqlca.sqlcode != EXC_COLUMN_NULL) &&(sqlca.sqlcode != EXC_NO_DATA_FOUND))
+        return (SqlMsgErr(MessageOut, sqlca.sqlerrm.sqlerrmc, sizeof(sqlca.sqlerrm.sqlerrmc), "1", 0 ));
+
+    lprintf("o_in_out_gubun : [%s]...\n", o_in_out_gubun);
+    lprintf("o_bunho        : [%s]...\n", i_bunho);
+    lprintf("o_ipwon_date   : [%s]...\n", o_ipwon_date);
+    lprintf("o_gwa          : [%s]...\n", o_gwa);
+    lprintf("o_doctor       : [%s]...\n", o_doctor);
+
+    /* 환자의 상병을 조회한다. */
+    if(strcmp(o_in_out_gubun, "I") == 0)
+    {
+    	/* 입원상병을 조회한다. */
+    	EXEC SQL
+    	SELECT FN_DOC_LOAD_INP_SANG_NAME(TO_NUMBER(:o_fkinp1001))
+          INTO :o_sang_name
+          FROM DUAL;
+
+        lprintf("sqlca.sqlcode4 : [%d]...\n", sqlca.sqlcode);
+
+        if ((sqlca.sqlcode != 0) && (sqlca.sqlcode != EXC_COLUMN_NULL) &&(sqlca.sqlcode != EXC_NO_DATA_FOUND))
+            return (SqlMsgErr(MessageOut, sqlca.sqlerrm.sqlerrmc, sizeof(sqlca.sqlerrm.sqlerrmc), "1", 0 ));
+    }
+    else
+    {
+    	lprintf("i_bunho        : [%s]...\n", i_bunho);
+        lprintf("o_ipwon_date   : [%s]...\n", o_ipwon_date);
+        lprintf("o_gwa          : [%s]...\n", o_gwa);
+        lprintf("o_doctor       : [%s]...\n", o_doctor);
+        TrimStr(i_bunho);
+        TrimStr(o_ipwon_date);
+        TrimStr(o_gwa);
+        TrimStr(o_doctor);
+
+    	/* 외래상병을 조회한다. */
+    	EXEC SQL
+    	SELECT FN_DOC_LOAD_OUT_SANG_NAME(:i_bunho, TRUNC(TO_DATE(:o_ipwon_date, 'YYYY/MM/DD')), :o_gwa, :o_doctor)
+          INTO :o_sang_name
+          FROM DUAL;
+
+        lprintf("sqlca.sqlcode5 : [%d]...\n", sqlca.sqlcode);
+
+        if ((sqlca.sqlcode != 0) && (sqlca.sqlcode != EXC_COLUMN_NULL) &&(sqlca.sqlcode != EXC_NO_DATA_FOUND))
+            return (SqlMsgErr(MessageOut, sqlca.sqlerrm.sqlerrmc, sizeof(sqlca.sqlerrm.sqlerrmc), "1", 0 ));
+    }
+
+    /* 환자의 입원일자를 와력으로 변환을 한다. */
+    EXEC SQL
+    SELECT FN_BAS_TO_JAPAN_DATE_CONVERT('1', :o_ipwon_date)
+      INTO :o_ipwon_date
+      FROM DUAL;
+
+    lprintf("sqlca.sqlcode3 : [%d]...\n", sqlca.sqlcode);
+
+    if ((sqlca.sqlcode != 0) && (sqlca.sqlcode != EXC_COLUMN_NULL) &&(sqlca.sqlcode != EXC_NO_DATA_FOUND))
+        return (SqlMsgErr(MessageOut, sqlca.sqlerrm.sqlerrmc, sizeof(sqlca.sqlerrm.sqlerrmc), "1", 0 ));
+
+    /* 환자의 퇴원예약일자를 조회한다. */
+    EXEC SQL
+    SELECT FN_BAS_TO_JAPAN_DATE_CONVERT('1', TRUNC(TOIWON_RES_DATE)) TOIWON_RES_DATE
+      INTO :o_toiwon_res_date
+      FROM INP1001
+     WHERE BUNHO       = :i_bunho
+       AND PKINP1001   = :o_fkinp1001
+       AND JAEWON_FLAG = 'Y';
+       
+    lprintf("sqlca.sqlcode XXX1 : [%d]...\n", sqlca.sqlcode);
+
+    if ((sqlca.sqlcode != 0) && (sqlca.sqlcode != EXC_COLUMN_NULL) &&(sqlca.sqlcode != EXC_NO_DATA_FOUND))
+        return (SqlMsgErr(MessageOut, sqlca.sqlerrm.sqlerrmc, sizeof(sqlca.sqlerrm.sqlerrmc), "1", 0 ));
+
+    memset(o_address, 0x00, sizeof(o_address));
+    /* 환자의 주소를 조회한다. */
+    EXEC SQL
+    /*SELECT TRIM('('||ZIP_CODE1||'-'||ZIP_CODE2||')'||ADDRESS1||' '||ADDRESS2) ADDRESS*/
+    SELECT TRIM(ADDRESS1||' '||ADDRESS2) ADDRESS
+      INTO :o_address
+      FROM OUT0101
+     WHERE BUNHO = :i_bunho;
+     
+    lprintf("sqlca.sqlcode XXX2 : [%d]...\n", sqlca.sqlcode);
+
+    if ((sqlca.sqlcode != 0) && (sqlca.sqlcode != EXC_COLUMN_NULL) &&(sqlca.sqlcode != EXC_NO_DATA_FOUND))
+        return (SqlMsgErr(MessageOut, sqlca.sqlerrm.sqlerrmc, sizeof(sqlca.sqlerrm.sqlerrmc), "1", 0 ));
+
+    /* 환자의 수술예약일자를 조회한다. */
+    EXEC SQL
+    SELECT DISTINCT FN_BAS_TO_JAPAN_DATE_CONVERT('1', NVL(A.OP_RESER_DATE, TRUNC(SYSDATE))) OP_RESER_DATE
+      INTO :o_op_reser_date
+      FROM OPR1001 A
+     WHERE GWA = :i_gwa
+       AND NVL(A.OP_CANCEL_YN, 'N') = 'N'
+       AND NVL(A.OP_END_YN, 'N')    = 'N'
+       AND A.BUNHO                  = :i_bunho
+       AND A.OP_RESER_DATE          = (SELECT DISTINCT MIN(B.OP_RESER_DATE)
+                                         FROM OPR1001 B
+                                        WHERE B.GWA = A.GWA
+                                          AND NVL(B.OP_CANCEL_YN, 'N') = 'N'
+                                          AND NVL(B.OP_END_YN, 'N')    = 'N'
+                                          AND B.BUNHO                  = A.BUNHO
+                                          AND B.OP_RESER_DATE          >= TRUNC(SYSDATE));
+                                          
+    lprintf("sqlca.sqlcode XXX3 : [%d]...\n", sqlca.sqlcode);
+
+    if ((sqlca.sqlcode != 0) && (sqlca.sqlcode != EXC_COLUMN_NULL) &&(sqlca.sqlcode != EXC_NO_DATA_FOUND))
+        return (SqlMsgErr(MessageOut, sqlca.sqlerrm.sqlerrmc, sizeof(sqlca.sqlerrm.sqlerrmc), "1", 0 ));
+
+    lprintf("o_suname              : %s\n", o_suname              );
+    lprintf("o_sujumin1            : %s\n", o_sujumin1            );
+    lprintf("o_sujumin2            : %s\n", o_sujumin2            );
+    lprintf("o_sex                 : %s\n", o_sex                 );
+    lprintf("o_age                 : %s\n", o_age                 );
+    lprintf("o_ho_dong1            : %s\n", o_ho_dong1            );
+    lprintf("o_ho_code             : %s\n", o_ho_code             );
+    lprintf("o_gubun               : %s\n", o_gubun               );
+    lprintf("o_gubun_name          : %s\n", o_gubun_name          );
+    lprintf("o_gwa                 : %s\n", o_gwa                 );
+    lprintf("o_gwa_name            : %s\n", o_gwa_name            );
+    lprintf("o_doctor              : %s\n", o_doctor              );
+    lprintf("o_doctor_name         : %s\n", o_doctor_name         );
+    lprintf("o_resident            : %s\n", o_resident            );
+    lprintf("o_resident_name       : %s\n", o_resident_name       );
+    lprintf("o_tel                 : %s\n", o_tel                 );
+    lprintf("o_in_out_gubun        : %s\n", o_in_out_gubun        );
+    lprintf("o_address             : %s\n", o_address             );
+    lprintf("o_ipwon_date          : %s\n", o_ipwon_date          );
+    lprintf("o_fkinp1001           : %s\n", o_fkinp1001           );
+    lprintf("o_fkout1001           : %s\n", o_fkout1001           );
+    lprintf("o_birth               : %s\n", o_birth               );
+    lprintf("o_dummy               : %s\n", o_dummy               );
+    lprintf("o_err_flag            : %s\n", o_err_flag            );
+    lprintf("sqlca.sqlcode         : %d\n", sqlca.sqlcode         );
+    lprintf("sqlca.sqlerrm.sqlerrmc: %s\n", sqlca.sqlerrm.sqlerrmc);
+    lprintf("o_sang_name           : %s\n", o_sang_name           );
+    lprintf("o_toiwon_res_date     : %s\n", o_toiwon_res_date     );
+    lprintf("o_op_reser_date       : %s\n", o_op_reser_date       );
+
+    if ((sqlca.sqlcode != 0) && (sqlca.sqlcode != EXC_COLUMN_NULL) &&(sqlca.sqlcode != EXC_NO_DATA_FOUND))
+        return (SqlMsgErr(MessageOut, sqlca.sqlerrm.sqlerrmc, sizeof(sqlca.sqlerrm.sqlerrmc), "1", 0 ));
+
+    TrimStr(o_suname         );
+    TrimStr(o_sujumin1       );
+    TrimStr(o_sujumin2       );
+    TrimStr(o_sex            );
+    TrimStr(o_age            );
+    TrimStr(o_ho_dong1       );
+    TrimStr(o_ho_code        );
+    TrimStr(o_gubun          );
+    TrimStr(o_gubun_name     );
+    TrimStr(o_gwa            );
+    TrimStr(o_gwa_name       );
+    TrimStr(o_doctor         );
+    TrimStr(o_doctor_name    );
+    TrimStr(o_resident       );
+    TrimStr(o_resident_name  );
+    TrimStr(o_tel            );
+    TrimStr(o_in_out_gubun   );
+    TrimStr(o_address        );
+    TrimStr(o_ipwon_date     );
+    TrimStr(o_fkinp1001      );
+    TrimStr(o_fkout1001      );
+    TrimStr(o_birth          );
+    TrimStr(o_dummy          );
+    TrimStr(o_err_flag       );
+    TrimStr(o_sang_name      );
+    TrimStr(o_toiwon_res_date);
+    TrimStr(o_op_reser_date  );
+
+    r_rec_cnt++;
+
+    ConcatStr(OutData, &idx, o_suname         );
+    ConcatStr(OutData, &idx, o_sujumin1       );
+    ConcatStr(OutData, &idx, o_sujumin2       );
+    ConcatStr(OutData, &idx, o_sex            );
+    ConcatStr(OutData, &idx, o_age            );
+    ConcatStr(OutData, &idx, o_ho_dong1       );
+    ConcatStr(OutData, &idx, o_ho_code        );
+    ConcatStr(OutData, &idx, o_gubun          );
+    ConcatStr(OutData, &idx, o_gubun_name     );
+    ConcatStr(OutData, &idx, o_gwa            );
+    ConcatStr(OutData, &idx, o_gwa_name       );
+    ConcatStr(OutData, &idx, o_doctor         );
+    ConcatStr(OutData, &idx, o_doctor_name    );
+    ConcatStr(OutData, &idx, o_resident       );
+    ConcatStr(OutData, &idx, o_resident_name  );
+    ConcatStr(OutData, &idx, o_tel            );
+    ConcatStr(OutData, &idx, o_in_out_gubun   );
+    ConcatStr(OutData, &idx, o_address        );
+    ConcatStr(OutData, &idx, o_ipwon_date     );
+    ConcatStr(OutData, &idx, o_fkinp1001      );
+    ConcatStr(OutData, &idx, o_fkout1001      );
+    ConcatStr(OutData, &idx, o_birth          );
+    ConcatStr(OutData, &idx, o_dummy          );
+    ConcatStr(OutData, &idx, o_err_flag       );
+    ConcatStr(OutData, &idx, o_sang_name      );
+    ConcatStr(OutData, &idx, o_toiwon_res_date);
+    ConcatStr(OutData, &idx, o_op_reser_date  );
+    ConcatRec(OutData, &idx); /* Record 구분자 */
+
+    lprintf("...outdata[%s]...\n",OutData);
+
+    if (CheckQryBuff(MessageOut->data, OutData, &r_rec_cnt, q_rec_cnt))
+    {
+        r_retv_tp = '1';
+    }
+
+    lprintf("End DOC2001U00_BUNHOBASEINFO \n");
+
+    return 0;
+}
+
+/*
+ * 목적     : 환자의 제증명 요청건을 조회한다.
+ * 입력     :
+ * 출력     :
+ * 작성일자 : 2006년 02월 09 목요일
+ */
+int DOC2001U00_DOC1001QUERY(MessageIn, MessageOut)
+msg_in_st    *MessageIn;
+msg_out_st   *MessageOut;
+{
+    /* LOCAL VALUES */
+    char    i_bunho    [ 9 + 1];	/* 환자번호   */
+    char    i_cert_jncd[ 3 + 1];	/* 제증명코드 */
+    char    i_gwa      [10 + 1];	/* 진료과     */
+    charnum i_fkinp1001        ;	/* 입원키     */
+
+    char    o_bunho    [ 9 + 1];	/* 환자번호   */
+    charnum o_pkdoc1001        ;	/* 제증명키   */
+    char    o_cert_jncd[ 3 + 1];	/* 제증명코드 */
+    char    o_gwa      [10 + 1];	/* 진료과     */
+    char    o_gwa_name [30 + 1];	/* 진료과명   */
+    chardt  o_cert_rqdt        ;	/* 요청일자   */
+    charnum o_cert_seqn        ;	/* 순번       */
+    charnum o_cert_rqnu        ;	/* 요청매수   */
+
+    char *sp1, OutData[DATA_SIZE+1024];
+    int  idx = 0;
+
+    lprintf("Start DOC2001U00_DOC1001QUERY \n");
+
+    memset(OutData, 0x00, sizeof(OutData));
+    sp1 = MessageIn->data;
+
+    /* InData Parsing */
+    sp1 = ParsStr(sp1, TAB, i_bunho    );	/* 환자번호   */
+    sp1 = ParsStr(sp1, TAB, i_cert_jncd);	/* 제증명코드 */
+    sp1 = ParsStr(sp1, TAB, i_gwa      );	/* 진료과     */
+    sp1 = ParsStr(sp1, TAB, i_fkinp1001);	/* 입원키     */
+
+    lprintf("i_bunho     = %s\n", i_bunho    );
+    lprintf("i_cert_jncd = %s\n", i_cert_jncd);
+    lprintf("i_gwa       = %s\n", i_gwa      );
+    lprintf("i_fkinp1001 = %s\n", i_fkinp1001);
+
+    if (sp1 == NULL)
+        return (SysErr(MessageOut,"99991","Record Parsing Error",NULL,0));
+
+    TrimStr(i_bunho    );
+    TrimStr(i_cert_jncd);
+    TrimStr(i_gwa      );
+    TrimStr(i_fkinp1001);
+
+    EXEC SQL DECLARE DOC2001U00_DOC1001QUERY CURSOR FOR
+    SELECT A.BUNHO                              BUNHO
+          ,A.PKDOC1001                          PKDOC1001
+          ,A.CERT_JNCD                          CERT_JNCD
+          ,A.GWA                                GWA
+          ,FN_BAS_LOAD_GWA_NAME(A.GWA, SYSDATE) GWA_NAME
+          ,A.CERT_RQDT                          CERT_RQDT
+          ,A.CERT_SEQN                          CERT_SEQN
+          ,A.CERT_RQNU                          CERT_RQNU
+      FROM DOC1001 A
+     WHERE A.BUNHO     = :i_bunho
+       AND A.CERT_JNCD = :i_cert_jncd
+       AND A.CERT_VALD = 'Y'
+       AND A.CERT_WRGB = 'R'
+       AND A.GWA       = :i_gwa
+       AND A.FKINP1001 = :i_fkinp1001
+       AND A.PKDOC1001 >= NVL(:q_cont_key, '0')
+     ORDER BY 2, 1;
+
+    EXEC SQL OPEN DOC2001U00_DOC1001QUERY;
+
+    lprintf("sqlca.sqlcode = %d\n",sqlca.sqlcode);
+
+    for( ; ; )
+    {
+        EXEC SQL FETCH DOC2001U00_DOC1001QUERY INTO
+            :o_bunho    ,
+            :o_pkdoc1001,
+            :o_cert_jncd,
+            :o_gwa      ,
+            :o_gwa_name ,
+            :o_cert_rqdt,
+            :o_cert_seqn,
+            :o_cert_rqnu;
+
+        lprintf("o_bunho     = %s\n", o_bunho    );
+        lprintf("o_pkdoc1001 = %s\n", o_pkdoc1001);
+        lprintf("o_cert_jncd = %s\n", o_cert_jncd);
+        lprintf("o_gwa       = %s\n", o_gwa      );
+        lprintf("o_gwa_name  = %s\n", o_gwa_name );
+        lprintf("o_cert_rqdt = %s\n", o_cert_rqdt);
+        lprintf("o_cert_seqn = %s\n", o_cert_seqn);
+        lprintf("o_cert_rqnu = %s\n", o_cert_rqnu);
+
+
+        if (sqlca.sqlcode == EXC_NO_DATA_FOUND) break;
+        if ((sqlca.sqlcode != 0) && (sqlca.sqlcode != EXC_COLUMN_NULL))
+        {
+            EXEC SQL CLOSE DOC2001U00_DOC1001QUERY;
+            return (SqlErr(MessageOut,NULL, 0));
+        }
+
+        r_rec_cnt++;
+
+        /* OutData Create */
+        ConcatStr(OutData, &idx, o_bunho    );
+        ConcatStr(OutData, &idx, o_pkdoc1001);
+        ConcatStr(OutData, &idx, o_cert_jncd);
+        ConcatStr(OutData, &idx, o_gwa      );
+        ConcatStr(OutData, &idx, o_gwa_name );
+        ConcatStr(OutData, &idx, o_cert_rqdt);
+        ConcatStr(OutData, &idx, o_cert_seqn);
+        ConcatStr(OutData, &idx, o_cert_rqnu);
+        ConcatRec(OutData, &idx);
+
+        /* OutData Size가 MessageOut Data Packet Size보다 크면 break */
+        if (CheckQryBuff(MessageOut->data, OutData, &r_rec_cnt, q_rec_cnt))
+        {
+            r_retv_tp = '1';
+            strcpy(r_cont_key, o_pkdoc1001);
+            break;
+        }
+    }
+    EXEC SQL CLOSE DOC2001U00_DOC1001QUERY;
+
+    lprintf("End DOC2001U00_DOC1001QUERY \n");
+
+    return 0;
+}
+
+/*
+ * 목적     : 환자의 제증명 과거력을 조회한다.
+ * 입력     :
+ * 출력     :
+ * 작성일자 : 2006년 02월 09 목요일
+ */
+int DOC2001U00_PASTHISTQUERY(MessageIn, MessageOut)
+msg_in_st    *MessageIn;
+msg_out_st   *MessageOut;
+{
+    /* LOCAL VALUES */
+    char    i_bunho         [ 9 + 1];	/* 환자번호     */
+
+    char    o_bunho         [ 9 + 1];	/* 환자번호     */
+    charnum o_pkdoc1001             ;	/* 제증명키     */
+    char    o_cert_jncd     [ 3 + 1];	/* 제증명코드   */
+    char    o_gwa           [10 + 1];	/* 진료과       */
+    char    o_gwa_name      [30 + 1];	/* 진료과명     */
+    chardt  o_cert_rqdt             ;	/* 요청일자     */
+    charnum o_cert_seqn             ;	/* 순번         */
+    chardt  o_cert_wrdt             ;	/* 작성일자     */
+    char    o_cert_wrid     [ 8 + 1];	/* 작성자사번   */
+    char    o_cert_wrid_name[30 + 1];	/* 작성자명     */
+    char    o_cert_iogb     [ 1 + 1];	/* 입원외래구분 */
+    charnum o_fkinp1001             ;	/* 입원키       */
+    char    o_fkout1001     [30 + 1];	/* 외래키       */
+    char    o_ho_dong       [ 4 + 1];	/* 병동         */
+    char    o_cert_prgb     [ 1 + 1];	/* 출력구분     */
+    
+    /* 20070705 - Add Start */
+	char	o_path1			[100 + 1];
+	char	o_path2			[100 + 1];    
+	charnum o_piclen1		;
+	charnum	o_piclen2		;
+    /* 20070705 - Add End */
+
+
+    char *sp1, OutData[DATA_SIZE+1024];
+    int  idx = 0;
+
+    lprintf("Start DOC2001U00_PASTHISTQUERY \n");
+
+    memset(OutData, 0x00, sizeof(OutData));
+    sp1 = MessageIn->data;
+
+    /* InData Parsing */
+    sp1 = ParsStr(sp1, TAB, i_bunho    );	/* 환자번호   */
+
+    lprintf("i_bunho     = %s\n", i_bunho    );
+
+    if (sp1 == NULL)
+        return (SysErr(MessageOut,"99991","Record Parsing Error",NULL,0));
+
+    TrimStr(i_bunho    );
+
+    EXEC SQL DECLARE DOC2001U00_PASTHISTQUERY CURSOR FOR
+    SELECT A.BUNHO                              BUNHO
+          ,A.PKDOC1001                          FKDOC1001
+          ,A.CERT_JNCD                          CERT_JNCD
+          ,A.GWA                                GWA
+          ,FN_BAS_LOAD_GWA_NAME(A.GWA, SYSDATE) GWA_NAME
+          ,A.CERT_RQDT                          CERT_RQDT
+          ,A.CERT_SEQN                          CERT_SEQN
+          ,A.CERT_WRDT                          CERT_WRDT
+          ,A.CERT_WRID                          CERT_WRID
+          ,FN_AKU_LOAD_SABUN_NAME(A.CERT_WRID)  CERT_WRID_NAME
+          ,A.CERT_IOGB                          CERT_IOGB
+          ,A.FKINP1001                          FKINP1001
+          ,A.FKOUT1001                          FKOUT1001
+          ,A.HO_DONG                            HO_DONG
+          ,A.CERT_PRGB                          CERT_PRGB
+          ,B.IMG_EXT1							PATH1
+          ,B.IMG_EXT2							PATH2
+          ,NVL(B.IMG_LEN1,0)					PICLEN1
+          ,NVL(B.IMG_LEN2,0)					PICLEN2
+      FROM DOC2002 B,
+           DOC1001 A
+     WHERE A.BUNHO     = :i_bunho
+       AND A.CERT_VALD = 'Y'
+       AND A.CERT_WRGB = 'E'
+       AND B.FKDOC1001(+) = A.PKDOC1001
+     ORDER BY 2 DESC;
+
+    EXEC SQL OPEN DOC2001U00_PASTHISTQUERY;
+
+    lprintf("sqlca.sqlcode = %d\n",sqlca.sqlcode);
+
+    for( ; ; )
+    {
+        EXEC SQL FETCH DOC2001U00_PASTHISTQUERY INTO
+            :o_bunho         ,
+            :o_pkdoc1001     ,
+            :o_cert_jncd     ,
+            :o_gwa           ,
+            :o_gwa_name      ,
+            :o_cert_rqdt     ,
+            :o_cert_seqn     ,
+            :o_cert_wrdt     ,
+            :o_cert_wrid     ,
+            :o_cert_wrid_name,
+            :o_cert_iogb     ,
+            :o_fkinp1001     ,
+            :o_fkout1001     ,
+            :o_ho_dong       ,
+            :o_cert_prgb     ,
+            :o_path1		 ,
+            :o_path2         ,
+            :o_piclen1		 ,
+            :o_piclen2       ;
+            	
+            	
+
+        lprintf("o_bunho          = %s\n", o_bunho         );
+        lprintf("o_pkdoc1001      = %s\n", o_pkdoc1001     );
+        lprintf("o_cert_jncd      = %s\n", o_cert_jncd     );
+        lprintf("o_gwa            = %s\n", o_gwa           );
+        lprintf("o_gwa_name       = %s\n", o_gwa_name      );
+        lprintf("o_cert_rqdt      = %s\n", o_cert_rqdt     );
+        lprintf("o_cert_seqn      = %s\n", o_cert_seqn     );
+        lprintf("o_cert_wrdt      = %s\n", o_cert_wrdt     );
+        lprintf("o_cert_wrid      = %s\n", o_cert_wrid     );
+        lprintf("o_cert_wrid_name = %s\n", o_cert_wrid_name);
+        lprintf("o_cert_iogb      = %s\n", o_cert_iogb     );
+        lprintf("o_fkinp1001      = %s\n", o_fkinp1001     );
+        lprintf("o_fkout1001      = %s\n", o_fkout1001     );
+        lprintf("o_ho_dong        = %s\n", o_ho_dong       );
+        lprintf("o_cert_prgb      = %s\n", o_cert_prgb     );
+        lprintf("o_path1          = %s\n", o_path1         );
+        lprintf("o_path2          = %s\n", o_path2         );
+        lprintf("o_piclen1        = %s\n", o_piclen1       );
+        lprintf("o_piclen2        = %s\n", o_piclen2       );
+
+        if (sqlca.sqlcode == EXC_NO_DATA_FOUND) break;
+        if ((sqlca.sqlcode != 0) && (sqlca.sqlcode != EXC_COLUMN_NULL))
+        {
+            EXEC SQL CLOSE DOC2001U00_PASTHISTQUERY;
+            return (SqlErr(MessageOut,NULL, 0));
+        }
+
+        r_rec_cnt++;
+
+        /* OutData Create */
+        ConcatStr(OutData, &idx, o_bunho         );
+        ConcatStr(OutData, &idx, o_pkdoc1001     );
+        ConcatStr(OutData, &idx, o_cert_jncd     );
+        ConcatStr(OutData, &idx, o_gwa           );
+        ConcatStr(OutData, &idx, o_gwa_name      );
+        ConcatStr(OutData, &idx, o_cert_rqdt     );
+        ConcatStr(OutData, &idx, o_cert_seqn     );
+        ConcatStr(OutData, &idx, o_cert_wrdt     );
+        ConcatStr(OutData, &idx, o_cert_wrid     );
+        ConcatStr(OutData, &idx, o_cert_wrid_name);
+        ConcatStr(OutData, &idx, o_cert_iogb     );
+        ConcatStr(OutData, &idx, o_fkinp1001     );
+        ConcatStr(OutData, &idx, o_fkout1001     );
+        ConcatStr(OutData, &idx, o_ho_dong       );
+        ConcatStr(OutData, &idx, o_cert_prgb     );
+        ConcatStr(OutData, &idx, o_path1         );
+        ConcatStr(OutData, &idx, o_path2         );
+        ConcatStr(OutData, &idx, o_piclen1       );
+        ConcatStr(OutData, &idx, o_piclen2       );
+        ConcatRec(OutData, &idx);
+
+        /* OutData Size가 MessageOut Data Packet Size보다 크면 break */
+        if (CheckQryBuff(MessageOut->data, OutData, &r_rec_cnt, q_rec_cnt))
+        {
+            r_retv_tp = '1';
+            strcpy(r_cont_key, o_pkdoc1001);
+            break;
+        }
+    }
+    EXEC SQL CLOSE DOC2001U00_PASTHISTQUERY;
+
+    lprintf("End DOC2001U00_PASTHISTQUERY \n");
+
+    return 0;
+}
+
+/*
+ * 목적     : 작성일자를 와력으로 변환을 한다.
+ * 입력     : CERT_WRDT
+ * 출력     :
+ * 작성일자 : 2006년 02월 10 금요일
+ */
+int DOC2001U00_CERTWRDTJAPANDATE(MessageIn, MessageOut)
+msg_in_st    *MessageIn;
+msg_out_st   *MessageOut;
+{
+    /* LOCAL VALUES */
+    chardt    i_cert_wrdt        ;	/* 작성일자       */
+
+    char      o_cert_wrdt[20 + 1];	/* 작성일자(와력) */
+
+    char *sp1, OutData[DATA_SIZE+1024];
+    int  idx = 0;
+
+    lprintf("Start DOC2001U00_CERTWRDTJAPANDATE \n");
+
+    memset(o_cert_wrdt, 0x00, sizeof(o_cert_wrdt));
+    memset(OutData,     0x00, sizeof(OutData));
+    sp1 = MessageIn->data;
+
+    /* InData Parsing */
+    sp1 = ParsStr(sp1, TAB, i_cert_wrdt);	/* 작성일자 */
+
+    if (sp1 == NULL)
+        return (SysErr(MessageOut,"99991","Record Parsing Error",NULL,0));
+
+    lprintf("i_cert_wrdt = %s\n", i_cert_wrdt);
+
+    TrimStr(i_cert_wrdt);
+
+    /* 입력된 작성일자를 와력으로 변환을 한다. */
+    EXEC SQL
+    SELECT FN_BAS_TO_JAPAN_DATE_CONVERT('1', TO_DATE(:i_cert_wrdt, 'YYYY/MM/DD')) CERT_WRDT
+      INTO :o_cert_wrdt
+      FROM DUAL;
+
+    lprintf("sqlca.sqlcode : %d\n", sqlca.sqlcode);
+
+    if (sqlca.sqlcode != 0)
+        return (SqlMsgErr(MessageOut, sqlca.sqlerrm.sqlerrmc, sizeof(sqlca.sqlerrm.sqlerrmc), "1", 0 ));
+
+    TrimStr(o_cert_wrdt);
+
+    lprintf("o_cert_wrdt : %s\n", o_cert_wrdt);
+
+    r_rec_cnt++;
+
+    ConcatStr(OutData, &idx, o_cert_wrdt);
+    ConcatRec(OutData, &idx); /* Record 구분자 */
+
+    if (CheckQryBuff(MessageOut->data, OutData, &r_rec_cnt, q_rec_cnt))
+    {
+        r_retv_tp = '1';
+    }
+
+    lprintf("...outdata[%s]...\n",OutData);
+    lprintf("End DOC2001U00_CERTWRDTJAPANDATE \n");
+
+    return 0;
+}
+
+/*
+ * 목적     : DOC1001, DOC2001을 저장한다.
+ * 입력     :
+ * 출력     :
+ * 작성일자 : 2006년 02월 13 월요일
+ */
+int DOC2001U00_DOC2001Update(MessageIn, MessageOut)
+msg_in_st    *MessageIn;
+msg_out_st   *MessageOut;
+{
+    /* LOCAL VALUES */
+    char    i_bunho    [   9 + 1];	/* 환자번호     */
+    charnum i_fkdoc1001          ;	/* 제증명키     */
+    char    i_cert_jncd[   3 + 1];	/* 제증명코드   */
+    char    i_gwa      [  10 + 1];	/* 진료과       */
+    chardt  i_cert_rqdt          ;	/* 요청일자     */
+    charnum i_cert_seqn          ;	/* 순번         */
+    char    i_cert_colm[  20 + 1];	/* 컬럼명       */
+    charnum i_cert_pgno          ;	/* 페이지번호   */
+    char    i_cert_info[2000 + 1];	/* 입력정보     */
+    chardt  i_cert_wrdt          ;	/* 작성일자     */
+    char    i_upd_gubun[   1 + 1];	/* 저장구분     */
+    char    i_cert_iogb[   1 + 1];	/* 입원외래구분 */
+    char    i_ho_dong  [   4 + 1];	/* 병동         */
+    charnum i_fkinp1001          ;	/* 입원키       */
+    char    i_fkout1001[  30 + 1];	/* 외래키       */
+
+    /* 20070705 - Add Start */
+    char	i_path1		[100 + 1];
+    char	i_path2		[100 + 1];
+    /* 20070705 - Add End */
+
+    char    o_dup_chck     [1 + 1];	/* 중복체크     */
+    char    o_print_chk    [1 + 1];	/* 출력여부체크 */
+    char    o_msg          [300 + 1];	/* 메세지       */
+
+    int    i, svcm = 0, idx = 0;
+    char   *rec, *sp1;
+    char   i_chk[1 + 1];
+
+    lprintf("Start DOC2001U00_DOC2001Update\n");
+
+    rec = MessageIn->data;
+
+    /* InData Parsing & I/U/D Work Division loop */
+    for ( i = 0; i < q_rec_cnt; i++ )
+    {
+        if ( i > 0 ) rec = strstr(rec, TAB_CRNL) + 3;
+
+        /* 대상 Table단위 작업 */
+        switch (rec[0])
+        {
+            case '1':       /* DOC2001 */
+            	lprintf("Start DOC2001 SAVE\n");
+
+            	/* Record Parsing */
+            	sp1 = rec + 2;
+            	sp1 = ParsStr(sp1, TAB,     i_bunho    );
+            	sp1 = ParsStr(sp1, TAB,     i_fkdoc1001);
+            	sp1 = ParsStr(sp1, TAB,     i_cert_jncd);
+            	sp1 = ParsStr(sp1, TAB,     i_gwa      );
+            	sp1 = ParsStr(sp1, TAB,     i_cert_rqdt);
+            	sp1 = ParsStr(sp1, TAB,     i_cert_seqn);
+            	sp1 = ParsStr(sp1, TAB,     i_cert_colm);
+            	sp1 = ParsStr(sp1, TAB,     i_cert_pgno);
+            	sp1 = (char *)ParsFix5(sp1, i_cert_info);
+            	sp1 = ParsStr(sp1, TAB,     i_cert_wrdt);
+            	sp1 = ParsStr(sp1, TAB,     i_upd_gubun);
+            	sp1 = ParsStr(sp1, TAB,     i_cert_iogb);
+            	sp1 = ParsStr(sp1, TAB,     i_ho_dong  );
+            	sp1 = ParsStr(sp1, TAB,     i_fkinp1001);
+            	sp1 = ParsStr(sp1, TAB,     i_fkout1001);
+            	sp1 = ParsStr(sp1, TAB,		i_path1    );
+            	sp1 = ParsStr(sp1, TAB,		i_path2    );
+
+            	lprintf("i_bunho     : [%s]\n", i_bunho    );
+                lprintf("i_fkdoc1001 : [%s]\n", i_fkdoc1001);
+                lprintf("i_cert_jncd : [%s]\n", i_cert_jncd);
+                lprintf("i_gwa       : [%s]\n", i_gwa      );
+                lprintf("i_cert_rqdt : [%s]\n", i_cert_rqdt);
+                lprintf("i_cert_seqn : [%s]\n", i_cert_seqn);
+                lprintf("i_cert_colm : [%s]\n", i_cert_colm);
+                lprintf("i_cert_pgno : [%s]\n", i_cert_pgno);
+                lprintf("i_cert_info : [%s]\n", i_cert_info);
+                lprintf("i_cert_wrdt : [%s]\n", i_cert_wrdt);
+                lprintf("i_upd_gubun : [%s]\n", i_upd_gubun);
+                lprintf("i_cert_iogb : [%s]\n", i_cert_iogb);
+                lprintf("i_ho_dong   : [%s]\n", i_ho_dong  );
+                lprintf("i_fkinp1001 : [%s]\n", i_fkinp1001);
+                lprintf("i_fkout1001 : [%s]\n", i_fkout1001);
+                lprintf("i_path1     : [%s]\n", i_path1    );
+                lprintf("i_path2     : [%s]\n", i_path2    );
+
+                if(sp1 == NULL)
+                    return (SysErr(MessageOut,"99991","Record Parsing Error",NULL,1));
+
+                TrimStr(i_bunho    );
+                TrimStr(i_fkdoc1001);
+                TrimStr(i_cert_jncd);
+                TrimStr(i_gwa      );
+                TrimStr(i_cert_rqdt);
+                TrimStr(i_cert_seqn);
+                TrimStr(i_cert_colm);
+                TrimStr(i_cert_pgno);
+                TrimStr(i_cert_info);
+                TrimStr(i_cert_wrdt);
+                TrimStr(i_upd_gubun);
+                TrimStr(i_cert_iogb);
+                TrimStr(i_ho_dong  );
+                TrimStr(i_fkinp1001);
+                TrimStr(i_fkout1001);
+                TrimStr(i_path1    );
+                TrimStr(i_path2    );
+
+                if(i == 0)
+                {
+                    /* 입력된 제증명의 요청정보가 있는지 조회를 한다. */
+                    EXEC SQL
+                    SELECT 'Y'
+                      INTO :o_dup_chck
+                      FROM DUAL
+                     WHERE EXISTS (SELECT 'X'
+                                     FROM DOC1001
+                                    WHERE BUNHO     = :i_bunho
+                                      AND PKDOC1001 = :i_fkdoc1001
+                                      AND CERT_JNCD = :i_cert_jncd
+                                      AND GWA       = :i_gwa
+                                      AND CERT_RQDT = TO_DATE(:i_cert_rqdt, 'YYYY/MM/DD')
+                                      AND CERT_SEQN = :i_cert_seqn);
+
+                    if(sqlca.sqlcode == 0)
+                    {
+                        /* 요청테이블의 예정 정보를 작성으로 바꾼다. */
+                        EXEC SQL
+                        UPDATE DOC1001
+                           SET USER_ID   = :q_user_id,
+                               UPD_DATE  = SYSDATE,
+                               CERT_WRDT = TO_DATE(:i_cert_wrdt, 'YYYY/MM/DD'),
+                               CERT_WRGB = 'E',
+                               CERT_WRID = :q_user_id
+                         WHERE BUNHO     = :i_bunho
+                           AND PKDOC1001 = :i_fkdoc1001
+                           AND CERT_JNCD = :i_cert_jncd
+                           AND GWA       = :i_gwa
+                           AND CERT_RQDT = TO_DATE(:i_cert_rqdt, 'YYYY/MM/DD')
+                           AND CERT_SEQN = :i_cert_seqn;
+
+                        if(sqlca.sqlcode != 0)
+                            return (SqlErr(MessageOut, "Update Error", 1));
+                    }
+                    else if(sqlca.sqlcode == EXC_NO_DATA_FOUND)
+                    {
+                        /* 제증명 요청정보를 저장한다. */
+                        EXEC SQL
+                        INSERT INTO DOC1001 (SYS_DATE    , USER_ID     , UPD_DATE    ,
+                                             BUNHO       , PKDOC1001   , CERT_JNCD   ,
+                                             GWA         , CERT_RQDT   , CERT_SEQN   ,
+                                             CERT_VALD   , CERT_IOGB   , HO_DONG     ,
+                                             CERT_RQNU   , CERT_BIGO   , CERT_WRDT   ,
+                                             CERT_WRGB   , CERT_WRID   , CERT_PRGB   ,
+                                             FKINP1001   , FKOUT1001)
+                            VALUES          (SYSDATE     , :q_user_id  , SYSDATE     ,
+                                             :i_bunho    , :i_fkdoc1001, :i_cert_jncd,
+                                             :i_gwa      , :i_cert_rqdt, :i_cert_seqn,
+                                             'Y'         , :i_cert_iogb, :i_ho_dong  ,
+                                             1           , ''          , :i_cert_wrdt,
+                                             'E'         , :q_user_id  , ''          ,
+                                             :i_fkinp1001, :i_fkout1001);
+
+                        if(sqlca.sqlcode != 0)
+                            return (SqlErr(MessageOut, "Update Error", 1));
+                            
+                    }
+                }
+
+                if(strcmp(i_upd_gubun, "I") == 0)
+                {
+                    if(i == 0)
+                    {
+                        /* 입력된 정보를 삭제를 하고 다시 입력을 한다. */
+                        EXEC SQL
+                        DELETE DOC2001
+                         WHERE BUNHO     = :i_bunho
+                           AND FKDOC1001 = :i_fkdoc1001
+                           AND CERT_JNCD = :i_cert_jncd
+                           AND GWA       = :i_gwa
+                           AND CERT_RQDT = :i_cert_rqdt
+                           AND CERT_SEQN = :i_cert_seqn;
+
+                        if(sqlca.sqlcode != 0 && sqlca.sqlcode != EXC_NO_DATA_FOUND)
+                            return (SqlErr(MessageOut, "Update Error", 1));
+                    }
+
+                    if(strcmp(i_cert_info, "") != 0)
+                    {
+                        /* 제증명입력 정보를 저장한다. */
+                        EXEC SQL
+                        INSERT INTO DOC2001 (SYS_DATE    , USER_ID     , UPD_DATE    ,
+                                             BUNHO       , FKDOC1001   , CERT_JNCD   ,
+                                             GWA         , CERT_RQDT   , CERT_SEQN   ,
+                                             CERT_COLM   , CERT_PGNO   , CERT_INFO   ,
+                                             CERT_WRDT   , CERT_VALD
+                                            )
+                        VALUES              (SYSDATE     , :q_user_id  , SYSDATE     ,
+                                             :i_bunho    , :i_fkdoc1001, :i_cert_jncd,
+                                             :i_gwa      , :i_cert_rqdt, :i_cert_seqn,
+                                             :i_cert_colm, :i_cert_pgno, :i_cert_info,
+                                             :i_cert_wrdt, 'Y'
+                                            );
+
+                        if (sqlca.sqlcode != 0)
+                            return (SqlErr(MessageOut,NULL, 1));
+                            
+                            
+                    }
+                }
+
+                else if(strcmp(i_upd_gubun, "D") == 0)
+                {
+                    /* 출력된 데이터는 삭제가 불가능하다. */
+                    /*EXEC SQL
+                    SELECT 'Y'
+                      INTO :o_print_chk
+                      FROM DUAL
+                     WHERE EXISTS (SELECT 'X'
+                                     FROM DOC1001
+                                    WHERE BUNHO     = :i_bunho
+                                      AND PKDOC1001 = :i_fkdoc1001
+                                      AND CERT_JNCD = :i_cert_jncd
+                                      AND GWA       = :i_gwa
+                                      AND CERT_RQDT = :i_cert_rqdt
+                                      AND CERT_SEQN = :i_cert_seqn
+                                      AND CERT_PRGB = 'Y');
+
+                    if (sqlca.sqlcode != 0 && sqlca.sqlcode != EXC_NO_DATA_FOUND)
+                        return (SqlErr(MessageOut,NULL, 1));
+
+                    if(sqlca.sqlcode == 0)
+                    {
+                    	memset(o_msg,0X00,sizeof(o_msg));
+
+                        DOCCOMSVC_GetAdmMsg("1011", o_msg);
+
+                        return SysErr(MessageOut, "99991", o_msg, NULL, 0);
+                    }*/
+                    if(i == 0)
+                    {
+                    	/* 입력된 요청정보도 삭제를 한다. */
+                    	EXEC SQL
+                    	UPDATE DOC1001
+                           SET CERT_VALD = 'N',
+                               USER_ID   = :q_user_id,
+                               UPD_DATE  = SYSDATE
+                         WHERE BUNHO     = :i_bunho
+                           AND PKDOC1001 = :i_fkdoc1001
+                           AND CERT_JNCD = :i_cert_jncd
+                           AND GWA       = :i_gwa
+                           AND CERT_RQDT = :i_cert_rqdt
+                           AND CERT_SEQN = :i_cert_seqn;
+
+                        if (sqlca.sqlcode != 0)
+                            return (SqlErr(MessageOut,NULL, 1));
+
+                        /* 입력된 정보를 삭제한다. */
+                        EXEC SQL
+                        UPDATE DOC2001
+                           SET CERT_VALD = 'N',
+                               USER_ID   = :q_user_id,
+                               UPD_DATE  = SYSDATE
+                         WHERE BUNHO     = :i_bunho
+                           AND FKDOC1001 = :i_fkdoc1001
+                           AND CERT_JNCD = :i_cert_jncd
+                           AND GWA       = :i_gwa
+                           AND CERT_RQDT = :i_cert_rqdt
+                           AND CERT_SEQN = :i_cert_seqn;
+
+                        if (sqlca.sqlcode != 0)
+                            return (SqlErr(MessageOut,NULL, 1));
+                            
+                    }
+                }
+
+                else
+                {
+                	return 0;
+                }
+
+                lprintf("End DOC1001 SAVE\n");
+                break;
+
+            default:
+                return (SysErr(MessageOut,"99992","Rec[0] Division Error",NULL, 1));
+                break;
+        }
+    }
+    return 0;
+}
+
+/*
+ * 목적     : 환자의 제증명 요청건을 조회한다.
+ * 입력     :
+ * 출력     :
+ * 작성일자 : 2006년 02월 09 목요일
+ */
+int DOC2001U00_DOC2001PASTQUERY(MessageIn, MessageOut)
+msg_in_st    *MessageIn;
+msg_out_st   *MessageOut;
+{
+    /* LOCAL VALUES */
+    char    i_bunho    [   9 + 1];	/* 환자번호     */
+    charnum i_fkdoc1001          ;	/* 제증명키     */
+    char    i_cert_jncd[   3 + 1];	/* 제증명코드   */
+    char    i_gwa      [  10 + 1];	/* 진료과       */
+    chardt  i_cert_rqdt          ;	/* 요청일자     */
+    charnum i_cert_seqn          ;	/* 순번         */
+
+    char    o_bunho    [   9 + 1];	/* 환자번호     */
+    charnum o_fkdoc1001          ;	/* 제증명키     */
+    char    o_cert_jncd[   3 + 1];	/* 제증명코드   */
+    char    o_gwa      [  10 + 1];	/* 진료과       */
+    chardt  o_cert_rqdt          ;	/* 요청일자     */
+    charnum o_cert_seqn          ;	/* 순번         */
+    char    o_cert_colm[  20 + 1];	/* 컬럼명       */
+    charnum o_cert_pgno          ;	/* 페이지번호   */
+    char    o_cert_info[2000 + 1];	/* 입력정보     */
+    chardt  o_cert_wrdt          ;	/* 작성일자     */
+    char    o_cert_iogb[   1 + 1];	/* 입원외래구분 */
+    char    o_ho_dong  [   4 + 1];	/* 병동         */
+    charnum o_fkinp1001          ;	/* 입원키       */
+    char    o_fkout1001[  30 + 1];	/* 외래키       */
+
+    char *sp1, OutData[DATA_SIZE+1024];
+    int  idx = 0;
+
+    lprintf("Start DOC2001U00_DOC2001PASTQUERY \n");
+
+    memset(OutData, 0x00, sizeof(OutData));
+    sp1 = MessageIn->data;
+
+    /* InData Parsing */
+    sp1 = ParsStr(sp1, TAB, i_bunho    );	/* 환자번호   */
+    sp1 = ParsStr(sp1, TAB, i_fkdoc1001);	/* 제증명키   */
+    sp1 = ParsStr(sp1, TAB, i_cert_jncd);	/* 제증명코드 */
+    sp1 = ParsStr(sp1, TAB, i_gwa      );	/* 진료과     */
+    sp1 = ParsStr(sp1, TAB, i_cert_rqdt);	/* 요청일자   */
+    sp1 = ParsStr(sp1, TAB, i_cert_seqn);	/* 순번       */
+
+    lprintf("i_bunho     = %s\n", i_bunho    );
+    lprintf("i_fkdoc1001 = %s\n", i_fkdoc1001);
+    lprintf("i_cert_jncd = %s\n", i_cert_jncd);
+    lprintf("i_gwa       = %s\n", i_gwa      );
+    lprintf("i_cert_rqdt = %s\n", i_cert_rqdt);
+    lprintf("i_cert_seqn = %s\n", i_cert_seqn);
+
+    if (sp1 == NULL)
+        return (SysErr(MessageOut,"99991","Record Parsing Error",NULL,0));
+
+    TrimStr(i_bunho    );
+    TrimStr(i_fkdoc1001);
+    TrimStr(i_cert_jncd);
+    TrimStr(i_gwa      );
+    TrimStr(i_cert_rqdt);
+    TrimStr(i_cert_seqn);
+
+    EXEC SQL DECLARE DOC2001U00_DOC2001PASTQUERY CURSOR FOR
+    SELECT A.BUNHO BUNHO
+          ,A.FKDOC1001 FKDOC1001
+          ,A.CERT_JNCD CERT_JNCD
+          ,A.GWA       GWA
+          ,A.CERT_RQDT CERT_RQDT
+          ,A.CERT_SEQN CERT_SEQN
+          ,A.CERT_COLM CERT_COLM
+          ,A.CERT_PGNO CERT_PGNO
+          ,A.CERT_INFO CERT_INFO
+          ,A.CERT_WRDT CERT_WRDT
+          ,B.CERT_IOGB CERT_IOGB
+          ,B.HO_DONG   HO_DONG
+          ,B.FKINP1001 FKINP1001
+          ,B.FKOUT1001 FKOUT1001
+      FROM DOC2001 A, DOC1001 B
+     WHERE A.BUNHO     = :i_bunho
+       AND A.FKDOC1001 = :i_fkdoc1001
+       AND A.CERT_JNCD = :i_cert_jncd
+       AND A.GWA       = :i_gwa
+       AND A.CERT_RQDT = TO_DATE(:i_cert_rqdt, 'YYYY/MM/DD')
+       AND A.CERT_SEQN = :i_cert_seqn
+       AND A.CERT_VALD = 'Y'
+       AND A.BUNHO     = B.BUNHO
+       AND A.FKDOC1001 = B.PKDOC1001
+       AND A.CERT_JNCD = B.CERT_JNCD
+       AND A.GWA       = B.GWA
+       AND A.CERT_RQDT = B.CERT_RQDT
+       AND A.CERT_SEQN = B.CERT_SEQN
+       AND A.CERT_VALD = B.CERT_VALD;
+
+    EXEC SQL OPEN DOC2001U00_DOC2001PASTQUERY;
+
+    lprintf("sqlca.sqlcode = %d\n",sqlca.sqlcode);
+
+    for( ; ; )
+    {
+        EXEC SQL FETCH DOC2001U00_DOC2001PASTQUERY INTO
+            :o_bunho    ,
+            :o_fkdoc1001,
+            :o_cert_jncd,
+            :o_gwa      ,
+            :o_cert_rqdt,
+            :o_cert_seqn,
+            :o_cert_colm,
+            :o_cert_pgno,
+            :o_cert_info,
+            :o_cert_wrdt,
+            :o_cert_iogb,
+            :o_ho_dong  ,
+            :o_fkinp1001,
+            :o_fkout1001;
+
+        lprintf("o_bunho     = %s\n", o_bunho    );
+        lprintf("o_fkdoc1001 = %s\n", o_fkdoc1001);
+        lprintf("o_cert_jncd = %s\n", o_cert_jncd);
+        lprintf("o_gwa       = %s\n", o_gwa      );
+        lprintf("o_cert_rqdt = %s\n", o_cert_rqdt);
+        lprintf("o_cert_seqn = %s\n", o_cert_seqn);
+        lprintf("o_cert_colm = %s\n", o_cert_colm);
+        lprintf("o_cert_pgno = %s\n", o_cert_pgno);
+        lprintf("o_cert_info = %s\n", o_cert_info);
+        lprintf("o_cert_wrdt = %s\n", o_cert_wrdt);
+        lprintf("o_cert_wrdt = %s\n", o_cert_iogb);
+        lprintf("o_cert_wrdt = %s\n", o_ho_dong  );
+        lprintf("o_cert_wrdt = %s\n", o_fkinp1001);
+        lprintf("o_cert_wrdt = %s\n", o_fkout1001);
+
+        if (sqlca.sqlcode == EXC_NO_DATA_FOUND) break;
+        if ((sqlca.sqlcode != 0) && (sqlca.sqlcode != EXC_COLUMN_NULL))
+        {
+            EXEC SQL CLOSE DOC2001U00_DOC2001PASTQUERY;
+            return (SqlErr(MessageOut,NULL, 0));
+        }
+
+        r_rec_cnt++;
+
+        /* OutData Create */
+        ConcatStr(OutData, &idx,  o_bunho    );
+        ConcatStr(OutData, &idx,  o_fkdoc1001);
+        ConcatStr(OutData, &idx,  o_cert_jncd);
+        ConcatStr(OutData, &idx,  o_gwa      );
+        ConcatStr(OutData, &idx,  o_cert_rqdt);
+        ConcatStr(OutData, &idx,  o_cert_seqn);
+        ConcatStr(OutData, &idx,  o_cert_colm);
+        ConcatStr(OutData, &idx,  o_cert_pgno);
+        ConcatFix5(OutData, &idx, o_cert_info);
+        ConcatStr(OutData, &idx,  o_cert_wrdt);
+        ConcatStr(OutData, &idx,  "I"        );
+        ConcatStr(OutData, &idx,  o_cert_iogb);
+        ConcatStr(OutData, &idx,  o_ho_dong  );
+        ConcatStr(OutData, &idx,  o_fkinp1001);
+        ConcatStr(OutData, &idx,  o_fkout1001);
+        ConcatRec(OutData, &idx);
+
+        /* OutData Size가 MessageOut Data Packet Size보다 크면 break */
+        if (CheckQryBuff(MessageOut->data, OutData, &r_rec_cnt, q_rec_cnt))
+        {
+            r_retv_tp = '1';
+            strcpy(r_cont_key, o_fkdoc1001);
+            break;
+        }
+    }
+    EXEC SQL CLOSE DOC2001U00_DOC2001PASTQUERY;
+
+    lprintf("End DOC2001U00_DOC2001PASTQUERY \n");
+
+    return 0;
+}
+
+/*
+ * 목적     : 프린트를 하기 전에 체크를 한다.
+ * 입력     :
+ * 출력     :
+ * 작성일자 : 2006년 02월 14 화요일
+ */
+int DOC2001U00_PRINTCHECK(MessageIn, MessageOut)
+msg_in_st    *MessageIn;
+msg_out_st   *MessageOut;
+{
+    /* LOCAL VALUES */
+    charnum i_pkdoc1001         ;	/* 제증명키   */
+
+    char    o_print_ckeck[1 + 1];	/* 프린트체크 */
+
+    char    *sp1, OutData[DATA_SIZE+1024];
+    int     idx = 0;
+
+    lprintf("Start DOC2001U00_PRINTCHECK \n");
+
+    memset(o_print_ckeck, 0x00, sizeof(o_print_ckeck));
+    memset(OutData,       0x00, sizeof(OutData));
+    sp1 = MessageIn->data;
+
+    /* InData Parsing */
+    sp1 = ParsStr(sp1, TAB, i_pkdoc1001);	/* 작성일자 */
+
+    if (sp1 == NULL)
+        return (SysErr(MessageOut,"99991","Record Parsing Error",NULL,0));
+
+    lprintf("i_pkdoc1001 = %s\n", i_pkdoc1001);
+
+    TrimStr(i_pkdoc1001);
+
+    /* 출력 가능 여부를 조회한다. */
+    EXEC SQL
+    SELECT 'Y'
+      INTO :o_print_ckeck
+      FROM DUAL
+     WHERE EXISTS (SELECT 'X'
+                     FROM DOC1001
+                    WHERE PKDOC1001 = :i_pkdoc1001
+                      AND CERT_VALD = 'Y'
+                      AND CERT_WRGB = 'E');
+
+    lprintf("sqlca.sqlcode : %d\n", sqlca.sqlcode);
+
+    if (sqlca.sqlcode != 0 && sqlca.sqlcode != EXC_NO_DATA_FOUND)
+        return (SqlMsgErr(MessageOut, sqlca.sqlerrm.sqlerrmc, sizeof(sqlca.sqlerrm.sqlerrmc), "1", 0 ));
+
+    TrimStr(o_print_ckeck);
+
+    lprintf("o_print_ckeck : %s\n", o_print_ckeck);
+
+    r_rec_cnt++;
+
+    ConcatStr(OutData, &idx, o_print_ckeck);
+    ConcatRec(OutData, &idx); /* Record 구분자 */
+
+    if (CheckQryBuff(MessageOut->data, OutData, &r_rec_cnt, q_rec_cnt))
+    {
+        r_retv_tp = '1';
+    }
+
+    lprintf("...outdata[%s]...\n",OutData);
+    lprintf("End DOC2001U00_PRINTCHECK \n");
+
+    return 0;
+}
+
+/*
+ * 목적     : 프린트 여부를 입력한다.
+ * 입력     :
+ * 출력     :
+ * 작성일자 : 2006년 02월 14 화요일
+ */
+int DOC2001U00_SETPRINTFLAG(MessageIn, MessageOut)
+msg_in_st    *MessageIn;
+msg_out_st   *MessageOut;
+{
+    /* LOCAL VALUES */
+    charnum i_pkdoc1001         ;	/* 제증명키   */
+
+    char    o_print_ckeck[1 + 1];	/* 프린트체크 */
+
+    char    *sp1, OutData[DATA_SIZE+1024];
+    int     idx = 0;
+
+    lprintf("Start DOC2001U00_SETPRINTFLAG \n");
+
+    memset(o_print_ckeck, 0x00, sizeof(o_print_ckeck));
+    memset(OutData,       0x00, sizeof(OutData));
+    sp1 = MessageIn->data;
+
+    /* InData Parsing */
+    sp1 = ParsStr(sp1, TAB, i_pkdoc1001);	/* 작성일자 */
+
+    if (sp1 == NULL)
+        return (SysErr(MessageOut,"99991","Record Parsing Error",NULL,0));
+
+    lprintf("i_pkdoc1001 = %s\n", i_pkdoc1001);
+
+    TrimStr(i_pkdoc1001);
+
+    /* 출력 가능 여부를 다시한번 조회한다. */
+    EXEC SQL
+    SELECT 'Y'
+      INTO :o_print_ckeck
+      FROM DUAL
+     WHERE EXISTS (SELECT 'X'
+                     FROM DOC1001
+                    WHERE PKDOC1001 = :i_pkdoc1001
+                      AND CERT_VALD = 'Y'
+                      AND CERT_WRGB = 'E');
+
+    lprintf("sqlca.sqlcode : %d\n", sqlca.sqlcode);
+
+    if (sqlca.sqlcode != 0)
+        return (SqlMsgErr(MessageOut, sqlca.sqlerrm.sqlerrmc, sizeof(sqlca.sqlerrm.sqlerrmc), "1", 0 ));
+
+    /* 제증명의 출력 여부를 셋팅한다. */
+    EXEC SQL
+    UPDATE DOC1001
+       SET CERT_PRGB = 'Y'
+     WHERE PKDOC1001 = :i_pkdoc1001
+       AND CERT_VALD = 'Y'
+       AND CERT_WRGB = 'E';
+
+    if (sqlca.sqlcode != 0)
+        return (SqlErr(MessageOut,NULL, 0));
+
+    lprintf("End DOC2001U00_SETPRINTFLAG \n");
+
+    return 0;
+}
+
+/*
+ * 목적     : 퇴원증명서의 기본 정보를 조회한다.
+ * 입력     : BUNHO, FKINP1001
+ * 출력     :
+ * 작성일자 : 2006년 07월 24 월요일
+ */
+int DOC2001U00_Base_info_Query(MessageIn, MessageOut)
+msg_in_st    *MessageIn;
+msg_out_st   *MessageOut;
+{
+    /* LOCAL VALUES */
+    char    i_bunho                [  9 + 1];	/* 등록번호           */
+    charnum i_fkinp1001                     ;	/* 입원키             */
+
+    char    o_suname               [ 30 + 1];	/* 환자명             */
+    char    o_address              [300 + 1];	/* 주소               */
+    char    o_sex                  [  1 + 1];	/* 환자성별           */
+    char    o_tel                  [ 15 + 1];	/* 전화번호           */
+    char    o_birth                [ 20 + 1];	/* 생년월일           */
+    char    o_ipwon_date           [ 20 + 1];	/* 입원일자           */
+    char    o_toiwon_date          [ 20 + 1];	/* 퇴원일자           */
+    charnum o_sanjung_gigan                 ;	/* 산정일수           */
+    chardt  o_sanjung_from_date             ;	/* 산정시작일자       */
+    char    o_sanjung_from_date_jp [ 20 + 1];	/* 산정시작일자(와력) */
+    chardt  o_sanjung_to_date               ;	/* 산정종료일자       */
+    char    o_sanjung_to_date_jp  [ 20 + 1];	/* 산정종료일자(와력) */
+    charnum o_age                           ;	/* 환자나이           */
+    char    o_cert_wrdt            [ 20 + 1];	/* 작성일자           */
+    char    o_err                  [  1 + 1];	/* 에러코드           */
+    char    o_msg                  [300 + 1];	/* 에러메세지         */
+
+    int     i, svcm = 0;
+    char    *rec, *sp1, OutData[DATA_SIZE+1024];
+    int     idx = 0;
+
+    lprintf("Start DOC2001U00_Base_info_Query \n");
+
+    memset(OutData                , 0x00, sizeof(OutData                ));
+    memset(o_suname               , 0x00, sizeof(o_suname               ));
+    memset(o_address              , 0x00, sizeof(o_address              ));
+    memset(o_sex                  , 0x00, sizeof(o_sex                  ));
+    memset(o_tel                  , 0x00, sizeof(o_tel                  ));
+    memset(o_birth                , 0x00, sizeof(o_birth                ));
+    memset(o_ipwon_date           , 0x00, sizeof(o_ipwon_date           ));
+    memset(o_toiwon_date          , 0x00, sizeof(o_toiwon_date          ));
+    memset(o_sanjung_gigan        , 0x00, sizeof(o_sanjung_gigan        ));
+    memset(o_sanjung_from_date    , 0x00, sizeof(o_sanjung_from_date    ));
+    memset(o_sanjung_from_date_jp , 0x00, sizeof(o_sanjung_from_date_jp ));
+    memset(o_sanjung_to_date      , 0x00, sizeof(o_sanjung_to_date      ));
+    memset(o_sanjung_to_date_jp   , 0x00, sizeof(o_sanjung_to_date_jp   ));
+    memset(o_age                  , 0x00, sizeof(o_age                  ));
+    memset(o_cert_wrdt            , 0x00, sizeof(o_cert_wrdt            ));
+    memset(o_err                  , 0x00, sizeof(o_err                  ));
+    memset(o_msg                  , 0x00, sizeof(o_msg                  ));
+    sp1 = MessageIn -> data;
+
+    /* Parsing... */
+    sp1 = ParsStr(sp1, TAB, i_bunho    );
+    sp1 = ParsStr(sp1, TAB, i_fkinp1001);
+
+    TrimStr(i_bunho    );
+    TrimStr(i_fkinp1001);
+    lprintf("i_bunho     : [%s]...\n", i_bunho    );
+    lprintf("i_fkinp1001 : [%s]...\n", i_fkinp1001);
+
+    /* 환자의 입원기본 정보를 조회한다. */
+    EXEC SQL
+    SELECT B.SUNAME
+          ,TRIM(B.ADDRESS1||' '||B.ADDRESS2) ADDRESS
+          ,B.SEX
+          ,B.TEL
+          ,FN_BAS_TO_JAPAN_DATE_CONVERT('1', B.BIRTH) BIRTH
+          ,FN_BAS_TO_JAPAN_DATE_CONVERT('1', A.IPWON_DATE) IPWON_DATE
+          ,FN_BAS_TO_JAPAN_DATE_CONVERT('1', NVL(A.TOIWON_DATE, A.TOIWON_RES_DATE)) TOIWON_DATE
+          ,FN_BAS_LOAD_AGE(TRUNC(SYSDATE), TRUNC(B.BIRTH), '') AGE
+      INTO :o_suname
+          ,:o_address
+          ,:o_sex
+          ,:o_tel
+          ,:o_birth
+          ,:o_ipwon_date
+          ,:o_toiwon_date
+          ,:o_age
+      FROM INP1001 A, OUT0101 B
+     WHERE A.PKINP1001             = :i_fkinp1001
+       AND A.BUNHO                 = :i_bunho
+       AND NVL(A.CANCEL_YN, 'N')   = 'N'
+       AND A.BUNHO                 = B.BUNHO;
+
+    if ((sqlca.sqlcode != 0) && (sqlca.sqlcode != EXC_COLUMN_NULL) &&(sqlca.sqlcode != EXC_NO_DATA_FOUND))
+        return (SqlMsgErr(MessageOut, sqlca.sqlerrm.sqlerrmc, sizeof(sqlca.sqlerrm.sqlerrmc), "1", 0 ));
+
+    /* 환자의 기본정보를 조회한다. */
+    EXEC SQL EXECUTE
+      BEGIN
+        PR_INP_LOAD_SANJUNG_ILSU(:i_fkinp1001          , :o_sanjung_gigan, :o_sanjung_from_date,
+                                 :o_sanjung_to_date, :o_err          , :o_msg
+                                );
+      END;
+    END-EXEC;
+
+    if(o_err[0] != '0')
+        return SysErr(MessageOut, "99991", o_msg, NULL, 0);
+
+    /* 산정입원일자, 산정퇴원일자를 와력으로 변환을 한다. */
+    EXEC SQL
+    SELECT FN_BAS_TO_JAPAN_DATE_CONVERT('1', TRUNC(TO_DATE(:o_sanjung_from_date, 'YYYY/MM/DD')))
+          ,FN_BAS_TO_JAPAN_DATE_CONVERT('1', TRUNC(TO_DATE(:o_sanjung_to_date, 'YYYY/MM/DD')))
+      INTO :o_sanjung_from_date_jp
+          ,:o_sanjung_to_date_jp
+      FROM DUAL;
+
+    lprintf("sqlca.sqlcode3 : [%d]...\n", sqlca.sqlcode);
+
+    if ((sqlca.sqlcode != 0) && (sqlca.sqlcode != EXC_COLUMN_NULL) &&(sqlca.sqlcode != EXC_NO_DATA_FOUND))
+        return (SqlMsgErr(MessageOut, sqlca.sqlerrm.sqlerrmc, sizeof(sqlca.sqlerrm.sqlerrmc), "1", 0 ));
+
+    lprintf("o_suname                : %s\n", o_suname               );
+    lprintf("o_address               : %s\n", o_address              );
+    lprintf("o_sex                   : %s\n", o_sex                  );
+    lprintf("o_tel                   : %s\n", o_tel                  );
+    lprintf("o_birth                 : %s\n", o_birth                );
+    lprintf("o_ipwon_date            : %s\n", o_ipwon_date           );
+    lprintf("o_toiwon_date           : %s\n", o_toiwon_date          );
+    lprintf("o_sanjung_gigan         : %s\n", o_sanjung_gigan        );
+    lprintf("o_sanjung_from_date     : %s\n", o_sanjung_from_date    );
+    lprintf("o_sanjung_from_date_jp  : %s\n", o_sanjung_from_date_jp );
+    lprintf("o_sanjung_to_date       : %s\n", o_sanjung_to_date      );
+    lprintf("o_sanjung_to_date_jp   : %s\n", o_sanjung_to_date_jp  );
+    lprintf("o_age                   : %s\n", o_age                  );
+    lprintf("o_cert_wrdt             : %s\n", o_cert_wrdt            );
+    lprintf("o_err                   : %s\n", o_err                  );
+    lprintf("o_msg                   : %s\n", o_msg                  );
+
+    TrimStr(o_suname              );
+    TrimStr(o_address             );
+    TrimStr(o_sex                 );
+    TrimStr(o_tel                 );
+    TrimStr(o_birth               );
+    TrimStr(o_ipwon_date          );
+    TrimStr(o_toiwon_date         );
+    TrimStr(o_sanjung_gigan       );
+    TrimStr(o_sanjung_from_date   );
+    TrimStr(o_sanjung_from_date_jp);
+    TrimStr(o_sanjung_to_date     );
+    TrimStr(o_sanjung_to_date_jp );
+    TrimStr(o_age                 );
+    TrimStr(o_cert_wrdt           );
+    TrimStr(o_err                 );
+    TrimStr(o_msg                 );
+
+    r_rec_cnt++;
+
+    ConcatStr(OutData, &idx, o_suname              );
+    ConcatStr(OutData, &idx, o_address             );
+    ConcatStr(OutData, &idx, o_sex                 );
+    ConcatStr(OutData, &idx, o_tel                 );
+    ConcatStr(OutData, &idx, o_birth               );
+    ConcatStr(OutData, &idx, o_ipwon_date          );
+    ConcatStr(OutData, &idx, o_toiwon_date         );
+    ConcatStr(OutData, &idx, o_sanjung_gigan       );
+    ConcatStr(OutData, &idx, o_sanjung_from_date_jp);
+    ConcatStr(OutData, &idx, o_sanjung_to_date_jp );
+    ConcatStr(OutData, &idx, o_age                 );
+
+    lprintf("...outdata[%s]...\n",OutData);
+
+    if (CheckQryBuff(MessageOut->data, OutData, &r_rec_cnt, q_rec_cnt))
+    {
+        r_retv_tp = '1';
+    }
+
+    lprintf("End DOC2001U00_Base_info_Query \n");
+
+    return 0;
+}
+
+/*
+ * 목적     : 입원진료계획서에 검사내용및일정란에 외래검사중 미래예약건 검사명칭으로 초기값세팅
+ * 입력     : 
+ * 출력     : 
+ * 작성일자 : 2006년 07월 24 월요일
+ */
+int DOC2001U00_GetGumsaInfo(MessageIn, MessageOut)
+msg_in_st    *MessageIn;
+msg_out_st   *MessageOut;
+{
+    /* LOCAL VALUES */
+    char    i_bunho                [  9 + 1];	/* 등록번호           */
+    chardt  i_cert_wrdt;
+
+    char    o_gumsa_info           [500 + 1];   /* 검사정보           */
+    char    o_msg                  [300 + 1];	/* 에러메세지         */
+   
+    int     i, svcm = 0;
+    char    *rec, *sp1, OutData[DATA_SIZE+1024];
+    int     idx = 0;
+
+    lprintf("Start DOC2001U00_GetGumsaInfo \n");
+
+    memset(OutData                , 0x00, sizeof(OutData                ));    
+    memset(o_gumsa_info           , 0x00, sizeof(o_gumsa_info           ));
+    memset(o_msg                  , 0x00, sizeof(o_msg                  ));
+    sp1 = MessageIn -> data;
+
+    /* Parsing... */
+    sp1 = ParsStr(sp1, TAB, i_cert_wrdt);
+    sp1 = ParsStr(sp1, TAB, i_bunho    );
+    
+
+    TrimStr(i_bunho    );
+    TrimStr(i_cert_wrdt);
+
+    lprintf("i_bunho                   : %s\n", i_bunho                  );
+    lprintf("i_cert_wrdt                   : %s\n", i_cert_wrdt                  );    
+    /*  */
+    EXEC SQL EXECUTE
+      BEGIN
+        PR_DOC_LOAD_GUMSA_INFO(:i_bunho, :i_cert_wrdt, :o_gumsa_info, :o_msg );
+      END;
+    END-EXEC;
+
+    if(o_msg[0] != '0')
+        return SysErr(MessageOut, "99991", o_msg, NULL, 0);
+
+    lprintf("o_msg                   : %s\n", o_msg                  );
+
+    TrimStr(o_gumsa_info                 );
+
+    r_rec_cnt++;
+
+    ConcatStr(OutData, &idx, o_gumsa_info                 );
+
+    if (CheckQryBuff(MessageOut->data, OutData, &r_rec_cnt, q_rec_cnt))
+    {
+        r_retv_tp = '1';
+    }
+
+    return 0;
+}
+
+/*
+ * 목적     : 소개병원의 의사명을 조회한다.
+ * 입력     : 
+ * 출력     :
+ * 작성일자 : 2007년 03월 30 금요일
+ */
+int DOC2001U00_Query_Sogye_doctor(MessageIn, MessageOut)
+msg_in_st    *MessageIn;
+msg_out_st   *MessageOut;
+{
+    /* LOCAL VALUES */
+    char    i_bunho            [ 9 + 1];	/* 환자번호       */
+    char    i_gwa              [10 + 1];	/* 소개진료과     */
+    charnum i_fkcsc0105                ;	/* 소개병원코드   */
+
+    char o_sogye_doctor_name   [40 + 1];	/* 소개진료의사명 */
+
+    char *sp1, OutData[DATA_SIZE+1024];
+    int  idx = 0;
+
+    lprintf("Start DOC2001U00_Query_Sogye_doctor \n");
+
+    memset(o_sogye_doctor_name, 0x00, sizeof(o_sogye_doctor_name));
+    memset(OutData            , 0x00, sizeof(OutData            ));
+    sp1 = MessageIn->data;
+
+    /* InData Parsing */
+    sp1 = ParsStr(sp1, TAB, i_bunho);	/* 환자번호   */
+    sp1 = ParsStr(sp1, TAB, i_gwa  );	/* 소개진료과 */
+    sp1 = ParsStr(sp1, TAB, i_fkcsc0105  );	/* 소개진료과 */
+
+    if (sp1 == NULL)
+        return (SysErr(MessageOut,"99991","Record Parsing Error",NULL,0));
+
+    lprintf("i_bunho     = %s\n", i_bunho    );
+    lprintf("i_gwa       = %s\n", i_gwa      );
+    lprintf("i_fkcsc0105 = %s\n", i_fkcsc0105);
+
+    TrimStr(i_bunho    );
+    TrimStr(i_gwa      );
+    TrimStr(i_fkcsc0105);
+
+    /* 입력된 작성일자를 와력으로 변환을 한다. */
+    EXEC SQL
+    SELECT A.SOGYE_DOCTOR_NAME
+      INTO :o_sogye_doctor_name
+      FROM CSC1002 A
+     WHERE A.BUNHO      = :i_bunho
+       AND A.SOGYE_GWA  = :i_gwa
+       AND A.FKCSC0105  = :i_fkcsc0105
+       AND A.SOGYE_DATE = (SELECT MAX(B.SOGYE_DATE)
+                             FROM  CSC1002 B
+                            WHERE B.SOGYE_GWA = A.SOGYE_GWA
+                              AND B.BUNHO     = A.BUNHO
+                              AND B.FKCSC0105 = A.FKCSC0105)
+       AND ROWNUM = 1;
+
+    lprintf("sqlca.sqlcode : %d\n", sqlca.sqlcode);
+
+    if ((sqlca.sqlcode != 0) && (sqlca.sqlcode != EXC_COLUMN_NULL) &&(sqlca.sqlcode != EXC_NO_DATA_FOUND))
+        return (SqlMsgErr(MessageOut, sqlca.sqlerrm.sqlerrmc, sizeof(sqlca.sqlerrm.sqlerrmc), "1", 0 ));
+
+    TrimStr(o_sogye_doctor_name);
+
+    lprintf("o_sogye_doctor_name : %s\n", o_sogye_doctor_name);
+
+    r_rec_cnt++;
+
+    ConcatStr(OutData, &idx, o_sogye_doctor_name);
+    ConcatRec(OutData, &idx); /* Record 구분자 */
+
+    if (CheckQryBuff(MessageOut->data, OutData, &r_rec_cnt, q_rec_cnt))
+    {
+        r_retv_tp = '1';
+    }
+
+    lprintf("...outdata[%s]...\n",OutData);
+    lprintf("End DOC2001U00_Query_Sogye_doctor \n");
+
+    return 0;
+}
+
+/*
+ * 목적     : 진료의리스트를 조회한다.
+ * 입력     :
+ * 출력     :
+ * 작성일자 : 2007년 06월 18 월요일
+ */
+int DOC2001U00_Doctor_List(MessageIn, MessageOut)
+msg_in_st    *MessageIn;
+msg_out_st   *MessageOut;
+{
+    /* LOCAL VALUES */
+    char i_gwa        [10 + 1];	/* 진료과           */
+  
+    char o_doctor     [ 5 + 1];	/* 주치의사번       */
+    char o_doctor_name[30 + 1];	/* 주치의명         */
+    
+    char *sp1, OutData[DATA_SIZE+1024];
+    int  idx = 0;
+
+    lprintf("Start DOC2001U00_Doctor_List\n");
+
+    memset(OutData, 0x00, sizeof(OutData));
+    sp1 = MessageIn->data;
+
+    /* InData Parsing */
+    sp1 = ParsStr(sp1, TAB, i_gwa);
+
+    lprintf("i_gwa = [%s]\n", i_gwa);
+
+    if (sp1 == NULL)
+        return (SysErr(MessageOut,"99991","Record Parsing Error",NULL,0));
+
+    TrimStr(i_gwa);
+
+    /* 해당과의 의사리스트를 조회한다. */
+    EXEC SQL DECLARE DOC2001U00_Doctor_List CURSOR FOR
+    SELECT DISTINCT A.TONGGYE_DOCTOR, A.DOCTOR_NAME
+      FROM BAS0270 A
+     WHERE A.DOCTOR_GWA LIKE :i_gwa
+       AND A.DOCTOR_YMD = (SELECT MAX(B.DOCTOR_YMD)
+                             FROM BAS0270 B
+                            WHERE B.DOCTOR = A.DOCTOR)
+       AND NVL(A.TONGGYE_DOCTOR, A.DOCTOR) = A.DOCTOR
+       AND NVL(A.COMMON_DOCTOR_YN, 'N') = 'N'
+     ORDER BY 1;
+
+    EXEC SQL OPEN DOC2001U00_Doctor_List;
+
+    lprintf("sqlca.sqlcode = %d\n",sqlca.sqlcode);
+
+    for( ; ; )
+    {
+        EXEC SQL FETCH DOC2001U00_Doctor_List INTO
+            :o_doctor     ,
+            :o_doctor_name;
+      
+        lprintf("o_doctor      = %s\n", o_doctor     );
+        lprintf("o_doctor_name = %s\n", o_doctor_name);
+        
+        if (sqlca.sqlcode == EXC_NO_DATA_FOUND) break;
+        if ((sqlca.sqlcode != 0) && (sqlca.sqlcode != EXC_COLUMN_NULL))
+        {
+            EXEC SQL CLOSE DOC2001U00_Doctor_List;
+            return (SqlErr(MessageOut,NULL, 0));
+        }
+
+        r_rec_cnt++;
+
+        /* OutData Create */
+        ConcatStr(OutData, &idx, o_doctor     );
+        ConcatStr(OutData, &idx, o_doctor_name);
+        ConcatRec(OutData, &idx);
+                                 
+        /* OutData Size가 MessageOut Data Packet Size보다 크면 break */
+        if (CheckQryBuff(MessageOut->data, OutData, &r_rec_cnt, q_rec_cnt))
+        {
+            r_retv_tp = '1';
+            break;
+        }
+    }
+    EXEC SQL CLOSE DOC2001U00_Doctor_List;
+
+    lprintf("End DOC2001U00_Doctor_List\n");
+
+    return 0;
+}
+
+
+
+int DOC2001U00_ImageSave(msg_in_st *MessageIn, msg_out_st *MessageOut)
+{
+    /* LOCAL VALUES */
+    charnum i_fkdoc1001		;
+    char	i_ext1			[4 + 1];
+    char	i_ext2			[4 + 1];
+
+    char    image_buffer1	[MAXBUFLEN];
+    int 	image_size1		= 0;
+    char	image_buffer2	[MAXBUFLEN];
+    int		image_size2		= 0;
+    
+	charnum	i_len1			;
+	charnum	i_len2			;
+    
+
+    /* File 관련 */
+    FILE *fp = NULL;
+    char    t_full_name1	[100];  /* PATH를 포함한 Full File Name */
+    char    t_file_name1	[100];  /* DB에 저장할 File Name */
+    int  	written_bytes1	= 0;
+    
+    char	t_full_name2	[100];
+    char	t_file_name2	[100];
+    int		written_bytes2	= 0;
+
+    int  	i, idx = 0;
+    char   *rec, *sp1;
+
+    lprintf("Start DOC2001U00_ImageSave \n");
+
+    rec = MessageIn->data;
+
+    /* InData Parsing & I/U/D 작업 loop */
+    for ( i=0; i<q_rec_cnt; i++ )
+    {
+
+	    memset(image_buffer1, 0x00, sizeof(image_buffer1));
+	    memset(image_buffer2, 0x00, sizeof(image_buffer2));
+	    memset(t_full_name1, 0x00, sizeof(t_full_name1));
+	    memset(t_file_name1, 0x00, sizeof(t_file_name1));
+	    memset(t_full_name2, 0x00, sizeof(t_full_name2));
+	    memset(t_file_name2, 0x00, sizeof(t_file_name2));
+	
+	    /* InData Parsing */
+        sp1 = rec + 2;
+	    sp1 = ParsStr(sp1, TAB, i_fkdoc1001);
+	    sp1 = (char *)ParsFix7(sp1, image_buffer1, &image_size1);
+	    sp1 = (char *)ParsFix7(sp1, image_buffer2, &image_size2);
+	    sp1 = ParsStr(sp1, TAB, i_ext1);
+	    sp1 = ParsStr(sp1, TAB, i_ext2);
+	    sp1 = ParsStr(sp1, TAB, i_len1);
+	    sp1 = ParsStr(sp1, TAB, i_len2);
+
+	    lprintf("i_fkdoc1001 = [%s]\n", i_fkdoc1001);
+	    lprintf("i_ext1      = [%s]\n", i_ext1);
+	    lprintf("i_ext2      = [%s]\n", i_ext2);
+	    lprintf("i_len1      = [%s]\n", i_len1);
+	    lprintf("i_len2      = [%s]\n", i_len2);
+	
+	    if (sp1 == NULL)
+	        return (SysErr(MessageOut,"99991","Record Parsing Error",NULL,0));
+	
+        switch(rec[1])
+        {
+            /* Insert */
+            case 'I':
+            case 'U':
+
+				if(image_size1 > 0) 
+				{
+            		sprintf(t_file_name1, "%s-%02d", i_fkdoc1001, 1);
+            		sprintf(t_full_name1, "%s/%s-%02d", IMAGE_PATH, i_fkdoc1001, 1);
+            	}
+            	
+            	if(image_size2 > 0)
+            	{
+            		sprintf(t_file_name2, "%s-%02d", i_fkdoc1001, 2);
+            		sprintf(t_full_name2, "%s/%s-%02d", IMAGE_PATH, i_fkdoc1001, 2);
+            	}
+	
+				EXEC SQL EXECUTE         
+				DECLARE                  
+				BEGIN
+		
+				UPDATE DOC2002
+				   SET USER_ID   = :q_user_id    ,
+				       UPD_DATE  = SYSDATE       ,
+				       IMG_PATH1 = :t_file_name1 ,
+				       IMG_PATH2 = :t_file_name2 ,
+				       IMG_EXT1  = :i_ext1       ,
+				       IMG_EXT2  = :i_ext2       ,
+				       IMG_LEN1  = :i_len1       ,
+				       IMG_LEN2  = :i_len2
+		         WHERE FKDOC1001 = :i_fkdoc1001;
+									
+				IF SQL%NOTFOUND THEN
+		
+					INSERT INTO DOC2002
+							(SYS_DATE,		USER_ID,		UPD_DATE,       
+							 FKDOC1001,		IMG_PATH1,		IMG_PATH2,
+							 IMG_EXT1,      IMG_EXT2,		IMG_LEN1,
+							 IMG_LEN2)
+					VALUES (SYSDATE,		:q_user_id,		SYSDATE,
+							:i_fkdoc1001,   :t_file_name1,  :t_file_name2,
+							:i_ext1,		:i_ext2,		:i_len1,
+							:i_len2);
+		
+				END IF;
+				
+				END;
+			    END-EXEC;
+			                   
+		        if (sqlca.sqlcode != 0)
+				{
+					lprintf("sqlca.sqlerrm.sqlerrmc: %s\n", sqlca.sqlerrm.sqlerrmc);        
+		            return (SqlErr(MessageOut,NULL, 0));
+				}
+		    	
+				lprintf(" DOC2002 Insert/Update Success \n");
+				
+                /* 파일 저장 */
+                if (image_size1 > 0)
+                {
+                    if ((fp = fopen(t_full_name1, "wb")) == NULL)
+                    {
+                    	lprintf("1\n");
+                        lprintf("File Open Error, file_name[%s]\n", t_full_name1);
+                        return SysErr(MessageOut,"99991","File Open Error..",NULL,0);
+                    }
+
+                    written_bytes1 = fwrite((void*) image_buffer1, (size_t) image_size1, (size_t) 1, fp);
+
+                    lprintf("fileName[%s], write bytes[%d]\n", t_full_name1, written_bytes1);
+                    fclose(fp);
+				}				
+
+                if (image_size2 > 0)
+                {
+                    if ((fp = fopen(t_full_name2, "wb")) == NULL)
+                    {
+                    	lprintf("2\n");
+                        lprintf("File Open Error, file_name[%s]\n", t_full_name2);
+                        return SysErr(MessageOut,"99991","File Open Error..",NULL,0);
+                    }
+
+                    written_bytes2 = fwrite((void*) image_buffer2, (size_t) image_size2, (size_t) 1, fp);
+
+                    lprintf("fileName[%s], write bytes[%d]\n", t_full_name2, written_bytes2);
+                    fclose(fp);
+				}				
+				break;
+			case 'D':
+
+			    EXEC SQL
+			    DELETE DOC2002
+			     WHERE FKDOC1001 = :i_fkdoc1001;
+		
+			    if (sqlca.sqlcode != 0)
+			        return (SqlErr(MessageOut,NULL, 0));
+
+			    lprintf(" DOC2002 DELETE Success \n");
+				break;
+            default:
+                return (SysErr(MessageOut, "99991", "IUD Type Error...", NULL,0));
+                break;
+        }
+
+        /* 다음 Record의 시작위치를 sp1 (CRNL + 다음 Record) + 2부터 시작
+           ImageBinary는 중간에 null이 있을 수 있으므로 다른 저장 Logic 처럼
+           if ( i > 0 ) rec = strstr(rec, TAB_CRNL) + 3 으로 사용할 수가 없고
+           한 Record가 끝난 다음에 rec을 다시 설정하여야 한다 */
+        rec = sp1 + 2;
+    }
+
+    lprintf("End DOC2001U00_ImageSave \n");
+
+    return 0;
+}
+
+int DOC2001U00_ImageLoad(MessageIn, pMessageOut)
+msg_in_st    *MessageIn;
+msg_out_st   **pMessageOut;
+{
+    /* LOCAL VALUES */
+    charnum	i_fkdoc1001		;
+
+	charnum	o_fkdoc1001		;    
+    char	o_filename1		[100 + 1];
+    char	o_filename2		[100 + 1];
+
+    char    image_buffer1	[MAXBUFLEN];
+    char	image_buffer2	[MAXBUFLEN];
+    
+    char    *sp1;
+    int 	idx = 0;
+
+    /* Image 관련 */
+    int image_size1 = 0;
+    int image_size2 = 0;
+
+    /* File 관련 */
+    FILE *fp = NULL;
+    char t_file_name[100];
+
+    /* MessageOut 동적할당
+    tprealloc으로 메모리 재할당하고, 다시 MessageOut에 Setting함.
+    MessageOut local로 선언하지 않고 할 수도 있으나 변경할 내역이 많으므로,
+    아래와 같이 *pMessageOut을 할당하는 MessageOut을 선언함 */
+    msg_out_st* MessageOut = *pMessageOut;
+
+    char* OutData;
+    OutData = (char*) malloc(10000000 + 1024);
+    memset(OutData, 0x00, 10000000 + 1024);
+
+    lprintf("Start DOC2001U00_ImageLoad\n");
+
+    sp1 = MessageIn->data;
+
+    /* InData Parsing */
+    sp1 = ParsStr(sp1, TAB, i_fkdoc1001);
+
+    lprintf("i_fkdoc1001 = [%s]\n", i_fkdoc1001);
+
+    if (sp1 == NULL)
+    {
+    	free(OutData); /* Memory Free */
+        return (SysErr(MessageOut,"99991","Record Parsing Error",NULL,0));
+    }
+	
+    TrimStr(i_fkdoc1001);
+
+    /* 해당과의 의사리스트를 조회한다. */
+    EXEC SQL DECLARE DOC2001U00_ImgList CURSOR FOR
+    SELECT FKDOC1001,
+           IMG_PATH1,
+           IMG_PATH2
+      FROM DOC2002
+     WHERE FKDOC1001 = :i_fkdoc1001;
+
+    EXEC SQL OPEN DOC2001U00_ImgList;
+
+    lprintf("sqlca.sqlcode = %d\n",sqlca.sqlcode);
+
+    for( ; ; )
+    {
+        EXEC SQL FETCH DOC2001U00_ImgList INTO
+            :o_fkdoc1001	,
+            :o_filename1	,
+            :o_filename2	;
+      
+        lprintf("o_filename1 = %s\n", o_filename1);
+        lprintf("o_filename2 = %s\n", o_filename2);
+        
+        if (sqlca.sqlcode == EXC_NO_DATA_FOUND) break;
+        if ((sqlca.sqlcode != 0) && (sqlca.sqlcode != EXC_COLUMN_NULL))
+        {
+            free(OutData); /* Memory Free */
+            EXEC SQL CLOSE DOC2001U00_ImgList;
+            return (SqlErr(MessageOut,NULL, 0));
+        }
+
+		TrimStr(o_fkdoc1001);
+        TrimStr(o_filename1);
+        TrimStr(o_filename2);
+
+        /* 파일명이 있으면 File Get */
+        if (strlen(o_filename1) > 0)
+        {
+           /* image_buffer 초기화 */
+           memset(image_buffer1, 0x00, sizeof(image_buffer1));
+
+           sprintf(t_file_name, "%s/%s", IMAGE_PATH, o_filename1);
+
+           if ((fp = fopen(t_file_name, "rb")) == NULL)
+           {
+              free(OutData); 
+              lprintf("File Open Error, fileName[%s]\n", o_filename1);
+              return SysErr(MessageOut,"99991","File Open Error..",NULL,0);
+           }
+
+           lprintf("XXXXXX1\n");
+           fseek(fp, 0L, SEEK_END) ;
+           image_size1 = (unsigned int)ftell(fp) ;
+           fseek(fp, 0L, SEEK_SET) ;
+           fread((void *)image_buffer1, (size_t)image_size1, (size_t)1, fp) ;
+           fclose(fp);
+        }        
+
+        if (strlen(o_filename2) > 0)
+        {
+           memset(image_buffer2, 0x00, sizeof(image_buffer2));
+
+           sprintf(t_file_name, "%s/%s", IMAGE_PATH, o_filename2);
+
+           if ((fp = fopen(t_file_name, "rb")) == NULL)
+           {
+              free(OutData); 
+              lprintf("File Open Error, fileName[%s]\n", o_filename2);
+              return SysErr(MessageOut,"99991","File Open Error..",NULL,0);
+           }
+
+           lprintf("XXXXXX2\n");
+           fseek(fp, 0L, SEEK_END) ;
+           image_size2 = (unsigned int)ftell(fp) ;
+           fseek(fp, 0L, SEEK_SET) ;
+           fread((void *)image_buffer2, (size_t)image_size2, (size_t)1, fp) ;
+           fclose(fp);
+		}        
+        
+        r_rec_cnt++;
+
+        /* OutData Create */
+        ConcatStr(OutData, &idx, o_fkdoc1001);
+        lprintf("bf call ConcatFix7 r_rec_cnt[%d], image_size1[%d]\n", r_rec_cnt, image_size1);
+        lprintf("bf call ConcatFix7 r_rec_cnt[%d], image_size2[%d]\n", r_rec_cnt, image_size2);
+        ConcatFix7(OutData, &idx, image_buffer1, image_size1);
+        ConcatFix7(OutData, &idx, image_buffer2, image_size2);
+        lprintf("af call ConcatFix7 r_rec_cnt[%d], image_size1[%d]\n", r_rec_cnt, image_size1);
+        lprintf("af call ConcatFix7 r_rec_cnt[%d], image_size2[%d]\n", r_rec_cnt, image_size2);
+        ConcatRec(OutData, &idx);
+    }
+
+    /* Msg Size Set */
+    message_length = COMHEADER_SIZE + idx;
+    lprintf("message_length[%ld], idx[%d], DATA_SIZE[%d]\n", message_length, idx, DATA_SIZE);
+    /* Out Data의 Size에 따라 MessageOut을 동적으로 할당 */
+    if (message_length > DATA_SIZE)
+    {
+    	lprintf("XXXXXX3\n");
+    	/* MessageOut 동적할당
+           tprealloc으로 메모리 재할당하고, 다시 MessageOut에 Setting함.
+           MessageOut local로 선언하지 않고 할 수도 있으나 변경할 내역이 많으므로,
+           아래와 같이 *pMessageOut을 할당하는 MessageOut을 선언함 */
+       *pMessageOut = (msg_out_st*) tprealloc((char*)MessageOut, message_length);
+       MessageOut = *pMessageOut;
+    }
+    
+    lprintf("bf memcpy(MessageOut->data, OutData, idx);\n");
+    memcpy(MessageOut->data, OutData, idx);
+    lprintf("af memcpy(MessageOut->data, OutData, idx);\n");
+
+    EXEC SQL CLOSE DOC2001U00_ImgList;
+
+    free(OutData); /* Memory Free */
+
+    lprintf("End DOC2001U00_ImageLoad\n");
+
+    return 0;
+}
+
+
+

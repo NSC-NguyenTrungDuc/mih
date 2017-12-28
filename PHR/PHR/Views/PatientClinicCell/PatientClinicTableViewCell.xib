@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="86" id="KGk-i7-Jjw" customClass="PatientClinicTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="86"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="85.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_movie_talk_hospital" translatesAutoresizingMaskIntoConstraints="NO" id="EBe-Fd-Fpe">
+                        <rect key="frame" x="20" y="10" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="QEY-a1-gHs"/>
+                            <constraint firstAttribute="width" constant="25" id="dde-LR-RQ2"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6c3-R4-R2a">
+                        <rect key="frame" x="65" y="12" width="235" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXX-OP-6oW">
+                        <rect key="frame" x="65" y="52" width="235" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_tableview_separator_line" translatesAutoresizingMaskIntoConstraints="NO" id="a6B-e5-R15">
+                        <rect key="frame" x="0.0" y="84.5" width="320" height="1"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="6hq-N4-XJL"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_movie_talk_patient_code" translatesAutoresizingMaskIntoConstraints="NO" id="ICa-YD-Oia">
+                        <rect key="frame" x="20" y="50" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="A5O-tR-tnz"/>
+                            <constraint firstAttribute="height" constant="25" id="pdd-KS-Xnj"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="EBe-Fd-Fpe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="7z8-LY-7Se"/>
+                    <constraint firstItem="6c3-R4-R2a" firstAttribute="leading" secondItem="EBe-Fd-Fpe" secondAttribute="trailing" constant="20" id="Bb0-bz-RJR"/>
+                    <constraint firstItem="6c3-R4-R2a" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="J6a-Wh-SzP"/>
+                    <constraint firstAttribute="bottom" secondItem="a6B-e5-R15" secondAttribute="bottom" id="Owb-Eb-ecp"/>
+                    <constraint firstItem="EBe-Fd-Fpe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="PYT-Hx-HcA"/>
+                    <constraint firstItem="bXX-OP-6oW" firstAttribute="top" secondItem="6c3-R4-R2a" secondAttribute="bottom" constant="19" id="Pa3-hn-D2t"/>
+                    <constraint firstItem="bXX-OP-6oW" firstAttribute="leading" secondItem="ICa-YD-Oia" secondAttribute="trailing" constant="20" id="TMx-KY-0Op"/>
+                    <constraint firstAttribute="trailing" secondItem="bXX-OP-6oW" secondAttribute="trailing" constant="20" id="b11-dV-KbX"/>
+                    <constraint firstAttribute="trailing" secondItem="6c3-R4-R2a" secondAttribute="trailing" constant="20" id="jdC-21-xzf"/>
+                    <constraint firstItem="ICa-YD-Oia" firstAttribute="top" secondItem="EBe-Fd-Fpe" secondAttribute="bottom" constant="15" id="mID-an-mW9"/>
+                    <constraint firstItem="ICa-YD-Oia" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="orf-y7-Jif"/>
+                    <constraint firstItem="a6B-e5-R15" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="s1x-7U-6F8"/>
+                    <constraint firstAttribute="trailing" secondItem="a6B-e5-R15" secondAttribute="trailing" id="xYz-xl-fwu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="labelHospName" destination="6c3-R4-R2a" id="JwR-0Z-MBA"/>
+                <outlet property="labelPatientCode" destination="bXX-OP-6oW" id="Ldk-TD-wX0"/>
+            </connections>
+            <point key="canvasLocation" x="221" y="170"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="bg_tableview_separator_line" width="375" height="1"/>
+        <image name="icon_movie_talk_hospital" width="25" height="25"/>
+        <image name="icon_movie_talk_patient_code" width="25" height="25"/>
+    </resources>
+</document>

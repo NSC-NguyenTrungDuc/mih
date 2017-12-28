@@ -1,0 +1,63 @@
+option java_package = "nta.med.service.emr.proto";
+option java_outer_classname = "EmrapiModelProto";
+
+message EmrPatientInfo {
+	required string id = 1;
+	optional string name = 2;
+	optional string kanaName = 3;
+	optional string birthday = 4;
+	optional string gender = 5;
+	optional string address = 6;
+	optional string zip = 7;
+	optional string telephone = 8;
+	optional string hospCode = 9;
+	optional string doctor = 10;
+}
+
+message EmrRecordInfo{
+	optional string bunho = 1;
+	optional string doctor = 2;
+	repeated ExaminationItemInfo examinations = 3;
+}
+
+message ExaminationItemInfo {
+	optional string gwa = 1;
+	optional string naewon_date = 2;
+	optional string doctor = 3;
+	optional string naewon_key = 4;
+	repeated ExaminationTagInfo tags = 5;
+	repeated ExaminationOrderInfo orders = 6;
+}
+
+message ExaminationTagInfo {
+	required int32 type = 1;
+	optional int32 order = 2;
+	optional string tag_code = 3;
+	optional string tag_name = 4;
+	optional string created_date = 5;
+	optional string content = 6;
+	repeated BookmarkInfo bookmarks = 7;
+}
+
+message BookmarkInfo {
+	optional string title = 1;
+	optional string comment = 2;
+	optional string userId = 3;
+}
+
+message EmrHistoryListItemInfo{
+	optional string bunho = 1;
+	optional string doctor = 2;
+	optional string revision = 3;
+	optional string comment = 4;
+}
+
+message ExaminationOrderInfo {
+	optional string content = 1;
+	optional string gubunBass = 2;
+	optional string hangmogCode = 3;
+	optional string inputTab = 4;
+	optional string hangmogName = 5;
+	optional string inputGubunName = 6;
+	optional string orderGubunName = 7;
+}

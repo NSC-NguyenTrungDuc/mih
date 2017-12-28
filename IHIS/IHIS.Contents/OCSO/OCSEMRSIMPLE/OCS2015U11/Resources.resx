@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CMO_M001" xml:space="preserve">
+    <value>Please enter {0} field.</value>
+  </data>
+  <data name="CMO_M002" xml:space="preserve">
+    <value>There is already a {0} with the same name in system. Please choose another one.</value>
+  </data>
+  <data name="CMO_M003" xml:space="preserve">
+    <value>There is not any {0} with the same name in system. Please choose another one.</value>
+  </data>
+  <data name="CMO_M004" xml:space="preserve">
+    <value>Do you want to save the changes you made?</value>
+  </data>
+  <data name="CMO_M005" xml:space="preserve">
+    <value>Record has been saved successfully.</value>
+  </data>
+  <data name="CMO_M006" xml:space="preserve">
+    <value>Cannot save the record.</value>
+  </data>
+  <data name="CMO_M007" xml:space="preserve">
+    <value>Record has been removed successfully.</value>
+  </data>
+  <data name="CMO_M008" xml:space="preserve">
+    <value>Cannot remove the record.</value>
+  </data>
+  <data name="CMO_M010" xml:space="preserve">
+    <value>Date range is invalid</value>
+  </data>
+  <data name="CMO_M011" xml:space="preserve">
+    <value>Record has been updated successfully.</value>
+  </data>
+  <data name="CMO_M012" xml:space="preserve">
+    <value>Cannot update the record.</value>
+  </data>
+  <data name="CMO_M13" xml:space="preserve">
+    <value>Not allow the length of input data less than {0} characters!</value>
+  </data>
+  <data name="CMO_M14" xml:space="preserve">
+    <value>Not allow the length of input data more than {0} characters!</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="DO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\DO.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EMPTY_COMMENT_SELECTION_WARN" xml:space="preserve">
+    <value>Please select texts/paragraph to insert comment</value>
+  </data>
+  <data name="EMR_M001" xml:space="preserve">
+    <value>Tag root only accepts one character.</value>
+  </data>
+  <data name="EMR_M002" xml:space="preserve">
+    <value>User does not have permission to edit/delete tag</value>
+  </data>
+  <data name="EMR_M003" xml:space="preserve">
+    <value>User does not have permission to edit/delete template</value>
+  </data>
+  <data name="EMR_U0211" xml:space="preserve">
+    <value>Patient list</value>
+  </data>
+  <data name="EMR_U040" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="EMR_U041" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="EMR_U0411" xml:space="preserve">
+    <value>Add/edit bookmark</value>
+  </data>
+  <data name="EMR_U0412" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="EMR_U0413" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="EMR_U0414" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="EMR_U0415" xml:space="preserve">
+    <value>Edit bookmark</value>
+  </data>
+  <data name="EMR_U042" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="EMR_U0421" xml:space="preserve">
+    <value>Save Dialog</value>
+  </data>
+  <data name="EMR_U0422" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="EMR_U0423" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="EMR_U0424" xml:space="preserve">
+    <value>Send email</value>
+  </data>
+  <data name="EMR_U0425" xml:space="preserve">
+    <value>Delete bookmark</value>
+  </data>
+  <data name="EMR_U043" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="EMR_U044" xml:space="preserve">
+    <value>Memo</value>
+  </data>
+  <data name="EMR_U0441" xml:space="preserve">
+    <value>Insert PDF</value>
+  </data>
+  <data name="EMR_U0442" xml:space="preserve">
+    <value>Insert comment</value>
+  </data>
+  <data name="EMR_U0443" xml:space="preserve">
+    <value>Delete comment</value>
+  </data>
+  <data name="EMR_U0444" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="EMR_U0445" xml:space="preserve">
+    <value>Update history record</value>
+  </data>
+  <data name="EMR_U0446" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="EMR_U0447" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="EMR_U045" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="EMR_U060" xml:space="preserve">
+    <value>Show log</value>
+  </data>
+  <data name="EMR_U061" xml:space="preserve">
+    <value>Add book mark</value>
+  </data>
+  <data name="EMR_U062" xml:space="preserve">
+    <value>Edit record</value>
+  </data>
+  <data name="EMR_U063" xml:space="preserve">
+    <value>EMR history viewer</value>
+  </data>
+  <data name="EMR_U064" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="EMR_U065" xml:space="preserve">
+    <value>please choose patient or select examation date to get medical record log</value>
+  </data>
+  <data name="EMR_U071" xml:space="preserve">
+    <value>Problem</value>
+  </data>
+  <data name="EMR_U072" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="EMR_U090" xml:space="preserve">
+    <value>EMR editor</value>
+  </data>
+  <data name="EMR_U091" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="EMR_U301" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="EMR_U302" xml:space="preserve">
+    <value>tag code</value>
+  </data>
+  <data name="EMR_U303" xml:space="preserve">
+    <value>tag name</value>
+  </data>
+  <data name="EMR_U304" xml:space="preserve">
+    <value>display text</value>
+  </data>
+  <data name="EMR_U305" xml:space="preserve">
+    <value>memo</value>
+  </data>
+  <data name="EMR_U306" xml:space="preserve">
+    <value>tag parent</value>
+  </data>
+  <data name="EMR_U307" xml:space="preserve">
+    <value>Root tag</value>
+  </data>
+  <data name="EMR_U308" xml:space="preserve">
+    <value>Node tag</value>
+  </data>
+  <data name="EMR_U311" xml:space="preserve">
+    <value>Template type</value>
+  </data>
+  <data name="EMR_U312" xml:space="preserve">
+    <value>Template name</value>
+  </data>
+  <data name="EMR_U313" xml:space="preserve">
+    <value>Template list</value>
+  </data>
+  <data name="EMR_U314" xml:space="preserve">
+    <value>Tags of the template</value>
+  </data>
+  <data name="LockAlert" xml:space="preserve">
+    <value>The medical record that is editing by another doctor. Please wait for editing this record</value>
+  </data>
+  <data name="pdf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\pdf.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WARN" xml:space="preserve">
+    <value>WARNING</value>
+  </data>
+  <data name="CONTENT_BLANK_WARN" xml:space="preserve">
+    <value>Content can't be blank</value>
+  </data>
+  <data name="TITLE_BLANK_WARN" xml:space="preserve">
+    <value>Title can't be blank.</value>
+  </data>
+  <data name="EMR_PDF_MAX_SIZE" xml:space="preserve">
+    <value>File size too large to upload (&lt; {0} MB)</value>
+  </data>
+  <data name="Added" xml:space="preserve">
+    <value>Added</value>
+  </data>
+  <data name="Modified" xml:space="preserve">
+    <value>Modified</value>
+  </data>
+  <data name="EMR_U315" xml:space="preserve">
+    <value>Changing Template means that your content will be removed. Do you want to Change Template?</value>
+  </data>
+  <data name="EMR_BOOKMARK_CONTENT" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="EMR_BOOKMARK_TITLE" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Emr_Msg_000001" xml:space="preserve">
+    <value>入力されたタグコードやタグ名が必要</value>
+    <comment> Need input tag code and tag name</comment>
+  </data>
+  <data name="Text_tag_code_1" xml:space="preserve">
+    <value>タグコードの表示</value>
+  </data>
+  <data name="Text_tag_code_2" xml:space="preserve">
+    <value>タグ名の表示</value>
+  </data>
+  <data name="Text_tag_code_3" xml:space="preserve">
+    <value>両方表示</value>
+  </data>
+  <data name="GroupExpandForm_LblGroupSpecialNode" xml:space="preserve">
+    <value> + 特記事項</value>
+  </data>
+  <data name="GroupExpandForm_LblGroupProblem" xml:space="preserve">
+    <value> + 問題</value>
+  </data>
+  <data name="GroupExpandForm_LblGroupDisease" xml:space="preserve">
+    <value> + 病名</value>
+  </data>
+  <data name="FrmGroupExpandLblNo" xml:space="preserve">
+    <value>副傷病</value>
+  </data>
+  <data name="FrmGroupExpandLblYes" xml:space="preserve">
+    <value>主傷病</value>
+  </data>
+  <data name="UcViewS_SetTooltipForButtonControl_BtnEdit" xml:space="preserve">
+    <value>編集</value>
+  </data>
+  <data name="UcViewS_SetTooltipForButtonControl_BtnShowLog" xml:space="preserve">
+    <value>ログ表示</value>
+  </data>
+  <data name="UcViewS_SetTooltipForButtonControl_BtnPrint" xml:space="preserve">
+    <value>印刷</value>
+  </data>
+  <data name="UcViewS_SetTooltipForButtonControl_BtnRefresh" xml:space="preserve">
+    <value>リフレッシュ</value>
+  </data>
+  <data name="UcEditorS_SetTooltipForButtonControl_BtnInsertPdfItem" xml:space="preserve">
+    <value>PDF挿入</value>
+  </data>
+  <data name="UcEditorS_SetTooltipForButtonControl_BtnAddComment2" xml:space="preserve">
+    <value>ブックマークを挿入</value>
+  </data>
+  <data name="UcEditorS_SetTooltipForButtonControl_BtnInsertImage2" xml:space="preserve">
+    <value>画像の挿入</value>
+  </data>
+  <data name="UcEditorS_SetTooltipForButtonControl_BtnPrint2" xml:space="preserve">
+    <value>印刷</value>
+  </data>
+  <data name="UcGrid_grdViewMd_Click_Can_t_Do_Order" xml:space="preserve">
+    <value>注文を行うことはできません</value>
+    <comment>Can't Do Order</comment>
+  </data>
+  <data name="UcGrid_Lbl_Brower" xml:space="preserve">
+    <value>Brower</value>
+  </data>
+  <data name="UcGrid_RpItChBox_SelectAll" xml:space="preserve">
+    <value>(全部選択)</value>
+  </data>
+  <data name="UcGrid_RpItChBox_Doctor" xml:space="preserve">
+    <value>医者</value>
+  </data>
+  <data name="UcGrid_RpItChBox_OtherClinic" xml:space="preserve">
+    <value>他クリニック</value>
+  </data>
+  <data name="UcGrid_RpItChBox_Relected" xml:space="preserve">
+    <value>関係会社</value>
+  </data>
+  <data name="UcGrid_RpItChBox_Patient" xml:space="preserve">
+    <value>患者</value>
+  </data>
+  <data name="PopupPrintEmr_BtnQuery" xml:space="preserve">
+    <value>照 会</value>
+  </data>
+  <data name="PopupPrintEmr_BtnPrint" xml:space="preserve">
+    <value>印刷</value>
+  </data>
+  <data name="PopupPrintEmr_BtnClose" xml:space="preserve">
+    <value>閉じる</value>
+  </data>
+  <data name="PopupPrintEmr_BtnPrintSetting" xml:space="preserve">
+    <value>印刷設定</value>
+  </data>
+  <data name="FrmPopupPrintEmr_Name" xml:space="preserve">
+    <value>EMR印刷プレビュー {0} &amp; {1}</value>
+  </data>
+</root>

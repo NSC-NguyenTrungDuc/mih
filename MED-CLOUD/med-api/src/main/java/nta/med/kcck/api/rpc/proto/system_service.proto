@@ -1,0 +1,58 @@
+import "rpc.proto";
+import "system_model.proto";
+
+option java_package = "nta.med.kcck.api.rpc.proto";
+option java_outer_classname = "SystemServiceProto";
+
+option (version) = "1.0.0";
+option (service) = "system";
+
+message LoginRequest {
+    required string login_id = 1;
+    required string password = 2;
+    required string hosp_code = 3;
+    repeated Capability capability = 4;
+    enum Capability { CREATE_PATIENT = 1; BOOK_EXAM = 2; APPOINT_EXAM = 3; GET_MIS_TOKEN = 4; ORDER_TRANSFER = 5; GET_MIS_SURVEY_LINK = 6; }
+}
+
+message LoginResponse {
+    required Result result = 1;
+    required string token = 2;
+    enum Result { SUCCESS = 0; REJECTED = 1; RESTRICTED = 2; INVALID_IDENTITY = 3; INTERNAL_ERROR = 99; }
+}
+
+message GetIntegratedSystemRequest {
+    optional System system = 1;
+    optional string hosp_code = 2;
+    optional string code_type = 3;
+    repeated string code_name = 4;
+    enum System { ORCA = 0; MISA = 1; OTHER = 99; }
+}
+
+message GetIntegratedSystemResponse {
+    repeated IntegratedEnvironment system = 1;
+}
+
+message GetEmrDataRequest {
+    optional string patient_code = 1;
+	optional string hosp_code = 2;
+}
+
+message GetEmrDataResponse {
+    optional string content = 1;
+	optional string version = 2;
+	repeated EmrTagInfo emr_tag_info = 3;
+}
+
+message GetMisTokenRequest
+{
+	required int64 id = 1;
+	optional string hosp_code = 2;
+	optional string user_id = 3;
+}
+
+message GetMisTokenResponse
+{
+	required int64 id = 1;
+	optional string token = 2;
+}

@@ -1,0 +1,819 @@
+import "rpc.proto";
+import "emr_model.proto";
+import "common_model.proto";
+import "ocso_service.proto";
+import "system_service.proto";
+import "nuri_service.proto";
+import "ocsa_service.proto";
+import "nuro_service.proto";
+import "injs_service.proto";
+import "system_model.proto";
+import "ocso_model.proto";
+import "nuri_model.proto";
+import "nuro_model.proto";
+import "cpls_service.proto";
+
+option java_package = "nta.med.service.emr.proto";
+option java_outer_classname = "EmrServiceProto";
+option (version) = "1.0.0";
+option (service) = "emr";
+
+//[START] Common Upadate Reponse
+
+//[END] Common Upadate Reponse
+//[START] OCS2015U06
+message OCS2015U06EmrRecordRequest
+{
+    optional string bunho = 1;
+    optional string hosp_code = 2;
+}
+message OCS2015U06EmrRecordResponse
+{
+    repeated OCS2015U06EmrRecordInfo emr_record_list = 1;
+}
+message OCS2015U06EmrTagRequest
+{
+	optional string hosp_code = 1;
+}
+message OCS2015U06EmrTagResponse
+{
+    repeated OCS2015U06EmrTagInfo emr_tag_list = 1;
+}
+message OCS2015U06EmrTemplateTypeRequest
+{
+}
+message OCS2015U06EmrTemplateTypeResponse
+{
+    repeated OCS2015U06EmrTemplateTypeInfo emr_template_type_list = 1;
+}
+message OCS2015U06EmrTemplateRequest
+{
+}
+message OCS2015U06EmrTemplateResponse
+{
+    repeated OCS2015U06EmrTemplateInfo emr_template_list = 1;
+}
+//[END] OCS2015U06
+//[START] OCS2015U06 - Insert
+message OCS2015U07EmrRecordInsertRequest
+{
+    optional string hosp_code = 1;
+    optional string bunho = 2;
+    optional string pkout1001= 3;    
+    optional string naewon_date = 4;
+    optional string content = 5;
+    optional string metadata = 6;
+    optional string version = 7;
+    optional string sys_id = 8;
+}
+//[END] OCS2015U06 - Insert
+message OCS2015U06EmrRecordUpdateMetaRequest
+{
+    optional string f_record_id = 1;
+    optional string f_meta = 2;
+}
+//[START]OCS2015U30
+message OCS2015U30EmrTagGetTagRequest{
+    optional string tag_level = 1;
+    optional string sys_id = 2;
+}
+message OCS2015U30EmrTagGetTagResponse{
+    repeated OCS2015U30EmrTagGetTagInfo grid_tag_item_info = 1;
+}
+message OCS2015U30EmrTagSaveLayoutRequest{
+    optional string user_id = 1;
+    optional string user_group = 2;
+    repeated OCS2015U30EmrTagSaveLayoutInfo save_layout_root_item = 3;
+    repeated OCS2015U30EmrTagSaveLayoutInfo save_layout_node_item = 4;
+}
+//[END]OCS2015U30
+//[START]OCS2015U31
+message OCS2015U31EmrTagGetTagRequest{
+	optional string tag_level = 1;
+}
+message OCS2015U31EmrTagGetTagResponse{
+    repeated OCS2015U31EmrTagGetTagInfo grid_tag_item_info = 1;
+}
+message OCS2015U31EmrTemplateRequest{
+    optional string sys_id = 1;
+    optional string user_group = 2;
+}
+message OCS2015U31EmrTemplateResponse{
+    repeated OCS2015U31EmrTemplateInfo grid_template_item_info = 1;
+}
+message OCS2015U31EmrTemplateTypeRequest{
+}
+message OCS2015U31EmrTemplateTypeResponse{
+    repeated OCS2015U31EmrTemplateTypeInfo emr_template_type_info = 1;
+}
+message OCS2015U31EmrTemplateSaveLayoutRequest{
+    optional string user_id = 1;
+    optional string user_group = 2;
+    repeated OCS2015U31EmrTemplateSaveLayoutInfo save_layout_template_item = 3;
+}
+message OCS2015U31EmrTagGetTemplateTagsRequest{
+    optional string str_tag_code = 1;
+}
+message OCS2015U31EmrTagGetTemplateTagsResponse{
+    repeated OCS2015U31EmrTagGetTemplateTagsInfo grid_tag_item_info = 1;
+}
+//[END]OCS2015U31
+
+
+// -----[START] OCS2015U40 ---------
+message OCS2015U40EmrHistoryMedicalRecordRequest{
+	optional string hosp_code = 1;
+	optional string bunho = 2;
+	optional string pkout1001 = 3;
+}
+
+message OCS2015U40EmrHistoryMedicalRecordResponse{
+	repeated OCS2015U40EmrHistoryMedicalRecordInfo emr_history_medical_record_item = 1;
+}
+
+message OCS2015U40EmrMedicalRecordContentRequest{
+	optional string record_id = 1;
+	optional string version = 2;
+}
+
+message OCS2015U40EmrMedicalRecordContentResponse{
+	optional string content = 1;
+	optional string metadata = 2;
+}
+// -----[END] OCS2015U40 ---------
+
+// ----- [START] OCS2015U44------
+
+message OCS2015U44EmrHistoricRecordUpdateRequest
+{
+	optional string record_id = 1;
+	optional string upd_id = 2;
+	optional string content = 3;    
+	optional string metadata = 4;
+	optional string record_log = 5;
+	optional string email_flg = 6;
+}
+
+message OCS2015U00EmrRecordUnlockRequest
+{
+	optional string record_id = 1;
+	optional string upd_id = 2;
+    optional string screen_id = 3;
+}
+message OCS2015U00EmrRecordLockRequest
+{
+	optional string record_id = 1;
+	optional string upd_id = 2;
+	optional string screen_id = 3;
+}
+
+message OCS2015U00EmrGetTimeoutSpanRequest
+{
+}
+
+message OCS2015U00EmrGetTimeoutSpanResponse
+{
+	optional string timespan = 1;
+}
+message OCS2015U00GetDoctorPatientReportRequest {
+  	optional string doctor     	= 1;
+	optional string bunho      	= 2;
+    optional string pkout1001  	= 3;
+    optional string naewon_date = 4;
+    optional string gwa 		= 5;
+	
+}
+message OCS2015U00GetDoctorPatientReportResponse {
+	optional OCS2015U00GetDoctorPatientReportInfo list_item = 1;
+	repeated OCS2015U00GetDiseaseReportInfo list_disease    = 2;
+	repeated OCS2015U00GetOrderReportInfo  list_order       = 3;
+}
+// ----- [END] OCS2015U44------
+
+// ----- [START] OCS2015U00 ------
+message OcsEmrPatientReceptionHistoryListRequest {
+    required string patient_code = 1;
+}
+
+message OcsEmrPatientReceptionHistoryListResponse {
+    repeated OcsEmrPatientReceptionHistoryListItemInfo patient_reception_history_list_item = 1;
+}
+message OCS2015U00EmrGetNoticeEditTimeRequest{
+}
+message OCS2015U00EmrGetNoticeEditTimeResponse{
+    optional string timespan = 1;
+}
+
+message OCS2015U00SelectEmrRecordByPkout1001Request{
+    optional string bunho = 1;
+    optional string hosp_code = 2;
+    optional string pkout1001 = 3;
+}
+message OCS2015U00LoadPatientMedicalRecordRequest
+{
+        optional string bunho = 1;
+}
+message OCS2015U00LoadPatientMedicalRecordResponse
+{
+        repeated OCS2015U00LoadPatientMedicalRecordInfo patient_medical_info = 1;
+}
+// ----- [END] OCS2015U00 ------
+
+// -----[START] OCS2015U04 ---------
+message OCS2015U04LoadBookmarkByPk0ut1001Request {
+    optional string emr_record_id = 1;
+    optional string pkout1001 = 2;
+    optional string sys_id = 3;
+}
+
+message OCS2015U04LoadBookmarkByPk0ut1001Response {
+    repeated OCS2015U04LoadBookmarkByPk0ut1001Info emr_one_bookmark_list = 1;
+}
+
+message OCS2015U04EmrRecordLoadBookmarkContentRequest {
+    optional string emr_record_id = 1;
+}
+
+message OCS2015U04EmrRecordLoadBookmarkContentResponse {
+    repeated OCS2015U04EmrRecordLoadBookmarkContentInfo emr_bookmark_content_list = 1;
+}
+
+message OCS2015U04LoadExaminationRequest {
+    optional string patient_code = 1;
+}
+
+message OCS2015U04LoadExaminationResponse {
+    repeated OCS2015U04LoadExaminationInfo emr_load_examination_list = 1;
+}
+
+message OCS2015U04EditBookmarkRequest {
+    optional string bookmark_text = 1;
+    optional string upd_id = 2;
+    optional string emr_bookmark_id = 3;
+}
+
+message OCS2015U04EditBookmarkByPkout1001Request {
+    optional string bookmark_text = 1;
+    optional string upd_id = 2;
+    optional string emr_bookmark_id = 3;
+    optional string pkout1001 = 4;
+}
+
+message OCS2015U04DeleteBookmarkRequest {
+    optional string emr_bookmark_id = 1;
+}
+
+message OCS2015U04AddBookmarkRequest {
+    optional string emr_record_id        =        1        ;
+    optional string bookmark_text        =        2        ;
+    optional string naewon_date        =        3        ;
+    optional string pkout1001        =        4        ;
+    optional string upd_id        =        5        ;
+}
+
+message NUR2001U04CheckExistMedicalRecordRequest {
+    optional string patient_code = 1;
+}
+
+message NUR2001U04CheckExistMedicalRecordResponse {
+    repeated NUR2001U04CheckExistMedicalRecordInfo medical_record_info = 1;
+}
+// -----[END] OCS2015U04 ---------
+
+// -----[START] OCS2015U09 ---------
+message OCS2015U09EmrRecordUpdateRequest {
+    optional string bunho = 1; 
+    optional string content = 2;
+    optional string metadata = 3;
+    optional string sys_id = 4;
+    optional string record_log = 5;
+    repeated OCS2015U09EmrBookmarkInfo bookmark = 6;
+}
+
+message OCS2015U09GetTemplateComboBoxRequest {
+    optional string user_id = 1;
+}
+
+message OCS2015U09GetTemplateComboBoxResponse {
+    repeated OCS2015U09GetTemplateComboBoxInfo template_list = 1;
+}
+
+message OCS2015U09GetRootTagsForContextRequest {
+}
+
+message OCS2015U09GetRootTagsForContextResponse {
+    repeated OCS2015U09GetTagsForContextInfo root_tag_list = 1;
+}
+
+message OCS2015U09GetNodeTagsForContextRequest {
+    optional string f_parent_tag_code = 1;
+    optional string f_user_id = 2;
+}
+
+message OCS2015U09GetNodeTagsForContextResponse {
+    repeated OCS2015U09GetTagsForContextInfo root_tag_list = 1;
+}
+// -----[END] OCS2015U09 ---------
+
+// -----[START] OCS2015U07 ---------
+message OCS2015U07GetChildTagOfParentRequest {
+     optional string f_parent_tag = 1;
+}
+
+message OCS2015U07GetChildTagOfParentResponse {
+     repeated OCS2015U07TagChildInfo tag_child_list = 1;
+}
+// -----[END] OCS2015U07 ---------
+
+//[START] OCS2015U03
+message OCS2015U03OrderGubunRequest {
+    optional string f_hopital_code = 1;
+    optional string f_patient_code = 2;
+    optional string f_reservation_code = 3;
+}
+
+message OCS2015U03OrderGubunResponse {
+    repeated OCS2015U03OrderGubunInfo order_gubun_list = 1;
+}
+
+message OcsEmrHistoryClinicReferRequest
+{
+	required string bunho = 1;
+}
+message OcsEmrHistoryClinicReferResponse
+{
+	repeated OcsEmrHistoryClinicReferItemInfo lst =1;
+}
+
+//[END] OCS2015U03
+
+//[START] OCS2015U06
+message OCS2015U06OrderTypeComboRequest{
+}
+message OCS2015U06OrderTypeComboResponse{
+    repeated OCS2015U06OrderTypeComboInfo order_types = 1;
+}
+//[END] OCS2015U06
+
+message OCS2015U00GetUserOptionsRequest{
+	optional string user_id = 1;
+	optional string gwa = 2;
+	optional string io_gubun = 3;
+}
+
+message OCS2015U00GetUserOptionsResponse{
+	optional string allergy_pop_yn           = 1;
+	optional string specialwrite_pop_yn      = 2;
+	optional string same_name_check_yn       = 3;
+	optional string vitalsigns_pop_yn        = 4;
+	optional string emr_pop_yn               = 5;
+	optional string order_label_prt_yn       = 6;
+	optional string potion_drug_order        = 7;
+    optional string disease_name_unregistered = 8;
+    optional string infection                = 9;
+}
+
+message OCS2015U00GetPatientInfoRequest{
+	optional string bunho = 1;
+}
+
+message OCS2015U00GetPatientInfoResponse{
+	repeated NuriNUR7001U00MeasurePhysicalConditionListItemInfo phy_info_item = 1;
+	repeated NuroManagePatientInfo manage_pat_info = 2;
+}
+
+message OCS2015U00GetMaxSizeRequest{
+}
+
+message OCS2015U00GetMaxSizeResponse{
+	optional string max_size = 1;
+}
+
+message EMRDisplayBookmarkHistoryRequest{
+	optional string bunho     = 1;
+	optional string hosp_code = 2;
+}
+
+message EMRDisplayBookmarkHistoryResponse{
+	repeated PatientInfo patient_list_item = 1;
+	repeated NuroPatientReceptionHistoryListItemInfo history_list_item = 2;
+}
+
+message EMRSetDataForTvExamHistRequest{
+	optional string bunho     = 1;
+	optional string hosp_code = 2;
+}
+
+message EMRSetDataForTvExamHistResponse{
+	repeated PatientInfo patient_list_item = 1;
+	repeated OcsEmrPatientReceptionHistoryListItemInfo emr_history_list_item = 2;
+}
+
+message OCS2015U21ControlDataValidatingRequest{
+	optional string hosp_code                                        = 1;
+	optional string doctor                                           = 2;
+	optional string bunho                                            = 3;
+	optional string naewon_date                                      = 4;
+	optional string login_doctor_yn                                  = 5;
+	optional string gwa                                              = 6;
+	optional string io_gubun                                         = 7;
+	optional string user_id                                          = 8;
+	optional string instead_yn                                       = 9;
+	optional string approve_yn                                       = 10;
+	optional string key                                              = 11;
+	optional string data_value                                       = 12;
+	optional OCS2015U21SelectedPatientInfo selected_pa_info          = 13;
+}
+
+message OCS2015U21ControlDataValidatingResponse{
+	repeated OcsoOCS1003P01LayPatInfo lay_pat_item = 1;
+	optional bool is_jaewon_patient = 2;
+	optional string is_able_instead_order = 3;
+	optional string not_approve_order_cnt = 4;
+	optional bool enable_post_approve = 5;
+}
+message EMRGetLatestWarningStatusRequest{
+    optional string bunho = 1;
+}
+message EMRGetLatestWarningStatusResponse{
+    optional EMRGetLatestWarningStatusInfo warning_status_info = 1;
+}
+
+//  ----- [START] OCS2015U31- NEW --------
+message OCS2015U31GetADM3200UserRequest{
+	optional string user_id = 1;
+	optional string user_group = 2;
+}
+
+message OCS2015U31GetADM3200UserResponse{
+	repeated OCS2015U31GetADM3200UserInfo adm3200_user_info = 1;
+}
+
+message OCS2015U31GetEmrTemplateRequest{
+	optional string user_id = 1;
+	optional string depart_code = 2;
+	optional string doctor_code = 3;
+	optional string type = 4;
+	optional string common_yn = 5;
+}
+
+message OCS2015U31GetEmrTemplateResponse{
+	repeated OCS2015U31GetEmrTemplateInfo grid_template_item_info = 1;
+}
+
+message OCS2015U31GetTemplateTagsRequest{
+	optional string emr_template_id = 1;
+}
+
+message OCS2015U31GetTemplateTagsResponse{
+	repeated OCS2015U31GetTemplateTagsInfo tem_tag_root_item_info = 1;
+	repeated OCS2015U31GetTemplateTagsInfo tem_tag_node_item_info = 2;
+}
+
+message OCS2015U31SaveLayoutRequest{
+	repeated OCS2015U31GetEmrTemplateInfo list_template = 1;
+	repeated OCS2015U31GetTemplateTagsInfo list_template_tag = 2;
+	optional string user_id = 3;
+	optional string type = 4;
+	optional string dept_code = 5;
+	optional string doctor_code = 6;
+	optional string clone_yn = 7;
+}
+
+//  ----- [END] OCS2015U31- NEW --------
+
+//  ----- [START] OCS2015U00 --------
+message OCS2015U00GetDiscussNotifyRequest
+{       
+}
+
+message OCS2015U00GetDiscussNotifyResponse
+{
+        optional string req = 1;
+        optional string consult = 2;
+}
+message SettingDiscussRequest
+{
+	optional string gwa = 1;
+}
+message SettingDiscussResponse
+{
+	optional string result = 1;
+}
+//  ----- [END] OCS2015U00 --------
+
+//[START] composite
+message LoadEmrCompositeFirstRequest
+{
+	optional OcsoOCS1003P01CheckYRequest ocs1003p01_check_y                       = 1;
+	optional OCS2015U00GetMaxSizeRequest ocs2015u00_get_max_size                  = 2;                        
+	optional OCS2015U06EmrTagRequest         ocs2015u06_emr_tag                   = 3;                        
+	optional OcsoOCS1003P01LayPatRequest ocs1003p01_lay_pat                       = 4;                        
+	optional PatientInfoLoadPatientNaewonListRequest patient_info_naewon_lst      = 5;
+	optional FormEnvironInfoSysDateRequest      environ_info_sys_date             = 6;
+	optional PrOcsLoadNaewonInfoRequest          ocs_load_naewon_info             = 7;
+	optional OCS2015U00GetPatientInfoRequest ocs2015u00_get_patient_info          = 8;
+}
+message LoadEmrCompositeFirstResponse
+{
+	optional OcsoOCS1003P01CheckYResponse ocs1003p01_check_y                     = 1;
+	optional OCS2015U00GetMaxSizeResponse ocs2015u00_get_max_size                = 2;                        
+	optional OCS2015U06EmrTagResponse         ocs2015u06_emr_tag                 = 3;                        
+	optional OcsoOCS1003P01LayPatResponse ocs1003p01_lay_pat                     = 4;                        
+	optional PatientInfoLoadPatientNaewonListResponse patient_info_naewon_lst    = 5;
+	optional StringResponse                         environ_info_sys_date        = 6;
+	optional PrOcsLoadNaewonInfoResponse             ocs_load_naewon_info        = 7;
+	optional OCS2015U00GetPatientInfoResponse ocs2015u00_get_patient_info        = 8;
+}
+
+message LoadEmrCompositeSecondRequest
+{
+	optional FormEnvironInfoSysDateRequest                         environ_info_sys_date        = 1;
+	optional OCS2015U21ControlDataValidatingRequest ocs2015u21_control_data_validate            = 2;
+	optional OpenAllergyInfoRequest open_allergy_info                                           = 3;
+	optional LoadConsultEndYNRequest        load_consult_end_yn                                 = 4;                        
+	optional OCS1003P01LoadConsultEndYnAndIsNoConfirmConsultRequest ocs1003p01_load_consult_end = 5;
+	optional LoadPatientSpecificCommentRequest        load_patient_spec_comment                 = 6;
+	optional GetOutJinryoCommentCntRequest get_out_jinryo_comment                               = 7;
+	optional IpwonReserStatusRequest ipwon_reser_status                                         = 8;
+	optional XPaInfoBoxRequest xpa_info_box                                                     = 9;
+	optional OCS1003P01SettingVisibleByUserRequest ocs1003p01_setting_visible                   = 10;
+	optional OcsoOCS1003P01GridReserOrderListRequest ocs1003p01_grid_reser_order                = 11;
+	optional OUT0106U00GridListRequest out0106u00_grid_lst                                      = 12;
+	optional NuroPatientReceptionHistoryListRequest nuro_patient_reception_his                  = 13;
+	optional EMRSetDataForTvExamHistRequest emr_set_data_tvxam                                  = 14;
+	optional OcsEmrHistoryClinicReferRequest ocsemr_his_clinic_refer                            = 15;	
+	optional OCS2015U06EmrRecordRequest ocs2015u06_emr_record                                   = 16;
+	optional SettingDiscussRequest setting_discuss                                              = 17;
+	optional OCS2015U00GetDiscussNotifyRequest ocs2015u00_get_discuss_notify                    = 18;
+	optional EMRGetLatestWarningStatusRequest emr_get_lastest_warning                           = 19;
+	optional OCS0103U13CboListRequest        ocs0103u13_cbo_lst                                 = 20;
+	optional OCS1003P01GrdPatientRequest ocs1003p01_grd_patient                                 = 21;
+	optional OcsoOCS1003P01BtnListQueryRequest ocs1003p01_btn_list_query                        = 22;
+	optional NUR1016U00GrdNUR1016Request nur1016u00_grd                                         = 23;
+	optional NUR1017U00GrdNUR1017Request nur1017u00_grd                                         = 24;
+	optional OCS2015U00GetPatientInfoRequest ocs2015u00_get_patient_info                        = 25;
+	optional OCS2015U09GetTemplateComboBoxRequest ocs2015u09_get_template_combo                 = 26;
+	optional OCS2015U06OrderTypeComboRequest ocs2015u06_order_type_combo                        = 27;
+}
+message LoadEmrCompositeSecondResponse
+{
+	optional StringResponse                         environ_info_sys_date                         = 1;
+	optional OCS2015U21ControlDataValidatingResponse ocs2015u21_control_data_validate             = 2;
+	optional OpenAllergyInfoResponse open_allergy_info                                            = 3;
+	optional LoadConsultEndYNResponse        load_consult_end_yn                                  = 4;                        
+	optional OCS1003P01LoadConsultEndYnAndIsNoConfirmConsultResponse ocs1003p01_load_consult_end  = 5;
+	optional LoadPatientSpecificCommentResponse        load_patient_spec_comment                  = 6;
+	optional GetOutJinryoCommentCntResponse get_out_jinryo_comment                                = 7;
+	optional IpwonReserStatusResponse ipwon_reser_status                                          = 8;
+	optional XPaInfoBoxResponse xpa_info_box                                                      = 9;
+	optional OCS1003P01SettingVisibleByUserResponse ocs1003p01_setting_visible                    = 10;
+	optional OcsoOCS1003P01GridReserOrderListResponse ocs1003p01_grid_reser_order                 = 11;
+	optional OUT0106U00GridListResponse out0106u00_grid_lst                                       = 12;
+	optional NuroPatientReceptionHistoryListResponse nuro_patient_reception_his                   = 13;
+	optional EMRSetDataForTvExamHistResponse emr_set_data_tvxam                                   = 14;
+	optional OcsEmrHistoryClinicReferResponse ocsemr_his_clinic_refer                             = 15;
+	optional OCS2015U06EmrRecordResponse ocs2015u06_emr_record                                    = 16;
+	optional SettingDiscussResponse setting_discuss                                               = 17;
+	optional OCS2015U00GetDiscussNotifyResponse ocs2015u00_get_discuss_notify                     = 18;
+	optional EMRGetLatestWarningStatusResponse emr_get_lastest_warning                            = 19;
+	optional OCS0103U13CboListResponse        ocs0103u13_cbo_lst                                  = 20;
+	optional OCS1003P01GrdPatientResponse ocs1003p01_grd_patient                                  = 21;
+	optional OcsoOCS1003P01BtnListQueryResponse ocs1003p01_btn_list_query                         = 22;
+	optional NUR1016U00GrdNUR1016Response nur1016u00_grd                                          = 23;
+	optional NUR1017U00GrdNUR1017Response nur1017u00_grd                                          = 24;
+	optional OCS2015U00GetPatientInfoResponse ocs2015u00_get_patient_info                         = 25;
+	optional OCS2015U09GetTemplateComboBoxResponse ocs2015u09_get_template_combo                  = 26;
+	optional OCS2015U06OrderTypeComboResponse ocs2015u06_order_type_combo                         = 27;
+}
+
+message SaveEmrCompositeFirstRequest
+{
+	optional OcsoOCS1003P01CheckXRequest ocs1003p01_checkx          = 1;
+	repeated CheckPatientStatusRequest check_patient_status         = 2;
+	repeated OcsoOCS1003P01GetChuciRequest ocs1003p01_get_chuci     = 3;
+	repeated DupCheckInputOutOrderRequest dup_check_input_out_order = 4;
+}
+message SaveEmrCompositeFirstResponse
+{
+	optional OcsoOCS1003P01CheckXResponse ocs1003p01_checkx           = 1;
+	repeated CheckPatientStatusResponse check_patient_status          = 2;
+	repeated OcsoOCS1003P01GetChuciResponse ocs1003p01_get_chuci      = 3;
+	repeated DupCheckInputOutOrderResponse dup_check_input_out_order  = 4;
+}
+
+message SaveEmrCompositeSecondRequest
+{
+	optional OCS1003P01GrdPatientRequest grd_patient                   = 1;
+	optional OcsoOCS1003P01BtnListQueryRequest btn_list_query          = 2;
+	optional NUR1016U00GrdNUR1016Request grd_nur1016                   = 3;
+	optional NUR1017U00GrdNUR1017Request grd_nur1017                   = 4;
+	optional OUT0106U00GridListRequest grd_list_out0106                = 5;
+	optional OCS2015U00GetPatientInfoRequest get_patient_info          = 6;
+	optional PatientInfoLoadPatientNaewonListRequest patient_info_load = 7;
+	optional FormEnvironInfoSysDateRequest env_sys_date                = 8;
+	optional PrOcsLoadNaewonInfoRequest ocs_load_naewon                = 9;
+	optional OCS2015U09GetTemplateComboBoxRequest template_combo       = 10;
+	optional OCS2015U06OrderTypeComboRequest order_type_combo          = 11;
+}
+message SaveEmrCompositeSecondResponse
+{
+	optional OCS1003P01GrdPatientResponse grd_patient                    = 1;
+	optional OcsoOCS1003P01BtnListQueryResponse btn_list_query           = 2;
+	optional NUR1016U00GrdNUR1016Response grd_nur1016                    = 3;
+	optional NUR1017U00GrdNUR1017Response grd_nur1017                    = 4;
+	optional OUT0106U00GridListResponse grd_list_out0106                 = 5;
+	optional OCS2015U00GetPatientInfoResponse get_patient_info           = 6;
+	optional PatientInfoLoadPatientNaewonListResponse patient_info_load  = 7;
+	optional StringResponse env_sys_date                                 = 8;
+	optional PrOcsLoadNaewonInfoResponse ocs_load_naewon                 = 9;
+	optional OCS2015U09GetTemplateComboBoxResponse template_combo        = 10;
+	optional OCS2015U06OrderTypeComboResponse order_type_combo           = 11;
+}
+message SaveEmrCompositeThirdRequest
+{
+	optional OCS2015U09EmrRecordUpdateRequest emr_record_update   = 1;
+	optional OCS2015U06EmrRecordRequest emr_record                = 2;
+	optional OCS0103U12GrdSangyongOrderRequest grd_sangyong_order = 3;
+	optional OCS0103U10FormLoadRequest u10_form_load              = 4;
+}
+message SaveEmrCompositeThirdResponse
+{
+	optional UpdateResponse emr_record_update                      = 1;
+	optional OCS2015U06EmrRecordResponse emr_record                = 2;
+	optional OCS0103U12GrdSangyongOrderResponse grd_sangyong_order = 3;
+	optional OCS0103U10FormLoadResponse u10_form_load              = 4;
+}
+
+message OCSACT2GetPatientExpandRequest
+{
+    optional OUT0106U00GridListRequest grid_list_item				= 1;
+    optional OCS2015U06EmrRecordRequest emr_record_item             = 2;
+    optional OcsoOCS1003P01GridOutSangRequest grid_outsang_item     = 3;
+}
+
+message OCSACT2GetPatientExpandResponse
+{
+    optional OUT0106U00GridListResponse grid_list_item				= 1;
+    optional OCS2015U06EmrRecordResponse emr_record_item            = 2;
+    optional OcsoOCS1003P01GridOutSangResponse grid_outsang_item    = 3;
+}
+//[END] composite
+
+//[START] EMR API
+message EMRGetByPatientCodeAndHospCodeRequest {
+    optional string patient_code = 1;
+	optional string hosp_code = 2;
+}
+
+message EMRGetByPatientCodeAndHospCodeResponse {
+    optional string content = 1;
+	optional string version = 2;
+	repeated EmrTagInfo emr_tag_info = 3;
+}
+//[END] EMR API
+
+message OCS2016U02CheckLoadExpandRequest
+{
+    optional string hosp_code = 1; 
+    optional string language  = 2;
+}
+message OCS2016U02CheckLoadExpandResponse
+{
+    optional string result = 1;    
+}
+
+message OCS2015U00GetLinkMISRequest
+{
+}
+
+message OCS2015U00GetLinkMISResponse
+{
+    optional string link_mis = 1;
+    optional string token = 2;       
+}
+
+//[START] EPortViewer
+message OCS2015U00GetInfoEPortViewerRequest
+{
+}
+message OCS2015U00GetInfoEPortViewerResponse
+{
+	optional string folder_path = 1;
+	optional string exe_path    = 2;
+}
+//[END] EPortViewer
+
+
+message OCSACT2CompositeSecondRequest {
+    optional OCS2015U00GetPatientInfoRequest get_patient_info = 1;
+    optional NUR1016U00GrdNUR1016Request grd_nur1016 = 2;
+    optional NUR1017U00GrdNUR1017Request grd_nur1017 = 3;
+    optional OUT0106U00GridListRequest grd_list_out0106u00 = 4;
+    optional GetPatientByCodeRequest get_patient_bycode = 5;
+    optional OcsLoadInputAndVisibleControlRequest input_visible = 6;
+    optional OcsLoadInputTabRequest input_tab = 7;
+    optional InjsINJ1001U01DetailListRequest detail_list = 8;
+    optional CPL2010U00CheckInjCplOrderRequest check_inj = 9;
+}
+
+message OCSACT2CompositeSecondResponse{
+    optional OCS2015U00GetPatientInfoResponse get_patient_info_res = 1;
+    optional NUR1016U00GrdNUR1016Response grd_nur1016_res = 2;
+    optional NUR1017U00GrdNUR1017Response grd_nur1017_res = 3;
+    optional OUT0106U00GridListResponse grd_list_out0106u00_res = 4;
+    optional GetPatientByCodeResponse get_patient_bycode_res = 5;
+    optional OcsLoadInputAndVisibleControlResponse input_visible_res = 6;
+    optional OcsLoadInputTabResponse input_tab_res = 7;
+    optional InjsINJ1001U01DetailListResponse detail_list_res = 8;
+    optional CPL2010U00CheckInjCplOrderResponse check_inj_res = 9;
+}
+
+message OCS2015U31LoadComboDepartRequest{    
+}
+
+message OCS2015U31LoadComboDepartResponse{
+	repeated ComboListItemInfo depart_info = 1;
+}
+
+message OCS2015U31LoadComboDoctorRequest{    
+	optional string depart_code = 1;
+}
+
+message OCS2015U31LoadComboDoctorResponse{
+	repeated ComboListItemInfo doctor_info = 1;
+}
+
+message OCS2015U31LoadGridDepartAndDoctorRequest{
+}
+
+message OCS2015U31LoadGridDepartAndDoctorResponse{
+	repeated OCS2015U31LoadGridDepartAndDoctorInfo depart_and_doctor = 1;
+}
+
+message CheckHospUseMovieTalkRequest 
+{
+	
+}
+message CheckHospUseMovieTalkResponse 
+{
+	optional string code_name = 1;
+}
+
+message OCS2015U00GetDataPrintEmrMedicalRequest {
+        optional string bunho  = 1;
+        optional string doctor = 2;
+        optional string first_examination_date = 3;
+        optional string last_examination_date = 4;
+}
+
+message OCS2015U00GetDataPrintEmrMedicalResponse
+{
+        optional string insurance_classification         = 1;
+        optional string emr_no                           = 2;
+        optional string hospital_name                    = 3;
+        optional string hospital_address                 = 4;
+        optional string hospital_tel                     = 5;
+        optional string hospital_fax                     = 6;
+        optional string hospital_logo                    = 7;
+        optional string hospital_website                 = 8;
+        repeated OCS2015U00GetDataDoctorInfo doctor_info = 9;
+        repeated OCS2015U00GetDataDosageInfo dosage_info = 10;
+        repeated OCS2015U00GetDataInsPersonInfo ins_persion_info_first    = 11;
+        repeated OCS2015U00GetDataInsPersonInfo ins_persion_info_second   = 12;
+        repeated OCS2015U00GetDataInsProviderInfo ins_provider_info       = 13;
+        repeated OCS2015U00GetOrderReportInfo order_report_info           = 14;
+}
+
+message OCS2015U00GetHtmlContentRequest {
+        optional string format_type = 1;
+        optional string tpl_type    = 2;
+}
+
+message OCS2015U00GetHtmlContentResponse
+{
+        optional string print_content         = 1;
+}
+
+message LoadPatientInfectionRequest{
+	optional string bunho 			= 1;
+	optional string hosp_code 		= 2;
+}
+message LoadPatientInfectionResponse{
+	optional string infection_count = 1;
+}
+
+message OCS2015U21GrdPatientRequest {
+	optional string naewon_yn = 1;
+	optional string naewon_date = 2;
+	optional string reser_yn = 3;
+	optional string doctor = 4;
+	optional string doctor_mode_yn = 5;
+	optional string bunho = 6;
+	optional NotApproveOrderCntInfo order_cnt = 7;
+	optional string gwa = 8;
+}
+message OCS2015U21GrdPatientResponse {
+	repeated OCS2015U21GrdPatientListItemInfo grdPatient_list = 1;
+	optional string cnt_value = 2;
+}

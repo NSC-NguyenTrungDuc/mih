@@ -1,0 +1,532 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnAllergy.Text" xml:space="preserve">
+    <value>Di ứng</value>
+  </data>
+  <data name="btnAplOrder.Text" xml:space="preserve">
+    <value>Xét nghiệm bệnh lý</value>
+  </data>
+  <data name="btnApprove.Text" xml:space="preserve">
+    <value>Có yêu cầu khám thay thế</value>
+  </data>
+  <data name="btnChuchiOrder.Text" xml:space="preserve">
+    <value>Tiểu phẫu</value>
+  </data>
+  <data name="btnComment.Text" xml:space="preserve">
+    <value>Lưu ý đặc biệt</value>
+  </data>
+  <data name="btnConsult.Text" xml:space="preserve">
+    <value>YC khám</value>
+  </data>
+  <data name="btnConsultAnswer.Text" xml:space="preserve">
+    <value>YC khoa khác</value>
+  </data>
+  <data name="btnCplOrder.Text" xml:space="preserve">
+    <value>Xét nghiệm dịch thể</value>
+  </data>
+  <data name="btnCplResult.Text" xml:space="preserve">
+    <value>Tham chiếu KQ xét nghiệm dịch thể</value>
+  </data>
+  <data name="btnDCBANNAB.Text" xml:space="preserve">
+    <value>Trả về/ Xóa</value>
+  </data>
+  <data name="btnDoOrder.Text" xml:space="preserve">
+    <value>Yêu cầu DO</value>
+  </data>
+  <data name="btnDrgOrder.Text" xml:space="preserve">
+    <value>Thuốc</value>
+  </data>
+  <data name="btnEMR.Text" xml:space="preserve">
+    <value>Bệnh án điện tử</value>
+  </data>
+  <data name="btnENDOResult.Text" xml:space="preserve">
+    <value>KQ tham chiếu</value>
+  </data>
+  <data name="btnEtcJinryo.Text" xml:space="preserve">
+    <value>Khám khoa khác</value>
+  </data>
+  <data name="btnEtcOrder.Text" xml:space="preserve">
+    <value>Khác</value>
+  </data>
+  <data name="btnHelp2.Text" xml:space="preserve">
+    <value>Màu</value>
+  </data>
+  <data name="btnImageResult.Text" xml:space="preserve">
+    <value>KQ xét nghiệm dịch thể</value>
+  </data>
+  <data name="btnIpwonReser.Text" xml:space="preserve">
+    <value>YC khi
+nhập viện</value>
+  </data>
+  <data name="btnJinryoComment.Text" xml:space="preserve">
+    <value>Lưu ý khám</value>
+  </data>
+  <data name="btnJinryoReser.Text" xml:space="preserve">
+    <value>Hẹn khám</value>
+  </data>
+  <data name="btnJusaOrder.Text" xml:space="preserve">
+    <value>Thuốc tiêm</value>
+  </data>
+  <data name="btnJusaResult.Text" xml:space="preserve">
+    <value>Ghi chú quá trình tiêm</value>
+  </data>
+  <data name="btnKensaReser.Text" xml:space="preserve">
+    <value>BOX hẹn</value>
+  </data>
+  <data name="btnKensaReserPrint.Text" xml:space="preserve">
+    <value>In hẹn XN</value>
+  </data>
+  <data name="btnOpenOutSang.Text" xml:space="preserve">
+    <value>Chấn thương/bệnh theo BN</value>
+  </data>
+  <data name="btnOrderGuide.Text" xml:space="preserve">
+    <value>In h.dẫn</value>
+  </data>
+  <data name="btnOrderPrint.Text" xml:space="preserve">
+    <value>In chỉ thị</value>
+  </data>
+  <data name="btnPfeOrder.Text" xml:space="preserve">
+    <value>Xét nghiệm sinh lý</value>
+  </data>
+  <data name="btnQryOrderInfo.Text" xml:space="preserve">
+    <value>Tham chiếu yêu cầu</value>
+  </data>
+  <data name="btnReha.Text" xml:space="preserve">
+    <value>PHCN</value>
+  </data>
+  <data name="btnRehaActedOrder.Text" xml:space="preserve">
+    <value>Kết quả PHCN</value>
+  </data>
+  <data name="btnSetOrder.Text" xml:space="preserve">
+    <value>Bộ yêu cầu khám</value>
+  </data>
+  <data name="btnSusulOrder.Text" xml:space="preserve">
+    <value>Gây mê/ phẫu thuật</value>
+  </data>
+  <data name="btnVital.Text" xml:space="preserve">
+    <value>Đo lường cơ thể</value>
+  </data>
+  <data name="btnXrtOrder.Text" xml:space="preserve">
+    <value>Chẩn đoán hình ảnh</value>
+  </data>
+  <data name="btnXRTResult.Text" xml:space="preserve">
+    <value>KQ chẩn đoán hình ảnh</value>
+  </data>
+  <data name="cbxMsgSysYN.Text" xml:space="preserve">
+    <value>Gửi thông báo</value>
+  </data>
+  <data name="cbxMsgSysYN.ToolTip" xml:space="preserve">
+    <value>Có thể thông báo thông tin về thêm, chỉnh sửa, xóa yêu khám cầu cho y tá, và phòng thuốc.</value>
+  </data>
+  <data name="dwOrderInfo.Text" xml:space="preserve">
+    <value>dwOrderInfo</value>
+  </data>
+  <data name="gbxHelp2.Text" xml:space="preserve">
+    <value>Màu dòng</value>
+  </data>
+  <data name="lblApproveDoctorName.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="lblApproveFlag.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblApproveLabel.Text" xml:space="preserve">
+    <value>Hình thức phê duyệt:</value>
+  </data>
+  <data name="lblJinryoGwa.Text" xml:space="preserve">
+    <value>Khoa khám</value>
+  </data>
+  <data name="rbnAll.Text" xml:space="preserve">
+    <value>Toàn bộ</value>
+  </data>
+  <data name="rbnJinryo.Text" xml:space="preserve">
+    <value>Hoàn thành khám</value>
+  </data>
+  <data name="rbnNotJinryo.Text" xml:space="preserve">
+    <value>Đợi khám</value>
+  </data>
+  <data name="xButton14.Text" xml:space="preserve">
+    <value>Chỉ thị cơ bản</value>
+  </data>
+  <data name="xEditGridCell100.HeaderText" xml:space="preserve">
+    <value>Hẹn xét nghiệm</value>
+  </data>
+  <data name="xEditGridCell101.HeaderText" xml:space="preserve">
+    <value>YC chưa phê duyệt</value>
+  </data>
+  <data name="xEditGridCell102.HeaderText" xml:space="preserve">
+    <value>Ngày dự định thực hiện</value>
+  </data>
+  <data name="xEditGridCell104.HeaderText" xml:space="preserve">
+    <value>Khoa khám</value>
+  </data>
+  <data name="xEditGridCell106.HeaderText" xml:space="preserve">
+    <value>BS khám</value>
+  </data>
+  <data name="xEditGridCell108.HeaderText" xml:space="preserve">
+    <value>Tên yêu cầu</value>
+  </data>
+  <data name="xEditGridCell111.HeaderText" xml:space="preserve">
+    <value>Phòng ban thực hiện</value>
+  </data>
+  <data name="xEditGridCell112.HeaderText" xml:space="preserve">
+    <value>Thời gian hẹn</value>
+  </data>
+  <data name="xEditGridCell113.HeaderText" xml:space="preserve">
+    <value>Hôm nay/Ngày dự định</value>
+  </data>
+  <data name="xEditGridCell114.HeaderText" xml:space="preserve">
+    <value>Chưa/ Đã</value>
+  </data>
+  <data name="xEditGridCell115.HeaderText" xml:space="preserve">
+    <value>Ngày yêu cầu</value>
+  </data>
+  <data name="xEditGridCell126.HeaderText" xml:space="preserve">
+    <value>Tại nhà</value>
+  </data>
+  <data name="xEditGridCell127.HeaderText" xml:space="preserve">
+    <value>Chỉ định thời gian</value>
+  </data>
+  <data name="xEditGridCell14.HeaderText" xml:space="preserve">
+    <value>Mã chấn thương/bệnh</value>
+  </data>
+  <data name="xEditGridCell142.HeaderText" xml:space="preserve">
+    <value>Phân loại</value>
+  </data>
+  <data name="xEditGridCell147.HeaderText" xml:space="preserve">
+    <value>PL yêu cầu</value>
+  </data>
+  <data name="xEditGridCell15.HeaderText" xml:space="preserve">
+    <value>Chủ yếu</value>
+  </data>
+  <data name="xEditGridCell151.HeaderText" xml:space="preserve">
+    <value>Mã yêu cầu</value>
+  </data>
+  <data name="xEditGridCell152.HeaderText" xml:space="preserve">
+    <value>Tên yêu cầu</value>
+  </data>
+  <data name="xEditGridCell153.HeaderText" xml:space="preserve">
+    <value>Dịch thể</value>
+  </data>
+  <data name="xEditGridCell154.HeaderText" xml:space="preserve">
+    <value>Tên dịch thể</value>
+  </data>
+  <data name="xEditGridCell155.HeaderText" xml:space="preserve">
+    <value>Số lượng</value>
+  </data>
+  <data name="xEditGridCell159.HeaderText" xml:space="preserve">
+    <value>Đơn vị</value>
+  </data>
+  <data name="xEditGridCell160.HeaderText" xml:space="preserve">
+    <value>Loại DV</value>
+  </data>
+  <data name="xEditGridCell161.HeaderText" xml:space="preserve">
+    <value>Số lần</value>
+  </data>
+  <data name="xEditGridCell166.HeaderText" xml:space="preserve">
+    <value>Số ngày</value>
+  </data>
+  <data name="xEditGridCell168.HeaderText" xml:space="preserve">
+    <value>Tiêm</value>
+  </data>
+  <data name="xEditGridCell169.HeaderText" xml:space="preserve">
+    <value>Tên loại tiêm</value>
+  </data>
+  <data name="xEditGridCell17.HeaderText" xml:space="preserve">
+    <value>Tên chấn thương/ bệnh</value>
+  </data>
+  <data name="xEditGridCell170.HeaderText" xml:space="preserve">
+    <value>Tốc độ thao tác</value>
+  </data>
+  <data name="xEditGridCell171.HeaderText" xml:space="preserve">
+    <value>Tốc độ tiêm</value>
+  </data>
+  <data name="xEditGridCell172.HeaderText" xml:space="preserve">
+    <value>Phương pháp</value>
+  </data>
+  <data name="xEditGridCell173.HeaderText" xml:space="preserve">
+    <value>Khẩn cấp</value>
+  </data>
+  <data name="xEditGridCell176.HeaderText" xml:space="preserve">
+    <value>Phòng ban thực hiện</value>
+  </data>
+  <data name="xEditGridCell1764.HeaderText" xml:space="preserve">
+    <value>Ngày chẩn đoán lần đầu</value>
+  </data>
+  <data name="xEditGridCell178.HeaderText" xml:space="preserve">
+    <value>Chụp chiếu</value>
+  </data>
+  <data name="xEditGridCell179.HeaderText" xml:space="preserve">
+    <value>Tán thuốc</value>
+  </data>
+  <data name="xEditGridCell18.HeaderText" xml:space="preserve">
+    <value>Ngày phát sinh triệu chứng</value>
+  </data>
+  <data name="xEditGridCell180.HeaderText" xml:space="preserve">
+    <value>Có/ Không thể phát hành sau</value>
+  </data>
+  <data name="xEditGridCell181.HeaderText" xml:space="preserve">
+    <value>Thao tác đơn giản</value>
+  </data>
+  <data name="xEditGridCell182.HeaderText" xml:space="preserve">
+    <value>Bao thuốc</value>
+  </data>
+  <data name="xEditGridCell183.HeaderText" xml:space="preserve">
+    <value>Vô hiệu lực</value>
+  </data>
+  <data name="xEditGridCell185.HeaderText" xml:space="preserve">
+    <value>Ra viện/ ngoại trú</value>
+  </data>
+  <data name="xEditGridCell189.HeaderText" xml:space="preserve">
+    <value>Ý kiến của Y tá</value>
+  </data>
+  <data name="xEditGridCell19.HeaderText" xml:space="preserve">
+    <value>Ngày kết thúc</value>
+  </data>
+  <data name="xEditGridCell191.HeaderText" xml:space="preserve">
+    <value>Tiền phí</value>
+  </data>
+  <data name="xEditGridCell192.HeaderText" xml:space="preserve">
+    <value>Phân loại yêu cầu</value>
+  </data>
+  <data name="xEditGridCell193.HeaderText" xml:space="preserve">
+    <value>Ngoài bệnh viện</value>
+  </data>
+  <data name="xEditGridCell194.HeaderText" xml:space="preserve">
+    <value>Thực hiện</value>
+  </data>
+  <data name="xEditGridCell195.HeaderText" xml:space="preserve">
+    <value>Kết quả</value>
+  </data>
+  <data name="xEditGridCell2.HeaderText" xml:space="preserve">
+    <value>Mã số khoa</value>
+  </data>
+  <data name="xEditGridCell20.HeaderText" xml:space="preserve">
+    <value>Ra viện</value>
+  </data>
+  <data name="xEditGridCell43.HeaderText" xml:space="preserve">
+    <value>Chỉnh sửa</value>
+  </data>
+  <data name="xEditGridCell45.HeaderText" xml:space="preserve">
+    <value>Nghi vấn</value>
+  </data>
+  <data name="xEditGridCell46.HeaderText" xml:space="preserve">
+    <value>MSBN</value>
+  </data>
+  <data name="xEditGridCell51.HeaderText" xml:space="preserve">
+    <value>Hẹn</value>
+  </data>
+  <data name="xEditGridCell52.HeaderText" xml:space="preserve">
+    <value>Thời gian hẹn</value>
+  </data>
+  <data name="xEditGridCell53.HeaderText" xml:space="preserve">
+    <value>Họ Tên BN 1</value>
+  </data>
+  <data name="xEditGridCell54.HeaderText" xml:space="preserve">
+    <value>Họ Tên BN 2</value>
+  </data>
+  <data name="xEditGridCell57.HeaderText" xml:space="preserve">
+    <value>Loại BH</value>
+  </data>
+  <data name="xEditGridCell58.HeaderText" xml:space="preserve">
+    <value>Khoa khám</value>
+  </data>
+  <data name="xEditGridCell59.HeaderText" xml:space="preserve">
+    <value>BS khám</value>
+  </data>
+  <data name="xEditGridCell60.HeaderText" xml:space="preserve">
+    <value>Khám lại lần đầu</value>
+  </data>
+  <data name="xEditGridCell61.HeaderText" xml:space="preserve">
+    <value>Trạng thái khám</value>
+  </data>
+  <data name="xEditGridCell63.HeaderText" xml:space="preserve">
+    <value>Trạng thái khám</value>
+  </data>
+  <data name="xEditGridCell65.HeaderText" xml:space="preserve">
+    <value>PL tiếp nhận</value>
+  </data>
+  <data name="xEditGridCell66.HeaderText" xml:space="preserve">
+    <value>Khám khoa khác</value>
+  </data>
+  <data name="xEditGridCell67.HeaderText" xml:space="preserve">
+    <value>Yêu cầu khám</value>
+  </data>
+  <data name="xEditGridCell73.HeaderText" xml:space="preserve">
+    <value>Thời gian tiếp nhận</value>
+  </data>
+  <data name="xEditGridCell90.HeaderText" xml:space="preserve">
+    <value>Khoa khám</value>
+  </data>
+  <data name="xEditGridCell91.HeaderText" xml:space="preserve">
+    <value>Bảo hiểm</value>
+  </data>
+  <data name="xEditGridCell93.HeaderText" xml:space="preserve">
+    <value>PL dữ liệu</value>
+  </data>
+  <data name="xEditGridCell94.HeaderText" xml:space="preserve">
+    <value>Flag thanh toán</value>
+  </data>
+  <data name="xEditGridCell95.HeaderText" xml:space="preserve">
+    <value>Có/ không thể khám</value>
+  </data>
+  <data name="xLabel1.Text" xml:space="preserve">
+    <value>Chấn thương/bệnh</value>
+  </data>
+  <data name="xLabel10.Text" xml:space="preserve">
+    <value>Hẹn khám</value>
+  </data>
+  <data name="xLabel11.Text" xml:space="preserve">
+    <value>Tái khám (PHCN)</value>
+  </data>
+  <data name="xLabel12.Text" xml:space="preserve">
+    <value>Khám ngoài 2 (PHCN)</value>
+  </data>
+  <data name="xLabel13.Text" xml:space="preserve">
+    <value> Chỉ có thuốc</value>
+  </data>
+  <data name="xLabel14.Text" xml:space="preserve">
+    <value>Yêu cầu hẹn hôm nay</value>
+  </data>
+  <data name="xLabel2.Text" xml:space="preserve">
+    <value>Ngày tới viện</value>
+  </data>
+  <data name="xLabel3.Text" xml:space="preserve">
+    <value>MSBN</value>
+  </data>
+  <data name="xLabel4.Text" xml:space="preserve">
+    <value>Khoa khám</value>
+  </data>
+  <data name="xLabel5.Text" xml:space="preserve">
+    <value>Khám ngoài 1 (PHCN)</value>
+  </data>
+  <data name="xLabel6.Text" xml:space="preserve">
+    <value>Bệnh nhân yêu cầu khám</value>
+  </data>
+  <data name="xLabel7.Text" xml:space="preserve">
+    <value>/</value>
+  </data>
+  <data name="xLabel8.Text" xml:space="preserve">
+    <value>(kg/cm)</value>
+  </data>
+  <data name="xLabel9.Text" xml:space="preserve">
+    <value>Có hẹn xét nghiệm</value>
+  </data>
+</root>

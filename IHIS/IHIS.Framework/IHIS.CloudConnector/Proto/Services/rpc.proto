@@ -1,0 +1,27 @@
+syntax = "proto2";
+
+message RpcMessage {
+	//
+	required int64 id = 1;
+	optional Result result = 2;
+	required string version = 3;
+	required string service = 4;
+	optional int64 source_id = 5;
+	optional int64 context_id = 6;
+	optional bytes payload_data = 7;
+	optional string payload_class = 8;
+	optional string client_id = 9;
+	
+	//
+	enum Result {
+		SUCCESS = 1; 
+		INVALID_VERSION = 2; 
+		INVALID_SERVICE = 3; 
+		INVALID_PAYLOAD = 4; 
+		NOT_AUTHENTICATED = 5; 
+		SERVICE_REJECTED = 6; 
+		SERVICE_UNAVAILABLE = 7; 
+		INTERNAL_ERROR = 99; 
+	}
+}
+

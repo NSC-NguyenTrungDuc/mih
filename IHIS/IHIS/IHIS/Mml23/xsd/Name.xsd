@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<xs:schema xmlns:mmlNm="uri:mmlNm" elementFormDefault="qualified" targetNamespace="uri:mmlNm" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Name">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice>
+          <xs:sequence>
+            <xs:element ref="mmlNm:family" />
+            <xs:element ref="mmlNm:given" />
+            <xs:element minOccurs="0" maxOccurs="1" ref="mmlNm:middle" />
+          </xs:sequence>
+          <xs:element ref="mmlNm:fullname" />
+        </xs:choice>
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlNm:prefix" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlNm:degree" />
+      </xs:sequence>
+      <xs:attribute name="repCode" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="I" />
+            <xs:enumeration value="A" />
+            <xs:enumeration value="P" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="tableId" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="degree" type="xs:string" />
+  <xs:element name="prefix" type="xs:string" />
+  <xs:element name="fullname" type="xs:string" />
+  <xs:element name="middle" type="xs:string" />
+  <xs:element name="given" type="xs:string" />
+  <xs:element name="family" type="xs:string" />
+</xs:schema>

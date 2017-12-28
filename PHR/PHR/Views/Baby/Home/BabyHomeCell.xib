@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="145" id="KGk-i7-Jjw" customClass="BabyHomeCell">
+            <rect key="frame" x="0.0" y="0.0" width="453" height="145"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="453" height="144.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Ls-ms-94a">
+                        <rect key="frame" x="28" y="0.0" width="1" height="23"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="6D0-mP-5Oq"/>
+                            <constraint firstAttribute="width" constant="1" id="Io1-i6-Rrw"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Io1-i6-Rrw"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Iic-cg-mrS">
+                        <rect key="frame" x="28" y="56" width="1" height="88"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="acu-V5-y8X"/>
+                        </constraints>
+                    </imageView>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPn-dL-Mdz">
+                        <rect key="frame" x="13" y="23" width="30" height="30"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_Baby_Milk" translatesAutoresizingMaskIntoConstraints="NO" id="JSa-AU-iGd">
+                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="epp-wL-M0B"/>
+                                    <constraint firstAttribute="width" constant="30" id="uOf-DI-UIy"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JSa-AU-iGd" firstAttribute="centerX" secondItem="hPn-dL-Mdz" secondAttribute="centerX" id="8VM-zp-B2A"/>
+                            <constraint firstAttribute="width" constant="30" id="HCP-5S-FfF"/>
+                            <constraint firstAttribute="height" constant="30" id="hgu-gJ-04o"/>
+                            <constraint firstItem="JSa-AU-iGd" firstAttribute="top" secondItem="hPn-dL-Mdz" secondAttribute="top" id="nNw-mC-NHw"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPz-AV-UtF">
+                        <rect key="frame" x="46" y="8" width="399" height="128.5"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1dV-7L-mHN">
+                                <rect key="frame" x="3" y="1" width="396" height="126.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1dV-7L-mHN" firstAttribute="top" secondItem="bPz-AV-UtF" secondAttribute="top" constant="1" id="08o-2O-DXd"/>
+                            <constraint firstAttribute="trailing" secondItem="1dV-7L-mHN" secondAttribute="trailing" id="9mk-Ki-awQ"/>
+                            <constraint firstAttribute="bottom" secondItem="1dV-7L-mHN" secondAttribute="bottom" constant="1" id="ct3-b9-8K2"/>
+                            <constraint firstItem="1dV-7L-mHN" firstAttribute="leading" secondItem="bPz-AV-UtF" secondAttribute="leading" constant="3" id="ngr-GE-PL5"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="Iic-cg-mrS" firstAttribute="top" secondItem="9Ls-ms-94a" secondAttribute="bottom" id="3bZ-9P-Fwo"/>
+                    <constraint firstItem="bPz-AV-UtF" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="ADy-SA-9VH"/>
+                    <constraint firstItem="hPn-dL-Mdz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="15" id="Eco-h0-qIe"/>
+                    <constraint firstItem="9Ls-ms-94a" firstAttribute="bottom" secondItem="hPn-dL-Mdz" secondAttribute="top" id="JRc-ae-4Xl"/>
+                    <constraint firstItem="9Ls-ms-94a" firstAttribute="centerX" secondItem="hPn-dL-Mdz" secondAttribute="centerX" id="Qdl-i7-8ju"/>
+                    <constraint firstItem="hPn-dL-Mdz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="SEi-hJ-17v"/>
+                    <constraint firstItem="9Ls-ms-94a" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="Wea-8W-o6X"/>
+                    <constraint firstItem="Iic-cg-mrS" firstAttribute="top" secondItem="hPn-dL-Mdz" secondAttribute="bottom" id="Zmt-uo-rCE"/>
+                    <constraint firstItem="9Ls-ms-94a" firstAttribute="centerX" secondItem="hPn-dL-Mdz" secondAttribute="centerX" id="fTo-ig-keo"/>
+                    <constraint firstItem="hPn-dL-Mdz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="hbr-Dd-nQ2"/>
+                    <constraint firstItem="bPz-AV-UtF" firstAttribute="leading" secondItem="hPn-dL-Mdz" secondAttribute="trailing" constant="3" id="lOq-id-SdP"/>
+                    <constraint firstItem="bPz-AV-UtF" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="oV9-nP-b0k"/>
+                    <constraint firstItem="Iic-cg-mrS" firstAttribute="centerX" secondItem="9Ls-ms-94a" secondAttribute="centerX" id="sPc-EW-ekI"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Iic-cg-mrS" secondAttribute="bottom" constant="-8" id="vuA-3N-7za"/>
+                    <constraint firstItem="9Ls-ms-94a" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="13" id="xgT-Q2-5bm"/>
+                    <constraint firstItem="Iic-cg-mrS" firstAttribute="top" secondItem="hPn-dL-Mdz" secondAttribute="bottom" constant="3" id="yPA-HJ-axf"/>
+                    <constraint firstItem="bPz-AV-UtF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="ydg-1I-HXt"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="SEi-hJ-17v"/>
+                        <exclude reference="fTo-ig-keo"/>
+                        <exclude reference="xgT-Q2-5bm"/>
+                        <exclude reference="3bZ-9P-Fwo"/>
+                        <exclude reference="Zmt-uo-rCE"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="imageMenutype" destination="JSa-AU-iGd" id="pQf-aK-TTr"/>
+                <outlet property="tableContent" destination="1dV-7L-mHN" id="yEM-oE-ekh"/>
+                <outlet property="viewContent" destination="bPz-AV-UtF" id="u18-Yv-F0z"/>
+                <outlet property="viewTime" destination="hPn-dL-Mdz" id="WJB-ys-r11"/>
+            </connections>
+            <point key="canvasLocation" x="110.5" y="-371.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Icon_Baby_Milk" width="60" height="60"/>
+    </resources>
+</document>

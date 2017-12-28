@@ -1,0 +1,179 @@
+<header ng-include="'templates/header.html'"></header>
+<section>
+    <div class="leftpanel" ng-include="'templates/left_menu.html'"></div>
+    <div class="mainpanel">
+        <div class="contentpanel">
+            <ol class="breadcrumb breadcrumb-quirk">
+                <li><a href="#/"><i class="fa fa-home mr5"></i>
+                    <translate>Dashboard</translate>
+                </a></li>
+                <li class="active">
+                    <translate>Question Library</translate>
+                </li>
+            </ol>
+            <!-- BEGIN Well -->
+            <div class="well well-asset-options well-search-box">
+                <!-- BEGIN Search Form -->
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="form-group form-mrgn-bttm">
+                            <select id="select1" class="form-control" style="width: 100%;" ng-model="department_code" data-placeholder="{{'Select department'|translate}}" ui-select2="{minimumResultsForSearch: -1}">
+                                <option></option>
+                                <option ng-bind="'All' | translate" value="-1"></option>
+                                <option ng-repeat="item in departmentList" value="{{item.department_code}}" ng-selected="item.department_code==department_code">{{item.department_name}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="form-group form-mrgn-bttm">
+                            <select id="select2" class="form-control" style="width: 100%;" ng-model="question_type" data-placeholder="{{'Select question type'|translate}}" ui-select2="{minimumResultsForSearch: -1}">
+                                <option></option>
+                                <option ng-repeat="option in questionType" value="{{option.question_type}}">{{option.text}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="form-group form-mrgn-bttm">
+                            <input id="title" type="text" class="form-control" placeholder="{{'Enter question title' | translate}}">
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="form-group">
+                            <div class="form-group">
+                                <button class="btn btn-success btn-block" id="btn_search_question" ng-click="searchQuestion()">
+                                    <translate>Search Now</translate>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- END Search Form -->
+            </div><!-- BEGIN Well -->
+
+            <!-- BEGIN Panel -->
+            <div class="panel">
+                <div class="panel-heading">
+                    <div class="clearfix" id="clearfix">
+                        <div class="pull-left">
+                            <h5 class="panel-title mb5">
+                                <translate>Search result</translate>
+                            </h5>
+                            <p class="mb20">
+                                <translate>Result <strong class="highlight">{{recordsTotal}}</strong> questions.</translate>
+                            </p>
+                        </div>
+                        <div class="pull-right">
+                            <button class="btn btn-danger" ng-click="confirmQuestion()">
+                                <translate>Delete Selected</translate>
+                            </button>
+                            <button class="btn btn-success" onClick="location.href='#/questions/create'"><i class="fa fa-plus"></i>
+                                <translate>Create Question</translate>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <!-- BEGIN Table -->
+                    <div class="table-responsive">
+                        <table datatable dt-options="dtOptions" dt-columns="dtColumns" dt-column-defs="dtColumnDefs" dt-instance="dtInstance" class="table table-bordered nomargin table-kk" id="question_list" style="background-color: #f0f1f4;">
+                            <thead>
+                            <tr>
+                                <th style="width: 13px;" class="text-center">
+                                    <label class="ckbox">
+                                        <input id="checkAll" type="checkbox" ng-model="selectedAll" ng-click="checkAll()" checked="checked"><span></span>
+                                    </label>
+                                </th>
+                                <th style="width:1px;" class="text-center"></th>
+                                <th class="sorting">
+                                    <translate>Department</translate>
+                                </th>
+                                <th class="sorting">
+                                    <translate>Question type</translate>
+                                </th>
+                                <th class="sorting">
+                                    <translate>Question</translate>
+                                </th>
+                                <th class="no-sort">&nbsp;</th>
+                                <th class="no-sort">&nbsp;</th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div><!-- END Table -->
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal bounceIn animated modal-kk" id="question-popup" tabindex="-1" role="dialog"
+                 aria-labelledby="question-title" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="question-title"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <div id="description"></div>
+                            <div class="form-group">
+                                <div class="input-group input-group-kk">
+                                    <input type="text" id="filter" class="form-control" placeholder="{{'Enter keyword to search' | translate}}">
+                                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                                </div>
+                            </div>
+                            <ul class="box-list-item">
+                            </ul>
+                        </div>
+                    </div><!-- modal-content -->
+                </div><!-- modal-dialog -->
+            </div><!-- modal -->
+            <!-- Modal -->
+            <div class="modal bounceIn animated modal-kk" id="question-delete" tabindex="-1" role="dialog"
+                 aria-labelledby="question-delete" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="question-delete-title">
+                                <translate>Do you want delete this questions ?</translate>
+                            </h4>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="form-group">
+                                <button class="btn btn-danger" ng-click="deleteQuestion()">
+                                    <translate>Delete</translate>
+                                </button>
+                                <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">
+                                    <translate>Cancel</translate>
+                                </button>
+                            </div>
+                        </div>
+                    </div><!-- modal-content -->
+                </div><!-- modal-dialog -->
+            </div><!-- modal -->
+            <!-- content goes here... -->
+        </div>
+    </div>
+</section>
+
+<script>
+    $(document).ready(function () {
+        $(function () {
+            //    $('#select1').select2();
+            /*    $('#select2').select2({
+             minimumResultsForSearch: Infinity
+             });*/
+        });
+    });
+</script>
+<style>
+    #question_list a {
+        color: #ffffff;
+    }
+    #question_list_wrapper table {
+        width: 100% !important;
+    }
+</style>
+<script type="text/javascript">
+    $(document).keypress(function(e) {
+        if(e.which == 13) {
+            $( "#btn_search_question" ).trigger( "click" );
+        }
+    });
+</script>

@@ -1,0 +1,19 @@
+message OCS0223U00GrdOCS0223Request {
+	optional string jundal_part = 1;
+}
+
+message OCS0223U00GrdOCS0223Response {
+	repeated OCS0223U00GrdOCS0223Info info = 1;
+}
+
+message OCS0223U00CboSystemRequest {
+}
+
+message OCS0223U00CboSystemResponse {
+	repeated ComboListItemInfo info = 1;
+}
+
+message OCS0223U00ExecutionRequest{
+	repeated OCS0223U00GrdOCS0223Info info = 1;
+	optional string user_id = 2;
+}

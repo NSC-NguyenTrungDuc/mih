@@ -1,0 +1,535 @@
+import "rpc.proto";
+import "phys_model.proto";
+import "common_model.proto";
+
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "PhysServiceProto";
+option (version) = "1.0.0";
+option (service) = "phys";
+//---Common Upadate Reponse
+
+//[START] PHY8002U00
+message PHY8002U00GrdQueryRequest {
+	optional string code_type = 1;
+}
+message PHY8002U00GrdGroupQueryRequest {
+	optional string code_type = 1;
+}
+
+message PHY8002U00GrdQueryResponse {
+	repeated PHY8002U00GrdQueryInfo grd_info = 1;
+}
+
+message PHY8002U00GrdPHYRequest {
+    optional string fk_ocs = 1;
+    optional string kanja_no = 2;
+    optional string fk_ocs_irai = 3;
+}
+
+message PHY8002U00GrdPHYResponse {
+    repeated PHY8002U00GrdPHY8002Info grd8002_info = 1;
+    repeated PHY8002U00GrdPHY8003Info grd8003_info = 2;
+    repeated PHY8002U00GrdPHY8004Info grd8004_info = 3;
+}
+
+message PHY8002U00PrintRequest {
+    optional string gwa = 1;
+}
+
+message PHY8002U00PrintResponse {
+    repeated DataStringListItemInfo info = 1;
+    repeated PHY8002U00DtHospInfo dt_info = 2;
+}
+
+message PHY8002U00SaveLayoutRequest {
+    optional string user_id = 1;
+    optional string fk_ocs = 2;
+    optional string io_kubun = 3;
+
+    repeated PHY8002U00GrdPHY8002Info phy8002_info = 4;
+    repeated PHY8002U00GrdPHY8003Info phy8003_info = 5;
+    repeated PHY8002U00GrdPHY8004Info phy8004_info = 6;
+
+    optional string approve_doctor_gwa = 7;
+    optional string approve_doctor_id = 8;
+    optional string pk_scan001 = 9;
+    optional string bunho = 10;
+    optional string copy_pkocskey = 11;
+    optional string user_gubun = 12;
+    optional string leave_cnt = 13;
+}
+
+message PHY8002U00SaveLayoutResponse {
+    optional bool result_8002 = 1;
+    optional bool result_8003 = 2;
+    optional bool result_8004 = 3;
+    optional string pk_phy8002 = 4;
+    optional string msg_case3 = 5;
+    repeated PHY8002U00GrdPHY8002Info setPHY8002Info = 6;
+}
+
+
+message PHY8002U00InsertInitValueRequest {
+}
+
+message PHY8002U00InsertInitValueResponse {
+	optional string t_chk = 1;
+	optional string ret_val = 2;
+}
+
+message PHY8002U00SetPHY8002Request {
+	optional string bunho = 1;
+	optional string in_out_gubun = 2;
+}
+
+message PHY8002U00SetPHY8002Response {
+	optional string seq = 1;
+	optional string jaewon_ho_dong = 2;
+	optional string last_ipwon_date = 3;
+}
+//[END] PHY8002U00
+
+//[START] PHY2001U04
+message PHY2001U04GrdExcelRequest
+{
+	optional string naewon_date           = 1;
+	optional string gwa                   = 2;
+	optional string doctor                = 3;
+	optional string bunho                 = 4;
+	optional string jubsu_gubun           = 5;
+	optional string jinryo_yn             = 6;
+	optional string naewon_yn             = 7;
+}
+message PHY2001U04GrdExcelResponse
+{
+	repeated PHY2001U04GrdExcelInfo grd_excel_item = 1;
+}
+message PHY2001U04GrdInpRequest
+{
+	optional string order_date = 1;
+}
+message PHY2001U04GrdInpResponse
+{
+	repeated PHY2001U04GrdInpInfo grd_inp_item = 1;
+}
+message PHY2001U04GrdListRequest
+{
+	optional string bunho                  = 1;
+	optional string stat_flg               = 2;
+	optional string naewon_date            = 3;
+	optional string gwa                    = 4;
+	optional string doctor                 = 5;
+	optional string gubun                  = 6;        
+}
+message PHY2001U04GrdListResponse
+{
+	repeated PHY2001U04GrdListInfo grd_list_item = 1;
+}
+message PHY2001U04GrdOutRequest
+{
+	optional string order_date = 1;
+}
+message PHY2001U04GrdOutResponse
+{
+	repeated PHY2001U04GrdOutInfo grd_out_item = 1;
+}
+message PHY2001U04GrdOut1001Request
+{
+	optional string gwa                 = 1;
+	optional string bunho               = 2;
+	optional string naewon_date         = 3;
+}
+message PHY2001U04GrdOut1001Response
+{
+	repeated PHY2001U04GrdOut1001Info grd_out_1001_item = 1;
+}
+message PHY2001U04GrdPaCntRequest
+{
+	optional string naewon_date = 1;
+}
+message PHY2001U04GrdPaCntResponse
+{
+	repeated PHY2001U04GrdPaCntInfo grd_pa_cnt_item = 1;
+}
+message PHY2001U04LayDoctorNameRequest
+{
+	optional string doctor      = 1;
+	optional string date        = 2;
+}
+message PHY2001U04StringResponse
+{
+	optional string res_str = 1;
+}
+message PHY2001U04GrdPatientListRequest
+{
+	optional string naewon_date            = 1;
+	optional string gwa                    = 2;
+	optional string doctor                 = 3;
+	optional string bunho                  = 4;
+	optional string jubsu_gubun            = 5;
+	optional string jinryo_yn              = 6;
+	optional string naewon_yn              = 7;
+	optional string sys_id                 = 8;
+}
+message PHY2001U04GrdPatientListResponse
+{
+	repeated PHY2001U04GrdPatientListInfo grd_patient_item = 1;
+}
+message PHY2001U04CboGwaRequest
+{
+	optional string buseo_ymd = 1;
+}
+message PHY2001U04SetSinryouryouAutoRequest
+{
+	optional string code1             = 1;
+	optional string code2             = 2;
+	optional string code_type         = 3;
+}
+message PHY2001U04SetSinryouryouAutoResponse
+{
+	required string obj1 = 1;
+	required string obj2 = 2;
+}
+message PHY2001U04FnOutCheckNaewonYnRequest
+{
+	optional string bunho                  = 1;
+	optional string naewon_date            = 2;
+	optional string gwa                    = 3;
+	optional string doctor                 = 4;
+	optional string naewon_type            = 5;
+	optional string jubsu_no               = 6;
+	optional string chojae                 = 7;
+}
+message PHY2001U04GrdPatientListItemValueChangingRequest
+{
+	optional string order_date             = 1;
+	optional string bunho                  = 2;
+	optional string fkout1001              = 3;
+	optional string doctor                 = 4;
+	optional string sinryouryou_gubun      = 5;
+	optional string input_id               = 6;
+	optional string input_tab              = 7;
+	optional string iud_gubun              = 8;
+	optional string naewon_yn              = 9;
+	optional string arrive_time            = 10;
+	optional string jubsu_gubun            = 11;
+	optional string previous_value         = 12;
+	optional string changed_value          = 14;
+	optional string user_id                = 15;
+	optional bool cbx_sinryouryou          = 16;
+}
+message PHY2001U04GrdPatientListItemValueChangingResponse
+{
+	required bool success                          = 1;
+	optional string result                         = 2;
+	optional string result_msg                     = 3;
+}
+message PHY2001U04BtnDeleteGetDataTableRequest
+{
+	optional string bunho                   = 1;
+	optional string pkout1001               = 2;
+}
+message PHY2001U04BtnDeleteGetDataTableResponse
+{
+	repeated PHY2001U04BtnDeleteGetDataTableInfo tbl_item = 1;
+}
+message PHY2001U04PrRehAddRehasinryouryouRequest
+{
+	optional string order_date                                               = 1;
+	optional string bunho                                                    = 2;
+	optional string fkout1001                                                = 3;
+	optional string doctor                                                   = 4;
+	optional string input_id                                                 = 5;
+	optional string input_tab                                                = 6;
+	optional string iud_gubun                                                = 7;
+	repeated PHY2001U04PrRehAddRehasinryouryouInfo sinryouryou_gubun         = 8;
+}
+message PHY2001U04PrRehAddRehasinryouryouResponse
+{
+	optional string result                 = 1;
+	optional string result_msg             = 2;
+}
+message PHY2001U04BtnDeleteExistYnRequest
+{
+	optional string pkout1001 = 1;
+}
+message PHY2001U04BtnDeleteRequest
+{
+	optional string iud_gubun              = 1;
+	optional string user                   = 2;
+	optional string naewon_date            = 3;
+	optional string bunho                  = 4;
+	optional string gwa                    = 5;
+	optional string gubun                  = 6;
+	optional string tuyak_ilsu             = 7;
+	optional string doctor                 = 8;
+	optional string in_out                 = 9;
+	optional string chart_gwa              = 10;
+	optional string special_yn             = 11;
+	optional string toiwon_date            = 12;
+	optional string pkout1001              = 13;
+}
+message PHY2001U04BtnJinryouEndClickUpdateOut1001Request
+{
+	optional string naewon_yn = 1;
+	optional string pkout1001 = 2;
+}
+message PHY2001U04BtnJinryouEndClickUpdateMultipleOut1001Request
+{
+	 repeated PHY2001U04BtnJinryouEndClickUpdateMultipleOut1001Info pkout1001_lst_item = 1;
+}
+message PHY2001U04SaveLayoutRequest
+{
+	optional string user_id = 1;
+	repeated PHY2001U04SaveLayoutInfo save_layout_item = 2;
+}
+message PHY2001U04LayNUR7001Request
+{
+	optional string bunho                 = 1;
+	optional string measure_date              = 2;
+}
+message PHY2001U04LayNUR7001Response
+{
+	repeated PHY2001U04LayNUR7001Info lay_nur_item = 1;
+}
+message PHY2001U04PrOutMakeAutoJubsuRequest
+{
+	optional string pkout1001             = 1;
+	optional string gwa                   = 2;
+	optional string doctor                = 3;
+	optional string jubsu_gubun           = 4;
+	optional string user_id               = 5;
+	optional string bunho                 = 6;
+	optional string naewon_date           = 7;
+}
+message PHY2001U04FnPhyDupJubsuGubunRequest
+{
+	optional string jubsu_gubun            = 1;
+	optional string bunho                  = 2;
+	optional string gwa                    = 3;
+	optional string naewon_date            = 4;
+}
+message PHY2001U04RefreshCounterRequest
+{
+	optional string gwa                     = 1;
+	optional string naewon_date             = 2;
+}
+message PHY2001U04RefreshCounterResponse
+{
+	repeated PHY2001U04RefreshCounterInfo ref_counter_item = 1;
+}
+message PHY2001U04InsertVitalRequest
+{
+	optional string user_id                 = 1;
+	optional string bunho                   = 2;
+	optional string measure_date            = 3;
+	optional string measure_time            = 4;
+	optional string bp_to                   = 5;
+	optional string bp_from                 = 6;
+	optional string pulse                   = 7;
+	optional string bt                      = 8;
+}
+message PHY2001U04GetNewOrderFormOUTRequest
+{
+	optional string order_date              = 1;
+	optional string time_hour               = 2;
+	optional string time_min                = 3;
+	optional string time_sec                = 4;
+}
+message PHY2001U04GetNewOrderFormINPRequest
+{
+	optional string order_date              = 1;
+	optional string time_hour               = 2;
+	optional string time_min                = 3;
+	optional string time_sec                = 4;
+}
+message PHY2001U04GetServerIPRequest
+{
+	optional string code = 1;
+}
+message PHY2001U04JubsuFormCboGwaRequest
+{
+}
+message PHY2001U04CboDoctorRequest
+{
+	optional string gwa = 1;
+}
+message PHY2001U04GrdOCS0132Request
+{
+	optional string code_type = 1;
+}
+message PHY2001U04CreateAutoJubsuRequest
+{
+	optional string pkout1001               = 1;
+	optional string gwa                     = 2;
+	optional string doctor                  = 3;
+	optional string jubsu_gubun             = 4;
+	optional string user_id                 = 5;
+	optional string bunho                   = 6;
+	optional string naewon_date             = 7;
+	optional string order_date              = 8;
+	optional string fkout1001               = 9;
+	optional string sinryouryou_gubun       = 10;
+	optional string input_id                = 11;
+	optional string input_tab               = 12;
+	optional string iud_gubun               = 13;
+	required bool cbx_sinryouryou           = 14;
+}
+message PHY2001U04CreateAutoJubsuResponse
+{
+	optional string output_list0 = 1;
+	optional string output_list1 = 2;
+	optional string output_sin0  = 3;
+	optional string output_sin1  = 4;
+}
+//[END] PHY2001U04
+
+//[START] PHY0001U00
+message PHY0001U00GrdRehaSinryouryouCodeRequest {
+}
+
+message PHY0001U00GrdRehaSinryouryouCodeResponse {
+    repeated PHY0001U00GrdRehaSinryouryouCodeInfo grd_info = 1;
+}
+
+message PHY0001U00GrdOCS0132Request {
+    optional string code_type = 1;
+}
+message PHY0001U00GrdOCS0132Response {
+    repeated PHY0001U00GrdOCS0132Info grd_info = 1;
+}
+
+message PHY0001U00SaveLayoutRequest
+{
+    repeated PHY0001U00GrdRehaSinryouryouCodeInfo grd_reha_info = 1;
+    repeated PHY0001U00GrdOCS0132Info grd_ocs_info = 2;
+}
+//[END] PHY0001U00
+
+// ----- [START] PHY8002U01 ------
+message PHY8002U01GrdPHY8002Request{
+	optional string fk_ocs = 1;
+}
+
+message PHY8002U01GrdPHY8002Response{
+	repeated PHY8002U01GrdPHY8002LisItemInfo list = 1;
+}
+
+message PHY8002U01GrdPHY8003Request{
+	optional string kanja_no = 1;
+	optional string fk_ocs_irai = 2;
+}
+
+message PHY8002U01GrdPHY8003Response{
+	repeated PHY8002U01GrdPHY8003LisItemInfo list = 1;
+}
+
+message PHY8002U01GrdPHY8004Request{
+	optional string fk_ocs_irai = 1;
+}
+
+message PHY8002U01GrdPHY8004Response{
+	repeated PHY8002U01GrdPHY8004LisItemInfo list = 1;
+}
+
+message PHY8002U01MultiGrdRequest{
+	
+}
+
+message PHY8002U01MultiGrdResponse{
+	repeated PHY8002U01GrdOTListItemInfo grdOT_list = 1;
+	repeated PHY8002U01GrdOTListItemInfo grdPT_list = 2;
+	repeated PHY8002U01GrdOTListItemInfo grdST_list = 3;
+}
+
+message PHY8002U01PHY1000U00ScreenOpenRequest{
+
+}
+
+message PHY8002U01PHY1000U00ScreenOpenResponse{
+	optional string code_name = 1;
+}
+
+message PHY8002U01BtnPrintGetGwaNameRequest{
+	optional string col_name = 1;
+	optional string start_date = 2;
+	optional string end_date = 3;
+	optional string gwa = 4;
+	
+	optional string irai_date = 5;
+}
+
+message PHY8002U01BtnPrintGetGwaNameResponse{
+	optional string gwa_name = 1;
+}
+
+message PHY8002U01BtnPrintGetDataWindowRequest{
+	
+}
+
+message PHY8002U01BtnPrintGetDataWindowResponse{
+	repeated PHY8002U01BtnPrintGetDataWindowInfo info_list = 1;
+}
+
+message PHY8002U01GetLayJissekiDataRequest{
+	optional string fkocs = 1;
+	optional string in_out_gubun = 2;
+}
+
+message PHY8002U01GetLayJissekiDataResponse{
+	optional string result = 1;
+}
+
+message PHY8002U01GetPhy8002SeqRequest{
+	optional string fkocs = 1;
+}
+
+message PHY8002U01GetPhy8002SeqResponse{
+	optional string seq = 1;
+}
+
+message PHY8002U01SaveLayoutRequest{
+	optional string user_id = 1;
+	optional string fk_ocs = 2;
+	optional string io_kubun = 3;
+	repeated PHY8002U01GrdPHY8002LisItemInfo input_8002 = 4;
+	repeated PHY8002U01GrdPHY8003LisItemInfo input_8003 = 5;
+	repeated PHY8002U01GrdPHY8004LisItemInfo input_8004 = 6;
+	optional string approve_doctor_gwa = 7;
+	optional string approve_doctor_id = 8;
+	optional string pk_scan001 = 9;
+	optional string bunho = 10;
+	optional string copy_pkocskey = 11;
+	optional string user_gubun = 12;
+	optional string leave_cnt = 13;
+}
+
+message PHY8002U01SaveLayoutResponse{
+	optional bool result_8002 = 1;
+	optional bool result_8003 = 2;
+	optional bool result_8004 = 3;
+	optional string pk_phy8002 = 4;
+	optional string msg_case3 = 5;
+	repeated PHY8002U01GrdPHY8002LisItemInfo setPHY8002Info = 6;
+}
+message PHY8002U01GetScan001SeqRequest{
+
+}
+
+message PHY8002U01GetScan001SeqResponse{
+	optional string seq = 1;
+}
+
+message PHY8002U01LoadFnInpRequest{
+	optional string bunho = 1;
+}
+
+
+message PHY8002U01LoadFnInpResponse{
+	optional string value_jaewon = 1;
+	optional string value_last = 2;
+}
+
+
+
+// ----- [END] PHY8002U01 ------

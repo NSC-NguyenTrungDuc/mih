@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Aileron-Light.otf">
+            <string>Aileron-Light</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListDiapersViewController">
+            <connections>
+                <outlet property="chartView" destination="AEY-XK-lk1" id="b4z-cI-2wu"/>
+                <outlet property="constraintTableAndAdd" destination="8T1-TZ-gUM" id="Urd-Bl-BdT"/>
+                <outlet property="lblAddData" destination="CUD-LY-OvF" id="SoD-1w-wQR"/>
+                <outlet property="tableViewListDiapers" destination="36Y-3D-ZOt" id="RDb-ii-ZCd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewAdd" destination="BxX-1T-1Nu" id="35p-9e-A5s"/>
+                <outlet property="viewDownListDiapers" destination="RJo-Bt-0iq" id="V7J-jw-Fux"/>
+                <outlet property="viewIndicatorTable" destination="7ob-Pu-Z0l" id="wsu-nU-ScY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJo-Bt-0iq">
+                    <rect key="frame" x="0.0" y="210" width="600" height="390"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="36Y-3D-ZOt">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="350"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </tableView>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="7ob-Pu-Z0l">
+                            <rect key="frame" x="290" y="165" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="2K0-Ek-y6L"/>
+                                <constraint firstAttribute="height" constant="20" id="J3h-hb-fmV"/>
+                                <constraint firstAttribute="width" constant="20" id="ZwV-Pf-pKt"/>
+                            </constraints>
+                            <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                        </activityIndicatorView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BxX-1T-1Nu">
+                            <rect key="frame" x="0.0" y="350" width="600" height="40"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhO-fT-c5c">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <connections>
+                                        <action selector="actionAddData:" destination="-1" eventType="touchUpInside" id="6SF-8W-iNT"/>
+                                    </connections>
+                                </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_Add" translatesAutoresizingMaskIntoConstraints="NO" id="2eg-95-Kql">
+                                    <rect key="frame" x="257" y="10" width="20" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="KcH-hj-R8Q"/>
+                                        <constraint firstAttribute="width" constant="20" id="hgD-4j-sos"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUD-LY-OvF">
+                                    <rect key="frame" x="280" y="8" width="40" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="40" id="drs-4v-OiM"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Aileron-Light" family="Aileron" pointSize="20"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="0.42352941179999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="CUD-LY-OvF" firstAttribute="centerX" secondItem="BxX-1T-1Nu" secondAttribute="centerX" id="9Ia-RT-uxH"/>
+                                <constraint firstAttribute="trailing" secondItem="OhO-fT-c5c" secondAttribute="trailing" id="L9x-lH-Xz2"/>
+                                <constraint firstItem="2eg-95-Kql" firstAttribute="centerY" secondItem="BxX-1T-1Nu" secondAttribute="centerY" id="Lpk-dN-5l8"/>
+                                <constraint firstAttribute="height" constant="40" id="UTe-Vn-aKW"/>
+                                <constraint firstItem="CUD-LY-OvF" firstAttribute="leading" secondItem="2eg-95-Kql" secondAttribute="trailing" constant="3" id="gsr-AY-Q0L"/>
+                                <constraint firstAttribute="bottom" secondItem="OhO-fT-c5c" secondAttribute="bottom" id="hdW-GQ-Kae"/>
+                                <constraint firstItem="OhO-fT-c5c" firstAttribute="leading" secondItem="BxX-1T-1Nu" secondAttribute="leading" id="lCa-aF-MDZ"/>
+                                <constraint firstItem="OhO-fT-c5c" firstAttribute="top" secondItem="BxX-1T-1Nu" secondAttribute="top" id="sn8-0w-v6h"/>
+                                <constraint firstItem="CUD-LY-OvF" firstAttribute="centerY" secondItem="BxX-1T-1Nu" secondAttribute="centerY" id="xDb-iC-T2F"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="7ob-Pu-Z0l" firstAttribute="centerY" secondItem="36Y-3D-ZOt" secondAttribute="centerY" id="04t-bc-Rk2"/>
+                        <constraint firstItem="36Y-3D-ZOt" firstAttribute="leading" secondItem="RJo-Bt-0iq" secondAttribute="leading" id="3Ly-vp-NM7"/>
+                        <constraint firstItem="7ob-Pu-Z0l" firstAttribute="centerX" secondItem="36Y-3D-ZOt" secondAttribute="centerX" id="3Tc-gi-Pbt"/>
+                        <constraint firstAttribute="trailing" secondItem="BxX-1T-1Nu" secondAttribute="trailing" id="8Lg-Ae-CEH"/>
+                        <constraint firstItem="BxX-1T-1Nu" firstAttribute="top" secondItem="36Y-3D-ZOt" secondAttribute="bottom" id="8T1-TZ-gUM"/>
+                        <constraint firstAttribute="trailing" secondItem="36Y-3D-ZOt" secondAttribute="trailing" id="bMp-js-qvc"/>
+                        <constraint firstItem="36Y-3D-ZOt" firstAttribute="top" secondItem="RJo-Bt-0iq" secondAttribute="top" id="dPf-me-kMu"/>
+                        <constraint firstAttribute="bottom" secondItem="BxX-1T-1Nu" secondAttribute="bottom" id="lFV-WB-PpE"/>
+                        <constraint firstItem="BxX-1T-1Nu" firstAttribute="leading" secondItem="RJo-Bt-0iq" secondAttribute="leading" id="nph-S9-kKF"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AEY-XK-lk1" customClass="PHRChart">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="210"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="4op-Bv-GBq"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="4op-Bv-GBq"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="AEY-XK-lk1" secondAttribute="trailing" id="5sB-dq-rp8"/>
+                <constraint firstAttribute="bottom" secondItem="RJo-Bt-0iq" secondAttribute="bottom" id="Fbk-bV-C4U"/>
+                <constraint firstItem="AEY-XK-lk1" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.35" id="Jg0-w2-ZNp"/>
+                <constraint firstItem="AEY-XK-lk1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="L14-lP-76n"/>
+                <constraint firstItem="RJo-Bt-0iq" firstAttribute="top" secondItem="AEY-XK-lk1" secondAttribute="bottom" id="RWj-LZ-HhF"/>
+                <constraint firstItem="AEY-XK-lk1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="RYI-ek-Uom"/>
+                <constraint firstItem="RJo-Bt-0iq" firstAttribute="top" secondItem="AEY-XK-lk1" secondAttribute="bottom" id="W58-Ki-lM4"/>
+                <constraint firstItem="AEY-XK-lk1" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.35" id="ZSP-Ds-fyb"/>
+                <constraint firstItem="RJo-Bt-0iq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aVP-eq-450"/>
+                <constraint firstAttribute="trailing" secondItem="RJo-Bt-0iq" secondAttribute="trailing" id="yeI-Jg-nzM"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="ZSP-Ds-fyb"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="-470" y="91"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Icon_Add" width="21" height="21"/>
+    </resources>
+</document>

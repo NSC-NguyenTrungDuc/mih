@@ -1,0 +1,430 @@
+
+	/* Edit style for kendo inpu */
+	.k-multiselect-wrap .k-input:before { content:'Search by name';}
+	
+	.k-autocomplete, .k-button, .k-draghandle, .k-dropdown-wrap, .k-grid-header, .k-grouping-header, .k-header, .k-numeric-wrap, .k-pager-wrap, .k-panelbar .k-tabstrip-items .k-item, .k-picker-wrap, .k-progressbar, .k-state-highlight, .k-tabstrip-items .k-item, .k-textbox, .k-toolbar, .km-pane-wrapper>.km-pane>.km-view>.km-content {background:none!important;}
+	.k-autocomplete .k-input, .k-multiselect-wrap, .k-textbox>input {border-radius:0px!important;  padding:0.4em 0.4em 0em 0.4em;}
+	.k-multiselect-wrap li {margin-right:0.5em; margin-bottom:0.5em;}
+	.k-button.k-state-hover {background:#d9dade!important;}
+	.k-calendar .k-content .k-link {text-align:center; padding:0.1em;}
+	
+	.k-calendar .k-header .k-icon {vertical-align: middle; margin-top: 5px;}
+	
+	.list-date {font-family:sans-serif;}
+	.list-date{padding:0px 0px 10px 0px!important;}
+	.k-state-selected {background:#d9dade!important; border-radius:0px; font-weight:bold;}
+	.k-calendar td.k-state-selected .k-link, .k-calendar td.k-today.k-state-selected.k-state-hover .k-link {
+    color: #000;}
+	
+	.k-autocomplete.k-state-border-up, .k-calendar-container.k-state-border-up, .k-dropdown-wrap.k-state-border-up, .k-filter-menu, .k-list-container.k-state-border-up, .k-multiselect.k-state-border-up, .k-numeric-wrap.k-state-border-up, .k-picker-wrap.k-state-border-up, .k-window-content {border-radius:0px!important;}
+	
+	.k-autocomplete.k-state-border-down, .k-autocomplete.k-state-border-up, .k-datepicker-calendar, .k-dropdown-wrap.k-state-active, .k-filebrowser .k-image, .k-grid .k-filter-options, .k-menu .k-menu-group, .k-multiselect.k-state-focused, .k-picker-wrap.k-state-active, .k-popup, .k-time-popup, .k-tooltip {
+    -webkit-box-shadow: none);
+    box-shadow: none; }
+	
+	.k-autocomplete, .k-block, .k-button, .k-calendar .k-link, .k-calendar td, .k-calendar-container, .k-colorpicker, .k-combobox, .k-datepicker, .k-datetimepicker, .k-drag-clue, .k-dropdown, .k-dropdown-wrap, .k-editor-inline, .k-gantt-views>.k-current-view, .k-grid .k-filter-options, .k-grouping-header .k-group-indicator, .k-inline-block, .k-list-container, .k-multiselect, .k-notification, .k-numeric-wrap, .k-numerictextbox, .k-picker-wrap, .k-slider-selection, .k-slider-track, .k-split-button .k-gantt-views, .k-textbox, .k-tile, .k-timepicker, .k-tooltip, .k-touch-scrollbar, .k-treeview .k-in, .k-upload, .k-window, .k-window-action, .k-window-titleless .k-window-content {border-radius:0px;}
+	
+	
+	.k-button.k-state-focused, .k-grid-header th.k-state-focused, .k-list>.k-state-focused, .k-listview>.k-state-focused, .k-state-focused, td.k-state-focused {
+    -webkit-box-shadow: none;
+    box-shadow:none;}
+	.k-link .k-nav-fast .k-state-hover {background:#000!important;border-radius:0px;}
+	.k-calendar .k-link.k-state-hover{border-radius:0px;}
+	.k-calendar .k-content .k-link .k-state-hover{border-radius:0px;}
+	
+	
+	/* End edit style for kendo input */
+  
+  
+  	body{
+  		font-size: 15px;
+  	}
+    hr{
+      border-width: 0;
+      height: 1px;
+      background-color: #ccc;
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+  	
+  	.wrapper{
+  		width: 820px;
+  		margin-top: 0;
+  		margin-right: auto;
+  		margin-left: auto;
+  		margin-bottom: 0;
+  	}
+    .page-title{
+      font-size: 40px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+    .title{
+      font-size: 24px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    .text-center{
+      text-align: center;
+    }
+    .text-right{
+      text-align: right;
+    }
+    .uppercase{
+      text-transform: uppercase;
+    }
+    .table {
+      border-spacing: 0;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    .table .td-title{
+      width: 200px;
+      padding-right: 20px;
+    }
+    .table .td-content {
+      width: 600px;
+    }
+    .table tr th {
+      text-align: left;
+      vertical-align: top;    
+    }
+    .table tr td {
+      vertical-align: top;
+    }
+    .table tr.row > td,
+    .table tr.row > th{
+      padding-bottom: 20px;
+    }
+
+    .label{
+      margin-top: 3px;
+      margin-bottom: 7px;
+    }
+    .input{
+      border-width: 1px;
+      border-style: solid;
+      border-color: #ccc;
+      padding-top: 7px;
+      padding-left: 12px;
+      padding-right: 12px;
+      padding-bottom: 7px;
+    }
+    .input:focus{
+      border-color: #666;
+    }
+    .input:disabled{
+      background-color: #f5f5f5;
+      color: #666;
+    }
+    .table .td-content .input-block{
+      width: 574px;
+    }
+    .table .td-full .input-block{
+      width: 774px;
+    }
+    select.input{
+      padding-left: 11px;
+      padding-right: 11px;
+    }
+    .table .td-content .select-block {
+      width: 100%;
+    }
+    select.input option {
+      padding-left: 13px;
+      padding-right: 13px;
+    }
+    .btn-submit-inline{
+      padding-top: 7px;
+      padding-left: 12px;
+      padding-right: 12px;
+      padding-bottom: 7px;
+      display: inline-block;
+      background: #666;
+      color: #fff;
+      border: 0;
+      cursor: pointer;
+    }
+    .list-date{
+      padding: 10px 0;
+    }
+    .box{
+      background-color: #f5f5f5;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-width: 1px;
+      border-style: dashed;
+      border-color: #ccc;
+    }
+    .button{
+      font-size: 18px;
+      background-color: #2a75a9;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 25px;
+      padding-right: 25px;
+      color: #fff;
+      border-width: 0;
+      cursor: pointer;
+    }
+    .pika-single {
+        z-index: 9999;
+        display: block;
+        position: relative;
+        color: #333;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-bottom-color: #bbb;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    /*
+    clear child float (pika-lendar), using the famous micro clearfix hack
+    http://nicolasgallagher.com/micro-clearfix-hack/
+    */
+    .pika-single:before,
+    .pika-single:after {
+        content: " ";
+        display: table;
+    }
+    .pika-single:after { clear: both }
+    .pika-single { *zoom: 1 }
+
+    .pika-single.is-hidden {
+        display: none;
+    }
+
+    .pika-single.is-bound {
+        position: absolute;
+        box-shadow: 0 5px 15px -5px rgba(0,0,0,.5);
+    }
+
+    .pika-lendar {
+        float: left;
+        width: 240px;
+        margin: 8px;
+    }
+
+    .pika-title {
+        position: relative;
+        text-align: center;
+    }
+
+    .pika-label {
+        display: inline-block;
+        *display: inline;
+        position: relative;
+        z-index: 9999;
+        overflow: hidden;
+        margin: 0;
+        padding: 5px 3px;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: bold;
+        background-color: #fff;
+    }
+    .pika-title select {
+        cursor: pointer;
+        position: absolute;
+        z-index: 9998;
+        margin: 0;
+        left: 0;
+        top: 5px;
+        filter: alpha(opacity=0);
+        opacity: 0;
+    }
+
+    .pika-prev,
+    .pika-next {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        outline: none;
+        border: 0;
+        padding: 0;
+        width: 20px;
+        height: 30px;
+        /* hide text using text-indent trick, using width value (it's enough) */
+        text-indent: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        background-color: transparent;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 75% 75%;
+        opacity: .5;
+        *position: absolute;
+        *top: 0;
+    }
+
+    .pika-prev:hover,
+    .pika-next:hover {
+        opacity: 1;
+    }
+
+    .pika-prev,
+    .is-rtl .pika-next {
+        float: left;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAUklEQVR42u3VMQoAIBADQf8Pgj+OD9hG2CtONJB2ymQkKe0HbwAP0xucDiQWARITIDEBEnMgMQ8S8+AqBIl6kKgHiXqQqAeJepBo/z38J/U0uAHlaBkBl9I4GwAAAABJRU5ErkJggg==');
+        *left: 0;
+    }
+
+    .pika-next,
+    .is-rtl .pika-prev {
+        float: right;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAU0lEQVR42u3VOwoAMAgE0dwfAnNjU26bYkBCFGwfiL9VVWoO+BJ4Gf3gtsEKKoFBNTCoCAYVwaAiGNQGMUHMkjGbgjk2mIONuXo0nC8XnCf1JXgArVIZAQh5TKYAAAAASUVORK5CYII=');
+        *right: 0;
+    }
+
+    .pika-prev.is-disabled,
+    .pika-next.is-disabled {
+        cursor: default;
+        opacity: .2;
+    }
+
+    .pika-select {
+        display: inline-block;
+        *display: inline;
+    }
+
+    .pika-table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 0;
+    }
+
+    .pika-table th,
+    .pika-table td {
+        width: 14.285714285714286%;
+        padding: 0;
+    }
+
+    .pika-table th {
+        color: #999;
+        font-size: 12px;
+        line-height: 25px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .pika-button {
+        cursor: pointer;
+        display: block;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        outline: none;
+        border: 0;
+        margin: 0;
+        width: 100%;
+        padding: 5px;
+        color: #666;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: right;
+        background: #f5f5f5;
+    }
+
+    .pika-week {
+        font-size: 11px;
+        color: #999;
+    }
+
+    .is-today .pika-button {
+        color: #33aaff;
+        font-weight: bold;
+    }
+
+    .is-selected .pika-button {
+        color: #fff;
+        font-weight: bold;
+        background: #33aaff;
+        box-shadow: inset 0 1px 3px #178fe5;
+        border-radius: 3px;
+    }
+
+    .is-inrange .pika-button {
+        background: #D5E9F7;
+    }
+
+    .is-startrange .pika-button {
+        color: #fff;
+        background: #6CB31D;
+        box-shadow: none;
+        border-radius: 3px;
+    }
+
+    .is-endrange .pika-button {
+        color: #fff;
+        background: #33aaff;
+        box-shadow: none;
+        border-radius: 3px;
+    }
+
+    .is-disabled .pika-button {
+        pointer-events: none;
+        cursor: default;
+        color: #999;
+        opacity: .3;
+    }
+
+    .pika-button:hover {
+        color: #fff;
+        background: #ff8000;
+        box-shadow: none;
+        border-radius: 3px;
+    }
+
+    /* styling for abbr */
+    .pika-table abbr {
+        border-bottom: none;
+        cursor: help;
+    }
+	mark {
+    background-color: #effeff;
+    color: #000000;
+	padding:5px;
+	}
+
+  .k-content{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  .k-content th, .k-footer a{
+	color: #999;
+    font-size: 12px;
+    line-height: 25px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .k-content td{
+    cursor: pointer;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    border: 0;
+    margin: 0;
+    width: 100%;
+    padding: 5px;
+    color: #666;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+    background: #f5f5f5;
+  }
+  .k-header a{    
+	display: inline-block;
+    position: relative;
+    z-index: 9999;
+    overflow: hidden;
+    margin: 0;
+    padding: 5px 3px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold;
+    background-color: #fff;
+  }
+  .k-nav-today:hover{
+	  text-decoration: none !important;
+  }

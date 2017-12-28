@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+	<Properties>
+		<Property name="log-path">D:/logs</Property>
+	</Properties>
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+		<RollingFile name="DailyFile" fileName="${log-path}/med-regisapi.log" filePattern="${log-path}/med-regisapi-%d{yyyy-MM-dd}.log">
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+     		<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+		</RollingFile>		
+		<!--<RollingFile name="LogFile" fileName="${log-path}/med-mornitor.log" filePattern="${log-path}/med-mornitor-%d{yyyy-MM-dd}.log">			-->
+			<!--<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />-->
+     		<!--<TimeBasedTriggeringPolicy interval="1" modulate="true"/>-->
+		<!--</RollingFile>	-->
+	</Appenders>
+	<Loggers>
+		<Logger name="nta.med" level="debug">
+			<AppenderRef ref="Console"/>
+			<AppenderRef ref="DailyFile" />
+		</Logger>
+		<Logger name="org.hibernate.SQL" level="debug">
+			<AppenderRef ref="Console"/>
+			<AppenderRef ref="DailyFile" />
+		</Logger>
+		<!--<Logger name="nta.med.core.infrastructure.MonitorLog" level="info">-->
+			<!--<AppenderRef ref="LogFile" />-->
+		<!--</Logger>-->
+		<Root level="error" >
+			<AppenderRef ref="DailyFile" />
+		</Root>
+	</Loggers>
+</Configuration>

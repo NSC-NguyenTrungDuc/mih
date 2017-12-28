@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BT_Cancel" xml:space="preserve">
+    <value>取 消</value>
+  </data>
+  <data name="BT_Tranfer" xml:space="preserve">
+    <value>転 送</value>
+  </data>
+  <data name="CAP_001" xml:space="preserve">
+    <value>確認</value>
+  </data>
+  <data name="CAP_15" xml:space="preserve">
+    <value>オーダ取消</value>
+  </data>
+  <data name="CAP_19" xml:space="preserve">
+    <value>オーダ転送要請成功</value>
+  </data>
+  <data name="CAP_2" xml:space="preserve">
+    <value>診療終了確認エラー</value>
+  </data>
+  <data name="CAP_20" xml:space="preserve">
+    <value>会計処理</value>
+  </data>
+  <data name="CAP_3" xml:space="preserve">
+    <value>診療終了確認</value>
+  </data>
+  <data name="CAP_4" xml:space="preserve">
+    <value>確認</value>
+  </data>
+  <data name="CAP_5" xml:space="preserve">
+    <value>再転送失敗</value>
+  </data>
+  <data name="CAP_6" xml:space="preserve">
+    <value>再転送成功</value>
+  </data>
+  <data name="CAP_8" xml:space="preserve">
+    <value>成功</value>
+  </data>
+  <data name="CAP_9" xml:space="preserve">
+    <value>オーダ転送失敗</value>
+  </data>
+  <data name="CAP_EXP" xml:space="preserve">
+    <value>転送失敗</value>
+  </data>
+  <data name="CAP_EXP_2" xml:space="preserve">
+    <value>オーダ取消失敗</value>
+  </data>
+  <data name="CAP_TRANS" xml:space="preserve">
+    <value>算定漏れ警告！</value>
+  </data>
+  <data name="CELL_1" xml:space="preserve">
+    <value>分当り</value>
+  </data>
+  <data name="CELL_10" xml:space="preserve">
+    <value> 処置</value>
+  </data>
+  <data name="CELL_11" xml:space="preserve">
+    <value>用法</value>
+  </data>
+  <data name="CELL_2" xml:space="preserve">
+    <value>時間</value>
+  </data>
+  <data name="CELL_3" xml:space="preserve">
+    <value>数量</value>
+  </data>
+  <data name="CELL_5" xml:space="preserve">
+    <value>注入</value>
+  </data>
+  <data name="CELL_7" xml:space="preserve">
+    <value>分</value>
+  </data>
+  <data name="CELL_8" xml:space="preserve">
+    <value>日</value>
+  </data>
+  <data name="CELL_9" xml:space="preserve">
+    <value> 速度</value>
+  </data>
+  <data name="DISEASE_ERR_01" xml:space="preserve">
+    <value>登録出来ない病名が存在します。</value>
+  </data>
+  <data name="DISEASE_ERR_02" xml:space="preserve">
+    <value>警告がある病名が存在します。</value>
+  </data>
+  <data name="DISEASE_ERR_11" xml:space="preserve">
+    <value>全ての病名の更新に失敗しました（追加時にエラー）。</value>
+  </data>
+  <data name="DISEASE_ERR_12" xml:space="preserve">
+    <value>全ての病名の更新に失敗しました（更新時にエラー）。</value>
+  </data>
+  <data name="DISEASE_ERR_13" xml:space="preserve">
+    <value>全ての病名の更新に失敗しました（入外区分更新時にエラー）。</value>
+  </data>
+  <data name="EXP_1" xml:space="preserve">
+    <value>外泊転送する途中問題が発生しました。電文：</value>
+  </data>
+  <data name="EXP_2" xml:space="preserve">
+    <value>傷病名を転送する途中問題が発生しました。電文：</value>
+  </data>
+  <data name="EXP_3" xml:space="preserve">
+    <value>転送するデータが存在しません。</value>
+  </data>
+  <data name="EXP_4" xml:space="preserve">
+    <value>オーダを転送する途中問題が発生しました。電文：</value>
+  </data>
+  <data name="EXP_5" xml:space="preserve">
+    <value>転送マスタ（OUT1003）作成に問題が発生しました。</value>
+  </data>
+  <data name="EXP_6" xml:space="preserve">
+    <value>オーダ情報に反映されませんでした。</value>
+  </data>
+  <data name="H_TEXT_1" xml:space="preserve">
+    <value>分割数</value>
+  </data>
+  <data name="H_TEXT_2" xml:space="preserve">
+    <value>回数</value>
+  </data>
+  <data name="lbNottranse" xml:space="preserve">
+    <value>未転送</value>
+  </data>
+  <data name="lbUnexecute" xml:space="preserve">
+    <value>未実施</value>
+  </data>
+  <data name="MAG_9" xml:space="preserve">
+    <value>患者番号を入力してください。</value>
+  </data>
+  <data name="MEDICAL_ERR_01" xml:space="preserve">
+    <value>内容が変更されているため置換できませんでした。</value>
+  </data>
+  <data name="MEDICAL_ERR_03" xml:space="preserve">
+    <value>既に同日の診療データが登録されています。</value>
+  </data>
+  <data name="MEDICAL_ERR_10" xml:space="preserve">
+    <value>中途終了データ登録エラー。</value>
+  </data>
+  <data name="MSG_001" xml:space="preserve">
+    <value>患者保険が有効ではありません。保険情報を確認してください。</value>
+  </data>
+  <data name="MSG_10" xml:space="preserve">
+    <value>オーダ転送処理</value>
+  </data>
+  <data name="MSG_11" xml:space="preserve">
+    <value>転送日付 [ </value>
+  </data>
+  <data name="MSG_12" xml:space="preserve">
+    <value> ] で</value>
+  </data>
+  <data name="MSG_13" xml:space="preserve">
+    <value>を実行しますか?</value>
+  </data>
+  <data name="MSG_14" xml:space="preserve">
+    <value>オーダ取消処理</value>
+  </data>
+  <data name="MSG_15" xml:space="preserve">
+    <value>オーダ取消の申請を成功しました。</value>
+  </data>
+  <data name="MSG_16" xml:space="preserve">
+    <value>診療区分が最大件数（19件）を超えました。再度選択して転送してください。</value>
+  </data>
+  <data name="MSG_17" xml:space="preserve">
+    <value>診療区分は最大19件まで転送可能です。転送データ確認後、ORCAにて未転送オーダを追加入力してください。</value>
+  </data>
+  <data name="MSG_18" xml:space="preserve">
+    <value>患者保険が有効ではありません。保険情報を確認してください。</value>
+  </data>
+  <data name="MSG_19" xml:space="preserve">
+    <value>オーダ転送の申請を成功しました。</value>
+  </data>
+  <data name="MSG_2" xml:space="preserve">
+    <value>診療終了情報取得に問題がありました。</value>
+  </data>
+  <data name="MSG_20" xml:space="preserve">
+    <value>会計済み処理をしました。</value>
+  </data>
+  <data name="MSG_3" xml:space="preserve">
+    <value>診療がまだ終了されておりません。診療終了状況を確認してください。</value>
+  </data>
+  <data name="MSG_4" xml:space="preserve">
+    <value>参照データがありません。</value>
+  </data>
+  <data name="MSG_5" xml:space="preserve">
+    <value>選択されたオーダがありません。</value>
+  </data>
+  <data name="MSG_6" xml:space="preserve">
+    <value>オーダを再転送しました.</value>
+  </data>
+  <data name="MSG_7" xml:space="preserve">
+    <value>患者を選択してください。</value>
+  </data>
+  <data name="MSG_8" xml:space="preserve">
+    <value>転送成功</value>
+  </data>
+  <data name="MSG_9" xml:space="preserve">
+    <value>選択されたデータがありません。</value>
+  </data>
+  <data name="MSG_ACTING_DATE_WARN" xml:space="preserve">
+    <value>未完了オーダーが残っています。作業が続きますか？</value>
+  </data>
+  <data name="MSG_CANCEL_ORDER_ERR" xml:space="preserve">
+    <value>選択オーダの転送ことが失敗しました。</value>
+  </data>
+  <data name="MSG_CAP" xml:space="preserve">
+    <value>処理</value>
+  </data>
+  <data name="MSG_CHECK_TRANS_001" xml:space="preserve">
+    <value>ORCAにおいて、 {0} [{1}] が存在していません。</value>
+  </data>
+  <data name="MSG_CHECK_TRANS_002" xml:space="preserve">
+    <value>{0} [{1}] は区分コードがありません。</value>
+  </data>
+  <data name="MSG_FAIL" xml:space="preserve">
+    <value>失敗に処理しました。</value>
+  </data>
+  <data name="MSG_FORCED_TERMINATION" xml:space="preserve">
+    <value>部門でオーダが実施完了されてません。オーダを実施してください</value>
+  </data>
+  <data name="MSG_FORCED_TERMINATION_CAP" xml:space="preserve">
+    <value>オーダ伝送処理</value>
+  </data>
+  <data name="MSG_INVALID_URL" xml:space="preserve">
+    <value>ORCAへの接続情報が間違っています。ORCAの情報を再度確認してください。</value>
+  </data>
+  <data name="MSG_NOTICE" xml:space="preserve">
+    <value>選択されたデータがありません。</value>
+  </data>
+  <data name="MSG_NOTICE_CAP" xml:space="preserve">
+    <value>オーダ伝送処理</value>
+  </data>
+  <data name="MSG_SUCCESS" xml:space="preserve">
+    <value>成功に処理しました</value>
+  </data>
+  <data name="MSG_TRANS_FAIL" xml:space="preserve">
+    <value>データ送信が失敗します。</value>
+  </data>
+  <data name="MSG_TRANS_SUCCESS" xml:space="preserve">
+    <value>データ送信が成功です。</value>
+  </data>
+  <data name="MSG_WARN_TRANS_001" xml:space="preserve">
+    <value>{0} [{1}] は医事会計システムのマスタと紐づいていません。 
+I/F各種コード管理［IFS0003U00］画面で紐づけを行ってください。 
+このまま処理を継続する場合は、［Yes］を押して転送後に医事会計システム側で薬剤を手入力してください。</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>注入量</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>部位</value>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value>分</value>
+  </data>
+  <data name="String3" xml:space="preserve">
+    <value>数</value>
+  </data>
+  <data name="TAB_1" xml:space="preserve">
+    <value>食事</value>
+  </data>
+  <data name="TAB_2" xml:space="preserve">
+    <value>外泊</value>
+  </data>
+  <data name="TAB_3" xml:space="preserve">
+    <value>転科・転棟・転室・転医</value>
+  </data>
+  <data name="TAB_4" xml:space="preserve">
+    <value>公費情報</value>
+  </data>
+  <data name="TAB_5" xml:space="preserve">
+    <value>特記事項</value>
+  </data>
+  <data name="Tab_order" xml:space="preserve">
+    <value>オーダ</value>
+  </data>
+  <data name="txtAge" xml:space="preserve">
+    <value>才</value>
+  </data>
+  <data name="xLabel6_2" xml:space="preserve">
+    <value>入院情報</value>
+  </data>
+  <data name="xLabel6_Text" xml:space="preserve">
+    <value>受付情報</value>
+  </data>
+  <data name="XMessageBox2" xml:space="preserve">
+    <value>既にオーダが会計に転送されています。</value>
+  </data>
+</root>

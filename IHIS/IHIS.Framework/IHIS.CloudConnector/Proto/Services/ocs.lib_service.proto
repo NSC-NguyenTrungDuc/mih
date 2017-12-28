@@ -1,0 +1,563 @@
+syntax = "proto2";
+
+//=======HangmogInfo START========
+message GetNextGroupSerRequest
+{
+	optional string bunho = 1;
+	optional string pk_key = 2;
+	optional string input_tab = 3;
+	optional string key_obj = 4;
+}
+
+message GetNextGroupSerResponse
+{
+	optional string result = 1;
+}
+
+message PrOcsConvertHangmogCodeRequest
+{
+	optional string conv_class = 1;
+	optional string gubun = 2;
+	optional string hangmog_code = 3;
+	optional string bunho = 4;
+	optional string order_date = 5;
+}
+
+message PrOcsConvertHangmogCodeResponse
+{
+	optional string hangmog_code = 1;
+	optional string remark = 2;
+	optional string msg_yn = 3;
+}
+
+message PrOcsLoadHangmogInfoRequest
+{
+	optional string app_date = 1;
+	optional string input_part = 2;
+	optional string input_gwa = 3;
+	optional string hangmog_code = 4;
+	optional string input_tab = 5;
+}
+
+message PrOcsLoadHangmogInfoResponse
+{
+	repeated OcsLoadHangmogInfo hangmog_info_item = 1;
+}
+
+message GetMsgInsulinRequest
+{
+	optional string direct_gubun = 1;
+	optional string hangmog_code = 2;
+}
+
+message GetMsgInsulinResponse
+{
+	optional string result = 1;
+}
+
+message DmlMaxGroupSerRequest
+{
+	optional string bunho = 1;
+	optional string pk_key = 2;
+	optional string input_tab = 3;
+	optional string max_group_ser = 4;
+	optional string key_obj = 5;
+}
+
+message DmlMaxGroupSerResponse
+{
+	optional string result = 1;
+}
+
+
+message IsOrderDataChangedEnabledRequest
+{
+	optional IsOrderDataChangedEnabledRequestInfo input_info = 1;
+}
+
+message IsOrderDataChangedEnabledResponse
+{
+	optional string result = 1;
+}
+
+message CheckHangSangInfoRequest {
+	optional CheckHangSangInfo hang_sang_info = 1;
+}
+
+message CheckHangSangInfoResponse {
+	optional DataStringListItemInfo result_check = 1;
+}
+
+//=======HangmogInfo END========
+
+
+//=======PatientInfo START========
+message PrOcsLoadBunhoInfoRequest
+{
+	optional string naewon_date = 1;
+	optional string bunho = 2;
+}
+
+message PrOcsLoadBunhoInfoResponse
+{
+	repeated LoadPatientBaseInfo patient_base_info = 1;
+}
+
+message LoadPatientNaewonListRequest
+{
+	optional string approve_doctor = 1;
+	optional string doctor_mode_yn = 2;
+	optional string io_gubun = 3;
+	optional string pk_key_out = 4;
+	optional string bunho = 5;
+	optional string naewon_date = 6;
+	optional string gwa = 7;
+	optional string doctor = 8;
+	optional string jaewon_flag = 9;
+	optional string pk_key_inp = 10;
+	optional string is_enable_Ipwon_reser = 11;
+}
+
+message LoadPatientNaewonAddInfoRequest
+{
+	optional string io_gubun = 1; // O/I
+	optional string ipwon_reser_yn = 2;
+	// In case of io_gubun = "O"
+	optional string naewon_key = 3;
+	// ipwon_reser_yn == "Y"
+	optional string reser_date = 4;
+	optional string reser_fkinp1001 = 5;
+	// ipwon_reser_yn != "Y"
+	optional string naewon_date = 6;
+	optional string jaewon_flag = 7;
+}
+
+message LoadPatientNaewonAddInfoResponse
+{
+	optional string sp_flag = 1;
+	repeated LoadPatientNaewonAddInfo patient_add_info = 2;
+	optional string ret_val = 3;
+}
+
+//=======PatientInfo END========
+
+
+
+//=======OrderInterface START========
+message PrOcsInterfaceInsertRequest
+{
+	repeated DataStringListItemInfo io_gubun = 1;
+	repeated DataStringListItemInfo pk_key = 2;
+	repeated DataStringListItemInfo user_id = 3;
+}
+
+message PrOcsInterfaceInsertResponse
+{
+	required string result = 1; // 0: success, 1: fail
+}
+//=======OrderInterface END========
+
+
+//=======OrderBiz START========
+
+message IsResultToConsultRequest
+{
+	optional IsResultToConsultRequestInfo input_info = 1;
+}
+
+message IsResultToConsultResponse
+{
+	optional string result = 1;
+}
+
+message LoadSearchOrder1Request
+{
+        optional LoadSearchOrder1RequestInfo input_info = 1;
+}
+
+message LoadSearchOrder1Response
+{
+        repeated LoadSearchOrderInfo search_result = 1;
+}
+
+message LoadSearchOrder2Request
+{
+        optional LoadSearchOrder2RequestInfo input_info = 1;
+}
+
+message LoadSearchOrder2Response
+{
+        repeated LoadSearchOrderInfo search_result = 1;
+}
+
+message IsToiwonGojiYNandEndOrderRequest
+{
+        optional IsToiwonGojiYNandEndOrderRequestInfo input_info = 1;
+}
+
+message IsToiwonGojiYNandEndOrderResponse
+{
+        optional string toiwon_goji_yn = 1;
+}
+
+//todo
+message CheckPatientStatusRequest
+{
+    optional CheckPatientStatusRequestInfo input_info = 1;
+}
+
+message CheckPatientStatusResponse
+{
+    optional string result = 1;
+}
+
+message DupCheckCPLOrder1Request
+{
+    optional DupCheckCPLOrder1RequestInfo input_info = 1;
+}
+
+message DupCheckCPLOrder1Response
+{
+    optional string result = 1;
+}
+
+message DupCheckCPLOrder2Request
+{
+    optional DupCheckCPLOrder2RequestInfo input_info = 1;
+}
+
+message DupCheckCPLOrder2Response
+{
+    optional string result = 1;
+}
+
+message DupCheckInputInpOrderRequest
+{
+    optional DupCheckInputInpOrderRequestInfo input_info = 1;
+}
+
+message DupCheckInputInpOrderResponse
+{
+    optional string result = 1;
+}
+
+message GetFindWorkerRequest{
+        optional GetFindWorkerRequestInfo info1 = 1;
+}
+
+message GetFindWorkerResponse{
+        repeated GetFindWorkerResponseInfo info1 = 1;
+}
+
+
+
+message SaveOfenUsedHangmogRequest{
+        optional SaveOfenUsedHangmogInfo info1 = 1;
+}
+
+
+message DeleteOftenUsedHangmogRequest{
+        optional DeleteOftenUsedHangmogInfo info1 = 1;
+}
+
+
+message GetJundaTable1Request{
+        optional GetJundaTableRequestInfo info1 = 1;
+}	
+message GetJundaTable1Response{
+        repeated GetJundaTableResponseInfo info1 = 1;
+}
+message GetBogyongInfo3Request{
+        optional string bogyong_code = 1;
+        optional string bogyong_gubun = 2;
+}	
+message GetBogyongInfo3Response{
+        optional string bogyong_name = 1;
+        optional string nvl = 2;
+}
+
+message OcsoProcHQNInterfaceRequest
+{
+	optional OcsoSelectedPatientInfo patient_info = 1;
+	optional string io_gubun = 2;
+	optional string data_dubun = 3;
+	optional string user_id = 4;
+}
+
+message OcsoProcHQNInterfaceResponse
+{
+	optional string pkphy7401 = 1;
+	optional string rtnIfsCnt = 2;
+}
+
+message SpeciFicCommentInputYnRequest
+{
+	optional string hanmog_code = 1;
+	optional string pkocskey = 2;
+}
+
+message SpeciFicCommentInputYnResponse
+{
+	optional bool check_table_row = 1;
+	optional string y_value = 2;
+}
+
+message OcsOrderBizGetUserOptionRequest{
+	optional string doctor = 1;
+	optional string gwa = 2;
+	optional string keyword = 3;
+	optional string ioGubun = 4;
+}
+
+message OcsOrderBizGetUserOptionResponse{
+	optional string result = 1;
+}
+
+message InsteadModifiedCheckRequest
+{
+	optional string pkkey = 1;
+	optional string input_gubun = 2;
+	optional string io_gubun = 3;
+}
+
+message InsteadModifiedCheckResponse
+{
+	optional string isPossibleInsteadOrder = 1;
+}
+
+message SpeciFicCommentInputYnRequest
+{
+	optional string hanmog_code = 1;
+	optional string pkocskey = 2;
+}
+message SpeciFicCommentInputYnResponse
+{
+	optional bool check_table_row = 1;
+	optional string y_value = 2;
+}
+message OcsoGetNotApproveOrderCntRequest
+{
+	optional string io_gubun = 1;
+	optional string user_id = 2;
+	optional string instead_yn = 3;
+	optional string approve_yn = 4;
+	optional string key = 5;
+}
+message OcsoGetNotApproveOrderCntResponse
+{
+	optional string info = 1;
+	optional string approve_order_cnt_result = 2;
+}
+message IpwonReserStatusRequest{
+	optional IpwonReserStatusInfo reser_status_info = 1;
+}
+message IpwonReserStatusResponse{
+	optional string ret_value = 1;
+}
+
+message OcsoGetNaewonYNRequest
+{
+	optional string bunho = 1;
+	optional string naewon_date = 2;
+	optional string pkout1001 = 3;
+}
+
+message OcsoGetNaewonYNResponse
+{
+	optional string naewon_yn = 1;
+}
+message GetOutTaGwaJinryoCntRequest
+{
+	optional OutTaGwaJinryoCntInfo cnt_info = 1;
+}
+
+message GetOutTaGwaJinryoCntResponse
+{
+	optional string ret_val = 1;
+}
+
+message GetEnablePostApproveRequest 
+{
+	optional GetEnablePostApproveInfo aprove_info = 1;
+}
+
+message GetEnablePostApproveResponse
+{
+	optional string pos_tapprove_yn = 1;
+}
+
+message LoadColumnCodeNameRequest
+{
+	optional LoadColumnCodeNameInfo request_value = 1;
+}
+
+
+message LoadColumnCodeNameResponse
+{
+	optional string retVal = 1;
+}
+
+message OcsoProcHQNInterfaceRequest
+{
+	optional OcsoSelectedPatientInfo patient_info = 1;
+	optional string io_gubun = 2;
+	optional string data_dubun = 3;
+	optional string user_id = 4;
+}
+
+message OcsoProcHQNInterfaceResponse
+{
+	optional string pkphy7401 = 1;
+	optional string rtnIfsCnt = 2;
+}
+message KensaReserRequest{
+	optional KensaReserInfo reser_info = 1;
+}
+
+message KensaReserResponse{
+	optional string ret_val = 1;
+}
+
+message LoadPatientSpecificCommentRequest{
+	optional string bunho = 1
+}
+
+message LoadPatientSpecificCommentResponse {
+	repeated DataStringListItemInfo list_comment= 1;
+}
+
+message OpenAllergyInfoRequest{
+	optional OpenAllergyInfoInfo info1 = 1;
+}
+
+message OpenAllergyInfoResponse
+{
+	optional string retval = 1;
+}
+message NoConfirmConsultRequest
+{
+	optional NoConfirmConsultInfo consult_info= 1;
+}
+
+message NoConfirmConsultResponse
+{
+	optional string retval = 1;
+}
+
+message OBCheckRegularDrugRequest
+{
+    optional string bunho = 1;
+    optional string gwa = 2;
+    optional string hangmog = 3;
+}
+
+message OBCheckRegularDrugResponse
+{
+    repeated OBCheckRegularDrugInfo reg_drug_item = 1;
+}
+
+message OBCheckSpecialDrugForPatientRequest
+{
+	optional string bunho = 1;
+	optional string hangmog_code = 2;
+}
+
+message OBCheckSpecialDrugForPatientResponse
+{
+	optional string result = 1;
+}
+
+message OBLoadSearchOrderInfoDRGRequest
+{
+	optional string search_word                   = 1;
+	optional string search_condition              = 2;
+	optional string generic_search_yn             = 3;
+	optional string gijun_date                    = 4;
+	optional string wonnae_drg_yn                 = 5;
+	optional string input_tab                     = 6;
+}
+
+message OBLoadSearchOrderInfoDRGResponse
+{
+	repeated OBLoadSearchOrderInfoDRGInfo search_order_drg_item = 1;
+}
+
+message GetDefaultOrdDanui1Request
+{
+        optional string hangmog_code = 1;
+}
+
+message GetDefaultOrdDanui1Response
+{
+        optional string ord_danui = 1;
+}
+
+message GetDefaultOrdDanui2Request
+{
+        optional string hangmog_code = 1;
+}
+
+message GetDefaultOrdDanui2Response
+{
+        repeated GetDefaultOrdDanuiInfo danui_item = 1;
+}
+
+message LoadOftenUsedRequest {
+	optional LoadOftenUsedInfo input_info = 1;
+}
+
+message LoadOftenUsedResponse {
+	repeated LoadOftenUsedResponseInfo used_info = 1;
+}
+
+message IsJaewonPatientRequest 
+{
+	optional string bunho = 1;
+}
+
+message IsJaewonPatientResponse
+{
+	optional string y_value = 1;
+}
+message GetApproveFlagsRequest
+{
+
+}
+message GetApproveFlagsResponse 
+{
+	optional ComboListItemInfo postapprove_visible_info = 1;
+	optional ComboListItemInfo approve_force_info = 2;
+}
+
+message LoadOcs0131Request{
+	optional string code_type = 1;
+}
+
+message LoadOcs0131Response{
+	repeated LoadOcs0131Info ocs0131_info = 1;
+}
+
+message LoadOcs0132Request{
+	optional string code_type = 1;
+	optional string code = 2;
+}
+
+message LoadOcs0132Response{
+	LoadOcs0132Info load_ocs0132_info = 1;
+}
+
+//=======OrderBiz END========
+
+
+//=======OrderFunc Start========
+message GetOrderKeyRequest
+{	
+	required string mode = 1;
+}
+
+message GetOrderKeyResponse
+{
+	optional string order_key_value = 1;
+}
+
+//=======OrderFunc END========

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="ImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="cboGubun.UserSQL" xml:space="preserve">
+    <value>SELECT '%'      AS CODE
+     , '全体'   AS CODE_NAME
+     , 0        AS SORT_KEY
+  FROM SYS.DUAL
+ UNION ALL
+SELECT A.CODE
+     , A.CODE_NAME
+     , A.SORT_KEY
+  FROM NUR0102 A
+ WHERE A.HOSP_CODE = FN_ADM_LOAD_HOSP_CODE()
+   AND A.CODE_TYPE = 'ADL_WORK_GUBUN'
+ ORDER BY SORT_KEY</value>
+  </data>
+  <metadata name="fwkNurse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>128, 17</value>
+  </metadata>
+  <data name="fwkNurse.InputSQL" xml:space="preserve">
+    <value>SELECT B.USER_ID
+     , B.USER_NM
+  FROM ADM3200 B
+ WHERE HOSP_CODE = :f_hosp_code
+   AND (B.USER_END_YMD IS NULL
+    OR SYSDATE &lt; B.USER_END_YMD)
+   AND B.USER_ID LIKE TRIM(:f_sabun)||'%'
+   AND B.DEPT_CODE = :f_buseo_code
+ ORDER BY 1, 2</value>
+  </data>
+  <data name="grdNUR8050His.QuerySQL" xml:space="preserve">
+    <value>SELECT A.BUNHO
+     , FN_OUT_LOAD_SUNAME(A.BUNHO) AS SUNAME
+     , A.FKINP1001
+     , A.GUBUN
+     , A.DETAIL
+     , A.WRITE_DATE
+     , A.WRITE_USER
+     , FN_ADM_LOAD_USER_NM(A.WRITE_USER, SYSDATE)	AS WRITE_USER_NAME
+     , A.CONFIRM_USER
+     , FN_ADM_LOAD_USER_NM(A.CONFIRM_USER, SYSDATE)	AS CONFIRM_USER_NAME
+  FROM NUR8050 A
+ WHERE A.HOSP_CODE  = :f_hosp_code
+   AND A.BUNHO      = :f_bunho
+   AND A.FKINP1001  = :f_fkinp1001
+   AND A.GUBUN      LIKE :f_gubun
+ ORDER BY A.WRITE_DATE DESC, A.GUBUN</value>
+  </data>
+  <data name="grdNUR8050All.QuerySQL" xml:space="preserve">
+    <value> SELECT A.HO_CODE || '-' || A.BED_NO HO_BED
+      , A.BUNHO
+      , FN_OUT_LOAD_SUNAME(A.BUNHO) AS SUNAME
+      , A.FKINP1001
+      , FN_NUR_GET_NUR8050_RECENT(A.HOSP_CODE, A.BUNHO, A.FKINP1001, :f_date, '01') AS GUBUN1      
+      , FN_NUR_GET_NUR8050_RECENT_DATE(A.HOSP_CODE, A.BUNHO, A.FKINP1001, :f_date, '01') AS GUBUN1_DATE
+      , FN_NUR_GET_NUR8050_RECENT(A.HOSP_CODE, A.BUNHO, A.FKINP1001, :f_date, '02') AS GUBUN2
+      , FN_NUR_GET_NUR8050_RECENT_DATE(A.HOSP_CODE, A.BUNHO, A.FKINP1001, :f_date, '02') AS GUBUN2_DATE
+      , FN_NUR_GET_NUR8050_RECENT(A.HOSP_CODE, A.BUNHO, A.FKINP1001, :f_date, '03') AS GUBUN3
+      , FN_NUR_GET_NUR8050_RECENT_DATE(A.HOSP_CODE, A.BUNHO, A.FKINP1001, :f_date, '03') AS GUBUN3_DATE
+      , FN_NUR_GET_NUR8050_RECENT(A.HOSP_CODE, A.BUNHO, A.FKINP1001, :f_date, '04') AS GUBUN4
+      , FN_NUR_GET_NUR8050_RECENT_DATE(A.HOSP_CODE, A.BUNHO, A.FKINP1001, :f_date, '04') AS GUBUN4_DATE
+      , FN_NUR_GET_NUR8050_RECENT(A.HOSP_CODE, A.BUNHO, A.FKINP1001, :f_date, '05') AS GUBUN5
+      , FN_NUR_GET_NUR8050_RECENT_DATE(A.HOSP_CODE, A.BUNHO, A.FKINP1001, :f_date, '05') AS GUBUN5_DATE
+      , FN_NUR_GET_NUR8050_RECENT(A.HOSP_CODE, A.BUNHO, A.FKINP1001, :f_date, '06') AS GUBUN6
+      , FN_NUR_GET_NUR8050_RECENT_DATE(A.HOSP_CODE, A.BUNHO, A.FKINP1001, :f_date, '06') AS GUBUN6_DATE
+ FROM  
+(SELECT A.HOSP_CODE
+     , A.BUNHO
+     , A.FKINP1001
+     , B.HO_CODE1 HO_CODE
+     , B.BED_NO BED_NO
+  FROM NUR8050 A
+     , VW_OCS_INP1001_01 B
+ WHERE A.HOSP_CODE = :f_hosp_code
+   AND B.HOSP_CODE = A.HOSP_CODE
+   AND B.PKINP1001 = A.FKINP1001
+   AND B.KAIKEI_HODONG = 'C3'
+ GROUP BY A.HOSP_CODE, A.BUNHO, A.FKINP1001, B.HO_CODE1, B.BED_NO) A
+ 
+ORDER BY A.HO_CODE, A.BED_NO</value>
+  </data>
+  <metadata name="xdwWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>236, 17</value>
+  </metadata>
+</root>

@@ -1,0 +1,177 @@
+<header ng-include="'templates/header.html'"></header>
+<section>
+    <div class="leftpanel" ng-include="'templates/left_menu.html'"></div>
+    <div class="mainpanel">
+        <div class="contentpanel">
+            <ol class="breadcrumb breadcrumb-quirk">
+                <li><a href="#/"><i class="fa fa-home mr5"></i>
+                    <translate>Dashboard</translate>
+                </a></li>
+                <li class="active">
+                    <translate>Create Question</translate>
+                </li>
+            </ol>
+
+            <!-- BEGIN Panel -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <translate>Create Question</translate>
+                    </h3>
+                </div>
+                <!-- BEGIN Panel Body -->
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h5 class="panel-title">
+                                <translate>Question</translate>
+                            </h5>
+                            <hr class="darken">
+                            <!-- BEGIN Form -->
+                            <div class="form-horizontal">
+                                <form name="createQuestionForm">
+                                    <div class="form-group" ng-class="{'has-error': createQuestionForm.departmentQuestion.$error.required && !createQuestionForm.departmentQuestion.$pristine}">
+                                        <label class="col-sm-3 control-label"><sup class="highlight">*</sup>
+                                            <translate>Department</translate>
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <select id="department-select" ng-model="selectedDepartment" name="departmentQuestion" class="form-control" style="width: 100%" data-placeholder="{{'Select Department'|translate}}" required>
+                                                <option></option>
+                                                <option ng-repeat="item in departmentList" value="{{item.department_code}}">{{item.department_name}}</option>
+                                            </select>
+                                            <span ng-show="createQuestionForm.departmentQuestion.$error.required && !createQuestionForm.departmentQuestion.$pristine" class="help-error"><translate>Department is required</translate></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group" ng-class="{'has-error': createQuestionForm.typeQuestion.$error.required && !createQuestionForm.typeQuestion.$pristine}">
+                                        <label class="col-sm-3 control-label"><sup class="highlight">*</sup>
+                                            <translate>Question type</translate>
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <select id="question-type" ng-model="selectedType" name="typeQuestion" class="form-control" style="width: 100%" data-placeholder="{{'Question type' | translate}}" ng-change="changeType(this)" required>
+                                                <option></option>
+                                                <option ng-repeat="option in questionSelectList" value="{{option.question_type}}">{{option.text}}</option>
+                                            </select>
+                                            <span ng-show="createQuestionForm.typeQuestion.$error.required && !createQuestionForm.typeQuestion.$pristine" class="help-error"><translate>Question type is required</translate></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group" ng-class="{'has-error' : (createQuestionForm.contentQuestion.$error.required || createQuestionForm.contentQuestion.$error.maxlength) && !createQuestionForm.contentQuestion.$pristine}">
+                                        <label class="col-sm-3 control-label"><sup class="highlight">*</sup>
+                                            <translate>Question</translate>
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="question" class="form-control" name="contentQuestion" placeholder="{{'Question for women : Is there any chance that you may be pregnant?'|translate}}" ng-maxlength="256" ng-model="questionObj.question_content" required/>
+                                            <span ng-show="createQuestionForm.contentQuestion.$error.required && !createQuestionForm.contentQuestion.$pristine" class="help-error"><translate>Question title is required</translate></span>
+                                            <span ng-show="createQuestionForm.contentQuestion.$error.maxlength && !createQuestionForm.contentQuestion.$pristine" class="help-error"><translate>Please enter no more than 256 characters</translate></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group" ng-class="{'has-error' : createQuestionForm.descriptionQuestion.$invalid && !createQuestionForm.descriptionQuestion.$pristine}">
+                                        <label class="col-sm-3 control-label">
+                                            <translate>Description about question</translate>
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <textarea id="description" class="form-control" rows="3" name="descriptionQuestion" ng-maxlength="512" ng-model="questionObj.description" placeholder="{{'Information'|translate}}"></textarea>
+                                            <span ng-show="createQuestionForm.descriptionQuestion.$error.maxlength && !createQuestionForm.descriptionQuestion.$pristine" class="help-error"><translate>Please enter no more than 512 characters</translate></span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div><!-- END Form -->
+                        </div>
+                        <div class="col-sm-6">
+                            <!-- BEGIN Table -->
+                            <h5 class="panel-title">
+                                <translate>Answer</translate>
+                            </h5>
+                            <hr class="darken">
+                            <div class="table-responsive">
+                                <form name="contentQuestionForm">
+                                    <table id="table-answers" class="table table-bordered nomargin table-w">
+                                        <tr ng-repeat="item in answerList" id="answer_item{{$index}}">
+                                            <td style="width: 40px; vertical-align:middle;text-align:center;">
+                                                <label class="rdiobox" ng-if="item.type=='radio'">
+                                                    <input id="radio{{$index}}" type="radio" name="rdio" />
+                                                    <span></span>
+                                                </label>
+
+                                                <label ng-if="item.type=='checkbox'" class="ckbox" style="border:1px solid #dbdfe6; width: 17px; height: 18px; border-radius: 1px;">
+                                                    <input type="checkbox" name="rdio" />
+                                                    <span class="checked-span"></span>
+                                                </label>
+                                            </td>
+                                            <td style="vertical-align:middle">
+                                                <input type="text" id="input-answer{{ $index }}" class="form-control" name="answerQuestion{{$index}}" placeholder="" ng-maxlength="128" ng-model="item.title" value="" ng-change="validateAnswer($index)" onkeydown="if (event.keyCode == 13) $('#addAnswer').click();" required/>
+                                                <span ng-show="contentQuestionForm.answerQuestion{{$index}}.$error.required && !contentQuestionForm.answerQuestion{{$index}}.$pristine" class="help-error"><translate>Please enter the answer content</translate></span>
+                                                <span ng-show="contentQuestionForm.answerQuestion{{$index}}.$error.maxlength && !contentQuestionForm.answerQuestion{{$index}}.$pristine" class="help-error"><translate>Please enter no more than 128 characters</translate></span>
+                                            </td>
+                                            <td style="vertical-align:middle;">
+                                                <button class="btn btn-danger btn-xs btn-block" ng-click="removeAnswer($index)"><i class="fa fa-close"></i>
+                                                    <span class="respon-text-hide"><translate>Delete</translate></span>
+                                                </button>
+                                            </td>
+                                            <td style="vertical-align:middle;">
+                                                <button class="btn btn-info btn-xs btn-block btn-checked" ng-show="item.is_correct"><i class="fa fa-check"></i>
+                                                    <span class="respon-text-hide"><translate>Correct</translate></span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </div><!-- END Table -->
+                            <div class="clearfix">
+                                <hr class="darken">
+                                <button id="addAnswer" class="btn btn-default btn-quirk btn-block" ng-click="addOption()"><i class="fa fa-plus"></i>
+                                    <translate>Add more an answer option</translate>
+                                </button>
+                                <br>
+                                <div class="pull-left" style="padding-top:9px;">
+                                    <label class="ckbox">
+                                        <input type="checkbox" id="has_other_answer" value=""/><span><translate>Add <strong>other</strong> answer</translate></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- END Panel Body -->
+                <div class="panel-footer text-right">
+                    <button class="btn btn-default btn-quirk" onClick="location.href='#/questions/list'">
+                        <translate>Cancel</translate>
+                    </button>
+                    <button id="btnSave" class="btn btn-success btn-quirk" ng-click="saveQuestion()">
+                        <translate>Save</translate>
+                    </button>
+                </div>
+            </div><!-- END Panel -->
+
+            <!-- content goes here... -->
+
+        </div><!-- contentpanel -->
+    </div><!-- mainpanel -->
+</section>
+
+<script>
+    $(document).ready(function () {
+        //$('#table-answers').rowSorter();
+        $('#department-select,#question-type').select2({
+            minimumResultsForSearch: Infinity
+        });
+
+        /**
+         * Fix bug automatic active button when key press enter key
+         */
+        $(document).ready(function () {
+            window.addEventListener('keypress', function (event) {
+                if (event.keyCode == 13) {
+                    event.preventDefault();
+                }
+            });
+        });
+    });
+</script>
+<style>
+    .checked-span:after {
+        left: 3.5px;
+    }
+
+    .ckbox:after {
+        border: red 1px solid;
+    }
+</style>

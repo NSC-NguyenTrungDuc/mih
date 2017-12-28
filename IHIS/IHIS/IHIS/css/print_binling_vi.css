@@ -1,0 +1,113 @@
+@media print {
+  body {
+    margin: 0;
+    box-shadow: 0;
+    background: rgb(255,255,255) !important;
+  }
+}
+body{
+	font-size:  10.75pt;
+	    font-family: Arial;
+	    background: rgb(204,204,204);
+}
+.headerbilling td:first-child {
+    white-space: nowrap;
+    vertical-align: top;
+}
+.billing{
+	width: 793.700787px;
+	margin: 0 auto;
+	background: #fff;
+	padding: 0.5cm 1cm;
+}
+.pull-left{
+	float: left;
+}
+.pull-right{
+	float: right;
+}
+.tbl_table{width: 100%; border-collapse: collapse; margin-top: 10px;}
+.tbl_table td,.tbl_table th{
+	border: 1px solid #000;
+	padding: 5px 5px;
+}
+.center{text-align: center;}
+h1 {
+    margin: 20px 0;
+    display: inline-block;
+    width: 100%;
+}
+.headerbilling td{
+  padding: 3px 10px 5px 0;
+}
+.total{
+  width: 40%;
+  margin-top: 10px;
+  float: right;
+  position: relative;
+}
+.total td{position: relative;}
+.total .pr1{
+  background: #fff;
+  position: relative;
+  z-index: 10;
+  padding-right: 10px;
+  font-weight: bold;
+}
+.currency{margin-bottom: 10px;}
+.total .pr3{
+  float: right;
+  background: #fff;
+  position: relative;
+  z-index: 10;
+  padding-left: 3px;
+}
+.total .pr2{
+  border: 1px dotted #000;
+  width: 90%;
+  display: inline-block;
+  position: absolute;
+  left: 3px;
+  bottom: 3px;
+  z-index: 9;
+}
+.bottom table{
+  width: 100%;
+}
+.bottom table p.name-r{
+  margin-top: 40px;
+}
+.bottom table p{margin: 0;}
+.bottom {
+    margin-top: 30px;
+    display: inline-block;
+    width: 100%;
+    line-height: 20px;
+}
+.tbl_table td{padding: 5px 10px}
+.tbl_table th{font-weight: bold;}
+
+.tbl_table td .left{text-align: left;}
+.bottom .pull-left{
+	width: 50%;
+	padding-top: 53px;
+}
+.bottom .pull-right{
+	width: 50%;
+}
+.bottom .pull-right p{    margin: 0; width: 100%;  display: inline-block;}
+.bottom .pull-right .right{
+	float: right;
+	    text-align: right;
+}
+.bottom .pull-right span{float: left; width: 100px;  }
+.bottom .pull-right .value{
+	padding: 0 30px 0 0px;
+}
+.bottom h3{margin: 0 0 5px}
+table{counter-reset:section;}
+.count:before
+{
+counter-increment:section;
+content:counter(section);
+}

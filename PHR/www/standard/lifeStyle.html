@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <script src="../libs/jquery/jquery-1.9.1.js"></script>
+  <script src="../libs/highcharts/highcharts.js"></script>
+  <script src="../libs/utils.js"></script>
+  <script src="../jsUtilities/DateFormat.js"></script>
+  <script src="../jsUtilities/DataManipulate.js"></script>
+
+</head>
+<body style="background-color: transparent; padding: 0px;">
+  <!-- <div id="button" type="button" onclick="drawGraph(data)">click</div> -->
+  <div id="container" style="width: 100%; height: 100%; position:absolute; margin-right:10px;"></div>
+  <script type="text/javascript">
+  var highchart;
+  function changeDimension(width, height){
+    $('#container').height(height);
+    window.location = "phr-js-log:" + height;
+  }
+// var data = "WwogIHsKICAgICJ0aW1lX3dha2VfdXAiIDogIjIwMTYtMDMtMjZUMjA6MTI6MDBaIiwKICAgICJ0b3RhbF9ob3VyX3NsZWVwIiA6ICI5MzQyMCIsCiAgICAidGltZV9zdGFydF9zbGVlcCIgOiAiMjAxNi0wMy0yNVQxODoxNTowMFoiCiAgfSwKICB7CiAgICAidGltZV93YWtlX3VwIiA6ICIyMDE2LTAzLTI2VDIwOjEyOjAwWiIsCiAgICAidG90YWxfaG91cl9zbGVlcCIgOiAiNzIwMCIsCiAgICAidGltZV9zdGFydF9zbGVlcCIgOiAiMjAxNi0wMy0yNlQxODoxMjowMFoiCiAgfSwKICB7CiAgICAidGltZV93YWtlX3VwIiA6ICIyMDE2LTAzLTI2VDIwOjA5OjAwWiIsCiAgICAidG90YWxfaG91cl9zbGVlcCIgOiAiNzIwMCIsCiAgICAidGltZV9zdGFydF9zbGVlcCIgOiAiMjAxNi0wMy0yNlQxODowOTowMFoiCiAgfSwKICB7CiAgICAidGltZV93YWtlX3VwIiA6ICIyMDE2LTAzLTI2VDIyOjAyOjAwWiIsCiAgICAidG90YWxfaG91cl9zbGVlcCIgOiAiMTQ0MDAiLAogICAgInRpbWVfc3RhcnRfc2xlZXAiIDogIjIwMTYtMDMtMjZUMTg6MDI6MDBaIgogIH0sCiAgewogICAgInRpbWVfd2FrZV91cCIgOiAiMjAxNi0wMy0yNlQyMzowMDowMFoiLAogICAgInRvdGFsX2hvdXJfc2xlZXAiIDogIjE4MDAwIiwKICAgICJ0aW1lX3N0YXJ0X3NsZWVwIiA6ICIyMDE2LTAzLTI2VDE4OjAwOjAwWiIKICB9LAogIHsKICAgICJ0aW1lX3dha2VfdXAiIDogIjIwMTYtMDMtMjdUMTc6NTA6MDBaIiwKICAgICJ0b3RhbF9ob3VyX3NsZWVwIiA6ICI4NjQwMCIsCiAgICAidGltZV9zdGFydF9zbGVlcCIgOiAiMjAxNi0wMy0yNlQxNzo1MDowMFoiCiAgfSwKICB7CiAgICAidGltZV93YWtlX3VwIiA6ICIyMDE2LTAzLTI2VDE0OjA1OjAwWiIsCiAgICAidG90YWxfaG91cl9zbGVlcCIgOiAiMjE2MDAiLAogICAgInRpbWVfc3RhcnRfc2xlZXAiIDogIjIwMTYtMDMtMjZUMDg6MDU6MDBaIgogIH0sCiAgewogICAgInRpbWVfd2FrZV91cCIgOiAiMjAxNi0wMy0yNFQxNzoxMzowMFoiLAogICAgInRvdGFsX2hvdXJfc2xlZXAiIDogIjAiLAogICAgInRpbWVfc3RhcnRfc2xlZXAiIDogIjIwMTYtMDMtMjRUMTc6MTM6MDBaIgogIH0sCiAgewogICAgInRpbWVfd2FrZV91cCIgOiAiMjAxNi0wMy0wN1QxNDo0MTowMFoiLAogICAgInRvdGFsX2hvdXJfc2xlZXAiIDogIjkzNjAwIiwKICAgICJ0aW1lX3N0YXJ0X3NsZWVwIiA6ICIyMDE2LTAzLTA2VDEyOjQxOjAwWiIKICB9LAogIHsKICAgICJ0aW1lX3dha2VfdXAiIDogIjIwMTYtMDItMjBUMjI6MTE6MDBaIiwKICAgICJ0b3RhbF9ob3VyX3NsZWVwIiA6ICIxMDgwMCIsCiAgICAidGltZV9zdGFydF9zbGVlcCIgOiAiMjAxNi0wMi0yMFQxOToxMTowMFoiCiAgfQpd";
+  /*
+  {
+  id = 34;
+  note = Note;
+  "profile_id" = 278;
+  "rating_sleep" = 5;
+  "time_awake" = "<null>";
+  "time_start_sleep" = "2016-03-26T18:02:00Z";
+  "time_wake_up" = "2016-03-26T22:02:00Z";
+  "total_hour_sleep" = 14400;
+}
+
+
+*/
+
+/*
+[
+[Date.UTC(1970, 9, 21), 0],
+[Date.UTC(1970, 10, 4), 0.28],
+[Date.UTC(1970, 10, 9), 0.25]
+]
+*/
+
+function drawGraph(base64Data) {
+  var heighColor = '#00edb1';
+  var weightColor = '#517fff';
+  var headSizeColor = '#ff3970';
+  var fontSizeConfig = '7px';
+  // lifeStyle color
+  var areaColor1 = '#9362F0';
+  var areaColor2 = '#C9B0F7';
+
+  var lineColor = '#42630A';
+  var whiteColor = '#FFFFFF';
+  //
+  var type = 2;
+  var offsetConfigZero = 0;
+  var offsetConfig = 5;
+  var offsetConfigHeadSize = 10;
+  var offsetConfigNegative = -10;
+  //get data
+  var data = Base64.decode(base64Data);
+  var json = JSON.parse(data);
+  var arrayLifeStyle = json;
+  var arrayTotalHourSleep = [];
+  var lastIndex = arrayLifeStyle.length - 1;
+  // // end init
+  for (i = lastIndex; i >= 0; i--) {
+    var lifeStyle = arrayLifeStyle[i]; // get an object
+    // get total_hour_sleep
+    //var total_hour_sleep_topush = parseFloat(lifeStyle["total_hour_sleep"]);
+    var total_hour_sleep_topush = parseFloat(lifeStyle["total_hour_sleep"]) / 3600;
+    total_hour_sleep_topush = parseFloat(total_hour_sleep_topush.toFixed(2));
+    // get Time
+    var time_wake_up_push = lifeStyle["time_start_sleep"];
+    var time_wake_up_UTC = processingDateToUTC(time_wake_up_push);
+    arrayTotalHourSleep.push([time_wake_up_UTC,total_hour_sleep_topush]);
+  }
+  $('#container').highcharts({
+    chart: {
+      zoomType: 'x',
+      backgroundColor: 'transparent'
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: ''
+    },
+    xAxis: {
+      type: 'datetime',
+      tickLength: 0,
+      labels: {
+        style: {
+          color: areaColor2,
+          font: '11px Trebuchet MS, Verdana, sans-serif'
+        }
+      }
+    },
+    yAxis: {
+      min: 0,
+      gridLineWidth: 0.5,
+      title: {
+        text: 'Sleep Time (hrs)',
+        style: {
+          color: areaColor2,
+          //fontSize: fontSizeConfig
+        }
+      },
+      labels: {
+        //format: '{value}',
+        style: {
+          color: areaColor2,
+          //fontSize: fontSizeConfig
+        }
+      },
+      opposite: true,
+    },
+    legend: {
+      enabled: false
+    },
+    tooltip: {
+      hideDelay: 100,
+      formatter: function () {
+        var dateTime = new Date(this.x);
+        var newDate = dateFormat(dateTime, "dd/mm h:MM:ss TT");
+        return '<b>' + newDate + '</b><br/>' + this.series.name + ': <b>'+ this.y + '</b>';
+      }
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
+          align: 'center',
+          enabled: true,
+          style: {
+            color: whiteColor
+          }
+        }
+      },
+    },
+    series: [{
+      type: 'scatter',
+      lineWidth: 0.5,
+      name: 'Sleep Time',
+      data: arrayTotalHourSleep,
+      color: areaColor1
+    }]
+  });
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+option java_package = "nta.med.service.orca.proto";
+option java_outer_classname = "OrcaModelProto";
+
+//[START] ORCALib
+message ORCALibGetClaimPatientInfo
+{
+	optional string upd_date              = 1;
+	optional string upd_id                = 2;
+	optional string hosp_code             = 3;
+	optional string pkoif1101             = 4;
+	optional string doc_uid               = 5;
+	optional string cm_id                 = 6;
+	optional string license               = 7;
+	optional string bunho                 = 8;
+	optional string suname1               = 9;
+	optional string suname2               = 10;
+	optional string suname3               = 11;
+	optional string degree                = 12;
+	optional string sex                   = 13;
+	optional string birth                 = 14;
+	optional string nationality           = 15;
+	optional string marital               = 16;
+	optional string accnt_num             = 17;
+	optional string socialid              = 18;
+	optional string email                 = 19;
+	optional string death                 = 20;
+	optional string death_date            = 21;
+	optional string end_flag              = 22;
+	optional string pkoif1102             = 23;
+	optional string addr_code             = 24;
+	optional string addr_full             = 25;
+	optional string prefecture            = 26;
+	optional string city_b                = 27;
+	optional string town                  = 28;
+	optional string home_num              = 29;
+	optional string zip                   = 30;
+	optional string country_b             = 31;
+	optional string pkoif1103             = 32;
+	optional string tel_code              = 33;
+	optional string area                  = 34;
+	optional string city_c                = 35;
+	optional string num                   = 36;
+	optional string extension             = 37;
+	optional string country_c             = 38;
+	optional string memo                  = 39;
+}
+message ORCALibAcquisitionInfo
+{
+	optional string upd_date                   = 1;
+	optional string upd_id                     = 2;
+	optional string hosp_code                  = 3;
+	optional string pkoif1101                  = 4;
+	optional string doc_uid                    = 5;
+	optional string cm_id                      = 6;
+	optional string license                    = 7;
+	optional string bunho                      = 8;
+	optional string suname1                    = 9;
+	optional string suname2                    = 10;
+	optional string suname3                    = 11;
+	optional string degree                     = 12;
+	optional string sex                        = 13;
+	optional string birth                      = 14;
+	optional string nationality                = 15;
+	optional string marital                    = 16;
+	optional string accnt_num                  = 17;
+	optional string socialid                   = 18;
+	optional string email                      = 19;
+	optional string death                      = 20;
+	optional string death_date                 = 21;
+	optional string end_flag                   = 22;
+	optional string pkoif1102                  = 23;
+	optional string addr_code                  = 24;
+	optional string addr_full                  = 25;
+	optional string prefecture                 = 26;
+	optional string city_b                     = 27;
+	optional string town                       = 28;
+	optional string home_num                   = 29;
+	optional string zip                        = 30;
+	optional string country_b                  = 31;
+	optional string pkoif1103                  = 32;
+	optional string tel_code                   = 33;
+	optional string area                       = 34;
+	optional string city_c                     = 35;
+	optional string num                        = 36;
+	optional string extension                  = 37;
+	optional string country_c                  = 38;
+	optional string memo                       = 39;
+	optional string pkoif1104                  = 40;
+	optional string rd_code                    = 41;
+	optional string rd_name                    = 42;
+	optional string category1                  = 43;
+	optional string category2                  = 44;
+	optional string category3                  = 45;
+	optional string category4                  = 46;
+	optional string outcome                    = 47;
+	optional string uuid                       = 48;
+	optional string firstdate                  = 49;
+	optional string startdate                  = 50;
+	optional string enddate                    = 51;
+}
+message ORCALibGetClaimInsuredInfo
+{
+	optional string sys_date                = 1;
+	optional string sys_id                  = 2;
+	optional string upd_date                = 3;
+	optional string upd_id                  = 4;
+	optional string hosp_code               = 5;
+	optional string fkoif1101               = 6;
+	optional string pkoif2101               = 7;
+	optional string doc_uid                 = 8;
+	optional string cm_id                   = 9;
+	optional string dep_id                  = 10;
+	optional string dep_name                = 11;
+	optional string license                 = 12;
+	optional string insur_code              = 13;
+	optional string insur_name              = 14;
+	optional string insur_num               = 15;
+	optional string client_group            = 16;
+	optional string client_num              = 17;
+	optional string family_code             = 18;
+	optional string suname1                 = 19;
+	optional string suname2                 = 20;
+	optional string suname3                 = 21;
+	optional string start_date_a            = 22;
+	optional string end_date_a              = 23;
+	optional string inratio                 = 24;
+	optional string outratio                = 25;
+	optional string insured_id              = 26;
+	optional string insured_name            = 27;
+	optional string work_id                 = 28;
+	optional string work_name               = 29;
+	optional string pkoif2102               = 30;
+	optional string priority                = 31;
+	optional string provider_name           = 32;
+	optional string provider                = 33;
+	optional string recipient               = 34;
+	optional string start_date_b            = 35;
+	optional string end_date_b              = 36;
+	optional string ratio_type              = 37;
+	optional string ratio                   = 38;
+	optional string pkoif2103               = 39;
+	optional string diseases                = 40;
+	optional string pkoif2104               = 41;
+	optional string address                 = 42;
+	optional string addr_code               = 43;
+	optional string addr_full               = 44;
+	optional string prefecture              = 45;
+	optional string city_d                  = 46;
+	optional string town                    = 47;
+	optional string home_num                = 48;
+	optional string zip                     = 49;
+	optional string country_d               = 50;
+	optional string pkoif2105               = 51;
+	optional string  phone                  = 52;
+	optional string tel_code                = 53;
+	optional string area                    = 54;
+	optional string city_e                  = 55;
+	optional string num                     = 56;
+	optional string extension               = 57;
+	optional string country_e               = 58;
+	optional string memo                    = 59;
+}
+message ORCALibGetClaimOrderInfo
+{
+	optional string sys_date                      = 1;
+	optional string sys_id                        = 2;
+	optional string upd_date                      = 3;
+	optional string upd_id                        = 4;
+	optional string hosp_code                     = 5;
+	optional string fkoif1101                     = 6;
+	optional string pkoif4001                     = 7;
+	optional string doc_uid                       = 8;
+	optional string cm_id                         = 9;
+	optional string dep_id                        = 10;
+	optional string dep_name                      = 11;
+	optional string license                       = 12;
+	optional string doctor                        = 13;
+	optional string status                        = 14;
+	optional string order_time                    = 15;
+	optional string app_time                      = 16;
+	optional string regist_time                   = 17;
+	optional string perform_time                  = 18;
+	optional string uuid                          = 19;
+	optional string insur_gubun                   = 20;
+	optional string insur_name                    = 21;
+	optional string ward_id                       = 22;
+	optional string ward_name                     = 23;
+	optional string io_flag                       = 24;
+	optional string time_cls                      = 25;
+	optional string pkoif4002                     = 26;
+	optional string cls_code                      = 27;
+	optional string cls_code_name                 = 28;
+	optional string cls_code_td                   = 29;
+	optional string adm_code                      = 30;
+	optional string adm_code_name                 = 31;
+	optional string adm_memo                      = 32;
+	optional string bund_num                      = 33;
+	optional string memo                          = 34;
+	optional string pk_seq                        = 35;
+	optional string sub_code                      = 36;
+	optional string act_code                      = 37;
+	optional string act_code_name                 = 38;
+	optional string act_code_td                   = 39;
+	optional string alias_code                    = 40;
+	optional string num_code                      = 41;
+	optional string num_unit                      = 42;
+	optional string num_su                        = 43;
+	optional string duration                      = 44;
+	optional string event_start                   = 45;
+	optional string event_end                     = 46;
+	optional string event_name                    = 47;
+	optional string act_memo                      = 48;
+}
+message ORCALibGetClaimDiagnosisInfo
+{
+	optional string upd_date              = 1;
+	optional string pkoif5101             = 2;
+	optional string license               = 3;
+	optional string gwa                   = 4;
+	optional string gwa_name              = 5;
+	optional string categori_td           = 6;
+	optional string categori_name         = 7;
+	optional string code                  = 8;
+	optional string system                = 9;
+	optional string code_name             = 10;
+	optional string start_date            = 11;
+	optional string end_date              = 12;
+	optional string out_come              = 13;
+	optional string doc_id                = 14;
+}
+message ORCALibGetDocInfo
+{
+	optional string yoyang_giho              = 1;
+	optional string yoyang_name              = 2;
+	optional string zip_code                 = 3;
+	optional string address                  = 4;
+	optional string tel                      = 5;
+	optional string president_name           = 6;
+	optional string orca_gigwan_code         = 7;
+}
+//[END] ORCALib
+
+message ORCATransferOrdersHeaderInfo
+{
+	optional string facility_id              = 1;
+	optional string sys_date                 = 2;
+	optional string hosp_name                = 3;
+	optional string hosp_address             = 4;
+	optional string hosp_zipcode             = 5;
+	optional string facility_code            = 6;
+	optional string creator_text             = 7;
+	optional string country_type             = 8;
+	optional string deparment_code 			 = 9;
+}
+
+message ORCATransferOrdersHealthInsuranceInfo
+{
+        optional string priority_number              = 1;
+        optional string provider_name                = 2;
+        optional string public_start_date            = 3;
+        optional string public_end_date              = 4;
+        optional string encounter_date               = 5;
+        optional string insurance_code               = 6;
+        optional string insurance_number             = 7;
+        optional string insurance_start_date         = 8;
+        optional string insurance_end_date           = 9;
+}
+
+message ORCATransferOrdersDiseaseInfo
+{
+	optional string diagnosis_code               = 1;
+	optional string diagnosis_system             = 2;
+	optional string diagnosis_start_date         = 3;
+	optional string diagnosis_end_date           = 4;
+	optional string mml_table_id                 = 5;
+	optional string diagnosis_category           = 6;
+	optional string jusang_yn                    = 7;
+}
+
+message ORCATransferOrdersErrMsgInfo
+{
+	optional string hangmog_code = 1;
+	optional string hangmog_name = 2;
+	optional string err_code         = 3; 
+}
+// Request info
+message ORCATransferOrdersLstSgCodeInfo
+{
+	optional string hangmog_code = 1;
+	optional string hangmog_name = 2;
+	optional string sg_code      = 3;        
+}
+
+message ORCATransferOrdersClaimExaminationFeeInfo
+{
+	required bool io_flag                    = 1;
+	optional string cls_time                 = 2;
+	optional string bundle_number            = 3;
+	optional string cls_code                 = 4;
+	optional string sub_cls_code             = 5;
+	optional string hangmog_code             = 6;
+}
+
+message ORCATransferOrdersClaimOrdersFeeInfo
+{
+	optional string doc_uid                  = 1;
+	optional string confirm_date             = 2;
+	optional string perform_time             = 3;
+	optional string bundle_number            = 4;
+	optional string hangmog_code             = 5;
+	optional string doctor_id                = 6;
+	optional string gwa                      = 7;
+	optional string numb                     = 8;
+	optional string number_code              = 9;
+	optional string cls_code                 = 10;
+	optional string gwa_name                 = 11;
+	optional string acting_date              = 12;
+}

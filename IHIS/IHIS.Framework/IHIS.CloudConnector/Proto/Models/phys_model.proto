@@ -1,0 +1,342 @@
+message PHY8002U01GrdPHY8002LisItemInfo{
+        optional string sys_date = 1;
+        optional string user_id = 2;
+        optional string upd_date = 3;
+        optional string hosp_code = 4;
+        optional string pkphy8002 = 5;
+        optional string fk_ocs = 6;
+        optional string io_kubun = 7;
+        optional string irai_date = 8;
+        optional string kanja_no = 9;
+        optional string sinryouka = 10;
+        optional string sindanisi = 11;
+        optional string tantoui = 12;
+        optional string nyuuinnbi = 13;
+        optional string byousitu_code = 14;
+        optional string byoutou_code = 15;
+        optional string kaisibi = 16;
+        optional string nissuu = 17;
+        optional string koumoku_code = 18;
+        optional string pt1 = 19;
+        optional string pt2 = 20;
+        optional string pt3 = 21;
+        optional string pt4 = 22;
+        optional string pt5 = 23;
+        optional string pt6 = 24;
+        optional string pt7 = 25;
+        optional string pt8 = 26;
+        optional string pt9 = 27;
+        optional string pt10 = 28;
+        optional string ot1 = 29;
+        optional string ot2 = 30;
+        optional string ot3 = 31;
+        optional string ot4 = 32;
+        optional string ot5 = 33;
+        optional string ot6 = 34;
+        optional string ot7 = 35;
+        optional string ot8 = 36;
+        optional string ot9 = 37;
+        optional string ot10 = 38;
+        optional string st1 = 39;
+        optional string st2 = 40;
+        optional string st3 = 41;
+        optional string st4 = 42;
+        optional string st5 = 43;
+        optional string st6 = 44;
+        optional string st7 = 45;
+        optional string st8 = 46;
+        optional string st9 = 47;
+        optional string st10 = 48;
+        optional string objective = 49;
+        optional string consult_comment = 50;
+        optional string genbyoureki = 51;
+        optional string complications = 52;
+        optional string taboo = 53;
+        optional string stop_kijyun = 54;
+        optional string frequency = 55;
+        optional string infectious = 56;
+        optional string kioureki = 57;
+        optional string syori_flag = 58;
+        optional string pt_flag = 59;
+        optional string ot_flag = 60;
+        optional string st_flag = 61;
+        optional string bu_flag = 62;
+        optional string syujyutubi = 63;
+        optional string kyuseizouakubi = 64;
+        optional string disuse_gasyou = 65;
+        optional string disuse_adl = 66;
+        optional string disuse_kainyu = 67;
+        optional string disuse_kaizen = 68;
+        optional string disuse_contents = 69;
+        optional string irai_kubun = 70;
+        optional string disuse_fimbi = 71;
+        optional string yoin_start_date = 72;
+        optional string yoin_sindan_date = 73;
+        optional string su_1 = 74;
+        optional string su_2_1 = 75;
+        optional string su_2_2 = 76;
+        optional string su_2_3 = 77;
+        optional string su_2_4 = 78;
+        optional string su_3_1 = 79;
+        optional string su_3_2 = 80;
+        optional string su_4_1 = 81;
+        optional string su_4_2 = 82;
+        optional string su_4_3 = 83;
+        optional string ke_flag = 84;
+        optional string image = 85;
+        optional string image_path = 86;
+        optional string image_seq = 87;
+        optional string cr_time = 88;
+        optional string row_state = 89;
+}
+
+
+message PHY8002U01GrdPHY8003LisItemInfo{
+        optional string ys_date = 1;
+        optional string user_id = 2;
+        optional string upd_date = 3;
+        optional string hosp_code = 4;
+        optional string pk_phy_syoubyou = 5;
+        optional string data_kubun = 6;
+        optional string fk_ocs_irai = 7;
+        optional string io_kubun = 8;
+        optional string irai_date = 9;
+        optional string kanja_no = 10;
+        optional string sinryouka = 11;
+        optional string syoubyoumei_code = 12;
+        optional string modifier_name = 13;
+        optional string pre_modifier1 = 14;
+        optional string pre_modifier2 = 15;
+        optional string pre_modifier3 = 16;
+        optional string pre_modifier4 = 17;
+        optional string pre_modifier5 = 18;
+        optional string pre_modifier6 = 19;
+        optional string pre_modifier7 = 20;
+        optional string pre_modifier8 = 21;
+        optional string pre_modifier9 = 22;
+        optional string pre_modifier10 = 23;
+        optional string post_modifier1 = 24;
+        optional string post_modifier2 = 25;
+        optional string post_modifier3 = 26;
+        optional string post_modifier4 = 27;
+        optional string post_modifier5 = 28;
+        optional string post_modifier6 = 29;
+        optional string post_modifier7 = 30;
+        optional string post_modifier8 = 31;
+        optional string post_modifier9 = 32;
+        optional string post_modifier10 = 33;
+        optional string hassyoubi = 34;
+        optional string sindanbi = 35;
+        optional string pre_modifier_name = 36;
+        optional string post_modifier_name = 37;
+        optional string syoubyoumei = 38;
+        optional string fkoutsang = 39;
+        optional string row_state = 40;
+}
+
+message PHY8002U01GrdPHY8004LisItemInfo{
+        optional string sys_date = 1;
+        optional string user_id = 2;
+        optional string upd_date = 3;
+        optional string hosp_code = 4;
+        optional string pk_phy_syougai = 5;
+        optional string data_kubun = 6;
+        optional string fk_ocs_irai = 7;
+        optional string syougai_id = 8;
+        optional string syougaimei = 9;
+        optional string kanja_no = 10;
+        optional string fkcht0113 = 11;
+        optional string row_state = 12;
+}
+
+message PHY8002U01GrdOTListItemInfo{
+        optional string selected = 1;
+        optional string code = 2;
+        optional string code_name = 3;
+}
+
+message PHY8002U01BtnPrintGetDataWindowInfo{
+        optional string yoyang_name = 1;
+        optional string simple_yoyang_name = 2;
+        optional string tel = 3;
+        optional string homepage = 4;
+}
+
+message PHY0001U00GrdRehaSinryouryouCodeInfo
+{
+	optional string code = 1;
+	optional string hangmog_code = 2;
+	optional string hangmog_name = 3;
+	optional string row_state = 4;
+}
+
+message PHY0001U00GrdOCS0132Info
+{
+	optional string code = 1;
+	optional string code_name = 2;
+	optional string code_type = 3;
+	optional string ment = 4;
+	optional string row_state = 5;
+}
+
+// --- [START] PHY8002U00 ---
+message PHY8002U00GrdPHY8002Info{
+	optional string sys_date = 1;
+	optional string user_id = 2;
+	optional string upd_date = 3;
+	optional string hosp_code = 4;
+	optional string pkphy8002 = 5;
+	optional string fk_ocs = 6;
+	optional string io_kubun = 7;
+	optional string irai_date = 8;
+	optional string kanja_no = 9;
+	optional string sinryouka = 10;
+	optional string sindanisi = 11;
+	optional string tantoui = 12;
+	optional string nyuuinnbi = 13;
+	optional string byousitu_code = 14;
+	optional string byoutou_code = 15;
+	optional string kaisibi = 16;
+	optional string nissuu = 17;
+	optional string koumoku_code = 18;
+	optional string su_1 = 19;
+	optional string su_2_1 = 20;
+	optional string su_2_2 = 21;
+	optional string su_2_3 = 22;
+	optional string su_2_4 = 23;
+	optional string su_3_1 = 24;
+	optional string su_3_2 = 25;
+	optional string su_4_1 = 26;
+	optional string su_4_2 = 27;
+	optional string su_4_3 = 28;
+	optional string reha1 = 29;
+	optional string reha2 = 30;
+	optional string reha3 = 31;
+	optional string reha4 = 32;
+	optional string reha5 = 33;
+	optional string pt1 = 34;
+	optional string pt2 = 35;
+	optional string pt3 = 36;
+	optional string pt4 = 37;
+	optional string pt5 = 38;
+	optional string pt6 = 39;
+	optional string pt7 = 40;
+	optional string pt8 = 41;
+	optional string pt9 = 42;
+	optional string pt10 = 43;
+	optional string ot1 = 44;
+	optional string ot2 = 45;
+	optional string ot3 = 46;
+	optional string ot4 = 47;
+	optional string ot5 = 48;
+	optional string ot6 = 49;
+	optional string ot7 = 50;
+	optional string ot8 = 51;
+	optional string ot9 = 52;
+	optional string ot10 = 53;
+	optional string st1 = 54;
+	optional string st2 = 55;
+	optional string st3 = 56;
+	optional string st4 = 57;
+	optional string st5 = 58;
+	optional string st6 = 59;
+	optional string st7 = 60;
+	optional string st8 = 61;
+	optional string st9 = 62;
+	optional string st10 = 63;
+	optional string objective = 64;
+	optional string consult_comment = 65;
+	optional string genbyoureki = 66;
+	optional string complications = 67;
+	optional string taboo = 68;
+	optional string stop_kijyun = 69;
+	optional string frequency = 70;
+	optional string infectious = 71;
+	optional string kioureki = 72;
+	optional string syori_flag = 73;
+	optional string pt_flag = 74;
+	optional string ot_flag = 75;
+	optional string st_flag = 76;
+	optional string bu_flag = 77;
+	optional string image = 78;
+	optional string image_path = 79;
+	optional string image_seq = 80;
+	optional string cr_time = 81;
+	optional string syujyutubi = 82;
+	optional string kyuseizouakubi = 83;
+	optional string irai_kubun = 84;
+	optional string ke_flag = 85;
+	optional string row_state = 86;
+}
+
+message PHY8002U00GrdPHY8003Info {
+	optional string sys_date = 1;
+	optional string user_id = 2;
+	optional string upd_date = 3;
+	optional string hosp_code = 4;
+	optional string pk_phy_syoubyou = 5;
+	optional string data_kubun = 6;
+	optional string fk_ocs_irai = 7;
+	optional string io_kubun = 8;
+	optional string irai_date = 9;
+	optional string kanja_no = 10;
+	optional string sinryouka = 11;
+	optional string syoubyoumei_code = 12;
+	optional string modifier_name = 13;
+	optional string pre_modifier1 = 14;
+	optional string pre_modifier2 = 15;
+	optional string pre_modifier3 = 16;
+	optional string pre_modifier4 = 17;
+	optional string pre_modifier5 = 18;
+	optional string pre_modifier6 = 19;
+	optional string pre_modifier7 = 20;
+	optional string pre_modifier8 = 21;
+	optional string pre_modifier9 = 22;
+	optional string pre_modifier10 = 23;
+	optional string post_modifier1 = 24;
+	optional string post_modifier2 = 25;
+	optional string post_modifier3 = 26;
+	optional string post_modifier4 = 27;
+	optional string post_modifier5 = 28;
+	optional string post_modifier6 = 29;
+	optional string post_modifier7 = 30;
+	optional string post_modifier8 = 31;
+	optional string post_modifier9 = 32;
+	optional string post_modifier10 = 33;
+	optional string hassyoubi = 34;
+	optional string sindanbi = 35;
+	optional string pre_modifier_name = 36;
+	optional string post_modifier_name = 37;
+	optional string syoubyoumei = 38;
+	optional string fkoutsang = 39;
+	optional string row_state = 40;
+}
+
+message PHY8002U00GrdPHY8004Info {
+	optional string sys_date = 1;
+	optional string user_id = 2;
+	optional string upd_date = 3;
+	optional string hosp_code = 4;
+	optional string pk_phy_syougai = 5;
+	optional string data_kubun = 6;
+	optional string fk_ocs_irai = 7;
+	optional string syougai_id = 8;
+	optional string syougaimei = 9;
+	optional string kanja_no = 10;
+	optional string fkcht0113 = 11;
+	optional string row_state = 12;
+}
+
+message PHY8002U00DtHospInfo {
+	optional string yoyang_name = 1;
+	optional string simple_yoyang_name = 2;
+	optional string tel = 3;
+	optional string homepage = 4;
+}
+
+message PHY8002U00GrdQueryInfo {
+	optional string selected = 1;
+	optional string code = 2;
+	optional string code_name = 3;
+}
+// --- [END] PHY8002U00 ---

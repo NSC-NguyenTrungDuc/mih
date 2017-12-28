@@ -1,0 +1,105 @@
+message OCS2015U03OrderGubunInfo
+{
+        optional string order_gubun = 1;
+}
+message OcsEmrPatientReceptionHistoryListItemInfo {
+        required string coming_date = 1;
+        required string exam_date = 2;
+        required string exam_time = 3;
+        required string department_code = 4;
+        required string doctor = 5;
+        optional string insur_type = 6;
+        optional string sunnab_status = 7;
+        optional string exam_status = 8;
+        optional string coming_status = 9;
+        optional string patient_code = 10;
+        optional string reception_time = 11;
+        optional string department_name = 12;
+        optional string sujin_no = 13;
+        optional string doku_status = 14;
+        optional string cont_key = 15;
+        optional string pkout1001 = 16;
+        repeated OCS2015U03OrderGubunInfo order_gubun = 17;
+}
+message OCS2015U04LoadBookmarkByPk0ut1001Info
+{
+        optional string emr_bookmark_id = 1;
+        optional string emr_record_id = 2;
+        optional string pkout1001 = 3;
+        optional string bookmark_text = 4;
+        optional string naewon_date = 5;
+        optional string sys_id = 6;
+        optional string upd_id = 7;
+        optional string created = 8;
+        optional string updated = 9;
+        optional string active_flg = 10;
+}
+message OCS2015U04EmrRecordLoadBookmarkContentInfo
+{
+        optional string emr_bookmark_id = 1;
+        optional string bookmark_text = 2;
+        optional string naewon_date = 3;
+        optional string sys_id = 4;
+        optional string user_nm = 5;
+}
+message OCS2015U04LoadExaminationInfo
+{
+        optional string pkout1001 = 1;
+        optional string naewon_date = 2;
+        optional string gwa = 3;
+}
+message OCS2015U09EmrBookmarkInfo
+{
+     optional string bookmark_text = 1;
+     optional string naewon_date = 2;
+     optional string pkout1001 = 3;
+}
+
+message OCS2015U31EmrTagGetTemplateTagsInfo{
+        optional string tag_id = 1;
+        optional string tag_code = 2;
+        optional string tag_name = 3;
+        optional string tag_display_text = 4;
+        optional string description = 5;
+        optional string filter_flg = 6;
+        optional string tag_parent = 7;
+        optional string sys_id = 8;
+}
+
+message OCS2015U09GetTemplateComboBoxInfo
+{
+        optional string emr_template_id = 1;
+        optional string emr_template_type_id = 2;
+        optional string template_name = 3;
+        optional string template_content = 4;
+        optional string description = 5;
+        optional string permission_type = 6;
+        optional string sys_id = 7;
+        optional string upd_id = 8;
+        repeated OCS2015U31EmrTagGetTemplateTagsInfo tags = 9;
+}
+
+message OCS2015U09GetTagsForContextInfo
+{
+	optional string emr_tag_id = 1;
+	optional string tag_code = 2;
+	optional string tag_name = 3;
+	optional string tag_level = 4;
+	optional string tag_display_text = 5;
+	optional string tag_parent = 6;
+	optional string description = 7;
+	optional string permission_type = 8;
+	optional string sys_id = 9;
+	optional string upd_id = 10;
+}
+
+message OCS2015U07TagChildInfo
+{
+        optional string tag_code = 1;
+        optional string tag_name = 2;
+        optional string tag_display_text = 3;
+}
+message OCS2015U06OrderTypeComboInfo
+{
+        optional string code_name = 1;
+}

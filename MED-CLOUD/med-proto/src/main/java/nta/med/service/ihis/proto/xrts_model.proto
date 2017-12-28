@@ -1,0 +1,666 @@
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "XrtsModelProto";
+
+// --- [START] XRT0000Q00 ---
+
+message XRT0000Q00LayPacsInfoListItemInfo{
+	optional string code = 1;
+	optional string code_name = 2;
+	optional string code_value = 3;
+}
+
+message XRT0000Q00LayMakeTabPageListItemInfo{
+	optional string code = 1;
+	optional string code_name = 2;
+	optional string seq = 3;
+}
+
+message XRT0000Q00LayOrderListItemInfo{
+	optional string bunho = 1;
+	optional string decode_result = 2;
+    optional string o_value = 3;
+    optional string gwa = 4;
+    optional string doctor = 5;
+    optional string doctor_name = 6;
+    optional string null_value = 7;
+    optional string hangmog_code = 8;
+	optional string hangmog_name = 9;
+    optional string pandok_serial = 10;
+    optional string gwa_name = 11;
+    optional string chk = 12;
+    optional string pkocs1003_first = 13;
+    optional string pkocs1003_second = 14;
+    optional string if_act_send_yn = 15;
+    optional string pandok_status = 16;
+    optional string portable_yn2 = 17;
+    optional string pandok_request_yn = 18;
+    optional string xray_date = 19;
+    optional string act_date = 20;
+    optional string ho_dong = 21;
+    optional string ho_code = 22;
+    optional string gumsa_mokjuk = 23;
+    optional string xray_gubun = 24;
+    optional string sort_date = 25;
+}
+// --- [END] XRT0000Q00 ---
+
+//------[START] XRT7001Q01---------
+message XRT7001Q01LayRadioHistoryListItemInfo{
+	optional string bunho = 1;
+	optional string suname = 2;
+	optional string gwa = 3;
+	optional string doctor = 4;
+	optional string order_date = 5;
+	optional string jundal_part = 6;
+	optional string xray_code = 7;
+	optional string xray_name = 8;
+	optional string xray_code_idx = 9;
+	optional string xray_code_idx_nm = 10;
+	optional string tube_vol = 11;
+	optional string tube_cur = 12;
+	optional string xray_time = 13;
+	optional string tube_cur_time = 14;
+	optional string irradiation_time = 15;
+	optional string xray_distance = 16;
+}
+
+//------[END] XRT7001Q01---------
+
+//-----[START] XRT9001R01----------
+
+message XRT9001R01Lay9001RListItemInfo{
+	optional string acting_date = 1;
+	optional string cr_cnt_n = 2;
+	optional string cr_cnt_y = 3;
+	optional string dr_cnt_n = 4;
+	optional string dr_cnt_y = 5;
+	optional string ct_cnt_n = 6;
+	optional string ct_cnt_y = 7;
+	optional string mri_cnt_n = 8;
+	optional string mri_cnt_y = 9;
+	optional string total_cnt = 10;
+	optional string zero_value  = 11;
+}
+
+//-----[END] XRT9001R01----------
+
+//--------[START] XRT9001R03--------------
+
+message XRT9001R03Lay9003RListItemInfo{
+	optional string acting_month = 1;
+	optional string cr_cnt_n = 2;
+	optional string cr_cnt_y = 3;
+	optional string dr_cnt_n = 4;
+	optional string dr_cnt_y = 5;
+	optional string ct_cnt_n = 6;
+	optional string ct_cnt_y = 7;
+	optional string mri_cnt_n = 8;
+	optional string mri_cnt_y = 9;
+	optional string total_cnt = 10;
+	optional string zero_value  = 11;
+}
+
+//--------[END] XRT9001R03---------------
+
+//--------[START] XRT0101U00--------------
+//redefine
+message XRT0101U00GrdMcodeInfo
+{
+	optional string code_type           = 1;
+	optional string code_type_name      = 2;
+}
+message XRT0101U00GrdDcodeInfo
+{
+	optional string code_type           = 1;
+	optional string code                = 2;
+	optional string code2               = 3;
+	optional string code_name           = 4;
+	optional string code_name2          = 5;
+	optional string seq                 = 6;
+	optional string code_value          = 7;
+	optional string char_seq            = 8;
+}
+// Request info
+message XRT0101U00SaveLayoutInfo
+{
+	optional string code_type            = 1;
+	optional string code_type_name       = 2;
+	optional string code                 = 3;
+	optional string code_name            = 4;
+	optional string code2                = 5;
+	optional string seq                  = 6;
+	optional string code_value           = 7;
+	optional string row_state            = 8;
+	optional string caller_id            = 9;
+}
+//--------[END] XRT0101U00---------------
+
+//--------[START] XRT0001U00---------------
+//new define
+message XRT0001U00GrdRadioListInfo
+{
+	optional string xray_code            = 1;
+	optional string xray_gubun           = 2;
+	optional string xray_code_idx        = 3;
+	optional string xray_code_idx_nm     = 4;
+	optional string tube_vol             = 5;
+	optional string tube_cur             = 6;
+	optional string xray_time            = 7;
+	optional string tube_cur_time        = 8;
+	optional string irradiation_time     = 9;
+	optional string xray_distance        = 10;
+}
+message XRT0001U00GrdXRTInfo
+{
+	optional string xray_code             = 1;
+	optional string xray_name             = 2;
+	optional string xray_gubun            = 3;
+	optional string xray_room             = 4;
+	optional string xray_buwi             = 5;
+	optional string xray_buwi_kaikei      = 6;
+	optional string xray_buwi_tong        = 7;
+	optional string xray_cnt              = 8;
+	optional string name_print_yn         = 9;
+	optional string suga_code             = 10;
+	optional string special_yn            = 11;
+	optional string xray_real_cnt         = 12;
+	optional string slip_code             = 13;
+	optional string reser_type            = 14;
+	optional string gubun_name            = 15;
+	optional string room_name             = 16;
+	optional string buwi_name             = 17;
+	optional string buwi_kaikei_name      = 18;
+	optional string buwi_tong_name        = 19;
+	optional string reser_type_name       = 20;
+	optional string jaeryo_yn             = 21;
+	optional string sort                  = 22;
+	optional string xray_way              = 23;
+	optional string frequent_use_yn       = 24;
+	optional string modality              = 25;
+	optional string modality_name         = 26;
+	optional string lpad                  = 27;
+	optional string xray_name2            = 28;
+	optional string tong_gubun            = 29;
+	optional string request_yn            = 30;
+}
+message XRT0001U00SaveLayoutInfo
+{
+	optional string xray_code               = 1;
+	optional string xray_room               = 2;
+	optional string xray_buwi_tong          = 3;
+	optional string suga_code               = 4;
+	optional string xray_real_cnt           = 5;
+	optional string slip_code               = 6;
+	optional string sort                    = 7;
+	optional string request_yn              = 8;
+	optional string tube_vol                = 9;
+	optional string tube_cur_time           = 10;
+	optional string xray_name               = 11;
+	optional string xray_buwi               = 12;
+	optional string xray_cnt                = 13;
+	optional string special_yn              = 14;
+	optional string reser_type              = 15;
+	optional string xray_way                = 16;
+	optional string modality                = 17;
+	optional string tube_cur                = 18;
+	optional string irradiation_time        = 19;
+	optional string xray_gubun              = 20;
+	optional string xray_buwi_kaikei        = 21;
+	optional string name_print_yn           = 22;
+	optional string xray_name2              = 23;
+	optional string jaeryo_yn               = 24;
+	optional string tong_gubun              = 25;
+	optional string frequent_use_yn         = 26;
+	optional string xray_time               = 27;
+	optional string xray_distance           = 28;
+	optional string xray_code_idx           = 29;
+	optional string xray_code_idx_nm        = 30;
+	optional string row_state               = 31;
+	optional string caller_id               = 32;
+}
+//--------[END] XRT0001U00-----------------
+
+//-------- [START] XRT0123U00 -------------
+message XRT0123U00GrdDCodeItemInfo {
+	optional string xray_gubun = 1;
+	optional string buwi_code = 2;
+	optional string buwi_name = 3;
+	optional string valtage = 4;
+	optional string cur_electric = 5;
+	optional string time = 6;
+	optional string distance = 7;
+	optional string grid = 8;
+	optional string note = 9;
+	optional string xray_gubun_name = 10;
+	optional string from_age = 11;
+	optional string to_age = 12;
+	optional string mas_val = 13;
+	optional string cont_key = 14;
+	optional string row_state = 15;
+}
+//-------- [END] XRT0123U00 -------------
+
+
+//------ [START] XRT0122U00 ------------
+//re define
+message XRT0122U00GrdMcodeInfo
+{
+	optional string buwi_bunryu          = 1;
+	optional string buwi_bunryu_name     = 2;
+}
+message XRT0122U00GrdDcodeInfo
+{
+	optional string buwi_bunryu          = 1;
+	optional string buwi_code            = 2;
+	optional string buwi_name            = 3;
+	optional string sort_seq             = 4;
+	optional string key                  = 5;
+}
+message XRT0122U00SaveLayoutInfo
+{
+	optional string caller_id           = 1;
+	optional string buwi_bunryu         = 2;
+	optional string buwi_bunryu_name    = 3;
+	optional string buwi_code           = 4;
+	optional string buwi_name           = 5;
+	optional string sort_seq            = 6;
+	optional string row_state           = 7;
+}
+//------ [END] XRT0122U00 ------------
+
+//------ [START] XRT0122Q00 ------------
+message Xrt0122Q00GrdDCodeListItemInfo{
+	optional string bunryu = 1;
+	optional string code = 2;
+	optional string name = 3;
+	optional string seq = 4;
+	optional string key = 5;
+}
+//------ [END] XRT0122Q00 ------------
+
+//------ [START] XRT0201U00 ------------
+message XRT0201U00CbxActorItemInfo{
+    optional string user_id = 1;
+    optional string user_name = 2;
+}
+
+message XRT0201U00GrdPaListItemInfo{
+    optional string in_out_gubun = 1;
+    optional string order_date = 2;
+    optional string order_time = 3;
+    optional string bunho = 4;
+    optional string suname = 5;
+    optional string suname2 = 6;
+    optional string gwa = 7;
+    optional string gwa_name = 8;
+    optional string doctor = 9;
+    optional string doctor_name = 10;
+    optional string reser_yn = 11;
+    optional string emergency = 12;
+    optional string naewon_key = 13;
+    optional string jundal_table = 14;
+	optional string trial_patient = 15;
+}
+
+message XRT0201U00GrdOrderItemInfo{
+    optional string in_out_gubun = 1;
+    optional string pkocs = 2;
+    optional string jubsu_yn = 3;
+    optional string hangmog_code = 4;
+    optional string hangmog_name = 5;
+    optional string jubsu_date = 6;
+    optional string jubsu_time = 7;
+    optional string order_date = 8;
+    optional string order_time = 9;
+    optional string reser_date = 10;
+    optional string reser_time = 11;
+    optional string act_doctor = 12;
+    optional string act_doctor_name = 13;
+    optional string act_buseo = 14;
+    optional string act_gwa = 15;
+    optional string bunho = 16;
+    optional string suname = 17;
+    optional string suname2 = 18;
+    optional string gwa = 19;
+    optional string gwa_name = 20;
+    optional string doctor = 21;
+    optional string doctor_name = 22;
+    optional string input_doctor = 23;
+    optional string order_remark = 24;
+    optional string birth = 25;
+    optional string sex_age = 26;
+    optional string weight_height = 27;
+    optional string in_out_gubun_name = 28;
+    optional string pace_maker_yn = 29;
+    optional string hodong_hocode = 30;
+    optional string last_gumsa_date = 31;
+    optional string unusual_info = 32;
+    optional string jundal_table = 33;
+    optional string jundal_part = 34;
+    optional string fkout1001 = 35;
+    optional string reser_yn = 36;
+    optional string emergency = 37;
+    optional string sunab_suryang = 38;
+    optional string old_act_yn = 39;
+    optional string if_data_send_yn = 40;
+    optional string xrt_dr_yn = 41;
+    optional string act_yn = 42;
+    optional string acting_date = 43;
+    optional string acting_time = 44;
+    optional string dangil_gumsa_result_yn = 45;
+    optional string portable_yn = 46;
+    optional string data_row_state = 47;
+}
+
+message XRT0201U00GrdJaeryoItemInfo{
+    optional string jaeryo_code = 1;
+    optional string jaeryo_name = 2;
+    optional string suryang = 3;
+    optional string ord_danui = 4;
+    optional string pkinv1001 = 5;
+    optional string bunho = 6;
+    optional string order_date = 7;
+    optional string in_out_gubun = 8;
+    optional string acting_date = 9;
+    optional string acting_buseo = 10;
+    optional string fkocs_inv = 11;
+    optional string fkocs_xrt = 12;
+    optional string danui_name = 13;
+    optional string bunryu2 = 14;
+    optional string jaeryo_gubun = 15;
+    optional string jaeryo_yn = 16;
+    optional string input_control = 17;
+    optional string bun_code = 18;
+    optional string nalsu = 19;
+    optional string data_row_state = 20;
+}
+
+message XRT0201U00DefaultJearyoItemInfo{
+    optional string set_hangmog_code = 1;
+    optional string suryang = 2;
+    optional string danui = 3;
+    optional string danui_name = 4;
+}
+
+message XRT0201U00FwkOrdDanuiItemInfo{
+	optional string ord_danui = 1;
+	optional string ord_danui_name = 2;
+	optional string seq = 3;
+}
+
+
+message XRT0201U00GrdJaeryoColumnChangedItemInfo{
+	optional string hangmog_name = 1;
+	optional string suryang = 2;
+	optional string danui = 3;
+	optional string danui_name = 4;
+}
+message XRT0201U00GrdRadioListItemInfo{
+	optional string bunho = 1;
+	optional string order_date = 2;
+	optional string fkxrt0201 = 3;
+	optional string xray_code = 4;
+	optional string xray_name = 5;
+	optional string xray_gubun = 6;
+	optional string xray_code_idx = 7;
+	optional string xray_code_idx_nm = 8;
+	optional string tube_vol = 9;
+	optional string tube_cur = 10;
+	optional string xray_time = 11;
+	optional string tube_cur_time = 12;
+	optional string irradiation_time = 13;
+	optional string xray_distance = 14;
+	optional string data_row_state = 15;
+}
+//------ [END] XRT0201U00 ------------
+
+//------ [START] XRT100200 ------------
+message XRT1002U00DsvLDOCS0801Info {
+optional string pat_status                = 1;
+optional string pat_status_name           = 2;
+optional string pat_status_code           = 3;
+optional string pat_status_code_name      = 4;
+optional string indispensable_yn          = 5;
+}
+message XRT1002U00DsvRequestDataInfo {
+	optional string fkocs                 = 1;
+	optional string in_out_gubun          = 2;
+	optional string hangmog_code          = 3;
+	optional string bunho                 = 4;
+	optional string gumsa_mokjuk          = 5;
+	optional string xray_method           = 6;
+	optional string pandok_request_yn     = 7;
+	optional string buha_gubun            = 8;
+}
+
+message XRT1002U00DsvSideEffectInfo {
+	optional string fkxrt0201              = 1;
+	optional string xray_date              = 2;
+	optional string xray_name              = 3;
+	optional string jaeryo_name            = 4;
+	optional string remark                 = 5;
+	optional string side_effect1           = 6;
+	optional string side_effect2           = 7;
+	optional string side_effect3           = 8;
+	optional string side_effect4           = 9;
+	optional string side_effect5           = 10;
+	optional string side_effect6           = 11;
+	optional string side_effect7           = 12;
+	optional string side_effect_text       = 13;
+}
+
+message XRT1002U00GrdComment3Info {
+	optional string comments       = 1;
+	optional string numb           = 2;
+	optional string ser            = 3;
+}
+
+message XRT1002U00GrdPaStatusInfo {
+	optional string bunho                    = 1;
+	optional string pat_status               = 2;
+	optional string pat_status_name          = 3;
+	optional string pat_status_code          = 4;
+	optional string pat_status_code_name     = 5;
+	optional string ment                     = 6;
+	optional string seq                      = 7;
+	optional string indispensable_yn         = 8;
+	optional string cont_key                 = 9;
+}
+
+message XRT1002U00LayCPLInfo {
+	optional string hangmog_name              = 1;
+	optional string hangmog_result            = 2;
+	optional string hangmog_result_date       = 3;
+}
+
+message XRT1002U00LayOrderByJundalPartInfo {
+	optional string bunho                    = 1;
+	optional string suname                   = 2;
+	optional string ho_dong                  = 3;
+	optional string hocode                   = 4;
+	optional string birth                    = 5;
+	optional string sex                      = 6;
+	optional string age                      = 7;
+	optional string order_date               = 8;
+	optional string gwa_name                 = 9;
+	optional string doctor_name              = 10;
+	optional string xray_name                = 11;
+	optional string xrt_comments             = 12;
+	optional string gumsa_mokjuk2            = 13;
+	optional string pkocs                    = 14;
+	optional string xray_gubun_name          = 15;
+	optional string xray_reser_date          = 16;
+	optional string xray_reser_time          = 17;
+	optional string pat_status_name          = 18;
+	optional string pat_status_code_name     = 19;
+	optional string cpl_result               = 20;
+	optional string cpl_gumsa_date           = 21;
+	optional string pacs_suname2             = 22;
+	optional string xray_method              = 23;
+	optional string xray_gubun               = 24;
+	optional string order_time               = 25;
+	optional string birth_japan              = 26;
+	optional string weight                   = 27;
+	optional string height                   = 28;
+	optional string xray_code                = 29;
+	optional string comment                  = 30;
+	optional string buwi_code                = 31;
+	optional string buwi_code_name           = 32;
+	optional string xray_date                = 33;
+	optional string valtage                  = 34;
+	optional string cur_electric             = 35;
+	optional string time                     = 36;
+	optional string distance                 = 37;
+	optional string grid                     = 38;
+	optional string note                     = 39;
+	optional string print_date               = 40;
+	optional string pkxrt0201                = 41;
+}
+
+message XRT1002U00LayOrderDateInfo {
+	optional string order_date = 1;
+}
+
+message XRT1002U00LayPrintDateInfo {
+	optional string print_date = 1;
+}
+
+message XRT1002U00LayPrintOrderInfo {
+	optional string bunho                   = 1;
+	optional string suname                  = 2;
+	optional string ho_dong                 = 3;
+	optional string hocode                  = 4;
+	optional string birth                   = 5;
+	optional string sex                     = 6;
+	optional string age                     = 7;
+	optional string order_date              = 8;
+	optional string gwa_name                = 9;
+	optional string doctor_name             = 10;
+	optional string xray_name               = 11;
+	optional string xrt_comments            = 12;
+	optional string gumsa_mokjuk2           = 13;
+	optional string pkocs                   = 14;
+	optional string xray_gubun_name         = 15;
+	optional string xray_reser_date         = 16;
+	optional string xray_reser_time         = 17;
+	optional string pat_status_name         = 18;
+	optional string pat_status_code_name    = 19;
+	optional string cpl_result              = 20;
+	optional string cpl_gumsa_date          = 21;
+	optional string pacs_suname2            = 22;
+	optional string xray_method             = 23;
+	optional string xray_gubun              = 24;
+	optional string order_time              = 25;
+	optional string birth_japan             = 26;
+	optional string weight                  = 27;
+	optional string height                  = 28;
+	optional string xray_code               = 29;
+	optional string comment                 = 30;
+	optional string buwi_code               = 31;
+	optional string buwi_code_name          = 32;
+	optional string valtage                 = 33;
+	optional string cur_electric            = 34;
+	optional string time                    = 35;
+	optional string distance                = 36;
+	optional string grid                    = 37;
+	optional string note                    = 38;
+	optional string pkxrt0201               = 39;
+}
+
+message XRT1002U00LayXRT0123Info {
+	optional string valtage           = 1;
+	optional string cur_electric      = 2;
+	optional string time              = 3;
+	optional string distance          = 4;
+	optional string grid              = 5;
+	optional string note              = 6;
+	optional string mas_val           = 7;
+}
+message XRT1002U00DsvXrayGubunInfo
+{
+	optional string xray_gubun         = 1;
+	optional string xray_name         = 2;
+	optional string request_yn         = 3;
+}
+message XRT1002U00GrdCommentInfo
+{
+	optional string comments       = 1;
+}
+//------ [END] XRT1002U00 ------------
+
+//------ [END] XRT0101U01 ------------
+message XRT0101U01GrdDcodeListItemInfo{
+    optional string code_type = 1;
+    optional string code = 2;
+    optional string code2 = 3;
+    optional string code_name = 4;
+    optional string code_name2 = 5;
+    optional string seq = 6;
+    optional string code_value = 7;
+    optional string trim_value = 8;
+    optional string row_state = 9;
+}
+
+message XRT0101U01GrdMcodeListItemInfo{
+    optional string code_type = 1;
+    optional string code_type_name = 2;
+    optional string admin_gubun = 3;
+    optional string row_state = 4;
+}
+//------ [END] XRT0101U01 ------------
+
+// [START] XRT0201U00
+message XRT0201U00ToolTipInfo {
+    optional string num_protocol  = 1;       
+}
+// [END] XRT0201U00
+
+
+// [START] MIH
+message XRT9001R05lay9005RInfo{
+	optional string acting_date = 1;
+	optional string o_cr_cnt_n = 2;
+	optional string i_cr_cnt_n = 3;
+	optional string o_cr_cnt_y = 4;
+	optional string i_cr_cnt_y = 5;
+	optional string o_bm_cnt_n = 6;
+	optional string i_bm_cnt_n = 7;
+	optional string o_dr_cnt_n = 8;
+	optional string i_dr_cnt_n = 9;
+	optional string o_dr_cnt_y = 10;
+	optional string i_dr_cnt_y = 11;
+	optional string o_ct_cnt_n = 12;
+	optional string i_ct_cnt_n = 13;
+	optional string o_ct_cnt_y = 14;
+	optional string i_ct_cnt_y = 15;
+	optional string o_mri_cnt_n = 16;
+	optional string i_mri_cnt_n = 17;
+	optional string o_mri_cnt_y = 18;
+	optional string i_mri_cnt_y = 19;
+	optional string total_cnt = 20;
+	optional string type = 21;
+}
+
+message XRT9001R06lay9006RInfo{
+	optional string acting_month = 1;
+	optional string o_cr_cnt_n = 2;
+	optional string i_cr_cnt_n = 3;
+	optional string o_cr_cnt_y = 4;
+	optional string i_cr_cnt_y = 5;
+	optional string o_bm_cnt_n = 6;
+	optional string i_bm_cnt_n = 7;
+	optional string o_dr_cnt_n = 8;
+	optional string i_dr_cnt_n = 9;
+	optional string o_dr_cnt_y = 10;
+	optional string i_dr_cnt_y = 11;
+	optional string o_ct_cnt_n = 12;
+	optional string i_ct_cnt_n = 13;
+	optional string o_ct_cnt_y = 14;
+	optional string i_ct_cnt_y = 15;
+	optional string o_mri_cnt_n = 16;
+	optional string i_mri_cnt_n = 17;
+	optional string o_mri_cnt_y = 18;
+	optional string i_mri_cnt_y = 19;
+	optional string total_cnt = 20;
+	optional string type = 21;
+}

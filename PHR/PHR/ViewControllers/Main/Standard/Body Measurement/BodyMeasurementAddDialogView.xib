@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BodyMeasurementAddDialogView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jry-Ia-dN7">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TXA-Br-HRf">
+                    <rect key="frame" x="40" y="100" width="240" height="200"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="1bq-hE-uxr"/>
+                    </constraints>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="jry-Ia-dN7" secondAttribute="bottom" id="29u-d3-0BH"/>
+                <constraint firstItem="jry-Ia-dN7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="DSD-1V-YF4"/>
+                <constraint firstAttribute="trailing" secondItem="jry-Ia-dN7" secondAttribute="trailing" id="Eab-ll-OGY"/>
+                <constraint firstItem="TXA-Br-HRf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="Ebx-Xm-qix"/>
+                <constraint firstItem="TXA-Br-HRf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="100" id="KHN-5P-YHM"/>
+                <constraint firstItem="jry-Ia-dN7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="UqN-5n-Xs7"/>
+                <constraint firstAttribute="trailing" secondItem="TXA-Br-HRf" secondAttribute="trailing" constant="40" id="WgW-Uz-kf9"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outlet property="constraintTableHeight" destination="1bq-hE-uxr" id="lDs-Oj-u1I"/>
+                <outlet property="tableMenuItem" destination="TXA-Br-HRf" id="h90-mY-KeD"/>
+                <outlet property="viewUnderTableMenu" destination="jry-Ia-dN7" id="JtD-hR-AfQ"/>
+            </connections>
+        </view>
+    </objects>
+</document>

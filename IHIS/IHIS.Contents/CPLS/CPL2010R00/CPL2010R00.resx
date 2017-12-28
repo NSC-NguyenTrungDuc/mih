@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ImageList.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>17, 17</value>
+  </data>
+  <data name="lbSpecimenSer.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 9.75pt, style=Bold</value>
+  </data>
+  <data name="lbSpecimenSer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>248, 6</value>
+  </data>
+  <data name="lbSpecimenSer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 12</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lbSpecimenSer.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lbSpecimenSer.Name" xml:space="preserve">
+    <value>lbSpecimenSer</value>
+  </data>
+  <data name="&gt;&gt;lbSpecimenSer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbSpecimenSer.Parent" xml:space="preserve">
+    <value>xPanel1</value>
+  </data>
+  <data name="&gt;&gt;lbSpecimenSer.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txtBarcode.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtBarcode.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 48pt</value>
+  </data>
+  <data name="txtBarcode.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Disable</value>
+  </data>
+  <data name="txtBarcode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="txtBarcode.MaxLength" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="txtBarcode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>351, 71</value>
+  </data>
+  <data name="txtBarcode.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtBarcode.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;txtBarcode.Name" xml:space="preserve">
+    <value>txtBarcode</value>
+  </data>
+  <data name="&gt;&gt;txtBarcode.Type" xml:space="preserve">
+    <value>IHIS.Framework.XTextBox, IHIS.Controls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtBarcode.Parent" xml:space="preserve">
+    <value>xPanel1</value>
+  </data>
+  <data name="&gt;&gt;txtBarcode.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="xLabel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="xLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 2</value>
+  </data>
+  <data name="xLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>360, 21</value>
+  </data>
+  <data name="xLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;xLabel1.Name" xml:space="preserve">
+    <value>xLabel1</value>
+  </data>
+  <data name="&gt;&gt;xLabel1.Type" xml:space="preserve">
+    <value>IHIS.Framework.XLabel, IHIS.Controls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xLabel1.Parent" xml:space="preserve">
+    <value>xPanel1</value>
+  </data>
+  <data name="&gt;&gt;xLabel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="xPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="xPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 5</value>
+  </data>
+  <data name="xPanel1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="xPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 104</value>
+  </data>
+  <data name="xPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;xPanel1.Name" xml:space="preserve">
+    <value>xPanel1</value>
+  </data>
+  <data name="&gt;&gt;xPanel1.Type" xml:space="preserve">
+    <value>IHIS.Framework.XPanel, IHIS.Controls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;xPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnClose.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnClose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhEAAQAIUAANSuKUKJI/3+sv3liI7wW3bgS/7pj/3pj/31pP3xnVLINP3kiP7tl/38rv7hgf7k
+        iP7tlv32pP7de/7liP38r/7hgv7xnf7dfP72o/3tlvLVkf3hgS6yHf3ynf7ynf3ulv78rlHJM1LJNP37
+        ry6xHP7ggf7adv3adv///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEBAAAh+QQBAAAoACwAAAAAEAAQ
+        AAAIjwBRCBxIsKBAAAgTItRgEAUAAQoTNnwoAKLCiRUrXgxQEACFBg0ojACBEEUAjgMBIMCAIEIEBCcD
+        FAiB0mGHBBYSJPAQgACBAgo4oAQA4UMGBgwg9PwpgsTQAwagRo0JtCaAAQMeDJiwoORJglezbu0KwGRH
+        ABU2lHDgoGRDhwAuSJDg9q1DEyfK2k1Zl2BAADs=
+</value>
+  </data>
+  <data name="btnClose.Location" type="System.Drawing.Point, System.Drawing">
+    <value>275, 4</value>
+  </data>
+  <data name="btnClose.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 28</value>
+  </data>
+  <data name="btnClose.TabIndex" type="System.Int32, mscorlib">
+    <value>277</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Name" xml:space="preserve">
+    <value>btnClose</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButton, IHIS.Controls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Parent" xml:space="preserve">
+    <value>xPanel3</value>
+  </data>
+  <data name="&gt;&gt;btnClose.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnPrintSetup.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnPrintSetup.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhEAAQAIUAAP///9PT05XB8paWlgBsvhZ+DYfU/3SGmR+U8Tms/RGl/wB+5CCnDXGAjsvk86LU
+        98bk/rPW83SGmMHe78fp/3KCj3SFldPq/mZzeMrm/3F/jq3a9nGAj47wW6/V6sDd97zh/cfm+63T86jX
+        +HiNoMvm+6HW97jZ7bPb9nWGmb/g/b6+vsPDw7LT87LV68ri+P///wAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEBAAAh+QQBAAAwACwAAAAAEAAQ
+        AAAInwBhCBxIsKDAAAgTKkQ4YGAAABAjSgTQ8CAABRgXLCDAkQBFhxcNGBBAkiSCjxYXiBQgMQGCijAe
+        EjBAgCWAAgBcIgA5s+bNDgUSCN0ZE0BHAQUYKC1A4UIFixFt4iwR4kUDgSsGaB3AMkMBCCpAfNBQMAAL
+        mxBRbIjAgeBWtCMemBBx1aAABw4mnHDhoYUFgzAOHJAgOMUBEhgAKxYYEAA7
+</value>
+  </data>
+  <data name="btnPrintSetup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 4</value>
+  </data>
+  <data name="btnPrintSetup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 28</value>
+  </data>
+  <data name="btnPrintSetup.TabIndex" type="System.Int32, mscorlib">
+    <value>276</value>
+  </data>
+  <data name="&gt;&gt;btnPrintSetup.Name" xml:space="preserve">
+    <value>btnPrintSetup</value>
+  </data>
+  <data name="&gt;&gt;btnPrintSetup.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButton, IHIS.Controls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnPrintSetup.Parent" xml:space="preserve">
+    <value>xPanel3</value>
+  </data>
+  <data name="&gt;&gt;btnPrintSetup.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnBarcode.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnBarcode.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhEAAQAIQAAKurq+Dg4P///8HBwUxNUsPh/6rX/peXubnS8eLy/6mpqb7F3fD5/7Gyy/H5/+Px
+        /+Py/7zB2Li50MHh//b2+ez0/KyxzZubvL3Z+NPZ6Pj5+6+xy6Kpybi+1qGmxv///yH/C05FVFNDQVBF
+        Mi4wAwEBAAAh+QQBAAAfACwAAAAAEAAQAAAIhAA/CBxIsODABgcSJrwggYLBDxoaMHDggEGFDBsefoiw
+        AEKCBwkSWOigccEEDAhSIvBQsoDLlxwKApg504DNmzMFAhAQoCfNnzk/AFDQs6jRogCEKhDAtKnTpjOX
+        +gSAlGoAATR5Hj2KVSiAAWDDih0QICnQszQHAiDAtq3bpATR/hQYEAA7
+</value>
+  </data>
+  <data name="btnBarcode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>193, 4</value>
+  </data>
+  <data name="btnBarcode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 28</value>
+  </data>
+  <data name="btnBarcode.TabIndex" type="System.Int32, mscorlib">
+    <value>275</value>
+  </data>
+  <data name="&gt;&gt;btnBarcode.Name" xml:space="preserve">
+    <value>btnBarcode</value>
+  </data>
+  <data name="&gt;&gt;btnBarcode.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButton, IHIS.Controls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnBarcode.Parent" xml:space="preserve">
+    <value>xPanel3</value>
+  </data>
+  <data name="&gt;&gt;btnBarcode.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="dwBarcode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 13</value>
+  </data>
+  <data name="dwBarcode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 12</value>
+  </data>
+  <data name="dwBarcode.TabIndex" type="System.Int32, mscorlib">
+    <value>278</value>
+  </data>
+  <data name="dwBarcode.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;dwBarcode.Name" xml:space="preserve">
+    <value>dwBarcode</value>
+  </data>
+  <data name="&gt;&gt;dwBarcode.Type" xml:space="preserve">
+    <value>IHIS.Framework.XDataWindow, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dwBarcode.Parent" xml:space="preserve">
+    <value>xPanel3</value>
+  </data>
+  <data name="&gt;&gt;dwBarcode.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="xPanel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="xPanel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 109</value>
+  </data>
+  <data name="xPanel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 40</value>
+  </data>
+  <data name="xPanel3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;xPanel3.Name" xml:space="preserve">
+    <value>xPanel3</value>
+  </data>
+  <data name="&gt;&gt;xPanel3.Type" xml:space="preserve">
+    <value>IHIS.Framework.XPanel, IHIS.Controls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xPanel3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;xPanel3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="printDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>262, 17</value>
+  </data>
+  <data name="printDocument1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>121, 17</value>
+  </data>
+  <data name="layBarcodeOne.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>381, 17</value>
+  </data>
+  <data name="layBarcodeOne.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+  <data name="layBarcode.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>515, 17</value>
+  </data>
+  <data name="layBarcode.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+  <data name="$this.Language" type="System.Globalization.CultureInfo, mscorlib">
+    <value>Japanese (Japan)</value>
+  </data>
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>376, 154</value>
+  </data>
+  <data name="&gt;&gt;ImageList.Name" xml:space="preserve">
+    <value>ImageList</value>
+  </data>
+  <data name="&gt;&gt;ImageList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;xColumnHeader1.Name" xml:space="preserve">
+    <value>xColumnHeader1</value>
+  </data>
+  <data name="&gt;&gt;xColumnHeader1.Type" xml:space="preserve">
+    <value>IHIS.Framework.XColumnHeader, IHIS.Controls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;printDialog1.Name" xml:space="preserve">
+    <value>printDialog1</value>
+  </data>
+  <data name="&gt;&gt;printDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PrintDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;printDocument1.Name" xml:space="preserve">
+    <value>printDocument1</value>
+  </data>
+  <data name="&gt;&gt;printDocument1.Type" xml:space="preserve">
+    <value>System.Drawing.Printing.PrintDocument, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="&gt;&gt;layBarcodeOne.Name" xml:space="preserve">
+    <value>layBarcodeOne</value>
+  </data>
+  <data name="&gt;&gt;layBarcodeOne.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayout, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem1.Name" xml:space="preserve">
+    <value>multiLayoutItem1</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem1.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem2.Name" xml:space="preserve">
+    <value>multiLayoutItem2</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem2.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem3.Name" xml:space="preserve">
+    <value>multiLayoutItem3</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem3.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem4.Name" xml:space="preserve">
+    <value>multiLayoutItem4</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem4.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem5.Name" xml:space="preserve">
+    <value>multiLayoutItem5</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem5.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem6.Name" xml:space="preserve">
+    <value>multiLayoutItem6</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem6.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem7.Name" xml:space="preserve">
+    <value>multiLayoutItem7</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem7.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem8.Name" xml:space="preserve">
+    <value>multiLayoutItem8</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem8.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem9.Name" xml:space="preserve">
+    <value>multiLayoutItem9</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem9.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem10.Name" xml:space="preserve">
+    <value>multiLayoutItem10</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem10.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem11.Name" xml:space="preserve">
+    <value>multiLayoutItem11</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem11.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem12.Name" xml:space="preserve">
+    <value>multiLayoutItem12</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem12.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem13.Name" xml:space="preserve">
+    <value>multiLayoutItem13</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem13.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem14.Name" xml:space="preserve">
+    <value>multiLayoutItem14</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem14.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem15.Name" xml:space="preserve">
+    <value>multiLayoutItem15</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem15.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem16.Name" xml:space="preserve">
+    <value>multiLayoutItem16</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem16.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layBarcode.Name" xml:space="preserve">
+    <value>layBarcode</value>
+  </data>
+  <data name="&gt;&gt;layBarcode.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayout, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem17.Name" xml:space="preserve">
+    <value>multiLayoutItem17</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem17.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem18.Name" xml:space="preserve">
+    <value>multiLayoutItem18</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem18.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem19.Name" xml:space="preserve">
+    <value>multiLayoutItem19</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem19.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem20.Name" xml:space="preserve">
+    <value>multiLayoutItem20</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem20.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem21.Name" xml:space="preserve">
+    <value>multiLayoutItem21</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem21.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem22.Name" xml:space="preserve">
+    <value>multiLayoutItem22</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem22.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem23.Name" xml:space="preserve">
+    <value>multiLayoutItem23</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem23.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem24.Name" xml:space="preserve">
+    <value>multiLayoutItem24</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem24.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem25.Name" xml:space="preserve">
+    <value>multiLayoutItem25</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem25.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem26.Name" xml:space="preserve">
+    <value>multiLayoutItem26</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem26.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem27.Name" xml:space="preserve">
+    <value>multiLayoutItem27</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem27.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem28.Name" xml:space="preserve">
+    <value>multiLayoutItem28</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem28.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem29.Name" xml:space="preserve">
+    <value>multiLayoutItem29</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem29.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem30.Name" xml:space="preserve">
+    <value>multiLayoutItem30</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem30.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem31.Name" xml:space="preserve">
+    <value>multiLayoutItem31</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem31.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem32.Name" xml:space="preserve">
+    <value>multiLayoutItem32</value>
+  </data>
+  <data name="&gt;&gt;multiLayoutItem32.Type" xml:space="preserve">
+    <value>IHIS.Framework.MultiLayoutItem, IHIS.DbControls, Version=1.0.5593.34069, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>CPL2010R00</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>IHIS.Framework.XScreen, IHIS.Forms, Version=1.0.5593.34071, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btnBarcode.Text" xml:space="preserve">
+    <value>再印刷</value>
+  </data>
+  <data name="btnClose.Text" xml:space="preserve">
+    <value>閉じる</value>
+  </data>
+  <data name="btnPrintSetup.Text" xml:space="preserve">
+    <value>バーコードプリンター設定</value>
+  </data>
+  <data name="dwBarcode.Text" xml:space="preserve">
+    <value>xDataWindow1</value>
+  </data>
+  <data name="layBarcode.QuerySQL" xml:space="preserve">
+    <value>SELECT DISTINCT 
+       MIN(A.JUNDAL_GUBUN)                             JUNDAL_GUBUN
+     , MIN(DECODE(B.JUNDAL_GUBUN_NAME,NULL,NVL(FN_CPL_HANGMOG_MARK_NAME(A.SPECIMEN_SER)||' '||NVL(FN_CPL_CODE_NAME_RE('01',A.JUNDAL_GUBUN),FN_CPL_CODE_NAME('01',A.JUNDAL_GUBUN)),NVL(FN_CPL_CODE_NAME_RE('01',A.JUNDAL_GUBUN),FN_CPL_CODE_NAME('01',A.JUNDAL_GUBUN))),B.JUNDAL_GUBUN_NAME))   JUNDAL_GUBUN_NAME
+     , ' '                                             SPECIMEN_CODE
+     , MIN(NVL(FN_CPL_CODE_NAME_RE('04',A.SPECIMEN_CODE),FN_CPL_CODE_NAME('04',A.SPECIMEN_CODE))) SPECIMEN_NAME
+     , MIN(NVL(B.JANGBI_OUT_CODE3,B.OUT_TUBE2))        TUBE_CODE
+     , MIN(NVL(FN_CPL_CODE_NAME_RE('02',B.OUT_TUBE2),NVL(FN_CPL_CODE_NAME_RE('02',A.TUBE_CODE),FN_CPL_CODE_NAME('02',A.TUBE_CODE)))) TUBE_NAME
+     , NVL(B.UITAK_CODE,MAX(A.EMERGENCY))                        IN_OUT_GUBUN --여기에서 응급여부를 관리 dw를 다시 고쳐야해서 그냥 이필드로 감
+     , A.SPECIMEN_SER                          SPECIMEN_SER
+     , MIN(A.BUNHO)                                       BUNHO
+     , MIN(NVL(C.SUNAME2,'NO KATAKANA'))               SUNAME
+     , MIN(DECODE(A.IN_OUT_GUBUN,'I',FN_BAS_LOAD_GWA_NAME(A.HO_DONG,SYSDATE),FN_BAS_LOAD_GWA_NAME(A.GWA,SYSDATE)))        GWA_NAME
+     , ' '                                             DANGER_YN
+     , 'a'||A.SPECIMEN_SER||'a'                        SPECIMEN_SER_BA
+     , MIN(A.JANGBI_CODE)                              JANGBI_CODE
+     , MIN(NVL(FN_CPL_CODE_NAME_RE('07',B.JANGBI_CODE),FN_CPL_CODE_NAME('07',B.JANGBI_CODE))) JANGBI_NAME
+     , MIN(SUBSTR(A.SPECIMEN_SER,5,2)||'-'||SUBSTR(A.SPECIMEN_SER,7)) GUMSA_NAME_RE -- 이 필드로 날짜별 키 구분
+     , FN_CPL_TUBE_COUNT(A.SPECIMEN_SER)               TUBE_COUNT
+     , MIN(D.CODE_NAME_RE2||DECODE(D.CODE_NAME_RE2,NULL,NULL,'mL'))   TUBE_MAX_AMT
+     , MIN(FN_CPL_TUBE_NUMBERING(A.BUNHO,A.ORDER_DATE,A.ORDER_TIME,A.SPECIMEN_SER))   TUBE_NUMBERING
+  FROM CPL0109 D
+     , OUT0101 C
+     , CPL0101 B
+     , CPL2010 A
+ WHERE B.HOSP_CODE     = FN_ADM_LOAD_HOSP_CODE()
+   AND A.HOSP_CODE     = B.HOSP_CODE
+   AND C.HOSP_CODE     = B.HOSP_CODE
+   AND D.HOSP_CODE(+)  = B.HOSP_CODE
+   AND A.SPECIMEN_SER  = :f_specimen_ser
+   AND B.HANGMOG_CODE  = A.HANGMOG_CODE
+   AND B.SPECIMEN_CODE = A.SPECIMEN_CODE
+   AND B.EMERGENCY     = A.EMERGENCY
+   AND C.BUNHO         = A.BUNHO
+   AND B.OUT_TUBE2 IS NOT NULL  -- SRL 또는 별도 라벨필요할 경우       
+   AND D.CODE_TYPE(+)  = '02'
+   AND D.CODE(+)       = B.TUBE_CODE
+ GROUP BY A.SPECIMEN_SER, B.UITAK_CODE, B.OUT_TUBE2, A.JUNDAL_GUBUN
+UNION
+SELECT DISTINCT
+       MIN(A.JUNDAL_GUBUN)                             JUNDAL_GUBUN
+     , MIN(DECODE(B.JUNDAL_GUBUN_NAME,NULL,NVL(FN_CPL_HANGMOG_MARK_NAME(A.SPECIMEN_SER)||' '||NVL(FN_CPL_CODE_NAME_RE('01',A.JUNDAL_GUBUN),FN_CPL_CODE_NAME('01',A.JUNDAL_GUBUN)),NVL(FN_CPL_CODE_NAME_RE('01',A.JUNDAL_GUBUN),FN_CPL_CODE_NAME('01',A.JUNDAL_GUBUN))),B.JUNDAL_GUBUN_NAME))   JUNDAL_GUBUN_NAME
+     , ' '                                             SPECIMEN_CODE
+     , MIN(NVL(FN_CPL_CODE_NAME_RE('04',A.SPECIMEN_CODE),FN_CPL_CODE_NAME('04',A.SPECIMEN_CODE))) SPECIMEN_NAME
+     , MIN(B.TUBE_CODE)                                TUBE_CODE
+     , MIN(NVL(FN_CPL_CODE_NAME_RE('02',A.TUBE_CODE),FN_CPL_CODE_NAME('02',A.TUBE_CODE))) TUBE_NAME
+     , NVL(B.UITAK_CODE,MAX(A.EMERGENCY))                          IN_OUT_GUBUN --여기에서 응급여부를 관리 dw를 다시 고쳐야해서 그냥 이필드로 감
+     , A.SPECIMEN_SER                          SPECIMEN_SER
+     , MIN(A.BUNHO)                                       BUNHO
+     , MIN(NVL(C.SUNAME2,'NO KATAKANA'))               SUNAME
+     , MIN(DECODE(A.IN_OUT_GUBUN,'I',FN_BAS_LOAD_GWA_NAME(A.HO_DONG,SYSDATE),FN_BAS_LOAD_GWA_NAME(A.GWA,SYSDATE)))        GWA_NAME
+     , ' '                                             DANGER_YN
+     , 'a'||A.SPECIMEN_SER||'a'                        SPECIMEN_SER_BA
+     , MIN(A.JANGBI_CODE)                              JANGBI_CODE
+     , MIN(NVL(FN_CPL_CODE_NAME_RE('07',B.JANGBI_CODE),FN_CPL_CODE_NAME('07',B.JANGBI_CODE))) JANGBI_NAME
+     , MIN(SUBSTR(A.SPECIMEN_SER,5,2)||'-'||SUBSTR(A.SPECIMEN_SER,7)) GUMSA_NAME_RE -- 이 필드로 날짜별 키 구분
+     , FN_CPL_TUBE_COUNT(A.SPECIMEN_SER)               TUBE_COUNT
+     , MIN(D.CODE_NAME_RE2||DECODE(D.CODE_NAME_RE2,NULL,NULL,'mL'))   TUBE_MAX_AMT
+     , MIN(FN_CPL_TUBE_NUMBERING(A.BUNHO,A.ORDER_DATE,A.ORDER_TIME,A.SPECIMEN_SER))   TUBE_NUMBERING
+  FROM CPL0109 D
+     , OUT0101 C
+     , CPL0101 B
+     , CPL2010 A
+ WHERE B.HOSP_CODE     = FN_ADM_LOAD_HOSP_CODE()
+   AND A.HOSP_CODE     = B.HOSP_CODE
+   AND C.HOSP_CODE     = B.HOSP_CODE
+   AND D.HOSP_CODE(+)  = B.HOSP_CODE
+   AND A.SPECIMEN_SER  = :f_specimen_ser
+   AND B.HANGMOG_CODE  = A.HANGMOG_CODE
+   AND B.SPECIMEN_CODE = A.SPECIMEN_CODE
+   AND B.EMERGENCY     = A.EMERGENCY
+   AND C.BUNHO         = A.BUNHO
+   AND D.CODE_TYPE(+)  = '02'
+   AND D.CODE(+)       = B.TUBE_CODE
+ GROUP BY A.SPECIMEN_SER, B.UITAK_CODE, B.JANGBI_OUT_CODE3, A.JUNDAL_GUBUN
+ ORDER BY 8</value>
+  </data>
+  <data name="xColumnHeader1.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="xLabel1.Text" xml:space="preserve">
+    <value>★再出力したいバーコードを読込んで下さい。</value>
+  </data>
+</root>

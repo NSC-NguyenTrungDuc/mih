@@ -1,0 +1,2077 @@
+import "rpc.proto";
+import "drgs_model.proto";
+import "common_model.proto";
+import "system_service.proto";
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "DrgsServiceProto";
+option (version) = "1.0.0";
+option (service) = "drgs";
+
+//Get Order List
+message DrgsDRG5100P01OrderListRequest{
+	optional string order_date = 1;
+	optional string drg_bunho = 2;
+	optional string gubun = 3;
+	optional string wonyoi_yn = 4;
+	optional string bunho = 5;
+}
+
+message DrgsDRG5100P01OrderListResponse{
+	repeated DrgsDRG5100P01OrderListItemInfo order_list = 1;
+}
+//Anti Data
+message DrgsDRG5100P01AntiDataListRequest{
+	optional string fkocs = 1;
+}
+
+message DrgsDRG5100P01AntiDataListResponse{
+	repeated DrgsDRG5100P01AntiDataListItemInfo anti_data_list = 1;
+}
+//layAutoJubsu
+message DrgsDRG5100P01AutoJubsuListRequest{
+	optional string from_date = 1;
+	optional string to_date = 2;
+	optional string gwa = 3;
+	optional string bunho = 4;
+	optional string wonyoi_yn = 5;
+	optional string gubun = 6;
+}
+
+message DrgsDRG5100P01AutoJubsuListResponse{
+	repeated DrgsDRG5100P01AutoJubsuListItemInfo autu_jubsu_list = 1;
+}
+//Label List
+message DrgsDRG5100P01LabelListRequest{
+	optional string jubsu_date = 1;
+	optional string drg_bunho = 2;
+}
+
+message DrgsDRG5100P01LabelListResponse{
+	repeated DrgsDRG5100P01LabelListItemInfo label_list = 1;
+}
+//layNebokLabel
+message DrgsDRG5100P01NebokLabelListRequest{
+	optional string jubsu_date = 1;
+	optional string drg_bunho = 2;
+	optional string bunho = 3;
+}
+
+message DrgsDRG5100P01NebokLabelListResponse{
+	repeated DrgsDRG5100P01NebokLabelListItemInfo nebok_label_list = 1;
+}
+
+//Get List Paid Order
+message DrgsDRG5100P01PaidOrderListRequest{
+	optional string from_date = 1;
+	optional string to_date = 2;
+	optional string gwa = 3;
+	optional string wonyoi_yn = 4;
+	optional string gubun = 5;
+	optional string bunho = 6;
+}
+
+message DrgsDRG5100P01PaidOrderListResponse{
+	repeated DrgsDRG5100P01PaidOrderListItemInfo paid_order_list = 1;
+}
+//Get List Paid Jubsu
+message DrgsDRG5100P01PaidJubsuListRequest{
+	optional string from_date = 1;
+	optional string to_date = 2;
+	optional string gwa = 3;
+	optional string wonyoi_yn = 4;
+	optional string gubun = 5;
+	optional string bunho = 6;
+}
+
+message DrgsDRG5100P01PaidJubsuListResponse{
+	repeated DrgsDRG5100P01PaidJubsuListItemInfo paid_jubsu_list = 1;
+}
+
+//Get List Order Order
+message DrgsDRG5100P01OrderOrderListRequest{
+	optional string order_date = 1;
+	optional string drg_bunho = 2;
+	optional string gubun = 3;
+}
+
+message DrgsDRG5100P01OrderOrderListResponse{
+	repeated DrgsDRG5100P01OrderOrderListItemInfo order_order_list = 1;
+}
+
+//Get List Order Jubsu
+message DrgsDRG5100P01OrderJubsuListRequest{
+	optional string order_date = 1;
+	optional string drg_bunho = 2;
+	optional string gubun = 3;
+}
+
+message DrgsDRG5100P01OrderJubsuListResponse{
+	repeated DrgsDRG5100P01OrderJubsuListItemInfo order_jubsu_list = 1;
+}
+
+//Get Constant Info
+message DrgsDRG5100P01ConstantInfoRequest{
+   required string code_type = 1;
+}
+message DrgsDRG5100P01ConstantInfoResponse{
+	repeated DrgsDRG5100P01ConstantInfo constant_info_list = 1;
+}
+//Exec PR_DRG_MAKE_BONGTU_OUT
+message DrgsDRG5100P01MakeBongtuOutRequest{
+	optional string i_sys_date = 1;
+	optional string i_user_id = 2;
+	optional string i_order_date = 3;
+	optional string i_jubsu_date = 4;
+	optional string i_jubsu_time = 5;
+	optional string i_drg_bunho = 6;
+	optional string i_wonyoi_order_yn = 7;
+	optional string i_jubsu_yn = 8;
+	optional string i_gyunbon_yn = 9;
+}
+message DrgsDRG5100P01MakeBongtuOutResponse{
+	optional bool result = 1;
+}
+//Check DsvBoRyu
+message DrgsDRG5100P01CheckDsvBoRyuRequest{
+	optional string boryu_yn = 1;
+	optional string drg_bunho = 2;
+	optional string gwa = 3;
+	optional string doctor = 4;
+	optional string bunho = 5;
+	optional string order_date = 6;
+	optional string user_id = 7;
+}
+
+//Get current timer
+message DrgsDRG5100P01GetTimerRequest{
+	optional string current_date = 1;
+}
+message DrgsDRG5100P01GetTimerResponse{
+	required string result = 1;
+}
+
+//Check jubsu
+message DrgsDRG5100P01CheckJubsuRequest{
+	optional string order_date = 1;
+	optional string drg_bunho = 2;
+}
+message DrgsDRG5100P01CheckJubsuResponse{
+	optional string result = 1;
+}
+//Get Min FKOCS1003 
+message DrgsDRG5100P01MinFKOCS1003Request{
+	optional string jubsu_date = 1;
+	optional string drg_bunho = 2;
+}
+message DrgsDRG5100P01MinFKOCS1003Response{
+	optional string result = 1;
+}
+//Exec PR_OUT_LOAD_CHEBANG_PRINT
+message DrgsDRG5100P01LoadChebangPrintRequest{
+	optional string o_fkocs1003 = 1;
+}
+message DrgsDRG5100P01LoadChebangPrintResponse{
+	optional string o_gubun_name = 1;
+	optional string o_johap = 2;
+	optional string o_gaein = 3;
+	optional string o_gaein_no = 4;
+	optional string o_bonin_gubun = 5;
+	optional string o_bon_rate = 6;
+	optional string o_budamja_bunho1 = 7;
+	optional string o_sugubja_bunho1 = 8;
+	optional string o_budamja_bunho2 = 9;
+	optional string o_sugubja_bunho2 = 10;
+	optional string o_sunwon_gubun = 11;
+	optional string o_noin_rate_name = 12;
+	optional string o_err = 13;
+}
+//Exec PR_DRG_LOAD_MAKAY_JUNGBO
+message DrgsDRG5100P01LoadMakayJungboRequest{
+	optional string io_gobun = 1;
+	optional string jubsuDate = 2;
+	optional string drgBunho = 3;
+}
+message DrgsDRG5100P01LoadMakayJungboResponse{
+	optional string o_mayak_doctor = 1;
+	optional string o_mayak_license = 2;
+	optional string o_mayak_address1 = 3;
+	optional string o_mayak_address2 = 4;
+}
+
+// DRGWONNEA_O_WN_CUR
+message DrgsDRG5100P01DrgwonneaOWnCurListRequest{
+	optional string jubsu_date = 1;
+	optional string drg_bunho = 2;
+}
+
+message DrgsDRG5100P01DrgwonneaOWnCurListResponse{
+	repeated DrgsDRG5100P01DrgwonneaOWnCurListInfo cur_list = 1;
+}
+
+//DRG5100P01_WN_SERIAL_QRY
+message DrgsDRG5100P01WnSerialQryListRequest{
+	optional string jubsu_date = 1;
+	optional string drg_bunho = 2;
+	optional string o_serial_text = 3;
+}
+
+message DrgsDRG5100P01WnSerialQryListResponse{
+	repeated DrgsDRG5100P01WnSerialQryListItemInfo serial_qry_list = 1;
+}
+
+//Set Number row insert
+message DrgsDRG5100P01SetNumberRowInsertRequest{
+	optional string bogyong_name = 1;
+}
+
+message DrgsDRG5100P01SetNumberRowInsertResponse{
+	optional string number = 1;
+}
+
+//Get Bogyong name
+message DrgsDRG5100P01GetBogyongNameRequest{
+	optional string bogyong_name = 1;
+	optional string b = 2;
+}
+
+message DrgsDRG5100P01GetBogyongNameResponse{
+	optional string bogyongname = 1;
+}
+
+//Order Jungbo List
+message DrgsDRG5100P01OrderJungboListRequest{
+	optional string jubsu_date = 1;
+	optional string drg_bunho = 2;
+}
+
+message DrgsDRG5100P01OrderJungboListResponse{
+	repeated DrgsDRG5100P01OrderJungboListItemInfo order_jungbo_list = 1;
+}
+
+//Set bar_drg_bunho
+message DrgsDRG5100P01SetBarDrgBunhoRequest{
+	optional string jubsu_date = 1;
+	optional string drg_bunho = 2;
+}
+
+message DrgsDRG5100P01SetBarDrgBunhoResponse{
+	optional string bar_drg_bunho = 1;
+}
+
+//Set Jungbo List
+message DrgsDRG5100P01JungboListRequest{
+	optional string bunho = 1;
+	optional string comments = 2;
+}
+
+message DrgsDRG5100P01JungboListResponse{
+	optional string height = 1;
+	optional string cm = 2;
+	optional string weight = 3;
+	optional string kg = 4;
+	optional string cpl_result = 5;
+	optional string comments = 6;
+	optional string cnt = 7;
+}
+
+//Get Comment Number
+message DrgsDRG5100P01CommentNumberRequest{
+	optional string i_comments = 1;
+	optional string row_number = 2;
+}
+
+message DrgsDRG5100P01CommentNumberResponse{
+	optional string o_comments = 1;
+}
+
+//Get fkocs 
+message DrgsDRG5100P01FkocListRequest{
+	optional string jubsu_date = 1;
+	optional string drg_bunho = 2;
+}
+
+message DrgsDRG5100P01FkocListResponse{
+	repeated DrgsDRG5100P01FkocListItemInfo fkoc_list = 1;
+}
+
+//Get max seq in DRG_ATC
+message DrgsDRG5100P01MaxSeqRequest{
+	optional string jubsu_date = 1;
+	optional string drg_bunho = 2;
+	optional string in_out_gubun = 3;
+}
+
+message DrgsDRG5100P01MaxSeqResponse{
+	optional string seq = 1;
+}
+
+//Insert data into DRG_ATC
+message DrgsDRG5100P01InsertDataIntoDrgActRequest{
+	optional string user_id = 1;
+	optional string jubsu_date = 2;
+	optional string drg_bunho = 3;
+	optional string in_out_gubun = 4;
+	optional string seq = 5;
+}
+
+//BongtuInfo List
+message DrgsDRG5100P01BongtuInfoRequest{
+	optional string jubsu_date = 1;
+	optional string act_date = 2;
+	optional string bogyong_code = 3;
+	optional string fkocs1003 = 4;
+}
+
+message DrgsDRG5100P01BongtuInfoResponse{
+	optional string jubsu_date_wareki = 1;
+	optional string act_date_wareki = 2;
+	optional string donbok_yn = 3;
+	optional string pattern = 4;
+}
+
+//Set Print
+message DrgsDRG5100P01SetPrintRequest{
+	optional string user_id = 1;
+	optional string b_print_name = 2;
+	optional string ip_addr = 3;
+}
+
+//Exec PR_IFS_DRG_MASTER_INSERT
+message DrgsDRG5100P01DrgMasterInsertRequest{
+	optional string i_jubsu_date = 1;
+	optional string i_drg_bunho = 2;
+	optional string i_data_dubun = 3;
+	optional string i_in_out_gubun = 4;
+	optional string i_bunho = 5;
+	optional string i_fk = 6;
+}
+
+message DrgsDRG5100P01DrgMasterInsertResponse{
+	optional bool result = 1;
+}
+
+//Update Field FKDRG4010 in DRG2010
+message DrgsDRG5100P01UpdateFkdrg4010InDRG2010Request{
+	optional string pkdrg4010 = 1;
+	optional string jubsu_date = 2;
+	optional string drg_bunho = 3;
+	optional string bunho = 4;
+}
+
+//Exec PR_IFS_DRG_PROC_MAIN
+message DrgsDRG5100P01DrgProcMainRequest{
+	optional string io_gubun = 1;
+	optional string master_fk = 2;
+	optional string send_yn = 3;
+}
+
+message DrgsDRG5100P01DrgProcMainResponse{
+	required bool result = 1;
+}
+
+//Update DRG_PACK_YN In DRG2010
+message DrgsDRG5100P01UpdateDrgPackYNInDRG2010Request{
+	optional string drg_pack_yn = 1;
+	optional string fkocs1003 = 2;
+}
+
+//Update powder_yn
+message DrgsDRG5100P01UpdatePowderYNRequest{
+	optional string powder_yn = 1;
+	optional string fkocs1003 = 2;
+}
+
+//Get Anti Data
+message DrgsDRG5100P01LayAntiDataListRequest{
+	optional string fkocs = 1;
+}
+
+message DrgsDRG5100P01LayAntiDataListResponse{
+	repeated DrgsDRG5100P01LayAntiDataListItemInfo anti_data_list = 1;
+}
+//[START] DRG0130U00
+//grdDrg0130 QuerySQL
+message DrgsDRG0130U00GrdDrg0130Request{
+	optional string caution_code = 1;
+}
+
+//grdDrg0130 QuerySQL response
+message DrgsDRG0130U00GrdDrg0130Response{
+	repeated DrgsDRG0130U00GrdDrg0130ListItemInfo grdDrg0130List = 1;
+}
+
+//Get caution code 
+message DrgsDRG0130U00CautionCodeRequest{
+	optional string caution_code = 1;
+}
+
+//caution code response
+message DrgsDRG0130U00CautionCodeResponse{
+	optional string caution_code = 1;
+}
+
+//insert into Drg0130
+message DrgsDRG0130U00InsertIntoDrg0130Request{
+	optional string caution_code = 1;
+	optional string caution_name = 2;
+	optional string caution_name2 = 3;
+	optional string job_type = 4;
+	optional string sys_id = 5;
+
+}
+
+//update Drg0130
+message DrgsDRG0130U00UpdateDrg0130Request{
+	optional string caution_name  = 1;
+	optional string caution_name2 = 2;
+	optional string job_type = 3;
+	optional string user_id = 4;
+	optional string caution_code = 5;
+}
+
+
+//delete Drg0130
+message DrgsDRG0130U00DeleteDrg0130Request{
+	optional string caution_code  = 1;
+}
+message DRG0130U00SaveLayoutRequest{
+	optional string user_id = 1;
+	repeated DRG0130U00SaveLayoutInfo save_layout_item = 2;
+}
+//[END]DRG0130U00
+//----------START DRG0140U00 --------
+message DRG0140U00MasterDetailGridRequest{
+	optional string code = 1;
+}
+
+message DRG0140U00MasterDetailGridResponse{
+	repeated ComboListItemInfo grd_master = 1;
+	repeated TripleListItemInfo grd_detail = 2;
+}
+
+// Transaction CRUD for DRG0140U00
+message DRG0140U00ChangeRequest{
+	optional string caller_id = 1;
+	optional string row_state = 2;
+	optional string user_id = 3;
+	optional string code = 4;
+	optional string code_name = 5;
+	optional string code1 = 6;
+	optional string code_name1 = 7;
+}
+
+message DRG0140U00GrdMasterRequest
+{
+	optional string code = 1;
+}
+message DRG0140U00GrdMasterResponse
+{
+	repeated ComboListItemInfo grd_master_item = 1;
+}
+message DRG0140U00GrdDetailRequest
+{
+	optional string code = 1;
+}
+message DRG0140U00GrdDetailResponse
+{
+	repeated DRG0140U00GrdDetailInfo grd_detail_item = 1;
+}
+message DRG0140U00GrdMasterColumnChangedRequest
+{
+	optional string changed_value = 1;
+	repeated DRG0140U00GrdColumnChangedInfo gmc_item = 2;
+}
+message DRG0140U00GrdColumnChangedResponse
+{
+	required bool result = 1;
+}
+message DRG0140U00GrdDetailColumnChangedRequest
+{
+	optional string changed_value = 1;
+	repeated DRG0140U00GrdColumnChangedInfo gdc_item = 2;
+}
+message DRG0140U00SaveLayoutRequest
+{
+	optional string user_id = 1;
+	repeated DRG0140U00SaveLayoutInfo save_layout_item = 2;
+}
+//----------END DRG0140U00 --------
+
+
+//----------START DRG0201U00 --------
+message DRG0201U00CboGridRequest{
+}
+
+message DRG0201U00CboGridResponse{
+	repeated ComboListItemInfo cbx_Actor = 1;
+	repeated TripleListItemInfo mlay_constant_info = 2;
+	optional string lock_chk = 3;
+}
+
+//message DRG0201U00GridPaidRequest{
+//	optional string order_date = 1;
+//	optional string bunho = 2;
+//	optional string gubun = 3;
+//}
+
+//message DRG0201U00GridPaidResponse{
+//	repeated DRG0201U00GridPaidInfo grid_paid_info = 1;
+//}
+
+
+message DRG0201U00DetailServerCallRequest{
+	optional string jubsu_date = 1;
+	optional string bunho = 2;
+	optional string drg_bunho = 3;
+}
+
+message DRG0201U00DetailServerCallResponse{
+	repeated DRG0201U00DetailServerCallInfo detail_server_call = 1;
+}
+
+
+message DRG0201U00ValidatePrintAdmMediRequest{
+	optional string jubsu_date = 1;
+	optional string drg_bunho = 2;
+	optional string bunho = 3;
+}
+
+message DRG0201U00ValidatePrintAdmMediResponse{
+	optional string check_drg = 1;
+	optional string check_inj = 2;
+}
+
+//message DRG0201U00ActChkRequest{
+//	optional string order_date = 1;
+//	optional string drg_bunho = 2;
+//}
+
+//message DRG0201U00ActChkResponse{
+//	optional string result_acting = 1;
+//	optional string result_jubsu_ilsi = 2;
+//}
+
+message DRG0201U00ProcAtcInterfaceRequest {
+	optional string gubun = 1;
+	optional string i_data_dubun = 2;
+	optional string i_in_out_gubun = 3;
+	optional string i_fk = 4;
+	optional string pkdrg5010 = 5;
+	optional string hosp_code = 6;
+	optional string jubsu_date = 7;
+	optional string drg_bunho = 8;
+	optional string bunho = 9;
+	optional string user_id = 10;
+}
+
+message DRG0201U00ProcAtcInterfaceResponse {
+    required bool result = 1;
+	optional string rtn_ifs_cnt = 2;
+}
+
+message DRG0201U00GetPatientIdRequest{
+	required string drg_bunho = 1;
+	required string jubsu_date = 2;
+}
+
+message DRG0201U00GetPatientIdResponse{
+	repeated string bunho = 1;
+}
+
+//message DRG0201U00PrDrgUpdateChulgoRequest{
+//	optional string jubsu_date = 1;   
+//	optional string drg_bunho = 2;   
+//	optional string chulgo_date = 3;    
+//	optional string act_user = 4;       
+//	optional string chulgo_buseo = 5;   
+//	optional string wonyoi_order_yn = 6;
+//	optional string act_yn = 7; 
+//}
+
+//message DRG0201U00PrDrgUpdateChulgoResponse{
+//	optional string o_err = 1;
+//}
+
+message DRG0201U00BarCodeRequest{
+	optional string orer_date = 1;
+	optional string drg_bunho = 2;
+}
+
+message DRG0201U00BarCodeResponse {
+	repeated DRG0201U00BarCodeInfo grid_info = 1;
+}
+//----------END DRG0201U00 --------
+
+//[START] DRGS NEW
+message DrgsDRG5100P01GridPaidListRequest {
+	optional string from_date = 1;
+	optional string to_date = 2;
+	optional string gwa = 3;
+	optional string wonyoi_yn = 4;
+	optional string gubun = 5;
+	optional string bunho = 6;
+	optional bool xrb_order_value = 7;
+}
+
+message DrgsDRG5100P01GridPaidListResponse {
+	repeated DrgsDRG5100P01GridPaidListItemInfo paid_order_list = 1;
+}
+
+message DrgsDRG5100P01ProcAtcInterfaceRequest {
+    optional string jubsu_date = 1;
+    optional string drg_bunho = 2;
+    optional string data_dubun = 3;
+    optional string io_gubun = 4;
+    optional string bunho = 5;
+    optional string fkout1001 = 6;
+    optional string send_yn = 7;
+}
+
+message DrgsDRG5100P01ProcAtcInterfaceResponse {
+    optional string pkdrg4010 = 1;
+    optional string rtnIfsCnt = 2;
+    optional bool proc_atc_interface = 3;
+}
+
+message DrgsDRG5100P01DsvOrderJungboRequest 
+{
+    optional string jubsu_date = 1;
+    optional string drg_bunho = 2;
+}
+
+message DrgsDRG5100P01DsvOrderJungboResponse
+{
+    repeated DrgsDRG5100P01OrderJungboInfo order_jungbo_item = 1;
+    optional string bar_drg_bunho = 2;
+}
+
+message DrgsDRG5100P01LayBongtuRequest
+{
+    repeated DrgsDRG5100P01OrderListItemInfo grid_order_item = 1;
+}
+
+message DrgsDRG5100P01LayBongtuResponse
+{
+    repeated DrgsDRG5100P01LayBongtuInfo lay_bongtu_item = 1;
+}
+
+message DrgsDRG5100P01DsvOrderPrintRequest 
+{
+    optional string io_gobun = 1;
+    optional string jubsuDate = 2;
+    optional string drgBunho = 3;
+}
+
+
+message DrgsDRG5100P01DsvOrderPrintResponse {
+    optional string ret_val = 1;
+    optional DrgsDRG5100P01LoadChebangPrintInfo chebang_print_item = 2;
+    optional DrgsDRG5100P01LoadMakayJungboInfo makay_jungbo = 3;
+    repeated DrgsDRG5100P01DrgwonneaOWnCurListInfo drgwonnea_own_cur = 4;
+    repeated DrgsDRG5100P01WnSerialQryListItemInfo wn_serial_item = 5;
+    optional string hosp_name = 6;
+    optional string jaedan_name = 7;
+    optional string hosp_address1 = 8;
+}
+
+message DRG5100P01CheckActRequest{
+}
+
+message DRG5100P01CheckActResponse{
+	optional string Code = 1;
+}
+//[END] DRGS NEW
+
+//[START] DRG9001R01
+message DRG9001R01Lay9001Request
+{
+	optional string date = 1;
+}
+message DRG9001R01Lay9001Response
+{
+	repeated DRG9001R02Lay9001Info lay9001_item = 1;
+}
+//[END] DRG9001R01
+
+//[START] DRG9001R02
+message DRG9001R02Lay9001Request
+{
+	optional string date = 1;
+}
+message DRG9001R02Lay9001Response
+{
+	repeated DRG9001R02Lay9001Info lay9001_item = 1;
+}
+//[END] DRG9001R02
+//[START] DRG0201U00--
+message DRG0201U00GrdOrderListRequest
+{
+	optional string jubsu_date = 1;
+	optional string drg_bunho = 2;
+}
+message DRG0201U00GrdOrderListResponse
+{
+	repeated DRG0201U00GrdOrderListInfo grd_order_list_item = 1;
+}
+message DRG0201U00GrdPaidRequest
+{
+	optional string order_date = 1;
+	optional string gubun = 2;
+	optional string bunho = 3;
+}
+message DRG0201U00GrdPaidResponse
+{
+	repeated DRG0201U00GrdPaidInfo grd_paid_item = 1;
+}
+message DRG0201U00GrdOrderTbxBarCodeRequest
+{
+	optional string orer_date = 1;
+	optional string drg_bunho = 2;
+}
+message DRG0201U00GrdOrderTbxBarCodeResponse
+{
+    repeated DRG0201U00GrdOrderInfo grd_order_item = 1;
+    optional string act_yn = 2;
+}
+message DRG0201U00GrdOrderDetailServerCallRequest
+{
+	optional string jubsu_date = 1;
+	optional string bunho = 2;
+	optional string drg_bunho = 3;
+}
+message DRG0201U00GrdOrderDetailServerCallResponse
+{
+	repeated DRG0201U00GrdOrderInfo grd_order_item = 1;
+}
+message DRG0201U00ActChkRequest
+{
+	optional string order_date = 1;
+	optional string drg_bunho = 2;
+}
+message DRG0201U00ActChkResponse
+{
+	optional string result = 1;
+}
+message DRG0201U00LockChkRequest
+{
+}
+message DRG0201U00LockChkResponse
+{
+	optional string result = 1;
+}
+message DRG0201U00PrintAdmMediCheckDrgRequest
+{
+	optional string jubsu_date        = 1;
+	optional string drg_bunho         = 2;
+	optional string bunho             = 3;
+	optional string data_dubun        = 4;
+	optional string in_out_gubun      = 5;        
+	optional string fk                = 6;
+	optional string io_gubun          = 7;
+	optional string send_yn           = 8;
+	optional string gubun             = 9;
+	optional string user_id           = 10;
+}
+message DRG0201U00PrintAdmMediCheckResponse
+{
+        optional string msg_result = 1; // message code
+        optional string ret_val = 2;
+        optional string pkdrg = 3;
+        optional string err_msg = 4; // message text
+}
+message DRG0201U00PrintAdmMediCheckInjRequest
+{
+	optional string jubsu_date        = 1;
+	optional string drg_bunho         = 2;
+	optional string bunho             = 3;
+	optional string data_dubun        = 4;
+	optional string in_out_gubun      = 5;        
+	optional string fk                = 6;
+	optional string io_gubun          = 7;
+	optional string send_yn           = 8;
+	optional string gubun             = 9;
+	optional string user_id           = 10;
+}
+message DRG0201U00TxtDrgBunhoDataValidatingKeyPressRequest
+{
+	optional string jubsu_date = 1;
+	optional string bunho = 2;
+}
+message DRG0201U00TxtDrgBunhoDataValidatingKeyPressResponse
+{
+	optional string result = 1;
+}
+message DRG0201U00CbxActorRequest
+{
+}
+message DRG0201U00CbxActorResponse
+{
+	repeated ComboListItemInfo cbx_actor_item = 1;
+}
+message DRG0201U00PrDrgUpdateChulgoRequest
+{
+	optional string jubsu_date = 1;   
+	optional string drg_bunho = 2;   
+	optional string chulgo_date = 3;    
+	optional string act_user = 4;       
+	optional string chulgo_buseo = 5;   
+	optional string wonyoi_order_yn = 6;
+	optional string act_yn = 7;
+	repeated DRG0201U00InventoryInfo lst = 8; 
+}
+
+//[END] DRG0201U00---
+
+// ------- [START] DRG0102U01 --------
+message DRG0102U01GrdMasterRequest{
+	optional string code_type = 1;
+	optional string code_type_name = 2;
+}
+
+message DRG0102U01GrdMasterResponse{
+	repeated DRG0102U01GrdMasterItemInfo grd_master_item_info = 1;
+}
+
+message DRG0102U01GrdDetailRequest{
+	optional string code_type = 1;
+}
+
+message DRG0102U01GrdDetailResponse{
+	repeated DRG0102U01GrdDetailItemInfo grd_detail_item_info = 1;
+}
+
+message DRG0102U01GrdMasterCheckRequest{
+	optional string code_type = 1;
+}
+
+message DRG0102U01GrdDetailCheckRequest{
+	optional string code = 1;
+	optional string code_type = 2;
+}
+
+message DRG0102U01GrdCheckResponse{
+	optional string result = 1;
+}
+
+
+message DRG0102U01SaveLayoutRequest{
+	optional string user_id = 1;
+	repeated DRG0102U01GrdMasterItemInfo grd_master_item_info = 2;
+	repeated DRG0102U01GrdDetailItemInfo grd_detail_item_info = 3;
+}
+// ------- [END] DRG0102U01 --------
+
+//[START] DRG9040U01
+message DRG9040U01GrdJUSAOrderListRequest{
+    optional string jubsu_date = 1;
+    optional string drg_bunho = 2;
+    optional string magam_bunryu = 3;
+}
+
+message DRG9040U01GrdJUSAOrderListResponse{
+    repeated DRG9040U01GrdJUSAOrderListInfo grd_order_list_info = 1;
+}
+
+message DRG9040U01GrdOrderRequest{
+    optional string from_date = 1;
+    optional string to_date = 2;
+    optional string bunho = 3;
+}
+
+message DRG9040U01GrdOrderResponse{
+    repeated DRG9040U01GrdOrderInfo grd_order_info = 1;
+}
+
+message DRG9040U01GrdOrderListRequest{
+    optional string jubsu_date = 1;
+    optional string drg_bunho = 2;
+    optional string magam_bunryu = 3;
+}
+
+message DRG9040U01GrdOrderListResponse{
+    repeated DRG9040U01GrdOrderListInfo grd_orderList_info = 1;
+}
+
+message DRG9040U01GrdOrderListOutRequest{
+    optional string order_date = 1;
+    optional string drg_bunho = 2;
+    optional string bunho = 3;
+}
+
+
+message DRG9040U01GrdOrderListOutResponse{
+    repeated DRG9040U01GrdOrderListOutInfo grd_order_list_out_info = 1;
+}
+
+message DRG9040U01GrdOrderOutRequest{
+    optional string from_date = 1;
+    optional string to_date = 2;
+    optional string bunho = 3;
+}
+
+message DRG9040U01GrdOrderOutResponse{
+    repeated DRG9040U01GrdOrderOutInfo grd_order_out_info = 1;
+}
+
+message DRG9040U01SaveLayoutRequest {
+    repeated DRG9040U01GrdOrderInfo grd_order_info = 1;
+    repeated DRG9040U01GrdJUSAOrderListInfo grd_jusa_order_info = 2;
+    repeated DRG9040U01GrdOrderListInfo grd_order_list_info = 3;
+    repeated DRG9040U01GrdOrderOutInfo grd_order_out_info = 4;
+    repeated DRG9040U01GrdOrderListOutInfo grd_order_list_out_info = 5;
+    optional string bunho = 6;
+    optional string drg9041_ocs_remark = 7;
+    optional string drg9041_drg_remark = 8;
+    optional string user_id = 9;
+}
+
+message DRG9040U01LayPaCommentRequest {
+	optional string bunho = 1;
+}
+
+message DRG9040U01LayPaCommentResponse {
+	repeated DRG9040U01LayPaCommentInfo lay_pa_comment = 1;
+}
+//[END] DRG9040U01
+
+message OpenScreenDRG5100P01CompositeRequest
+{
+	repeated DRG5100P01CheckActRequest check_act = 1;
+	repeated FormEnvironInfoSysDateRequest sys_date = 2;
+	repeated DrgsDRG5100P01GridPaidListRequest paid_list = 3;
+	repeated GetPatientByCodeRequest patient_bycode = 4;
+}
+
+message OpenScreenDRG5100P01CompositeResponse
+{
+	repeated DRG5100P01CheckActResponse check_act = 1;
+	repeated StringResponse sys_date = 2;
+	repeated DrgsDRG5100P01GridPaidListResponse paid_list = 3;
+	repeated GetPatientByCodeResponse patient_bycode = 4;
+}
+
+message DrgsDRG5100P01PrintNameRequest{
+	optional string ip_addr = 1;
+}
+
+message DrgsDRG5100P01PrintNameResponse{
+	repeated DrgsDRG5100P01PrintNameInfo print_name_list = 1;
+}
+
+// Begin MIH
+
+message DRG3041P01UserIDRequest{
+        optional string user_id = 1;
+}
+
+message DRG3041P01grdChulgoListRequest{
+        optional string chulgo_date = 1;
+        optional string bunho = 2;
+        optional string ho_dong = 3;
+        optional string page_number = 4;
+}
+
+message DRG3041P01grdChulgoListResponse{
+        repeated DRG3041P01grdChulgoListInfo items = 1;
+}
+
+message DRG3041P01grdChulgoJUSAOrderRequest{
+        optional string jubsu_date = 1;
+        optional string drg_bunho = 2;
+        optional string serial_v = 3;
+}
+
+message DRG3041P01grdChulgoJUSAOrderResponse{
+        repeated DRG3041P01grdChulgoJUSAOrderInfo items = 1;
+}
+
+message DRG3041P01DsvSaveRequest{
+        optional string barcode_no = 1;
+        optional string iud_gubun = 2;
+        optional string user_id = 3;
+        optional string date = 4;
+        optional string user_gubun = 5;
+        optional string bunho = 6;
+}
+
+message DRG3041P05layIDLoadRequest{
+}
+
+message DRG3041P05getUserIDRequest{
+        optional string id = 1;
+}
+
+message DRG3041P05LabelRequest{
+        optional string jubsu_date 	= 1;
+        optional string drg_bunho 	= 2;
+        optional string rp 			= 3;        
+        optional string seq			= 4;        
+}
+
+message DRG3041P05LabelResponse{
+        repeated DRG3041P05LabelInfo items = 1;
+}
+
+message DRG3041P05grdIpgoJUSAOrderRequest{
+        optional string jubsu_date = 1;
+        optional string drg_bunho = 2;
+        optional string serial_v = 3;        
+        optional string page_number = 4;
+}
+
+message DRG3041P05grdIpgoJUSAOrderResponse{
+        repeated DRG3041P05grdIpgoJUSAOrderInfo items = 1;
+}
+
+message DRG3041P05grdMixListRequest{
+        optional string ipgo_date = 1;
+        optional string bunho = 2;
+        optional string bunryu1 = 3;        
+        optional string ho_dong = 4;
+        optional string page_number = 5;
+}
+
+message DRG3041P05grdMixListResponse{
+        repeated DRG3041P05grdMixListInfo items = 1;
+}
+
+message DRG3041P05cbxBuseoRequest{
+}
+
+message DRG3041P05MakeBarcodeRequest{
+        optional string barcode_no = 1;
+        optional string iud_gubun = 2;
+        optional string user_id = 3;
+        optional string date = 4;
+        optional string user_gubun = 5;
+        optional string bunho = 6;
+}
+
+message DRG3041P05MakeBarcodeResponse{
+        optional bool result = 1;
+        optional string msg = 2;
+        optional string jusa_yn = 3;
+        optional string ipgo_date = 4;
+        optional string ho_dong = 5;
+        optional string bunho = 6;
+        optional string err_code = 7;
+}
+
+message DRG3041P06layIDLoadRequest{
+}
+
+message DRG3041P06laySunameRequest{
+        optional string bunho = 1;
+}
+
+message DRG3041P06layHodongRequest{
+        optional string bunho = 1;
+}
+
+message DRG3041P06getUserIDRequest{
+        optional string id = 1;
+}
+
+message DRG3041P06LabelRequest{
+        optional string jubsu_date 	= 1;
+        optional string drg_bunho 	= 2;
+        optional string rp 			= 3;
+        optional string seq			= 4;         
+}
+
+message DRG3041P06LabelResponse{
+        repeated DRG3041P06LabelInfo items = 1;
+}
+
+message DRG3041P06grdActJUSAOrderRequest{
+        optional string jubsu_date = 1;
+        optional string drg_bunho = 2;
+        optional string serial_v = 3;
+        optional string page_number        = 4;
+} 
+
+message DRG3041P06grdActJUSAOrderResponse{
+        repeated DRG3041P06grdActJUSAOrderInfo items = 1;
+}
+
+message DRG3041P06grdActListRequest{
+        optional string ipgo_date = 1;
+        optional string bunho = 2;
+        optional string bunryu1 = 3;        
+        optional string ho_dong = 4;
+}
+
+message DRG3041P06grdActListResponse{
+        repeated DRG3041P06grdActListInfo items = 1;
+}
+
+message DRG3041P06cbxBuseoRequest{
+}
+
+message DRG3041P06MakeBarcodeRequest{
+        optional string barcode_no = 1;
+        optional string iud_gubun = 2;
+        optional string user_id = 3;
+        optional string date = 4;
+        optional string user_gubun = 5;
+        optional string bunho = 6;
+}
+
+message DRG3041P06MakeBarcodeResponse{
+        optional bool result = 1;
+        optional string msg = 2;
+        optional string jusa_yn = 3;
+        optional string ipgo_date = 4;
+}
+
+message DRG9001R03cboHoDongRequest{
+}
+
+message DRG9001R03lay9001RRequest{
+        optional string date = 1;
+        optional string ho_dong = 2;
+}
+
+message DRG9001R03lay9001RResponse{
+        repeated DRG9001R03lay9001RInfo items = 1;
+}
+
+message DRG9001R04lay9001RRequest{
+        optional string date = 1;
+        optional string ho_dong = 2;
+}
+
+message DRG9001R04lay9001RResponse{
+        repeated DRG9001R04lay9001RInfo items = 1;
+}
+
+message DRG9001R04cboHoDongRequest{
+}
+
+message DRG3041P01cbxBuseoRequest{
+}
+
+message DRG3010Q12queryHistoryRequest{
+        optional string order_from = 1;
+        optional string bunho = 2;
+        optional string in_out_gubun = 3;
+}
+
+message DRG3010Q12cboBuseoRequest{
+}
+
+message DRG3010Q12grdDrgHistoryRequest{
+        optional string yyyymm = 1;
+        optional string bunho = 2;
+        optional string page_number = 3;
+}
+
+message DRG3010Q12grdDrgHistoryResponse{
+        repeated DRG3010Q12grdDrgHistoryInfo items = 1;
+}
+
+message DRG3010Q12grdPalistRequest{
+        optional string ho_dong = 1;
+}
+
+message DRG3010Q12grdPalistResponse{
+        repeated DRG3010Q12grdPalistInfo items = 1;
+}
+
+message ComboHoDongGwaNameRequest{
+}
+
+message DRG3010Q12AntibioticListgrdAntibioticListRequest{
+}
+
+message DRG3010Q12AntibioticListgrdAntibioticListResponse{
+    repeated DRG3010Q12AntibioticListgrdAntibioticListInfo items = 1;
+}
+
+message DRG3010P99cbxActorRequest { 
+}
+
+message DRG3010P99cbxBuseoRequest { 
+}
+
+message DRG3010P99grdDcOrderRequest { 
+       optional string jubsu_date 	= 1;
+       optional string drg_bunho 	= 2;
+       optional string order_date 	= 3;
+       optional string hope_date 	= 4;
+       optional string bunho 		= 5;
+       optional string ho_dong 		= 6;
+       optional string doctor 		= 7;
+       optional string page_number	= 8;
+       optional string offset		= 9;
+}
+
+message DRG3010P99grdDcOrderResponse { 
+       repeated DRG3010P99grdDcOrderInfo list_grddcorder = 1;
+}
+
+message DRG3010P99grdJusaDcOrderRequest { 
+       optional string jubsu_date 	= 1;
+       optional string drg_bunho 	= 2;
+       optional string order_date 	= 3;
+       optional string bunho 		= 4;
+       optional string hope_date 	= 5;
+       optional string ho_dong 		= 6;
+       optional string doctor 		= 7;
+       optional string page_number 	= 8;
+       optional string offset 		= 9;
+}
+
+message DRG3010P99grdJusaDcOrderResponse { 
+       repeated DRG3010P99grdJusaDcOrderInfo list_grdjusadcorder = 1;
+}
+
+message DRG3010P99grdListRequest { 
+       optional string ho_dong 		= 1;
+       optional string bunho 		= 2;
+       optional string from_date 	= 3;
+       optional string to_date 		= 4;
+       optional string magam_gubun 	= 5;
+       optional string page_number 	= 6;
+       optional string offset 		= 7;
+}
+
+message DRG3010P99grdListResponse { 
+       repeated DRG3010P99grdListInfo list_grdlist = 1;
+}
+
+message DRG3010P99grdMagamJusaOrderRequest { 
+       optional string jubsu_date 	= 1;
+       optional string drg_gubun 	= 2;
+       optional string page_number 	= 3;
+       optional string offset 		= 4;
+}
+
+message DRG3010P99grdMagamJusaOrderResponse { 
+       repeated DRG3010P99grdMagamJusaOrderInfo list_grdmagamjusaorder = 1;
+}
+
+message DRG3010P99grdMagamOrderRequest { 
+       optional string jubsu_date 	= 1;
+       optional string drg_bunho 	= 2;
+       optional string page_number 	= 3;
+       optional string offset 		= 4;
+}
+
+message DRG3010P99grdMagamOrderResponse { 
+       repeated DRG3010P99grdMagamOrderInfo list_grdmagamorder = 1;
+}
+
+message DRG3010P99grdMiMagamJusaOrderRequest { 
+       optional string order_date 	= 1;
+       optional string hope_date 	= 2;
+       optional string bunho 		= 3;
+       optional string ho_dong 		= 4;
+       optional string resident 	= 5;
+       optional string emergency 	= 6;
+       optional string magam_gubun 	= 7;
+       optional string page_number 	= 8;
+       optional string offset 		= 9;
+}
+
+message DRG3010P99grdMiMagamJusaOrderResponse { 
+       repeated DRG3010P99grdMiMagamJusaOrderInfo list_grdmimagamjusaorder = 1;
+}
+
+message DRG3010P99grdMiMagamOrderRequest { 
+       optional string order_date 	= 1;
+       optional string hope_date 	= 2;
+       optional string bunho 		= 3;
+       optional string ho_dong 		= 4;
+       optional string resident 	= 5;
+       optional string emergency 	= 6;
+       optional string magam_gubun 	= 7;
+       optional string page_number 	= 8;
+       optional string offset 		= 9;
+}
+
+message DRG3010P99grdMiMagamOrderResponse { 
+       repeated DRG3010P99grdMiMagamOrderInfo list_grdmimagamorder = 1;
+}
+
+message DRG3010P99grdPaDcListRequest { 
+       optional string ho_dong 		= 1;
+       optional string bunho 		= 2;
+       optional string from_date 	= 3;
+       optional string to_date 		= 4;
+       optional string magam_gubun 	= 5;
+       optional string page_number 	= 6;
+       optional string offset 		= 7;
+}
+
+message DRG3010P99grdPaDcListResponse { 
+       repeated DRG3010P99grdPaDcListInfo list_grdpadclist = 1;
+}
+
+message DRG3010P99PaPrnRequest { 
+       optional string ho_dong 		= 1;
+       optional string bunho 		= 2;
+       optional string from_date 	= 3;
+       optional string to_date 		= 4;
+       optional string page_number 	= 5;
+       optional string offset 		= 6;
+}
+
+message DRG3010P99PaPrnResponse { 
+       repeated DRG3010P99PaPrnInfo list_grdpaprn = 1;
+}
+
+message DRG3010P99grdPaRequest { 
+       optional string ho_dong 		= 1;
+       optional string bunho 		= 2;
+       optional string from_date 	= 3;
+       optional string to_date 		= 4;
+       optional string magam_gubun 	= 5;
+       optional string page_number 	= 6;
+       optional string offset 		= 7;
+}
+
+message DRG3010P99grdPaResponse { 
+       repeated DRG3010P99grdPaInfo list_grdpa = 1;
+}
+
+message DRG3010P99grdPrnJusaRequest { 
+       optional string order_date 	= 1;
+       optional string hope_date 	= 2;
+       optional string hope_time 	= 3;
+       optional string bunho 		= 4;
+       optional string ho_dong 		= 5;
+       optional string resident 	= 6;
+       optional string emergency 	= 7;
+       optional string page_number 	= 8;
+       optional string offset 		= 9;
+}
+
+message DRG3010P99grdPrnJusaResponse { 
+       repeated DRG3010P99grdPrnJusaInfo list_grdprnjusa = 1;
+}
+
+message DRG3010P99grdPrnRequest { 
+       optional string order_date 	= 1;
+       optional string hope_date 	= 2;
+       optional string hope_time 	= 3;
+       optional string bunho 		= 4;
+       optional string ho_dong 		= 5;
+       optional string resident 	= 6;
+       optional string emergency 	= 7;
+       optional string page_number 	= 8;
+       optional string offset 		= 9;
+}
+
+message DRG3010P99grdPrnResponse { 
+       repeated DRG3010P99grdPrnInfo list_grdprn = 1;
+}
+
+message DRG3010P99layOutOrderRequest { 
+       optional string from_date 	= 1;
+       optional string to_date 		= 2;
+       optional string gubun 		= 3;
+       optional string wonyoi_yn 	= 4;
+       optional string bunho 		= 5;
+       optional string gwa 			= 6;
+}
+
+message DRG3010P99layOutOrderResponse { 
+       repeated DataStringListItemInfo out_res = 1;
+}
+
+message DRG3010P99layConstantRequest {
+		optional string name_control	= 1; 
+}
+
+message DRG3010P99layConstantResponse { 
+       repeated DRG3010P99layConstantInfo list_layconstant = 1;
+}
+
+message DRG3010P99OrdPrnCurRequest { 
+       optional string jubsu_date 	= 1;
+       optional string drg_bunho 	= 2;
+}
+
+message DRG3010P99OrdPrnCurResponse { 
+       repeated DRG3010P99OrdPrnCurInfo list_ordprncur = 1;
+}
+
+message DRG3010P99OrdPrnSerialRequest { 
+       optional string jubsu_date 	= 1;
+       optional string drg_bunho 	= 2;
+       optional string serial_text 	= 3;
+}
+
+message DRG3010P99OrdPrnSerialResponse { 
+       repeated DRG3010P99OrdPrnSerialInfo list_ordprnserial = 1;
+}
+
+message DRG3010P99SerialvRequest { 
+       optional string fkocs2003 	= 1;
+       optional string serial_v 	= 2;
+}
+
+message DRG3010P99SerialvResponse { 
+       repeated DRG3010P99SerialvInfo list_serialv = 1;
+}
+
+message DRG3010P99OrdPrnRemarkRequest { 
+       optional string jubsu_date 	= 1;
+       optional string drg_bunho 	= 2;
+       optional string serial_text 	= 3;
+}
+
+message DRG3010P99OrdPrnRemarkResponse { 
+       repeated DRG3010P99OrdPrnRemarkInfo list_ordprnremark = 1;
+}
+
+message DRG3010P99layOrderJungboRequest { 
+       optional string jubsu_date 	= 1;
+       optional string drg_bunho 	= 2;
+}
+
+message DRG3010P99layOrderJungboResponse { 
+       repeated DRG3010P99layOrderJungboInfo list_layorderjungbo = 1;
+}
+
+message DRG3010P99getBarDrgBunhoRequest { 
+       optional string jubsu_date 	= 1;
+       optional string drg_bunho 	= 2;
+}
+
+message DRG3010P99getBarDrgBunhoResponse { 
+       optional string bar_drg_bunho = 1;
+}
+
+message DRG3010P99getBodyIndexRequest {
+		optional string bunho 		= 1;
+		optional string comment 	= 2;
+}
+
+message DRG3010P99getBodyIndexResponse { 
+       repeated DRG3010P99getBodyIndexInfo list_bodyindex = 1;
+}
+
+message DRG3010P99layOrderBarcodeRequest { 
+       optional string jubsu_date 	= 1;
+       optional string drg_bunho 	= 2;
+}
+
+message DRG3010P99layOrderBarcodeResponse { 
+       repeated DRG3010P99layOrderBarcodeInfo list_layorderbarcode = 1;
+}
+
+message DRG3010P99getBodyIndexBarcodeRequest {
+	    optional string bunho = 1; 
+}
+
+message DRG3010P99getBodyIndexBarcodeResponse { 
+       repeated DRG3010P99getBodyIndexBarcodeInfo list_bodyindex = 1;
+}
+
+message DRG3010P99JusaCurRequest { 
+       optional string jubsu_date 	= 1;
+       optional string drg_bunho 	= 2;
+}
+
+message DRG3010P99JusaCurResponse { 
+       repeated DRG3010P99JusaCurInfo list_jusacur = 1;
+}
+
+message DRG3010P99JusaSerialRequest { 
+       optional string jubsu_date 		= 1;
+       optional string drg_bunho 		= 2;
+       optional string serial_text 		= 3;
+}
+
+message DRG3010P99JusaSerialResponse { 
+       repeated DRG3010P99JusaSerialInfo list_jusaserial = 1;
+}
+
+message DRG3010P99JusaserialvRequest { 
+       optional string fkocs2003 		= 1;
+       optional string serial_v 		= 2;
+}
+
+message DRG3010P99JusaserialvResponse { 
+       repeated DRG3010P99JusaserialvInfo list_jusaserialv = 1;
+}
+
+message DRG3010P99SerRemarkRequest { 
+       optional string jubsu_date 		= 1;
+       optional string drg_bunho 		= 2;
+       optional string serial_text 		= 3;
+}
+
+message DRG3010P99SerRemarkResponse { 
+       repeated DRG3010P99SerRemarkInfo list_serremark = 1;
+}
+
+message DRG3010P99JusaLabelRequest { 
+       optional string jubsu_date 		= 1;
+       optional string drg_bunho 		= 2;
+}
+
+message DRG3010P99JusaLabelResponse { 
+       repeated DRG3010P99JusaLabelInfo list_jusalabel = 1;
+}
+
+message DRG3010P99JusaKRequest { 
+       optional string jubsu_date 		= 1;
+       optional string drg_bunho 		= 2;
+       optional string k 				= 3;
+       optional string serial_text 		= 4;
+       optional string cnt 				= 5;
+}
+
+message DRG3010P99JusaKResponse { 
+       repeated DRG3010P99JusaKInfo list_jusak = 1;
+}
+
+message DRG3010P99JusaCommentRequest { 
+       optional string jubsu_date 		= 1;
+       optional string drg_bunho 		= 2;
+       optional string k 				= 3;
+       optional string serial_text 		= 4;
+       optional string cnt 				= 5;
+}
+
+message DRG3010P99JusaCommentResponse { 
+       repeated DRG3010P99JusaCommentInfo list_jusacomment = 1;
+}
+
+message DRG3010P99getFkocs2003Request { 
+       optional string jubsu_date 		= 1;
+       optional string drg_bunho 		= 2;
+}
+
+message DRG3010P99getFkocs2003Response { 
+       repeated DataStringListItemInfo fkocs2003 = 1;
+}
+
+message DRG3010P99CheckDetailMaxActingRequest { 
+       optional string fkocs2003 	= 1;
+}
+
+message DRG3010P99DeleteDrg3041Request { 
+       optional string jubsu_date 	= 1;
+	   optional string drg_bunho 	= 2;
+}
+
+message DRG3010P99FnDrgChulgoDateRequest { 
+       optional string bunho 		= 1;
+       optional string order_date 	= 2;
+}
+
+message DRG3010P99MaxSeqRequest { 
+       optional string drg_bunho 	= 1;
+       optional string jubsu_date 	= 2;
+       optional string in_out_gubun	= 3;
+}
+
+message DRG3010P99InsertDrgAtcRequest { 
+       optional string drg_bunho	= 1;
+       optional string seq 			= 2;
+       optional string in_out_gubun	= 3;
+       optional string jubsu_date	= 4;
+       optional string user_id		= 5;
+}
+
+message DRG3010P99ToiwonGojiYnRequest { 
+       optional string fkocs2003 	= 1;
+}
+
+message DRG3010P99FnAdmMsgRequest { 
+}
+
+message DRG3010P99UpdateDrg3010Request { 
+        optional string re_use_yn		= 1;
+        optional string fkocs2003		= 2;
+        optional string pkdrg5010		= 3;
+        optional string pkdrg5030		= 4;
+        optional string jubsu_date		= 5;
+        optional string drg_bunho		= 6;
+        optional string bunho			= 7;
+        optional string drg_pack_yn		= 8;
+        optional string powder_yn		= 9;
+        optional string name_control	= 10;
+        optional string pkdrg4010		= 11;
+}
+
+message DRG3010P99getRemarkRequest { 
+        optional string dv_1			= 1;
+        optional string dv_2			= 2;
+        optional string dv_3			= 3;
+        optional string dv_4			= 4;
+        optional string dv_5			= 5;
+        optional string remark			= 6;
+}
+
+message DRG3010P99getYOrderGubunRequest { 
+        optional string jubsu_date		= 1;
+        optional string drg_bunho		= 2;
+        optional string bunho			= 3;
+        optional string name_control	= 4;
+}
+
+message DRG3010P99PrLoadBongtuRequest { 
+        optional string magam_date		= 1;
+        optional string magam_gubun		= 2;
+        optional string bunho			= 3;
+        optional string magam_dept		= 4;
+        optional string upd_id			= 5;
+}
+
+message DRG3010P99PrMakeBongtuRequest { 
+        optional string jubsu_date		= 1;
+        optional string bunho			= 2;
+        optional string hope_date		= 3;
+        optional string hope_time		= 4;
+        optional string gwa				= 5;
+        optional string doctor			= 6;
+        optional string jusa_yn			= 7;
+        optional string chulgo_buseo	= 8;
+        optional string user_id			= 9;
+}
+
+message DRG3010P99PrMakeBongtuResponse { 
+       	optional string drg_bunho 		= 1;
+        optional string err 			= 2;
+}
+
+message DRG3010P99PrInpMagamRequest { 
+        optional string proc_gubun		= 1;
+        optional string jubsu_date		= 2;
+        optional string order_date		= 3;
+        optional string hope_date		= 4;
+        optional string magam_gubun		= 5;
+        optional string magam_ser		= 6;
+        optional string bunho			= 7;
+        optional string doctor			= 8;
+        optional string magam_user		= 9;
+}
+
+message DRG3010P99PrInpMagamResponse { 
+       	optional string drg_bunho 		= 1;
+		optional string err				= 2;
+}
+
+message DRG3010P99PrPrintGubunRequest { 
+        optional string drg_bunho		= 1;
+        optional string jubsu_date		= 2;
+        optional string print_gubun		= 3;
+}
+
+message DRG3010P99PrMakeBarcodeRequest { 
+        optional string barcode_no		= 1;
+        optional string iud_gubun		= 2;
+        optional string user_id			= 3;
+        optional string date			= 4;
+        optional string user_gubun		= 5;
+        optional string bunho			= 6;
+}
+
+message DRG3010P99PrBunhoCancelRequest { 
+        optional string drg_bunho		= 1;
+        optional string jubsu_date		= 2;
+        optional string user_id			= 3;
+}
+
+message DRG3010P99PrMakeDrg3060Request { 
+        optional string fkocs2003		= 1;
+        optional string boryu_yn		= 2;
+        optional string user_id			= 3;
+}
+
+message DRG3010P99PrMasterInsertRequest { 
+        optional string jubsu_date		= 1;
+        optional string drg_bunho		= 2;
+        optional string data_dubun		= 3;
+        optional string in_out_gubun	= 4;
+        optional string fk				= 5;
+        optional string bunho			= 6;
+}
+
+message DRG3010P99PrDrgProcMainRequest { 
+        optional string io_gubun		= 1;
+        optional string master_fk		= 2;
+        optional string send_yn			= 3;
+}
+
+message DRG3010P99PrDrgProcMainResponse { 
+       	optional string cnt 			= 1;
+        optional string flag			= 2;
+        optional string msg 			= 3;
+}
+
+message DRG3010P99PrDrg5010Request { 
+        optional string jubsu_date		= 1;
+        optional string drg_bunho		= 2;
+        optional string data_dubun		= 3;
+        optional string in_out_gubun	= 4;
+        optional string fk				= 5;
+        optional string bunho			= 6;
+}
+
+message DRG3010P99PrDrg5030Request { 
+        optional string jubsu_date		= 1;
+        optional string drg_bunho		= 2;
+        optional string data_dubun		= 3;
+        optional string in_out_gubun	= 4;
+        optional string fk				= 5;
+        optional string bunho			= 6;
+}
+
+message DRG3010P99PrDrgIfsRequest { 
+        optional string io_gubun		= 1;
+        optional string fkdrg			= 2;
+        optional string user_id			= 3;
+}
+
+message DRG3010P99PrJihInjIfsProcRequest { 
+        optional string io_gubun		= 1;
+        optional string fkdrg			= 2;
+        optional string user_id			= 3;
+}
+
+message DRG3010P99cbxTimeRequest { 
+}
+
+message DRG3010P10CboRequest {
+}
+
+message DRG3010P10CboResponse {
+        repeated ComboListItemInfo cboActor = 1;
+        repeated ComboListItemInfo cboBuseo = 2;
+}
+
+message DRG3010P10GrdDcOrderRequest {
+        optional string jubsu_date 	= 1;
+        optional string drg_bunho 	= 2;
+        optional string bunho 		= 3;
+        optional string magam_bunryu 	= 4;
+        optional string page_number 	= 5;
+        optional string offset 			= 6;
+}
+
+message DRG3010P10GrdDcOrderResponse{
+        repeated DRG3010P10GrdDcOrderInfo grd_list = 1;
+}
+
+message DRG3010P10GrdDrgBunhoRequest {
+        optional string magam_date 	 = 1;
+        optional string magam_ser 	 = 2;
+        optional string magam_gubun  = 3;
+        optional string magam_bunryu = 4;
+        optional string ho_dong 	 = 5;
+}
+
+message DRG3010P10GrdDrgBunhoResponse{
+        repeated DRG3010P10GrdDrgBunhoInfo grd_list = 1;
+}
+
+message DRG3010P10GrdJusaDcOrderRequest {
+        optional string jubsu_date 	 = 1;
+        optional string drg_bunho 	 = 2;
+        optional string bunho 		 = 3;
+        optional string magam_bunryu = 4;
+        optional string page_number  = 5;
+        optional string offset 		 = 6;
+}
+
+message DRG3010P10GrdJusaDcOrderResponse{
+        repeated DRG3010P10GrdJusaDcOrderInfo grd_list = 1;
+}
+
+message DRG3010P10GrdMagamJusaOrdRequest {
+        optional string jubsu_date = 1;
+        optional string drg_bunho = 2;
+        optional string page_number = 3;
+        optional string offset = 4;
+}
+
+message DRG3010P10GrdMagamJusaOrdResponse{
+        repeated DRG3010P10GrdMagamJusaOrdInfo grd_list = 1;
+}
+
+message DRG3010P10GrdMagamOrdRequest {
+        optional string jubsu_date = 1;
+        optional string drg_bunho = 2;
+        optional string page_number = 3;
+        optional string offset = 4;
+}
+
+message DRG3010P10GrdMagamOrdResponse{
+        repeated DRG3010P10GrdMagamOrdInfo grd_list = 1;
+}
+
+message DRG3010P10GrdMagamPaQueryRequest {
+        optional string from_date = 1;
+        optional string to_date = 2;
+        optional string ho_dong = 3;
+        optional string bunho = 4;
+        optional string magam_gubun = 5;
+        optional string page_number = 6;
+        optional string offset = 7;
+}
+
+message DRG3010P10GrdMagamPaQueryResponse{
+        repeated DRG3010P10GrdMagamPaQueryInfo grd_list = 1;
+}
+
+message DRG3010P10GrdMiMaJuOrdRequest{
+        optional string order_date = 1;
+        optional string bunho = 2;
+        optional string hope_date = 3;
+        optional string ho_dong = 4;
+        optional string doctor = 5;
+        optional string magam_gubun = 6;
+        optional string magam_bunryu = 7;
+        optional string page_number = 8;
+        optional string offset = 9;
+}
+
+message DRG3010P10GrdMiMaJuOrdResponse{
+        repeated DRG3010P10GrdMiMaJuOrdInfo grd_list = 1;
+}
+
+message DRG3010P10GrdMiMaOrdRequest{
+        optional string order_date = 1;
+        optional string bunho = 2;
+        optional string hope_date = 3;
+        optional string ho_dong = 4;
+        optional string doctor = 5;
+        optional string magam_gubun = 6;
+        optional string magam_bunryu = 7;
+        optional string page_number = 8;
+        optional string offset = 9;
+}
+
+message DRG3010P10GrdMiMaOrdResponse{
+        repeated DRG3010P10GrdMiMaOrdInfo grd_list = 1;
+}
+
+message DRG3010P10GrdPaDcRequest{
+        optional string from_date = 1;
+        optional string to_date = 2;
+        optional string bunho = 3;
+        optional string ho_dong = 4;
+        optional string magam_gubun = 5;
+        optional string magam_bunryu = 6;
+        optional string page_number = 7;
+        optional string offset = 8;
+}
+
+message DRG3010P10GrdPaDcResponse{
+        repeated DRG3010P10GrdPaDcInfo grd_list = 1;
+}
+
+message DRG3010P10GrdPaRequest{
+        optional string from_date = 1;
+        optional string to_date = 2;
+        optional string bunho = 3;
+        optional string ho_dong = 4;
+        optional string magam_gubun = 5;
+        optional string magam_bunryu = 6;
+        optional string page_number = 7;
+        optional string offset = 8;
+}
+
+message DRG3010P10GrdPaResponse{
+        repeated DRG3010P10GrdPaInfo grd_list = 1;
+}
+
+message DRG3010P10LayAntiDataRequest{
+        optional string fkocs = 1;
+}
+
+message DRG3010P10LayAntiDataResponse{
+        repeated DRG3010P10LayAntiDataInfo grd_list = 1;
+}
+
+message DRG3010P10LayOrderJungboRequest{
+        optional string jubsu_date = 1;
+        optional string drg_bunho = 2;
+}
+
+message DRG3010P10LayOrderJungboResponse{
+        repeated DRG3010P10LayOrderJungboInfo grd_list = 1;
+}
+
+message DRG3010P10DsvOrderPrint1Response{
+        repeated DRG3010P10DsvOrderPrint1Info tbl_list = 1;
+}
+
+message DRG3010P10DsvOrderPrint2Request{
+        optional string jubsu_date = 1;
+        optional string drg_bunho = 2;
+        optional string serial_text = 3;
+}
+
+message DRG3010P10DsvOrderPrint2Response{
+        repeated DRG3010P10DsvOrderPrint2Info tbl_list = 1;
+}
+
+message DRG3010P10DsvOrderPrint3Request{
+        optional string serial_v = 1;
+        optional string fkocs2003 = 2;
+}
+
+message DRG3010P10DsvOrderPrint3Response{
+        repeated DRG3010P10DsvOrderPrint3Info tbl_list = 1;
+}
+
+message DRG3010P10DsvOrderPrint4Request{
+        optional string jubsu_date = 1;
+        optional string drg_bunho = 2;
+        optional string serial_text = 3;
+}
+
+message DRG3010P10DsvOrderPrint4Response{
+        repeated DRG3010P10DsvOrderPrint4Info tbl_list = 1;
+}
+
+message DRG3010P10DsvJusaOrderPrint1Request{
+        optional string jubsu_date = 1;
+        optional string drg_bunho = 2;
+}
+
+message DRG3010P10DsvJusaOrderPrint1Response{
+        repeated DRG3010P10DsvJusaOrderPrint1Info tbl_list = 1;
+}
+
+message DRG3010P10DsvJusaOrderPrint2Request{
+        optional string jubsu_date = 1;
+        optional string drg_bunho = 2;
+        optional string serial_text = 3;
+}
+
+message DRG3010P10DsvJusaOrderPrint2Response{
+        repeated DRG3010P10DsvJusaOrderPrint2Info tbl_list = 1;
+}
+
+message DRG3010P10DsvJusaOrderPrint3Request{
+        optional string serial_v = 1;
+        optional string fkocs2003 = 2;
+}
+
+message DRG3010P10DsvJusaOrderPrint3Response{
+        repeated DRG3010P10DsvJusaOrderPrint3Info tbl_list = 1;
+}
+
+message DRG3010P10DsvJusaOrderPrint4Request{
+        optional string jubsu_date = 1;
+        optional string drg_bunho = 2;
+        optional string serial_text = 3;
+}
+
+message DRG3010P10DsvJusaOrderPrint4Response{
+        repeated DRG3010P10DsvJusaOrderPrint4Info tbl_list = 1;
+}
+
+message DRG3010P10DsvJusaLabel1Request{
+        optional string jubsu_date = 1;
+        optional string drg_bunho = 2;
+}
+
+message DRG3010P10DsvJusaLabel1Response{
+        repeated DRG3010P10DsvJusaLabel1Info tbl_list = 1;
+}
+
+message DRG3010P10DsvJusaLabel2Request{
+        optional string jubsu_date = 1;
+        optional string drg_bunho = 2;
+        optional string serial_text = 3;
+        optional string k_value = 4;
+        optional string cnt = 5;
+}
+
+message DRG3010P10DsvJusaLabel2Response{
+        repeated DRG3010P10DsvJusaLabel2Info tbl_list = 1;
+}
+
+message DRG3010P10DsvJusaLabel3Request{
+        optional string jubsu_date = 1;
+        optional string drg_bunho = 2;
+        optional string serial_text = 3;
+        optional string k_value = 4;
+        optional string cnt = 5;
+}
+
+message DRG3010P10PrDrgInpMagamRequest{
+        optional string upd_id = 1;
+        optional string hosp_code = 2;
+        optional string ho_dong = 3;
+        optional string magam_date = 4;
+        optional string magam_gubun = 5;
+}
+
+message DRG3010P10Xbtn2ClickRequest{
+        optional string user_id = 1;
+        optional string fkocs2003 = 2;
+        optional string boryu_yn = 3;
+}
+
+message DRG3010P10LayAntinQueryEndRequest{
+        optional string fkocs = 1;
+}
+
+message DRG3010P10LayAntinQueryEndResponse{
+        repeated DRG3010P10LayAntinQueryEndInfo lay_list = 1;
+}
+
+message DRG3010P10SetCycleDateRequest{
+        optional string case_val = 1;
+        optional string magam_date = 2;
+        optional string ho_dong = 3;
+}
+
+message DRG3010P10PrJihInjIfsProcRequest { 
+        optional string io_gubun=1;
+        optional string fkdrg=2;
+        optional string user_id=3;
+}
+
+message DRG3010P10PostLoadRequest{
+}
+
+message DRG3010P10PostLoadResponse{
+        repeated DRG3010P10PostLoadInfo info_list = 1;
+}
+
+message DRG3010P10BoRyuRequest{
+        optional string user_id = 1;
+        repeated DRG3010P10BoRyuInfo info_lst = 2;
+}
+
+message DRG3010P10PrDrgInpBunhoCancelRequest{
+        optional string jubsu_date = 1;
+        optional string drg_bunho = 2;
+        optional string user_id = 3;
+}
+
+message DRG3010P10BtnNumberCancelRequest{
+        optional string jubsu_date = 1;
+        optional string drg_bunho = 2;
+}
+
+message DRG3010P10PrDrgLoadPrintGubunRequest{
+        optional string jubsu_date = 1;
+        optional string drg_bunho = 2;
+        optional string print_gubun = 3;
+}
+
+message DRG3010P10DsvOrderPrint1Request{
+        optional string jubsu_date = 1;
+        optional string drg_bunho = 2;
+}
+
+
+
+
+
+
+
+
+

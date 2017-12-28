@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<xs:schema xmlns:mmlPi="uri:mmlPi" xmlns:mmlPh="uri:mmlPh" xmlns:mmlAd="uri:mmlAd" xmlns:mmlNm="uri:mmlNm" xmlns:mmlCm="uri:mmlCm" elementFormDefault="qualified" targetNamespace="uri:mmlPi" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="uri:mmlPh" />
+  <xs:import namespace="uri:mmlAd" />
+  <xs:import namespace="uri:mmlNm" />
+  <xs:import namespace="uri:mmlCm" />
+  <xs:element name="PatientModule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mmlPi:uniqueInfo" />
+        <xs:element ref="mmlPi:personName" />
+        <xs:element ref="mmlPi:birthday" />
+        <xs:element ref="mmlPi:sex" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlPi:nationality" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlPi:marital" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlPi:addresses" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlPi:emailAddresses" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlPi:phones" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlPi:accountNumber" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlPi:socialIdentification" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlPi:death" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="otherId">
+    <xs:complexType>
+      <xs:sequence>
+        <!--<xs:element xmlns:q1="uri:mmlCm" ref="q1:Id" />-->
+        <xs:element ref="mmlCm:Id" />
+      </xs:sequence>
+      <xs:attribute name="type" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="temporaryPatientId" />
+            <xs:enumeration value="motherId" />
+            <xs:enumeration value="fatherId" />
+            <xs:enumeration value="childId" />
+            <xs:enumeration value="relativeId" />
+            <xs:enumeration value="roommateId" />
+            <xs:enumeration value="friendId" />
+            <xs:enumeration value="representativeId" />
+            <xs:enumeration value="emergencyContactId" />
+            <xs:enumeration value="coWorkerId" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="masterId">
+    <xs:complexType>
+      <xs:sequence>
+        <!--<xs:element xmlns:q2="uri:mmlCm" ref="q2:Id" />-->
+        <xs:element ref="mmlCm:Id" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="uniqueInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mmlPi:masterId" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="mmlPi:otherId" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="death">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="date" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="socialIdentification" type="xs:string" />
+  <xs:element name="accountNumber" type="xs:string" />
+  <xs:element name="phones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="mmlPh:Phone" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="emailAddresses">
+    <xs:complexType>
+      <xs:sequence>
+        <!--<xs:element minOccurs="0" maxOccurs="unbounded" xmlns:q3="uri:mmlCm" ref="q3:email" />-->
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="mmlCm:email" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addresses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="mmlAd:Address" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="marital" type="xs:string" />
+  <xs:element name="nationality">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="subtype" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sex" type="xs:string" />
+  <xs:element name="birthday" type="xs:string" />
+  <xs:element name="personName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="mmlNm:Name" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

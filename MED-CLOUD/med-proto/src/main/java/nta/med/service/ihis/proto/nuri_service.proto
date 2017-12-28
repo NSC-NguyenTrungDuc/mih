@@ -1,0 +1,3479 @@
+import "rpc.proto";
+import "nuri_model.proto";
+import "common_model.proto";
+
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "NuriServiceProto";
+option (version) = "1.0.0";
+option (service) = "nuri";
+
+// Validation Duplicate Check 
+message NuriNUR1016U00ValidationDuplicateCheckRequest{
+    optional string bunho = 1;
+    optional string allergy_gubun = 2;
+    optional string start_date = 3;
+}
+
+message NuriNUR1016U00ValidationDuplicateCheckResponse {
+    optional string result = 1;
+}
+
+// NUR1016U00 Insert Nur1016
+message NuriNUR1016U00InsertNur1016Request {
+    optional string user_id = 1;
+    optional string hosp_code = 2;
+    optional string pknur1016 = 3;
+    optional string bunho = 4;
+    optional string allergy_gubun = 5;
+    optional string allergy_info = 6;
+    optional string start_date = 7;
+    optional string end_date = 8;
+    optional string end_sayu = 9;
+    optional string input_text = 10;
+}
+
+// Update Response
+
+//NUR1016U00 Update  Nur1016
+message NuriNUR1016U00UpdateNur1016Request {
+    optional string user_id = 1;
+    optional string hosp_code = 2;
+    optional string pknur1016 = 3;
+    optional string bunho = 4;
+    optional string allergy_gubun = 5;
+    optional string allergy_info = 6;
+    optional string start_date = 7;
+    optional string end_date = 8;
+    optional string end_sayu = 9;
+    optional string input_text = 10;
+}
+
+message NUR1016U00UpdateNur1016Response {
+    required bool result_update = 1;
+}
+
+// NUR1016U00 Delete Nur1016
+message NuriNUR1016U00UpdateCancelStatusRequest {
+    optional string user_id = 1;
+    optional string hosp_code = 2;
+    optional string pknur1016 = 3;
+    optional string bunho = 4;
+    optional string allergy_gubun = 5;        
+    optional string start_date = 6;
+}
+
+message NuriNUR1016U00DeleteNur1016Response {
+    required bool result_delete = 1;
+}
+
+message NuriNUR1016U00NurAlegyMappingRequest {
+    optional string bunho = 1;
+    optional string table_id = 2;
+    optional string user_id = 3;
+}
+
+message NuriNUR1016U00NurAlegyMappingResponse {
+    optional string result = 1;
+}
+
+// Nuri Manage allergy List 
+message NuriNUR1016U00ManageAllergyListRequest {
+    optional string bunho = 1;
+}
+
+message NuriNUR1016U00ManageAllergyListResponse {
+    repeated NuriNUR1016U00ManageAllergyListItemInfo manage_allergy_list_item = 1;
+}
+
+// NUR7001U00 Get Max Seq in NUR7001
+message NuriNUR7001U00GetMaxSeqInNUR7001Request {
+    optional string bunho = 1;
+    optional string measure_date = 2;
+}
+
+message NuriNUR7001U00GetMaxSeqInNUR7001Response {
+    optional string bunho = 1;
+    optional string measure_date = 2;
+}
+
+//NUR7001U00 Insert into NUR70001
+message NuriNUR7001U00InsertNUR7001Request {
+    optional string user_id = 1;        
+    required string bunho = 2;
+    required string measure_date = 3;
+    required string new_seq = 4;
+    optional string height = 5;
+    optional string weight = 6;
+    optional string bp_from = 7;
+    optional string bp_to = 8;
+    optional string body_heat = 9;
+    optional string pulse = 10;
+    optional string spo2 = 11;
+    optional string measure_time = 12;
+    optional string breath = 13;
+}
+
+message NuriNUR7001U00InsertNUR7001NewRequest {
+	optional string user_id = 1;        
+	required string bunho = 2;
+	required string measure_date = 3;
+	optional string breath = 4;
+	optional string height = 5;
+	optional string weight = 6;
+	optional string bp_from = 7;
+	optional string bp_to = 8;
+	optional string body_heat = 9;
+	optional string pulse = 10;
+	optional string spo2 = 11;
+	optional string measure_time = 12;
+}
+//NUR7001U00 Update NUR70001
+message NuriNUR7001U00UpdateNUR7001Request {
+    optional string user_id = 1;        
+    required string bunho = 2;
+    required string measure_date = 3;
+    required string seq = 4;
+    optional string height = 5;
+    optional string weight = 6;
+    optional string bp_from = 7;
+    optional string bp_to = 8;
+    optional string body_heat = 9;
+    optional string pulse = 10;
+    optional string spo2 = 11;
+    optional string measure_time = 12;
+    optional string breath = 13;
+}
+//NUR7001U00 Delete NUR70001
+message NuriNUR7001U00UpdateValdStatusNUR7001Request {
+    optional string user_id = 1;        
+    optional string bunho = 2;
+    optional string measure_date = 3;
+    optional string seq = 4;        
+}
+//NUR7001U00 Measure Physical condition List
+message NuriNUR7001U00MeasurePhysicalConditionRequest {
+    optional string bunho = 1;
+}
+
+message NuriNUR7001U00MeasurePhysicalConditionResponse {
+    repeated NuriMeasurePhysicalConditionListItemInfo measure_physical_condition_list_item = 1;
+}
+
+//NURI NUR1017U00ManageInfectionRequest
+message NuriNUR1017U00ManageInfectionRequest
+{
+	required string bunho = 1;
+}
+
+//NURI NUR1017U00ManageInfectionResponse
+message NuriNUR1017U00ManageInfectionResponse
+{
+	repeated NuriNUR1017U00ManageInfectionInfo manage_infection_item = 1;
+}
+
+
+//NURI NUR1017U00GetYRequest
+message NuriNUR1017U00GetYRequest
+{
+	optional string infe_code = 1;
+	optional string bunho = 2;
+	optional string start_date = 3;
+}
+
+//NURI NUR1017U00GetYResponse
+message NuriNUR1017U00GetYResponse
+{
+	optional string y_value = 1;
+}
+
+//NURI NUR1017U00GetCodeNameRequest
+message NuriNUR1017U00GetCodeNameRequest
+{
+	optional string code_type = 1;
+	optional string infe_code = 2;
+}
+
+//NURI NUR1017U00GetCodeNameResponse
+message NuriNUR1017U00GetCodeNameResponse
+{
+	optional string code_name_value = 1;
+}
+
+//NURI NUR1017U00InsertManageInfectionRequest
+message NuriNUR1017U00InsertManageInfectionRequest
+{
+ 	optional string sys_id = 1;
+ 	optional string upd_id = 2;
+	 optional string hosp_code = 3;
+	 required string infe_code = 4;
+	 required string bunho = 5;
+	 required string start_date = 6;
+	 optional string end_date = 7;
+	 optional string end_sayu = 8;
+	 optional string input_text = 9;
+	 optional string infe_jaeryo = 10;
+	 required string pknur1017 = 11;
+	 optional string cancel_yn  = 12;
+}
+message NuriNUR7001U00SaveLayoutRequest {
+	optional string user_id = 1;
+	repeated NuriNUR7001U00MeasurePhysicalConditionListItemInfo list_info = 2;
+}
+//NURI NUR1017U00UpdateManageInfectionRequest
+message NuriNUR1017U00UpdateManageInfectionRequest
+{
+	optional string user_id = 1;
+	optional string end_date = 2;
+	optional string end_sayu = 3;
+	optional string input_text = 4;
+    optional string infe_jaeryo = 5;
+	optional string cancel_yn = 6;
+	optional string pknur1017 = 7;
+}
+
+//NURI NUR1017U00DeleteManageInfectionRequest
+message NuriNUR1017U00DeleteManageInfectionRequest
+{
+	optional string user_id = 1;
+	optional string cancel_yn = 2;
+	optional string pknur1017 = 3;
+}
+
+
+//NuriNUR1017U00InfeMappingRequest
+message NuriNUR1017U00InfeMappingRequest
+{
+	required string bunho = 1;
+    required string infe_code = 2;
+    required string table_id = 3;
+    required string user_id = 4;
+}
+
+message NuriNUR1017U00InfeMappingResponse
+{
+	required string result = 1;
+}
+
+// -----[START] NUR1016U00 --------
+message NUR1016U00SelectNextValRequest {
+
+}
+
+message NUR1016U00SelectNextValResponse {
+	optional string next_val = 1;
+}
+
+message NUR1016U00GetComboListRequest {
+	optional string code_type_layComboSet = 1;
+}
+
+message NUR1016U00GetComboListResponse {
+	repeated ComboListItemInfo xEditGridCell7_list = 1;
+	repeated ComboListItemInfo layComboSet_list = 2;
+}
+message NUR1016U00GrdNUR1016Request {
+	optional string bunho = 1;
+}
+
+message NUR1016U00GrdNUR1016Response {
+	repeated NUR1016U00GrdNUR1016ListItemInfo grdNUR1016_list = 1;
+}
+
+message NUR1016U00PrNurAlergyMappingRequest {
+    repeated NUR1016U00GrdNUR1016ListItemInfo grdNUR1016_list = 1;
+    optional string bunho = 2;
+    optional string user_id = 3;
+    optional string table_id = 4;
+}
+
+message NUR1016U00PrNurAlergyMappingResponse {
+    optional bool saveLayout_result = 1;
+    optional string  pr_result = 2;
+}
+
+// -----[END] NUR1016U00 --------
+
+// -----[START] NUR1017U00 --------
+message NUR1017U00GrdNUR1017Request {
+	optional string bunho = 1;
+}
+
+message NUR1017U00GrdNUR1017Response {
+    repeated NUR1017U00GrdNUR1017ListItemInfo grdNUR1017_list = 1;
+}
+
+message NUR1017U00GetComboListRequest {
+    optional string code_type_xEditGridCell1 = 1;
+    optional string code_type_xEditGridCell5 = 2;
+    optional string code_type_xEditGridCell6 = 3;
+    optional string code_type_layComboSet = 4;
+}
+
+message NUR1017U00GetComboListResponse {
+    repeated ComboListItemInfo xEditGridCell1_list = 1;
+    repeated ComboListItemInfo xEditGridCell5_list = 2;
+    repeated ComboListItemInfo xEditGridCell6_list = 3;
+    repeated ComboListItemInfo layComboSet_list = 4;
+}
+
+message NUR1017U00LayValidationDupchkRequest {
+    optional string infe_code = 1;
+    optional string bunho = 2;
+    optional string start_date = 3;
+}
+
+message NUR1017U00LayValidationDupchkResponse {
+    optional string y_value = 1;
+}
+
+message NUR1017U00SaveLayoutRequest {
+	repeated NUR1017U00GrdNUR1017ListItemInfo grdList = 1;
+    optional string user_id = 2;
+}
+
+message NUR1017U00SaveLayoutResponse {
+	optional bool saveLayout_result = 1;
+}
+// -----[END] NUR1017U00 --------
+
+//[START] NUR0101U01
+message NUR0101U01CheckDetailDBRequest {
+	optional string code_type = 1;
+}	
+
+message NUR0101U01GrdMasterGridColumnChangedRequest {
+	optional string code_type = 1;
+}
+	
+message NUR0101U01GrdDetailGridColumnChangedRequest {
+	optional string code_type = 1;
+	optional string code = 2;
+}
+
+message NUR0101U01CheckYResponse {
+	optional string y_value = 1;
+}
+
+message NUR0101U01GrdDetailRequest{
+	optional string code_type = 1;
+}
+
+message NUR0101U01GrdDetailResponse{
+	repeated NUR0101U01GrdDetailInfo grd_detail_info = 1;
+}
+
+message NUR0101U01GrdMasterRequest {
+	optional string code_type = 1;
+}
+
+message NUR0101U01GrdMasterResponse{
+	repeated NUR0101U01GrdMasterInfo grd_master_info = 1;
+}
+
+message NUR0101U01SaveLayoutRequest {
+	repeated NUR0101U01GrdDetailInfo grd_detail_info = 1;
+	repeated NUR0101U01GrdMasterInfo grd_master_info = 2;
+	optional string user_id = 3;
+}
+//[END] NUR0101U01
+
+//[START] NURILIB
+message NURILIBOutputResponse {
+    optional string output 	= 1;
+}
+
+message NURILIBGetDisGubunNameBAS0281Request {
+    optional string gubun 	= 1;
+    optional string date 	= 2;
+}
+
+message NURILIBGetBuseoNameBAS0260Request {
+    optional string buseo_gubun 	= 1;
+    optional string gwa 			= 2;
+    optional string naewon_date 	= 3;
+}
+
+message NURILIBGetCodeNameBAS0102Request {
+    optional string code_type 		= 1;
+    optional string code 			= 2;
+}
+
+message NURILIBChkGetWonyoiYnRequest {
+    optional string bunho 			= 1;
+    optional string naewon_date 	= 2;
+    optional string jubsu_time 		= 3;
+}
+
+message NURILIBGetSuNameRequest {
+    optional string bunho 			= 1;
+}
+
+message NURILIBChkBunhoRequest {
+    optional string bunho		 	= 1;
+}
+message NURILIBChkBunhoResponse {
+    repeated NURILIBChkBunhoInfo bunho_res = 1;
+}
+
+message NURILIBIsJaewonRequest {
+    optional string bunho 			= 1;
+    optional string ipwon_date 		= 2;
+}
+
+message NURILIBChkSimsaMagamINP1001Request {
+    optional string pkinp1001	 	= 1;
+}
+//[END] NURILIB
+
+message NUR2017Q00grdNUR2017Request { 
+   	optional string hosp_code 		= 1;
+   	optional string bunho 			= 2;
+   	optional string order_date 		= 3;
+   	optional string pkocs2003 		= 4;
+}
+message NUR2017Q00grdNUR2017Response { 
+   	repeated NUR2017Q00grdNUR2017Info grd_master_item 	= 1;
+}
+message NUR2017Q00xEditGridCell30Request { 
+}
+message NUR2017Q00xEditGridCell30Response { 
+   	repeated ComboListItemInfo xedit_item 		= 1;
+}
+message NUR2017Q00grdNUR2017QueryEndRequest { 
+   	optional string hosp_code 			= 1;
+   	optional string bannab_fkocs2003 	= 2;
+}
+message NUR2017Q00grdNUR2017QueryEndResponse { 
+   	optional DataStringListItemInfo cmd_item 	= 1;
+}
+
+// here
+message NUR0101U00grdDetailRequest { 
+   optional string code_type =1;
+   optional string offset =2;
+   optional string page_number =3;
+}
+
+message NUR0101U00grdDetailResponse { 
+   repeated NUR0101U00grdDetailInfo grd_master_item =1;
+}
+
+message NUR0101U00grdMasterRequest { 
+   optional string code_type =1;
+   optional string offset =2;
+   optional string page_number =3;
+}
+
+message NUR0101U00grdMasterResponse { 
+   repeated NUR0101U00grdMasterInfo grd_master_item =1;
+}
+
+message NUR0101U00layComboItemsRequest { 
+}
+
+message NUR0101U00grdMasterGridColumnChangedRequest { 
+	optional string code_type =1;
+}
+
+message NUR0101U00grdMasterGridColumnChangedResponse { 
+	optional DataStringListItemInfo retval_item =1;
+}
+
+message NUR0101U00grdDetailGridColumnChangedRequest { 
+   optional string code_type =1;
+   optional string code =2;
+}
+
+message NUR0101U00grdDetailGridColumnChangedResponse { 
+   optional DataStringListItemInfo retval_item =1;
+}
+
+message NUR0101U00SaveLayoutRequest { 
+   repeated NUR0101U00grdMasterInfo grdmasterinfo = 1;
+   repeated NUR0101U00grdDetailInfo grddetailinfo = 2;
+}
+
+message NUR1123U00grdDetailRequest {
+	optional string code_type  						= 1;
+    optional string page_number						= 2;
+    optional string offset							= 3;
+}
+message NUR1123U00grdDetailResponse {
+    repeated NUR1123U00grdDetailInfo list_Detail 	= 1;
+}
+
+message NUR1123U00grdMasterRequest {
+}
+
+message NUR1123U00grdMasterCheckRequest {
+}
+message NUR1123U00grdMasterCheckResponse {
+	optional string checkresult 				= 1;
+}
+
+message NUR1123U00grdDetailCheckRequest {
+	optional string code_type  					= 1;
+    optional string code						= 2;
+}
+message NUR1123U00grdDetailCheckResponse {
+	optional string grdDetail_checkresult 		= 1;
+}
+
+message NUR1123U00SaveLayoutRequest {
+    optional string user_id  = 1;
+	repeated NUR1123U00grdDetailInfo grd 	= 2;
+}
+
+message NUR0811U00CboRequest {
+        
+}
+
+message NUR0811U00CboResponse {
+    repeated ComboListItemInfo lay_combo_items = 1;
+    repeated ComboListItemInfo xedit_grid_cell = 2;
+    repeated ComboListItemInfo master_grd = 3;
+}
+
+message NUR0811U00GrdDetailRequest {
+    optional string need_h_type = 1;
+}
+
+message NUR0811U00GrdDetailResponse {
+    repeated NUR0811U00GrdDetailInfo grd_list = 1;
+}
+
+message NUR0811U00GrdColChangeRequest {
+    optional string need_h_type = 1;
+    optional string need_type = 2;
+}
+
+message NUR0811U00SaveLayoutRequest {
+    repeated NUR0811U00GrdDetailInfo save_list = 1;
+    optional string user_id = 2;
+}
+
+message NUR2004U01fwBedNoRequest { 
+   optional string ho_dong =1;
+   optional string ho_code =2;
+}
+
+message NUR2004U01fwBedNoResponse { 
+   repeated DataStringListItemInfo fw_item =1;
+}
+
+message NUR2004U01grdInp2004Request { 
+   optional string ho_dong =1;
+   optional string order_date =2;
+   optional string offset =3;
+   optional string page_number =4;
+}
+
+message NUR2004U01grdInp2004Response { 
+   repeated NUR2004U01grdInp2004Info grd_master_item =1;
+}
+
+message NUR2004U01PRBASBAS0250REFRESHRequest { 
+   optional string ho_dong =1;
+}
+
+message NUR2004U01ConfirmTransRequest { 
+   optional string trans_cnt =1;
+   optional string bed_no =2;
+   optional string fkinp1001 =3;
+   optional string i_trans_cnt =4;
+}
+
+message NUR2004U01GetConfirmDataRequest { 
+   optional string fkinp1001 =1;
+   optional string trans_cnt =2;
+}
+
+message NUR2004U01GetConfirmDataResponse { 
+   repeated NUR2004U01GetConfirmDataInfo dtconfirm_item =1;
+}
+
+message NUR2004U01PRINPUPDATEJENGWARequest { 
+   optional string iud_gubun =1;
+   optional string user_id =2;
+   optional string pkinp1001 =3;
+   optional string ipwon_type =4;
+   optional string bunho =5;
+   optional string order_date =6;
+   optional string trans_time =7;
+   optional string to_ho_code1 =8;
+   optional string to_ho_dong1 =9;
+   optional string to_ho_grade1 =10;
+   optional string to_ho_code2 =11;
+   optional string to_ho_dong2 =12;
+   optional string to_ho_grade2 =13;
+   optional string to_bed_no =14;
+}
+
+message NUR2004U01PRNURCHANGEGWAHODONGRequest { 
+   optional string fkinp1001 =1;
+   optional string bunho =2;
+   optional string order_date =3;
+   optional string user_id =4;
+}
+
+message NUR2004U01GetSubConfirmData1Request { 
+   optional string fkinp1001 =1;
+}
+
+message NUR2004U01GetSubConfirmData1Response { 
+   optional DataStringListItemInfo rtn_value =1;
+}
+
+message NUR2004U01GetSubConfirmData2Request { 
+   optional string to_ho_dong1 =1;
+   optional string to_ho_code1 =2;
+   optional string to_bed_no =3;
+}
+
+message NUR2004U01GetSubConfirmData2Response { 
+   optional DataStringListItemInfo rtn_value =1;
+}
+
+message NUR2004U01GetSubConfirmData3Request { 
+   optional string to_ho_dong1 =1;
+   optional string to_ho_code1 =2;
+   optional string to_bed_no =3;
+   optional string bunho =4;
+   optional string change_gubun =5;
+}
+
+message NUR2004U01GetSubConfirmData3Response { 
+   optional DataStringListItemInfo rtn_value =1;
+}
+
+message NUR2004U01layCommonRequest { 
+   optional string fkinp1001 =1;
+}
+
+message NUR2004U01GetSubConfirmData4Request { 
+   optional string to_gwa =1;
+   optional string to_doctor =2;
+   optional string to_resident =3;
+   optional string to_ho_dong1 =4;
+   optional string to_ho_code1 =5;
+   optional string to_bed_no =6;
+   optional string to_bed_no2 =7;
+   optional string to_ho_code2 =8;
+   optional string to_ho_dong2 =9;
+   optional string to_ho_grade1 =10;
+   optional string to_ho_grade2 =11;
+   optional string fkinp1001 =12;
+   optional string upd_id =13;
+   optional string to_kaikei_hodong =14;
+   optional string to_kaikei_hocode =15;
+}
+
+message NUR0812U00CboRequest {
+        
+}
+
+message NUR0812U00CboResponse {
+    repeated ComboListItemInfo master_grd = 1;
+    repeated ComboListItemInfo xedit_grid_cell1 = 2;
+    repeated ComboListItemInfo xedit_grid_cell3 = 3;
+}
+
+message NUR0812U00FwkGubunRequest {
+    optional string need_gubun = 1;
+}
+
+message NUR0812U00GrdDetailRequest{
+    optional string need_h_type = 1;
+    optional string code_type = 2;
+    optional string page_number = 3;
+    optional string offset = 4;
+}
+
+message NUR0812U00GrdDetailResponse{
+    repeated NUR0812U00GrdDetailInfo grd_detail_info = 1;
+}
+
+message NUR0812U00GrdDetailColChangeRequest{
+    optional string need_h_type = 1;
+    optional string need_gubun = 2;
+    optional string need_asmt_code = 3;
+}
+
+message NUR0812U00SaveLayoutRequest{
+    optional string user_id = 1;
+    repeated NUR0812U00GrdDetailInfo save_lst = 2;
+}
+
+message NUR2004U00layCurrentBedRequest { 
+	optional string bunho 										= 1;
+}
+message NUR2004U00layCurrentBedResponse { 
+	repeated NUR2004U00layCurrentBedInfo lay_currentbed 		= 1;
+}
+
+message NUR2004U00layHocodeBednoRequest { 
+	optional string ho_dong 									= 1;
+    optional string ho_code 									= 2;
+}
+
+message NUR2004U00layMaxBedNoRequest { 
+    optional string ho_dong 									= 1;
+	optional string ho_code_ymd 								= 2;
+}
+message NUR2004U00layMaxBedNoResponse { 
+    repeated DataStringListItemInfo maxbedno 					= 1;
+}
+
+message NUR2004U00layHoSexRequest { 
+    optional string ho_dong 									= 1;
+	optional string ho_code 									= 2;
+	optional string date										= 3;
+}
+
+message NUR2004U00cboFromToHoGradeRequest { 
+}
+
+message NUR2004U00cboToKaikeiRequest { 
+	optional string kaikei_hodong								= 1;
+}
+
+message NUR2004U00fbxToGwaRequest { 
+    optional string date										= 1;
+    optional string find1										= 2;
+}
+
+message NUR2004U00fbxToDoctorRequest { 
+	optional string date										= 1;
+	optional string gwa											= 2;
+	optional string find1										= 3;
+}
+
+message NUR2004U00fbxToHodongRequest { 
+	optional string date										= 1;
+}
+
+message NUR2004U00fbxToHoCodeRequest { 
+	optional string date										= 1;
+	optional string hodong										= 2;
+}
+
+message NUR2004U00layValidCheckGwaRequest { 
+	optional string date										= 1;
+	optional string code										= 2;
+}
+
+message NUR2004U00layValidCheckGwaResponse { 
+    repeated DataStringListItemInfo gwa_name 					= 1;
+}
+
+message NUR2004U00layValidCheckDoctorRequest { 
+	optional string date										= 1;
+	optional string code										= 2;
+	optional string gwa											= 3;
+}
+
+message NUR2004U00layValidCheckDoctorResponse { 
+    repeated DataStringListItemInfo doctor_name 				= 1;
+}
+
+message NUR2004U00layValidCheckHodongRequest { 
+	optional string date										= 1;
+	optional string code										= 2;
+}
+
+message NUR2004U00layValidCheckHodongResponse { 
+	repeated DataStringListItemInfo gwa_name 					= 1;
+}
+
+message NUR2004U00layValidCheckHocodeRequest { 
+	optional string date										= 1;
+	optional string code										= 2;
+	optional string hodong										= 3;
+}
+
+message NUR2004U00layValidCheckHocodeResponse { 
+    repeated NUR2004U00layValidCheckHocodeInfo list_validhocode = 1;
+}
+
+message NUR2004U00GetInitJunipRequest { 
+    optional string date 										= 1;
+    optional string fkinp1001 									= 2;
+    optional string hodong 										= 3;
+}
+
+message NUR2004U00GetInitJunipResponse { 
+    repeated NUR2004U00GetInitJunipInfo list_getinit 			= 1;
+}
+
+message NUR6011U01grdImageRequest{
+    optional string bunho 					= 1;
+    optional string from_date 				= 2;
+    optional string buwi_gubun 				= 3;
+    optional string assessor_date 			= 4;        
+    optional string page_number 			= 5;
+    optional string offset 					= 6;
+}
+
+message NUR6011U01grdImageResponse{
+    repeated NUR6011U01grdImageInfo items 	= 1;
+}
+
+message NUR6011U01grdNur6011Request{
+    optional string bunho 					= 1;
+    optional string page_number 			= 2;
+	optional string offset 					= 3;
+}
+
+message NUR6011U01grdNur6011Response{
+    repeated NUR6011U01grdNur6011Info items = 1;
+}
+
+message NUR6011U01grdNur6012Request{
+    optional string bunho 					= 1;
+    optional string from_date 				= 2;
+    optional string bedsore_buwi 			= 3;
+    optional string assessor_date 			= 4;        
+    optional string page_number 			= 5;
+    optional string offset 					= 6;
+}
+
+message NUR6011U01grdNur6012Response{
+    repeated NUR6011U01grdNur6012Info items = 1;
+}
+
+message NUR6011U01grdNur6012CopyRequest{
+    optional string bunho 					= 1;
+    optional string from_date 				= 2;
+    optional string bedsore_buwi 			= 3;
+    optional string assessor_date 			= 4;        
+    optional string page_number 			= 5;
+    optional string offset 					= 6;
+}
+
+message NUR6011U01layCalendarRequest{
+    optional string bunho 					= 1;
+    optional string from_date 				= 2;
+    optional string from_month 				= 3;
+    optional string page_number 			= 4;
+    optional string offset 					= 5;
+}
+
+message NUR6011U01layCalendarResponse{
+    repeated NUR6011U01layCalendarInfo items = 1;
+}
+
+message NUR6011U01layImageRequest{
+    optional string bunho 					= 1;
+    optional string from_date 				= 2;
+    optional string buwi 					= 3;
+    optional string assessor_date 			= 4;
+}
+
+message NUR6011U01LoadFtpOptionRequest{
+    optional string gubun 					= 1;
+}
+
+message NUR6011U01BuwiNameRequest{
+    optional string code 					= 1;
+}
+
+message NUR6011U01IsJaewonRequest{
+    optional string bunho 					= 1;
+}
+
+message NUR6011U01GetNur6005Request{
+    optional string bunho 					= 1;
+}        
+
+message NUR6011U01GetNur6005Response{
+    repeated string items 					= 1;
+}
+
+message NUR6011U01GetNurseInfoLifeSelfGradeRequest{
+    optional string fkinp1001 				= 1;
+    optional string jukyong_date 			= 2;
+}
+
+message NUR6011U01GetNurseInfoRequest{
+    optional string bunho 					= 1;
+    optional string fkinp1001 				= 2;
+    optional string jukyong_date 			= 3;
+}
+
+message NUR6011U01GetNurseInfoResponse{
+    optional string life_self_grade 		= 1;
+    optional string user_nm 				= 2;
+    optional string ganhodo 				= 3;
+    optional string weight 					= 4;
+    optional string ipwon_date 				= 5;                
+}
+
+message NUR6011U01GetGumsaRequest{
+    optional string bunho 					= 1;
+    optional string date 					= 2;
+}
+
+message NUR6011U01GetGumsaResponse{
+    optional string hb_result 				= 1;
+    optional string alb_result 				= 2;
+    optional string tp_result 				= 3;
+}
+
+message NUR6011U01OnPopMenuClickRequest{
+    optional string bunho 					= 1;
+    optional string from_date 				= 2;
+    optional string bedsore_buwi 			= 3;
+    optional string assessor_date 			= 4;
+}
+
+message NUR6011U01SaveLayoutRequest{
+    repeated NUR6011U01grdNur6011Info grdNur6011Info 	= 1;
+    repeated NUR6011U01grdNur6012Info grdNur6012Info 	= 2;
+    repeated NUR6011U01grdImageInfo grdImageInfo 		= 3;
+} 
+
+message NUR6011U01fwkAssessorHoDong1Request{
+    optional string bunho 					= 1;
+}
+
+message NUR6011U01UserNmByBuseoNameRequest{
+    optional string buseo_name 				= 1;
+}
+
+message NUR6011U01LoadUserNmRequest{
+	optional string code 					= 1;
+}
+
+message NUR6011U01layComboSetRequest{
+    optional string code_type 				= 1;
+}
+
+message NUR6011U01layComboSetResponse{
+    repeated TripleListItemInfo items 		= 1;
+}
+
+message NUR6011U01PrintSetgrdPrintRequest{
+    optional string bunho 					= 1;
+    optional string from_date 				= 2;
+    optional string buwi1 					= 3;
+    optional string buwi2 					= 4;
+    optional string buwi3 					= 5;
+    optional string buwi4 					= 6;
+    optional string buwi5 					= 7;
+    optional string buwi6 					= 8;
+    optional string assessor_start_date 	= 9;
+    optional string assessor_end_date 		= 10;        
+}
+
+message NUR6011U01PrintSetgrdPrintResponse{
+    repeated NUR6011U01PrintSetgrdPrintInfo items = 1;
+}
+
+message NUR6011U01PrintSetlayBuwiRequest{
+    optional string bunho 					= 1;
+    optional string from_date 				= 2;        
+}
+
+message NUR6011U01PrintSetlayBuwiResponse{
+    repeated NUR6011U01PrintSetlayBuwiInfo items = 1;
+} 
+
+message NUR6011U01PrintSetlayImageRequest{
+    optional string bunho 					= 1;
+    optional string from_date 				= 2;
+    optional string buwi 					= 3;
+    optional string assessor_date 			= 4;        
+}
+
+message NUR6011U01PrintSetlayImageResponse{
+    repeated string items 					= 1;
+} 
+
+
+message NUR1020U00cboDungsyochiRequest { 
+}
+
+message NUR1020U00cboDungsyochiResponse { 
+   repeated NUR1020U00cboDungsyochiInfo cmb_item =1;
+}
+
+message NUR1020U00fwkWriterRequest { 
+   optional string nur_wrdt =1;
+   optional string buseo_name =2;
+}
+
+message NUR1020U00fwkWriterResponse { 
+   repeated ComboListItemInfo fwk_item =1;
+}
+
+message NUR1020U00grdNUR1020Request { 
+   optional string bunho =1;
+   optional string fkinp1001 =2;
+   optional string date =3;
+   optional string offset =4;
+   optional string page_number =5;
+}
+
+message NUR1020U00grdNUR1020Response { 
+   repeated NUR1020U00grdNUR1020Info grd_master_item =1;
+}
+
+message NUR1020U00grdNUR1022INRequest { 
+   optional string bunho =1;
+   optional string fkinp1001 =2;
+   optional string order_date =3;
+   optional string gubn =4;
+   optional string prevqryflag =5;
+   optional string gubn_type =6;
+   optional string offset =7;
+   optional string page_number =8;
+}
+
+message NUR1020U00grdNUR1022INResponse { 
+   repeated NUR1020U00grdNUR1022INInfo grd_master_item =1;
+}
+
+message NUR1020U00grdNUR1122Request { 
+   optional string prevqryflag =1;
+   optional string bunho =2;
+   optional string fkinp1001 =3;
+   optional string ymd =4;
+   optional string offset =5;
+   optional string page_number =6;
+}
+
+message NUR1020U00grdNUR1122Response { 
+   repeated NUR1020U00grdNUR1122Info grd_master_item =1;
+}
+
+message NUR1020U00grdPalistRequest { 
+   optional string date =1;
+   optional string ho_dong =2;
+   optional string a =3;
+   optional string b =4;
+   optional string c =5;
+   optional string d =6;
+   optional string offset =7;
+   optional string page_number =8;
+}
+
+message NUR1020U00grdPalistResponse { 
+   repeated NUR1020U00grdPalistInfo grd_master_item =1;
+}
+
+message NUR1020U00layHangmogRequest { 
+   optional string fkinp1001 =1;
+   optional string bunho =2;
+}
+
+message NUR1020U00layHangmogResponse { 
+   repeated ComboListItemInfo lay_item =1;
+}
+
+message NUR1020U00layNUR7002Request { 
+   optional string ymd =1;
+   optional string bunho =2;
+   optional string fkinp1001 =3;
+}
+
+message NUR1020U00layNUR7002Response { 
+   repeated NUR1020U00layNUR7002Info lay_item =1;
+}
+
+message NUR1020U00layNURListRequest { 
+   optional string buseo_name =1;
+}
+
+message NUR1020U00layNURListResponse { 
+   repeated ComboListItemInfo lay_item =1;
+}
+
+message NUR1020U00laySiksaRequest { 
+   optional string bunho =1;
+   optional string fkinp1001 =2;
+   optional string ymd =3;
+}
+
+message NUR1020U00laySiksaResponse { 
+   repeated NUR1020U00laySiksaInfo lay_item =1;
+}
+
+message NUR1020U00layWriterBARequest { 
+   optional string fkinp1001 =1;
+   optional string bunho =2;
+   optional string ymd =3;
+}
+
+message NUR1020U00layWriterBAResponse { 
+   repeated NUR1020U00layWriterBAInfo lay_item =1;
+}
+
+message NUR1020U00GrdAndComboRequest { 
+
+}
+
+message NUR1020U00GrdAndComboResponse { 
+	repeated ComboListItemInfo grd_care = 1;
+	repeated ComboListItemInfo cbo_watch_temp = 2;
+}
+
+message NUR1020U00GrdWatchTemplateRequest { 
+	optional string code_type = 1;
+	optional string page_number =2;
+optional string offset =3;
+}
+
+message NUR1020U00LayComboRequest { 
+	optional string code_type = 1;
+}
+
+message NUR1020U00QueryRequest { 
+	optional string query_type = 1;
+	optional string ymd = 2;
+	optional string bunho = 3;
+	optional string date = 4;
+}
+
+message NUR1020U00GetFkinp1001Request { 
+	optional string bunho = 1;
+}
+
+message NUR1020U00InputLockRequest { 
+}
+
+message NUR1020U00InputLockResponse { 
+	repeated NUR1020U00InputLockInfo info_lst = 1;
+}
+
+message NUR1020U00SelectHodong1Request { 
+	optional string bunho = 1;
+}
+
+message NUR1020U00btnTimeApplyClickRequest { 
+	optional string vspatn_gubun = 1;
+}
+
+message NUR1020U00btnTimeApplyClickResponse { 
+	repeated DataStringListItemInfo vspatn_time = 1;
+}
+
+message NUR1020U00btnPreChuchiClickRequest { 
+	optional string fkinp1001 = 1;
+	optional string bunho = 2;
+	optional string date = 3;
+}
+
+message NUR1020U00SetCycleOrderGroupRequest { 
+	optional string case_val = 1;
+	optional string pkinp1001 = 2;
+}
+
+message NUR1020U00SaveLayoutRequest { 
+	optional string user_id = 1;
+	optional string ymd = 2;
+	optional string bunho = 3;
+	optional string fkinp1001 = 4;
+	repeated NUR1020U00GrdDataInfo grd_data = 5;
+	repeated NUR1020U00GrdNur1023Info grd_1023 = 6;
+	repeated NUR1020U00grdNUR1122Info grd_1122 = 7;
+	repeated NUR1020U00GrdDeleteInfo grd_delete = 8;
+}
+
+message NUR2004U00CancelCheckRequest { 
+       optional string bunho 								= 1;
+       optional string fkinp1001 							= 2;
+       optional string trans_cnt 							= 3;
+}
+
+message NUR2004U00CancelUpdateRequest { 
+       optional string bunho 								= 1;
+       optional string fkinp1001 							= 2;
+       optional string trans_cnt 							= 3;
+	   optional string user_id								= 4;
+	   optional string cancel_sayu							= 5;
+}
+
+message NUR2004U00getHogradeRequest { 
+       optional string to_ho_dong1 							= 1;
+       optional string to_ho_code1 							= 2;
+       optional string junpyo_date 							= 3;
+}
+message NUR2004U00getHogradeResponse { 
+       repeated DataStringListItemInfo ho_grade 			= 1;
+}
+
+message NUR2004U00CheckAfterHogradeRequest { 
+       optional string bunho 								= 1;
+       optional string fkinp1001 							= 2;
+       optional string date 								= 3;
+}
+
+message NUR2004U00CheckBeforeUpdateRequest { 
+       optional string to_doctor 							= 1;
+       optional string fkinp1001 							= 2;
+       optional string to_gwa 								= 3;
+	   optional string to_ho_dong1 							= 4;
+	   optional string to_ho_code1 							= 5;
+	   optional string trans_cnt 							= 6;
+	   optional string to_bed_no							= 7;
+}
+message NUR2004U00ProcessUpdateRequest { 
+	optional string user_id 								= 1;
+    optional string to_ho_dong2 							= 2;
+    optional string to_ho_code2 							= 3;
+    optional string to_bed_no								= 4;
+    optional string to_bed_no2								= 5;
+    optional string to_ho_grade1							= 6;
+    optional string to_kaikei_hodong						= 7;
+    optional string to_kaikei_hocode						= 8;
+    optional string to_ho_dong1								= 9;
+    optional string to_ho_code1								= 10;
+    optional string trans_cnt								= 11;
+    optional string to_doctor 								= 12;
+    optional string fkinp1001 								= 13;
+    optional string to_gwa 									= 14;
+}
+
+message NUR2004U00ProcessInsertRequest { 
+    optional string user_id                                 = 1;
+    optional string fkinp1001                               = 2;
+    optional string bunho                                   = 3;
+    optional string trans_cnt                               = 4;
+    optional string order_date                              = 5;
+    optional string from_gwa                                = 6;
+    optional string to_gwa                                  = 7;
+    optional string from_doctor                             = 8;
+    optional string to_doctor                               = 9;
+    optional string from_resident                           = 10;
+    optional string to_resident                             = 11;
+    optional string from_ho_code1                           = 12;
+    optional string from_ho_dong1                           = 13;
+    optional string to_ho_code1                             = 14;
+    optional string to_ho_dong1                             = 15;
+    optional string from_kaikei_hodong                      = 16;
+    optional string from_kaikei_hocode                      = 17;
+    optional string to_kaikei_hocode                        = 18;
+    optional string to_kaikei_hodong                        = 19;
+    optional string from_ho_code2                           = 20;
+    optional string from_ho_dong2                           = 21;
+    optional string to_ho_code2                             = 22;
+    optional string to_ho_dong2                             = 23;
+    optional string trans_gubun                             = 24;
+    optional string from_bed_no                             = 25;
+    optional string to_bed_no                               = 26;
+    optional string to_bed_no2                              = 27;
+    optional string to_ho_grade1                            = 28;
+}
+
+message NUR2004U00getBedNoRequest { 
+       optional string fkinp1001 							= 1;
+}
+
+message NUR2004U00getTransCntRequest { 
+       optional string fkinp1001 							= 1;
+	   optional string bunho								= 2;
+}
+
+message NUR2004U00getOldTransCntRequest { 
+       optional string fkinp1001 							= 1;
+	   optional string bunho 								= 2;
+}
+
+message NUR2004U00GetConfirmDataUpdateRequest { 
+	optional string upd_id          =  1   ;
+	optional string to_gwa          =   2  ;
+	optional string to_doctor       =   3  ;
+	optional string to_resident     =  4   ;
+	optional string to_ho_code1     =   5  ;
+	optional string to_ho_dong1     =   6  ;
+	optional string to_bed_no       =   7  ;
+	optional string to_bed_no2      =    8 ;
+	optional string to_ho_code2     =     9;
+	optional string to_ho_dong2     =    10 ;
+	optional string to_ho_grade1    =   11  ;
+	optional string to_ho_grade2    =   12  ;
+	optional string to_kaikei_hodong=  13   ;
+	optional string to_kaikei_hocode=    14 ;
+	optional string fkinp1001=15;
+}
+
+message NUR2004U00ConfirmTransRequest { 
+	optional string upd_id          =  1   ;
+	optional string bunho          =   2  ;
+	optional string trans_cnt       =   3  ;
+	optional string i_trans_cnt     =  4   ;
+	optional string to_bed_no       =   5  ;
+	optional string fkinp1001=6;
+}
+
+message NUR2004U00ConfirmTransCancelRequest { 
+	optional string upd_id          =  1   ;
+	optional string bunho          =   2  ;
+	optional string fkinp1001=3;
+}
+
+message NUR2004U00layCurrentBedHoTotalBedRequest { 
+	optional string ho_code          =  1   ;
+}
+
+message NUR2004U00layCurrentBedTransRequest { 
+	optional string bunho          =  1   ;
+	optional string pkinp1001=2;
+}
+
+message NUR2004U00dtpJukyongRequest { 
+	optional string fkinp1001          =  1   ;
+	optional string selected_date=2;
+}
+
+message NUR2004U00prBas0250Request { 
+	optional string ho_dong          =  1   ;
+}
+
+message NUR2004U00prMakeIpwonRequest { 
+	optional string proc_gubun          =  1   ;
+	optional string bunho          =   2  ;
+	optional string data_date       =   3  ;
+	optional string ho_dong     =  4   ;
+	optional string ho_code     =   5  ;
+	optional string bed_no     =   6  ;
+	optional string ipwon_gwa       =   7  ;
+	optional string doctor      =    8 ;
+	optional string fkinp1001     =     9;
+	optional string user_id     =    10 ;
+	optional string data_gubun    =   11  ;
+	optional string toiwon_gubun    =   12  ;
+}
+
+message NUR2004U00prMakeIpwonResponse { 
+	optional string pkifs3011 =1;
+    optional string err =2;
+}
+
+message NUR2004U00prUpdateJengwaRequest { 
+	optional string iud_gubun          =  1   ;
+	optional string user_id          =   2  ;
+	optional string pkinp1001       =   3  ;
+	optional string ipwon_type     =  4   ;
+	optional string bunho     =   5  ;
+	optional string order_date     =   6  ;
+	optional string trans_time       =   7  ;
+	optional string to_ho_code1      =    8 ;
+	optional string to_ho_dong1     =     9;
+	optional string to_ho_grade1     =    10 ;
+	optional string to_ho_code2    =   11  ;
+	optional string to_ho_dong2    =   12  ;
+	optional string to_ho_grade2 = 13;
+	optional string to_bed_no = 14;
+}
+
+message NUR2004U00prUpdateJengwaResponse { 
+	optional string err =1;
+}
+
+message NUR2004U00prNurChangeRequest { 
+	optional string fkinp1001          =  1   ;
+	optional string bunho          =   2  ;
+	optional string order_date       =   3  ;
+	optional string user_id     =  4   ;
+}
+
+message NUR2004U00prNurChangeResponse { 
+	optional string err =1;
+}
+
+message NUR2004U00CheckPreInsert1Request { 
+   optional string fkinp1001 =1;
+}
+
+message NUR2004U00CheckPreInsert2Request { 
+   optional string to_gwa =1;
+   optional string order_date = 2;
+}
+
+message NUR2004U00CheckPreInsert3Request { 
+	optional string to_ho_code1 =1;
+	optional string to_ho_dong1 = 2;
+	optional string order_date = 3;
+}
+
+message NUR2004U00CheckPreInsert4Request { 
+	optional string to_bed_no =1;           
+	optional string bunho=2;
+	optional string to_ho_code1 =3;
+	optional string to_ho_dong1 = 4;
+}
+
+message NUR2004U00CheckPreInsert5Request { 
+	optional string to_doctor =1;
+	optional string to_gwa =2;
+	optional string order_date=3;
+}
+
+message NUR2004U00GetConfirmDataSelectRequest { 
+	optional string fkinp1001 =1;
+	optional string trans_cnt =2;
+}
+
+message NUR2004U00GetConfirmDataSelectResponse { 
+   repeated NUR2004U00GetConfirmDataSelectInfo list_dtconfirm =1;
+}
+
+message NUR2004U00GetConfirmDataCheck1Request { 
+   optional string fkinp1001 =1;
+}
+
+message NUR2004U00GetConfirmDataLoadSimsaYnRequest { 
+   optional string fkinp1001 =1;
+}
+
+message NUR2004U00GetConfirmDataCheck2Request { 
+	optional string to_ho_dong=1;
+	optional string to_ho_code1=2;
+	optional string to_bed_no=3;
+}
+
+message NUR2004U00layCommonRequest { 
+   optional string fkinp1001=1;
+}
+
+message NUR0110U00GrdNUR0110Request { 
+	optional string page_number = 1;
+	optional string offset = 2;
+}
+
+message NUR0110U00GrdNUR0110Response{
+	repeated NUR0110U00GrdNUR0110Info grd_lst = 1;
+}
+
+message NUR0110U00GrdNUR0111Request { 
+	optional string nur_gr_code = 1;
+	optional string page_number = 2;
+	optional string offset = 3;
+}
+
+message NUR0110U00GrdNUR0111Response{
+	repeated NUR0110U00GrdNUR0111Info grd_list = 1;
+}
+
+message NUR0110U00GrdNUR0112Request { 
+	optional string nur_gr_code = 1;
+	optional string nur_md_code = 2;
+	optional string page_number = 3;
+	optional string offset = 4;
+}
+
+message NUR0110U00GrdNUR0112Response{
+	repeated NUR0110U00GrdNUR0112Info grd_list = 1;
+}
+
+message NUR0110U00GrdNUR0113Request { 
+	optional string nur_gr_code = 1;
+	optional string nur_md_code = 2;
+	optional string page_number = 3;
+	optional string offset = 4;
+}
+
+message NUR0110U00GrdNUR0113Response{
+	repeated NUR0110U00GrdNUR0113Info grd_list = 1;
+}
+
+message NUR0110U00GrdNUR0114Request { 
+	optional string nur_gr_code = 1;
+	optional string nur_md_code = 2;
+	optional string page_number = 3;
+	optional string offset = 4;
+}
+
+message NUR0110U00GrdNUR0114Response{
+	repeated NUR0110U00GrdNUR0114Info grd_list = 1;
+}
+
+message NUR0110U00GrdNUR0115Request { 
+	optional string nur_gr_code = 1;
+	optional string nur_md_code = 2;
+	optional string nur_so_code = 3;
+	optional string page_number = 4;
+	optional string offset = 5;
+}
+
+message NUR0110U00GrdNUR0115Response{
+	repeated NUR0110U00GrdNUR0115Info grd_list = 1;
+}
+
+message NUR0110U00GrdNUR01152Request { 
+	optional string nur_gr_code = 1;
+	optional string nur_md_code = 2;
+	optional string nur_so_code = 3;
+	optional string page_number = 4;
+	optional string offset = 5;
+}
+
+message NUR0110U00GrdNUR01152Response{
+	repeated NUR0110U00GrdNUR01152Info grd_list = 1;
+}
+
+message NUR0110U00GetJisiOrderGubunRequest { 
+	optional string nur_md_code = 1;
+}
+
+message NUR0110U00GrdNur0110ColChangedRequest { 
+	optional string nur_gr_code = 1;
+}
+
+message NUR0110U00GrdNur0111ColChangedRequest { 
+	optional string nur_gr_code = 1;
+	optional string nur_md_code = 2;
+}
+
+message NUR0110U00GrdNur0112ColChangedRequest { 
+	optional string nur_gr_code = 1;
+	optional string nur_md_code = 2;
+	optional string nur_so_code = 3;
+}
+
+message NUR0110U00GrdNur0113ColChangedRequest { 
+	optional string nur_gr_code = 1;
+	optional string nur_md_code = 2;
+	optional string nur_act_code = 3;
+}
+
+message NUR0110U00GrdNur0114ColChangedRequest { 
+	optional string nur_gr_code = 1;
+	optional string nur_md_code = 2;
+	optional string nur_so_code = 3;
+}
+
+message NUR0110U00GetJaeryoYNRequest { 
+	optional string hangmog_code = 1;
+}
+
+message NUR0110U00GetOrdDanuiRequest { 
+	optional string hangmog_code = 1;
+	optional string order_date = 2;
+}
+
+message NUR0110U00GetOrdDanuiNameRequest { 
+	optional string ord_danui = 1;
+}
+
+message NUR0110U00GetInsertOrderGubunRequest { 
+	optional string code = 1;
+}
+
+message NUR0110U00GetCanInsertSlipCodeRequest { 
+	optional string code = 1;
+}
+
+message NUR0110U00CommandRequest { 
+	optional string buwi_code = 1;
+}
+
+message NUR0110U00CreateComboRequest { 
+	
+}
+
+message NUR0110U00CreateComboResponse { 
+	repeated ComboListItemInfo jisi_order_gubun = 1;
+	repeated ComboListItemInfo ord_danui = 2;
+	repeated ComboListItemInfo dv_time = 3;
+	repeated ComboListItemInfo jusa_spd_gubun = 4;
+}
+
+message NUR0110U00SetInputControlRequest { 
+	optional string input_control = 1;
+}
+
+message NUR0110U00SetInputControlResponse{
+	repeated NUR0110U00SetInputControlInfo res_lst = 1;
+}
+
+message NUR0110U00SetFindWorkerRequest { 
+	optional string case_val = 1;
+	optional string find1 = 2;
+	optional string hangmog_code = 3;
+}
+
+message NUR0110U00GrdNUR0115FindClickRequest { 
+	optional string hangmog_code = 1;
+}
+
+message NUR0110U00GrdNUR0115Case1Request { 
+	optional string hangmog_code = 1;
+}
+
+message NUR0110U00GrdNUR0115Case1Response { 
+	repeated NUR0110U00GrdNUR0115Case1Info info_lst = 1;
+}
+
+message NUR0110U00GrdNUR0115ColChangeRequest { 
+	optional string case_val = 1;
+	optional string param1 = 2;
+	optional string param2 = 3;
+}
+
+message NUR0110U00SaveLayoutRequest { 
+	optional string user_id = 1;
+	repeated NUR0110U00GrdNUR0110Info grd0110 = 2;
+	repeated NUR0110U00GrdNUR0111Info grd0111 = 3;
+	repeated NUR0110U00GrdNUR0112Info grd0112 = 4;
+	repeated NUR0110U00GrdNUR0113Info grd0113 = 5;
+	repeated NUR0110U00GrdNUR0114Info grd0114 = 6;
+	repeated NUR0110U00GrdNUR0115Info grd0115 = 7;
+	repeated NUR0110U00GrdNUR01152Info grd01152 = 8;
+}
+
+message NUR1010Q00layHosilListRequest { 
+   	optional string ho_dong 					= 1;
+}
+
+message NUR1010Q00layHosilListResponse { 
+   	repeated NUR1010Q00layHosilListInfo lay_hosillist =	1;
+}
+
+message NUR1010Q00layPatientRequest { 
+   	optional string ho_dong						= 1;
+   	optional string gwa 						= 2;
+}
+
+message NUR1010Q00layPatientResponse { 
+   	repeated NUR1010Q00layPatientInfo lay_patient = 1;
+}
+
+message NUR1010Q00layBedListRequest { 
+   	optional string ho_dong 		= 1;
+}
+
+message NUR1010Q00layBedListResponse { 
+   	repeated NUR1010Q00layBedListInfo lay_bedlist = 1;
+} 
+
+message NUR1010Q00layConfirmDataRequest { 
+    optional string fkinp1001 			= 1;
+    optional string trans_cnt 			= 2;
+}
+
+message NUR1010Q00layConfirmDataResponse { 
+   	repeated NUR1010Q00layConfirmDataInfo lay_confirmdata = 1;
+}
+
+message NUR1010Q00layTimeRequest { 
+}
+
+message NUR1010Q00layTimeResponse { 
+   	repeated NUR1010Q00layTimeInfo lay_time = 1;
+}
+
+message NUR1010Q00grdGwaCountRequest { 
+	optional string ho_dong				= 1;
+}
+
+message NUR1010Q00grdGwaCountResponse { 
+   	repeated NUR1010Q00grdGwaCountInfo grd_gwacount = 1;
+}
+
+message NUR1010Q00AdmMsgRequest { 
+	optional string code				= 1;
+}
+
+message NUR1010Q00SelectDokboRequest { 
+	optional string ho_dong				= 1;
+}
+
+message NUR1010Q00SelectDokboResponse { 
+   repeated NUR1010Q00SelectDokboInfo list_dokbo = 1;
+}
+
+message NUR1010Q00SelectMancntRequest { 
+	optional string ho_dong				= 1;
+}
+
+message NUR1010Q00SelectMancntResponse { 
+   	repeated NUR1010Q00SelectMancntInfo list_mancnt = 1;
+}
+
+message NUR1010Q00SelectHosexRequest { 
+	optional string ho_dong				= 1;
+}
+
+message NUR1010Q00SelectHosexResponse { 
+   	repeated NUR1010Q00SelectHosexInfo list_hosex = 1;
+}
+
+message NUR1010Q00fnLoadIlsuRequest { 
+   	optional string ho_dong 			= 1;
+}
+
+message NUR1010Q00fnLoadIlsuResponse { 
+   	repeated NUR1010Q00fnLoadIlsuInfo list_loadilsu = 1;
+}
+
+message NUR1010Q00SelectCountRequest { 
+   	optional string ho_dong 			= 1;
+   	optional string order_date			= 2;
+}
+
+message NUR1010Q00UpdateSetBedStatusRequest { 
+   	optional string ho_dong 			= 1;
+   	optional string ho_code				= 2;
+   	optional string bed_no				= 3;
+   	optional string bed_status			= 4;
+   	optional string bed_lock_text		= 5;
+}
+
+message NUR1010Q00CheckNurseIDRequest { 
+   	optional string used_id 			= 1;
+}
+
+message NUR1010Q00MoveHosilCheck1Request { 
+   	optional string bunho 				= 1;
+   	optional string fkinp1001			= 2;
+}
+
+message NUR1010Q00ChangeMoveHosilCheck2Request { 
+   	optional string from_bed_no 		= 1;
+   	optional string fkinp1001			= 2;
+   	optional string from_ho_code		= 3;
+   	optional string from_ho_dong		= 4;
+}
+
+message NUR1010Q00MoveHosilCheck3Request { 
+   	optional string to_bed_no           = 1;
+   	optional string to_ho_code          = 2;
+   	optional string to_ho_dong          = 3;
+}
+
+message NUR1010Q00MoveHosilCheck4Request { 
+   	optional string bunho 				= 1;
+   	optional string fkinp1001			= 2;
+}
+
+message NUR1010Q00MoveHosilSelect1Request { 
+   	optional string fkinp1001 			= 1;
+}
+
+message NUR1010Q00MoveHosilSelect1Response { 
+   	repeated NUR1010Q00MoveHosilSelect1Info list_movehosil1 = 1;
+}
+
+message NUR1010Q00ChangeMoveHosilSelect2Request { 
+   	optional string to_ho_code 			= 1;
+   	optional string to_ho_dong			= 2;
+   	optional string junpyo_date			= 3;
+}
+
+message NUR1010Q00ChangeMoveHosilSelect2Response { 
+   	repeated DataStringListItemInfo list_movehosil2 = 1;
+}
+
+message NUR1010Q00MoveHosilInsert1Request { 
+ 	optional string to_ho_code 			= 1;
+   	optional string to_ho_dong			= 2;
+   	optional string fkinp1001			= 3;
+   	optional string user_id				= 4;
+   	optional string bunho				= 5;
+   	optional string trans_cnt			= 6;
+   	optional string to_gwa				= 7;
+   	optional string to_doctor			= 8;
+   	optional string to_resident			= 9;
+   	optional string from_ho_code		= 10;
+   	optional string from_ho_dong		= 11;
+   	optional string from_bed_no			= 12;
+   	optional string to_bed_no			= 13;
+   	optional string to_ho_grade1		= 14;
+   	optional string to_ho_grade2		= 15;
+   	optional string from_kaikei_hocode	= 16;
+   	optional string from_kaikei_hodong	= 17;
+   	optional string to_kaikei_hocode	= 18;
+   	optional string to_kaikei_hodong	= 19;
+}
+
+message NUR1010Q00ChangeHosilCheck3Request { 
+    optional string from_ho_code 		= 1;
+   	optional string from_ho_dong		= 2;
+}
+
+message NUR1010Q00ChangeHosilCheck4Request { 
+    optional string from_fkinp1001 		= 1;
+}
+
+
+message NUR1010Q00ChangeHosilSelect1Request { 
+    optional string from_fkinp1001 		= 1;
+}
+
+message NUR1010Q00ChangeHosilSelect1Response { 
+    repeated NUR1010Q00ChangeHosilSelect1Info list_changehosilselect1 = 1;
+}
+
+message NUR1010Q00ChangeHosilInsertRequest { 
+    optional string user_id 			= 1;
+   	optional string from_fkinp1001		= 2;
+   	optional string from_bunho			= 3;
+   	optional string trans_cnt			= 4;
+   	optional string junpyo_date			= 5;
+   	optional string to_gwa				= 6;
+   	optional string to_doctor			= 7;
+   	optional string to_resident			= 8;
+   	optional string to_ho_code1			= 9;
+   	optional string to_ho_code2			= 10;
+   	optional string to_ho_dong1			= 11;
+   	optional string to_ho_dong2			= 12;
+   	optional string to_bed_no			= 13;
+   	optional string to_bed_no2			= 14;
+}
+
+message NUR1010Q00layCommonRequest { 
+ 	optional string fkinp1001		 	= 1;
+}
+
+message NUR1010Q00GetConfirmDataUpdateRequest {          
+	optional string user_id             = 1;
+	optional string to_gwa              = 2;
+	optional string to_doctor           = 3;
+	optional string to_resident         = 4;
+	optional string to_ho_code1         = 5;
+	optional string to_ho_dong1         = 6;
+	optional string to_bed_no           = 7;
+	optional string to_bed_no2          = 8;
+	optional string to_ho_code2         = 9;
+	optional string to_ho_dong2         = 10;
+	optional string to_ho_grade1        = 11;
+	optional string to_ho_grade2        = 12;
+	optional string to_kaikei_hodong    = 13;
+	optional string to_kaikei_hocode    = 14;
+	optional string fkinp1001           = 15;
+}
+
+message NUR1010Q00ConfirmTransRequest {          
+	optional string user_id             =1;
+	optional string trans_cnt           =2;
+	optional string bed_no              =3;
+	optional string fkinp1001           =4;
+	optional string i_trans_cnt         =5;
+}
+
+message NUR1010Q00ConfirmTransCancelRequest {          
+	optional string user_id             =1;
+	optional string fkinp1001           =2;
+}
+
+message NUR1010Q00prNurChangeRequest {          
+	optional string from_fkinp1001      = 1;
+	optional string to_fkinp1001        = 2;
+	optional string from_bunho          = 3;
+	optional string to_bunho            = 4;
+	optional string from_kaikei_change  = 5;
+	optional string to_kaikei_change    = 6;
+	optional string from_trans_cnt      = 7;
+	optional string to_trans_cnt        = 8;
+	optional string user_id             = 9;
+}
+
+message NUR1010Q00prNurChangeResponse { 
+   	optional string error 				= 1;
+}
+
+message NUR2017U01grdNUR2017Request{
+    optional string bunho = 1;
+    optional string order_gubun = 2;
+    optional string act_res_date = 3;
+    optional string bannab_del = 4;        
+    optional string page_number = 5;
+    optional string offset = 6;
+}
+
+message NUR2017U01grdNUR2017Response{
+	repeated NUR2017U01grdNUR2017Info items = 1;
+}
+
+message NUR2017U01grdPalistRequest{
+	optional string ho_dong = 1;
+	optional string order_gubun = 2;
+	optional string act_res_date = 3;
+	optional string a = 4;
+	optional string b = 5;
+	optional string c = 6;
+	optional string d = 7;
+	optional string page_number = 8;
+	optional string offset = 9;
+}
+
+message NUR2017U01grdPalistResponse{
+	repeated NUR2017U01grdPalistInfo items = 1;
+}
+
+message NUR2017U01OCS0132CodeNameRequest{
+}
+
+message NUR2017U01layCommonRequest{
+	optional string user_id = 1;
+}
+
+message NUR2017U01SaveLayoutRequest{
+	repeated NUR2017U01grdNUR2017Info grdNUR2017Info = 1;
+    optional string caller_id = 2;
+}
+
+message NUR0801U00GrdMasterRequest { 
+	optional string need_type = 1;
+	optional string page_number = 2;
+	optional string offset = 3;
+}
+
+message NUR0801U00GrdMasterResponse{
+	repeated NUR0801U00GrdMasterInfo grd_list = 1;
+}
+
+message NUR0801U00GrdMasterColChangeRequest { 
+	optional string ho_dong = 1;
+}
+
+message NUR0801U00SaveLayoutRequest { 
+    optional string user_id = 1;
+    repeated NUR0801U00GrdMasterInfo save_lst = 2;
+}
+
+message NUR0801U00XEditGridRequest { 
+}
+
+message NUR0801U00XEditGridResponse { 
+	repeated ComboListItemInfo cell12 = 1;
+	repeated ComboListItemInfo cell14 = 2;
+}
+
+message NUR1001R09layHodongPrintRequest { 
+   	optional string ho_dong 		= 1;
+}
+
+message NUR1001R09layHodongPrintResponse { 
+   	repeated DataStringListItemInfo lay_hodong = 1;
+}
+
+message NUR1001R09cboWingGubunRequest { 
+}
+
+message NUR1001R09grdINP1001Request { 
+   	optional string ho_dong 		= 1;
+   	optional string gwa 			= 2;
+   	optional string page_number 	= 3;
+   	optional string offset 			= 4;
+}
+
+message NUR1001R09grdINP1001Response { 
+   	repeated NUR1001R09grdINP1001Info grd_inp1001 = 1;
+}
+
+message NUR8003Q00grdWritedRequest { 
+   	optional string date 			= 1;
+   	optional string ho_dong 		= 2;
+    optional string name_control	= 3;
+}
+
+message NUR8003Q00grdWritedResponse { 
+   	repeated NUR8003Q00grdWritedInfo grd_write = 1;
+}
+
+message NUR8003Q00grdNur8003Request { 
+   	optional string ho_dong 		= 1;
+   	optional string query_date 		= 2;
+}
+
+message NUR8003Q00grdNur8003Response { 
+   	repeated NUR8003Q00grdNur8003Info grd_nur8003 = 1;
+}
+
+message NUR8003Q00cboBuseoRequest { 
+}
+
+message NUR1010U00grdNur1010Request { 
+   	optional string fkinp1001 		= 1;
+   	optional string page_number 	= 2;
+   	optional string offset 			= 3;
+}
+
+message NUR1010U00grdNur1010Response { 
+    repeated NUR1010U00grdNur1010Info grd_nur1010 = 1;
+}
+
+message NUR1010U00fwkNurseRequest { 
+	optional string buseo_code		= 1;
+	optional string sabun			= 2;
+}
+
+message NUR1010U00grdNurCheckRequest { 
+	optional string bunho			= 1;
+	optional string fkinp1001		= 2;
+	optional string jukyong_date	= 3;
+}
+
+message NUR1010U00LoadUserNameRequest { 
+	optional string user_id			= 1;
+}
+
+message NUR1010U00DamdangNurseRequest { 
+	optional string code			= 1;
+}
+
+message NUR1010U00SaveLayoutRequest { 
+	optional string user_id			= 1;
+	repeated NUR1010U00grdNur1010Info grd_nur1010 = 2;
+}
+
+message NUR0401U01GrdNur0102Request { 
+	optional string page_number = 1;
+	optional string offset = 2;
+}
+
+message NUR0401U01GrdNur0102Response{
+	repeated NUR0401U01GrdNur0102Info grd_list = 1;
+}
+
+message NUR0401U01GrdNur0401Request { 
+	optional string nur_plan_bunryu = 1;
+	optional string page_number = 2;
+	optional string offset = 3;
+}
+
+message NUR0401U01GrdNur0401Response{
+	repeated NUR0401U01GrdNur0401Info grd_list = 1;
+}
+
+message NUR0401U01GrdNur0403Request { 
+	optional string nur_plan_jin = 1;
+	optional string nur_plan_ote = 2;
+	optional string page_number = 3;
+	optional string offset = 4;
+}
+
+message NUR0401U01GrdNur0403Response{
+	repeated NUR0401U01GrdNur0403Info grd_list = 1;
+}
+
+message NUR0401U01GrdNur0404Request { 
+	optional string nur_plan_jin = 1;
+	optional string nur_plan = 2;
+	optional string page_number = 3;
+	optional string offset = 4;
+}
+
+message NUR0401U01GrdNur0404Response{
+	repeated NUR0401U01GrdNur0404Info grd_list = 1;
+}
+
+message NUR0401U01LayNurPlanBunryuRequest { 
+}
+
+message NUR0401U01LayTabColorRequest { 
+	optional string nur_plan_jin = 1;
+	optional string nur_plan_pro = 2;
+}
+
+message NUR0401U01LayTabColorResponse { 
+	repeated DataStringListItemInfo lay_list = 1;
+}
+
+message NUR0401U01GetCodeNameRequest { 
+	optional string code = 1;
+}
+
+message NUR0401U01IsExistDetailRequest { 
+	optional string case_value = 1;
+	optional string param1 = 2;
+	optional string param2 = 3;
+}
+
+message NUR0401U01IsUsedRequest { 
+	optional string case_value = 1;
+	optional string param1 = 2;
+	optional string param2 = 3;
+}
+
+message NUR0401U01SelectNewCode0401Request { 
+	optional string nur_plan_bunryu = 1;
+	optional string max_val = 2;
+}
+
+message NUR0401U01SelectSeq0403Request { 
+}
+
+message NUR0401U01SelectNewCode0404Request { 
+	optional string nur_plan_jin = 1;
+	optional string nur_plan = 2;
+	optional string max_val = 3;
+}
+
+message NUR0401U01BtnListDeleteRequest { 
+	optional string upd_id = 1;
+	optional string nur_plan_bunryu = 2;
+}
+
+message NUR0401U01SaveLayoutRequest { 
+	optional string user_id = 1;
+	repeated NUR0401U01GrdNur0102Info grd_nur_0102 = 2; //caller id = 1
+	repeated NUR0401U01GrdNur0401Info grd_nur_0401 = 3; //caller id = 2
+	repeated NUR0401U01GrdNur0403Info grd_nur_0403 = 4; //caller id = 4
+	repeated NUR0401U01GrdNur0404Info grd_nur_0404 = 5; //caller id = 5
+}
+
+message NUR1001R07grdInp1001Request{
+    optional string bunho 				= 1;
+    optional string page_number 		= 2;
+    optional string offset 				= 3;
+}
+
+message NUR1001R07grdInp1001Response{
+    repeated NUR1001R07grdInp1001Info items = 1;
+}
+
+message NUR1001R07grdInp2004Request{
+    optional string bunho 				= 1;
+    optional string fkinp1001 			= 2;        
+    optional string page_number 		= 3;
+    optional string offset 				= 4;
+}
+
+message NUR1001R07grdInp2004Response{
+    repeated NUR1001R07grdInp2004Info items = 1;
+}
+
+message NUR1035U00grdNUR1035Request { 
+   optional string date 				= 1;
+   optional string fkinp1001 			= 2;
+   optional string offset 				= 3;
+   optional string page_number 			= 4;
+}
+
+message NUR1035U00grdNUR1035Response { 
+   repeated NUR1035U00grdNUR1035Info grd_master_item = 1;
+}
+
+message NUR1035U00grdNUR1036Request { 
+   optional string fknur1035 			= 1;
+   optional string offset 				= 2;
+   optional string page_number 			= 3;
+}
+
+message NUR1035U00grdNUR1036Response { 
+   repeated NUR1035U00grdNUR1036Info grd_master_item = 1;
+}
+
+message NUR1035U00grdPalistRequest { 
+   optional string date 				= 1;
+   optional string ho_dong 				= 2;
+   optional string a 					= 3;
+   optional string b 					= 4;
+   optional string c 					= 5;
+   optional string d 					= 6;
+   optional string offset 				= 7;
+   optional string page_number 			= 8;
+}
+
+message NUR1035U00grdPalistResponse { 
+   repeated NUR1035U00grdPalistInfo grd_master_item = 1;
+}
+
+message NUR1035U00xEditGridCellLayoutRequest { 
+}
+
+message NUR1035U00xEditGridCellLayoutResponse { 
+   repeated ComboListItemInfo xeditgridcell1 	= 1;
+   repeated ComboListItemInfo laystate 			= 2;
+   repeated ComboListItemInfo laymodifylimit 	= 3;
+   repeated ComboListItemInfo laytime 			= 4;
+}
+
+message NUR1035U00pknur1035Request { 
+}
+
+message NUR1035U00pknur1035Response { 
+   optional DataStringListItemInfo pkitem = 1;
+}
+
+message NUR1035U00cmdTextRequest { 
+   optional string pknur1035 		= 1;
+}
+
+message NUR1035U00cmdTextResponse { 
+   optional DataStringListItemInfo cmditem = 1;
+}
+
+message NUR1035U00SaveLayoutRequest { 
+   repeated NUR1035U00grdNUR1035Info grdnur1035info = 1;
+   repeated NUR1035U00grdNUR1036Info grdnur1036info = 2;
+   optional string bunho 							= 3;
+}
+
+message NUR0802U00fwkGubunRequest { 
+   optional string need_gubun =1;
+}
+
+
+message NUR0802U00grdDetailRequest { 
+   optional string need_type =1;
+   optional string code_type =2;
+   optional string offset =3;
+   optional string page_number =4;
+}
+
+message NUR0802U00grdDetailResponse { 
+   repeated NUR0802U00grdDetailInfo grd_master_item =1;
+}
+
+message NUR0802U00grdMasterRequest { 
+}
+
+message NUR0802U00xEditGridCelRequest { 
+}
+
+message NUR0802U00xEditGridCelResponse { 
+   repeated ComboListItemInfo laycomboitems =1;
+   repeated ComboListItemInfo xeditgridcell1 =2;
+   repeated ComboListItemInfo xeditgridcell3 =3;
+}
+
+message NUR0802U00cmdTextRequest { 
+   optional string need_type =1;
+   optional string need_gubun =2;
+   optional string need_asmt_code =3;
+}
+
+message NUR0802U00cmdTextResponse { 
+   optional DataStringListItemInfo cmditem =1;
+}
+
+message NUR0802U00SaveLayoutRequest { 
+   repeated NUR0802U00grdDetailInfo grddetailinfo =1;
+}
+
+message NUR1014U00grdNur1014Request{
+    optional string bunho 			= 1;
+    optional string page_number 	= 2;
+    optional string offset 			= 3;
+}
+
+message NUR1014U00grdNur1014Response{
+    repeated NUR1014U00grdNur1014Info items = 1;
+}
+
+message NUR1014U00CheckOrderRequest{
+    optional string bunho 		= 1;
+    optional string fkinp1001 	= 2;
+    optional string out_date 	= 3;
+    optional string in_date 	= 4;
+}
+
+message NUR1014U00ValidationCheckRequest{
+    optional string bunho 		= 1;
+    optional string fkinp1001 	= 2;
+    optional string out_date 	= 3;
+    optional string out_time 	= 4;
+}
+
+message NUR1014U00xEditGridCell14Request{
+}
+
+message NUR1014U00SaveLayoutRequest{
+	repeated NUR1014U00grdNur1014Info items = 1;
+	optional string nut_end_yn = 2;
+}
+
+message NUR1014U00SaveLayoutResponse{
+    optional string result 		= 1;
+    optional string message 	= 2;
+    optional string print_flag 	= 3;
+}
+
+message NUR4001U00FwkJinRequest { 
+    optional string nur_plan_bunryu = 1;
+}
+
+message NUR4001U00FwkJinResponse{
+    repeated NUR4001U00FwkJinInfo fwk_list = 1;
+}
+
+message NUR4001U00GrdNUR4001Request { 
+    optional string fkinp1001 	= 1;
+    optional string page_number = 2;
+    optional string offset 		= 3;
+}
+
+message NUR4001U00GrdNUR4001Response{
+    repeated NUR4001U00GrdNUR4001Info grd_list = 1;
+}
+
+message NUR4001U00LayNewNUR4001Request { 
+    optional string nur_plan_bunryu = 1;
+    optional string nur_plan_jin 	= 2;
+}
+
+message NUR4001U00LayNewNUR4001Response{
+    repeated NUR4001U00LayNewNUR4001Info lay_list = 1;
+}
+
+message NUR4001U00LayComboRequest { 
+}
+
+message NUR4001U00IsExistNUR4005Request {
+    optional string fknur4001 = 1;
+}
+
+message NUR4001U00SelectPatientRequest {
+    optional string bunho = 1;
+}
+
+message NUR4001U00LayPlanQueryStartRequest {
+    optional string case_val 		= 1;
+    optional string nur_plan_jin 	= 2;
+    optional string fknur4001 		= 3;
+}
+
+message NUR4001U00LayPlanQueryStartResponse{
+    repeated NUR4001U00LayPlanQueryStartInfo lay_list = 1;
+}
+
+message NUR4001U00SaveLayoutRequest {
+    repeated NUR4001U00GrdNUR4001Info grd_save = 1;
+    repeated NUR4001U00LayPlanQueryStartInfo lay_save = 2;
+}
+
+message NUR4001U00SaveLayoutResponse {
+    optional string mpknur4003 	= 1;
+    optional bool save_result 	= 2;
+    optional string save_msg 	= 3;
+}
+
+message NUR1001U00FwkFindRequest { 
+    optional string buseo_name = 1;
+}
+
+message NUR1001U00GrdINP1001Request { 
+    optional string bunho 		= 1;
+    optional string page_number = 2;
+    optional string offset 		= 3;
+}
+
+message NUR1001U00GrdINP1001Response{
+    repeated NUR1001U00GrdINP1001Info grd_list = 1;
+}
+
+message NUR1001U00GrdINP1004Request { 
+    optional string bunho 		= 1;
+    optional string page_number = 2;
+    optional string offset 		= 3;
+}
+
+message NUR1001U00GrdINP1004Response{
+    repeated NUR1001U00GrdINP1004Info grd_list = 1;
+}
+
+message NUR1001U00GrdNUR1002Request { 
+    optional string bunho 		= 1;
+    optional string fkinp1001 	= 2;
+    optional string page_number = 3;
+    optional string offset 		= 4;
+}
+
+message NUR1001U00GrdNUR1002Response{
+    repeated NUR1001U00GrdNUR1002Info grd_list = 1;
+}
+
+message NUR1001U00GrdNUR1016Request { 
+    optional string bunho 		= 1;
+    optional string sys_date 	= 2;
+    optional string page_number = 3;
+    optional string offset 		= 4;
+}
+
+message NUR1001U00GrdNUR1016Response{
+    repeated NUR1001U00GrdNUR1016Info grd_list = 1;
+}
+
+message NUR1001U00GrdNUR1017Request { 
+    optional string bunho 		= 1;
+    optional string page_number = 2;
+    optional string offset 		= 3;
+}
+
+message NUR1001U00GrdNUR1017Response{
+    repeated NUR1001U00GrdNUR1017Info grd_list = 1;
+}
+
+message NUR1001U00GrdOUT0106Request { 
+    optional string bunho 		= 1;
+    optional string page_number = 2;
+    optional string offset 		= 3;
+}
+
+message NUR1001U00GrdOUT0106Response{
+    repeated NUR1001U00GrdOUT0106Info grd_list = 1;
+}
+
+message NUR1001U00LayFkinp1001Request { 
+    optional string bunho 		= 1;
+}
+
+message NUR1001U00LayFkinp1001Response{
+    repeated NUR1001U00LayFkinp1001Info lay_list = 1;
+}
+
+message NUR1001U00LayINP1001Request { 
+    optional string bunho 		= 1;
+    optional string fkinp1001 	= 2;
+}
+message NUR1001U00LayINP1001Response{
+    repeated NUR1001U00LayINP1001Info lay_list = 1;
+}
+
+message NUR1001U00LayNUR1001Request { 
+    optional string bunho		= 1;
+    optional string fkinp1001 	= 2;
+    optional string ipwon_date 	= 3;
+}
+
+message NUR1001U00LayNUR1001Response{
+    repeated NUR1001U00LayNUR1001Info lay_list = 1;
+}
+
+message NUR1001U00GrdNUR1029Request { 
+    optional string bunho 		= 1;
+    optional string page_number = 2;
+    optional string offset 		= 3;
+}
+
+message NUR1001U00GrdNUR1029Response{
+    repeated NUR1001U00GrdNUR1029Info grd_list = 1;
+}
+
+message NUR1001U00LayComboSetRequest { 
+        
+}
+
+message NUR1001U00LayComboSetResponse{
+    repeated NUR1001U00LayComboSetInfo cbo_list = 1;
+}
+
+message NUR1001U00LayReserInfoRequest { 
+    optional string bunho = 1;
+}
+
+message NUR1001U00LayReserInfoResponse{
+    repeated NUR1001U00LayReserInfoInfo lay_list = 1;
+}
+
+message NUR1001U00BasicQuery1Request { 
+    optional string fkinp1001 		= 1;
+    optional string jukyong_date 	= 2;
+}
+
+message NUR1001U00BasicQuery2Request { 
+    optional string fkinp1001 = 1;
+}
+
+message NUR1001U00CboScreenOpenRequest { 
+}
+
+message NUR1001U00FindBoxClickRequest { 
+    optional string case_val 	= 1;
+	optional string code_type 	= 2;
+	optional string find1 		= 3;
+	optional string buseo_name 	= 4;
+}
+
+message NUR1001U00DtpBirthValidateRequest { 
+    optional string birth = 1;
+}
+
+message NUR1001U00GrdNUR1029FindClickRequest { 
+    optional string code_type = 1;
+}
+
+message NUR1001U00GrdNUR1029FindClickResponse { 
+    repeated DataStringListItemInfo code_name = 1;
+}
+
+message NUR1001U00SaveLayoutRequest { 
+    optional string bunho = 1;
+    optional string upd_gubun = 2;
+    repeated NUR1001U00LayNUR1001Info layNUR1001 = 3;
+    repeated NUR1001U00GrdOUT0106Info grdOUT0106 = 4;
+    repeated NUR1001U00GrdINP1004Info grdINP1004 = 5;
+    repeated NUR1001U00GrdNUR1029Info grdNUR1029 = 6;
+}
+
+message NUR9001U00fwkFindRequest { 
+   	optional string f_sabun 	= 1;
+    optional string f_find1		= 2;
+}
+
+message NUR9001U00layComboSetRequest { 
+}
+
+message NUR9001U00layBojoListRequest { 
+   	optional string soap_gubun 		= 1;
+   	optional string ho_dong 		= 2;
+}
+
+message NUR9001U00layBojoListResponse { 
+   	repeated NUR9001U00layBojoListInfo lay_bojo = 1;
+}
+
+message NUR9001U00layWorkTimeRequest { 
+}
+
+message NUR9001U00layNur4001Request { 
+   	optional string fkinp1001 		= 1;
+   	optional string bunho 			= 2;
+   	optional string date 			= 3;
+}
+
+message NUR9001U00layNur4001Response { 
+   	repeated NUR9001U00layNur4001Info lay_nur4001 = 1;
+}
+
+message NUR9001U00layComboNur4001Request { 
+   	optional string fkinp1001 = 1;
+}
+
+message NUR9001U00layComboNur4001Response { 
+   	repeated NUR9001U00layComboNur4001Info lay_combonur4001 = 1;
+}
+
+message NUR9001U00fwkNurseRequest { 
+    optional string buseo_code	= 1;
+    optional string sabun		= 2;
+}
+
+message NUR9001U00grdPalistRequest { 
+   	optional string date 		= 1;
+   	optional string ho_dong 	= 2;
+   	optional string a 			= 3;
+   	optional string b 			= 4;
+   	optional string c 			= 5;
+   	optional string d 			= 6;
+   	optional string page_number = 7;
+   	optional string offset 		= 8;
+}
+
+message NUR9001U00grdPalistResponse { 
+   	repeated NUR9001U00grdPalistInfo list_palist = 1;
+}
+
+message NUR9001U00grdNur9001Request { 
+   	optional string bunho 		= 1;
+   	optional string fkinp1001 	= 2;
+   	optional string from_date 	= 3;
+   	optional string to_date 	= 4;
+   	optional string page_number = 5;
+   	optional string offset 		= 6;
+}
+
+message NUR9001U00grdNur9001Response { 
+   	repeated NUR9001U00grdNur9001Info grd_nur9001 = 1;
+}
+
+message NUR9001U00fkInp1001Request { 
+	optional string bunho		= 1;
+	optional string to_date		= 2;
+}
+
+message NUR9001U00Nur9001dataCheckRequest { 
+    optional string pknur9001	= 1;
+}
+
+message NUR9001U00lblBojoRequest {
+	optional string code 		= 1; 
+}
+
+message NUR9001U00fnPlanEndRequest { 
+    optional string fknur4001	= 1;
+    optional string date		= 2;
+}
+
+message NUR9001U00SaveLayoutRequest { 
+    optional string user_id		= 1;
+    repeated NUR9001U00grdNur9001Info grd_nur9001 = 2;
+}
+
+message NUR9001U00fnLoadUserRequest { 
+	optional string record_user	= 1;
+	optional string date		= 2;
+}
+
+message NUR9001U00getAdminUserRequest { 
+    optional string user_id		= 1;
+}
+
+message NUR1091U00grdDetailRequest { 
+   optional string code_type =1;
+   optional string offset =2;
+   optional string page_number =3;
+}
+
+message NUR1091U00grdDetailResponse { 
+   repeated NUR1091U00grdDetailInfo grd_master_item =1;
+}
+
+message NUR1091U00grdMasterRequest { 
+   optional string offset =1;
+   optional string pagenumber =2;
+}
+
+message NUR1091U00grdMasterResponse { 
+   repeated NUR1091U00grdMasterInfo grd_master_item =1;
+}
+
+message NUR1091U00grdMasterGridColumnChangedRequest { 
+   optional string code_type =1;
+}
+
+message NUR1091U00grdMasterGridColumnChangedResponse { 
+   optional DataStringListItemInfo cmd_item =1;
+}
+
+message NUR1091U00grdDetailGridColumnChangedRequest { 
+   optional string code =1;
+   optional string code_type =2;
+}
+
+message NUR1091U00grdDetailGridColumnChangedResponse { 
+   repeated DataStringListItemInfo cmd_item =1;
+}
+
+message NUR1091U00SaveLayoutRequest { 
+   repeated NUR1091U00grdMasterInfo grdmasterinfo =1;
+   repeated NUR1091U00grdDetailInfo grddetailinfo =2;
+}
+
+message NUR1020Q00layConmentRequest { 
+   optional string bunho =1;
+}
+
+message NUR1020Q00layConmentResponse { 
+   repeated NUR1020Q00layConmentInfo lay_item =1;
+}
+
+message NUR1020Q00ScreenOpenRequest { 
+   optional string bunho =1;
+}
+
+message NUR1020Q00grdPalistRequest { 
+   optional string date =1;
+   optional string ho_dong =2;
+   optional string a =3;
+   optional string b =4;
+   optional string c =5;
+   optional string d =6;
+   optional string offset =7;
+   optional string page_number =8;
+}
+
+message NUR1020Q00grdPalistResponse { 
+   repeated NUR1020Q00grdPalistInfo grd_master_item =1;
+}
+
+message NUR1020Q00layFlagQueryRequest { 
+   optional string bunho =1;
+   optional string start_date =2;
+}
+
+message NUR1020Q00layFlagQueryResponse { 
+   repeated DataStringListItemInfo lay_item =1;
+}
+
+message NUR1020Q00layGraphRequest { 
+   optional string fkinp1001 =1;
+   optional string bunho =2;
+   optional string ymd =3;
+}
+
+message NUR1020Q00layGraphResponse { 
+   repeated NUR1020Q00layGraphInfo lay_item =1;
+}
+
+message NUR1020Q00layInOutTotalRequest { 
+   optional string bunho =1;
+   optional string fkinp1001 =2;
+   optional string from_op_date =3;
+   optional string to_op_date =4;
+}
+
+message NUR1020Q00layInOutTotalResponse { 
+   repeated NUR1020Q00layInOutTotalInfo lay_item =1;
+}
+
+message NUR1020Q00layIORequest { 
+   optional string bunho =1;
+   optional string fkinp1001 =2;
+   optional string ymd =3;
+}
+
+message NUR1020Q00layIOResponse { 
+   repeated NUR1020Q00layIOInfo lay_item =1;
+}
+
+message NUR1020Q00layIpwonInfoRequest { 
+   optional string bunho =1;
+   optional string fkinp1001 =2;
+   optional string ymd =3;
+}
+
+message NUR1020Q00layIpwonInfoResponse { 
+   repeated NUR1020Q00layIpwonInfoInfo lay_item =1;
+}
+
+message NUR1020Q00layNUR1122ListRequest { 
+   optional string bunho =1;
+   optional string fkinp1001 =2;
+   optional string ymd =3;
+}
+
+message NUR1020Q00layNUR1122ListResponse { 
+   repeated ComboListItemInfo lay_item =1;
+}
+
+message NUR1020Q00layNUR7002Request { 
+   optional string ymd =1;
+   optional string fkinp1001 =2;
+}
+
+message NUR1020Q00layNUR7002Response { 
+   repeated NUR1020Q00layNUR7002Info lay_item =1;
+}
+
+message NUR1020Q00layNutRequest { 
+   optional string bunho =1;
+   optional string fkinp1001 =2;
+   optional string ymd =3;
+}
+
+message NUR1020Q00layNutResponse { 
+   repeated NUR1020Q00layNutInfo lay_item =1;
+}
+
+message NUR1020Q00layQueryRemarkRequest { 
+   optional string bunho =1;
+   optional string input_date =2;
+}
+
+message NUR1020Q00layQueryRemarkResponse { 
+   repeated DataStringListItemInfo lay_item =1;
+}
+
+
+message NUR1020Q00laySiksaNoteRequest { 
+   optional string fkinp1001 =1;
+   optional string bunho =2;
+   optional string order_date =3;
+   optional string ki_gubun =4;
+}
+
+message NUR1020Q00laySiksaNoteResponse { 
+   repeated DataStringListItemInfo lay_item =1;
+}
+
+message NUR1020Q00laySusulInfoRequest { 
+   optional string bunho =1;
+   optional string fkinp1001 =2;
+   optional string from_op_date =3;
+   optional string to_op_date =4;
+}
+
+message NUR1020Q00laySusulInfoResponse { 
+   repeated NUR1020Q00laySusulInfoInfo lay_item =1;
+}
+
+message NUR1020Q00layNUR1122Request { 
+   optional string bunho =1;
+   optional string fkinp1001 =2;
+   optional string ymd =3;
+}
+
+message NUR1020Q00layNUR1122Response { 
+   repeated NUR1020Q00layNUR1122Info lay_item =1;
+}
+
+message NUR8003R02cboHoDongRequest { 
+   optional string cboneedhtype =1;
+}
+
+message NUR8003R02grdDetailRequest { 
+   optional string need_h_type =1;
+   optional string write_dong =2;
+   optional string from_date =3;
+   optional string to_date =4;
+   optional string bunho =5;
+   optional string offset =6;
+   optional string page_number =7;
+}
+
+message NUR8003R02grdDetailResponse { 
+   repeated NUR8003R02grdDetailInfo grd_master_item =1;
+}
+
+message NUR8003R02grdMasterRequest { 
+   optional string from_date =1;
+   optional string to_date =2;
+   optional string hodong =3;
+   optional string need_h_type =4;
+   optional string bunho =5;
+   optional string offset =6;
+   optional string page_number =7;
+}
+
+message NUR8003R02grdMasterResponse { 
+   repeated NUR8003R02grdMasterInfo grd_master_item =1;
+}
+
+message NUR8003R02grdPayloadDataRequest { 
+   optional string need_h_type =1;
+   optional string hodong =2;
+   optional string from_date =3;
+   optional string to_date =4;
+   optional string bunho =5;
+}
+
+message NUR8003R02grdPayloadDataResponse { 
+   repeated NUR8003R02grdPayloadDataInfo grd_master_item =1;
+}
+
+message NUR8003R02cboNeedHTypeRequest { 
+}
+
+message NUR1093U00grdMasterRequest{
+	optional string page_number = 1;
+	optional string offset = 2;
+}
+
+message NUR1093U00grdMasterResponse{
+	repeated NUR1093U00grdMasterInfo items = 1;
+}
+
+message NUR1093U00SaveLayoutRequest{
+	repeated NUR1093U00grdMasterInfo items = 1;
+}
+
+message NUR1094U00Cell34Request { 
+}
+
+message NUR1094U00GrdDetailRequest { 
+	optional string fknur1094 = 1;
+}
+
+message NUR1094U00GrdDetailResponse{
+	repeated NUR1094U00GrdDetailInfo grd_lst = 1;
+}
+
+message NUR1094U00GrdMasterRequest { 
+	optional string pkinp1001 = 1;
+}
+
+message NUR1094U00GrdMasterResponse{
+	repeated NUR1094U00GrdMasterInfo grd_lst = 1;
+}
+
+message NUR1094U00GrdPalistRequest { 
+	optional string date = 1;
+	optional string ho_dong = 2;
+	optional string a_value = 3;
+	optional string b_value = 4;
+	optional string c_value = 5;
+	optional string d_value = 6;
+}
+
+message NUR1094U00GrdPalistResponse{
+	repeated NUR1094U00GrdPalistInfo grd_lst = 1;
+}
+
+message NUR1094U00GetFkInp1001Request { 
+	optional string date = 1;
+	optional string bunho = 2;
+}
+
+message NUR1094U00GetUserNameRequest { 
+	optional string user_id = 1;
+}
+
+message NUR1094U00GetLevelRequest { 
+	optional string date = 1;
+	optional string sum = 2;
+}
+
+message NUR1094U00GetLevelNameRequest { 
+	optional string date = 1;
+	optional string sum = 2;
+}
+
+message NUR1094U00SaveLayoutRequest { 
+	optional string user_id = 1;
+	optional string bunho = 2;
+	repeated NUR1094U00GrdMasterInfo grd_master = 3;
+	repeated NUR1094U00GrdDetailInfo grd_detail = 4;
+}
+
+message NUR0803U01grdNUR0803Request{
+	optional string need_gubun = 1;
+	optional string hfile = 2;
+	optional string enable = 3;        
+	optional string page_number = 4;
+	optional string offset = 5;
+}
+
+message NUR0803U01grdNUR0803Response{
+	repeated NUR0803U01grdNUR0803Info items = 1;
+}
+
+message NUR0803U01grdNUR0804Request{
+	optional string need_gubun = 1;
+	optional string need_asmt_code = 2;
+	optional string start_date = 3;
+}
+
+message NUR0803U01grdNUR0804Response{
+	repeated NUR0803U01grdNUR0804Info items = 1;
+}
+
+message NUR0803U01grdNUR0805Request{
+	optional string need_gubun = 1;
+	optional string need_asmt_code = 2;
+	optional string need_result_code = 3;
+	optional string start_date = 4;
+}
+
+message NUR0803U01grdNUR0805Response{
+	repeated NUR0803U01grdNUR0805Info items = 1;
+}
+
+message NUR0803U01grdMasterRequest{
+	optional string need_gubun = 1;
+	optional string need_asmt_code = 2;
+	optional string start_date = 3;
+}
+
+message NUR0803U01grdDetailRequest{
+	optional string need_gubun = 1;
+	optional string need_asmt_code = 2;
+	optional string need_result_code = 3;
+	optional string start_date = 4;
+}
+
+message NUR0803U01SaveLayoutRequest{
+	repeated NUR0803U01grdNUR0803Info grdNUR0803List = 1;
+	repeated NUR0803U01grdNUR0804Info grdNUR0804List = 2;
+	repeated NUR0803U01grdNUR0805Info grdNUR0805List = 3;
+}
+
+message NUR5020U00grdNURCntRequest { 
+   optional string date =1;
+   optional string ho_dong =2;
+   optional string offset =3;
+   optional string page_number =4;
+}
+
+message NUR5020U00grdNURCntResponse { 
+   repeated NUR5020U00grdNURCntInfo grd_master_item =1;
+}
+
+message NUR5020U00grdWatchListRequest { 
+   optional string date =1;
+   optional string ho_dong =2;
+   optional string offset =3;
+   optional string page_number =4;
+}
+
+message NUR5020U00grdWatchListResponse { 
+   repeated NUR5020U00grdWatchListInfo grd_master_item =1;
+}
+
+message NUR5020U00grdCommentRequest { 
+   optional string ho_dong =1;
+   optional string date =2;
+   optional string offset =3;
+   optional string page_number =4;
+}
+
+message NUR5020U00grdCommentResponse { 
+   repeated NUR5020U00grdCommentInfo grd_master_item =1;
+}
+
+message NUR5020U00grdGuhoGubunRequest { 
+   optional string date =1;
+   optional string ho_dong =2;
+   optional string query_number =3;
+   optional string offset =4;
+   optional string page_number =5;
+}
+
+message NUR5020U00grdGuhoGubunResponse { 
+   repeated NUR5020U00grdGuhoGubunInfo grd_master_item =1;
+}
+
+message NUR5020U00grdWoiRequest { 
+   optional string date =1;
+   optional string ho_dong =2;
+   optional string query_number =3;
+   optional string offset =4;
+   optional string page_number =5;
+}
+
+message NUR5020U00grdWoiResponse { 
+   repeated NUR5020U00grdWoiInfo grd_master_item =1;
+}
+
+message NUR5020U00grdIpToiRequest { 
+   optional string date =1;
+   optional string ho_dong =2;
+   optional string query_number =3;
+   optional string offset =4;
+   optional string page_number =5;
+}
+
+message NUR5020U00grdIpToiResponse { 
+   repeated NUR5020U00grdIpToiInfo grd_master_item =1;
+}
+
+
+message NUR5020U00grdTransRequest { 
+   optional string date =1;
+   optional string ho_dong =2;
+   optional string query_number =3;
+   optional string offset =4;
+   optional string page_number =5;
+}
+
+message NUR5020U00grdTransResponse { 
+   repeated NUR5020U00grdTransInfo grd_master_item =1;
+}
+
+message NUR5020U00grdSusulRequest { 
+   optional string date =1;
+   optional string ho_dong =2;
+   optional string query_number =3;
+   optional string offset =4;
+   optional string page_number =5;
+}
+
+message NUR5020U00grdSusulResponse { 
+   repeated NUR5020U00grdSusulInfo grd_master_item =1;
+}
+
+message NUR5020U00grdGwaRequest { 
+   optional string date =1;
+   optional string ho_dong =2;
+   optional string query_number =3;
+   optional string offset =4;
+   optional string page_number =5;
+}
+
+message NUR5020U00grdGwaResponse { 
+   repeated NUR5020U00grdGwaInfo grd_master_item =1;
+}
+
+message NUR5020U00grdBedSoreRequest { 
+   optional string date =1;
+   optional string ho_dong =2;
+   optional string query_number =3;
+   optional string offset =4;
+   optional string page_number =5;
+}
+
+message NUR5020U00grdBedSoreResponse { 
+   repeated NUR5020U00grdBedSoreInfo grd_master_item =1;
+}
+
+message NUR5020U00fwkNurseRequest { 
+   optional string find1 =1;
+   optional string buseo_code =2;
+}
+
+message NUR5020U00layConfirmYnRequest { 
+   optional string date =1;
+   optional string ho_dong =2;
+}
+
+message NUR5020U00layConfirmYnResponse { 
+   repeated DataStringListItemInfo lay_item =1;
+}
+
+message NUR5020U00layGamyumCntRequest { 
+   optional string date =1;
+   optional string ho_dong =2;
+}
+
+message NUR5020U00layGamyumCntResponse { 
+   repeated NUR5020U00layGamyumCntInfo lay_item =1;
+}
+
+message NUR5020U00layNur5020Request { 
+   optional string date =1;
+   optional string ho_dong =2;
+}
+
+message NUR5020U00layNur5020Response { 
+   repeated NUR5020U00layNur5020Info lay_item =1;
+}
+
+message NUR5020U00layNurCntRequest { 
+   optional string nur_wrdt =1;
+}
+
+message NUR5020U00layNurCntResponse { 
+   repeated NUR5020U00layNurCntInfo lay_item =1;
+}
+
+message NUR5020U00layPatientInfoRequest { 
+   optional string nur_wrdt =1;
+   optional string bunho =2;
+}
+
+message NUR5020U00layPatientInfoResponse { 
+   repeated NUR5020U00layPatientInfoInfo lay_item =1;
+}
+
+message NUR5020U00layPatientInfoInRequest { 
+   optional string nur_wrdt =1;
+   optional string bunho =2;
+}
+
+message NUR5020U00layPatientInfoInResponse { 
+   repeated NUR5020U00layPatientInfoInInfo lay_item =1;
+}
+
+message NUR5020U00layPatientInfoOutRequest { 
+   optional string nur_wrdt =1;
+   optional string bunho =2;
+}
+
+message NUR5020U00layPatientInfoOutResponse { 
+   repeated NUR5020U00layPatientInfoInInfo lay_item =1;
+}
+
+message NUR5020U00layStairCntRequest { 
+   optional string date =1;
+   optional string ho_dong =2;
+}
+
+message NUR5020U00layStairCntResponse { 
+   repeated NUR5020U00layStairCntInfo lay_item =1;
+}
+
+message NUR5020U00layTotalCntRequest { 
+   optional string ho_dong =1;
+   optional string date =2;
+}
+
+message NUR5020U00layTotalCntResponse { 
+   repeated NUR5020U00layTotalCntInfo lay_item =1;
+}
+
+message NUR5020U00SaveLayoutRequest { 
+  repeated  NUR5020U00layNur5020Info laynur5020info =1;
+   repeated  NUR5020U00grdGuhoGubunInfo grdguhogubuninfo =2;
+   repeated  NUR5020U00grdWoiInfo grdwoiinfo =3;
+   repeated  NUR5020U00grdCommentInfo grdcommentinfo =4;
+   repeated  NUR5020U00grdNURCntInfo grdnurcntinfo =5;
+   repeated  NUR5020U00grdIpToiInfo grdiptoiinfo =6;
+   repeated  NUR5020U00grdTransInfo grdtransinfo =7;
+   repeated  NUR5020U00grdSusulInfo grdsusulinfo =8;
+   repeated  NUR5020U00grdWatchListInfo grdwatchlistinfo =9;
+   repeated  NUR5020U00grdGwaInfo grdgwainfo =10;
+   repeated  NUR5020U00grdBedSoreInfo grdbedsoreinfo =11;
+}
+
+message NUR5020U00SaveNur5200Request { 
+   optional string ho_dong =1;
+   optional string nur_wrdt =2;
+   optional string confirm_yn =3;
+   optional string seq =4;
+}
+
+message NUR5020U00XEditGridCellRequest { 
+}
+
+message NUR5020U00XEditGridCellResponse { 
+   repeated ComboListItemInfo xeditgridcell9 =1;
+   repeated ComboListItemInfo xeditgridcell39 =2;
+   repeated ComboListItemInfo xeditgridcell43 =3;
+   repeated ComboListItemInfo xeditgridcell44 =4;
+   repeated ComboListItemInfo xeditgridcell121 =5;
+   repeated ComboListItemInfo xeditgridcell28 =6;
+   repeated ComboListItemInfo xeditgridcell29 =7;
+   repeated ComboListItemInfo xeditgridcell35 =8;
+   repeated ComboListItemInfo xeditgridcell51 =9;
+   repeated ComboListItemInfo xeditgridcell71 =10;
+   repeated ComboListItemInfo xeditgridcell72 =11;
+   repeated ComboListItemInfo xeditgridcell79 =12;
+   repeated ComboListItemInfo fwkgwa =13;
+   repeated ComboListItemInfo xeditgridcell21 =14;
+   repeated ComboListItemInfo xeditgridcell22 =15;
+}
+
+message NUR5020U00fbxNurseDataValidatingRequest { 
+   optional string id =1;
+   optional string buseo_code =2;
+}
+
+message NUR5020U00PRNURNUR5200SUBDELETERequest { 
+   optional string ho_dong =1;
+   optional string nur_wrdt =2;
+}
+
+message NUR8003U03CboHoDongRequest { 
+}
+
+message NUR8003U03GrdARequest{
+	optional string ho_dong = 1;
+	optional string need_gubun = 2;
+	optional string write_date = 3;
+	optional string migration_disp = 4;
+	optional string bunho = 5;
+}
+
+message NUR8003U03GrdAResponse{
+	repeated NUR8003U03GrdAInfo grd_list = 1;
+}
+
+message NUR8003U03GrdPalistRequest{
+	optional string date = 1;
+	optional string ho_dong = 2;
+	optional string a_value = 3;
+	optional string b_value = 4;
+	optional string c_value = 5;
+	optional string d_value = 6;
+	optional string page_number = 7;
+	optional string offset = 8;
+}
+
+message NUR8003U03GrdPalistResponse{
+	repeated NUR8003U03GrdPalistInfo grd_list = 1;
+}
+
+message NUR8003U03LayNurPointsRequest{
+	optional string start_date = 1;
+	optional string query_date = 2;
+	optional string bunho = 3;
+}
+
+message NUR8003U03LayNurPointsResponse{
+	repeated NUR8003U03LayNurPointsInfo lay_list = 1;
+}
+
+message NUR8003U03GetKaikeiHodongRequest{
+	optional string pkinp1001 = 1;
+	optional string date = 2;
+}
+
+message NUR8003U03DeleteTodayAllRequest{
+	optional string bunho = 1;
+	optional string write_date = 2;
+}
+
+message NUR8003U03SetFindWorkerRequest{
+	optional string need_gubun = 1;
+	optional string need_asmt_code = 2;
+	optional string start_date = 3;
+	optional string need_result_code = 4;
+}
+
+message NUR8003U03SetFindWorkerResponse{
+	repeated NUR8003U03SetFindWorkerInfo fw_list = 1;
+}
+
+message NUR8003U03SaveLayoutRequest{
+	optional string bunho = 1;
+	optional string fkinp1001 = 2;
+	optional string write_date = 3;
+	optional string ho_dong = 4;
+	repeated NUR8003U03GrdAInfo save_list = 5;
+}
+
+message NUR8003U03CopyDataRequest{
+	optional string bunho = 1;
+	optional string from_write_date = 2;
+}
+
+message NUR8003U03CopyDataResponse{
+	repeated NUR8003U03CopyDataInfo data_lst = 1;
+}
+
+message NUR8003U03QueryFormGrdBPRequest{
+	optional string bunho = 1;
+	optional string fkinp1001 = 2;
+	optional string write_date = 3;
+}
+
+message NUR8003U03QueryFormGrdBPResponse{
+	repeated NUR8003U03QueryFormGrdBPInfo grd_list = 1;
+}
+
+message NUR8003U03QueryFormGrdSyochiRequest{
+	optional string bunho = 1;
+	optional string fkinp1001 = 2;
+	optional string write_date = 3;
+}
+
+message NUR8003U03QueryFormGrdSyochiResponse{
+	repeated NUR8003U03QueryFormGrdSyochiInfo grd_list = 1;
+}
+
+message NUR8050U00cboGubunRequest { 
+}
+
+message NUR8050U00cboGubunResponse { 
+   repeated NUR8050U00cboGubunInfo cbo_Gubun =1;
+}
+
+message NUR8050U00grdNur8050AllRequest { 
+   optional string date =1;
+}
+
+message NUR8050U00grdNur8050AllResponse { 
+   repeated NUR8050U00grdNur8050AllInfo list_grdnur8050 =1;
+}
+
+message NUR8050U00grdNur8050HisRequest { 
+   optional string bunho =1;
+   optional string fkinp1001 =2;
+   optional string gubun =3;
+   optional string page_number =4;
+   optional string offset =5;
+}
+
+message NUR8050U00grdNur8050HisResponse { 
+   repeated NUR8050U00grdNur8050HisInfo list_grdnur8050his =1;
+}
+
+message NUR8050U00fwkNurseRequest { 
+   optional string buseo_code =1;
+   optional string sabun =2;
+}
+
+message NUR8050U00NurseNameRequest { 
+   optional string code =1;
+}
+
+message NUR8050U00SaveLayoutRequest { 
+   optional string user_id =1;
+   repeated NUR8050U00grdNur8050HisInfo grd_Nur8050His=2;
+}
+
+message NUR9999R11SaveLayoutRequest { 
+   repeated NUR9999R11grdNUR9999Info grdnur9999info =1;
+}
+
+message NUR9999R11grdNUR9999Request { 
+   optional string fkinp1001 =1;
+   optional string offset =2;
+   optional string page_number =3;
+}
+
+message NUR9999R11grdNUR9999Response { 
+   repeated NUR9999R11grdNUR9999Info grd_master_item =1;
+}
+
+message NUR9999R11layPaInfoRequest { 
+   optional string write_date =1;
+   optional string fkinp1001 =2;
+}
+
+message NUR9999R11layPaInfoResponse { 
+   repeated NUR9999R11layPaInfoInfo lay_item =1;
+}
+
+message NUR9999R11comboBoxRequest { 
+}
+
+message NUR9999R11comboBoxResponse { 
+   repeated ComboListItemInfo cbomoveadl =1;
+   repeated ComboListItemInfo cbomove =2;
+   repeated ComboListItemInfo cboexcretionadl =3;
+   repeated ComboListItemInfo cbowashadl =4;
+   repeated ComboListItemInfo cbocommunication =5;
+   repeated ComboListItemInfo cbogubun =6;
+   repeated ComboListItemInfo cbowareadl =7;
+   repeated ComboListItemInfo cbofoodadl =8;
+}
+
+message NUR9999R11sqlCmdRequest { 
+}
+
+message NUR9999R11cboPkInp1001Request { 
+   optional string bunho =1;
+}
+
+message NUR6005U00grdNUR6005Request { 
+   optional string bunho =1;
+   optional string offset =2;
+   optional string page_number =3;
+}
+
+message NUR6005U00grdNUR6005Response { 
+   repeated NUR6005U00grdNUR6005Info grd_master_item =1;
+}
+
+message NUR6005U00layComboSetRequest { 
+   optional string code_type =1;
+}
+
+message NUR6005U00layComboSetResponse { 
+   repeated NUR6005U00layComboSetInfo lay_item =1;
+}
+
+message NUR6005U00layFkinp1001Request { 
+   optional string bunho =1;
+}
+
+message NUR6005U00layFkinp1001Response { 
+   repeated DataStringListItemInfo lay_item =1;
+}
+
+message NUR6005U00layValidationDupchkRequest { 
+   optional string bunho =1;
+   optional string start_date =2;
+}
+
+message NUR6005U00layValidationDupchkResponse { 
+   repeated DataStringListItemInfo lay_item =1;
+}
+
+message NUR6005U00SaveLayoutRequest { 
+   repeated NUR6005U00grdNUR6005Info grdnur6005info =1;
+}
+
+message NUR8050U00cboGrdNur8050HisRequest { 
+}
+
+message NUR4005U01FwkNurseRequest { 
+	optional string sabun = 1;
+	optional string buseo_code = 2;
+}
+
+message NUR4005U01GrdNUR4005Request{
+	optional string fknur4001 = 1;
+	optional string page_number = 2;
+	optional string offset = 3;
+}
+
+message NUR4005U01GrdNUR4005Response{
+	repeated NUR4005U01GrdNUR4005Info grd_list = 1;
+}
+
+message NUR4005U01XCell2Request { 
+}
+
+message NUR4005U01SaveLayoutRequest{
+	repeated NUR4005U01GrdNUR4005Info grd_list = 1;
+}
+
+message NUR1091Q00layRootListRequest { 
+	optional string date=1;
+}
+
+message NUR1091Q00layDownListRequest { 
+    optional string date=1;
+    optional string code_type=2;
+}
+
+message NUR1091Q00layDownListResponse {
+	repeated NUR1091Q00layDownListInfo lay_down=1;
+}

@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CMO_M001" xml:space="preserve">
+    <value>Please enter</value>
+    <comment>{0}フィールドに入力してください</comment>
+  </data>
+  <data name="CMO_M002" xml:space="preserve">
+    <value>Already exists name {0}. Please choose another name</value>
+    <comment>既に{0}同じ名前が既存しました。他の名前を選択してください</comment>
+  </data>
+  <data name="CMO_M003" xml:space="preserve">
+    <value>Not found with the name {0}. Try searching by other names</value>
+    <comment> {0}の名前で、見つけません。他の名前で検索してください</comment>
+  </data>
+  <data name="CMO_M004" xml:space="preserve">
+    <value>Do you want to save the contents change?</value>
+    <comment>変更内容を保存しますか？</comment>
+  </data>
+  <data name="CMO_M005" xml:space="preserve">
+    <value>Saved</value>
+    <comment>正常に保存しました</comment>
+  </data>
+  <data name="CMO_M006" xml:space="preserve">
+    <value>Can not save</value>
+    <comment>保存できません</comment>
+  </data>
+  <data name="CMO_M007" xml:space="preserve">
+    <value>Deleted</value>
+    <comment>正常に削除しました</comment>
+  </data>
+  <data name="CMO_M008" xml:space="preserve">
+    <value>Can not delete</value>
+    <comment>削除できません</comment>
+  </data>
+  <data name="CMO_M010" xml:space="preserve">
+    <value>Finished date must be later than started date</value>
+    <comment>開始日より終了日を選択してください</comment>
+  </data>
+  <data name="CMO_M011" xml:space="preserve">
+    <value>Updated</value>
+    <comment>正常に更新しました</comment>
+  </data>
+  <data name="CMO_M012" xml:space="preserve">
+    <value>Can not update</value>
+    <comment>更新できません</comment>
+  </data>
+  <data name="CMO_M13" xml:space="preserve">
+    <value>Please enter more than {0} characters</value>
+    <comment>データの長いさが{0}文字以上ご入力ください。</comment>
+  </data>
+  <data name="CMO_M14" xml:space="preserve">
+    <value>Please enter less than {0} characters</value>
+    <comment>データの長いさが{0}文字以下ご入力ください。</comment>
+  </data>
+  <data name="EMR_M0008" xml:space="preserve">
+    <value>Only 1 charactor is accepted in main tag</value>
+    <comment>親タグは一つ文字しか承認できません</comment>
+  </data>
+  <data name="EMR_M0009" xml:space="preserve">
+    <value>have not selected tag level</value>
+    <comment>タグレベルを選択しません。</comment>
+  </data>
+  <data name="EMR_M001" xml:space="preserve">
+    <value>Only 1 charactor is accepted in sub-tag</value>
+    <comment>子供タグは一つ文字しか承認できません</comment>
+  </data>
+  <data name="EMR_M002" xml:space="preserve">
+    <value>You do not have permission to edit/delete this tag</value>
+    <comment>タグ編集・削除の権限がありません</comment>
+  </data>
+  <data name="EMR_M003" xml:space="preserve">
+    <value>You do not have permission to edit/delete this template</value>
+    <comment>テンプレート編集・削除の権限がありません</comment>
+  </data>
+  <data name="EMR_M004" xml:space="preserve">
+    <value>Warning</value>
+    <comment>警告</comment>
+  </data>
+  <data name="EMR_SCREEN_CLOSE" xml:space="preserve">
+    <value>Do you want to close this screen?</value>
+    <comment>画面を閉じますか？</comment>
+  </data>
+  <data name="EMR_U040" xml:space="preserve">
+    <value>Version</value>
+    <comment>バージョン</comment>
+  </data>
+  <data name="EMR_U041" xml:space="preserve">
+    <value>Actions</value>
+    <comment>操作</comment>
+  </data>
+  <data name="EMR_U042" xml:space="preserve">
+    <value>Creator</value>
+    <comment>作成者</comment>
+  </data>
+  <data name="EMR_U043" xml:space="preserve">
+    <value>Date</value>
+    <comment>日付</comment>
+  </data>
+  <data name="EMR_U044" xml:space="preserve">
+    <value>Note</value>
+    <comment>メモ</comment>
+  </data>
+  <data name="EMR_U045" xml:space="preserve">
+    <value>Close</value>
+    <comment>閉じる</comment>
+  </data>
+  <data name="EMR_U071" xml:space="preserve">
+    <value>Issue</value>
+    <comment>問題</comment>
+  </data>
+  <data name="EMR_U072" xml:space="preserve">
+    <value>Note</value>
+    <comment>記述</comment>
+  </data>
+  <data name="EMR_U301" xml:space="preserve">
+    <value>Filter</value>
+    <comment>フィルター</comment>
+  </data>
+  <data name="EMR_U302" xml:space="preserve">
+    <value>Tag code</value>
+    <comment>タグコード</comment>
+  </data>
+  <data name="EMR_U303" xml:space="preserve">
+    <value>Name tag</value>
+    <comment>タグ名</comment>
+  </data>
+  <data name="EMR_U304" xml:space="preserve">
+    <value>Show digits</value>
+    <comment>テキスト表示</comment>
+  </data>
+  <data name="EMR_U305" xml:space="preserve">
+    <value>Note</value>
+    <comment>メモ</comment>
+  </data>
+  <data name="EMR_U306" xml:space="preserve">
+    <value>Main tag</value>
+    <comment>親タグ</comment>
+  </data>
+  <data name="EMR_U307" xml:space="preserve">
+    <value>Main tag</value>
+    <comment>親タグ</comment>
+  </data>
+  <data name="EMR_U308" xml:space="preserve">
+    <value>Sub-tag</value>
+    <comment>子タグ</comment>
+  </data>
+  <data name="EMR_U311" xml:space="preserve">
+    <value>Template type</value>
+    <comment>テンプレートタイプ</comment>
+  </data>
+  <data name="EMR_U312" xml:space="preserve">
+    <value>Template name</value>
+    <comment>テンプレート名</comment>
+  </data>
+  <data name="EMR_U313" xml:space="preserve">
+    <value>Template list</value>
+    <comment>テンプレート一覧</comment>
+  </data>
+  <data name="EMR_U314" xml:space="preserve">
+    <value>Tag template</value>
+    <comment>テンプレートのタグ</comment>
+  </data>
+</root>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <link rel="icon" type="image/ico" href="images/MIS_favico.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- build:css(.) styles/patient-survey-vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css styles/patient-survey-style.css -->
+    <link rel="stylesheet" href="patient-survey.css">
+    <!-- endbuild -->
+</head>
+<body>
+<div class="contentpanel">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="message"></div>
+            <div class="col-md-8">
+                <div class="message-body"></div>
+                <!-- BEGIN Heath Servey -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title" lang="en">
+                            <span id="page-title"></span>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <h2></h2>
+                        <hr class="darken">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <table class="table nomargin table-bordered table-sm">
+                                    <tbody>
+                                    <tr>
+                                        <th width="130px;"><span id="patient-code-title"></span></th>
+                                        <td colspan="2" id="patient-code"></td>
+                                    </tr>
+                                    <tr>
+                                        <th><span id="patient-name-title"></span></th>
+                                        <td id="patient-name"></td>
+                                    </tr>
+                                    <tr>
+                                        <th><span id="patient-visit-title"></span></th>
+                                        <td id="visit-date"></td>
+                                    </tr>
+                                    <tr>
+                                        <th><span id="patient-answer-title"></span></th>
+                                        <td id="answer-date"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="hospital-info" class="col-xs-6">
+                                <table class="table nomargin table-bordered table-sm">
+                                    <tbody>
+                                    <tr>
+                                        <th width="130px;"><span id="hospital-title"></span></th>
+                                        <td id="hospital"></td>
+                                    </tr>
+                                    <tr>
+                                        <th><span id="address-title"></span></th>
+                                        <td id="address"></td>
+                                    </tr>
+                                    <tr>
+                                        <th><span id="contact-title"></span></th>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th><span id="department-title"></span></th>
+                                        <td id="department"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h5><span id="description-title"></span></h5>
+                                <p class="smalltext"></p>
+                            </div>
+                        </div>
+                        <hr class="ligher">
+                        <!-- BEGIN List -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="servey-view-area">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END List -->
+                    </div>
+                </div><!-- END Health Servey -->
+            </div>
+            <div id="related-survey" class="col-md-4">
+                <!-- BEGIN Related -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <span id="relate-title"></span>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-normal"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- build:js(.) scripts/patient-survey-vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery-v1/index.js"></script>
+<script src="bower_components/moment/moment.js"></script>
+<script src="bower_components/moment/locale/ja.js"></script>
+<script src="bower_components/moment/locale/vi.js"></script>
+<script src="bower_components/html5shiv/src/html5shiv.js"></script>
+<script src="bower_components/Respond/src/respond.js"></script>
+
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js scripts/patient-survey-scripts.js -->
+<script src="patient-survey-config.js"></script>
+<script src="patient-survey-libs.js"></script>
+<script src="patient-survey-language.js"></script>
+<script src="patient-survey.js"></script>
+<!-- endbuild -->
+</body>
+</html>

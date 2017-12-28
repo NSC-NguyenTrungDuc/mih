@@ -1,0 +1,715 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DE9C352D-0787-4D3C-9902-21E8D3E20796}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EmrDockerS</RootNamespace>
+    <AssemblyName>EmrDockerS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v11.1, Version=11.1.12.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\DevExpress.BonusSkins.v11.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v11.1.Core, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\DevExpress.Data.v11.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.OfficeSkins.v11.1, Version=11.1.12.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\DevExpress.OfficeSkins.v11.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v11.1.Core, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\DevExpress.Printing.v11.1.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v11.1.Core, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\DevExpress.RichEdit.v11.1.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\DevExpress.Utils.v11.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v11.1, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\DevExpress.XtraBars.v11.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v11.1, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\DevExpress.XtraEditors.v11.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v11.1, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\DevExpress.XtraGrid.v11.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v11.1, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 2011.1\Components\Sources\DevExpress.DLL\DevExpress.XtraLayout.v11.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v11.1, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v11.1, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\DevExpress.XtraPrinting.v11.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.1, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v11.1, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\DevExpress.XtraRichEdit.v11.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v11.1.Extensions, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\DevExpress.XtraRichEdit.v11.1.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v11.1, Version=11.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\DevExpress.XtraTreeList.v11.1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EO.Base">
+      <HintPath>C:\ihis\EO.Base.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EO.WebBrowser">
+      <HintPath>C:\ihis\EO.WebBrowser.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="GhostscriptSharp, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.0.0, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.BizObjects">
+      <HintPath>C:\ihis\IHIS.BizObjects.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.CloudConnector, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\IHIS.CloudConnector.dll</HintPath>
+    </Reference>
+    <Reference Include="IHIS.Controls">
+      <HintPath>C:\ihis\IHIS.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.DbControls">
+      <HintPath>C:\ihis\IHIS.DbControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.Forms">
+      <HintPath>C:\ihis\IHIS.Forms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.MedicalInterface">
+      <HintPath>C:\ihis\IHIS.MedicalInterface.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.Service">
+      <HintPath>C:\ihis\IHIS.Service.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.Win32">
+      <HintPath>C:\ihis\IHIS.Win32.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.CloudConnector">
+      <HintPath>C:\IHISIHIS.CloudConnector.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.ComFunc">
+      <HintPath>C:\IHIS\IHIS.ComFunc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.X.Magic">
+      <HintPath>C:\ihis\IHIS.X.Magic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="OCS.Lib.PatientInfo, Version=1.0.5589.33399, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\nextopasia\AppData\Roaming\Skype\My Skype Received Files\IHIS_0.9.8.1\OCSO\OCS.Lib.PatientInfo.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PaintDotNet, Version=3.1.5605.42079, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\PaintDotNet.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.SystemLayer, Version=3.1.5605.42077, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\PaintDotNet.SystemLayer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PdnLib, Version=3.1.5605.42078, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\PdnLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdditionalBusiness\TemplateMeta.cs" />
+    <Compile Include="Data.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataProvider.cs" />
+    <Compile Include="AdditionalBusiness\DoButtonBusiness.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataSetReport.cs">
+      <DependentUpon>DataSetReport.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetReport.Designer.cs">
+      <DependentUpon>DataSetReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetReport1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EmrDockerS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmrDockerS.Designer.cs">
+      <DependentUpon>EmrDockerS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmrEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmrEditor.Designer.cs">
+      <DependentUpon>EmrEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmrModel.cs" />
+    <Compile Include="EmrTemplateMerge.cs" />
+    <Compile Include="EmrViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmrViewer.Designer.cs">
+      <DependentUpon>EmrViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmComment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmComment.Designer.cs">
+      <DependentUpon>frmComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frOCS2015U40.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frOCS2015U40.Designer.cs">
+      <DependentUpon>frOCS2015U40.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Glossary\StringEnum.cs" />
+    <Compile Include="Glossary\TagOption.cs" />
+    <Compile Include="Glossary\TypeEnum.cs" />
+    <Compile Include="GroupExpandForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GroupExpandForm.Designer.cs">
+      <DependentUpon>GroupExpandForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IImageEditor.cs" />
+    <Compile Include="IMainScreen.cs" />
+    <Compile Include="Meta\BookmarkMarker.cs" />
+    <Compile Include="Meta\CommentMeta.cs" />
+    <Compile Include="Meta\CustomMarkSchema.cs" />
+    <Compile Include="Meta\CustomMarkType.cs" />
+    <Compile Include="Meta\EmrMarkerMeta.cs" />
+    <Compile Include="Meta\ImageMeta.cs" />
+    <Compile Include="Meta\PdfMeta.cs" />
+    <Compile Include="Meta\UserData.cs" />
+    <Compile Include="MmlParser.cs" />
+    <Compile Include="MmlParserIntruduceLetter.cs" />
+    <Compile Include="Models\CommentData.cs" />
+    <Compile Include="Models\DiseasePrintInfo.cs" />
+    <Compile Include="Models\EmrPrintData.cs" />
+    <Compile Include="Models\EmrPrintInfo.cs" />
+    <Compile Include="Models\HospitalModelInfo.cs" />
+    <Compile Include="Models\OrderInfo.cs" />
+    <Compile Include="Models\EmrRecordInfo.cs" />
+    <Compile Include="Models\OrderPrintInfo.cs" />
+    <Compile Include="Models\PatientModelInfo.cs" />
+    <Compile Include="Models\CommentInfo.cs" />
+    <Compile Include="Models\TagInfo.cs" />
+    <Compile Include="Models\TagPrintInfo.cs" />
+    <Compile Include="Models\TemplateTagItem.cs" />
+    <Compile Include="Models\VnDiseasePrintInfo.cs" />
+    <Compile Include="Models\VnDrugPrintInfo.cs" />
+    <Compile Include="Models\VnEmrPrintData.cs" />
+    <Compile Include="Models\VnEmrPrintPageInfo.cs" />
+    <Compile Include="Models\VnHospPrintInfo.cs" />
+    <Compile Include="Models\VnImagePrintInfo.cs" />
+    <Compile Include="Models\VnPatientPrintInfo.cs" />
+    <Compile Include="Models\VnTagPrintInfo.cs" />
+    <Compile Include="OCS2015U40.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OCS2015U40.Designer.cs">
+      <DependentUpon>OCS2015U40.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OCS2015U42.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OCS2015U42.Designer.cs">
+      <DependentUpon>OCS2015U42.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OCS2015U44.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OCS2015U44.Designer.cs">
+      <DependentUpon>OCS2015U44.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupEmrHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupEmrHistory.Designer.cs">
+      <DependentUpon>PopupEmrHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupPrintEmr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupPrintEmr.Designer.cs">
+      <DependentUpon>PopupPrintEmr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\ReportMedicalRecord.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportMedicalRecord.Designer.cs">
+      <DependentUpon>ReportMedicalRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources.ja-JP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.ja-JP.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Types\Triple.cs" />
+    <Compile Include="Types\Tuple.cs" />
+    <Compile Include="UcEditorS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcEditorS.Designer.cs">
+      <DependentUpon>UcEditorS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcGrid.Designer.cs">
+      <DependentUpon>UcGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcViewS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcViewS.Designer.cs">
+      <DependentUpon>UcViewS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EmrDockerS.en.resx">
+      <DependentUpon>EmrDockerS.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmrDockerS.ja-JP.resx">
+      <DependentUpon>EmrDockerS.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmrDockerS.resx">
+      <DependentUpon>EmrDockerS.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmrDockerS.vi-VN.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EmrDockerS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmrEditor.en.resx">
+      <DependentUpon>EmrEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmrEditor.ja-JP.resx">
+      <DependentUpon>EmrEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmrEditor.resx">
+      <DependentUpon>EmrEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmrViewer.ja-JP.resx">
+      <DependentUpon>EmrViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmrViewer.resx">
+      <DependentUpon>EmrViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmComment.en.resx">
+      <DependentUpon>frmComment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmComment.ja-JP.resx">
+      <DependentUpon>frmComment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmComment.resx">
+      <DependentUpon>frmComment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmComment.vi-VN.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmComment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frOCS2015U40.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frOCS2015U40.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frOCS2015U40.ja-JP.resx">
+      <DependentUpon>frOCS2015U40.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frOCS2015U40.resx">
+      <DependentUpon>frOCS2015U40.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frOCS2015U40.vi-VN.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frOCS2015U40.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupExpandForm.resx">
+      <DependentUpon>GroupExpandForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lib\PaintDotNet.Strings.3.JA.resources" />
+    <EmbeddedResource Include="Lib\PaintDotNet.Strings.3.resources" />
+    <EmbeddedResource Include="OCS2015U40.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OCS2015U40.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OCS2015U40.ja-JP.resx">
+      <DependentUpon>OCS2015U40.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OCS2015U40.resx">
+      <DependentUpon>OCS2015U40.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OCS2015U40.vi-VN.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OCS2015U40.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OCS2015U42.en.resx">
+      <DependentUpon>OCS2015U42.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OCS2015U42.ja-JP.resx">
+      <DependentUpon>OCS2015U42.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OCS2015U42.resx">
+      <DependentUpon>OCS2015U42.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OCS2015U42.vi-VN.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OCS2015U42.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OCS2015U44.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OCS2015U44.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OCS2015U44.ja-JP.resx">
+      <DependentUpon>OCS2015U44.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OCS2015U44.resx">
+      <DependentUpon>OCS2015U44.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OCS2015U44.vi-VN.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OCS2015U44.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupEmrHistory.resx">
+      <DependentUpon>PopupEmrHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupPrintEmr.en.resx">
+      <DependentUpon>PopupPrintEmr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupPrintEmr.ja-JP.resx">
+      <DependentUpon>PopupPrintEmr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupPrintEmr.resx">
+      <DependentUpon>PopupPrintEmr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupPrintEmr.vi-VN.resx">
+      <DependentUpon>PopupPrintEmr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Report\ReportMedicalRecord.resx">
+      <DependentUpon>ReportMedicalRecord.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.en.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.ja-JP.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.ja-JP.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.vi-VN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcEditorS.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UcEditorS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcEditorS.ja-JP.resx">
+      <DependentUpon>UcEditorS.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcEditorS.resx">
+      <DependentUpon>UcEditorS.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcEditorS.vi-VN.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UcEditorS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcGrid.ja-JP.resx">
+      <DependentUpon>UcGrid.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcGrid.resx">
+      <DependentUpon>UcGrid.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcViewS.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UcViewS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcViewS.ja-JP.resx">
+      <DependentUpon>UcViewS.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcViewS.resx">
+      <DependentUpon>UcViewS.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcViewS.vi-VN.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UcViewS.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gsdll32.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Lib\DevExpress.BonusSkins.v11.1.dll" />
+    <Content Include="Lib\DevExpress.Data.v11.1.dll" />
+    <Content Include="Lib\DevExpress.OfficeSkins.v11.1.dll" />
+    <Content Include="Lib\DevExpress.Printing.v11.1.Core.dll" />
+    <Content Include="Lib\DevExpress.RichEdit.v11.1.Core.dll" />
+    <Content Include="Lib\DevExpress.Utils.v11.1.dll" />
+    <Content Include="Lib\DevExpress.XtraBars.v11.1.dll" />
+    <Content Include="Lib\DevExpress.XtraEditors.v11.1.dll" />
+    <Content Include="Lib\DevExpress.XtraGrid.v11.1.dll" />
+    <Content Include="Lib\DevExpress.XtraPrinting.v11.1.dll" />
+    <Content Include="Lib\DevExpress.XtraRichEdit.v11.1.dll" />
+    <Content Include="Lib\DevExpress.XtraRichEdit.v11.1.Extensions.dll" />
+    <Content Include="Lib\DevExpress.XtraTreeList.v11.1.dll" />
+    <Content Include="Lib\GhostscriptSharp.dll" />
+    <Content Include="Lib\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="Lib\Interop.WIA.dll" />
+    <Content Include="Lib\Microsoft.Ink.dll" />
+    <Content Include="Lib\Newtonsoft.Json.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Lib\Newtonsoft.Json.pdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Lib\Newtonsoft.Json.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Lib\PaintDotNet.Data.dll" />
+    <Content Include="Lib\PaintDotNet.dll" />
+    <Content Include="Lib\PaintDotNet.Effects.dll" />
+    <Content Include="Lib\PaintDotNet.Resources.dll" />
+    <Content Include="Lib\PaintDotNet.StylusReader.dll" />
+    <Content Include="Lib\PaintDotNet.SystemLayer.dll" />
+    <Content Include="Lib\PdnLib.dll" />
+    <Content Include="Resources\DO.jpg" />
+    <Content Include="Resources\pdf.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataSetReport.xsc">
+      <DependentUpon>DataSetReport.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetReport.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetReport1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetReport.xss">
+      <DependentUpon>DataSetReport.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>copy $(TargetPath) C:\IHIS\OCSO
+$(SolutionDir)..\IHISContentsBuild.bat POST  $(SolutionDir)..\ $(TargetDir) $(SolutionName) $(TargetFileName)
+
+</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>$(SolutionDir)..\IHISContentsBuild.bat PRE  $(SolutionDir)..\ $(TargetDir) $(SolutionName) $(TargetFileName)</PreBuildEvent>
+  </PropertyGroup>
+</Project>

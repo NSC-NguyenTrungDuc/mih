@@ -1,0 +1,833 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btn2015U21.Text" xml:space="preserve">
+    <value>Patients list</value>
+    <comment>患者リスト</comment>
+  </data>
+  <data name="btnAplOrder.Text" xml:space="preserve">
+    <value>Pathology examination</value>
+    <comment>病理検査</comment>
+  </data>
+  <data name="btnApprove.Text" xml:space="preserve">
+    <value>Representative order</value>
+    <comment>代行オーダ有</comment>
+  </data>
+  <data name="btnChuchiOrder.Text" xml:space="preserve">
+    <value>Minor surgery</value>
+    <comment>処置</comment>
+  </data>
+  <data name="btnComment.Text" xml:space="preserve">
+    <value>Note</value>
+    <comment>特記事項</comment>
+  </data>
+  <data name="btnConsult.Text" xml:space="preserve">
+    <value>Examination order</value>
+    <comment>診療依頼</comment>
+  </data>
+  <data name="btnConsultAnswer.Text" xml:space="preserve">
+    <value>Order from other department</value>
+    <comment>他科依頼有</comment>
+  </data>
+  <data name="btnCplOrder.Text" xml:space="preserve">
+    <value>Humoral Immunity test</value>
+    <comment>検体検査</comment>
+  </data>
+  <data name="btnCplResult.Text" xml:space="preserve">
+    <value>Ref. humoral Immunity result</value>
+    <comment>検体検査結果照会</comment>
+  </data>
+  <data name="btnDCBANNAB.Text" xml:space="preserve">
+    <value>Refund / Clear</value>
+    <comment>返却/取消</comment>
+  </data>
+  <data name="btnDiscuss.Text" xml:space="preserve">
+    <value>Discuss with other clinics</value>
+    <comment>他医院相談</comment>
+  </data>  
+  <data name="btnMovieTalk.Text" xml:space="preserve">
+    <value>Movie talk</value>
+    <comment>遠隔医療</comment>
+  </data>
+  <data name="btnDoOrder.Text" xml:space="preserve">
+    <value>Do order</value>
+    <comment>Doオーダ</comment>
+  </data>
+  <data name="btnDrgOrder.Text" xml:space="preserve">
+    <value>Medicine</value>
+    <comment>薬</comment>
+  </data>
+  <data name="btnEMR.Text" xml:space="preserve">
+    <value>Electronic medical records EMR</value>
+    <comment>電子カルテ</comment>
+  </data>
+  <data name="btnENDOResult.Text" xml:space="preserve">
+    <value>Reference Results</value>
+    <comment>結果照会</comment>
+  </data>
+  <data name="btnEtcJinryo.Text" xml:space="preserve">
+    <value>Therapists at other faculties</value>
+    <comment>他科診療</comment>
+  </data>
+  <data name="btnEtcOrder.Text" xml:space="preserve">
+    <value>Others</value>
+    <comment>その他</comment>
+  </data>
+  <data name="btnIpwonReser.Text" xml:space="preserve">
+    <value>Admission order</value>
+    <comment>入院時オーダ</comment>
+  </data>
+  <data name="btnJinryoComment.Text" xml:space="preserve">
+    <value>Note</value>
+    <comment>診療コメント</comment>
+  </data>
+  <data name="btnJinryoReser.Text" xml:space="preserve">
+    <value>Examination appointment</value>
+    <comment>診療予約</comment>
+  </data>
+  <data name="btnJusaOrder.Text" xml:space="preserve">
+    <value>Injection</value>
+    <comment>注射薬</comment>
+  </data>
+  <data name="btnJusaResult.Text" xml:space="preserve">
+    <value>Injection history</value>
+    <comment>注射経過記録</comment>
+  </data>
+  <data name="btnKarteOfOrtherClinics.Text" xml:space="preserve">
+    <value>Add EMR from other hospital</value>
+    <comment>他医院カルテ追加</comment>
+  </data>
+  <data name="btnKensaReser.Text" xml:space="preserve">
+    <value>Test appointment</value>
+    <comment>検査予約票</comment>
+  </data>
+  <data name="btnKensaReserPrint.Text" xml:space="preserve">
+    <value>Test appointment</value>
+    <comment>検査予約票</comment>
+  </data>
+  <data name="btnOpenOutSang.Text" xml:space="preserve">
+    <value>Diagnose</value>
+    <comment>病名</comment>
+  </data>
+  <data name="btnOrderGuide.Text" xml:space="preserve">
+    <value>Introduce letter</value>
+    <comment>患者案内書</comment>
+  </data>
+  <data name="btnOrderPrint.Text" xml:space="preserve">
+    <value>Doctor's order requests</value>
+    <comment>医師指示書</comment>
+  </data>
+  <data name="btnPfeOrder.Text" xml:space="preserve">
+    <value>Physiological inspection</value>
+    <comment>生理検査</comment>
+  </data>
+  <data name="btnQryOrderInfo.Text" xml:space="preserve">
+    <value>Refer to instructions</value>
+    <comment>  オーダ照会</comment>
+  </data>
+  <data name="btnReha.Text" xml:space="preserve">
+    <value>Rehabilitation</value>
+    <comment>リハビリ</comment>
+  </data>
+  <data name="btnSetOrder.Text" xml:space="preserve">
+    <value>Group orders</value>
+    <comment>セットオーダ</comment>
+  </data>
+  <data name="btnSusulOrder.Text" xml:space="preserve">
+    <value>Surgery and anaesthesia</value>
+    <comment>麻酔・手術</comment>
+  </data>
+  <data name="btnTrialPatient.Text" xml:space="preserve">
+    <value>Patient testing</value>
+    <comment>トライアル患者</comment>
+  </data>
+  <data name="btnXrtOrder.Text" xml:space="preserve">
+    <value>X-ray</value>
+    <comment>放射線</comment>
+  </data>
+  <data name="cbxMsgSysYN.Text" xml:space="preserve">
+    <value>Send message</value>
+    <comment>メッセージ送信</comment>
+  </data>
+  <data name="cbxMsgSysYN.ToolTip" xml:space="preserve">
+    <value>Inform nurse/pharmacy about changes in information</value>
+    <comment>オーダー追加、修正、削除のような情報を看護、薬局に知らせることが出来ます。</comment>
+  </data>
+
+  <data name="ImageList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+      AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
+      LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+      ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABC
+      RgAAAk1TRnQBSQFMAgEBOAEAAcgBCwHIAQsBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+      AwABQAMAAfADAAEBAQABCAYAATwYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
+      AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
+      AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
+      AWYDAAGZAwABzAIAATMDAAIzAgABMwFmAgABMwGZAgABMwHMAgABMwH/AgABZgMAAWYBMwIAAmYCAAFm
+      AZkCAAFmAcwCAAFmAf8CAAGZAwABmQEzAgABmQFmAgACmQIAAZkBzAIAAZkB/wIAAcwDAAHMATMCAAHM
+      AWYCAAHMAZkCAALMAgABzAH/AgAB/wFmAgAB/wGZAgAB/wHMAQABMwH/AgAB/wEAATMBAAEzAQABZgEA
+      ATMBAAGZAQABMwEAAcwBAAEzAQAB/wEAAf8BMwIAAzMBAAIzAWYBAAIzAZkBAAIzAcwBAAIzAf8BAAEz
+      AWYCAAEzAWYBMwEAATMCZgEAATMBZgGZAQABMwFmAcwBAAEzAWYB/wEAATMBmQIAATMBmQEzAQABMwGZ
+      AWYBAAEzApkBAAEzAZkBzAEAATMBmQH/AQABMwHMAgABMwHMATMBAAEzAcwBZgEAATMBzAGZAQABMwLM
+      AQABMwHMAf8BAAEzAf8BMwEAATMB/wFmAQABMwH/AZkBAAEzAf8BzAEAATMC/wEAAWYDAAFmAQABMwEA
+      AWYBAAFmAQABZgEAAZkBAAFmAQABzAEAAWYBAAH/AQABZgEzAgABZgIzAQABZgEzAWYBAAFmATMBmQEA
+      AWYBMwHMAQABZgEzAf8BAAJmAgACZgEzAQADZgEAAmYBmQEAAmYBzAEAAWYBmQIAAWYBmQEzAQABZgGZ
+      AWYBAAFmApkBAAFmAZkBzAEAAWYBmQH/AQABZgHMAgABZgHMATMBAAFmAcwBmQEAAWYCzAEAAWYBzAH/
+      AQABZgH/AgABZgH/ATMBAAFmAf8BmQEAAWYB/wHMAQABzAEAAf8BAAH/AQABzAEAApkCAAGZATMBmQEA
+      AZkBAAGZAQABmQEAAcwBAAGZAwABmQIzAQABmQEAAWYBAAGZATMBzAEAAZkBAAH/AQABmQFmAgABmQFm
+      ATMBAAGZATMBZgEAAZkBZgGZAQABmQFmAcwBAAGZATMB/wEAApkBMwEAApkBZgEAA5kBAAKZAcwBAAKZ
+      Af8BAAGZAcwCAAGZAcwBMwEAAWYBzAFmAQABmQHMAZkBAAGZAswBAAGZAcwB/wEAAZkB/wIAAZkB/wEz
+      AQABmQHMAWYBAAGZAf8BmQEAAZkB/wHMAQABmQL/AQABzAMAAZkBAAEzAQABzAEAAWYBAAHMAQABmQEA
+      AcwBAAHMAQABmQEzAgABzAIzAQABzAEzAWYBAAHMATMBmQEAAcwBMwHMAQABzAEzAf8BAAHMAWYCAAHM
+      AWYBMwEAAZkCZgEAAcwBZgGZAQABzAFmAcwBAAGZAWYB/wEAAcwBmQIAAcwBmQEzAQABzAGZAWYBAAHM
+      ApkBAAHMAZkBzAEAAcwBmQH/AQACzAIAAswBMwEAAswBZgEAAswBmQEAA8wBAALMAf8BAAHMAf8CAAHM
+      Af8BMwEAAZkB/wFmAQABzAH/AZkBAAHMAf8BzAEAAcwC/wEAAcwBAAEzAQAB/wEAAWYBAAH/AQABmQEA
+      AcwBMwIAAf8CMwEAAf8BMwFmAQAB/wEzAZkBAAH/ATMBzAEAAf8BMwH/AQAB/wFmAgAB/wFmATMBAAHM
+      AmYBAAH/AWYBmQEAAf8BZgHMAQABzAFmAf8BAAH/AZkCAAH/AZkBMwEAAf8BmQFmAQAB/wKZAQAB/wGZ
+      AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
+      AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
+      AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
+      AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD//8A/wD/AP8AFQAH/wHz
+      AQcF7wEHAbwHAAf/CQAH/xIAAfICvALwA/EB9wb/AbwBAAH/BPQB9QH0AfAB7wHtAfcB7gHzAv8GAAH/
+      AfQBvAEHAe8BBwHyAv8RAAG8AvAB8gHzA/QB9wP/AvQB/wG8AQABuwK0ArUB7wGSAe4B7QHrAfgB7wEH
+      AfIB/wUAAf8B8wUHAe8B8AL/EAAC8ALyAfMB9AL/AfcC/wL0AfMB9AG8AQABtQG0AtwBuwHtAQcB/wGS
+      AesBEgEHAfEB7wH/BQAB9AEHAe4BBwL3Ae8BBwHvAfIB/wcAAfQB8QcAAfQB8AG8AvQBvALvAfcB/wL0
+      AvMB9AHwAQAB8AK7AtwBkgHsAbwBBwFtAeoC7wHxAf8DAAH0ARsB8gEHAbwBkgEHAfgDBwG8Af8HAAHr
+      AW0B9AcAAf8B8wG8AfABHAKaAewB/wH0AfMD9wG8AQAB/wHyAgkBuwGZAXQB+AHrARMBbQHvAfIC/wMA
+      AfMBmQIHAfAB7wG8AwcB8AEHAf8GAAHtA20B/wgAAfQB8gFzAnQB7AH/AvMB7wH/AfAB9AEAAv8B9QHx
+      AfcCdAFzAQkB8wT/AgAB9AEaApkBHAEHAfIB8QEHAe8BBwHxAfIBvAH/BQAB9wFtAe8B8gJtAf8IAAH/
+      AXMCTAFzAf8C9AEHAfAB9AUAAf8BBwFLAUwBcwH/BwABmQGaAqABmQEHAfMC9AG8AvQB8AHyAf8EAAEH
+      AW0B7AIAAQcBbQHsAf8HAAHzAQcB8wH0Ae8BBwPxAfQGAAH0AZkBdAGZAXQB8wcAAZkBwwOaAZkB8AL0
+      AfEB9gHyAfAB9AH/AwABvAFtAewB/wMAAe8BbQHsBwABHAHzAfQB9gHzARwJAAH/ARoBkwOaAZkB/wYA
+      AZkCwwKaA5kBGwIaAZkB8wH/BAAB9AHsAf8FAAHtAbwGAAG8AW4EmQFuAbwIAAH0ARwBdAOaAW4BGgYA
+      AZkDwwKaApkCeQKZAfQGAAHzBgAB9AH/BgABvAFDBJoBQwG8CAAB/wHvAXMCmgGZAeoB9AYAARoFwwEa
+      A6ACGgH0FgABEgGTApoBkwESCgAB8AHrAm4BbQHsBwABGgH2CcMBGgH0FgAB7AMSARMB7AoAAfMB7QNt
+      Ae4HAAEaARsI9gHDARoB9BYAAbwE6wG8CgAB/wHxAfcB7QHuAf8HAAH0ChoBGwH/FgAB/wG8Au0BvAH/
+      JgABuw+8Cv8B8wH0BP8B8wH0AfMB9ALzAvQG8wL0Bf8B7QLrAeoB7Ab/EPMJ/wH0AqcE/wHzAvQL/wL0
+      A/8B7QISBOoBEgHrAe0D/wbzBfQF8wn/AfMCpwT/AvQB/wLsBO0E7AG8Af8B9AL/Ae0CEgGLAa0BsgGs
+      AYsBrgFtARIB7QL/BfMB9gS0AfIB9ATzBP8B9AMbAvQCpwT/AfMB9AH/ARIBFQEOAesCwwH0AgcB7AEH
+      Af8B9AH/Ae0B6gFtBLMCsgGsAYsB6wESAe0B/wT0ARkBtAStAbMB8AT0Av8BGwFvBUwB9AKnBP8B8wH0
+      Af8B7wIPAQABegGaAVIBeQH/AfAB8wL0Af8CbQezAbIBrAGLAeoBEgH/BPQBtAEJARwCUgF0AQkBrQHw
+      A/QB/wH0AUsBdAEHAbQDtQLPAacE/wHzAfQB/wH0AgAB7QEbARoBmgExAe8C/wH0Av8B6gGLAdQHswGy
+      AawBiwESAe0E9AGtAfQBmQJTAZoB/wGsAbwD9AH/AZkBTAG8BqcBrQGnBP8B8wL0Af8BHAHsARsBGgKa
+      AVIBngEHAf8B9AH/Ae0B6gGzA9QGswGyAYsBEgHsBPQB/wHHAf8BCAGaAf8BrQEaAf8D9AH/AnQBtQOn
+      BM8BCQT/AfMC9AH/ARoBwwEaA5oBUgGfAXgBBwL/AesBEgPbAtQGswGsAeoBbQT0Av8BrQEaAZoBtAG8
+      Av8D9AH/AUwBdAHPAqcBrQn/AfMB9AL/AZkBegOaAXkBWAKfAcMC/wHrAeoBugTbAdQFswGyARIBbQb/
+      Aa0BGgGaAbQBBwX/AfMBSwGZA6cBtQn/AfME/wFYApoBegFYAeUBeAGfAcMC/wHtARIBugLcA9sB1ASz
+      AZAB6gHtBv8BrQL2AbQBBwX/AfQBkwEHA6cBCQn/AfQE/wEbA1gD5QF4AcMC/wHtAeoBkQPcAtsC1AOz
+      AYsB6gf/Aa0C/wG0AQcH/wEJA6cB9AP/Ab0DFgG9Af8B8wH0BP8BBwGeAZ8BWAPlAQgD/wHrAeoBuwLc
+      A9sB1AOzAeoB6wf/AawCtAGtAQcI/wEJAc8B9AP/ARoBFgP/ARYBGwHzBv8B7wKfAVgC5QHDA/8B7QLr
+      AbsC3ALbAtQBswLqAe0H/wS0AfAH/wG1AqcBzwP/ARYB9AH/AW8BGgH/AZMB9Af/AZgCnwFYAeUBwwT/
+      Ae0B7AHrAewCugHbAbMBkAHqARIB7RT/BKcB8wL/ARoBkwH/AZMB/wEWARoB8wH0Ef8B7QHsAW0B6wPq
+      ARIBbQHtFf8B8QHPAacBtQT/Ab0BFgGTARYBvQH/AfQB9wH0E/8B7QLrAewB7QX/AQAOMSEAB/8C9Af/
+      AVgBoAx6AaABWCAABv8B9AHbAdoBGQb/AVgBoAF6Aq4FIAFtA3oBoAFYBQAC7BIAAuwFAAP/AhkB/wEZ
+      AbkBsgEZAf8CGQP/AVgBoAF6AbQCIAPdAiABbQJ6AaABWAUAAewBkgHsEAAB7AGSAewFAAL/ARkBuQGy
+      AdwB2gK4AbkB3AG5AbIBGQL/AVgBwwGaAiAEGQGuAf8BrgFtAZoBwwFYBQAB7AKSAewOAAHsApIB7AUA
+      Av8B9AHbArkC2gHbAdoCuQHaARkC/wFYBiAC3AKuAiABoAHDAVgFAAHsA5IB7AwAAewDkgHsBQAD/wEZ
+      AdoB2wEJAhkBCQHbAdoB3AP/AVgBwwQgBBkEIAHDAVgFAAHsBJIB7AoAAewEkgHsBQAB/wH0ARkB2wHa
+      BhkB2gHbAhkB/wFYAcMBoAIgBNwGIAFYBQAB7AWSAewIAAHsBZIB7AUAAf8B3APaAfQEGQH0AdsC2gHb
+      Af8BWAHDAaABtQf0AiABoAHDAVgFAAHsBJIB7AoAAewEkgHsBQAB/wEJAdsC2gb0AdsB2gHbAdwB/wFY
+      AcMBoAG1AfQCIAPcAiABrgGgAcMBWAUAAewDkgHsDAAB7AOSAewFAAL/AfQB3AHbARkE/wEZAdsB3AH0
+      Av8BWAH2AaABtQL/BSAB3QGuAaAB9gFYBQAB7AKSAewOAAHsApIB7AUAA/8BGQLbARkC/wEZAtsBGQP/
+      AVgB9gGgCq4BoAH2AVgFAAHsAZIB7BAAAewBkgHsBQAC/wH0CtsBGQL/AVgB9gKgAbQG3QG0AqAB9gFY
+      BQAC7BIAAuwFAAP/AdwB2wEZAdwC2wHcARkC3AH0Av8BAANYAXkBtQQZAbUBeQNYIQAE/wEZAv8B3AHb
+      ARkB/wL0A/8FAAG1Af8CbQH/AbUlAAf/AhkH/wYABLUmABD/BAABHAFJAgIBIQEoAXIBvAgAAfMBvAHv
+      AuwB7wG8AfMIAAHzAbwB7wLsAe8BvAHzCAAB8wG8Ae8C7AHvAbwB8wYAAQgBTwEuAjQELQECARwFAAH/
+      AbwB9wEHAfIC/wHyAQcB9wG8Af8EAAH/AbwB9wEHAfIC/wHyAQcB9wG8Af8EAAH/AbwB9wEHAfIC/wHy
+      AQcB9wG8Af8DAAHwAS4DVQE0AVUBNAMtAQIBkgMAAf8CBwH/AfYBoAJZAaAB9gH/AgcB/wIAAf8CBwH/
+      AfQBCQLUAQkC/wIHAf8CAAH/AgcB/wH0AZgCTwEIAv8CBwH/AQABCAFPA1YBVQF4Af8BCAE0Ay0BAgG8
+      AgABvAEHAf8BmgU4AfsBoAH/AQcBvAIAAbwBBwH/AdYCxwLNAtMB3AH/AQcBvAIAAbwBBwH/AZgBJwQC
+      AS0BmAH/AQcBvAEAAQgBTwNWAXgC/wGZAzQCLQFyAQAB8wH3Af8BmgY4AvsBoAH/AfcC8wH3Af8B1gPH
+      As0D0wHcAf8B9wLzAfcB/wGYAicEAgEtAS4BmAH/AfcB8wEcA1YBeAL/AQgDVQI0AS0BKAEAAbwBBwH2
+      CDgC+wH2AQcCvAEHAfQExwGsAs0D0wH/AQcCvAEHAfQEJwQCAi0B9gEHAbwBVQJWAXgD/wGYAZkDmAI0
+      AQIBAAHvAfIBwwo4AaAB8gLvAfIB3QXHAawEzQEJAfIC7wHyAQgBAgMnBgIBCAHyAe8BVQFWAXgJ/wJV
+      AS0BAAHsAf8B5QFZCTgBWQH/AuwB/wHVAa0FxwGsA80B1AH/AuwB/wGXAU8EJwUCAU8B/wHsAVUCVgF4
+      A/8BCASZAVYBVQEoAQAB7AH/AeUDWQc4AVkB/wLsAf8B1QHUAa0BpwXHAqwB1AH/AuwB/wGXAk8BSQQn
+      AwIBTwH/AewBeANWAXgC/wEbBlYBTwEAAe8B8gHDBlkDOAFZAcMB8gLvAfIBGQHUAc4DrQGnA8cBrQHd
+      AfIC7wHyAQgFTwFJAwIBTwEIAfIB7wEIAVUCeAFWAXgC/wEIBFYBTwEcAQABvAEHAfYJWQF6AfYBBwK8
+      AQcB/wLUAc4FrQLPAf8BBwK8AQcB/wlPAXIB/wEHAbwBCAFWA3gBVgF4AfYBmARWAS4CAAHzAfcB/wGg
+      CFkBoAH/AfcC8wH3Af8B3ALUAc4FrQEJAf8B9wLzAfcB/wGYCE8BmAH/AfcB8wEAAQgBVQF4AZkCeAVW
+      AS4BCAMAAbwBBwH/AaABXgVZAaAB/wEHAbwCAAG8AQcB/wHcA9QCzgGtAQkB/wEHAbwCAAG8AQcB/wGY
+      Bk8BmAH/AQcBvAMAAggBVQKYAXgCVgE0AVUBCAQAAf8CBwH/AfYBwwLlAcMB9gH/AgcB/wIAAf8CBwL/
+      ARkC1QHdAv8CBwH/AgAB/wIHAv8BCAKXAQgC/wIHAf8FAAEIAXgDVQFWAQgHAAH/AbwB9wEHAfIC/wHy
+      AQcB9wG8Af8EAAH/AbwB9wEHAfIC/wHyAQcB9wG8Af8EAAH/AbwB9wEHAfIC/wHyAQcB9wG8Af8WAAHz
+      AbwB7wLsAe8BvAHzCAAB8wG8Ae8C7AHvAbwB8wgAAfMBvAHvAuwB7wG8AfMLAAJxCgAJvAQAAv8B8wHy
+      AfEG8AHxAfIB8wL/AwAB/wHwAXIBSQEnAUkBcgEIAf8KAAN3AXEJAAnTAbwDAAL/AfEBtAezAewBdAH0
+      Av8CAAH0AXIBLgM0ATMCLQFyAfMJAAKWAXcBcQgAAdMI3AHTAbwDAAH/AfABkAizAZEBUgG0AfQB/wEA
+      Af8BUANVAZcBeAI0Ai0BTwHzAwACcQQAAZYBdwQAAnEDAAHTAwkC0wMJAdMBvAMAAf8B8ASzBLQBswGR
+      AVEBswHwAv8BlwNWAVUBGwH/AQgDNAEtAXIB/wEAA3cBcQMAAfEBtAMAA3cBcQMAAdMBGQHTAvQB0wIZ
+      AdMBvAMAAv8BtAOzBLQBswGRATIBkQL/AfMBTwNWAVUBeAL/AQgDNAEtAQgBAAKWAXcBcQG0AgAB8QG0
+      AgABtAKWAXcBcQQAAdMEbwLTAbwEAAL/AfQBugGzArQCugG0ArMBdAEyAfQB/wGYA1YCVQFWAXgC/wEI
+      AzQBcgIAAZYBdwIAAbQBAAKQAQABtAIAAZYBdwUAAW8CmgJ1AW8BvAUABP8B8AG7BAkBUgG8Af8BmgFZ
+      Af8BlwFWAXgI/wEIAjQBTwcAAZACswGQCgABbwOaAnUBbwG8BAAG/wQaAVkBmgH0AnoB/wFVAVYBeAj/
+      ARsCVQEuBwACuQGzAZAJAAFvAr0DmgJ1AW8BvAMABv8DGwH0AfYBegFZAZoB9gH/AZcGVgGYAv8BGwJW
+      AVUBTwIAAnECAAG0AQABuQGQAQABtAIAAnEEAAFvAhoDmgGUAXUBbwG8AwAG/wQbBv8BmAVWAXgC/wEb
+      BFYBlwEAA3cBcQG0AgAB8QG0AgABtAN3AXEDAAFvARsCGgOaAm8BvAMABf8B9AQaAfMF/wH0AVUCeAJW
+      AQgB/wEbBFYBTwHwAQAClgF3AXEDAAHxAbQDAAKWAXcBcQMAAW8B9AEbAhoBmgNvAbwDAAX/AZkEmgHt
+      Bv8BmAF4AZgBeAJWAZkFVgGXAf8CAAGWAXcEAAJxBAABlgF3BAABbwH2AfQBGwVvAbwDAAX/AXMCmgGZ
+      AXQBRAX/AQAB9gGXAXgBmAJ4BlYB9AgAA3cBcQoAB28BvAQABP8B9AFEAXMBbgFEAhUB9AT/AgAB9gGY
+      AVUCmAF4AVcBVgFVAZcB9AkAApYBdwFxCgAHbwG8BAAF/wHtARUDRAHrBf8DAAH/AfQBmAGXAVUBlwGY
+      AfMB/wsAAZYBdw0AA28BvAYABv8BvAHsAesBBwb/EQAJ9wHvAfMEAAH0BY4BjQG0BLUBrgK0AfEBAAFs
+      C3EBcgFsAQAB7wGRAf8NAAEICXgBcwHvBAABjQK3ArABkwHvBAkB3AGuAgkBtAEAAWwMVgFsAgABBwG0
+      Af8MAAFJAQgBmAbCAXIBeAH3BAABjQG3AbYBtwGNAXkBBwIZAd0BCQHcAbQCCQG1AgABSQp4AUkDAAH/
+      AbsBrgO0AfQIAAFJCcIBeAH3BAABjQPeAY0BmgF5AfADGQEJAbQCCQG1AgABTwQIAk8ECAFPBAAB8AG7
+      Aa4BmQF4Aa4IAAFJAQgBmAbCAXIBeAH3BAABtgG9AfABcgRPAbsCGQEJAbUB3QEZAbUDAAFyAvQBcgL0
+      AXIC9AFyBQAB8AGRAQgB9wGYAXgBrgH0BgABCAl4AXMB7wUAAbwBcgFQAVYBeAGXAVYBCAEJARkBCQG1
+      AgkBtQQAApcEdAKXBgAB8AGYAfcBuwH3AZgBeAHtAfQFAAHtCZgBcgHvAfAEAAHzAeoBcwGZAZoBeQHw
+      AQAB8QEJAbUCCQG1AfEFAAF0ARoDmgF0BwAB8AGRAXgBmAG7AfcBmQGRAQcB9AEAAfQB7wH0AUkBmAGX
+      Bp8BUAGXAXIBSQHwAwACbQGZAZoBSwJ0AgAB8AOuAfAGAAF0ARoCSwKaAXQHAAG1AZcBeAH3AQgBrgEI
+      AbUBtAEAAbUBuwH0AUkBnwGYBp8BmAGXAU8BlwFyAfAB/wFtAesBmQMaAZoBeQH0CwABdAEbAcMCGgOa
+      AXQHAAG1AZ0BmAH3AQgBtQHdAfQBtQG8AfIBAAFJApgGnwF4AZcCcgFPAXIB9AFtAe0CGgEcARoBmQGa
+      AXQLAAOLAcMCGgFLAZoBkgHrBwABvAH3AbsDtQHzAbsB8gIAAfMJUAFyAfcDcgEHAW0C7AEaAZkDGgHr
+      AQcJAAGtARkCCQGtAcMCGgHsAe0BbQcAAf8BvAG7ARkBvAK1AfQBAAHyAfQBSQkIAXIB9wKXAXIB9wFt
+      AuwBbQMaAewBbQGSCAABiwHdAhkCCQGtBOwBbQkAAbUC/wIJAa4B9AG1AbQB7QJ4BggBcgF4Ae0DcgHv
+      AW0B7QLsAW0B7AHtAm0BkggAAYsB3QEZAZEBGQEJAa0E/wFtCQAB9AG1AQkB8gG8AQkBtQG7AfQBAAFQ
+      ApgFCAKYAVADcgHvAbwB7ALtBOwBbQHxCAABiwEJARkB8wH/ARkBiwNtAa4JAAH0AgkB8gEAAfIBtQG7
+      AfQCAAHwAXIBmQUIAZkCmAFyAZgBcgHxAQAB8AHrAewB7QLsAesB8woAAa0BGQL0AYsCEgHqAq4JAAHw
+      AbUB9AEAAfIBCQG0AfQEAAEIC0kBCAQAAZIDbQHzDAADiwISAeoCrg8AAbUUAAGNAbUBrwKNAbUC7AG1
+      Au0BtQLsAbUBrxAAAbUKCQIAAQcBvAEHEAABjQH/Ab0CsQEbApcB/wKfAfQClwEIAbUCAAHwAQcB7wHx
+      BAAB8AEHAe8B8QIAAbUBGQfdAbUBvAEAAfcBkQEJAbQDAAEgAUwHAAEXASACAAGNAfcBBwGOAY0B8AFy
+      AesB/wHsARwB8QHrAXIB7wG1AgABBwHPAa0BtQQAAQcBzwGtAbUCAAG1AZYBuwIZAfADkwF0AZkBAAKu
+      AbUBtAMAAiUBRgUAAUwBIAHjAgABjQH/Ab0CsQEbApcB/wKfAfQClwEIAbUBrQLsAc8BrQbsAc8BrQLs
+      Aa0BtQGWAZkDdAOTAZoBeQF0AYYBiwK0AwABlAIlAUYDAAFGASAB4wMAAY0B/wG9ArEBGwKXAf8CnwH0
+      ApcBCAG1AewCGQG7AbUGGQK1AhkCtQEZAZECdAGTAZkGmgGZArQEAAEaAUYBJQFGAQABRgElARYEAAGN
+      AQcBtgGOAY0B8QJyAf8BHAGYAfMB7AGXAQcBtQHsARYDlAqTAe0BtQH0AbsBcQEcAZEBcwFSAZoBGgSa
+      AQcBtAUAAb0BTQMlAeMFAAGNAfIBvAKOAfIBlwFyAf8CmAHzAXIBlwEIAbUB7A5HAY0BtQH/AQcBcwGW
+      AbsBcgFSAXkBGgSaAQcBtAcAAU0BJQFNBgABjQH/Ab0CsQEbApcB/wKfAfQClwEIAbUB7A70ArUB/wGZ
+      ARoBSwGWAboBcwGaBRoCtQYAAZQDJgGaBQABjQHyAbwCjgH0AfMB8gH/ApgB8wFyAZcBCAG1AewB8wHx
+      A7QBCQO0AQkDtAEJArUB8wEHAXQBGgFzAZ0BlgEIAhoBmgF0AZMHAAF1AiYBFgFNASYBmgQAAY0BBwG2
+      AY4BjQHzAfABBwH/ARwBmAHzAewBlwEHAbUB7AFvAUYBtQEZAgkBtQEZAgkBtQEZAgkBuwIJAbwBAAKZ
+      Ae8CugGYApkIAAHjAiYBFgIAAU0BJgGUAwABjQH/Ab0CsQT/Ap8B9AKXAQgBtQHsAZQB4wG1AQkBtAEJ
+      AbUBCQG0AQkBtQG0AQkBtQHwBQABmQF0AXMBlgG6AZgBvAcAAU0CJgF1BAABdQEmAwABjQH/Ab0CsQT/
+      Ap8B9AKXAQgBtQHsDP8BzwHxCgABlgG6AbsHAAImAXUKAAGNAfcBBwHyAewB8gEHAfcB/wHsARwB8QHs
+      AZgBBwG1AbQBtQYJApMB7wG1AbQB8QsAAbsBugGWAbsTAAGNCP8CwgT/AbUIAAEgAUYBbw8AAbsCugG7
+      EgABjQ7/AbUIAAKTAbwQAAG7AZYBugG7EQAQjR0AAYEBnRMAAZkLUiUAAjELAAHyAbwBmQF5AXoBeQF6
+      AXkCegF5AXoBeQFSAbwB8iIABDEKAAHwAZABbAFyAXoBcgF5AXIBcwF5AXIBeQFxAVIB9wG7IwACMQQA
+      ASYB+QEAAvkCAAG8AZADmgFyAXMCbAEcAXIBHAFrAVIBkQG7BgAE1AwABNQJAAIxBAACJgL5ASYCAAG8
+      AZADmgJyAWwBawEcAXIBmQFrAVIBkQHvBAAB3AHUBNwC1AgAAdwB1ATcAtQOAAH5ASYB+QMAAbwBbAGS
+      AZgBmgJyAewBbAJyAZkBawFQAZABvAQAAdwC4gIAAeIB3AHUCAAB3AXiAdwB1AcAAjEEAAH5AiYB+QEm
+      AgABvAEGAZEB7QGgAXEBbAGZAZEBcQFyAZkBawFQAZABBwMAAf8D4gIAA+IB1AYAAf8I4gHUBgACMQQA
+      AiYBAAH5ASYCAAG8AZABmgKgAXEBbAKZAWsBkQGZAWsBUgGRAbsDAAH/AeIGAAHiAdQGAAH/AeIGAAHi
+      AdQFAAQxCgABvAGQApkBwwJxARoBwwFrAZEBmQFrAVEBkAHvAwAB/wHiBgAB4gHUBgAB/wHiBgAB4gHU
+      BgACMQsAAfABkAFyAZEBwwGQAZEBGgHDAZABkQEIAWwBcQGRAbwDAAH/AdwC4gIAA+IB1AYAAf8B3Afi
+      AdQTAAHwAQcBHAEIAcMBGgEbAsMCGgHDAfABUQG8AfAEAAH/AdwB4gIAAeIC3AgAAf8B3ATiAtwFAA4C
+      AwABmQEaCMMB9gFSBgAC/wTcAv8IAAL/BNwC/wUAAX0EVghVAQIDAAGZClIBeQgABP8MAAT/BwABfQT/
+      A1YFVQECBQABtQEJBBkBCQG1JQAHfQRWAlUBAgYAAQkBBwLsAfcBCQG8OQABvAS1AQkpAAq8GQABbQsA
+      C+8GAAqsAbwCAA6sCAABwgFtCQAB7woTAe8GAAGsAvQEGQIJAawBvAIAAawB/wP0BBkECQGsBQABbQII
+      AsIBbQcADu8CAAO8AawB/wL0BBkBCQGsAbwCAAGsAf8C7wH0AfIC7wIZAu8BCQGsAwABbQEIBsIBbQYA
+      Au8LBwHyAe8BAANYAawC/wH0BBkBCQGsAbwCAAGsAf8CTQL0AqYCGQIxAQkBrAIAAW0HwgFtBgAC7wH/
+      C/IB/wHvAQABWAJ6AawC/wL0BBkBrAG8AgABrAH/Ak0C/wKmAhkCMQEJAawCAALCAW0DAAHCAW0HAALv
+      Af8C8gLvA/IC7wLyAf8B7wEAAVgCegGsA/8C9AMZAawBvAIAAawG/wL0BBkBrAIAAcIBbQQAAW0IAALv
+      Df8B7wEAAVgCegqsAbwCAAGsBv8D9AMZAawBAAFtAcIOAALvDPIB7wIAAVgCegqsAbwCAAGsAf8C7wL/
+      Au8B/wH0Au8BGQGsAQACbQEABW0DAAVtAe8B/wPyCe8DAAFYApoBrARNAawB/wGsAf8BrAG8AgABrAH/
+      ArUC/wKsAv8CLQEZAawBAAJtAQABCARwAwAB3gSIAQAF7wYJAu8DAAFYAqAKrAG8AgABrAH/ArUC/wKs
+      Av8CLQH0AawFAAHsAf8BbQUAAewB/wFtBQABvAYZAbUFAAFYCqABWAG8AwABrAr/AvQBrAQAAm0C/wFt
+      AwACbQL/AW0EAAG8AhkE3QG1BQAMWAG8AwAOrAQAAm0C/wEHAwACbQL/AQcDAAK8BfQCBwUAAVgFwwFY
+      AbwIAA6sBAADbQH/AW0DAANtAf8BbQIAAf8BBwT/AfQB8QEHBgAGWAG8CgAMrAUABW0DAAVtAgABBwa1
+      AQcB/ykABG0EAARtEgANMQIACLwJAAKhBQABhgFuAlIBhhQAAaALmgExAgABkQauAbwIAAGhAYYBZwGn
+      AgABhgFnAVgBegGaAVIBSggACJEB6wMAAaABmghmApoBMQIAAZEF4gGuB7wCAAGMAZMB4wFFAYYBbgF0
+      A3oBwwFSAUoIAAHcAxkECQHsAwABoAGaAWYGGQHdApoBMQIAAa4B8gH/AxkHrgG8AgABjAGUAUUBAQGu
+      AXoBmgOgAcMBUgFKBQAD7QHcA/8ECQHsAwABoAGaAWYGGQHdApoBMQIAAa4C8gP/Aa4F4gGuAbwCAAGu
+      AZQBbwFFAZEFoAEaAXQB7QFnBQAB8AEHAdwE/wMJAewDAAHDAZoBZgYZAd0CmgExAQAETgHyAv8BMwFO
+      BBkBrgG8AgABrgGUAW8BRQG0BKABwwF5Ad0B7QFnAgABBwTtAdwB/wEZAQIEGQHsAwABwwGaAWYC9AQZ
+      Ad0CmgExAQABTgLkAU4B8gL/AU4BMwFOAf8BTgHyAa4BvAIAAa4BlAFvAQEBtAKgAcMBGgF5Aa4B3QH3
+      AXQBpwEAAfAE/wHcAv8BAgH/AxkB7AMAAcMBoAFmAfQFiwHdAqABMQEABE4B8gH/AfIBrgFOATMCTgHy
+      Aa4BvAIAAa4BlAHjAUYBtALDAVIBbgHVAeYBGQH3AVgBhgEAAfAB/wOsAdwBAgMuAQICGQHsAwACwwFm
+      BfQBGQHdAsMBMQIAAZEE8gKuAf8BTgEzAU4B8gGuAbwCAAG0Ab0BlAFvAbQBHAF0AacB3QEJAbUBGQH3
+      AXoBjAEAAfAB/wGsAdwBrAHcAf8BAgF9AQIE1AMAAsMBiwH/BfQB3QLDATECAAKRBK4B/wROAfIBrgG8
+      AQABrgHcAfQB/wEZAbsBrwEJAacD9AEHAZkBegFYAQAB8AH/AawB3AGsAdwC/wECAf8D1AQAAsMBiwT/
+      AvQB3QLDATEEAAHsAa4D8gT/AfIBrgG8AQAB7QG0A7UBtAHPAt0B9AG8AbUBeQJ6AVgBAAHwAf8BrAPc
+      BP8C1AHtBAAB9gHDAYsG/wHdAsMBMQMABiAB/wHyA7wBrgG8AQABkQL0AdwBCQHyAQcC/wG1AZMEoAF5
+      AQAB8AH/AdMH3AHUAf8B7QQAAfYCwwGGBd0DwwExAwABIALjAvkBIAH/AfIErgG8AQABzwLqAe8B6gGu
+      AQcC7wGaBKABmQGnAQAB8AH/A9MGrAH/Ae0IAAEZAm0BGQGLBwAGIALyAa4B8gGuAbwDAAGGAYsBtQGu
+      AewBmQKaAZkBrgGZAZoBrgGGAgAB8Av/Ae0IAAT/AYsJAAiRAbwFAAGnAbUBpwF5AZoBeQGGAacBAAGn
+      AYYEAAzwAe0nAAFYAa4ZAAFLAXQHHAJzBO0BrgIAAaEBpwGOAYsFkAHrAa4BoQIAAYYBtAnVAbQBhgGn
+      AqEBAAGnAc8I7AGuAqcBoQEAATEBegeaAlgEeQHtAgABpwHsAXgBlwR3AZcBcwHtAYYBoQEAAa4BCQkZ
+      AQkBrgHPAacBoQEAAa4BHAh0AXMBrgHPAacBAAExAXoHmgJ5An4CeQEcAQABxAGuAXMBdweXAe0BrgGn
+      AQABrgEJCRkBCQGuAbQBzwGnAQAB7AF0CVIBcwH3AacBAAExAXoDmgQaAnkBnwFYAeUBfgGYAQABjAHt
+      ARwHfQGXAXABcwGMAQABrgG8ARkH3AIJAa4CtQGGAQAB7QGZAZoBegZZAVgBSwGSAacBAAExAXoCmgIa
+      AZMBdAF5AX4CeQJ6AXkBHAEAAYwB7QEcAp4BfQGXAXgBmAGeAZ0BcAFzAYwBAAGuAbwCGQYJARkBCQGu
+      ArUBtAEAAe0BmQGgAXoGWQF5AUsBkgGnAQABMQGaAxoBkwJMAZkCeQF6ApoBmQGSAa4BkwHtAZ0CmAGd
+      AZcBeAKYAZ0BlgEcAewBhgGuAfAB9AgZAQkBrgG1AQkB1QEAAe0BmQGgAnoEWQF6AXkBSwGSAacBAAEx
+      AZkCGgGTAW8BRQFLAZ8CeQF6ApoBmQH3AXkBmQGYBHICcwOdApgBHAGNAa4B8AH0CBkBCQGuAbUBCQHV
+      AQAB7QGZAaAB5QZ6AXkBSwGSAacBAAExAZkBGgGTASUBRAGGAYsBnwJYA+UBfgGYAXkBmAEIARwBDwFD
+      AXMCmgHtAeoBbQEaAZgBmQHvAa4B8An0AbwBrgG1AQkB1QEAAe0BmQGgAeUFoAGaAXkBSwGSAacBAAEx
+      AZkBGgGTASUBRAGuAbQBkgZ5ARwBzwHtApkC6wF0ApoBHAJzARwBmQEcAq4B8AH0BRkB8wG8ArUBrgG1
+      AQkB1QEAAe0BmQHDBqABmgF5AUsBkgGnAQABMQGZARoBkwElAUUBrgG0AZEBcwJ5ApkBeQEcAacB7AEc
+      AZgDHAKZBRwB7QKuAfAB9AUZAfMBCQK1AfcBtQEJAdUBAAHtAZkBwwagAZoBeQFLAZIBpwEAATEBmQEa
+      AZkBTAFuAe0BtQG0Ae0BHAF5AqABfgEcAQAB6wF4CpgBeAHrAYYBrgHxAf8FGQHzAQkCtQEHAbUBuwG0
+      AQAB7QGZAcMGoAGaAXkBSwGSAacBAAExApkBeQKfAQgBBwG1AbQBkQFzAeUCWAFzAQABkAFVC1YBcQGm
+      Aa4B8Qf/A7UB8QG1AbsBtAEAAe0BmQEaBZkBGgGaAXkBSwGSAacBAAExApkBeQPCAQgBBwG1AbQBkgF6
+      AeUBnwEcAQABiwF3CpcBdwGQAccBpwHPAQcF8gHxAbwBuwG0Ae0CtQHPAQAB7QKZBbwBmQGaAXkBcwHP
+      AacBAAFSAXkBmQGfBMIBCAEHAfcBHAKaAZkB7QEAAaYBkAGXB3gClwGQAccBoQKnAc8BtQUHAbwBuwG1
+      Aa4BtAHPAacBAAGoAa4BkgEHA/ABBwGSAuwBrgKnAQABUgF5AZkGnwGZAXkBWAGfAXkBeAHrAgABxwGQ
+      CJcBkAHHAaEBAAOnAc8HtQH3Aa4BzwKnAQACxAGGBbUChgKnAaECAA9XAXIDAAHHB3ABBgQAAacBoQKn
+      Ca4BpwKhEQACpwOMAacDAAGhAYYBjAGGAaEDAAGhAacBzwFmBAoBZgGuAc8BpwUAAcQB6gNuAYgCqgGp
+      AagBpwGhAQABcwHqARQMFQFmAQABjAGNAo4BbgGMAaEBAAHHAYwBjQFpAWgBhgHHAQABoQGnAa4BEgER
+      AQ4CAAEOAQ8BFAHsAqcDAAHEAYwCUgF0ARYBlAG3AtIBiAGCAagBpwFYAXQBUgRLAyMBSwFRA1IBbgEA
+      AYIBbwEWARcBRgGMAacBAAGnAY0B4wFHAUYBZwGnAQABpwHsAXMBIgYAASIBUQHsAqcBAAHEAagBjgFS
+      AXoBlAHSA7cB0gFjAYgBjgGNAVgCmgF0A1IBSwIjAUsBdAN6ARwBAAGCAm8BAQFEAYYBpwEAAacBjQHj
+      AekBAQFnAacBAAHrAVgB+wFYASIEAAEOASkBXgFYAe0BzwEAAagBsAG2AecGtwHSAWkBlAGZAY0BWAGa
+      AZkBUgEjAVIBegFSAyMBSwN6ARwBAAGCAm8CRQGMAacBAAGnAY0B4wFGAR8BZwGnAbUBeQFYAV4B5QFK
+      AQ8CAAEOAUoBWAJeAXkBrgEAAagBsAG2AecEtwG9ArcBlAKaAY4BWAF5AXMBUQF0AUsCUgF0AUsBIwFL
+      AXQBmgF6ARwBAAGCAW8B4wJGAYwBpwEAAacBjQHjAUYB6QFnAacBkgJYAV4B5QF5ARIBDwEAARQBcwHl
+      Al4BWAHrAQABqAGvAbAB0gK9BLcBlAKaAbYBrwFYAnQCUgFuAXMBdAGZA0sBmQKaARwBAAGCAW8B4wJG
+      AYIBpwEAAacBjQEWAkYBZwGnARMBWAJeAeUBmQFzARUBAAHrAZkBoAHlAV4BWAFtAQABpwGpAbAB0gG3
+      ARoBvAO3AZQBmgG3AbABqAFYAXkBegF0ASMB7wEHARwBUgJLAXQBmQKaARwBAAGCAW8BFgEXAUYBggGn
+      AQABpwH3ARYBFwFGAYIBpwEAAVgBXgHlAqABHAHqAQABcwEaAcMC5QFYAW0CAAGnAfcCaQGNAbUDGgGa
+      AZQBtwGpAQABWAGgAZoBdAEjAQcB8AEcASMBUgGZARwBrgEcAZkBHAEAAYICFgJGAYIBpwEAAacBtQEa
+      ApMBrwGnAQ8CIgMVARQB6gFzARQEFQEiAREBAAGtAbQBtgHSAbABtQHbAdYBtgG3AbYBqQGoAcQBAAFY
+      A6ABeQEcAW4BSwEcAfcB7wG7AW0BuwEHAe0BAAGNAZMBlAJvAY0BpwEAAacBtQHzAvABtQGnAesBDwMA
+      AQ4BFAFzAZkBSgEOAwABDgEKAacBtAG1AY4BiAGvAdYB2wG0AbYBrwGoAacBxAGhAQABWASgAUsBRQFu
+      AfACCQH3AUQB9wHvAa4BAAG1AfADvQG2AacBAAGnAbUB9AIZAbUBpwG1AUMDAAEQAVEBeQGgAXMBFAMA
+      AREBZgGtAdwBtgKIAa8B1gEJAbQBrwGoBQABWAGgAcMCoAFRAUsBHAEHAgkB7wFLAu8BrgEAAQkB9AL/
+      AfQBtQGnAQABpwG1AfQCGQG1AacBAAFmAQ8CAAFKAVgD5QFRAQ8CAAESAc8BAAHVAbABiAHSAbABtQIJ
+      Ac8BpwUAAVgBoAHDBKABeQEjAQcBGQEJARkBCQG8Ae8BzwEJAhkC3QEJAbQBAAG0AQkBGQEJARkBCQHP
+      AQABzwESAQ8BIgFYBF4BWAFKAQABEwGuAacBAAGvAbAB0gG3AdIBsAG1AQkBtAGnBQABWAGgAsMBoAPD
+      AZkBHAHvAd0BGQHtARwB7wG1AfcBtQG0Aa4CtQHPAQABzwW1Ac8BAAGnAa4B6gFEAVgEXgFYAVEBFAGu
+      AacBoQEAAakCsAG2AdIBqgGvArQBpwUAAVgBoAfDAZkBkwH3Ae0BcwGZAe8BpwGuAeoCZgKuAYYBAAen
+      AgABpwGvAXMBWAQ3AVgBeQGuAacBoQIAAagBqQGCAbYB0gGwAYwBpwHOAacFAAFYCaABHAFLASoBeQGZ
+      ARwBAAGGBK4ChgsAAacB9AHvAeoCDgEUAe0BtQYAAcQBqAHeAbcBsAGMCAALWAFRA1gBcxUAAc8CtQGp
+      AbUBzwGnBgABoQGnA4wBpwEAAc8BtALVAc8BpwEAAacBxwGhHwACpwHPAbUBBwG2AbABBwG1As8BxwGh
+      AgABoQGnAbUBtgHvAbYBrwGnAbUBCQHdARkBCQHPAccCpwTHAqEZAAGhAc8BtQLdArYBsQG2AfAC3QGt
+      AccCAAGnAbUBmQMaAQcBkQG7Ad0B8QIZAbUBpwEAAqcBhgGnAa0BpwHHDQAB/wsAAacBtQH0Af8BvQG3
+      A7EBtwL/Ad0BzwIAAYwBtgGZAXQCGgEHAZEBCQEZAd0B/wEZAbUBpwIAAacBtQGuApgBiwwAAgcB/woA
+      AbQB3QL/AfMB8QG3AbEBvAHzAv8B8wG1AacBAAGMAbYBGgKZAhoBcwG8AhkB3QEJAbQBxwIAAacBkQGS
+      AfcBmAGRAYsBxwGhCAAB7AMHAf8IAAGnAbUB8wH/AvQB8wHxAbcB8wL0Af8B9AEJAacBAAGnAa8CGgGa
+      AZkB7wGGAbQCCQG7AbQBpwGhAgABpwGRARwB7wH3ApgBiwGnAaEBAAGhAccBoQMAAewEBwH/BwABpwEJ
+      AvQB8wIZAfIB8APzAfQB/wHdAbUCAAGnAY0C7wHtAa4BAAGnA60BpwGhAwABpwGRAZkBBwHvAfcBmAGR
+      Aa0BpwEAAqcBxwMAAewCBwHsAgcB/wYAAbUB3QH0AfYBwwHzARkCCQEIARoBwwH/ARkB8wG1EgABpwGt
+      AZcBmQEcAZIBrgGSAe8BtAEAAbUBzwGGAwAB7AIHAQAB7AIHAf8FAAG1AbwC8AEbAxkBCQG7AQgBvAHw
+      AbwB8AHWAQAHbAZLAeoBhgIAAaEBpwGtAZ0C9wGSAbUBvAHwAbUBzwGnAaEDAAHsAgcCAAHsAgcB/wQA
+      AbUBBwG8AQcBvAHxAvMBGQEJAbsDBwG8AdYBhgNPA1UBVgNYAzcBUgFtAwABoQGnAa0BtAHvAQcCuwEH
+      AbUBpwHHAaEEAALsAwAB7AIHAf8DAAGnAbUCvAEHAfAB8QEZAfMBGQEJAbsCBwG1Ac8BTwVVAVYBVwdZ
+      AVEFAAGnAc8BuwEZAfABuwG1AYYDpwoAAewBBwH/BAABpwEJAfMBBwHwAfEB8AHcAfMBGQIJAbUBpwEA
+      AU8CdwSXAXgBoAR6AlkBUgYAAacBzwL/AfABtQGuAYYCtAsAAuwEAAGhAacBzwEJAfEB8gLzARkB8wEZ
+      AQkBuwHPAacBTwOXAXgCfQGeAqAD5QJZAXMGAAHHAa0B8QG1Aa0BpwK1Ac8BpxIAAaEBpwHPAbQEtQEJ
+      Ad0BGQEJAbQBpwFPApcCeAF9AZ4BnwWgAeUBWAFzBgABpwHPAbUCpwGtAbsBzwGnAaEVAAWnAc8B1gHz
+      AQkBtAGnAYYBcQGXA3gBmAF9AeUEoAHlAXkBbQYAAacBzwGnAaEBpwGtAbQBpwGhHAABpwHcAQkBzwIA
+      AYYFTwFQBjgBbgsAAqcGAAGhAacBjgGLBZAB6wGuAaE0AAGnAewBeAGXBHcBlwFzAe0BhgGhMgABxAGu
+      AXMBdweXAe0BrgGnCAADoRwAAewKAAGMAe0BHAd9AZcBcAFzAYwIAAOhGwABBALsCQABjAHtARwCngF9
+      AZcBeAGYAZ4BnQFwAXMBjAcAAaEBpwGuAacBoQYAAqEKpwGhBgACAgEEAuwHAAGuAZMB7QGdApgBnQGX
+      AXgCmAGdAZYBHAHsAYYFAAGhAacBrgHtAa4BpwGhBQABoQGnAa4HzwKuAaEFAAH6AwIBBALsBgABeQGZ
+      AZgEcgJzA50CmAEcAY0DAAKhAacBrgHsAZIB7AGuAacCoQMAAacBrgHsB+0B7AGuAacFAAH6BAIBBALs
+      BQABeQGYAQgBHAEPAUMBcwKaAe0B6gFtARoBmAGZAe8DAAKhAa4B7QOSAe0BrgKhBAABpwGuBpIB7QGu
+      AqEFAAH6AgIB+gICAQQC7AQAAc8B7QKZAusBdAKaARwCcwEcAZkBHAGuAgABoQGnAa4C7QOSAu0BrgGn
+      AaEDAAGhAacBrgHtA5IB7AGuAacCoQUAAfoCAgHsAfoCAgEEAuwDAAGnAewBHAGYAxwCmQUcAe0BrgIA
+      AacBrgLsBe0C7AGuAacEAAGhAacBrgHsAu0BrgGnAaEHAAH6AgIB7AEAAfoCAgEEAuwDAAHrAXgKmAF4
+      AesBhgIAAacLrgGnBgABpwGuAewBrgGnAaEJAAL6AwAB+gICAQQB7AMAAZABVQtWAXEBphYAAacBhgKh
+      EAAB+gECAQQB7AMAAYsBdwqXAXcBkAHHFgAEoREAAfoBAgQAAaYBkAGXB3gClwGQAccBoTIAAccBkAiX
+      AZABxwGhNAABxwdwAQY0AAFCAU0BPgcAAT4DAAEoAwABQAMAAfADAAEBAQABAQUAAYABBxYAA/+BAAL/
+      AgAB/gEDAf4BAwL/AgABgAEAAfwBAQL/AgABgAEAAfgBAAL/AgABgAEAAfgBAAH+AX8CAAGAAQAB4AEA
+      Af4BPwGAAQABgAEAAeABAAH8AR8B4AEAAYABAQGAAQAB+AEPAfABAQHwAT8BgAEAAfEBhwHwAQMB8AE/
+      AYABAAHhAccB8AE/AeABHwGAAQEB4wHnAeABHwHgAR8BgAEDAfcB5wHgAR8B4AEfAYABAwL/AfABPwHw
+      AT8BgAEDAv8B8AE/AfABPwGAAQMC/wHwAT8B8AE/AYABAwL/AfABPwT/gAABgAEBBP8EAAT/BAAB+QL/
+      AZ8EAAH4Av8BHwQAAfgBfwH+AR8EAAH4AT8B/AEfBAAB+AEfAfgBHwQAAfgBDwHwAR8EAAH4AR8B+AEf
+      BAAB+AE/AfwBHwQAAfgBfwH+AR8EAAH4Av8BHwQAAfkC/wGfAgABgAEBBP8CAAH4AR8E/wIAAfwBPwT/
+      AgAB8AEPAfABDwHwAQ8B8AEPAcABBwHAAQMBwAEDAcABAwGAAQMBgAEBAYABAQGAAQEBAAEBAYABAQGA
+      AQEBgAEBAQABAQcAAQEHAAEBBwABAQcAAQEHAAEBBwABAQcAAQMGAAGAAQMBgAEBAYABAQGAAQEBwAEH
+      AYABAQGAAQEBgAEBAfABHwHAAQMBwAEDAcABAwL/AfABDwHwAQ8B8AEPAf4BfwHgAQ8CAAHgAQ8B/AE/
+      AeABBwIAAcABBwH8AT8BwAEHAgABgAEDAZ4BeQHAAQcDAAEBAQ4BcAHgAQcDAAEBAQYBYAHwAQ8DAAEB
+      AZoBWQHwAR8DAAEBAfwBPwHwAQ8DAAEBAfwBPwHgAQcDAAEBAZoBWQHgAQcDAAEBAQYBYAHgAQcDAAEB
+      AQ4BcAHgAQcDAAEBAZ4BeQHgAQcCAAGAAQMB/AE/AfABDwIAAcABBwH8AT8B8AEPAgAB4AEPAf4BfwH8
+      AT8CAAL/AYABDwIAAYABAQEfAf8BAAEPAgABgAEBAY8B/wEAAQ8CAAHAAQMBgAH/AQABDwIAAcABAwHA
+      Af8BAAEPAgAB4AEHAcABPwEAAQ8BgAEAAfABDwHAAR8BAAEHAoAB+AEfAcABCAEAAQMBgAHBAfgBDwHg
+      AQgDAAF/AfABBwHwAQEDAAF/AfABAwH4AQMDAAE/AeABAwH4AQQDAAE/AcABAwH+BAABPwHAAQMB/gEA
+      AYACAAE/AcABBwH8ASEBgAEAAYABfwHgAQcB/AFDAcABAQHgAf8B8AEPAf8B7wL/AgAC/wEAARgC/wIA
+      AsMBAAEQAecB8wIAAsMBAAEQAuMGAAHhAccGAAHwAY8GAAH4AR8GAAH+AT8GAAH8AR8FAAEDAfgBDwQA
+      ARABDwHwAccEAAH4AQ8B4QHnAwABAQH/AY8B4wH/AwABAwH/AYcC/wIAAf8BHwH/AcMC/wIAAf8BHwH/
+      AeEC/wIAA/8B+QL/AcABAwT/AecB/wIABP8BwwH/AgAB/AE/AfwBPwHnAZMCAAHwAQ8B8AEPAecBgwIA
+      AeABBwHgAQcB/wHHAgAB4AEHAeABBwHnAYMCAAHAAQMBwAEDAecBkwIAAcABAwHAAQMBwwH/AgABwAED
+      AcABAwHnAf8CAAHAAQMBwAEDAv8CAAHgAQcB4AEHAYABAQHAAQMB4AEHAeABBwGAAQEBwAEDAfABDwHw
+      AQ8BgAEBAfABDwH8AT8B/AE/AYABAQH4AQ8G/wH4AR8E/wHwAQMC/wH+Af8B4AEDAfABAQGAAQEB/gF/
+      AcABAwHwAQEBgAEBAfABPwGAAQEBgAEBAYABAQHAAR8BgAEAAYABAQGAAQEBgAE/AgABgAEBAYABAQGO
+      AX8CAAGAAQEBgAEBAZ4B/wIAAYABAQGAAQEBPwH/AQABAQGAAQEBgAEBASAB4AEAAQMBgAEBAYABAQEg
+      AeABgAEDAYABAQGAAQEC8QHwAQ8BgAEDAYABAQLgAfABDwGAAQMBgAEBA+ABDwGAAX8BgAEBAuABwAEf
+      AYAB/wHAAQMC4AHAAR8E/wLwAv8BwAEBAYABfwHPAYMC/wHAAQEBgAF/AYYBAwH8AQEBwAEBAYABAQGA
+      AQMB/AEBAcABAQGAAQEBgAEDAeABAQHAAQEBgAEBAYABAQHwAQEBwAEBAQABAQGAAQEBgAEBAcABAQEA
+      AQEBgAEAAYABAQHAAQEBAAEBAYABAAGAAQEBwAEBAYABAQGAAQABgAEBAcABAQGAAQECAAGAAQMBwAEB
+      AeABAQIAAYABAwHAAQEBwAEBAgABgAEDAcABAQHAAQECAAGAAQMB/AEfAcABAwGAAQEBgAEDAfwBHwHw
+      AQcBwAEnAYABAwT/AfkD/wIAAcABAwIAAYABAQIAAcABAQIAAYABAQIAAYABAQIAAYABAQIAAYABAQIA
+      AYABAQIAAYABAQIAAYABAQYAAYABAQYAAYABAQYAAYABAQYAAYABAQYAAYABAQIAAYADAAGAAQECAAGA
+      AwABgAEBAgABgAMAAYABAQIAAYADAAGAAQECAAHAAQECAAGAAQMCAAHgAQ8CAAL/AYEBwQHAAQMB4AEB
+      AgADgAEBAcADAAOAAQABgAMAA4ABAAGAAwACgAIAAYADAAKAAgABgAMAAoACAAGAAwACgAIAAcABAQIA
+      AoACAAGAAQECAAKAAwABAQIAAoADAAEfAgADgAEAAYABHwMAAoABAAGAAR8DAAKAAQABgAEfAwABgAHA
+      AQEBgAEfAgABgAH/AeABDwHAAf8CAAL/AfgBDwHAAYEBHwP/AcABAQGAAgAD/wGAAQEBgAEAAYAB/wH7
+      Af8BgAEBAYABAAHAAf8B8QH/AYABAAGAAQABwAEfAeAB/wIAAYABAAHAAQgB4AF/AgABwAGBAcABCAHg
+      AT8CAAL/AcABCAHiAR8CAAGAAQABwAEAAeMBDwQAAeABAAHzAYcEAAH4AQAB/wHHAYABAQIAAfwBAAH/
+      AecBgAMAAfwBAAL/AcADAAH8AQAC/wH4AwAB/AEBA/8B4QGAAQEB/wHPAcABAwb/AcABAQb/AYABAQH+
+      AT8C/wH9Af8BgAEBAf4BPwL/AfgB/wGAAQEB/AEfAYABAwHwAX8CAAH4AQ8BgAEDAeABPwIAAeABAwGA
+      AQMB4AEfAgAB4AEDAcABAwHgAQ8CAAHAAQEBwAEDAeABBwIAAcABAQHgAQ8B4QEDAYABAAHAAQEB+AEf
+      AfMBgwGAAQAC/wH8AT8B/wHDAYABAAL/AfwBPwH/AecBgAEABv8BwAEBBv8B4AEPBv8L
+    </value>
+  </data>
+  
+  <data name="lblApproveDoctorName.Text" xml:space="preserve">
+    <value />
+    <comment>-</comment>
+  </data>
+  <data name="lblApproveFlag.Text" xml:space="preserve">
+    <value />
+    <comment>-</comment>
+  </data>
+  <data name="lblApproveLabel.Text" xml:space="preserve">
+    <value>Confirmation status</value>
+    <comment>承認モード：</comment>
+  </data>
+  <data name="lblJinryoGwa.Text" xml:space="preserve">
+    <value>Department</value>
+    <comment>診療科</comment>
+  </data>
+  <data name="xButton14.Text" xml:space="preserve">
+    <value>Basic orders</value>
+    <comment>基本指示</comment>
+  </data>
+  <data name="xEditGridCell1.HeaderText" xml:space="preserve">
+    <value>bunho</value>
+    <comment>bunho</comment>
+  </data>
+  <data name="xEditGridCell10.HeaderText" xml:space="preserve">
+    <value>last_jubsu_no</value>
+    <comment>last_jubsu_no</comment>
+  </data>
+  <data name="xEditGridCell11.HeaderText" xml:space="preserve">
+    <value>fkinp1001</value>
+    <comment>fkinp1001</comment>
+  </data>
+  <data name="xEditGridCell12.HeaderText" xml:space="preserve">
+    <value>input_id</value>
+    <comment>input_id</comment>
+  </data>
+  <data name="xEditGridCell13.HeaderText" xml:space="preserve">
+    <value>ser</value>
+    <comment>ser</comment>
+  </data>
+  <data name="xEditGridCell14.HeaderText" xml:space="preserve">
+    <value>Disease code</value>
+    <comment>傷病コード</comment>
+  </data>
+  <data name="xEditGridCell15.HeaderText" xml:space="preserve">
+    <value>Main</value>
+    <comment>主</comment>
+  </data>
+  <data name="xEditGridCell16.HeaderText" xml:space="preserve">
+    <value>sang_name</value>
+    <comment>sang_name</comment>
+  </data>
+  <data name="xEditGridCell17.HeaderText" xml:space="preserve">
+    <value>Disease name</value>
+    <comment>傷病名</comment>
+  </data>
+  <data name="xEditGridCell1764.HeaderText" xml:space="preserve">
+    <value>First examination</value>
+    <comment>初回診断日</comment>
+  </data>
+  <data name="xEditGridCell18.HeaderText" xml:space="preserve">
+    <value>Started sick date</value>
+    <comment>発症日</comment>
+  </data>
+  <data name="xEditGridCell19.HeaderText" xml:space="preserve">
+    <value>Finish date</value>
+    <comment>終了日</comment>
+  </data>
+  <data name="xEditGridCell2.HeaderText" xml:space="preserve">
+    <value>Home number</value>
+    <comment>科番</comment>
+  </data>
+  <data name="xEditGridCell20.HeaderText" xml:space="preserve">
+    <value>Send home</value>
+    <comment>転帰</comment>
+  </data>
+  <data name="xEditGridCell21.HeaderText" xml:space="preserve">
+    <value>pre_modifier1</value>
+    <comment>pre_modifier1</comment>
+  </data>
+  <data name="xEditGridCell22.HeaderText" xml:space="preserve">
+    <value>pre_modifier2</value>
+    <comment>pre_modifier2</comment>
+  </data>
+  <data name="xEditGridCell23.HeaderText" xml:space="preserve">
+    <value>pre_modifier3</value>
+    <comment>pre_modifier3</comment>
+  </data>
+  <data name="xEditGridCell24.HeaderText" xml:space="preserve">
+    <value>pre_modifier4</value>
+    <comment>pre_modifier4</comment>
+  </data>
+  <data name="xEditGridCell25.HeaderText" xml:space="preserve">
+    <value>pre_modifier5</value>
+    <comment>pre_modifier5</comment>
+  </data>
+  <data name="xEditGridCell26.HeaderText" xml:space="preserve">
+    <value>pre_modifier6</value>
+    <comment>pre_modifier6</comment>
+  </data>
+  <data name="xEditGridCell27.HeaderText" xml:space="preserve">
+    <value>pre_modifier7</value>
+    <comment>pre_modifier7</comment>
+  </data>
+  <data name="xEditGridCell28.HeaderText" xml:space="preserve">
+    <value>pre_modifier8</value>
+    <comment>pre_modifier8</comment>
+  </data>
+  <data name="xEditGridCell29.HeaderText" xml:space="preserve">
+    <value>pre_modifier9</value>
+    <comment>pre_modifier9</comment>
+  </data>
+  <data name="xEditGridCell3.HeaderText" xml:space="preserve">
+    <value>io_gubun</value>
+    <comment>io_gubun</comment>
+  </data>
+  <data name="xEditGridCell30.HeaderText" xml:space="preserve">
+    <value>pre_modifier10</value>
+    <comment>pre_modifier10</comment>
+  </data>
+  <data name="xEditGridCell31.HeaderText" xml:space="preserve">
+    <value>pre_modifier_name</value>
+    <comment>pre_modifier_name</comment>
+  </data>
+  <data name="xEditGridCell32.HeaderText" xml:space="preserve">
+    <value>post_modifier1</value>
+    <comment>post_modifier1</comment>
+  </data>
+  <data name="xEditGridCell33.HeaderText" xml:space="preserve">
+    <value>post_modifier2</value>
+    <comment>post_modifier2</comment>
+  </data>
+  <data name="xEditGridCell34.HeaderText" xml:space="preserve">
+    <value>post_modifier3</value>
+    <comment>post_modifier3</comment>
+  </data>
+  <data name="xEditGridCell35.HeaderText" xml:space="preserve">
+    <value>post_modifier4</value>
+    <comment>post_modifier4</comment>
+  </data>
+  <data name="xEditGridCell36.HeaderText" xml:space="preserve">
+    <value>post_modifier5</value>
+    <comment>post_modifier5</comment>
+  </data>
+  <data name="xEditGridCell37.HeaderText" xml:space="preserve">
+    <value>post_modifier6</value>
+    <comment>post_modifier6</comment>
+  </data>
+  <data name="xEditGridCell38.HeaderText" xml:space="preserve">
+    <value>post_modifier7</value>
+    <comment>post_modifier7</comment>
+  </data>
+  <data name="xEditGridCell39.HeaderText" xml:space="preserve">
+    <value>post_modifier8</value>
+    <comment>post_modifier8</comment>
+  </data>
+  <data name="xEditGridCell4.HeaderText" xml:space="preserve">
+    <value>pk_seq</value>
+    <comment>pk_seq</comment>
+  </data>
+  <data name="xEditGridCell40.HeaderText" xml:space="preserve">
+    <value>post_modifier9</value>
+    <comment>post_modifier9</comment>
+  </data>
+  <data name="xEditGridCell41.HeaderText" xml:space="preserve">
+    <value>post_modifier10</value>
+    <comment>post_modifier10</comment>
+  </data>
+  <data name="xEditGridCell42.HeaderText" xml:space="preserve">
+    <value>post_modifier_name</value>
+    <comment>post_modifier_name</comment>
+  </data>
+  <data name="xEditGridCell43.HeaderText" xml:space="preserve">
+    <value>Edit</value>
+    <comment>修飾</comment>
+  </data>
+  <data name="xEditGridCell45.HeaderText" xml:space="preserve">
+    <value>Doubt</value>
+    <comment>疑い</comment>
+  </data>
+  <data name="xEditGridCell46.HeaderText" xml:space="preserve">
+    <value>Send home</value>
+    <comment>疑い</comment>
+  </data>
+  <data name="xEditGridCell5.HeaderText" xml:space="preserve">
+    <value>naewon_date</value>
+    <comment>naewon_date</comment>
+  </data>
+  <data name="xEditGridCell6.HeaderText" xml:space="preserve">
+    <value>jubsu_no</value>
+    <comment>jubsu_no</comment>
+  </data>
+  <data name="xEditGridCell68.HeaderText" xml:space="preserve">
+    <value>pkout1001</value>
+    <comment>pkout1001</comment>
+  </data>
+  <data name="xEditGridCell69.HeaderText" xml:space="preserve">
+    <value>jubsu_gubun</value>
+    <comment>jubsu_gubun</comment>
+  </data>
+  <data name="xEditGridCell7.HeaderText" xml:space="preserve">
+    <value>last_naewon_date</value>
+    <comment>last_naewon_date</comment>
+  </data>
+  <data name="xEditGridCell8.HeaderText" xml:space="preserve">
+    <value>last_doctor</value>
+    <comment>last_doctor</comment>
+  </data>
+  <data name="xEditGridCell9.HeaderText" xml:space="preserve">
+    <value>last_naewon_type</value>
+    <comment>last_naewon_type</comment>
+  </data>
+  <data name="xEditGridCell90.HeaderText" xml:space="preserve">
+    <value>Department</value>
+    <comment>診療科</comment>
+  </data>
+  <data name="xEditGridCell92.HeaderText" xml:space="preserve">
+    <value>pkoutsang</value>
+    <comment>pkoutsang</comment>
+  </data>
+  <data name="xEditGridCell93.HeaderText" xml:space="preserve">
+    <value>Classified data</value>
+    <comment>データ区分</comment>
+  </data>
+  <data name="xEditGridCell94.HeaderText" xml:space="preserve">
+    <value>Pay</value>
+    <comment>会計フラグ</comment>
+  </data>
+  <data name="xLabel1.Text" xml:space="preserve">
+    <value>Disease</value>
+    <comment>傷病</comment>
+  </data>
+  <data name="xLabel3.Text" xml:space="preserve">
+    <value>Patient code</value>
+    <comment>患者番号</comment>
+  </data>
+  <data name="xLabel7.Text" xml:space="preserve">
+    <value>/</value>
+    <comment>/</comment>
+  </data>
+  <data name="xLabel7Name.Text" xml:space="preserve">
+    <value>/</value>
+    <comment>/</comment>
+  </data>
+  <data name="xLabel8.Text" xml:space="preserve">
+    <value>(kg/cm)</value>
+    <comment>(kg/cm)</comment>
+  </data>
+  <data name="xLabel8Name.Text" xml:space="preserve">
+    <value>(kg/cm)</value>
+    <comment>(kg/cm)</comment>
+  </data>
+</root>

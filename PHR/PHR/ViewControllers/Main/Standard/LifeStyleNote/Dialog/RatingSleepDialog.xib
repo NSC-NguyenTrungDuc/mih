@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RatingSleepDialog">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BYO-Ky-bqL">
+                    <rect key="frame" x="30" y="184" width="260" height="200"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqV-xH-9TB">
+                            <rect key="frame" x="230" y="0.0" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="In7-Ay-iNd"/>
+                                <constraint firstAttribute="height" constant="30" id="JM9-ss-FUo"/>
+                            </constraints>
+                            <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="8"/>
+                            <state key="normal" image="Icon_Close"/>
+                            <connections>
+                                <action selector="actionHidden:" destination="iN0-l3-epB" eventType="touchUpInside" id="Tlh-HA-Kqu"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You had just woken!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNR-v5-Agt">
+                            <rect key="frame" x="66" y="20" width="129" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How was your sleep?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djh-bE-bjl">
+                            <rect key="frame" x="52" y="42" width="156" height="20"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pio-2f-6BG">
+                            <rect key="frame" x="10" y="62" width="240" height="50"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="gOb-hH-HlR"/>
+                            </constraints>
+                        </view>
+                        <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pcH-Vg-GeD">
+                            <rect key="frame" x="90" y="151" width="80" height="1"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="A9R-WP-Ggv"/>
+                                <constraint firstAttribute="height" constant="1" id="pAh-uO-rHb"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 Stars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKb-Hd-8XT">
+                            <rect key="frame" x="103" y="124" width="54" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUD-w9-zI4">
+                            <rect key="frame" x="70" y="162" width="120" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="omL-6j-MSm"/>
+                            </constraints>
+                            <state key="normal" title="Rating your sleep">
+                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="actionRatingSleep:" destination="iN0-l3-epB" eventType="touchUpInside" id="Wc7-xF-bh4"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="ZNR-v5-Agt" firstAttribute="top" secondItem="BYO-Ky-bqL" secondAttribute="top" constant="20" id="2U5-6P-5Om"/>
+                        <constraint firstItem="NUD-w9-zI4" firstAttribute="top" secondItem="pcH-Vg-GeD" secondAttribute="bottom" constant="10" id="2Wf-Ff-s95"/>
+                        <constraint firstItem="Pio-2f-6BG" firstAttribute="centerX" secondItem="BYO-Ky-bqL" secondAttribute="centerX" id="Bq5-Iu-vok"/>
+                        <constraint firstItem="bqV-xH-9TB" firstAttribute="top" secondItem="BYO-Ky-bqL" secondAttribute="top" id="Ldl-kd-Td6"/>
+                        <constraint firstAttribute="trailing" secondItem="bqV-xH-9TB" secondAttribute="trailing" id="Phe-5u-XVG"/>
+                        <constraint firstItem="djh-bE-bjl" firstAttribute="top" secondItem="ZNR-v5-Agt" secondAttribute="bottom" constant="5" id="QCx-c8-KZf"/>
+                        <constraint firstItem="Pio-2f-6BG" firstAttribute="leading" secondItem="BYO-Ky-bqL" secondAttribute="leading" constant="10" id="Qhz-Tn-hdb"/>
+                        <constraint firstAttribute="height" constant="200" id="Szj-ki-RXI"/>
+                        <constraint firstItem="djh-bE-bjl" firstAttribute="centerX" secondItem="BYO-Ky-bqL" secondAttribute="centerX" id="WjP-le-hi5"/>
+                        <constraint firstItem="NUD-w9-zI4" firstAttribute="leading" secondItem="BYO-Ky-bqL" secondAttribute="leading" constant="70" id="Zf4-JP-OhQ"/>
+                        <constraint firstItem="pcH-Vg-GeD" firstAttribute="centerX" secondItem="BYO-Ky-bqL" secondAttribute="centerX" id="adc-cv-fgg"/>
+                        <constraint firstItem="oKb-Hd-8XT" firstAttribute="top" secondItem="Pio-2f-6BG" secondAttribute="bottom" constant="12" id="dSg-Ib-Sif"/>
+                        <constraint firstItem="Pio-2f-6BG" firstAttribute="top" secondItem="djh-bE-bjl" secondAttribute="bottom" id="oFo-dG-G0T"/>
+                        <constraint firstItem="ZNR-v5-Agt" firstAttribute="centerX" secondItem="BYO-Ky-bqL" secondAttribute="centerX" id="paB-1v-iiC"/>
+                        <constraint firstItem="NUD-w9-zI4" firstAttribute="centerX" secondItem="BYO-Ky-bqL" secondAttribute="centerX" id="q3j-Dr-9Lv"/>
+                        <constraint firstItem="pcH-Vg-GeD" firstAttribute="top" secondItem="oKb-Hd-8XT" secondAttribute="bottom" constant="6" id="ypm-yr-9et"/>
+                        <constraint firstItem="oKb-Hd-8XT" firstAttribute="centerX" secondItem="BYO-Ky-bqL" secondAttribute="centerX" id="zhG-WU-dV0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="BYO-Ky-bqL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="4wU-5A-bnn"/>
+                <constraint firstItem="BYO-Ky-bqL" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="cZc-Ip-HUd"/>
+                <constraint firstItem="BYO-Ky-bqL" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="wZE-fx-YLO"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outlet property="btnRatingSleep" destination="NUD-w9-zI4" id="JXQ-v5-mnP"/>
+                <outlet property="lblHowWasYourSleep" destination="djh-bE-bjl" id="4XI-NZ-HLz"/>
+                <outlet property="lblNumberStar" destination="oKb-Hd-8XT" id="DTT-Cx-dg3"/>
+                <outlet property="lblYouHadJustWoken" destination="ZNR-v5-Agt" id="Kl7-Fq-u9V"/>
+                <outlet property="viewContent" destination="BYO-Ky-bqL" id="s6K-Ui-r4O"/>
+                <outlet property="viewRatingBar" destination="Pio-2f-6BG" id="wfR-Po-aJX"/>
+            </connections>
+            <point key="canvasLocation" x="159" y="313"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Icon_Close" width="10" height="11"/>
+    </resources>
+</document>

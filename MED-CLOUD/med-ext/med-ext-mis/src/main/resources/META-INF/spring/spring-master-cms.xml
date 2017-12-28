@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:cache="http://www.springframework.org/schema/cache"
+       xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+       http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd
+       http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+	   http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <context:property-placeholder location="file:${configPath}/configs.properties"/>
+
+    <context:component-scan base-package="nta.med" >
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Service"/>
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Component"/>
+
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+    <bean id="api.rpc.service" abstract="true">
+        <property name="strict" value="true"/>
+    </bean>
+    <bean id="api.rpc.transport" class="nta.med.ext.support.rpc.RpcExtTransport.FactoryImpl">
+        <property name="connectTimeout" value="10000" />
+        <property name="reconnectInterval" value="15000" />
+        <property name="host" value="${socket.host}" />
+        <property name="port" value="${socket.port}" />
+    </bean>
+
+    <bean id="api.rpc.service.executor" class="nta.med.core.common.async.impl.AsyncExecutorImpl" init-method="start">
+        <constructor-arg value="mis.service.executor"/>
+        <property name="shards" value="${mis.service.executor.shards}"/>
+    </bean>
+
+    <bean id="api.rpc.exporter" class="nta.med.ext.support.rpc.RpcExtExporter" init-method="start">
+        <constructor-arg name="authRetryIntervalInSeconds" value="10"/>
+        <constructor-arg name="hospCode" value="${kcck.hospCode}" />
+        <constructor-arg name="username" value="${kcck.username}" />
+        <constructor-arg name="password" value="${kcck.password}" />
+        <constructor-arg name="eventStoreFile" value="${configPath}/eventstore.dat" />
+        <property name="soSendBufferSize" value="131072"/>
+        <property name="soRecvBufferSize" value="131072"/>
+        <property name="soSendBufferLowWaterMark" value="131072"/>
+        <property name="soSendBufferHighWaterMark" value="524288"/>
+        <property name="transportFactory" ref="api.rpc.transport" />
+        <property name="systemRpcService" ref="systemRpcService" />
+        <property name="services">
+            <list>
+                <ref bean="hospitalRpcService"/>
+                <ref bean="systemRpcService"/>
+                <ref bean="patientRpcService"/>
+                <ref bean="bookingRpcService"/>
+            </list>
+        </property>
+
+        <property name="subscribers">
+            <list>
+                <ref bean="bookingHandler"/>
+            </list>
+        </property>
+		
+		<property name="capabilities">
+            <list>
+                <util:constant static-field="nta.med.ext.support.glossary.Capability.GET_MIS_TOKEN" />
+                <util:constant static-field="nta.med.ext.support.glossary.Capability.GET_MIS_SURVEY_LINK" />
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="bookingHandler" class="nta.med.ext.cms.service.impl.SurveyServiceImpl.ListenerImpl" p:verbose="true"/>
+
+    <bean id="systemRpcService" parent="api.rpc.service" class="nta.med.ext.support.service.system.impl.SystemRpcServiceImpl" >
+		<property name="service" ref="systemService" />
+    </bean>
+
+    <bean id="patientRpcService" parent="api.rpc.service" class="nta.med.ext.support.service.patient.impl.PatientRpcServiceImpl">
+<!--         <property name="listener" ref="bookingHandler" /> -->
+    </bean>
+
+    <bean id="hospitalRpcService" parent="api.rpc.service" class="nta.med.ext.support.service.hospital.impl.HospitalRpcServiceImpl">
+    </bean>
+    
+	<bean id="bookingRpcService" parent="api.rpc.service" class="nta.med.ext.support.service.booking.impl.BookingRpcServiceImpl" >
+		<property name="service" ref="surveyService" />
+		<property name="listener" ref="bookingHandler" />
+    </bean>
+    
+	<bean id="cache" class="nta.med.ext.cms.caching.InmemoryTokenStore" init-method="intConfig" >
+        <property name="expire" value="${guava.expire}"></property>
+        <property name="maximumSize" value="${guava.maximumSize}"></property>
+    </bean>
+	
+    <context:annotation-config/>
+    <!-- Enable @AspectJ support -->
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+    <tx:annotation-driven transaction-manager="cmsTransactionManager" />
+
+    <aop:config>
+        <aop:pointcut id="pointcut" expression="execution(* nta.med.ext.cms..*(..)) &amp;&amp; !within(nta.med.common.glossary.Lifecyclet+)" />
+        <aop:advisor advice-ref="monitorInterceptor" pointcut-ref="pointcut" />
+    </aop:config>
+
+    <!--<context:component-scan base-package="nta.sfd.core.phr" />-->
+    <jpa:repositories base-package="nta.med.data.dao.cms" entity-manager-factory-ref="cmsEntityManagerFactory" transaction-manager-ref="cmsTransactionManager"/>
+
+    <bean id="monitorInterceptor" class="nta.med.core.common.interceptor.MonitorInterceptor"
+          p:enterMessage="Entering $[targetClassShortName].$[methodName]($[arguments])."
+          p:exitMessage="Leaving $[targetClassShortName].$[methodName](..) with return value $[returnValue], took $[invocationTime]ms."
+          p:hideProxyClassNames="true" c:ignoreExceptions="false" />
+
+    <tx:annotation-driven proxy-target-class="true"/>
+
+    <bean id="beanFactory" class="nta.med.core.infrastructure.SpringBeanFactory" />
+
+    <bean id="configuration" class="nta.med.ext.cms.config.Configuration">
+        <constructor-arg name="schema" value="" />
+        <constructor-arg name="vertxClusterHost" value="${vertx.clusterHost}" />
+        <constructor-arg name="vertxClusterPort" value="${vertx.clusterPort}" />
+        <constructor-arg name="vertxInstances" value="${vertx.instances}" />
+        <constructor-arg name="vertxThreads" value="${vertx.threads}" />
+        <constructor-arg name="vertxWorker" value="${vertx.worker}" />
+        <constructor-arg name="vertxVerbose" value="${vertx.verbose}" />
+        <constructor-arg name="loginRequired" value="${vertx.loginRequired}" />
+        <constructor-arg name="shardable" value="${vertx.shardable}" />
+        <constructor-arg name="compressThreshold" value="${vertx.compressThreshold}" />
+        <constructor-arg name="compressible" value="${vertx.compressible}" />
+        <constructor-arg name="secretKey" value="${token.secret.key}" />
+        <constructor-arg name="exitOnFailDeployment" value="${vertx.exitOnFailDeployment}" />
+        <constructor-arg name="defaultTimeZone" value="${timezone.default}" />
+        <constructor-arg name="mbsFrontEnd" value="" />
+		<constructor-arg name="mbsBackEnd" value="" />
+		<constructor-arg name="misFrontEnd" value="" />
+		<constructor-arg name="misBackEnd" value="" />
+		<constructor-arg name="portal" value="" />
+		<constructor-arg name="misSurveyLink" value="${mis.survey.link}" />
+    </bean>
+
+    <cache:annotation-driven mode="proxy" cache-manager="cacheManager" />
+
+
+    <bean id="abstractDataSource" abstract="true">
+        <property name="driverClassName" value="${jdbc.driverClassName}"/>
+        <property name="maxActive" value="${jdbc.maxActive}"/>
+        <property name="maxIdle" value="${jdbc.maxIdle}"/>
+        <property name="testOnBorrow" value="true"/>
+        <property name="testOnReturn" value="true"/>
+        <property name="validationQuery" value="select 1"/>
+        <property name="minEvictableIdleTimeMillis" value="${jdbc.minEvictableIdleTimeMillis}" />
+        <property name="timeBetweenEvictionRunsMillis" value="${jdbc.timeBetweenEvictionRunsMillis}" />
+        <property name="removeAbandoned" value="true" />
+    </bean>
+
+    <!--phr DataSource Config-->
+    <bean id="cmsDataSource" parent="abstractDataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="url" value="${jdbc.cms.url}"/>
+        <property name="username" value="${jdbc.cms.username}"/>
+        <property name="password" value="${jdbc.cms.password}"/>
+    </bean>
+
+    <bean id="cmsEntityManagerFactory"
+          class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="dataSource" ref="cmsDataSource"/>
+        <property name="jpaVendorAdapter">
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+                <property name="databasePlatform" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
+                <property name="generateDdl" value="false"/>
+                <property name="showSql" value="true"/>
+            </bean>
+        </property>
+        <property name="packagesToScan" value="nta.med.core.domain" />
+    </bean>
+
+    <bean id="cmsTransactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="cmsEntityManagerFactory"/>
+    </bean>
+
+
+    <bean id="cacheManager" class="org.springframework.cache.support.SimpleCacheManager">
+        <property name="caches">
+            <set>
+                <bean class="org.springframework.cache.concurrent.ConcurrentMapCacheFactoryBean" p:name="DOCTOR_DEPARTMENT" />
+            </set>
+        </property>
+    </bean>
+</beans>

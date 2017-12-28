@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Summery For Home Nursing</title>
+	<script src="../js/pikaday.js"></script>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/handlebars.min.js"></script>	
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/app.js"></script>
+	<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+<form id="myform" action="" method="post">
+ 	<div>
+	
+		<div id="data-template">
+		</div>
+	</div>
+	<script id="some-template" type="text/x-handlebars-template"> 
+ 
+<div class="wrapper">
+
+	<h1 class="page-title text-center">あおば在宅クリニック看護サマリー</h1>
+	<table class="table" border="0" align="" cellpadding="0" cellspacing="0"> 
+	<tr><td style="width:80%"></td><td>作成日</td><td>{{PrintDate}}</td>
+	</tr>
+	</table>
+	<br/>
+	通院中の他医療機関：なし　　　　ケアマネージャー：<br/>
+	<table class="table full-w" border="1" align="" cellpadding="0" cellspacing="0">
+		<tr>
+			<td style="width:60%;">
+			利用者基本情報<br/>
+			氏名 &nbsp; {{PatientName1}} &nbsp;  {{{getSex Sex}}}<br/>
+			住所  {{Address1}}  TEL &nbsp; {{Tel}}<br/>
+			主治医  {{item_9_1}}  担当看護師  {{item_9_2}}  <br/>
+			初回訪問日（訪問診療）：  {{item_9_3}} 	在宅サービス利<br/>
+			用：無　　有　（内容：往診、訪問看護、ディサービス、貸しベッド）<br/>
+			他医療機関への通院頻度（なし）
+			</td>
+			<td>
+			医療保険：{{item_9_5}}<br/>
+			介護保険：{{item_9_6}}<br/>
+			居宅支援事業所名 :{{item_9_7}} <br/>
+			身障手帳：{{item_9_8}}<br/>
+			特定疾患医療給付：{{item_9_9}}<br/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+			現履歴<br/>
+			{{item_9_10}}
+			</td>
+			<td>
+			利用者の身体状況：<br/>
+			{{item_9_11}}
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				寝たきり度<br/>
+				{{item_9_11_0}}
+				{{#if item_9_11_Other}}
+					<div>
+					その他: {{item_9_11_OtherText}}
+					</div>
+				{{/if}}
+			</td>
+			<td>
+				{{CareDegree}}{{#if CareDegree}} {{CareDegree_0}} {{CareDegree_1}} {{CareDegree_2}} {{CareDegree_3}} {{/if}}
+				{{#if CareDegreeOther}}
+					<div>
+					その他: {{CareDegreeOtherText}}
+					</div>
+				{{/if}}				
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				日常生活活動（ADL)の状況
+				&nbsp;&nbsp; {{item_9_12_0}}  &nbsp;&nbsp; {{item_9_12_1}}   
+				&nbsp;&nbsp; {{item_9_12_2}}  &nbsp;&nbsp; {{item_9_12_3}} 
+				&nbsp;&nbsp; {{item_9_12_4}}  &nbsp;&nbsp; {{item_9_12_5}}				
+				{{#if item_9_12_Other}}
+					<div>
+					その他: {{item_9_12_OtherText}}
+					</div>
+				{{/if}}
+			</td>
+			<td>
+				生活支援の必要性<br/>
+				{{item_9_12}}				
+			</td>
+		</tr>	
+		
+		<tr>
+			<td class="item9">
+				<div >III.医療処置の必要性</div>
+<div>{{item_9_14_0}}</div>
+<div>{{item_9_14_1}}</div>
+<div>{{item_9_14_2}}</div>
+<div>{{item_9_14_3}}</div>
+<div>{{item_9_14_4}}</div>
+<div>{{item_9_14_5}}</div>
+<div>{{item_9_14_6}}</div>
+<div>{{item_9_14_7}}</div>
+<div>{{item_9_14_8}}</div>
+<div>{{item_9_14_9}}</div>
+<div>{{item_9_14_10}}</div>
+<div>{{item_9_14_11}}</div>
+<div>{{item_9_14_12}}</div>
+<div>{{item_9_14_13}}</div>
+<div>{{item_9_14_14}}</div>
+<div>{{item_9_14_15}}</div>				
+				<div style="clear: both;">				
+				{{#if item_9_14_Other}}				
+					その他: {{item_9_14_OtherText}}					
+				{{/if}}
+				</div>
+				主な内服薬：<br/>
+				{{item_3_3}}
+			</td>
+			<td>
+				具体的内容<br/>
+				{{item_9_13}}
+				................................................................................................<br/>
+				................................................................................................<br/>
+				................................................................................................<br/>
+				................................................................................................<br/>
+				................................................................................................<br/>
+				................................................................................................<br/>
+				................................................................................................<br/>
+				................................................................................................<br/>
+				................................................................................................<br/>
+				................................................................................................<br/>
+				
+			</td>
+		</tr>	
+		
+		
+		
+	</table>
+ </div>
+ 
+	</script> 
+</form>
+ 
+</body>
+</html>

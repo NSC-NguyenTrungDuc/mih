@@ -1,0 +1,105 @@
+<div class="leftpanelinner">
+    <ul class="nav nav-tabs nav-justified nav-sidebar">
+        <li class="tooltips active" data-toggle="tooltip" title="{{'Main Menu' | translate}}"><a data-toggle="tab" data-target="#mainmenu"><i class="tooltips fa fa-ellipsis-h"></i></a></li>
+        <li class="tooltips" data-toggle="tooltip" title="{{'Setting' | translate}}"><a data-toggle="tab" data-target="#setting"><i class="tooltips fa fa-cog"></i></a></li>
+    </ul>
+
+    <div class="tab-content">
+        <!-- ################# MAIN MENU ################### -->
+        <div class="tab-pane active" id="mainmenu">
+            <h5 class="sidebar-title">
+                <translate>Main Menu</translate>
+            </h5>
+            <ul class="nav nav-pills nav-stacked nav-quirk">
+                <li id="home"><a href="#/"><i class="fa fa-home"></i> <span><translate>Dashboard</translate></span></a></li>
+                <li class="nav-parent"><a href="#">
+                    <i class="fa fa-calendar-o"></i> <span><translate>Survey Management</translate></span></a>
+                    <ul class="children">
+                        <li><a href="#survey/list">
+                            <translate>Survey Library</translate>
+                        </a></li>
+                        <li><a href="#survey/create">
+                            <translate>Create Survey</translate>
+                        </a></li>
+                        <li><a href="#survey/setting">
+                            <translate>Survey Setting</translate>
+                        </a></li>
+                    </ul>
+                </li>
+                <li class="nav-parent">
+                    <a href="#"><i class="fa fa-question-circle"></i> <span><translate>Questions Management</translate></span></a>
+                    <ul class="children">
+                        <li><a href="#questions/list">
+                            <translate>Question Library</translate>
+                        </a></li>
+                        <li><a href="#questions/create">
+                            <translate>Create Question</translate>
+                        </a></li>
+                    </ul>
+                </li>
+                <li><a href="#/patient"><i class="fa fa-user"></i> <span><translate>Patient - Survey</translate></span></a></li>
+            </ul>
+        </div>
+        <!-- ################# Setting ################### -->
+        <div class="tab-pane" id="setting">
+            <h5 class="sidebar-title">
+                <translate>Menu favorites</translate>
+            </h5>
+            <ul class="nav nav-pills nav-stacked nav-quirk">
+                <li><a href="/#/survey/create"><i class="fa fa-calendar-o"></i> <span><translate>Create Survey</translate></span></a></li>
+                <li><a href="/#/questions/create"><i class="fa fa-question-circle"></i> <span><translate>Create Question</translate></span></a></li>
+            </ul>
+        </div>
+    </div><!-- tab-content -->
+</div><!-- leftpanelinner -->
+
+<script src="js/quirk.js"></script>
+<script>
+    $(document).ready(function () {
+        var currentUrl = window.location.hash;
+        $('#mainmenu li.nav-parent ul.children > li').each(function () {
+            var children = $(this).children('a');
+            var href = children.attr('href');
+            if (currentUrl.indexOf(href.substring(1)) > -1) {
+                $(this).toggleClass('active');
+                $(this).parent().parent().toggleClass('active');
+            }
+        });
+
+        $('#mainmenu ul.nav-pills > li').each(function () {
+            var children = $(this).children('a');
+            var href = children.attr('href');
+            if (currentUrl == '#/') {
+                $('#home').addClass('active');
+            } else {
+                if ($(this).hasClass('nav-parent') == false) {
+                    if (currentUrl.indexOf(href) > -1) {
+                        $(this).toggleClass('active');
+                        $('#home').removeClass('active');
+                    }
+                }
+            }
+        });
+
+        if (typeof(localStorage.activeMenu) != 'undefined') {
+            $('#setting li').each(function () {
+                var children = $(this).children('a');
+                var href = children.attr('href');
+                if (currentUrl.indexOf(href.substring(1)) > -1) {
+                    $('.tooltips:first-child').removeClass('active');
+                    $('#mainmenu').removeClass('active');
+                    $('.tooltips:last-child').addClass('active');
+                    $('#setting').addClass('active');
+                    $(this).toggleClass('active');
+                }
+            });
+        }
+        $('li a[data-target="#setting"]').click(function () {
+            localStorage.setItem('activeMenu', 'true');
+        });
+
+        $('li a[data-target="#mainmenu"]').click(function () {
+            localStorage.removeItem('activeMenu');
+        });
+    });
+</script>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<xs:schema xmlns:mmlSc="uri:mmlSc" elementFormDefault="qualified" targetNamespace="uri:mmlSc" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="facility">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="mmlSc:facilityName" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="facilityName">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="facilityCode" use="required">
+            <xs:simpleType>
+              <xs:restriction base="xs:NMTOKEN">
+                <xs:enumeration value="all" />
+                <xs:enumeration value="creator" />
+                <xs:enumeration value="experience" />
+                <xs:enumeration value="individual" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="tableId" type="xs:string" />
+          <xs:attribute name="facilityId" type="xs:string" />
+          <xs:attribute name="facilityIdType" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="person">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="mmlSc:personName" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="personName">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="personCode" use="required">
+            <xs:simpleType>
+              <xs:restriction base="xs:NMTOKEN">
+                <xs:enumeration value="all" />
+                <xs:enumeration value="creator" />
+                <xs:enumeration value="patient" />
+                <xs:enumeration value="individual" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="tableId" type="xs:string" />
+          <xs:attribute name="personId" type="xs:string" />
+          <xs:attribute name="personIdType" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="license">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="mmlSc:licenseName" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="licenseName">
+    <xs:complexType>
+      <xs:attribute name="licenseCode" type="xs:string" use="required" />
+      <xs:attribute name="tableId" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="department">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="mmlSc:departmentName" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="departmentName">
+    <xs:complexType>
+      <xs:attribute name="departmentCode" type="xs:string" use="required" />
+      <xs:attribute name="tableId" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

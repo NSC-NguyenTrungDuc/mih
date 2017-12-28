@@ -1,0 +1,170 @@
+import "rpc.proto";
+import "chts_model.proto";
+import "common_model.proto";
+
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "ChtsServiceProto";
+option (version) = "1.0.0";
+option (service) = "chts";
+
+//---Common Upadate Reponse
+
+
+//------[START]CHT0110U00---------
+
+message CHT0110U00GetCodeNameRequest{
+	optional string code_mode = 1;
+	optional string code = 2;
+}
+message CHT0110U00GetCodeNameResponse{
+	optional string code_name =1;
+	
+}
+message CHT0110U00ExecuteRequest{
+	repeated CHT0110U00grdCHT0110ItemInfo item_info = 1;
+	optional string user_id = 2;
+}
+message CHT0110U00grdCHT0110Request{
+	optional string sang_inx =1;
+	optional string page_number = 2;
+	optional string offset = 3;
+}
+message CHT0110U00grdCHT0110Response{
+	repeated CHT0110U00grdCHT0110ItemInfo grd_item = 1;
+}
+//------[END]CHT0110U00-----------
+
+// ---- [START] CHT0115Q01 ----
+message CHT0115Q01grdCHT0115Request{
+       optional string susik_detail_gubun = 1;
+       optional string page_number        = 2;
+       optional string offset             = 3;
+}
+
+message CHT0115Q01grdCHT0115Response{
+	repeated CHT0115Q01grdCHT0115Info list_grd_info = 1;
+}
+
+message CHT0115Q01TransactionalRequest{
+	repeated CHT0115Q01grdCHT0115Info list_info = 1;
+	optional string user_id = 2;
+}
+
+// ---- [END] CHT0115Q01 ----
+// ---- [START] CHT0117 ----
+message CHT0117GrdCHT0117InitRequest{
+	optional string query_date = 1;
+	optional string search_word = 2;
+	optional string page_number = 3;
+	optional string offset = 4;
+}
+
+message CHT0117GrdCHT0117InitResponse{
+	repeated CHT0117GrdCHT0117InitListItemInfo list_item_info = 1;
+}
+
+message CHT0117GrdCHT0118InitRequest{
+	optional string buwi= 1;
+	optional string query_date = 2;
+	optional string page_number = 3;
+	optional string offset = 4;
+}
+
+message CHT0117GrdCHT0118InitResponse{
+	repeated CHT0117GrdCHT0118InitListItemInfo list_item_info = 1;
+}
+
+message CHT0117LayNextSubBuwiCdRequest{
+}
+
+
+message CHT0117LayNextSubBuwiCdResponse{
+	optional string sub_buwi = 1;
+}
+
+
+message CHT0117grdCHT0117CheckRequest{
+	optional string buwi = 1;
+}
+
+
+message CHT0117grdCHT0117CheckResponse{
+	optional string chk_result = 1;
+}
+
+message CHT0117TransactionalRequest{
+    repeated  CHT0117GrdCHT0117InitListItemInfo list_input1 = 1;
+    repeated  CHT0117GrdCHT0118InitListItemInfo list_input2 = 2;
+    optional string user_id = 3;
+}
+// ---- [END] CHT0117 ----
+// ---- [END] CHT0110Q01 ----
+message CHT0110Q01GrdCHT0110MListRequest{
+		optional string sang_inx = 1;
+		optional string date = 2;
+		optional string io_gubun = 3;
+		optional string user_id = 4;
+}
+message CHT0110Q01GrdCHT0110MListResponse{
+		repeated CHT0110Q01GrdCHT0110MListInfo grd_list_item = 1;
+}
+// ---- [END] CHT0110Q01 ----
+
+// ---- [START]  CHT0115Q00 ----
+message CHT0115Q00GrdScPostRequest {
+	optional string susik_detail_gubun = 1;
+	optional string susik_name = 2;
+}
+message CHT0115Q00GrdScPostResponse {
+	repeated CHT0115Q00GrdScInfo grdsc_post_info = 1;
+}
+message CHT0115Q00GrdScPreRequest {
+    optional string susik_detail_gubun = 1;
+    optional string susik_name = 2;
+    optional string io_gubun = 3;
+    optional string user_id = 4;
+}
+message CHT0115Q00GrdScPreResponse {
+	repeated CHT0115Q00GrdScInfo grdsc_pre_info = 1;
+}
+message CHT0115Q00SusikCodeRequest {
+	optional string susik_code = 1;
+}
+message CHT0115Q00SusikCodeResponse {
+	repeated CHT0115Q00SusikCodeInfo susik_code_info = 1;
+}
+message CHT0115Q00LayoutCommonRequest {
+}
+message CHT0115Q00LayoutCommonResponse {
+	repeated ComboListItemInfo layout_common_info = 1;
+}
+// ---- [END]  CHT0115Q00 ----
+
+//[START] CHT0117Q00
+message CHT0117Q00DloCHT0117Request{
+}
+
+message CHT0117Q00DloCHT0117Response{
+    repeated CHT0117Q00DloCHT0117Info cht0117_info = 1;
+}
+
+message CHT0117Q00GrdCHT0118Request{
+    optional string gubun = 1;
+    optional string buwi = 2;
+    optional string buwi_name = 3;
+}
+
+message CHT0117Q00GrdCHT0118Response{
+    repeated CHT0117Q00GrdCHT0118Info grd0118_info = 1;
+}		
+//[END] CHT0117Q00
+
+//[START] CHT0113Q00
+message CHT0113Q00GrdCHT0113Request{
+        optional string disability_name = 1;
+        optional string date = 2;
+}
+message CHT0113Q00GrdCHT0113Response{
+        repeated CHT0113Q00GrdCHT0113Info grd_CHT0113_info = 1;
+}
+//[END] CHT0113Q00

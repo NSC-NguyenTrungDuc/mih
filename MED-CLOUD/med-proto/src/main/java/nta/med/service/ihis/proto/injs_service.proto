@@ -1,0 +1,571 @@
+import "rpc.proto";
+import "injs_model.proto";
+import "common_model.proto";
+import "system_service.proto";
+
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "InjsServiceProto";
+option (version) = "1.0.0";
+option (service) = "injs";
+
+//----[START]INJ1001U01-----
+message InjsINJ1001U01ActorListRequest {
+}
+
+message InjsINJ1001U01ActorListResponse {
+	repeated InjsINJ1001U01ActorListItemInfo actor_list_item = 1;
+}
+
+message InjsINJ1001U01DetailListRequest {
+	optional string bunho = 1;
+	optional string gwa = 2;
+	optional string doctor = 3;
+	optional string reser_date = 4;
+	optional string acting_date = 5;
+	optional string acting_flag = 6;
+}
+
+message InjsINJ1001U01DetailListResponse {
+	repeated InjsINJ1001U01DetailListItemInfo detail_list_item = 1;
+}
+
+message InjsINJ1001U01MasterListRequest {
+	optional string acting_flag = 1;
+	optional string reser_date = 2;
+	optional string gwa = 3;
+}
+
+message InjsINJ1001U01MasterListResponse {
+	repeated InjsINJ1001U01MasterListItemInfo master_list_item = 1;
+}
+
+message InjsINJ1001U01InfectionListRequest{
+	optional string bunho = 1;
+	optional string query_date = 2;
+}
+
+message InjsINJ1001U01InfectionListResponse{
+	repeated InjsINJ1001U01InfectionListItemInfo infection_list_item = 1;
+}
+
+message InjsINJ1001U01ScheduleRequest {
+	optional string bunho = 1;
+	optional string order_date = 2;
+	optional string post_order_yn = 3;
+	optional string pre_order_yn = 4;
+	optional string reser_date = 5;
+	optional string acting_flag = 6;
+}
+
+message InjsINJ1001U01ScheduleResponse {
+	repeated InjsINJ1001U01ScheduleItemInfo schedule_item = 1;
+}
+
+message InjsINJ1001U01DiseaseListRequest {
+	optional string bunho = 1;
+	optional string gwa = 2;
+	optional string reser_date = 3;
+}
+
+message InjsINJ1001U01DiseaseListResponse {
+	repeated InjsINJ1001U01DiseaseListItemInfo disease_list_item = 1;
+}
+
+message InjsINJ1001U01LabelNewListRequest {
+	optional string mix_group = 1;
+	optional string bunho = 2;
+	optional string gwa = 3;
+	optional string doctor = 4;
+	optional string jubsu_date = 5;
+	optional string group_ser = 6;
+	optional string fkinj1001 = 7;
+}
+
+message InjsINJ1001U01LabelNewListResponse {
+	repeated InjsINJ1001U01LabelNewListItemInfo label_new_list_item = 1;
+}
+
+message InjsINJ1001U01ReserDateListRequest {
+	optional string bunho = 1;
+	optional string doctor = 2;
+	optional string acting_flag = 3;
+	optional string reser_date = 4;
+}
+
+message InjsINJ1001U01ReserDateListResponse {
+	repeated DataStringListItemInfo reser_date = 1;
+}
+
+message InjsINJ1001U01TempListRequest {
+	optional string jubsu_date = 1;
+	optional string bunho = 2;
+	optional string doctor = 3;
+	optional string reser_date = 4;
+}
+
+message InjsINJ1001U01TempListResponse {
+	repeated InjsINJ1001U01TempListItemInfo temp_list_item = 1;
+}
+message INJ0102ComboListRequest {
+	optional string code_type = 1;
+}
+
+// Combo List by Code Type Response
+
+message INJ1001U01ComboListSortKeyRequest {
+	optional string code_type = 1;
+}
+
+message InjsINJ1001U01CplOrderStatusRequest {
+	optional string gubun = 1;
+	optional string bunho = 2;
+	optional string date = 3;
+	optional string jundal_part = 4;
+}
+
+message InjsINJ1001U01CplOrderStatusResponse {
+	optional string result = 1;
+}
+
+message InjsINJ1001U01PrintNameListRequest {
+	optional string ip_addr = 1;
+}
+
+message InjsINJ1001U01PrintNameListResponse {
+ 	repeated string print_name_list = 1;
+}
+
+message InjsINJ1001U01ChkbStateRequest {
+	optional string reser_date = 1;
+	optional string acting_flag = 2;
+	optional string bunho = 3;
+	optional string doctor = 4;
+}
+message InjsINJ1001U01ChkbStateResponse {
+	optional string result = 1;
+}
+
+message InjsINJ1001U01SettingPrintRequest {
+	optional string user_id = 1;
+	optional string b_print_name = 2;
+	required string ip_addr = 3;
+}
+
+message InjsINJ1001U01SettingPrintResponse {
+	optional bool result = 1;
+}
+message INJ1001FormJusaBedLayGroupedRequest {
+	optional string hosp_code = 1;
+    optional string code_name = 2;
+ }
+ message INJ1001FormJusaBedLayGroupedResponse {
+ 	repeated INJ1001FormJusaBedLayPatientItemInfo lay_patient_item = 1;
+    repeated INJ1001U01FormJusaBedLayHosilItemInfo bed_lay_hosil_item = 2;
+    repeated string code_name = 3;
+ }
+ message InjsINJ1001U01CommentListRequest {
+	optional string bunho = 1;
+	optional string commt_gubun = 2;
+}
+message InjsINJ1001U01CommentListResponse {
+	repeated DataStringListItemInfo comments = 1;
+}
+message InjsINJ1001U01AllergyListRequest {
+	optional string bunho = 1;
+	optional string query_date = 2;
+}
+message InjsINJ1001U01AllergyListResponse {
+	repeated DataStringListItemInfo allergy_info = 1;
+}
+message INJ1001U01Grouped2Request {
+	optional string bunho = 1;
+	optional string query_date = 2;
+	optional string order_date = 3;
+	optional string post_order_yn = 4;
+	optional string pre_order_yn = 5;
+	optional string reser_date = 6;
+	optional string acting_flag = 7;
+	optional string gwa = 8;
+	optional string doctor = 9;
+	optional string acting_date = 10;
+	optional string commt_gubun = 11;
+}
+message INJ1001U01Grouped2Response {
+	repeated InjsINJ1001U01ScheduleItemInfo grd_ocs1003_list_item = 1;
+	repeated InjsINJ1001U01DetailListItemInfo grd_detail_list_item = 2;
+	repeated InjsINJ1001U01InfectionListItemInfo grd_nur1017_list_item = 3;
+	repeated InjsINJ1001U01DiseaseListItemInfo grd_sang_list_item = 4;
+	repeated DataStringListItemInfo grd_out0106_list_item = 5;
+	repeated DataStringListItemInfo grd_nur1016_list_item = 6;
+}
+message INJ1001U01GridDetailSaveLayoutRequest {
+	optional string user_id = 1;
+	optional string upd_id = 2;
+	repeated InjsINJ1001U01DetailListItemInfo item_info = 3;
+}
+message INJ1001U01SaveLayoutRequest{
+	optional string user_id = 1;
+	optional string upd_id  = 2;
+	repeated INJ1001U01SaveLayoutInfo save_layout_item = 3;
+}
+//----[END]INJ1001U01-----
+message INJ0102CodeNameListRequest {
+	optional string code_type = 1;
+	optional string code = 2;
+}
+
+message INJ0102CodeNameListResponse {
+	repeated DataStringListItemInfo code_name_list = 1;
+}
+
+message InjsINJ1001U01OrderDateListRequest {
+	optional string pkinj1002 = 1;
+}
+
+message InjsINJ1001U01OrderDateListResponse {
+	repeated DataStringListItemInfo order_date = 1;
+}
+
+message InjsINJ1001U01UpdateRequest {
+	optional string acting_flag = 1;
+	optional string acting_date = 2;
+	optional string tonggye_code = 3;
+	optional string mix_group = 4;
+	optional string jujongja = 5;
+	optional string upd_id = 6;
+	optional string silsi_remark = 7;
+	required string pkinj1002 = 8;
+}
+
+// Update Response
+
+message INJ1002R01LayQuery1Request {
+    optional string from_date = 1;
+    optional string to_date = 2;
+}
+
+message INJ1002R01LayQuery2Request {
+    optional string from_date = 1;
+    optional string to_date = 2;
+}
+
+message INJ1002R01LayQueryResponse {
+    repeated INJ1002R01LayQueryListItemInfo lay_querry_list = 1;
+}
+
+message INJ1002U01InitializeRequest {
+    optional string bunho_1 = 1;
+    optional string reser_date = 2;
+    optional string bunho_2 = 3;
+}
+
+message INJ1002U01InitializeResponse {
+    repeated INJ1002U01GrdOrderListItemInfo grdOrder_list = 1;
+    repeated ComboListItemInfo xEditGridCell19_list = 2;
+    repeated string reser_date = 3;
+}
+
+message INJ1002U01UpdateINJ1002Request {
+    optional string reser_date = 1;
+    optional string pkinj1002 = 2;
+}
+
+message INJ0101U00GrdMasterRequest{
+}
+
+message INJ0101U00GrdMasterResponse{
+    repeated ComboListItemInfo list_item = 1;
+}
+
+message INJ0101U00GrdDetailRequest{
+    optional string code_type = 1;
+}
+
+message INJ0101U00GrdDetailResponse{
+    repeated INJ0101U00GrdDetailInfo list_item = 1;
+}
+
+message INJ0101U00GrdMasterGridColumnChangedRequest{
+    optional string code_type = 1;
+}
+
+message INJ0101U00GrdMasterGridColumnChangedResponse{
+    optional string y_value = 1;
+}
+
+message INJ0101U00GrdDetailGridColumnChangedRequest{
+    optional string code_type = 1;
+    optional string code = 2;
+}
+
+message INJ0101U00GrdDetailGridColumnChangedResponse{
+    optional string y_value = 1;
+}
+
+message INJ0101U00UpdateINJ0101Request{
+    optional string row_state = 1;
+    optional string user_id = 2;
+    optional string code_type = 3;
+    optional string code_type_name = 4;
+}
+
+message INJ0101U00UpdateINJ0102Request{
+    optional string row_state = 1;
+    optional string user_id = 2;
+    optional string code_type = 3;
+    optional string code = 4;
+    optional string code_name = 5;
+}
+message INJ0101U00GrdDetailSaveLayoutRequest{
+	optional string user_id = 1;
+	repeated INJ0101U00GrdDetailInfo grd_list = 2;
+}
+
+// [START] INJ1001U01
+
+message INJ1001U01LayCommonRequest {
+	optional string user_id = 1;
+    optional string hosp_code = 2;
+}
+message INJ1001U01LayCommonResponse {
+	repeated DataStringListItemInfo item_info = 1;
+}
+message INJ1001FormJusaBedLayPatientListRequest {
+	optional string hosp_code = 1;
+}
+message INJ1001FormJusaBedLayPatientListResponse {
+	repeated INJ1001FormJusaBedLayPatientItemInfo lay_patient_item = 1;
+}
+message INJ1001U01FormJusaBedLayHosilListRequest {
+	optional string hosp_code = 1;
+}
+message INJ1001U01FormJusaBedLayHosilListResponse {
+	repeated INJ1001U01FormJusaBedLayHosilItemInfo lay_patient_item = 1;
+}
+message INJ1001U01FormJusaBedLayPatientRequest {
+	optional string code_name = 1;
+	optional string hosp_code = 2;
+}
+message INJ1001U01FormJusaBedLayPatientResponse {
+	repeated string code_name = 1;
+}
+
+message INJ1001U01GrdOCS1003Request {
+	optional string hosp_code = 1;
+	optional string language = 2 ;
+	optional string bunho = 3;
+	optional string start_date = 4;
+	optional string end_date = 5;
+}
+message INJ1001U01GrdOCS1003Response {
+	repeated INJ1001U01GrdOCS1003ItemInfo grd_ocs1003_item = 1;
+}
+message INJ1001U01CboTimeRequest {
+}
+message INJ1001U01CboTimeResponse {
+	repeated ComboListItemInfo grd_ocs1003_item = 1;
+}
+message INJ1001U01XEditGridCell88Request {
+}
+message INJ1001U01XEditGridCell88Response {
+	repeated ComboListItemInfo xedit_grid_cell88_item = 1;
+}
+message INJ1001U01XEditGridCell89Request {
+}
+message INJ1001U01XEditGridCell89Response {
+	repeated INJ1001U01XEditGridCell89ItemInfo xedit_grid_cell89_item = 1;
+}
+message INJ1001U01MlayConstantInfoRequest {
+}
+message INJ1001U01MlayConstantInfoResponse {
+	repeated ComboListItemInfo item = 1;
+} 
+// [END] INJ1001U01
+
+message INJ1001U01GrdSangRequest {
+	optional string hosp_code = 1;
+	optional string bunho = 2;
+	optional string gwa = 3;
+	optional string reser_date = 4;
+}
+
+message INJ1001U01GrdSangResponse {
+	repeated INJ1001U01GrdSangItemInfo schedule_item = 1;
+}
+
+message INJ1001U01GroupedRequest {
+	optional string bunho = 1;
+	optional string order_date = 2;
+	optional string post_order_yn = 3;
+	optional string pre_order_yn = 4;
+	optional string reser_date = 5;
+	optional string acting_flag = 6;
+	optional string gwa = 7;
+	optional string doctor = 8;
+	optional string acting_date = 9;
+	optional string hosp_code = 10;
+}
+
+message INJ1001U01GroupedResponse {
+	repeated InjsINJ1001U01ScheduleItemInfo schedule_item = 1;
+	repeated InjsINJ1001U01DetailListItemInfo detail_list_item = 2;
+	repeated INJ1001U01GrdSangItemInfo grd_sang_item = 3;
+}
+
+
+// ---- [START] INJ1002U01- NEW------
+message INJ1002U01GrdOrderRequest {
+	optional string bunho = 1;
+	optional string reser_date = 2;
+}
+
+message INJ1002U01GrdOrderResponse {
+	repeated INJ1002U01GrdOrderListItemInfo grdOrder_list = 1;
+}
+
+message INJ1002U01LayReserDateRequest {
+	optional string bunho = 1;
+}
+
+message INJ1002U01LayReserDateResponse {
+	repeated DataStringListItemInfo reser_date = 1;
+}
+
+message INJ1002U01SaveLayoutRequest {
+	repeated INJ1002U01GrdOrderListItemInfo grdOrder_info = 1;
+}
+
+
+message INJ1002U01LoadComboBoxRequest {
+        
+}
+
+message INJ1002U01LoadComboBoxResponse {
+    repeated ComboListItemInfo cbo_list = 1;
+}
+// ---- [END] INJ1002U01- NEW---------
+
+// [START] INJ0101U01
+message INJ0101U01GrdMasterRequest{
+
+}
+message INJ0101U01GrdMasterResponse{
+	repeated INJ0101U01GrdMasterItemInfo grd_master_item_info = 1;
+}
+message INJ0101U01GrdDetailRequest{
+	optional string code_type = 1;
+}
+message INJ0101U01GrdDetailResponse{
+	repeated INJ0101U01GrdDetailItemInfo grd_detail_item_info = 1;
+}
+message INJ0101U01GrdMasterCheckRequest{
+	optional string code_type = 1;
+}
+message INJ0101U01GrdCheckResponse{
+	optional string result = 1;
+}
+message INJ0101U01GrdDetailCheckRequest{
+	optional string code_type = 1;
+	optional string code = 2;
+}
+message INJ0101U01SaveLayoutRequest{
+	optional string user_id = 1;
+	repeated INJ0101U01GrdMasterItemInfo grd_master_item_info = 2;
+	repeated INJ0101U01GrdDetailItemInfo grd_detail_item_info = 3;
+}
+// [END] INJ0101U01
+
+// [START] Composite
+message INJ1001U01CompositeFirstRequest {
+	optional INJ1001U01CboTimeRequest cbo_time_param          = 1;
+	optional InjsINJ1001U01MasterListRequest grd_master_param = 2;
+	optional GetPatientByCodeRequest patient_info 			  = 3;
+	optional InjsINJ1001U01CplOrderStatusRequest order_status = 4;
+    optional INJ1001U01MlayConstantInfoRequest constant_info  = 5;
+    optional InjsINJ1001U01ScheduleRequest schedule 		  = 6;
+    optional InjsINJ1001U01DetailListRequest detailt_list 	  = 7;
+}
+message INJ1001U01CompositeFirstResponse {
+	optional INJ1001U01CboTimeResponse cbo_time_list               = 1;
+	optional InjsINJ1001U01MasterListResponse grd_master_list      = 2;
+	optional GetPatientByCodeResponse patient_info 			       = 3;
+	optional InjsINJ1001U01CplOrderStatusResponse order_status_res = 4;
+    optional INJ1001U01MlayConstantInfoResponse constant_info_res  = 5;
+    optional InjsINJ1001U01ScheduleResponse schedule_res           = 6;
+    optional InjsINJ1001U01DetailListResponse detailt_list_res     = 7;
+}
+message INJ1001U01CompositeSecondRequest {
+	optional InjsINJ1001U01DetailListRequest grd_detail    = 1;
+	optional INJ1001U01GrdSangRequest grd_sang             = 2;
+	optional InjsINJ1001U01CplOrderStatusRequest cpl_order = 3;
+	optional INJ1001U01Grouped2Request grouped             = 4;
+	optional InjsINJ1001U01AllergyListRequest allergy      = 5;
+	optional InjsINJ1001U01ReserDateListRequest reser_date = 6;
+	repeated InjsINJ1001U01ChkbStateRequest chkb_state     = 7;
+	optional GetPatientByCodeRequest patient_info          = 8;
+	optional InjsINJ1001U01ScheduleRequest schedule        = 9;
+	optional INJ1001U01MlayConstantInfoRequest cons_info   = 10;
+}
+message INJ1001U01CompositeSecondResponse {
+	optional InjsINJ1001U01DetailListResponse grd_detail    = 1;
+	optional INJ1001U01GrdSangResponse grd_sang             = 2;
+	optional InjsINJ1001U01CplOrderStatusResponse cpl_order = 3;
+	optional INJ1001U01Grouped2Response grouped             = 4;
+	optional InjsINJ1001U01AllergyListResponse allergy      = 5;
+	optional InjsINJ1001U01ReserDateListResponse reser_date = 6;
+	repeated InjsINJ1001U01ChkbStateResponse chkb_state     = 7;
+	optional GetPatientByCodeResponse patient_info          = 8;
+	optional InjsINJ1001U01ScheduleResponse schedule        = 9;
+	optional INJ1001U01MlayConstantInfoResponse cons_info   = 10;
+}
+
+message INJ1001U01CompositeLoadDataRequest {  
+    optional BuseoListRequest buseo                        = 1;
+    optional INJ1001U01XEditGridCell88Request grd_cell_88  = 2;
+    optional INJ1001U01XEditGridCell89Request grd_cell_89  = 3;
+    optional FormEnvironInfoSysDateRequest info_sys_date   = 4;
+}
+message INJ1001U01CompositeLoadDataResponse {
+    optional BuseoListResponse buseo  						= 1;
+    optional INJ1001U01XEditGridCell88Response grd_cell_88  = 2;
+    optional INJ1001U01XEditGridCell89Response grd_cell_89  = 3;
+    optional StringResponse result    					    = 4;
+}
+
+// [END] Composite
+
+message INJ0000Q00layActDateRequest { 
+   	optional string hosp_code 		= 1;
+   	optional string bunho 			= 2;
+   	optional string message_gubun 	= 3;
+}
+message INJ0000Q00layActDateResponse { 
+   	repeated INJ0000Q00layActDateInfo lay_item 	= 1;
+}
+message INJ0000Q00layActingRequest { 
+    optional string hosp_code 		= 1;
+    optional string bunho 			= 2;
+    optional string act_date 		= 3;
+    optional string message_gubun 	= 4;
+}
+message INJ0000Q00layActingResponse { 
+   	repeated INJ0000Q00layActingInfo lay_item 	= 1;
+}
+message INJ0000Q00layOrderRequest { 
+    optional string hosp_code 		= 1;
+    optional string bunho 			= 2;
+    optional string gubun 			= 3;
+    optional string message_gubun 	= 4;
+}
+message INJ0000Q00layOrderResponse { 
+   	repeated INJ0000Q00layOrderInfo lay_item 	= 1;
+}
+message INJ0000Q00layOrderListRequest { 
+    optional string hosp_code 		= 1;
+    optional string bunho 			= 2;
+    optional string gubun 			= 3;
+    optional string message_gubun 	= 4;
+}
+message INJ0000Q00layOrderListResponse { 
+   	repeated INJ0000Q00layActDateInfo lay_item 	= 1;
+}

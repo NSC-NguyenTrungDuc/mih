@@ -1,0 +1,1189 @@
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "BassModelProto";
+
+// ----[START] BAS0270U00
+message BAS0270U00FwdDoctorInfo {
+	optional string doctor = 1;
+	optional string doctor_name = 2;
+	optional string doctor_gwa = 3;
+}
+
+message BAS0270U00GrdBAS0271Info {
+	optional string doctor = 1;
+	optional string doctor_name = 2;
+	optional string doctor_grade = 3;
+	optional string ctor_grade_name = 4;
+	optional string start_date  = 5;
+	optional string jubsu_yn = 6;
+	optional string reser_yn = 7;
+	optional string end_date = 8;
+	optional string ocs_status = 9;
+	optional string license_bunho = 10;
+	optional string sabun = 11;
+	optional string doctor_sign = 12;
+	optional string cp_doctor_yn = 13;
+	optional string doctor_name2 = 14;
+	optional string mayak_license = 15;
+	optional string tonggye_doctor = 16;
+	optional string common_doctor_yn = 17;
+	optional string button = 18;
+	optional string doctor_color = 19;
+	optional string data_row_state = 20;
+	optional string fistname_kanji = 21;
+    optional string lastname_kanji = 22;
+    optional string fistname_kana = 23;
+    optional string lastname_kana = 24;
+}
+
+message BAS0270U00GrdBAS0272Info {
+	optional string doctor = 1;
+	optional string doctor_gwa = 2;
+	optional string doctor_gwa_name = 3;
+	optional string main_gwa_yn = 4;
+	optional string start_date = 5;
+	optional string end_date = 6;
+	optional string sabun = 7;
+	optional string end_yn = 8;
+    optional string out_discuss_yn = 9;
+    optional string reser_out_yn = 10;
+    optional string data_row_state = 11;   
+}
+
+message BAS0270U00LayInfo {
+	optional string name = 1;
+}
+
+// ----[END] BAS0270U00
+
+// ----[START] BAS0101U00 ------
+message BAS0101U00PrBasGridColumnChangedItemInfo{
+	optional string dup_yn = 1;
+	optional string error = 2;
+}
+message  BAS0101U00grdDetailItemInfo{
+	optional string code_type = 1;
+	optional string code = 2;
+	optional string code_name = 3;
+	optional string group_key = 4;
+	optional string remark = 5;
+	optional string sort_key = 6;
+	optional string row_state = 7;
+}
+
+message BAS0101U00GrdMasterItemInfo {
+    optional string code_type = 1;
+    optional string code_type_name = 2;
+    optional string row_state = 3;
+}
+// ----[END]   BAS0101U00 ------
+
+// ----[START]   BAS0123U00 ------
+message BAS0123U00FwkZipCodeInfo {
+	optional string zip_code = 1;
+	optional string zip_name1 = 2;
+	optional string zip_name2 = 3;
+	optional string zip_name3 = 4;
+}
+
+message BAS0123U00GrdBAS0123Info {
+	optional string zip_code = 1;
+	optional string zip_name1 = 2;
+	optional string zip_name2 = 3;
+	optional string zip_name3 = 4;
+	optional string zip_name_gana1 = 5;
+	optional string zip_name_gana2 = 6;
+	optional string zip_name_gana3 = 7;
+	optional string zip_tonggye = 8;
+	optional string zip_code1 = 9;
+    optional string zip_code2 = 10;
+    optional string data_row_state = 11;
+}
+
+// ----[END]   BAS0123U00 ------
+
+//-----[START] BAS0001U00------
+message BAS0001U00FbxDodobuHyeunDataValidatingInfo{
+	optional string code_name =1;
+	optional string sort_key =2;
+}
+message BAS0001U00grdDetailItemInfo{
+	optional string code_type = 1;
+	optional string code =2;
+	optional string code_name =3;
+	optional string group_key = 4;
+	optional string remark = 5;
+	optional string sort_key = 6; 
+	optional string data_row_state = 11;
+}
+
+//-----[END] BAS0001U00-------
+
+//-----[START]BAS0210U00------
+message BAS0210U00grdBAS0210ItemInfo{
+	optional string gubun=1;
+	optional string gubun_name=2;
+	optional string retrieve_yn=3;
+	optional string start_date=4;
+	optional string end_date=5;
+	optional string johap_gubun=6;
+	optional string johap_name=7;
+	optional string gonbi_yn=8;
+	optional string validation_check = 9;
+	optional string data_row_state = 10;
+}
+message BAS0210U00ExecuteItemInfo{
+	optional string gubun=1;
+	optional string start_date =2;
+	optional string user_id=3;
+	optional string end_date=4;
+	optional string gubun_name=5;
+	optional string johap_gubun=6;
+	optional string gongbi_yn=7;
+	optional string row_state =8;
+	optional string validation_check =9;
+}
+message BAS0210U00grdBAS0210GridColumnChangedItemInfo{
+	optional string code = 1;
+    optional string code_name = 2;
+}
+//-----[END]BAS0210U00--------
+
+// -------[START] BAS0260U00 -------
+message BAS0260GrdBuseoListItemInfo{
+	optional string  buseo_code =  1;
+	optional string  buseo_name = 2;
+	optional string  parent_buseo = 3; 
+	optional string  buseo_gubun = 4;  
+	optional string  gwa_gubun = 5 ;   
+	optional string  gwa = 6;       ;
+	optional string  gwa_name = 7;     
+	optional string  parent_gwa = 8 ;  
+	optional string  out_jubsu_yn = 9; 
+	optional string  ipwon_yn = 10;    
+	optional string  out_slip_yn = 11; 
+	optional string  inp_slip_yn = 12; 
+	optional string  euryoseo_yn = 13; 
+	optional string  out_move_yn = 14; 
+	optional string  out_jundal_part_yn = 15;        
+	optional string  inp_jundal_part_yn = 16;        
+	optional string  input_gubun = 17;        
+	optional string  move_comment = 18;        
+	optional string  tel = 19;        
+	optional string  gwa_ename = 20;     
+	optional string  gwa_sname = 21;     
+	optional string  gwa_sort1 = 22;     
+	optional string  gwa_sort2 = 23;     
+	optional string  rmk = 24;        
+	optional string  end_date = 25;      
+	optional string  start_date = 26;    
+	optional string  buseo_name2 = 27;   
+	optional string  gwa_color = 28;     
+	optional string  hpc_ho_dong_yn = 29;
+	optional string  add_doctor = 30;    
+	optional string  gwa_name_kana = 31;     
+	optional string  row_sate = 32;
+	optional string  use_yn = 33;
+}
+// -------[END] BAS0260U00 -------
+
+// ----[START] BAS0110U00 ---------
+message BAS0110U00GrdJohapListItemInfo{
+	optional string johap   = 1;
+	optional string start_date = 2;
+	optional string johap_name  = 3;
+	optional string johap_gubun = 4;
+	optional string zip_code1 = 5;
+	optional string zip_code2 = 6;
+	optional string address   = 7;
+	optional string cd    = 8;
+	optional string boheomja_no = 9;
+	optional string dodobuhyeun_no = 10;
+	optional string law_no= 11;
+	optional string address1 = 12;
+	optional string tel = 13;
+	optional string giho  = 14;
+	optional string remark = 15;
+	optional string check_digit_yn = 16;
+	optional string row_state = 17;
+}
+
+
+// ----[END] BAS0110U00 ---------
+
+// ---- [START] IFS0004U01 ----
+message IFS0004U01grdDetailtListItemInfo{
+	optional string nu_gubun = 1;
+	optional string nu_code = 2;
+	optional string nu_ymd = 3;
+	optional string bun_code = 4;
+	optional string bun_name  = 5;
+	optional string sg_code = 6;
+	optional string sg_name = 7;
+	optional string row_state = 8;
+}
+
+message IFS0004U01grdMasterListItemInfo{
+	optional string nu_gubun = 1;
+	optional string nu_code = 2;
+	optional string nu_ymd = 3;
+	optional string nu_code_name = 4;
+	optional string row_state = 5;
+}
+// ---- [END] IFS0004U01 ----
+
+// ----- [START] IFS003U03 ---
+message IFS003U03GridIfs003ListItemInfo{
+	optional string map_gubun = 1;
+	optional string map_gubun_ymd = 2;
+	optional string ocs_code = 3;
+	optional string ocs_code_name = 4;
+	optional string ocs_default_yn = 5;
+	optional string if_code = 6;
+	optional string if_code_name = 7;
+	optional string if_default_yn = 8;
+	optional string remark = 9;
+	optional string row_state = 10;
+}
+// ----- [END] IFS003U03 ---
+
+message BAS0001U00GrdBAS0001Info{
+    optional string start_date = 1;
+    optional string end_date = 2;
+    optional string yoyang_giho = 3;
+    optional string yoyang_name = 4;
+    optional string yoyang_name2 = 5;
+    optional string zip_code1 = 6;
+    optional string zip_code2 = 7;
+    optional string zip_code = 8;
+    optional string address = 9;
+    optional string address1 = 10;
+    optional string tel = 11;
+    optional string tel1 = 12;
+    optional string fax = 13;
+    optional string tot_bed = 14;
+    optional string homepage = 15;
+    optional string email = 16;
+    optional string hosp_jin_gubun = 17;
+    optional string dodobuhyeun_no = 18;
+    optional string dodobuhyeun_name = 19;
+    optional string jaedan_name = 20;
+    optional string simple_yoyang_name = 21;
+    optional string bank_name = 22;
+    optional string bank_jijum = 23;
+    optional string bank_no = 24;
+    optional string bank_acc_name = 25;
+    optional string president_name = 26;
+    optional string orca_gigwan_code = 27;
+	optional string data_row_state = 28;
+	optional string acct_ref_id = 29;
+	optional string vpn_yn = 30;                
+    optional string time_zone = 31;
+}
+
+// -----[START][BAS0310U00] - Manage point master----
+message BAS0310U00GrdListItemInfo{
+	optional string sg_code           = 1;
+	optional string group_gubun       = 2;
+	optional string sg_name           = 3;
+	optional string sg_name_kana      = 4;
+	optional string sg_ymd            = 5;
+	optional string suga_change       = 6;
+	optional string suga_change_nm_d  = 7;
+	optional string bulyong_ymd       = 8;
+	optional string bulyong_sayu      = 9;
+	optional string bulyong_sayu_nm_d = 10;
+	optional string danui             = 11;
+	optional string danui_name        = 12;
+	optional string bun_code          = 13;
+	optional string bun_code_name     = 14;
+	optional string marume_gubun      = 15;
+	optional string sg_union          = 16;
+	optional string remark            = 17;
+	optional string marume_name       = 18;
+	optional string hubal_drg_yn      = 19;
+	optional string sunab_qcode_out   = 20;
+	optional string sunab_qcode_inp   = 21;
+	optional string tax_yn            = 22;
+	optional string row_state         = 23;
+	optional  string private_fee_yn   = 24;
+	optional string modify_flg        = 25;       
+}
+// -----[END][BAS0310U00] - Manage point master----
+
+//[START] BAS0101U04
+message BAS0101U04GrdDetailInfo{
+    optional string code_type = 1;
+    optional string code = 2;
+    optional string code_name = 3;
+    optional string group_key = 4;
+    optional string remark = 5;
+    optional string sort_key = 6;
+	optional string data_row_state = 7;
+}
+
+message BAS0101U04GrdMasterInfo{
+    optional string code_type = 1;
+    optional string code_type_name = 2;
+    optional string admin_gubun = 3;
+	optional string data_row_state = 4;
+}
+//[END] BAS0101U04
+
+// [START] BAS0311Q01
+message BAS0311Q01GrdBAS0311Info{
+    optional string sg_ymd = 1;
+    optional string sg_code = 2;
+    optional string sg_name = 3;
+    optional string sg_name_kana = 4;
+    optional string bun_code = 5;
+    optional string group_gubun = 6;
+    optional string danui = 7;
+    optional string bulyong_ymd = 8;
+}
+// [END] BAS0311Q01
+
+//[START] IFS0001U00
+message IFS0001U00GrdMasterInfo
+{
+	optional string code_type = 1;
+	optional string acct_type = 2;
+	optional string code_type_name = 3;
+	optional string remark = 4;
+	optional string row_state = 5;
+}
+message IFS0001U00GrdDetailInfo
+{
+	optional string code_type = 1;
+	optional string acct_type = 2;
+	optional string code = 3;
+	optional string code_name = 4;
+	optional string remark = 5;
+	optional string row_state = 6;
+}
+//[END] IFS0001U00
+
+//[START] IFS0003U01
+message IFS0003U01GrdIFS0003Info
+{
+	optional string map_gubun             = 1;
+	optional string map_gubun_ymd         = 2;
+	optional string ocs_code              = 3;
+	optional string ocs_code_name         = 4;
+	optional string ocs_default_yn        = 5;
+	optional string if_code               = 6;
+	optional string if_code_name          = 7;
+	optional string if_default_yn         = 8;
+	optional string remark                = 9;
+	optional string row_state             = 10;
+}
+//[END] IFS0003U01
+//[END] IFS0001U00
+
+// ------ [START] IFS0003U00 ------------
+
+message IFS0003U00GrdIFS0003Info{
+    optional string map_gubun = 1;
+    optional string map_gubun_ymd = 2;
+    optional string ocs_code = 3;
+    optional string ocs_code_name = 4;
+    optional string ocs_default_yn = 5;
+    optional string if_code = 6;
+    optional string if_code_name = 7;
+    optional string if_default_yn = 8;
+    optional string remark = 9;
+	optional string acct_type = 10;
+    optional string row_state = 11;
+}
+// ------ [END] IFS0003U00 ------------
+
+
+// ------ [START] ComBiz ----------
+message ComBizLoadIFS0001Info{
+	optional string code_type = 1;
+	optional string code_type_name = 2;
+	optional string remark = 3;
+	optional string sys_date = 4;
+	optional string sys_id = 5;
+	optional string upd_date = 6;
+	optional string upd_id = 7;
+}
+
+message ComBizLoadIFS0002Info{
+	optional string code_type = 1;
+	optional string code = 2;
+	optional string code_name = 3;
+	optional string remark = 4;
+	optional string sys_date = 5;
+	optional string sys_id = 6;
+	optional string upd_date = 7;
+	optional string upd_id = 8;
+}
+
+message ComBizGetFindWorkerInfo{
+	optional string code = 1;
+	optional string code_name = 2;
+	optional string value = 3;
+}
+// ------ [END] ComBiz ----------
+
+//[START] BAS0110Q00
+message BAS0110Q00GrdBAS0110ItemInfo{
+	optional string johap = 1;
+	optional string start_date = 2;
+	optional string johap_name = 3;
+	optional string johap_gubun = 4;
+	optional string zip_code1 = 5;
+	optional string zip_code2 = 6;
+	optional string address = 7;
+	optional string tel = 8;
+	optional string law_no = 9;
+	optional string dodobuhyeun_no = 10;
+	optional string boheomja_no = 11;
+	optional string cd = 12;
+	optional string giho = 13;
+	optional string remark = 14;
+	optional string check_digit_yn = 15;
+	optional string johap_gubun_name = 16;
+}
+//[END] BAS0110Q00
+
+//[START] BAS0203U00
+message BAS0203U00GrdBAS0203Info
+{
+	optional string jy_date                 = 1;
+	optional string symya_gubun             = 2;
+	optional string symya_gubun_name        = 3;
+	optional string bun_code                = 4;
+	optional string bun_name                = 5;
+	optional string sg_code                 = 6;
+	optional string sg_name                 = 7;
+	optional string from_time               = 8;
+	optional string to_time                 = 9;
+	optional string yoil_gubun              = 10;
+	optional string from_month              = 11;
+	optional string to_month                = 12;
+	optional string old_jy_date             = 13;
+	optional string old_symya_gubun         = 14;
+	optional string old_bun_code            = 15;
+	optional string old_sg_code             = 16;
+	optional string old_from_time           = 17;
+	optional string old_to_time             = 18;
+	optional string old_yoil_gubun          = 19;
+	optional string old_from_month          = 20;
+	optional string old_to_month            = 21;
+	optional string cont_key                = 22;
+	optional string row_state               = 23;
+}
+//[END] BAS0203U00
+
+//[START] BAS0311U00
+message BAS0111U00LayVzvItemInfo{
+	optional string name = 1;
+}
+
+message BAS0311U00GridListItemInfo{
+	optional string sg_code = 1;
+	optional string group_gubun = 2;
+	optional string sg_name = 3;
+	optional string sg_name_kana = 4;
+	optional string sg_ymd = 5;
+	optional string suga_change = 6;
+	optional string suga_change_nm_d = 7;
+	optional string bulyong_ymd = 8;
+	optional string bulyong_sayu = 9;
+	optional string bulyong_sayu_nm_d = 10;
+	optional string danui = 11;
+	optional string danui_name = 12;
+	optional string bun_code = 13;
+	optional string bun_code_name = 14;
+	optional string marume_gubun = 15;
+	optional string sg_union = 16;
+	optional string remark = 17;
+	optional string marume_name = 18;
+	optional string hubal_drg_yn = 19;
+	optional string sunab_qcode_out_name = 20;
+	optional string sunab_qcode_inp_name = 21;
+	optional string tax_yn = 22;
+}
+message BAS0111U00GrdBas0111ItemInfo{
+	optional string johap_gubun = 1;
+	optional string johap = 2;
+	optional string gaein = 3;
+	optional string use_yn = 4;
+	optional string zip_code1 = 5;
+	optional string zip_code2 = 6;
+	optional string address = 7;
+	optional string address1 = 8;
+	optional string name = 9;
+	optional string cont_key = 10;
+	optional string row_state = 11;
+}
+message BAS0111U00GrdMasterItemInfo{
+	optional string johap_gubun = 1;
+	optional string johap = 2;
+	optional string johap_name = 3;
+}
+
+//[END] BAS0311U00
+
+//[START] BAS0310P01
+message BAS0310P01GrdDrugMasterInfo{
+	optional string a1 = 1;
+	optional string a2 = 2;
+	optional string a3 = 3;
+	optional string a4 = 4;
+	optional string a5 = 5;
+	optional string a6 = 6;
+	optional string a7 = 7;
+	optional string a8 = 8;
+	optional string a9 = 9;
+	optional string a10 = 10;
+	optional string a11 = 11;
+	optional string a12 = 12;
+	optional string a13 = 13;
+	optional string a14 = 14;
+	optional string a15 = 15;
+	optional string a16 = 16;
+	optional string a17 = 17;
+	optional string a18 = 18;
+	optional string a19 = 19;
+	optional string a20 = 20;
+	optional string a21 = 21;
+	optional string a22 = 22;
+	optional string a23 = 23;
+	optional string a24 = 24;
+	optional string a25 = 25;
+	optional string a26 = 26;
+	optional string a27 = 27;
+	optional string a28 = 28;
+	optional string a29 = 29;
+	optional string a30 = 30;
+	optional string a31 = 31;
+	optional string a32 = 32;
+	optional string a33 = 33;
+	optional string a34 = 34;
+	optional string a35 = 35;
+}
+
+message BAS0310P01GrdGenDrgMapInfo{
+	optional string a1 = 1;
+	optional string a2 = 2;
+	optional string a3 = 3;
+	optional string a4 = 4;
+	optional string a5 = 5;
+	optional string a6 = 6;
+	optional string a7 = 7;
+	optional string a8 = 8;
+	optional string a9 = 9;
+	optional string a10 = 10;
+	optional string a11 = 11;
+	optional string a12 = 12;
+	optional string a13 = 13;
+	optional string a14 = 14;
+	optional string a15 = 15;
+	optional string a16 = 16;
+	optional string a17 = 17;
+	optional string a18 = 18;
+	optional string a19 = 19;
+	optional string a20 = 20;
+	optional string a21 = 21;
+	optional string a22 = 22;
+	optional string a23 = 23;
+	optional string a24 = 24;
+	optional string a25 = 25;
+	optional string a26 = 26;
+	optional string a27 = 27;
+	optional string a28 = 28;
+	optional string a29 = 29;
+	optional string a30 = 30;
+}
+
+message BAS0310P01GrdGenDrgMasterInfo{
+	optional string a1 = 1;
+	optional string a2 = 2;
+	optional string a3 = 3;
+	optional string a4 = 4;
+	optional string a5 = 5;
+	optional string a6 = 6;
+	optional string a7 = 7;
+	optional string a8 = 8;
+	optional string a9 = 9;
+	optional string a10 = 10;
+	optional string a11 = 11;
+	optional string a12 = 12;
+	optional string a13 = 13;
+	optional string a14 = 14;
+	optional string a15 = 15;
+	optional string a16 = 16;
+	optional string a17 = 17;
+	optional string a18 = 18;
+	optional string a19 = 19;
+	optional string a20 = 20;
+}
+
+message BAS0310P01GrdJinryoMasterInfo{
+	optional string a1 = 1;
+	optional string a2 = 2;
+	optional string a3 = 3;
+	optional string a4 = 4;
+	optional string a5 = 5;
+	optional string a6 = 6;
+	optional string a7 = 7;
+	optional string a8 = 8;
+	optional string a9 = 9;
+	optional string a10 = 10;
+	optional string a11 = 11;
+	optional string a12 = 12;
+	optional string a13 = 13;
+	optional string a14 = 14;
+	optional string a15 = 15;
+	optional string a16 = 16;
+	optional string a17 = 17;
+	optional string a18 = 18;
+	optional string a19 = 19;
+	optional string a20 = 20;
+	optional string a21 = 21;
+	optional string a22 = 22;
+	optional string a23 = 23;
+	optional string a24 = 24;
+	optional string a25 = 25;
+	optional string a26 = 26;
+	optional string a27 = 27;
+	optional string a28 = 28;
+	optional string a29 = 29;
+	optional string a30 = 30;
+	optional string a31 = 31;
+	optional string a32 = 32;
+	optional string a33 = 33;
+	optional string a34 = 34;
+	optional string a35 = 35;
+	optional string a36 = 36;
+	optional string a37 = 37;
+	optional string a38 = 38;
+	optional string a39 = 39;
+	optional string a40 = 40;
+	optional string a41 = 41;
+	optional string a42 = 42;
+	optional string a43 = 43;
+	optional string a44 = 44;
+	optional string a45 = 45;
+	optional string a46 = 46;
+	optional string a47 = 47;
+	optional string a48 = 48;
+	optional string a49 = 49;
+	optional string a50 = 50;
+	optional string a51 = 51;
+	optional string a52 = 52;
+	optional string a53 = 53;
+	optional string a54 = 54;
+	optional string a55 = 55;
+	optional string a56 = 56;
+	optional string a57 = 57;
+	optional string a58 = 58;
+	optional string a59 = 59;
+	optional string a60 = 60;
+	optional string a61 = 61;
+	optional string a62 = 62;
+	optional string a63 = 63;
+	optional string a64 = 64;
+	optional string a65 = 65;
+	optional string a66 = 66;
+	optional string a67 = 67;
+	optional string a68 = 68;
+	optional string a69 = 69;
+	optional string a70 = 70;
+	optional string a71 = 71;
+	optional string a72 = 72;
+	optional string a73 = 73;
+	optional string a74 = 74;
+	optional string a75 = 75;
+	optional string a76 = 76;
+	optional string a77 = 77;
+	optional string a78 = 78;
+	optional string a79 = 79;
+	optional string a80 = 80;
+	optional string a81 = 81;
+	optional string a82 = 82;
+	optional string a83 = 83;
+	optional string a84 = 84;
+	optional string a85 = 85;
+	optional string a86 = 86;
+	optional string a87 = 87;
+	optional string a88 = 88;
+	optional string a89 = 89;
+	optional string a90 = 90;
+	optional string a91 = 91;
+	optional string a92 = 92;
+	optional string a93 = 93;
+	optional string a94 = 94;
+	optional string a95 = 95;
+	optional string a96 = 96;
+	optional string a97 = 97;
+	optional string a98 = 98;
+	optional string a99 = 99;
+	optional string a100 = 100;
+	optional string a101 = 101;
+	optional string a102 = 102;
+	optional string a103 = 103;
+	optional string a104 = 104;
+	optional string a105 = 105;
+	optional string a106 = 106;
+	optional string a107 = 107;
+	optional string a108 = 108;
+	optional string a109 = 109;
+	optional string a110 = 110;
+	optional string a111 = 111;
+	optional string a112 = 112;
+	optional string a113 = 113;
+	optional string a114 = 114;
+	optional string a115 = 115;
+	optional string a116 = 116;
+	optional string a117 = 117;
+	optional string a118 = 118;
+	optional string a119 = 119;
+	optional string a120 = 120;
+	optional string a121 = 121;
+	optional string a122 = 122;
+}
+
+message BAS0310P01GrdJojeMasterInfo{
+	optional string a1 = 1;
+	optional string a2 = 2;
+	optional string a3 = 3;
+	optional string a4 = 4;
+	optional string a5 = 5;
+	optional string a6 = 6;
+	optional string a7 = 7;
+	optional string a8 = 8;
+	optional string a9 = 9;
+	optional string a10 = 10;
+	optional string a11 = 11;
+	optional string a12 = 12;
+	optional string a13 = 13;
+	optional string a14 = 14;
+	optional string a15 = 15;
+	optional string a16 = 16;
+	optional string a17 = 17;
+	optional string a18 = 18;
+	optional string a19 = 19;
+	optional string a20 = 20;
+	optional string a21 = 21;
+	optional string a22 = 22;
+	optional string a23 = 23;
+	optional string a24 = 24;
+	optional string a25 = 25;
+	optional string a26 = 26;
+	optional string a27 = 27;
+	optional string a28 = 28;
+	optional string a29 = 29;
+	optional string a30 = 30;
+	optional string a31 = 31;
+	optional string a32 = 32;
+	optional string a33 = 33;
+	optional string a34 = 34;
+	optional string a35 = 35;
+	optional string a36 = 36;
+	optional string a37 = 37;
+	optional string a38 = 38;
+	optional string a39 = 39;
+	optional string a40 = 40;
+	optional string a41 = 41;
+	optional string a42 = 42;
+	optional string a43 = 43;
+	optional string a44 = 44;
+	optional string a45 = 45;
+	optional string a46 = 46;
+	optional string a47 = 47;
+	optional string a48 = 48;
+	optional string a49 = 49;
+	optional string a50 = 50;
+	optional string a51 = 51;
+	optional string a52 = 52;
+	optional string a53 = 53;
+	optional string a54 = 54;
+	optional string a55 = 55;
+	optional string a56 = 56;
+	optional string a57 = 57;
+	optional string a58 = 58;
+	optional string a59 = 59;
+	optional string a60 = 60;
+	optional string a61 = 61;
+	optional string a62 = 62;
+	optional string a63 = 63;
+	optional string a64 = 64;
+	optional string a65 = 65;
+}
+
+message BAS0310P01GrdSangMasterInfo{
+	optional string a1 = 1;
+	optional string a2 = 2;
+	optional string a3 = 3;
+	optional string a4 = 4;
+	optional string a5 = 5;
+	optional string a6 = 6;
+	optional string a7 = 7;
+	optional string a8 = 8;
+	optional string a9 = 9;
+	optional string a10 = 10;
+	optional string a11 = 11;
+	optional string a12 = 12;
+	optional string a13 = 13;
+	optional string a14 = 14;
+	optional string a15 = 15;
+	optional string a16 = 16;
+	optional string a17 = 17;
+	optional string a18 = 18;
+	optional string a19 = 19;
+	optional string a20 = 20;
+	optional string a21 = 21;
+	optional string a22 = 22;
+	optional string a23 = 23;
+	optional string a24 = 24;
+	optional string a25 = 25;
+	optional string a26 = 26;
+	optional string a27 = 27;
+	optional string a28 = 28;
+	optional string a29 = 29;
+	optional string a30 = 30;
+	optional string a31 = 31;
+	optional string a32 = 32;
+	optional string a33 = 33;
+	optional string a34 = 34;
+	optional string a35 = 35;
+	optional string a36 = 36;
+	optional string a37 = 37;
+	optional string a38 = 38;
+	optional string a39 = 39;
+	optional string a40 = 40;
+	optional string a41 = 41;
+	optional string a42 = 42;
+	optional string a43 = 43;
+	optional string a44 = 44;
+	optional string a45 = 45;
+}
+
+message BAS0310P01GrdSusikMasterInfo{
+	optional string a1 = 1;
+	optional string a2 = 2;
+	optional string a3 = 3;
+	optional string a4 = 4;
+	optional string a5 = 5;
+	optional string a6 = 6;
+	optional string a7 = 7;
+	optional string a8 = 8;
+	optional string a9 = 9;
+	optional string a10 = 10;
+	optional string a11 = 11;
+	optional string a12 = 12;
+	optional string a13 = 13;
+	optional string a14 = 14;
+	optional string a15 = 15;
+	optional string a16 = 16;
+	optional string a17 = 17;
+	optional string a18 = 18;
+	optional string a19 = 19;
+}
+
+message BAS0310P01GrdTokuteiMasterInfo{
+	optional string a1 = 1;
+	optional string a2 = 2;
+	optional string a3 = 3;
+	optional string a4 = 4;
+	optional string a5 = 5;
+	optional string a6 = 6;
+	optional string a7 = 7;
+	optional string a8 = 8;
+	optional string a9 = 9;
+	optional string a10 = 10;
+	optional string a11 = 11;
+	optional string a12 = 12;
+	optional string a13 = 13;
+	optional string a14 = 14;
+	optional string a15 = 15;
+	optional string a16 = 16;
+	optional string a17 = 17;
+	optional string a18 = 18;
+	optional string a19 = 19;
+	optional string a20 = 20;
+	optional string a21 = 21;
+	optional string a22 = 22;
+	optional string a23 = 23;
+	optional string a24 = 24;
+	optional string a25 = 25;
+	optional string a26 = 26;
+	optional string a27 = 27;
+	optional string a28 = 28;
+	optional string a29 = 29;
+	optional string a30 = 30;
+	optional string a31 = 31;
+	optional string a32 = 32;
+	optional string a33 = 33;
+	optional string a34 = 34;
+	optional string a35 = 35;
+	optional string a36 = 36;
+	optional string a37 = 37;
+}
+
+message BAS0310P01GrdYjCodeInfo{
+	optional string a1 = 1;
+	optional string a2 = 2;
+	optional string a3 = 3;
+	optional string a4 = 4;
+	optional string a5 = 5;
+	optional string a6 = 6;
+	optional string a7 = 7;
+	optional string a8 = 8;
+	optional string a9 = 9;
+	optional string a10 = 10;
+	optional string a11 = 11;
+	optional string a12 = 12;
+	optional string a13 = 13;
+	optional string a14 = 14;
+	optional string a15 = 15;
+	optional string a16 = 16;
+	optional string a17 = 17;
+	optional string a18 = 18;
+	optional string a19 = 19;
+	optional string a20 = 20;
+	optional string a21 = 21;
+	optional string a22 = 22;
+	optional string a23 = 23;
+	optional string a24 = 24;
+}
+
+message BAS0310P01GrdDrgSakuraInfo{
+	optional string a1 = 1;
+	optional string a2 = 2;
+	optional string a3 = 3;
+	optional string a4 = 4;
+	optional string a5 = 5;
+	optional string a6 = 6;
+	optional string a7 = 7;
+	optional string a8 = 8;
+	optional string a9 = 9;
+}
+//[END] BAS0310P01
+
+//[START] BAS0212U00
+message BAS0212U00ComboListItemInfo{
+	optional string code = 1;
+	optional string code_name = 2;
+	
+}
+message BAS0212U00ListItemRequestInfo{
+	optional string gongbi_name =1;  
+}
+message BAS0212U00GrdItemInfo {
+	optional string gongbi_code = 1;
+	optional string start_date = 2;        
+	optional string end_date = 3;
+	optional string law_no = 4;
+	optional string gongbi_name = 5;
+	optional string total_yn = 6;
+	optional string gongbi_jiyeok = 7;
+	optional string row_state = 8;
+}
+message BAS0212U00fwkGongbiCodeInfo{
+	optional string gongbi_code =1;
+	optional string gongbi_name =2;
+}
+//[END] BAS0212U00
+
+//[START] HOTCODEMASTER
+message HOTCODEMASTERGetGrdListInfo
+{
+	optional string hot_code            = 1;                        
+	optional string hot_code7           = 2;
+	optional string cin_code            = 3;
+	optional string dispense_code       = 4;
+	optional string logistic_code       = 5;
+	optional string jan_code            = 6;
+	optional string yak_kijun_code      = 7;
+	optional string yj_code             = 8;
+	optional string sg_code             = 9;
+	optional string sg_code1            = 10;
+	optional string hangmog_name        = 11;
+	optional string hangmog_name1       = 12;
+	optional string hangmog_name2       = 13;
+	optional string standard_unit       = 14;
+	optional string pkg_status          = 15;
+	optional string pkg_num_unit        = 16;
+	optional string ord_danui           = 17;
+	optional string pkg_total           = 18;
+	optional string pkg_total_unit      = 19;
+	optional string clsif               = 20;
+	optional string manuf_comp          = 21;
+	optional string sales_comp          = 22;
+	optional string classif_upd         = 23;
+	optional string sg_ymd              = 24;
+}
+//[END] HOTCODEMASTER
+
+//[START] DEPARTMENT
+message Bas0260DepartmetnInfo
+{
+	optional string  gwa				= 1;                        
+	optional string  gwa_name	        = 2;
+	optional string  id					= 3;  
+	optional string  avg_time			= 4;
+}
+//[END] DEPARTMENT
+
+
+
+//[START] AC02
+message CreatePatientSurveyInfo
+{
+		optional string patient_code		= 	1;
+		optional string	patient_name		=	2;
+		optional string department_code 	=	3;
+		optional string	department_name		=	4;
+		optional string reservation_date	= 	5;
+		optional string	reservation_time	=	6;
+		optional string reservation_code 	=	7;
+		optional string	patient_pwd			=	8;
+}
+//[END] AC02
+
+
+//[START] BAS0260U01
+message LoadGrdBAS0260U01Info
+{
+        optional string id = 1;
+        optional string buseo_code = 2;
+        optional string buseo_name = 3;
+        optional string buseo_name2 = 4;
+        optional string buseo_gubun = 5;
+        optional string parent_buseo = 6;
+        optional string gwa = 7;
+        optional string gwa_name = 8;
+        optional string gwa_name2 = 9;
+        optional string gwa_gubun = 10;
+        optional string parent_gwa = 11;
+        optional string note = 12;
+        optional string language = 13;
+        optional string active_flg = 14;
+        optional string row_state = 15;
+}
+
+message LoadCbxLanguageInfo
+{
+        optional string property_id = 1;
+        optional string property_code = 2;
+        optional string property_name = 3;
+        optional string property_value = 4;
+        optional string property_type = 5;
+        optional string module_type = 6;
+        optional string default_flg = 7;
+        optional string sort_no = 8;
+        optional string description = 9;
+        optional string locale = 10;
+        optional string sys_id = 11;
+        optional string upd_id = 12;
+        optional string created = 13;
+        optional string updated = 14;
+        optional string active_flg = 15;
+}
+message LoadDepartmentTypeInfo
+{
+		optional string code = 1;
+		optional string code_type = 2;
+		optional string hosp_code = 3;
+		optional string code_name = 4;
+}
+//[END] BAS0260U01
+
+message Bass0260U00DepartmentInfo
+{
+        optional string  buseo_code=  1;
+        optional string  buseo_name = 2;  
+        optional string  buseo_name2 = 3;  
+        optional string  buseo_gubun = 4;  
+        optional string  parent_buseo = 5;  
+        optional string  gwa = 6;  
+        optional string  gwa_name = 7;  
+        optional string  gwa_name2 = 8;  
+        optional string  gwa_gubun = 9;  
+        optional string  parent_gwa = 10;  
+        optional string  note = 11;  
+        optional string  language = 12;  
+        optional string  active_flg = 13;  
+}
+
+// MIH
+message BAS0250U00GrdBAS0253Info {
+	optional string ho_code 		= 1;
+	optional string bed_no 			= 2;
+	optional string from_bed_date 	= 3;
+	optional string to_bed_date 	= 4;
+	optional string bed_status 		= 5;
+	optional string bed_no_tel 		= 6;
+	optional string ho_dong 		= 7;
+	optional string data_row_state 	= 8;
+}
+
+message BAS0250U00GrdHoCodeListInfo {
+        optional string ho_code_ymd 	= 1;
+        optional string ho_code 		= 2;
+        optional string ho_dong 		= 3;
+        optional string ho_grade 		= 4;
+        optional string ho_grade_name 	= 5;
+        optional string ho_total_bed 	= 6;
+        optional string ho_used_bed 	= 7;
+        optional string ho_com_bed 		= 8;
+        optional string ho_com_used_bed = 9;
+        optional string ho_main_gwa 	= 10;
+        optional string gwa_main_name 	= 11;
+        optional string ho_gwa 			= 12;
+        optional string gwa_name 		= 13;
+        optional string ho_loc 			= 14;
+        optional string ho_sex 			= 15;
+        optional string ho_sex_male 	= 16;
+        optional string ho_sex_female 	= 17;
+        optional string ho_special_yn 	= 18;
+        optional string bulyong_date 	= 19;
+        optional string ho_status 		= 20;
+        optional string ho_gubun 		= 21;
+        optional string retrieve_yn 	= 22;
+        optional string ho_code_name 	= 23;
+        optional string ho_sort 		= 24;
+        optional string report_total_bed 	= 25;
+        optional string double_ho_yn 		= 26;
+        optional string end_yn 				= 27;
+        optional string data_row_state 		= 28;
+}
+message BAS0250Q00grdHOBEDInfo { 
+   	optional string ho_dong 		= 1;
+   	optional string ho_code 		= 2;
+   	optional string ho_total_bed 	= 3;
+   	optional string ho_grade 		= 4;
+   	optional string ho_status 		= 5;
+}
+message BAS0250Q00layBedStatusInfo { 
+   	optional string ho_dong 		= 1;
+   	optional string ho_code 		= 2;
+   	optional string bed_no 			= 3;
+   	optional string bed_status 		= 4;
+   	optional string code_name 		= 5;
+   	optional string from_bed_date 	= 6;
+}
+message BAS0250Q00layJaewonListInfo { 
+   	optional string ho_dong1 		= 1;
+   	optional string ho_code1 		= 2;
+   	optional string bed_no 			= 3;
+   	optional string suname 			= 4;
+   	optional string ipwon_date 		= 5;
+   	optional string toiwon_res_date = 6;
+   	optional string toiwon_res_yn 	= 7;
+   	optional string sex 			= 8;
+   	optional string ipwon_type 		= 9;
+   	optional string ipwon_type_name = 10;
+}
+message BAS0250Q00layReserBedInfo { 
+   	optional string ho_dong 		= 1;
+   	optional string ho_code 		= 2;
+   	optional string bed_no 			= 3;
+   	optional string suname 			= 4;
+   	optional string reser_date 		= 5;
+}
+

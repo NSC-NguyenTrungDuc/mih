@@ -1,0 +1,29 @@
+import "google/protobuf/descriptor.proto";
+
+option java_package = "nta.med.common.remoting.rpc.protobuf";
+option java_outer_classname = "Rpc";
+
+extend google.protobuf.FileOptions {
+  optional string version = 50000;
+  optional string service = 50001;
+}
+
+message RpcMessage {
+  //
+  required int64 id = 1;
+  optional Result result = 2;
+  required string version = 3;
+  required string service = 4;
+  optional int64 source_id = 5;
+  optional int64 context_id = 6;
+  optional bytes payload_data = 7;
+  optional string payload_class = 8;
+  optional string client_id = 9;
+  optional bool compress = 10;
+  //
+  enum Result { SUCCESS = 1; INVALID_VERSION = 2; INVALID_SERVICE = 3; INVALID_PAYLOAD = 4; NOT_AUTHENTICATED = 5; SERVICE_TIMEOUT = 6; SERVICE_REJECTED = 7; SERVICE_UNAVAILABLE = 8; REQUIRE_VPN = 9; MAINTAINANCE = 10; INTERNAL_ERROR = 99; }
+}
+
+message AdmLoginOnBehalfOfRequest{
+  required string session_id = 1;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Vi</title>
+        <link rel="stylesheet" type="text/css" href="../css/vi.css">
+		<link rel="stylesheet" href="../css/prescription_jp.css">
+		<link rel="stylesheet" href="../css/prescription_vi.css">			
+		<script src="../js/modernizr-2.8.3.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<script type="text/javascript" src="../js/app.js"></script>	
+		<script type="text/javascript" src="../js/handlebars.min.js"></script>
+    </head>
+	<body>
+		<script id="template-in-hospital" type="text/x-handlebars-template">
+		<page class="page" size="A4">
+		<div class="billing">
+			<table class="headerbilling"  width="93%" align="center">
+				<tbody>
+					<tr>
+						<td  width="78.2%">{{HospName}}</td>
+						<td align="left">Số phiếu: {{PrescriptionNo}}</td>
+					</tr>
+				</tbody>
+			</table>
+			<h1 class="center">ĐƠN THUỐC</h1>
+			<table width="88%" align="center" class="infopatient">
+				<tbody>
+					<tr>
+						<td width="80%">Tên bệnh nhân: <span class="valuename">{{PatientName}}</span></td>
+						<td align="left">Sinh năm: <span class="valuename">{{BirthYear}}</span</td>
+					</tr>
+					<tr>
+						<td>Địa chỉ: <span class="valuename">{{PatientAddress}}</span></td>
+						<td align="left">Giới tính: <span class="valuename">{{Gender}}</span</td>
+					</tr>
+					<tr>
+						<td>Bệnh chính: <span class="valuename">{{MainDisease}}</span></td>
+						<td align="left">Thẻ BHYT: <span class="valuename">{{Johap}}</span</td>
+					</tr>
+					<tr>
+						<td>Bệnh kèm theo: <span class="valuename">{{ExtraDiseas}}</span></td>
+						<td align="left"></td>
+					</tr>
+					<tr>
+						<td style="height:20px;"></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="tbl_table">
+				<thead>
+					<tr>
+						<th width="10px">STT</th>
+						<th width="35%">Tên thuốc (hoạt chất)</th>
+						<th  width="10px">Đơn vị</th>
+						<th width="50px">Số lượng</th>
+						<th width="40%">Cách dùng</th>
+					</tr>
+				</thead>
+				<tbody>
+					{{#each PresDetail}}
+					<tr>					
+						<td align="center">{{DrugNo}}</td>
+						<td align="left">{{JaeryoName}}</td>
+						<td align="center">{{OrderDanui}}</td>
+						<td align="center">{{Quantity}}</td>
+						<td class="left">{{BogyongName}}</td>
+					</tr>	
+					{{/each}}
+				</tbody>
+			</table>
+			<p style="margin:10px 0 0 20px; "></p>
+			<div class="bottom">
+				<table>
+					<tr>
+						<td align="center" valign="top">
+							<p>XÁC NHẬN CỦA BỆNH NHÂN</p>
+					 	</td>
+						<td align="center">
+							<p><em>Ngày {{CurrentDate}} tháng {{CurrentMonth}} năm {{CurrentYear}}</em></p>
+							<p><span>BÁC SỸ KÊ ĐƠN</span></p>
+							<p class="name-r"><strong>{{DoctorName}}</strong></p>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</page>
+	</script>
+   	</body>
+</html>

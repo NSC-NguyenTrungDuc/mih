@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:batch="http://www.springframework.org/schema/batch"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+              http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch.xsd">
+
+    <batch:job id="job" job-repository="jobRepository">
+        <batch:step id="step">
+            <batch:tasklet>
+                <bean class="nta.sfd.batch.task.CreateHospitalTasklet">
+                    <property name="timeout" value="${jdbc.query_timeout}"></property>
+                    <property name="vpnCertFolder" value="${vpn.cert.folder}"></property>
+                    <property name="shellScriptGenVpn" value="${script.gen.vpn.cert}"></property>
+                    
+                    <property name="mbsFrontEnd" value="${mbs.frontend.link}"></property>
+                    <property name="mbsBackEnd" value="${mbs.backend.link}"></property>
+                    
+                    <property name="misFrontEnd" value="${mis.frontend.link}"></property>
+                    <property name="misBackEnd" value="${mis.backend.link}"></property>
+                    
+                    <property name="portal" value="${portal.link}"></property>
+                    <property name="secretKey" value="${token.secret.key}"></property>
+                    
+                    <property name="mbsPassword" value="${mbs.password}"></property>
+                    <property name="linkDownloadVpn" value="${link.download.vpn}"></property>
+                    <property name="linkDownloadKcck" value="${link.download.kcck}"></property>
+                    <property name="linkDownloadKcckVn" value="${link.download.kcck_vn}"></property>
+
+                </bean>
+                <!-- <bean class="nta.sfd.batch.task.CountDownTasklet">
+                	<property name="countDownLatch" ref="countDownLatch"/>
+               	</bean> -->
+            </batch:tasklet>
+        </batch:step>
+    </batch:job>
+    
+    <tx:annotation-driven proxy-target-class="true" transaction-manager="transactionManager" />
+
+    <bean id="countDownLatch" class="java.util.concurrent.CountDownLatch">
+        <constructor-arg value="100" />
+    </bean>
+
+    <bean id="jobDetail" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+        <property name="jobClass" value="nta.sfd.batch.QuartzLauncher"/>
+    </bean>
+
+    <bean id="jobDetailTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="jobDetail"/>
+        <property name="cronExpression" value="${create.hospital.tasklet.cron.expression}"/>
+    </bean>
+
+    <bean id="schedulerFactoryBean"
+          class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="triggers">
+            <list>
+                <ref bean="jobDetailTrigger"/>
+            </list>
+        </property>
+        <property name="jobFactory">
+            <bean class="org.springframework.scheduling.quartz.SpringBeanJobFactory"/>
+        </property>
+        <property name="schedulerContextAsMap">
+            <map>
+                <entry key="job" value-ref="job"/>
+                <entry key="jobLauncher" value-ref="jobLauncher"/>
+            </map>
+        </property>
+    </bean>
+
+    <!-- batch infrastructure -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <qualifier value="BATCH"/>
+        <property name="dataSource" ref="batchDataSource" />
+    </bean>
+
+    <bean id="jobRepository" class="org.springframework.batch.core.repository.support.JobRepositoryFactoryBean">
+        <property name="databaseType" value="MySQL"/>
+        <property name="tablePrefix" value="BATCH_"/>
+        <property name="dataSource" ref="batchDataSource"/>
+        <property name="transactionManager" ref="transactionManager"/>
+        <property name="isolationLevelForCreate" value="ISOLATION_REPEATABLE_READ"/>
+    </bean>
+
+    <bean id="jobLauncher"
+          class="org.springframework.batch.core.launch.support.SimpleJobLauncher">
+        <property name="jobRepository" ref="jobRepository"/>
+    </bean>
+
+    <bean id="batchDataSource" parent="abstractDataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="url" value="${jdbc.batch.url}"/>
+        <property name="username" value="${jdbc.batch.username}"/>
+        <property name="password" value="${jdbc.batch.password}"/>
+    </bean>
+    
+<!--     <bean id="ihisDataSource" parent="abstractDataSource" class="org.apache.commons.dbcp.BasicDataSource"> -->
+<!--         <property name="url" value="${jdbc.ihis.url}"/> -->
+<!--         <property name="username" value="${jdbc.ihis.username}"/> -->
+<!--         <property name="password" value="${jdbc.ihis.password}"/> -->
+<!--     </bean> -->
+    
+    
+</beans>

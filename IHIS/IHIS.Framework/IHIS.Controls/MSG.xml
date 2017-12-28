@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <msgs>
+    <msg ID="M001" K="Mask가 제대로 지정되지 않았습니다.(XXX-XX OR ###-##)" J="Maskが指定が間違っています。(XXX-XX OR ###-##)" E="Cancel" V="Thiết lập Mask sai."  CID="MaskHelper"/>
+    <msg ID="M002" K="Mask에는 " J="Maskには[" E="Mask[" V="Mask ["  CID="MaskHelper"/>
+    <msg ID="M003" K=" 혼용하여 지정할 수 없습니다." J="]混用して指定できません。" E="] setup failed" V="] Không thể thiết lập" CID="MaskHelper"/>
+    <msg ID="M004" K="Month의 Mask는 " J="MonthのMaskは[" E="Mask of month [" V="Mask của Month là [" CID="MaskHelper"/>
+    <msg ID="M005" K=" 만 지정가능합니다." J="]のみ指定可能です。" E="] can be set." V="Chỉ có thể thiết lập" CID="MaskHelper"/>
+    <msg ID="M006" K="Date의 Mask는 " J="DateのMaskは[" E="Mask of Month [" V="Mask của date là [" CID="MaskHelper"/>
+    <msg ID="M007" K="Time의 Mask는 " J="TimeのMaskは[" E="Mask of Time [" V="Mask của Time là [" CID="MaskHelper"/>
+    <msg ID="M008" K="DateTime Mask가 잘못지정되었습니다.(ex:YYYY-MM-DD HH:MI:SS)" J="DateTime Maskが間違って指定されています。(ex:YYYY-MM-DD HH:MI:SS)" E="Mask of time setting failed. (ex:YYYY-MM-DD HH:MI:SS)" V="Đang thiết lập sai Date Time Mask. (ex:YYYY-MM-DD HH:MI:SS)" CID="MaskHelper"/>
+    <msg ID="M009" K="입력한 문자열이 유효한 길이[" J="入力した文字の長さが有效な長さ[" E="Input length [" V="Độ dài nhập vào[" CID="XEditMask,XTextBox"/>
+    <msg ID="M010" K="자리]를 초과하였습니다." J="桁]を超過しました。" E="] is exceed." V="] đã vượt quá cho phép" CID="XEditMask,XTextBox"/>
+    <msg ID="M011" K="예약글을 띄울 파일이 존재하지 않습니다." J="定形文ファイルが存在しません。" E="Sample file does not exist." V="Không tồn tại tệp tin văn bản mẫu." CID="XMemoBox"/>
+    <msg ID="M012" K="예약글 Class명이 지정되지 않았습니다." J="定形文クラスが指定されていません。" E="No class of sample text" V="Không thiết lập class văn bản mẫu." CID="XMemoBox"/>
+    <msg ID="M013" K="예약글창을 띄울 컨트롤의 이름이 잘못 지정되었습니다." J="定形文クラスの指定が間違いました。" E="Class setup failed." V="Thiết lập class đã bị sai." CID="XMemoBox"/>
+    <msg ID="M014" K="예약글창을 띄울 컨트롤을 생성하지 못했습니다." J="定形文の生成できませんでした。" E="Cannot create sample text." V="Không thể tạo văn bản mẫu." CID="XMemoBox"/>
+    <msg ID="M015" K="예약글창에 지정한 클래스가 컨트롤이 아닙니다." J="定形文クラスの指定が間違いました。" E="Create sample text failed." V="Thiết lập class văn bản mẫu bị sai." CID="XMemoBox"/>
+    <msg ID="M016" K="출력에 실패하였습니다. 프린더의 전원을 확인해 주십시오." J="Print Error" E="Print error" V="Lỗi In" CID="XMatrixPrintDocument"/>
+    <msg ID="M017" K="프린더 드라이버가 제대로 설정되어 있는지 확인해 주십시오." J="Please, Confirm Printer Setting.." E="Please, Confirm Printer Setting.." V="" CID="XMatrixPrintDocument"/>
+    <msg ID="M018" K="계속 출력이 안되면 전산실에 문의해 주십시오." J="" E="" V="" CID="XMatrixPrintDocument"/>
+    <msg ID="M019" K="인쇄영역을 잘못 지정하셨습니다." J="Printing Range is strange." E="Printing Range is strange." V="" CID="XMatrixPrintDocument"/>
+  </msgs>
+  <fids>
+    <fid ID="F001" K="취 소" J="取消" E="Cancel" V="Hủy"  CID="DatePickerForm,TextEditorForm,XInputMsgBox.."/>
+    <fid ID="F002" K="편집기" J="エディタ" E="Editor" V="Chỉnh sửa" CID="PropertyEditorForm"/>
+    <fid ID="F003" K="확 인" J="確 認" E="OK" V="Xác nhận"  CID="PropertyEditorForm,TextEditorForm,XInputMsgBox.."/>
+    <fid ID="F004" K="(전체)" J="(全体)" E="All" V="(Toàn bộ)" CID="XComboBox"/>
+    <fid ID="F005" K="(없음)" J="(無い)" E="None" V="(Không)" CID="XComboBox"/>
+    <fid ID="F006" K="중 단(&amp;A)" J="Abort(&amp;A)" E="Abort(&amp;A)" V="" CID="XInputMsgBox"/>
+    <fid ID="F007" K="다시시도(&amp;R)" J="Retry(&amp;R)" E="Retry(&amp;R)" V="" CID="XInputMsgBox"/>
+    <fid ID="F008" K="무 시(&amp;I)" J="Ignore(&amp;I)" E="Ignore(&amp;I)" V="" CID="XInputMsgBox"/>
+    <fid ID="F009" K="예(&amp;Y)" J="はい" E="Yes(&amp;Y)" V="Có (Y)" CID="XInputMsgBox"/>
+    <fid ID="F010" K="아니오(&amp;N)" J="いいえ" E="No(&amp;N)" V="Không (N)" CID="XInputMsgBox"/>
+    <fid ID="F011" K="확인(F2)" J="確認(F2)" E="OK(F2)" V="Xác nhận(F2)" CID="XMemoBox"/>
+    <fid ID="F012" K="삭제(F8)" J="削除(F8)" E="Delete(F8)" V="Xóa(F8)" CID="XMemoBox"/>
+    <fid ID="F013" K="예약글" J="定形文" E="Reserved" V="Câu mẫu" CID="XMemoBox"/>
+    <fid ID="F014" K="선 택" J="選択" E="Select" V="Lựa chọn" CID="XMemoBox"/>
+    <fid ID="F015" K="닫 기" J="閉じる" E="Close" V="Đóng"  CID="XMemoBox"/>
+    <fid ID="F016" K="알 림" J="お知らせ" E="Notice" V="Thông báo" CID="RotatorFrame"/>
+  </fids>
+</config>

@@ -1,0 +1,347 @@
+<header ng-include="'templates/header.html'"></header>
+<section id="patientSurvey">
+    <div class="leftpanel" ng-include="'templates/left_menu.html'"></div>
+    <div class="mainpanel">
+        <div class="contentpanel">
+            <ol class="breadcrumb breadcrumb-quirk">
+                <li><a href="#/"><i class="fa fa-home mr5"></i>
+                    <translate>Dashboard</translate>
+                </a></li>
+                <li class="active">
+                    <translate>Patient Survey</translate>
+                </li>
+            </ol>
+            <!-- BEGIN Well -->
+            <div id="search-form" class="well well-asset-options clearfix well-form">
+                <!-- BEGIN Row -->
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>
+                                <translate>Visit date</translate>
+                            </label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="yyyy/mm/dd" id="datepickerFrom">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                <span class="input-group-addon" id="input-addon">~</span>
+                                <input type="text" class="form-control" placeholder="yyyy/mm/dd" id="datepickerTo">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label>
+                                <translate>Department</translate>
+                            </label>
+                            <select id="department-select" ng-model="selectedId" data-placeholder="{{'Select department'|translate}}" style="width: 100%" ui-select2>
+                                <option></option>
+                                <option ng-bind="'All' | translate" value="-1"></option>
+                                <option ng-repeat="option in departmentList" value="{{option.department_code}}" ng-selected="option.department_code == selectedId">{{ option.department_name}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label>
+                                <translate>Health survey status</translate>
+                            </label>
+                            <select id="survey-status" ng-model="selectedStatus" class="form-control" style="width: 100%" data-placeholder="{{'Select status'| translate}}" ui-select2="{minimumResultsForSearch: -1}">
+                                <option value=""></option>
+                                <option ng-bind="'All' | translate" value="-1"></option>
+                                <option ng-repeat="option in healthStatus" value="{{option.value}}" ng-selected="option.value==selectedStatus">{{option.text}}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div><!-- END Row -->
+                <!-- BEGIN Row 2 -->
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>
+                                <translate>Patient code</translate>
+                                /
+                                <translate>Patient Name</translate>
+                            </label>
+                            <input type="text" id="select_patient" class="form-control" placeholder="{{'Select patient'|translate}}"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>
+                                <translate>Survey Title</translate>
+                            </label>
+                            <input type="text" class="form-control" id="title" placeholder="{{'Enter survey title'|translate}}"/>
+                        </div>
+                    </div>
+                </div><!-- END Row 2 -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <button class="btn btn-success btn-block" id="btn_search_patient" ng-click="searchSurvey()">
+                            <translate>Search</translate>
+                        </button>
+                    </div>
+                </div>
+            </div><!-- END Well -->.
+
+            <!-- BEGIN PANEL -->
+            <div class="panel">
+                <div class="panel-heading">
+                    <div class="clearfix" id="clearfix">
+                        <div class="pull-left">
+                            <h3 class="panel-title">
+                                <h5 class="panel-title mb5">
+                                    <translate>Search result</translate>
+                                </h5>
+                                <p class="mb20">
+                                    <translate>Total <strong class="highlight">{{recordsTotal}}</strong> results</translate>
+                                </p>
+                            </h3>
+                        </div>
+                        <div class="pull-right">
+                            <button class="btn btn-success" ng-click="createPatientSurveyPopup()"><i class="fa fa-plus"></i>
+                                <translate>Create Patient Survey</translate>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <!-- BEGIN Table -->
+                    <div class="table-responsive">
+                        <table id="table-result" datatable dt-options="dtOptions" dt-columns="dtColumns" dt-column-defs="dtColumnDefs" dt-instance="dtInstance" class="table table-bordered nomargin table-kk">
+                            <thead>
+                            <tr>
+                                <th style="width:1px;" class="text-center no-sort">
+
+                                </th>
+                                <th class="text-center">
+                                    <translate>Department</translate>
+                                </th>
+                                <th class="text-center" style="width: 100px;">
+                                    <translate>Visit date</translate>
+                                </th>
+                                <th class="text-center">
+                                    <translate>Visit time</translate>
+                                </th>
+                                <th class="text-center">
+                                    <translate>Patient code</translate>
+                                </th>
+                                <th class="text-center">
+                                    <translate>Patient name</translate>
+                                </th>
+                                <th class="sorting">
+                                    <translate>Survey title</translate>
+                                </th>
+                                <th class="text-center">
+                                    <translate>Status</translate>
+                                </th>
+                                <th style="width:90px;">&nbsp;</th>
+                                <th style="width:90px;">&nbsp;</th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div><!-- END Table -->
+                </div>
+            </div><!-- END PANEL -->
+            <!-- Modal -->
+            <div class="modal bounceIn animated modal-kk" id="patient-survey-create" role="dialog"
+                 aria-labelledby="patient-survey-create" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="patient-survey-create-title">
+                                <translate>Create new patient survey</translate>
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <!-- BEGIN Form -->
+                                    <div class="form-horizontal">
+                                        <form name="popupCreatePatientSurveyForm">
+                                            <div class="form-group" ng-class="{'has-error' : popupCreatePatientSurveyForm.contentCreatePatientSurveyPopup.$error.required && !popupCreatePatientSurveyForm.contentCreatePatientSurveyPopup.$pristine}">
+                                                <label class="col-sm-3 control-label">
+                                                    <translate>Patient code</translate>
+                                                    <sup class="highlight">*</sup>
+                                                </label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" id="patient" class="form-control" name="contentCreatePatientSurveyPopup" placeholder="{{'Enter patient code'|translate}}" ng-model="patient" required/>
+                                                    <span ng-show="popupCreatePatientSurveyForm.contentCreatePatientSurveyPopup.$error.required && !popupCreatePatientSurveyForm.contentCreatePatientSurveyPopup.$pristine" class="help-error"><translate>Please, enter patient code</translate></span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group" ng-class="{'has-error' : popupCreatePatientSurveyForm.departmentCreatePatientSurveyPopup.$error.required && !popupCreatePatientSurveyForm.departmentCreatePatientSurveyPopup.$pristine}">
+                                                <label class="col-sm-3 control-label">
+                                                    <translate>Department</translate>
+                                                    <sup class="highlight">*</sup>
+                                                </label>
+                                                <div class="col-sm-9">
+                                                    <select id="select-department2" class="form-control" name="departmentCreatePatientSurveyPopup" style="width: 100%" data-placeholder="{{'Select department' | translate}}" ng-model="department" ng-change="selectDepartment()" ui-select2="{minimumResultsForSearch: -1}" required>
+                                                        <option></option>
+                                                        <option ng-repeat="option in departmentList" value="{{option.department_code}}">{{ option.department_name }}</option>
+                                                    </select>
+                                                    <span ng-show="popupCreatePatientSurveyForm.departmentCreatePatientSurveyPopup.$error.required && !popupCreatePatientSurveyForm.departmentCreatePatientSurveyPopup.$pristine" class="help-error"><translate>Department is required</translate></span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group" ng-class="{'has-error' : popupCreatePatientSurveyForm.surveyCreatePatientSurveyPopup.$error.required && !popupCreatePatientSurveyForm.surveyCreatePatientSurveyPopup.$pristine}">
+                                                <label class="col-sm-3 control-label">
+                                                    <translate>Survey Title</translate>
+                                                    <sup class="highlight">*</sup>
+                                                </label>
+                                                <div class="col-sm-9">
+                                                    <select id="select-survey" class="form-control" name="surveyCreatePatientSurveyPopup" style="width: 100%" data-placeholder="{{'Select survey' | translate}}" ng-model="survey" ui-select2="{minimumResultsForSearch: -1}" required>
+                                                        <option></option>
+                                                        <option ng-repeat="option in surveyList" value="{{option.id}}">{{ option.survey_title }}</option>
+                                                    </select>
+                                                    <span ng-show="popupCreatePatientSurveyForm.surveyCreatePatientSurveyPopup.$error.required && !popupCreatePatientSurveyForm.surveyCreatePatientSurveyPopup.$pristine" class="help-error"><translate>Survey is required</translate></span>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div><!-- END Form -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="form-group">
+                                <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">
+                                    <translate>Cancel</translate>
+                                </button>
+                                <button class="btn btn-success" ng-click="savePatientSurvey()">
+                                    <translate>Save</translate>
+                                </button>
+                            </div>
+                        </div>
+                    </div><!-- modal-content -->
+                </div><!-- modal-dialog -->
+            </div><!-- modal -->
+            <div class="modal bounceIn animated modal-kk" id="survey-change" role="dialog"
+                 aria-labelledby="survey-change" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="survey-change-title">
+                                <translate>Change survey</translate>
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <!-- BEGIN Form -->
+                                    <div class="form-horizontal">
+                                        <form name="popupChangeSurveyForm">
+                                            <div class="form-group" ng-class="{'has-error' : popupChangeSurveyForm.departmentChangeSurveyPopup.$error.required && !popupChangeSurveyForm.departmentChangeSurveyPopup.$pristine}">
+                                                <label class="col-sm-3 control-label">
+                                                    <translate>Department</translate>
+                                                    <sup class="highlight">*</sup>
+                                                </label>
+                                                <div class="col-sm-9">
+                                                    <select id="select-department3" class="form-control" name="departmentChangeSurveyPopup" style="width: 100%" data-placeholder="{{'Select department' | translate}}" ng-model="department" ng-change="selectDepartment()" ui-select2="{minimumResultsForSearch: -1}" required>
+                                                        <option></option>
+                                                        <option ng-repeat="option in departmentList" value="{{option.department_code}}" ng-selected="option.department_code == department">{{ option.department_name }}</option>
+                                                    </select>
+                                                    <span ng-show="popupChangeSurveyForm.departmentChangeSurveyPopup.$error.required && !popupChangeSurveyForm.departmentChangeSurveyPopup.$pristine" class="help-error"><translate>Department is required</translate></span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group" ng-class="{'has-error' : popupChangeSurveyForm.surveyChangeSurveyPopup.$error.required && !popupChangeSurveyForm.surveyChangeSurveyPopup.$pristine}">
+                                                <label class="col-sm-3 control-label">
+                                                    <translate>Survey Title</translate>
+                                                    <sup class="highlight">*</sup>
+                                                </label>
+                                                <div class="col-sm-9">
+                                                    <select id="select-survey2" class="form-control" name="surveyChangeSurveyPopup" style="width: 100%" data-placeholder="{{'Select survey' | translate}}" ng-model="survey" ui-select2="{minimumResultsForSearch: -1}" required>
+                                                        <option></option>
+                                                        <option ng-repeat="option in surveyList" value="{{option.id}}" ng-selected="option.id == survey">{{ option.survey_title }}</option>
+                                                    </select>
+                                                    <span ng-show="popupChangeSurveyForm.surveyChangeSurveyPopup.$error.required && !popupChangeSurveyForm.surveyChangeSurveyPopup.$pristine" class="help-error"><translate>Survey is required</translate></span>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div><!-- END Form -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="form-group">
+                                <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">
+                                    <translate>Cancel</translate>
+                                </button>
+                                <button class="btn btn-success" ng-click="changeSurvey()">
+                                    <translate>Save</translate>
+                                </button>
+                            </div>
+                        </div>
+                    </div><!-- modal-content -->
+                </div><!-- modal-dialog -->
+            </div><!-- modal -->
+            <!-- content goes here... -->
+
+        </div><!-- contentpanel -->
+    </div><!-- mainpanel -->
+</section>
+<style>
+    #table-result_wrapper table {
+        width: 100% !important;
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var scope = angular.element($("#patientSurvey")).scope();
+        if (scope.dtInstance) {
+            scope.dtInstance.rerender();
+        }
+
+        var localStorage = window.localStorage.getItem('cms.hospitalObj');
+        var hospitalToObj = $.parseJSON(localStorage);
+        var locale = hospitalToObj.data.locale.toLowerCase();
+        if (typeof(locale) != 'undefined') {
+            var languageDate = locale;
+        } else {
+            languageDate = 'ja';
+        }
+
+        // Formating return data for datatable
+        function formatRepo(repo) {
+            if (repo.loading) return repo.name;
+            /*var markup = '<div class="clearfix">' +
+             '<div clas="col-sm-10">' +
+             '<div class="clearfix">' +
+             '<div class="col-sm-6">' + repo.patient_name + '</div>' +
+             '<div class="col-sm-3"><i class="fa fa-code-fork"></i> ' + repo.forks_count + '</div>' +
+             '<div class="col-sm-2"><i class="fa fa-star"></i> ' + repo.stargazers_count + '</div>' +
+             '</div>';
+
+             if (repo.description) {
+             markup += '<div>' + repo.description + '</div>';
+             }
+             markup += '</div></div>';*/
+            var res = '<span>' + repo.name + '</span>';
+            return res;
+        }
+
+        function formatRepoSelection(repo) {
+            if (repo.id === '') { // adjust for custom placeholder values
+                return 'Select patient';
+            }
+            return repo.patient_code || repo.name;
+        }
+
+        $('#datepickerFrom').datepicker({
+            format: 'yyyy/mm/dd',
+            language: languageDate.replace(/"/g, '')
+        });
+
+        $('#datepickerTo').datepicker({
+            format: 'yyyy/mm/dd',
+            language: languageDate.replace(/"/g, '')
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).keypress(function(e) {
+        if(e.which == 13) {
+            $( "#btn_search_patient" ).trigger( "click" );
+        }
+    });
+</script>

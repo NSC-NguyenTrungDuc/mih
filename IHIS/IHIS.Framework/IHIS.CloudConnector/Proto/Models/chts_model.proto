@@ -1,0 +1,132 @@
+//================= CHT0110Q01 START =====================
+message CHT0110Q01GrdCHT0110MListInfo{
+	optional string sang_code = 1;
+	optional string sang_name = 2;
+	optional string sang_name_han = 3;
+	optional string sang_name_self = 4;
+	optional string sang_name_inx = 5;
+	optional string start_date = 6;
+	optional string bulyong_yn = 7;
+	optional string suga_sang_code = 8;
+	optional string suga_sang_name = 9;
+	optional string junyeom_bunryu = 10;
+	optional string junyeom_kind = 11;
+	optional string samang_sang_group = 12;
+	optional string samang_group_name = 13;
+	optional string rank_cnt = 14;
+}
+//================= CHT0110Q01 END =====================
+
+//================= CHT0115Q00 START =====================
+message CHT0115Q00GrdScInfo {
+	optional string susik_code = 1;
+	optional string susik_name = 2;
+	optional string susik_name_gana = 3;
+	optional string susik_detail_gubun = 4;
+}
+
+message CHT0115Q00SusikCodeInfo {
+	optional string susik_name = 1;
+	optional string susik_name_gana = 2;
+	optional string susik_detail_gubun = 3;
+}
+//================= CHT0115Q00 END =====================
+
+
+//================= CHT0110U00 START =====================
+
+message CHT0110U00grdCHT0110ItemInfo{
+optional string sang_code = 1;
+optional string sang_name =2;
+optional string sang_name_han =3;
+optional string sang_name_self =4;
+optional string start_date =5;
+optional string end_date =6;
+optional string bulyong_yn=7;
+optional string suga_sang_code=8;
+optional string suga_sang_name =9;
+optional string junyeom_buryn =10;
+optional string junyeom_kind =11;
+optional string samang_sang_group = 12;
+optional string row_state = 13;
+}
+
+//================= CHT0110U00 END =====================
+
+
+
+//================= CHT0115Q01 START =====================
+
+message CHT0115Q01grdCHT0115Info{
+        optional string susik_code = 1;
+        optional string susik_name = 2;
+        optional string susik_name_gana = 3;
+        optional string susik_cr_date = 4;
+        optional string susik_upd_date = 5;
+        optional string susik_disable_date = 6;
+        optional string susik_gwanri_no = 7;
+        optional string susik_gubun = 8;
+        optional string susik_change_code = 9;
+        optional string susik_detail_gubun = 10;
+        optional string start_date = 11;
+        optional string end_date = 12;
+        optional string sort = 13;
+        optional string row_state = 14;
+}
+//================= CHT0115Q01 END =====================
+
+//================= CHT0117U00 START =====================
+message CHT0117GrdCHT0117InitListItemInfo{
+	optional string start_date = 1;
+	optional string end_date = 2;
+	optional string buwi = 3;
+	optional string buwi_name = 4;
+	optional string sort_key = 5;
+	optional string remark = 6;
+	optional string cont_key = 7;
+	optional string row_state= 8;
+}
+
+message CHT0117GrdCHT0118InitListItemInfo{
+	optional string start_date = 1;
+	optional string end_date = 2;
+	optional string buwi = 3;
+	optional string sub_buwi = 4;
+	optional string sub_buwi_name = 5;
+	optional string sort_key = 6;
+	optional string remark = 7;
+	optional string cont_key = 8;
+	optional string nosai_jy_rate = 9;
+	optional string row_state= 10;
+}
+
+//================= CHT0117U00 END =====================
+
+//================= CHT0117Q00 Start =====================
+message CHT0117Q00DloCHT0117Info{
+	optional string start_date = 1;
+	optional string end_date = 2;
+	optional string buwi = 3;
+	optional string buwi_name = 4;
+}
+message CHT0117Q00GrdCHT0118Info{
+	optional string buwi = 1;
+	optional string sub_buwi = 2;
+	optional string sub_buwi_name = 3;
+	optional string cont_key = 4;
+}
+//================= CHT0117Q00 End =====================
+
+//================= CHT0113Q00 Start =====================
+message CHT0113Q00GrdCHT0113Info
+{
+	optional string disability_code = 1;
+	optional string disability_name = 2;
+	optional string disability_kana_name = 3;
+	optional string start_date = 4;
+	optional string end_date = 5;
+	optional string delete_yn = 6;
+	optional string pkcht0113 = 7;
+	optional string n = 8;
+}
+//================= CHT0113Q00 Start =====================

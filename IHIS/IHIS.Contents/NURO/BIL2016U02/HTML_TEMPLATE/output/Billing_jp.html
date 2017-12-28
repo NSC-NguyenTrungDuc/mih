@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>Printin Binling</title>
+		<script src="../js/pikaday.js"></script>
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/handlebars.min.js"></script>	
+		<script type="text/javascript" src="../js/common.js"></script>
+		<script type="text/javascript" src="../js/app.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="../css/print_binling.css">
+
+    </head>
+	<body>
+	<form id="myform" action="" method="post">
+ 	<div>	
+		<div id="data-template">
+		</div>
+	</div>
+	 <script id="some-template" type="text/x-handlebars-template"> 
+		<div class="billing">
+			<div class="bottom">				
+				<div class="pull-left">
+				<h1 class="center">請求書兼領収書</h1>
+				<div>領収書発行日 :<span class="value"> {{Invoice_date}} </span></div>
+				<div>領収書コード :<span class="value"> {{Invoice_no}} </span></div>
+				</div>
+				<div class="pull-right">
+					<h3> {{Hospital_name}} </h3>
+					<p><span>住所</span><span class="value">:  {{Adress}}  </span></p>
+					<p><span>&nbsp;</span><span class="value">&nbsp;   {{Adress1}}  </span></p>
+					<p><span>電話番号</span><span class="value">:  {{Tel}}  <span style="width: auto; float:none;    width: 174px;float: right;">Fax &nbsp;&nbsp; : {{Fax}}</span></span>  </p>
+					<p><span>URL</span><span class="value">:   {{Website}}  </span></p>
+				</div>
+			</div>
+			<div>患者氏名 : <span class="value">  {{Patient}}  </span></div>
+			
+			<div>患者番号 : <span class="value">  {{Patient_code}}  </span><span class="pull-right">単位: 円</span></div>
+			
+			<table class="tbl_table">
+				<thead>
+					<tr>
+						<th  width="40px">番号</th>
+						<th  width="90px">オーダーコード</th>
+						<th >オーダー名</th>
+						<th width="10%">単位</th>
+						<th width="10%">数量</th>
+						<th width="10%">単価</th>
+						<th width="10%">金額</th>
+					</tr>
+				</thead>
+				<tbody>			
+					 {{#each BillingData}} 
+					<tr>
+						<td colspan='7'> {{this.Department}}-{{this.DeptReqNm}} </td>
+					</tr>
+					 {{#each InvoiceDetail}} 
+					<tr>
+						<td class="count"></td>
+						<td> {{this.HangmogCode}} </td>
+						<td> {{this.HangmogName}} </td>
+						<td> {{this.Unit}} </td>
+						<td> {{this.Quantity}} </td>
+						<td> {{formatCurrencyJP this.Price}} </td>
+						<td align="right"> {{formatCurrencyJP Amount}} </td>
+					</tr>	
+					 {{/each}} 
+					 {{/each}} 
+					<tr>
+						<td align="center" colspan="6">合計</td>
+						<td align="right">  {{Sum_amount_invoice}}  </td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="note">
+				<p>※領収書は再発行いたしかねますので、大切に保管してください。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;※領収印なき領収書は無効です。<br>※厚生労働省が定める診療報酬や薬価等には、医療機関等が仕入れ時に負担する消費税が反映されています。</p>
+				<div class="notedf"><span>領収印</span></div>
+			</div>
+			
+		</div>
+	 </script> 
+	</form>
+   	</body>
+</html>

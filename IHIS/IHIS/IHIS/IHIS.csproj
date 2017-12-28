@@ -1,0 +1,3626 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <DebugType>
+    </DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F767298D-BCAA-4A1D-8426-62DFF4CDF2AE}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>IHIS.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>KCCK</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>true</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>IHIS</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>A4BBD156853B226ED6557E78FC337A52D6E32655</ManifestCertificateThumbprint>
+    <ManifestKeyFile>SofiaMedix Co.,Ltd.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <TargetZone>Custom</TargetZone>
+    <ExcludedPermissions>
+    </ExcludedPermissions>
+    <SignAssembly>false</SignAssembly>
+    <ManifestTimestampUrl>http://timestamp.digicert.com</ManifestTimestampUrl>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\00.KCCK_SourceCode\git-KCCK\IHIS\IHIS\IHIS\publishment\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://sup-01.hluk.nts.com/ihis/</InstallUrl>
+    <SupportUrl>http://app-01.hluk.nts.com/</SupportUrl>
+    <ProductName>KCCK</ProductName>
+    <PublisherName>NTS.com</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>65</ApplicationRevision>
+    <ApplicationVersion>1.6.4.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleAssemblies>
+    </CodeAnalysisRuleAssemblies>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>Migrated rules for IHIS.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Itanium' ">
+    <OutputPath>bin\Itanium\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <DebugType>
+    </DebugType>
+    <PlatformTarget>Itanium</PlatformTarget>
+    <CodeAnalysisRuleAssemblies>
+    </CodeAnalysisRuleAssemblies>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>Migrated rules for IHIS.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Itanium' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Itanium\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <DebugType>full</DebugType>
+    <PlatformTarget>Itanium</PlatformTarget>
+    <CodeAnalysisRuleAssemblies>
+    </CodeAnalysisRuleAssemblies>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>Migrated rules for IHIS.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DataWindow, Version=1.5.8018.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\DataWindow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DataWindowInterop, Version=1.5.8018.0, Culture=neutral, PublicKeyToken=cc0f66dd9541b3da">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\DataWindowInterop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\REF\Iesi.Collections.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.BizObjects, Version=1.0.6445.28379, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\IHIS\IHIS.BizObjects.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.CloudConnector, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\IHIS.CloudConnector.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.ComFunc">
+      <HintPath>..\..\..\IHIS\IHIS.ComFunc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.Controls, Version=1.0.6445.28375, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\IHIS\IHIS.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.DbControls, Version=1.0.5605.40573, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\IHIS.DbControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.Forms, Version=1.0.5605.40573, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\IHIS.Forms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.MedicalInterface, Version=1.0.5799.36959, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\IHIS.MedicalInterface.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.Service, Version=1.0.5605.40572, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\IHIS.Service.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.Win32, Version=1.0.5605.40572, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\IHIS.Win32.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IHIS.X.Magic, Version=1.0.5605.40572, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\IHIS\IHIS.X.Magic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\REF\Ionic.Zip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\REF\MySql.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Otis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=049a0580404da747, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\REF\Otis.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>..\REF\protobuf-net.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.configuration">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\REF\System.Data.SQLite.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Design">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="WebSocket4Net">
+      <HintPath>..\REF\WebSocket4Net.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FormDownloadVPN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDownloadVPN.Designer.cs">
+      <DependentUpon>FormDownloadVPN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoadError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoadError.Designer.cs">
+      <DependentUpon>FormLoadError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSelectHospCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettingVPN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSettingVPN.Designer.cs">
+      <DependentUpon>FormSettingVPN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IHISUtility.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainEntry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MsgPopupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MsgSystemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.vi-VN.Designer.cs">
+      <DependentUpon>Resources.vi-VN.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Resources.en.Designer.cs">
+      <DependentUpon>Resources.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Resources.ja-JP.Designer.cs">
+      <DependentUpon>Resources.ja-JP.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SetTimeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VPNHelpers.cs" />
+    <Compile Include="WarningForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Content Include="atl71.dll" />
+    <Content Include="CFLite.dll" />
+    <Content Include="CsvHelper.dll" />
+    <Content Include="DataWindow.dll" />
+    <Content Include="DataWindowInterop.dll" />
+    <Content Include="DevExpress.Charts.v11.1.Core.dll" />
+    <Content Include="DevExpress.Data.v11.1.dll" />
+    <Content Include="DevExpress.PivotGrid.v11.1.Core.dll" />
+    <Content Include="DevExpress.Printing.v11.1.Core.dll" />
+    <Content Include="DevExpress.RichEdit.v11.1.Core.dll" />
+    <Content Include="DevExpress.Utils.v11.1.dll" />
+    <Content Include="DevExpress.XtraCharts.v11.1.dll" />
+    <Content Include="DevExpress.XtraEditors.v11.1.dll" />
+    <Content Include="DevExpress.XtraGrid.v11.1.dll" />
+    <Content Include="DevExpress.XtraLayout.v11.1.dll" />
+    <Content Include="DevExpress.XtraPivotGrid.v11.1.dll" />
+    <Content Include="DevExpress.XtraPrinting.v11.1.dll" />
+    <Content Include="DevExpress.XtraReports.v11.1.dll" />
+    <Content Include="DevExpress.XtraRichEdit.v11.1.dll" />
+    <Content Include="DundasChartWizard.dll" />
+    <Content Include="DundasWinChart.dll" />
+    <Content Include="EnvDTE.dll" />
+    <Content Include="EO.Base.dll" />
+    <Content Include="EO.WebBrowser.dll" />
+    <Content Include="EO.WebEngine.dll" />
+    <Content Include="GhostscriptSharp.dll" />
+    <Content Include="gsdll32.dll" />
+    <Content Include="icudt40.dll" />
+    <Content Include="icuin40.dll" />
+    <Content Include="icuuc40.dll" />
+    <Content Include="Iesi.Collections.dll" />
+    <Content Include="IHIS.BizObjects.dll" />
+    <Content Include="IHIS.CloudConnector.dll" />
+    <Content Include="IHIS.ComFunc.dll" />
+    <Content Include="IHIS.Controls.dll" />
+    <Content Include="IHIS.DbControls.dll" />
+    <Content Include="IHIS.Forms.dll" />
+    <Content Include="IHIS.MedicalInterface.dll" />
+    <Content Include="IHIS.Service.dll" />
+    <Content Include="IHIS.StartModules.dll" />
+    <Content Include="IHIS.Win32.dll" />
+    <Content Include="IHIS.X.Magic.dll" />
+    <Content Include="Interop.Excel.dll" />
+    <Content Include="Interop.Office.dll" />
+    <Content Include="Interop.VBIDE.dll" />
+    <Content Include="Interop.Word.dll" />
+    <Content Include="Ionic.Zip.dll" />
+    <Content Include="JavaScriptCore.dll" />
+    <Content Include="libcurl.dll" />
+    <Content Include="libeay32.dll" />
+    <Content Include="libexslt.dll" />
+    <Content Include="libxml2.dll" />
+    <Content Include="libxslt.dll" />
+    <Content Include="Microsoft.Ink.dll" />
+    <Content Include="Microsoft.Practices.EnterpriseLibrary.Caching.dll" />
+    <Content Include="Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="Microsoft.Practices.ObjectBuilder.dll" />
+    <Content Include="msvcp71.dll" />
+    <Content Include="msvcr71.dll" />
+    <Content Include="MySql.Data.dll" />
+    <Content Include="Newtonsoft.Json.dll" />
+    <Content Include="NReco.PdfGenerator.dll" />
+    <Content Include="objc.dll" />
+    <Content Include="Otis.dll" />
+    <Content Include="PaintDotNet.Data.dll" />
+    <Content Include="PaintDotNet.dll" />
+    <Content Include="PaintDotNet.Effects.dll" />
+    <Content Include="PaintDotNet.Resources.dll" />
+    <Content Include="PaintDotNet.StylusReader.dll" />
+    <Content Include="PaintDotNet.SystemLayer.dll" />
+    <Content Include="PBDATA100.dll" />
+    <Content Include="Pbdwn100.dll" />
+    <Content Include="Pbshr100.dll" />
+    <Content Include="PdnLib.dll" />
+    <Content Include="protobuf-net.dll" />
+    <Content Include="pthreadVC2.dll" />
+    <Content Include="SQLite.Interop.dll" />
+    <Content Include="SQLite3.dll" />
+    <Content Include="ssleay32.dll" />
+    <Content Include="System.Data.SQLite.dll" />
+    <Content Include="vpn-api.dll" />
+    <Content Include="WebSocket4Net.dll" />
+    <Content Include="XRTS\DataWindow.dll" />
+    <Content Include="XRTS\DataWindowInterop.dll" />
+    <Content Include="XRTS\en\XRTS.resources.dll" />
+    <Content Include="XRTS\en\XRTS.XRT0000Q00.resources.dll" />
+    <Content Include="XRTS\en\XRTS.XRT0001U00.resources.dll" />
+    <Content Include="XRTS\en\XRTS.XRT0101U00.resources.dll" />
+    <Content Include="XRTS\en\XRTS.XRT0101U01.resources.dll" />
+    <Content Include="XRTS\en\XRTS.XRT0122Q00.resources.dll" />
+    <Content Include="XRTS\en\XRTS.XRT0122U00.resources.dll" />
+    <Content Include="XRTS\en\XRTS.XRT0123U00.resources.dll" />
+    <Content Include="XRTS\en\XRTS.XRT0201U00.resources.dll" />
+    <Content Include="XRTS\en\XRTS.XRT1002U00.resources.dll" />
+    <Content Include="XRTS\en\XRTS.XRT7001Q01.resources.dll" />
+    <Content Include="XRTS\en\XRTS.XRT9001R01.resources.dll" />
+    <Content Include="XRTS\en\XRTS.XRT9001R03.resources.dll" />
+    <Content Include="XRTS\en\XRTS.XRT9001R04.resources.dll" />
+    <Content Include="XRTS\Iesi.Collections.dll" />
+    <Content Include="XRTS\Interop.Excel.dll" />
+    <Content Include="XRTS\Interop.Office.dll" />
+    <Content Include="XRTS\Interop.VBIDE.dll" />
+    <Content Include="XRTS\ja-JP\XRTS.resources.dll" />
+    <Content Include="XRTS\ja-JP\XRTS.XRT0000Q00.resources.dll" />
+    <Content Include="XRTS\ja-JP\XRTS.XRT0001U00.resources.dll" />
+    <Content Include="XRTS\ja-JP\XRTS.XRT0101U00.resources.dll" />
+    <Content Include="XRTS\ja-JP\XRTS.XRT0101U01.resources.dll" />
+    <Content Include="XRTS\ja-JP\XRTS.XRT0122Q00.resources.dll" />
+    <Content Include="XRTS\ja-JP\XRTS.XRT0122U00.resources.dll" />
+    <Content Include="XRTS\ja-JP\XRTS.XRT0123U00.resources.dll" />
+    <Content Include="XRTS\ja-JP\XRTS.XRT0201U00.resources.dll" />
+    <Content Include="XRTS\ja-JP\XRTS.XRT1002U00.resources.dll" />
+    <Content Include="XRTS\ja-JP\XRTS.XRT7001Q01.resources.dll" />
+    <Content Include="XRTS\ja-JP\XRTS.XRT9001R01.resources.dll" />
+    <Content Include="XRTS\ja-JP\XRTS.XRT9001R03.resources.dll" />
+    <Content Include="XRTS\ja-JP\XRTS.XRT9001R04.resources.dll" />
+    <Content Include="XRTS\Microsoft.Ink.dll" />
+    <Content Include="XRTS\Microsoft.Practices.EnterpriseLibrary.Caching.dll" />
+    <Content Include="XRTS\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="XRTS\Microsoft.Practices.ObjectBuilder.dll" />
+    <Content Include="XRTS\Otis.dll" />
+    <Content Include="XRTS\PBDATA100.dll" />
+    <Content Include="XRTS\protobuf-net.dll" />
+    <Content Include="XRTS\vi-VN\XRTS.resources.dll" />
+    <Content Include="XRTS\vi-VN\XRTS.XRT0000Q00.resources.dll" />
+    <Content Include="XRTS\vi-VN\XRTS.XRT0001U00.resources.dll" />
+    <Content Include="XRTS\vi-VN\XRTS.XRT0101U00.resources.dll" />
+    <Content Include="XRTS\vi-VN\XRTS.XRT0101U01.resources.dll" />
+    <Content Include="XRTS\vi-VN\XRTS.XRT0122Q00.resources.dll" />
+    <Content Include="XRTS\vi-VN\XRTS.XRT0122U00.resources.dll" />
+    <Content Include="XRTS\vi-VN\XRTS.XRT0123U00.resources.dll" />
+    <Content Include="XRTS\vi-VN\XRTS.XRT0201U00.resources.dll" />
+    <Content Include="XRTS\vi-VN\XRTS.XRT1002U00.resources.dll" />
+    <Content Include="XRTS\vi-VN\XRTS.XRT7001Q01.resources.dll" />
+    <Content Include="XRTS\vi-VN\XRTS.XRT9001R01.resources.dll" />
+    <Content Include="XRTS\vi-VN\XRTS.XRT9001R03.resources.dll" />
+    <Content Include="XRTS\WebSocket4Net.dll" />
+    <Content Include="XRTS\XRTS.exe" />
+    <Content Include="XRTS\XRTS.XRT0000Q00.dll" />
+    <Content Include="XRTS\XRTS.XRT0001U00.dll" />
+    <Content Include="XRTS\XRTS.XRT0101U00.dll" />
+    <Content Include="XRTS\XRTS.XRT0101U01.dll" />
+    <Content Include="XRTS\XRTS.XRT0122Q00.dll" />
+    <Content Include="XRTS\XRTS.XRT0122U00.dll" />
+    <Content Include="XRTS\XRTS.XRT0123U00.dll" />
+    <Content Include="XRTS\XRTS.XRT0201U00.dll" />
+    <Content Include="XRTS\XRTS.XRT1002U00.dll" />
+    <Content Include="XRTS\XRTS.XRT7001Q01.dll" />
+    <Content Include="XRTS\XRTS.XRT9001R01.dll" />
+    <Content Include="XRTS\XRTS.XRT9001R02.dll" />
+    <Content Include="XRTS\XRTS.XRT9001R03.dll" />
+    <Content Include="XRTS\XRTS.XRT9001R04.dll" />
+    <EmbeddedResource Include="AdminLoginForm.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdminLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminLoginForm.ja-JP.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdminLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminLoginForm.resx">
+      <DependentUpon>AdminLoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\Close.bmp">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\MessageJr.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\MessageKo.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\StartingFormJr.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\StartingFormKo.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\WarningFormJr.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\WarningFormKo.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="MSG.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MsgPopupForm.resx">
+      <DependentUpon>MsgPopupForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MsgSystemForm.resx">
+      <DependentUpon>MsgSystemForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="CPLS\cpls.cpl0000q00.pbd" />
+    <None Include="Data\323\000000666\000000666__20170911154745765071.pdf" />
+    <None Include="Data\323\000000666\000000666__20170911163907609594.pdf" />
+    <None Include="Data\323\000000666\000000666__20170911164903795506.pdf" />
+    <None Include="Data\323\000000666\000000666__20170911165207705292.pdf" />
+    <None Include="Data\323\000000666\000000666__20170911165608409438.pdf" />
+    <None Include="Data\323\000000666\000000666__20170911165823249308.pdf" />
+    <None Include="Data\323\000000666\temp\000000666__20170911160256320192.pdf" />
+    <None Include="Images\icon-close.png" />
+    <None Include="Images\icon-kc.png" />
+    <Content Include="ADMA\ADMA.ADM101U.dll" />
+    <Content Include="ADMA\ADMA.ADM102U.dll" />
+    <Content Include="ADMA\ADMA.ADM103U.dll" />
+    <Content Include="ADMA\ADMA.ADM104Q.dll" />
+    <Content Include="ADMA\ADMA.ADM104U.dll" />
+    <Content Include="ADMA\ADMA.ADM106U.dll" />
+    <Content Include="ADMA\ADMA.ADM107U.dll" />
+    <Content Include="ADMA\ADMA.ADM108U.dll" />
+    <Content Include="ADMA\ADMA.ADM2016U00.dll" />
+    <Content Include="ADMA\ADMA.ADM201U.dll" />
+    <Content Include="ADMA\ADMA.ADM3200R00.dll" />
+    <Content Include="ADMA\ADMA.ADM401U.dll" />
+    <Content Include="ADMA\ADMA.ADM501U.dll" />
+    <Content Include="ADMA\ADMA.ADM502U.dll" />
+    <Content Include="ADMA\ADMA.ADM601Q.dll" />
+    <Content Include="ADMA\ADMA.ADM602Q.dll" />
+    <Content Include="ADMA\ADMA.ADMS2015U00.dll" />
+    <Content Include="ADMA\ADMA.ADMS2015U01.dll" />
+    <Content Include="ADMA\ADMA.ADMS2016U00.dll" />
+    <Content Include="ADMA\ADMA.ADMSOURCEMANAGER.dll" />
+    <Content Include="ADMA\ADMA.COMSYS.dll" />
+    <Content Include="ADMA\ADMA.exe" />
+    <Content Include="ADMA\en\ADMA.ADM101U.resources.dll" />
+    <Content Include="ADMA\en\ADMA.ADM102U.resources.dll" />
+    <Content Include="ADMA\en\ADMA.ADM103U.resources.dll" />
+    <Content Include="ADMA\en\ADMA.ADM104Q.resources.dll" />
+    <Content Include="ADMA\en\ADMA.ADM104U.resources.dll" />
+    <Content Include="ADMA\en\ADMA.ADM106U.resources.dll" />
+    <Content Include="ADMA\en\ADMA.ADM107U.resources.dll" />
+    <Content Include="ADMA\en\ADMA.ADM108U.resources.dll" />
+    <Content Include="ADMA\en\ADMA.ADM2016U00.resources.dll" />
+    <Content Include="ADMA\en\ADMA.ADM201U.resources.dll" />
+    <Content Include="ADMA\en\ADMA.ADM401U.resources.dll" />
+    <Content Include="ADMA\en\ADMA.ADM501U.resources.dll" />
+    <Content Include="ADMA\en\ADMA.ADMS2015U00.resources.dll" />
+    <Content Include="ADMA\en\ADMA.ADMS2015U01.resources.dll" />
+    <Content Include="ADMA\en\ADMA.ADMS2016U00.resources.dll" />
+    <Content Include="ADMA\en\ADMA.COMSYS.resources.dll" />
+    <Content Include="ADMA\en\ADMA.resources.dll" />
+    <Content Include="ADMA\ja-JP\ADMA.ADM101U.resources.dll" />
+    <Content Include="ADMA\ja-JP\ADMA.ADM102U.resources.dll" />
+    <Content Include="ADMA\ja-JP\ADMA.ADM103U.resources.dll" />
+    <Content Include="ADMA\ja-JP\ADMA.ADM104Q.resources.dll" />
+    <Content Include="ADMA\ja-JP\ADMA.ADM104U.resources.dll" />
+    <Content Include="ADMA\ja-JP\ADMA.ADM106U.resources.dll" />
+    <Content Include="ADMA\ja-JP\ADMA.ADM107U.resources.dll" />
+    <Content Include="ADMA\ja-JP\ADMA.ADM108U.resources.dll" />
+    <Content Include="ADMA\ja-JP\ADMA.ADM2016U00.resources.dll" />
+    <Content Include="ADMA\ja-JP\ADMA.ADM201U.resources.dll" />
+    <Content Include="ADMA\ja-JP\ADMA.ADM401U.resources.dll" />
+    <Content Include="ADMA\ja-JP\ADMA.ADM501U.resources.dll" />
+    <Content Include="ADMA\ja-JP\ADMA.ADMS2015U00.resources.dll" />
+    <Content Include="ADMA\ja-JP\ADMA.ADMS2015U01.resources.dll" />
+    <Content Include="ADMA\ja-JP\ADMA.ADMS2016U00.resources.dll" />
+    <Content Include="ADMA\ja-JP\ADMA.COMSYS.resources.dll" />
+    <Content Include="ADMA\ja-JP\ADMA.resources.dll" />
+    <Content Include="ADMA\MasterUpdate.exe" />
+    <Content Include="ADMA\vi-VN\ADMA.ADM101U.resources.dll" />
+    <Content Include="ADMA\vi-VN\ADMA.ADM102U.resources.dll" />
+    <Content Include="ADMA\vi-VN\ADMA.ADM103U.resources.dll" />
+    <Content Include="ADMA\vi-VN\ADMA.ADM104Q.resources.dll" />
+    <Content Include="ADMA\vi-VN\ADMA.ADM104U.resources.dll" />
+    <Content Include="ADMA\vi-VN\ADMA.ADM106U.resources.dll" />
+    <Content Include="ADMA\vi-VN\ADMA.ADM107U.resources.dll" />
+    <Content Include="ADMA\vi-VN\ADMA.ADM108U.resources.dll" />
+    <Content Include="ADMA\vi-VN\ADMA.ADM2016U00.resources.dll" />
+    <Content Include="ADMA\vi-VN\ADMA.ADM201U.resources.dll" />
+    <Content Include="ADMA\vi-VN\ADMA.ADM401U.resources.dll" />
+    <Content Include="ADMA\vi-VN\ADMA.ADM501U.resources.dll" />
+    <Content Include="ADMA\vi-VN\ADMA.ADMS2015U00.resources.dll" />
+    <Content Include="ADMA\vi-VN\ADMA.ADMS2015U01.resources.dll" />
+    <Content Include="ADMA\vi-VN\ADMA.ADMS2016U00.resources.dll" />
+    <Content Include="ADMA\vi-VN\ADMA.COMSYS.resources.dll" />
+    <Content Include="ADMA\vi-VN\ADMA.resources.dll" />
+    <Content Include="ADMM\ADMM.exe" />
+    <Content Include="ADMS\ADMS.exe" />
+    <Content Include="ADMS\en\ADMS.resources.dll" />
+    <Content Include="ADMS\ja-JP\ADMS.resources.dll" />
+    <Content Include="ADMS\vi-VN\ADMS.resources.dll" />
+    <Content Include="BASS\BASS.BAS0001U00.dll" />
+    <Content Include="BASS\BASS.BAS0100U00.dll" />
+    <Content Include="BASS\BASS.BAS0101U00.dll" />
+    <Content Include="BASS\BASS.BAS0101U04.dll" />
+    <Content Include="BASS\BASS.BAS0110Q00.dll" />
+    <Content Include="BASS\BASS.BAS0110U00.dll" />
+    <Content Include="BASS\BASS.BAS0111U00.dll" />
+    <Content Include="BASS\BASS.BAS0123Q00.dll" />
+    <Content Include="BASS\BASS.BAS0123U00.dll" />
+    <Content Include="BASS\BASS.BAS0203U00.dll" />
+    <Content Include="BASS\BASS.BAS0210U00.dll" />
+    <Content Include="BASS\BASS.BAS0212U00.dll" />
+    <Content Include="BASS\BASS.BAS0230U00.dll" />
+    <Content Include="BASS\BASS.BAS0250Q00.dll" />
+    <Content Include="BASS\BASS.BAS0250U00.dll" />
+    <Content Include="BASS\BASS.BAS0251U00.dll" />
+    <Content Include="BASS\BASS.BAS0260U00.dll" />
+    <Content Include="BASS\BASS.BAS0260U01.dll" />
+    <Content Include="BASS\BASS.BAS0270U00.dll" />
+    <Content Include="BASS\BASS.BAS0310P01.dll" />
+    <Content Include="BASS\BASS.BAS0310U00.dll" />
+    <Content Include="BASS\BASS.BAS0311Q01.dll" />
+    <Content Include="BASS\BASS.BAS0311U00.dll" />
+    <Content Include="BASS\BASS.BAS0312U00.dll" />
+    <Content Include="BASS\BASS.BAS0319U00.dll" />
+    <Content Include="BASS\BASS.BAS0324U00.dll" />
+    <Content Include="BASS\BASS.BAS0355U00.dll" />
+    <Content Include="BASS\BASS.BAS2015U00.dll" />
+    <Content Include="BASS\BASS.EMR0001Q01.dll" />
+    <Content Include="BASS\BASS.exe" />
+    <Content Include="BASS\BASS.HOTCODEMASTER.dll" />
+    <Content Include="BASS\BASS.IFS0001U00.dll" />
+    <Content Include="BASS\BASS.IFS0003U00.dll" />
+    <Content Include="BASS\BASS.IFS0003U01.dll" />
+    <Content Include="BASS\BASS.IFS0003U02.dll" />
+    <Content Include="BASS\BASS.IFS0003U03.dll" />
+    <Content Include="BASS\BASS.IFS0004U01.dll" />
+    <Content Include="BASS\BASS.Lib.ComBiz.dll" />
+    <Content Include="BASS\BASS.Lib.ComFunc.dll" />
+    <Content Include="BASS\BASS.OCSPEMRU00.dll" />
+    <Content Include="BASS\BASS.OIF0001U00.dll" />
+    <Content Include="BASS\BASS.OIF0101U00.dll" />
+    <Content Include="BASS\en\BASS.BAS0001U00.resources.dll" />
+    <Content Include="BASS\en\BASS.BAS0101U00.resources.dll" />
+    <Content Include="BASS\en\BASS.BAS0101U04.resources.dll" />
+    <Content Include="BASS\en\BASS.BAS0110Q00.resources.dll" />
+    <Content Include="BASS\en\BASS.BAS0110U00.resources.dll" />
+    <Content Include="BASS\en\BASS.BAS0123Q00.resources.dll" />
+    <Content Include="BASS\en\BASS.BAS0123U00.resources.dll" />
+    <Content Include="BASS\en\BASS.BAS0203U00.resources.dll" />
+    <Content Include="BASS\en\BASS.BAS0210U00.resources.dll" />
+    <Content Include="BASS\en\BASS.BAS0230U00.resources.dll" />
+    <Content Include="BASS\en\BASS.BAS0260U00.resources.dll" />
+    <Content Include="BASS\en\BASS.BAS0260U01.resources.dll" />
+    <Content Include="BASS\en\BASS.BAS0270U00.resources.dll" />
+    <Content Include="BASS\en\BASS.BAS0310U00.resources.dll" />
+    <Content Include="BASS\en\BASS.BAS0311Q01.resources.dll" />
+    <Content Include="BASS\en\BASS.BAS0311U00.resources.dll" />
+    <Content Include="BASS\en\BASS.IFS0001U00.resources.dll" />
+    <Content Include="BASS\en\BASS.IFS0003U00.resources.dll" />
+    <Content Include="BASS\en\BASS.IFS0003U01.resources.dll" />
+    <Content Include="BASS\en\BASS.IFS0003U02.resources.dll" />
+    <Content Include="BASS\en\BASS.IFS0003U03.resources.dll" />
+    <Content Include="BASS\en\BASS.IFS0004U01.resources.dll" />
+    <Content Include="BASS\en\BASS.OCSPEMRU00.resources.dll" />
+    <Content Include="BASS\en\BASS.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.BAS0001U00.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.BAS0100U00.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.BAS0101U00.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.BAS0101U04.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.BAS0110Q00.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.BAS0110U00.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.BAS0111U00.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.BAS0123Q00.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.BAS0123U00.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.BAS0203U00.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.BAS0210U00.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.BAS0212U00.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.BAS0230U00.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.BAS0250U00.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.BAS0251U00.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.BAS0260U00.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.BAS0260U01.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.BAS0270U00.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.BAS0310P01.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.BAS0310U00.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.BAS0311Q01.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.BAS0311U00.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.BAS0319U00.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.BAS0324U00.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.BAS2015U00.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.HOTCODEMASTER.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.IFS0001U00.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.IFS0003U00.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.IFS0003U01.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.IFS0003U02.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.IFS0003U03.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.IFS0004U01.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.OCSPEMRU00.resources.dll" />
+    <Content Include="BASS\ja-JP\BASS.resources.dll" />
+    <Content Include="BASS\vi-VN\BASS.BAS0001U00.resources.dll" />
+    <Content Include="BASS\vi-VN\BASS.BAS0101U00.resources.dll" />
+    <Content Include="BASS\vi-VN\BASS.BAS0101U04.resources.dll" />
+    <Content Include="BASS\vi-VN\BASS.BAS0110Q00.resources.dll" />
+    <Content Include="BASS\vi-VN\BASS.BAS0110U00.resources.dll" />
+    <Content Include="BASS\vi-VN\BASS.BAS0123Q00.resources.dll" />
+    <Content Include="BASS\vi-VN\BASS.BAS0123U00.resources.dll" />
+    <Content Include="BASS\vi-VN\BASS.BAS0203U00.resources.dll" />
+    <Content Include="BASS\vi-VN\BASS.BAS0210U00.resources.dll" />
+    <Content Include="BASS\vi-VN\BASS.BAS0230U00.resources.dll" />
+    <Content Include="BASS\vi-VN\BASS.BAS0260U00.resources.dll" />
+    <Content Include="BASS\vi-VN\BASS.BAS0260U01.resources.dll" />
+    <Content Include="BASS\vi-VN\BASS.BAS0270U00.resources.dll" />
+    <Content Include="BASS\vi-VN\BASS.BAS0310U00.resources.dll" />
+    <Content Include="BASS\vi-VN\BASS.BAS0311Q01.resources.dll" />
+    <Content Include="BASS\vi-VN\BASS.BAS0311U00.resources.dll" />
+    <Content Include="BASS\vi-VN\BASS.IFS0001U00.resources.dll" />
+    <Content Include="BASS\vi-VN\BASS.IFS0003U00.resources.dll" />
+    <Content Include="BASS\vi-VN\BASS.IFS0003U01.resources.dll" />
+    <Content Include="BASS\vi-VN\BASS.IFS0003U02.resources.dll" />
+    <Content Include="BASS\vi-VN\BASS.IFS0003U03.resources.dll" />
+    <Content Include="BASS\vi-VN\BASS.IFS0004U01.resources.dll" />
+    <Content Include="BASS\vi-VN\BASS.resources.dll" />
+    <Content Include="CHTS\CHTS.CHT0110Q01.dll" />
+    <Content Include="CHTS\CHTS.CHT0110U00.dll" />
+    <Content Include="CHTS\CHTS.CHT0113Q00.dll" />
+    <Content Include="CHTS\CHTS.CHT0115Q00.dll" />
+    <Content Include="CHTS\CHTS.CHT0115Q01.dll" />
+    <Content Include="CHTS\CHTS.CHT0117Q00.dll" />
+    <Content Include="CHTS\CHTS.CHT0117U00.dll" />
+    <Content Include="CHTS\CHTS.exe" />
+    <Content Include="CHTS\en\CHTS.CHT0110Q01.resources.dll" />
+    <Content Include="CHTS\en\CHTS.CHT0110U00.resources.dll" />
+    <Content Include="CHTS\en\CHTS.CHT0113Q00.resources.dll" />
+    <Content Include="CHTS\en\CHTS.CHT0115Q00.resources.dll" />
+    <Content Include="CHTS\en\CHTS.CHT0115Q01.resources.dll" />
+    <Content Include="CHTS\en\CHTS.CHT0117Q00.resources.dll" />
+    <Content Include="CHTS\en\CHTS.CHT0117U00.resources.dll" />
+    <Content Include="CHTS\en\CHTS.resources.dll" />
+    <Content Include="CHTS\ja-JP\CHTS.CHT0110Q01.resources.dll" />
+    <Content Include="CHTS\ja-JP\CHTS.CHT0110U00.resources.dll" />
+    <Content Include="CHTS\ja-JP\CHTS.CHT0113Q00.resources.dll" />
+    <Content Include="CHTS\ja-JP\CHTS.CHT0115Q00.resources.dll" />
+    <Content Include="CHTS\ja-JP\CHTS.CHT0115Q01.resources.dll" />
+    <Content Include="CHTS\ja-JP\CHTS.CHT0117Q00.resources.dll" />
+    <Content Include="CHTS\ja-JP\CHTS.CHT0117U00.resources.dll" />
+    <Content Include="CHTS\ja-JP\CHTS.resources.dll" />
+    <Content Include="CHTS\vi-VN\CHTS.CHT0110Q01.resources.dll" />
+    <Content Include="CHTS\vi-VN\CHTS.CHT0110U00.resources.dll" />
+    <Content Include="CHTS\vi-VN\CHTS.CHT0113Q00.resources.dll" />
+    <Content Include="CHTS\vi-VN\CHTS.CHT0115Q00.resources.dll" />
+    <Content Include="CHTS\vi-VN\CHTS.CHT0115Q01.resources.dll" />
+    <Content Include="CHTS\vi-VN\CHTS.CHT0117Q00.resources.dll" />
+    <Content Include="CHTS\vi-VN\CHTS.CHT0117U00.resources.dll" />
+    <Content Include="CHTS\vi-VN\CHTS.resources.dll" />
+    <Content Include="CLIP\BODY\全身%28乳児%29-1.jpg" />
+    <Content Include="CLIP\BODY\全身%28小児%29-1.jpg" />
+    <Content Include="CLIP\BODY\全身-1.jpg" />
+    <Content Include="CLIP\BODY\全身-2.jpg" />
+    <Content Include="CLIP\BODY\全身-3.jpg" />
+    <Content Include="CLIP\BODY\全身-4.jpg" />
+    <Content Include="CLIP\BODY\全身-5.jpg" />
+    <Content Include="CLIP\BODY\全身血管.jpg" />
+    <Content Include="CLIP\BODY\関節-1.jpg" />
+    <Content Include="CLIP\BODY\関節-2.jpg" />
+    <Content Include="CLIP\BODY\関節-3.jpg" />
+    <Content Include="CLIP\BODY\関節-4.jpg" />
+    <Content Include="CLIP\BODY\関節-5.jpg" />
+    <Content Include="CLIP\BODY\関節-6.jpg" />
+    <Content Include="CLIP\BONE\手骨-1.jpg" />
+    <Content Include="CLIP\BONE\手骨-2.jpg" />
+    <Content Include="CLIP\BONE\手骨-3.jpg" />
+    <Content Include="CLIP\BONE\手骨-4.jpg" />
+    <Content Include="CLIP\BONE\手骨-5.jpg" />
+    <Content Include="CLIP\BONE\肋骨-1.jpg" />
+    <Content Include="CLIP\BONE\肋骨-2.jpg" />
+    <Content Include="CLIP\BONE\脊椎骨-1.jpg" />
+    <Content Include="CLIP\BONE\脊椎骨-2.jpg" />
+    <Content Include="CLIP\BONE\脊椎骨-3.jpg" />
+    <Content Include="CLIP\BONE\足骨-1.jpg" />
+    <Content Include="CLIP\BONE\足骨-2.jpg" />
+    <Content Include="CLIP\BONE\足骨-3.jpg" />
+    <Content Include="CLIP\BONE\頚骨-1.jpg" />
+    <Content Include="CLIP\BONE\顔面骨-1.jpg" />
+    <Content Include="CLIP\BONE\顔面骨-2.jpg" />
+    <Content Include="CLIP\BONE\骨-1.jpg" />
+    <Content Include="CLIP\BONE\骨-2.jpg" />
+    <Content Include="CLIP\BONE\骨-3.jpg" />
+    <Content Include="CLIP\BONE\骨-4.jpg" />
+    <Content Include="CLIP\BONE\骨-5.jpg" />
+    <Content Include="CLIP\BONE\骨盤-1.jpg" />
+    <Content Include="CLIP\HEAD\スリット散瞳.jpg" />
+    <Content Include="CLIP\HEAD\スリット縮瞳.jpg" />
+    <Content Include="CLIP\HEAD\口-1.jpg" />
+    <Content Include="CLIP\HEAD\口-2.jpg" />
+    <Content Include="CLIP\HEAD\口-3.jpg" />
+    <Content Include="CLIP\HEAD\口-4.jpg" />
+    <Content Include="CLIP\HEAD\口-5.jpg" />
+    <Content Include="CLIP\HEAD\口-6.jpg" />
+    <Content Include="CLIP\HEAD\口-7.jpg" />
+    <Content Include="CLIP\HEAD\口-8.jpg" />
+    <Content Include="CLIP\HEAD\右眼底.jpg" />
+    <Content Include="CLIP\HEAD\右眼底詳細.jpg" />
+    <Content Include="CLIP\HEAD\外眼部.jpg" />
+    <Content Include="CLIP\HEAD\左眼底.jpg" />
+    <Content Include="CLIP\HEAD\左眼底詳細.jpg" />
+    <Content Include="CLIP\HEAD\甲状腺-1.jpg" />
+    <Content Include="CLIP\HEAD\眼-1.jpg" />
+    <Content Include="CLIP\HEAD\眼-2.jpg" />
+    <Content Include="CLIP\HEAD\眼球糸状断.jpg" />
+    <Content Include="CLIP\HEAD\網膜%28両眼%29.jpg" />
+    <Content Include="CLIP\HEAD\網膜%28右%29.jpg" />
+    <Content Include="CLIP\HEAD\網膜%28左%29.jpg" />
+    <Content Include="CLIP\HEAD\脳-1.jpg" />
+    <Content Include="CLIP\HEAD\脳-2.jpg" />
+    <Content Include="CLIP\HEAD\脳-3.jpg" />
+    <Content Include="CLIP\HEAD\脳-4.jpg" />
+    <Content Include="CLIP\HEAD\脳-5.jpg" />
+    <Content Include="CLIP\HEAD\脳-6.jpg" />
+    <Content Include="CLIP\HEAD\舌-1.jpg" />
+    <Content Include="CLIP\HEAD\舌-2.jpg" />
+    <Content Include="CLIP\HEAD\頚-1.jpg" />
+    <Content Include="CLIP\HEAD\頚-2.jpg" />
+    <Content Include="CLIP\HEAD\頚-3.jpg" />
+    <Content Include="CLIP\HEAD\頚-4.jpg" />
+    <Content Include="CLIP\HEAD\頚-5.jpg" />
+    <Content Include="CLIP\HEAD\頚-6.jpg" />
+    <Content Include="CLIP\HEAD\頚-7.jpg" />
+    <Content Include="CLIP\HEAD\頚-8.jpg" />
+    <Content Include="CLIP\HEAD\頭部（右向き）.jpg" />
+    <Content Include="CLIP\HEAD\頭部（左向き）.jpg" />
+    <Content Include="CLIP\HEAD\顔-1.jpg" />
+    <Content Include="CLIP\HEAD\顔-2.jpg" />
+    <Content Include="CLIP\HEAD\顔-3.jpg" />
+    <Content Include="CLIP\HEAD\顔-4.jpg" />
+    <Content Include="CLIP\HEAD\顔-5.jpg" />
+    <Content Include="CLIP\HEAD\顔-6.jpg" />
+    <Content Include="CLIP\HEAD\顔-7.jpg" />
+    <Content Include="CLIP\HEAD\顔-8.jpg" />
+    <Content Include="CLIP\LIMB\四肢-1.jpg" />
+    <Content Include="CLIP\LIMB\四肢-2.jpg" />
+    <Content Include="CLIP\LIMB\手-1.jpg" />
+    <Content Include="CLIP\LIMB\手-10.jpg" />
+    <Content Include="CLIP\LIMB\手-11.jpg" />
+    <Content Include="CLIP\LIMB\手-12.jpg" />
+    <Content Include="CLIP\LIMB\手-13.jpg" />
+    <Content Include="CLIP\LIMB\手-14.jpg" />
+    <Content Include="CLIP\LIMB\手-2.jpg" />
+    <Content Include="CLIP\LIMB\手-3.jpg" />
+    <Content Include="CLIP\LIMB\手-4.jpg" />
+    <Content Include="CLIP\LIMB\手-5.jpg" />
+    <Content Include="CLIP\LIMB\手-6.jpg" />
+    <Content Include="CLIP\LIMB\手-7.jpg" />
+    <Content Include="CLIP\LIMB\手-8.jpg" />
+    <Content Include="CLIP\LIMB\手-9.jpg" />
+    <Content Include="CLIP\LIMB\足-1.jpg" />
+    <Content Include="CLIP\LIMB\足-2.jpg" />
+    <Content Include="CLIP\LIMB\足-3.jpg" />
+    <Content Include="CLIP\LIMB\足-4.jpg" />
+    <Content Include="CLIP\LIMB\足-5.jpg" />
+    <Content Include="CLIP\LIMB\足-6.jpg" />
+    <Content Include="CLIP\side position\側臥位1.JPG" />
+    <Content Include="CLIP\side position\側臥位１逆側.JPG" />
+    <Content Include="CLIP\side position\側臥位２.JPG" />
+    <Content Include="CLIP\side position\側臥位２逆側.JPG" />
+    <Content Include="CLIP\side position\側臥位３.JPG" />
+    <Content Include="CLIP\side position\側臥位３逆側.JPG" />
+    <Content Include="CLIP\sign\符号-1.jpg" />
+    <Content Include="CLIP\sign\符号-2.jpg" />
+    <Content Include="CLIP\sign\符号-3.jpg" />
+    <Content Include="CLIP\sign\符号-4.jpg" />
+    <Content Include="CLIP\sign\符号-5.jpg" />
+    <Content Include="CLIP\STAMP1\DW表.jpg" />
+    <Content Include="CLIP\STAMP1\SAS症状.jpg" />
+    <Content Include="CLIP\STAMP1\アービタックス.jpg" />
+    <Content Include="CLIP\STAMP1\スリット散瞳.jpg" />
+    <Content Include="CLIP\STAMP1\スリット縮瞳.jpg" />
+    <Content Include="CLIP\STAMP1\受診時データ.jpg" />
+    <Content Include="CLIP\STAMP1\小児外来_身長体重･循環器.jpg" />
+    <Content Include="CLIP\STAMP1\小児外来・症状.jpg" />
+    <Content Include="CLIP\STAMP1\小児外来身長体重・新生児.jpg" />
+    <Content Include="CLIP\STAMP1\所見.jpg" />
+    <Content Include="CLIP\STAMP1\投薬数_残薬数.jpg" />
+    <Content Include="CLIP\STAMP1\抗凝固療法.jpg" />
+    <Content Include="CLIP\STAMP1\整形_股関節症状.jpg" />
+    <Content Include="CLIP\STAMP1\整形_膝症状.jpg" />
+    <Content Include="CLIP\STAMP1\整形_頚椎症状.jpg" />
+    <Content Include="CLIP\STAMP1\整形外来_SLRT.jpg" />
+    <Content Include="CLIP\STAMP1\整形外来_腰椎症状.jpg" />
+    <Content Include="CLIP\STAMP1\漢方血圧1.jpg" />
+    <Content Include="CLIP\STAMP1\漢方血圧2.jpg" />
+    <Content Include="CLIP\STAMP1\産褥健診.jpg" />
+    <Content Include="CLIP\STAMP1\眼科_NCT.jpg" />
+    <Content Include="CLIP\STAMP1\瞳孔・GCS.jpg" />
+    <Content Include="CLIP\STAMP1\知覚麻痺.jpg" />
+    <Content Include="CLIP\STAMP1\精神_錐体路系.jpg" />
+    <Content Include="CLIP\STAMP1\精神科_GCS.jpg" />
+    <Content Include="CLIP\STAMP1\耳鼻科_顔面神経麻痺スコア.jpg" />
+    <Content Include="CLIP\STAMP1\耳鼻科_鼻のX線所見.jpg" />
+    <Content Include="CLIP\STAMP1\胎児心拍数基線.jpg" />
+    <Content Include="CLIP\STAMP1\身長_体重.jpg" />
+    <Content Include="CLIP\STAMP1\身長体重・血圧.jpg" />
+    <Content Include="CLIP\STAMP2\75gOGTT.jpg" />
+    <Content Include="CLIP\STAMP2\AHI_CPAP.jpg" />
+    <Content Include="CLIP\STAMP2\Bishop.jpg" />
+    <Content Include="CLIP\STAMP2\いぼ焼灼.jpg" />
+    <Content Include="CLIP\STAMP2\ステリクリンR.jpg" />
+    <Content Include="CLIP\STAMP2\ニューモバックス.jpg" />
+    <Content Include="CLIP\STAMP2\ベネトリン0.1ml.jpg" />
+    <Content Include="CLIP\STAMP2\ベネトリン0.2ml.jpg" />
+    <Content Include="CLIP\STAMP2\ベネトリン0.3ml.jpg" />
+    <Content Include="CLIP\STAMP2\リトドリン.jpg" />
+    <Content Include="CLIP\STAMP2\リンパ節摘出術.jpg" />
+    <Content Include="CLIP\STAMP2\ワーファリン量.jpg" />
+    <Content Include="CLIP\STAMP2\在宅精神療法.jpg" />
+    <Content Include="CLIP\STAMP2\婦人科_スメア.jpg" />
+    <Content Include="CLIP\STAMP2\婦人科_低用量ピル.jpg" />
+    <Content Include="CLIP\STAMP2\婦人科_初診・妊婦初診.jpg" />
+    <Content Include="CLIP\STAMP2\婦人科_化学療法.jpg" />
+    <Content Include="CLIP\STAMP2\婦人科_子宮内膜他.jpg" />
+    <Content Include="CLIP\STAMP2\婦人科_組織検査.jpg" />
+    <Content Include="CLIP\STAMP2\形成_マルチワイヤー.jpg" />
+    <Content Include="CLIP\STAMP2\形成_滅菌Sガーゼ.jpg" />
+    <Content Include="CLIP\STAMP2\形成外科_ケナコルト他.jpg" />
+    <Content Include="CLIP\STAMP2\形成外科_熱傷処置.jpg" />
+    <Content Include="CLIP\STAMP2\形成外科_重度褥瘡.jpg" />
+    <Content Include="CLIP\STAMP2\心理検査.jpg" />
+    <Content Include="CLIP\STAMP2\投薬中ワーファリン.jpg" />
+    <Content Include="CLIP\STAMP2\整形・術後指示2.jpg" />
+    <Content Include="CLIP\STAMP2\整形・術後指示１.jpg" />
+    <Content Include="CLIP\STAMP2\整形外来_X線.jpg" />
+    <Content Include="CLIP\STAMP2\生検・ポリペクトミー.jpg" />
+    <Content Include="CLIP\STAMP2\産婦人科_ペッサリー.jpg" />
+    <Content Include="CLIP\STAMP2\産婦人科_超音波断層.jpg" />
+    <Content Include="CLIP\STAMP2\眼科_蛍光眼底撮影.jpg" />
+    <Content Include="CLIP\STAMP2\神経内科_筋電図.jpg" />
+    <Content Include="CLIP\STAMP2\耳鼻科_術前検査.jpg" />
+    <Content Include="CLIP\STAMP2\耳鼻科術後指示.jpg" />
+    <Content Include="CLIP\STAMP2\血液型.jpg" />
+    <Content Include="CLIP\STAMP2\血液透析表.jpg" />
+    <Content Include="CLIP\STAMP2\試験紙検査.jpg" />
+    <Content Include="CLIP\STAMP3\NICUカンファレンス.jpg" />
+    <Content Include="CLIP\STAMP3\カンファレンス.jpg" />
+    <Content Include="CLIP\STAMP3\呼吸器外科総回診.jpg" />
+    <Content Include="CLIP\STAMP3\外科総回診.jpg" />
+    <Content Include="CLIP\STAMP3\循環器科総回診.jpg" />
+    <Content Include="CLIP\STAMP3\心臓血管外科総回診.jpg" />
+    <Content Include="CLIP\STAMP3\服薬自己管理シート.jpg" />
+    <Content Include="CLIP\STAMP3\皮膚_指導内容.jpg" />
+    <Content Include="CLIP\STAMP3\精神科_カウンセリング.jpg" />
+    <Content Include="CLIP\STAMP3\行動制限回診.jpg" />
+    <Content Include="CLIP\STAMP4\X線フィルム診断.jpg" />
+    <Content Include="CLIP\STAMP4\カウンセリング継続.jpg" />
+    <Content Include="CLIP\STAMP4\シリンジポンプ使用.jpg" />
+    <Content Include="CLIP\STAMP4\フィルム診断料.jpg" />
+    <Content Include="CLIP\STAMP4\入退院日.jpg" />
+    <Content Include="CLIP\STAMP4\入院に関する診察.jpg" />
+    <Content Include="CLIP\STAMP4\別紙参照.jpg" />
+    <Content Include="CLIP\STAMP4\医療保護入院に関する.jpg" />
+    <Content Include="CLIP\STAMP4\周産期データベース.jpg" />
+    <Content Include="CLIP\STAMP4\婦人科_NST.jpg" />
+    <Content Include="CLIP\STAMP4\形成_休業補償証明書.jpg" />
+    <Content Include="CLIP\STAMP4\循環器_通院を必要.jpg" />
+    <Content Include="CLIP\STAMP4\心外退院指時示.jpg" />
+    <Content Include="CLIP\STAMP4\撮影_部位コード表.jpg" />
+    <Content Include="CLIP\STAMP4\整形外来_X線フィルム.jpg" />
+    <Content Include="CLIP\STAMP4\次回再来日.jpg" />
+    <Content Include="CLIP\STAMP4\漢方外来問診・定期検査確認表.jpg" />
+    <Content Include="CLIP\STAMP4\産科医療保障制度説明.jpg" />
+    <Content Include="CLIP\STAMP4\産科医療補償制度説明.jpg" />
+    <Content Include="CLIP\STAMP4\画像_放射線治療同意書.jpg" />
+    <Content Include="CLIP\STAMP4\画像_検査承諾書取得.jpg" />
+    <Content Include="CLIP\STAMP4\画像_記載時間.jpg" />
+    <Content Include="CLIP\STAMP4\眼科_次回受診日.jpg" />
+    <Content Include="CLIP\STAMP4\精神_障害者自立支援.jpg" />
+    <Content Include="CLIP\STAMP4\精神科_入院形態.jpg" />
+    <Content Include="CLIP\STAMP4\耳鼻科_保健確認.jpg" />
+    <Content Include="CLIP\STAMP4\耳鼻科_術前.jpg" />
+    <Content Include="CLIP\STAMP4\脳外_他院フィルム有.jpg" />
+    <Content Include="CLIP\STAMP4\腎臓_別途腹膜透析記録.jpg" />
+    <Content Include="CLIP\STAMP4\転院指示.jpg" />
+    <Content Include="CLIP\STAMP4\輸液ポンプ使用.jpg" />
+    <Content Include="CLIP\STAMP4\退院指示.jpg" />
+    <Content Include="CLIP\STAMP4\透析・入退院日.jpg" />
+    <Content Include="CLIP\STAMP5\カウンセリング料.jpg" />
+    <Content Include="CLIP\STAMP5\心身医学療法.jpg" />
+    <Content Include="CLIP\STAMP5\精神科訪問看護指導料.jpg" />
+    <Content Include="CLIP\STAMP5\難病外来指導管理料.jpg" />
+    <Content Include="CLIP\THORAX\乳-1.jpg" />
+    <Content Include="CLIP\THORAX\乳-2.jpg" />
+    <Content Include="CLIP\THORAX\乳-3.JPG" />
+    <Content Include="CLIP\THORAX\前立腺-1.jpg" />
+    <Content Include="CLIP\THORAX\前立腺-2.jpg" />
+    <Content Include="CLIP\THORAX\婦-1.jpg" />
+    <Content Include="CLIP\THORAX\婦-2.gif" />
+    <Content Include="CLIP\THORAX\婦-3.jpg" />
+    <Content Include="CLIP\THORAX\婦-4.jpg" />
+    <Content Include="CLIP\THORAX\尿路-1.jpg" />
+    <Content Include="CLIP\THORAX\心-1.jpg" />
+    <Content Include="CLIP\THORAX\心-2.jpg" />
+    <Content Include="CLIP\THORAX\心肺-1.jpg" />
+    <Content Include="CLIP\THORAX\心臓%28断面%29.jpg" />
+    <Content Include="CLIP\THORAX\心臓前面.jpg" />
+    <Content Include="CLIP\THORAX\気管支-1.jpg" />
+    <Content Include="CLIP\THORAX\気管支-2.jpg" />
+    <Content Include="CLIP\THORAX\肝-1.jpg" />
+    <Content Include="CLIP\THORAX\肝-2.jpg" />
+    <Content Include="CLIP\THORAX\肺-1.jpg" />
+    <Content Include="CLIP\THORAX\肺-2.jpg" />
+    <Content Include="CLIP\THORAX\肺-3.jpg" />
+    <Content Include="CLIP\THORAX\胃-1.jpg" />
+    <Content Include="CLIP\THORAX\胃-2.jpg" />
+    <Content Include="CLIP\THORAX\胆・膵-1.jpg" />
+    <Content Include="CLIP\THORAX\背部-1.jpg" />
+    <Content Include="CLIP\THORAX\胸-1.jpg" />
+    <Content Include="CLIP\THORAX\胸-2.jpg" />
+    <Content Include="CLIP\THORAX\胸_背-1.2.jpg" />
+    <Content Include="CLIP\THORAX\胸_背-1.jpg" />
+    <Content Include="CLIP\THORAX\腎-1.jpg" />
+    <Content Include="CLIP\THORAX\腸-1.jpg" />
+    <Content Include="CLIP\THORAX\腹部-1.jpg" />
+    <Content Include="CLIP\THORAX\腹部-2.gif" />
+    <Content Include="CLIP\THORAX\腹部-3.jpg" />
+    <Content Include="CLIP\THORAX\腹部-4.jpg" />
+    <Content Include="CLIP\THORAX\腹部-5.jpg" />
+    <Content Include="CLIP\THORAX\腹部-6.jpg" />
+    <Content Include="CLIP\THORAX\膀胱-1.jpg" />
+    <Content Include="CLIS\CLIS.CLIS2015U02.dll" />
+    <Content Include="CLIS\CLIS.CLIS2015U03.dll" />
+    <Content Include="CLIS\CLIS.CLIS2015U04.dll" />
+    <Content Include="CLIS\CLIS.CLIS2015U09.dll" />
+    <Content Include="CLIS\CLIS.CLIS2015U13.dll" />
+    <Content Include="CLIS\CLIS.exe" />
+    <Content Include="CLIS\DataWindow.dll" />
+    <Content Include="CLIS\DataWindowInterop.dll" />
+    <Content Include="CLIS\DevExpress.Data.v11.1.dll" />
+    <Content Include="CLIS\DevExpress.Printing.v11.1.Core.dll" />
+    <Content Include="CLIS\DevExpress.Utils.v11.1.dll" />
+    <Content Include="CLIS\DevExpress.XtraEditors.v11.1.dll" />
+    <Content Include="CLIS\DevExpress.XtraGrid.v11.1.dll" />
+    <Content Include="CLIS\DevExpress.XtraLayout.v11.1.dll" />
+    <Content Include="CLIS\en\CLIS.CLIS2015U02.resources.dll" />
+    <Content Include="CLIS\en\CLIS.CLIS2015U03.resources.dll" />
+    <Content Include="CLIS\en\CLIS.CLIS2015U04.resources.dll" />
+    <Content Include="CLIS\en\CLIS.CLIS2015U09.resources.dll" />
+    <Content Include="CLIS\en\CLIS.CLIS2015U13.resources.dll" />
+    <Content Include="CLIS\en\CLIS.resources.dll" />
+    <Content Include="CLIS\GhostscriptSharp.dll" />
+    <Content Include="CLIS\Iesi.Collections.dll" />
+    <Content Include="CLIS\Interop.Excel.dll" />
+    <Content Include="CLIS\Interop.Office.dll" />
+    <Content Include="CLIS\Interop.VBIDE.dll" />
+    <Content Include="CLIS\ja-JP\CLIS.CLIS2015U02.resources.dll" />
+    <Content Include="CLIS\ja-JP\CLIS.CLIS2015U03.resources.dll" />
+    <Content Include="CLIS\ja-JP\CLIS.CLIS2015U04.resources.dll" />
+    <Content Include="CLIS\ja-JP\CLIS.CLIS2015U09.resources.dll" />
+    <Content Include="CLIS\ja-JP\CLIS.CLIS2015U13.resources.dll" />
+    <Content Include="CLIS\ja-JP\CLIS.resources.dll" />
+    <Content Include="CLIS\Microsoft.Ink.dll" />
+    <Content Include="CLIS\Microsoft.Practices.EnterpriseLibrary.Caching.dll" />
+    <Content Include="CLIS\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="CLIS\Microsoft.Practices.ObjectBuilder.dll" />
+    <Content Include="CLIS\Otis.dll" />
+    <Content Include="CLIS\PBDATA100.dll" />
+    <Content Include="CLIS\protobuf-net.dll" />
+    <Content Include="CLIS\vi-VN\CLIS.CLIS2015U02.resources.dll" />
+    <Content Include="CLIS\vi-VN\CLIS.CLIS2015U03.resources.dll" />
+    <Content Include="CLIS\vi-VN\CLIS.CLIS2015U04.resources.dll" />
+    <Content Include="CLIS\vi-VN\CLIS.CLIS2015U09.resources.dll" />
+    <Content Include="CLIS\vi-VN\CLIS.CLIS2015U13.resources.dll" />
+    <Content Include="CLIS\vi-VN\CLIS.resources.dll" />
+    <Content Include="CLIS\WebSocket4Net.dll" />
+    <Content Include="CPLS\CPLS.CPL0000Q00.dll" />
+    <Content Include="CPLS\CPLS.CPL0000Q01.dll" />
+    <Content Include="CPLS\CPLS.CPL0001U00.dll" />
+    <Content Include="CPLS\CPLS.CPL0101U00.dll" />
+    <Content Include="CPLS\CPLS.CPL0104U00.dll" />
+    <Content Include="CPLS\CPLS.CPL0105U00.dll" />
+    <Content Include="CPLS\CPLS.CPL0106U00.dll" />
+    <Content Include="CPLS\CPLS.CPL0108U00.dll" />
+    <Content Include="CPLS\CPLS.CPL0108U01.dll" />
+    <Content Include="CPLS\CPLS.CPL0111U00.dll" />
+    <Content Include="CPLS\CPLS.CPL0155U00.dll" />
+    <Content Include="CPLS\CPLS.CPL2010Q00.dll" />
+    <Content Include="CPLS\CPLS.CPL2010Q01.dll" />
+    <Content Include="CPLS\CPLS.CPL2010Q02.dll" />
+    <Content Include="CPLS\CPLS.CPL2010Q05.dll" />
+    <Content Include="CPLS\CPLS.CPL2010Q06.dll" />
+    <Content Include="CPLS\CPLS.CPL2010R00.dll" />
+    <Content Include="CPLS\CPLS.CPL2010R01.dll" />
+    <Content Include="CPLS\CPLS.CPL2010R02.dll" />
+    <Content Include="CPLS\CPLS.CPL2010U00.dll" />
+    <Content Include="CPLS\CPLS.CPL2010U01.dll" />
+    <Content Include="CPLS\CPLS.CPL2010U02.dll" />
+    <Content Include="CPLS\CPLS.CPL3010U00.dll" />
+    <Content Include="CPLS\CPLS.CPL3010U01.dll" />
+    <Content Include="CPLS\CPLS.CPL3020R00.dll" />
+    <Content Include="CPLS\CPLS.CPL3020U00.dll" />
+    <Content Include="CPLS\CPLS.CPL3020U02.dll" />
+    <Content Include="CPLS\CPLS.CPL3020U99.dll" />
+    <Content Include="CPLS\CPLS.CPL7001Q01.dll" />
+    <Content Include="CPLS\CPLS.CPL7001Q02.dll" />
+    <Content Include="CPLS\CPLS.CPLBMLUPLOADER.dll" />
+    <Content Include="CPLS\CPLS.CPLFINDLIB.dll" />
+    <Content Include="CPLS\CPLS.CPLMASTERUPLOADER.dll" />
+    <Content Include="CPLS\CPLS.exe" />
+    <Content Include="CPLS\CPLS.Lib.Controls.dll" />
+    <Content Include="CPLS\CPLS.Lib.Images.dll" />
+    <Content Include="CPLS\CPLS.Lib.SystemDelegator.dll" />
+    <Content Include="CPLS\CPLS.SCANUPLOADER.dll" />
+    <Content Include="CPLS\CPLS.SCANVIEWER.dll" />
+    <Content Include="CPLS\DataWindow.dll" />
+    <Content Include="CPLS\DataWindowInterop.dll" />
+    <Content Include="CPLS\DundasChartWizard.dll" />
+    <Content Include="CPLS\DundasWinChart.dll" />
+    <Content Include="CPLS\en\CPLS.CPL0000Q00.resources.dll" />
+    <Content Include="CPLS\en\CPLS.CPL0101U00.resources.dll" />
+    <Content Include="CPLS\en\CPLS.CPL0104U00.resources.dll" />
+    <Content Include="CPLS\en\CPLS.CPL0106U00.resources.dll" />
+    <Content Include="CPLS\en\CPLS.CPL0108U00.resources.dll" />
+    <Content Include="CPLS\en\CPLS.CPL0108U01.resources.dll" />
+    <Content Include="CPLS\en\CPLS.CPL2010R00.resources.dll" />
+    <Content Include="CPLS\en\CPLS.CPL2010R01.resources.dll" />
+    <Content Include="CPLS\en\CPLS.CPL2010U00.resources.dll" />
+    <Content Include="CPLS\en\CPLS.CPL3010U00.resources.dll" />
+    <Content Include="CPLS\en\CPLS.CPL3010U01.resources.dll" />
+    <Content Include="CPLS\en\CPLS.CPL3020U00.resources.dll" />
+    <Content Include="CPLS\en\CPLS.CPL3020U02.resources.dll" />
+    <Content Include="CPLS\en\CPLS.CPL7001Q01.resources.dll" />
+    <Content Include="CPLS\en\CPLS.CPL7001Q02.resources.dll" />
+    <Content Include="CPLS\en\CPLS.CPLMASTERUPLOADER.resources.dll" />
+    <Content Include="CPLS\en\CPLS.Lib.Controls.resources.dll" />
+    <Content Include="CPLS\en\CPLS.resources.dll" />
+    <Content Include="CPLS\Iesi.Collections.dll" />
+    <Content Include="CPLS\Interop.Excel.dll" />
+    <Content Include="CPLS\Interop.Office.dll" />
+    <Content Include="CPLS\Interop.VBIDE.dll" />
+    <Content Include="CPLS\ja-JP\CPLS.CPL0000Q00.resources.dll" />
+    <Content Include="CPLS\ja-JP\CPLS.CPL0001U00.resources.dll" />
+    <Content Include="CPLS\ja-JP\CPLS.CPL0101U00.resources.dll" />
+    <Content Include="CPLS\ja-JP\CPLS.CPL0104U00.resources.dll" />
+    <Content Include="CPLS\ja-JP\CPLS.CPL0105U00.resources.dll" />
+    <Content Include="CPLS\ja-JP\CPLS.CPL0106U00.resources.dll" />
+    <Content Include="CPLS\ja-JP\CPLS.CPL0108U00.resources.dll" />
+    <Content Include="CPLS\ja-JP\CPLS.CPL0108U01.resources.dll" />
+    <Content Include="CPLS\ja-JP\CPLS.CPL0111U00.resources.dll" />
+    <Content Include="CPLS\ja-JP\CPLS.CPL0155U00.resources.dll" />
+    <Content Include="CPLS\ja-JP\CPLS.CPL2010R00.resources.dll" />
+    <Content Include="CPLS\ja-JP\CPLS.CPL2010R01.resources.dll" />
+    <Content Include="CPLS\ja-JP\CPLS.CPL2010U00.resources.dll" />
+    <Content Include="CPLS\ja-JP\CPLS.CPL2010U01.resources.dll" />
+    <Content Include="CPLS\ja-JP\CPLS.CPL3010U00.resources.dll" />
+    <Content Include="CPLS\ja-JP\CPLS.CPL3010U01.resources.dll" />
+    <Content Include="CPLS\ja-JP\CPLS.CPL3020U00.resources.dll" />
+    <Content Include="CPLS\ja-JP\CPLS.CPL3020U02.resources.dll" />
+    <Content Include="CPLS\ja-JP\CPLS.CPL7001Q01.resources.dll" />
+    <Content Include="CPLS\ja-JP\CPLS.CPL7001Q02.resources.dll" />
+    <Content Include="CPLS\ja-JP\CPLS.CPLMASTERUPLOADER.resources.dll" />
+    <Content Include="CPLS\ja-JP\CPLS.Lib.Controls.resources.dll" />
+    <Content Include="CPLS\ja-JP\CPLS.resources.dll" />
+    <Content Include="CPLS\Microsoft.Ink.dll" />
+    <Content Include="CPLS\Microsoft.Practices.EnterpriseLibrary.Caching.dll" />
+    <Content Include="CPLS\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="CPLS\Microsoft.Practices.ObjectBuilder.dll" />
+    <Content Include="CPLS\Otis.dll" />
+    <Content Include="CPLS\PBDATA100.dll" />
+    <Content Include="CPLS\protobuf-net.dll" />
+    <Content Include="CPLS\vi-VN\CPLS.CPL0000Q00.resources.dll" />
+    <Content Include="CPLS\vi-VN\CPLS.CPL0101U00.resources.dll" />
+    <Content Include="CPLS\vi-VN\CPLS.CPL0104U00.resources.dll" />
+    <Content Include="CPLS\vi-VN\CPLS.CPL0106U00.resources.dll" />
+    <Content Include="CPLS\vi-VN\CPLS.CPL0108U00.resources.dll" />
+    <Content Include="CPLS\vi-VN\CPLS.CPL0108U01.resources.dll" />
+    <Content Include="CPLS\vi-VN\CPLS.CPL2010R00.resources.dll" />
+    <Content Include="CPLS\vi-VN\CPLS.CPL2010R01.resources.dll" />
+    <Content Include="CPLS\vi-VN\CPLS.CPL2010U00.resources.dll" />
+    <Content Include="CPLS\vi-VN\CPLS.CPL3010U00.resources.dll" />
+    <Content Include="CPLS\vi-VN\CPLS.CPL3010U01.resources.dll" />
+    <Content Include="CPLS\vi-VN\CPLS.CPL3020U00.resources.dll" />
+    <Content Include="CPLS\vi-VN\CPLS.CPL3020U02.resources.dll" />
+    <Content Include="CPLS\vi-VN\CPLS.CPL7001Q01.resources.dll" />
+    <Content Include="CPLS\vi-VN\CPLS.CPL7001Q02.resources.dll" />
+    <Content Include="CPLS\vi-VN\CPLS.CPLMASTERUPLOADER.resources.dll" />
+    <Content Include="CPLS\vi-VN\CPLS.Lib.Controls.resources.dll" />
+    <Content Include="CPLS\vi-VN\CPLS.resources.dll" />
+    <Content Include="CPLS\WebSocket4Net.dll" />
+    <Content Include="Data\323\000000666\000000666__20170911154058805503.jpg" />
+    <Content Include="Data\323\000000666\000000666__20170911154745765071--.jpeg" />
+    <Content Include="Data\323\000000666\000000666__20170911154745765071.jpeg" />
+    <Content Include="Data\323\000000666\000000666__20170911155029726717.jpg" />
+    <Content Include="Data\323\000000666\000000666__20170911163907609594.jpeg" />
+    <Content Include="Data\323\000000666\000000666__20170911164903795506.jpeg" />
+    <Content Include="Data\323\000000666\000000666__20170911165207705292.jpeg" />
+    <Content Include="Data\323\000000666\000000666__20170911165608409438.jpeg" />
+    <Content Include="Data\323\000000666\000000666__20170911165823249308.jpeg" />
+    <Content Include="Data\323\000000666\temp\000000666__20170911160256320192.jpeg" />
+    <Content Include="DOCS\DOCS.DOC0101R00.dll" />
+    <Content Include="DOCS\DOCS.DOC0101U00.dll" />
+    <Content Include="DOCS\DOCS.DOC2001U00.dll" />
+    <Content Include="DOCS\DOCS.exe" />
+    <Content Include="DOCS\en\DOCS.resources.dll" />
+    <Content Include="DOCS\ja-JP\DOCS.resources.dll" />
+    <Content Include="DOCS\vi-VN\DOCS.resources.dll" />
+    <Content Include="DRGS\DataWindow.dll" />
+    <Content Include="DRGS\DataWindowInterop.dll" />
+    <Content Include="DRGS\DRGS.DRG0101U00.dll" />
+    <Content Include="DRGS\DRGS.DRG0102U00.dll" />
+    <Content Include="DRGS\DRGS.DRG0102U01.dll" />
+    <Content Include="DRGS\DRGS.DRG0120Q01.dll" />
+    <Content Include="DRGS\DRGS.DRG0120U00.dll" />
+    <Content Include="DRGS\DRGS.DRG0130U00.dll" />
+    <Content Include="DRGS\DRGS.DRG0140Q00.dll" />
+    <Content Include="DRGS\DRGS.DRG0140Q01.dll" />
+    <Content Include="DRGS\DRGS.DRG0140U00.dll" />
+    <Content Include="DRGS\DRGS.DRG0201U00.dll" />
+    <Content Include="DRGS\DRGS.DRG0202U00.dll" />
+    <Content Include="DRGS\DRGS.DRG0909U01.dll" />
+    <Content Include="DRGS\DRGS.DRG2010Q02.dll" />
+    <Content Include="DRGS\DRGS.DRG2010Q03.dll" />
+    <Content Include="DRGS\DRGS.DRG2010Q99.dll" />
+    <Content Include="DRGS\DRGS.DRG2010R00.dll" />
+    <Content Include="DRGS\DRGS.DRG3010P10.dll" />
+    <Content Include="DRGS\DRGS.DRG3010P88.dll" />
+    <Content Include="DRGS\DRGS.DRG3010P99.dll" />
+    <Content Include="DRGS\DRGS.DRG3010Q01.dll" />
+    <Content Include="DRGS\DRGS.DRG3010Q03.dll" />
+    <Content Include="DRGS\DRGS.DRG3010Q05.dll" />
+    <Content Include="DRGS\DRGS.DRG3010Q06.dll" />
+    <Content Include="DRGS\DRGS.DRG3010Q07.dll" />
+    <Content Include="DRGS\DRGS.DRG3010Q12.dll" />
+    <Content Include="DRGS\DRGS.DRG3010U51.dll" />
+    <Content Include="DRGS\DRGS.DRG3041P01.dll" />
+    <Content Include="DRGS\DRGS.DRG3041P02.dll" />
+    <Content Include="DRGS\DRGS.DRG3041P05.dll" />
+    <Content Include="DRGS\DRGS.DRG3041P06.dll" />
+    <Content Include="DRGS\DRGS.DRG5100P01.dll" />
+    <Content Include="DRGS\DRGS.DRG9001Q04.dll" />
+    <Content Include="DRGS\DRGS.DRG9001Q06.dll" />
+    <Content Include="DRGS\DRGS.DRG9001R01.dll" />
+    <Content Include="DRGS\DRGS.DRG9001R02.dll" />
+    <Content Include="DRGS\DRGS.DRG9001R03.dll" />
+    <Content Include="DRGS\DRGS.DRG9001R04.dll" />
+    <Content Include="DRGS\DRGS.DRG9040U01.dll" />
+    <Content Include="DRGS\DRGS.DRGOCSCHK.dll" />
+    <Content Include="DRGS\DRGS.DRUGPRESCRIPTION.dll" />
+    <Content Include="DRGS\DRGS.DRUGPRESCRIPTION.pdb" />
+    <Content Include="DRGS\DRGS.exe" />
+    <Content Include="DRGS\en\DRGS.DRG0102U00.resources.dll" />
+    <Content Include="DRGS\en\DRGS.DRG0102U01.resources.dll" />
+    <Content Include="DRGS\en\DRGS.DRG0120U00.resources.dll" />
+    <Content Include="DRGS\en\DRGS.DRG0130U00.resources.dll" />
+    <Content Include="DRGS\en\DRGS.DRG0140Q00.resources.dll" />
+    <Content Include="DRGS\en\DRGS.DRG0140Q01.resources.dll" />
+    <Content Include="DRGS\en\DRGS.DRG0140U00.resources.dll" />
+    <Content Include="DRGS\en\DRGS.DRG0201U00.resources.dll" />
+    <Content Include="DRGS\en\DRGS.DRG5100P01.resources.dll" />
+    <Content Include="DRGS\en\DRGS.DRG9001R01.resources.dll" />
+    <Content Include="DRGS\en\DRGS.DRG9001R02.resources.dll" />
+    <Content Include="DRGS\en\DRGS.DRG9040U01.resources.dll" />
+    <Content Include="DRGS\en\DRGS.DRGOCSCHK.resources.dll" />
+    <Content Include="DRGS\en\DRGS.DRUGPRESCRIPTION.resources.dll" />
+    <Content Include="DRGS\en\DRGS.resources.dll" />
+    <Content Include="DRGS\EO.Base.dll" />
+    <Content Include="DRGS\EO.WebBrowser.dll" />
+    <Content Include="DRGS\EO.WebEngine.dll" />
+    <Content Include="DRGS\Iesi.Collections.dll" />
+    <Content Include="DRGS\Interop.Excel.dll" />
+    <Content Include="DRGS\Interop.Office.dll" />
+    <Content Include="DRGS\Interop.VBIDE.dll" />
+    <Content Include="DRGS\ja-JP\DRGS.DRG0102U00.resources.dll" />
+    <Content Include="DRGS\ja-JP\DRGS.DRG0102U01.resources.dll" />
+    <Content Include="DRGS\ja-JP\DRGS.DRG0120U00.resources.dll" />
+    <Content Include="DRGS\ja-JP\DRGS.DRG0130U00.resources.dll" />
+    <Content Include="DRGS\ja-JP\DRGS.DRG0140Q00.resources.dll" />
+    <Content Include="DRGS\ja-JP\DRGS.DRG0140Q01.resources.dll" />
+    <Content Include="DRGS\ja-JP\DRGS.DRG0140U00.resources.dll" />
+    <Content Include="DRGS\ja-JP\DRGS.DRG0201U00.resources.dll" />
+    <Content Include="DRGS\ja-JP\DRGS.DRG3010P10.resources.dll" />
+    <Content Include="DRGS\ja-JP\DRGS.DRG3010P99.resources.dll" />
+    <Content Include="DRGS\ja-JP\DRGS.DRG3010Q12.resources.dll" />
+    <Content Include="DRGS\ja-JP\DRGS.DRG5100P01.resources.dll" />
+    <Content Include="DRGS\ja-JP\DRGS.DRG9001R01.resources.dll" />
+    <Content Include="DRGS\ja-JP\DRGS.DRG9001R02.resources.dll" />
+    <Content Include="DRGS\ja-JP\DRGS.DRG9040U01.resources.dll" />
+    <Content Include="DRGS\ja-JP\DRGS.DRGOCSCHK.resources.dll" />
+    <Content Include="DRGS\ja-JP\DRGS.DRUGPRESCRIPTION.resources.dll" />
+    <Content Include="DRGS\ja-JP\DRGS.resources.dll" />
+    <Content Include="DRGS\Microsoft.Ink.dll" />
+    <Content Include="DRGS\Microsoft.Practices.EnterpriseLibrary.Caching.dll" />
+    <Content Include="DRGS\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="DRGS\Microsoft.Practices.ObjectBuilder.dll" />
+    <Content Include="DRGS\Newtonsoft.Json.dll" />
+    <Content Include="DRGS\NReco.PdfGenerator.dll" />
+    <Content Include="DRGS\Otis.dll" />
+    <Content Include="DRGS\PBDATA100.dll" />
+    <Content Include="DRGS\protobuf-net.dll" />
+    <Content Include="DRGS\vi-VN\DRGS.DRG0102U00.resources.dll" />
+    <Content Include="DRGS\vi-VN\DRGS.DRG0102U01.resources.dll" />
+    <Content Include="DRGS\vi-VN\DRGS.DRG0120U00.resources.dll" />
+    <Content Include="DRGS\vi-VN\DRGS.DRG0130U00.resources.dll" />
+    <Content Include="DRGS\vi-VN\DRGS.DRG0140Q00.resources.dll" />
+    <Content Include="DRGS\vi-VN\DRGS.DRG0140Q01.resources.dll" />
+    <Content Include="DRGS\vi-VN\DRGS.DRG0140U00.resources.dll" />
+    <Content Include="DRGS\vi-VN\DRGS.DRG0201U00.resources.dll" />
+    <Content Include="DRGS\vi-VN\DRGS.DRG5100P01.resources.dll" />
+    <Content Include="DRGS\vi-VN\DRGS.DRG9001R01.resources.dll" />
+    <Content Include="DRGS\vi-VN\DRGS.DRG9001R02.resources.dll" />
+    <Content Include="DRGS\vi-VN\DRGS.DRG9040U01.resources.dll" />
+    <Content Include="DRGS\vi-VN\DRGS.DRGOCSCHK.resources.dll" />
+    <Content Include="DRGS\vi-VN\DRGS.DRUGPRESCRIPTION.resources.dll" />
+    <Content Include="DRGS\vi-VN\DRGS.resources.dll" />
+    <Content Include="DRGS\WebSocket4Net.dll" />
+    <Content Include="ENDO\ENDO.exe" />
+    <Content Include="ENDO\en\ENDO.resources.dll" />
+    <Content Include="ENDO\en\PFES.END1000U02.resources.dll" />
+    <Content Include="ENDO\ja-JP\ENDO.resources.dll" />
+    <Content Include="ENDO\ja-JP\PFES.END1000U02.resources.dll" />
+    <Content Include="ENDO\PFES.END1000U02.dll" />
+    <Content Include="ENDO\vi-VN\ENDO.resources.dll" />
+    <Content Include="ENDO\vi-VN\PFES.END1000U02.resources.dll" />
+    <Content Include="Images\icon-user.png" />
+    <EmbeddedResource Include="Properties\Resources.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.en.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ja-JP.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.ja-JP.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetTimeForm.resx">
+      <DependentUpon>SetTimeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartingForm.resx">
+      <DependentUpon>StartingForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarningForm.resx">
+      <DependentUpon>WarningForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Images\Thumbs.db">
+    </None>
+    <BaseApplicationManifest Include="Properties\app.manifest" />
+    <Content Include="IHIS.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\bill0101u00.main.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="css\bill0101u00.normalize.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="css\emr_vn.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="css\logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="css\main.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="css\normalize.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="css\prescription_ja.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="css\prescription_vi.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="css\print_binling.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="css\print_binling_vi.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="css\style.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="css\v1.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="css\v10.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="css\v11.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="css\v2.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="css\v3.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="css\v4.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="css\v5.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="css\v6.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="css\v7.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="css\v8.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="css\v9.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="en\IHIS.BizObjects.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="en\IHIS.Common.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="en\IHIS.Controls.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IHIS.ico" />
+    <Content Include="Images\AAA.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ADM.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ADMA.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\AdminLoginForm.gif">
+    </Content>
+    <Content Include="Images\aquapuls.gif" />
+    <Content Include="Images\aquapuls.png" />
+    <Content Include="Images\back_back.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\BASS.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\BBB.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\CLIS.ico">
+    </Content>
+    <Content Include="Images\Close.bmp" />
+    <Content Include="config.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Images\Close.gif" />
+    <Content Include="Images\CPLS.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\CPL_IMAGE.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\DOC.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\DRGS.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\edit.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ENDO.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\FOOTER.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\FOOTER_ntt.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\FormSelectHospCode.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\form_background.png" />
+    <Content Include="Images\form_login_background2.gif" />
+    <Content Include="Images\form_login_background2.png" />
+    <None Include="IHIS_1_TemporaryKey.pfx" />
+    <None Include="Images\form_login_background2.png" />
+    <Content Include="Images\form_background.png" />
+    <None Include="Images\iconVPN.png" />
+    <Content Include="Images\IFC.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\IFCL.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\IFC_SM.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\IHIS.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\imgTranparent.png">
+    </Content>
+    <Content Include="Images\INJS.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\INPS.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\INSI.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\INSO.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\INV.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\INVS.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Login.GIF">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Login.jpg">
+    </Content>
+    <Content Include="Images\Main.ico">
+    </Content>
+    <Content Include="Images\MainForm-1.GIF">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MainForm-1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MainForm-2.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MainForm-2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MainForm.gif">
+    </Content>
+    <Content Include="Images\MainForm1.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MainForm3.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MainForm3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MainForm_New.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MainForm_New.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MdiForm.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MdiForm.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MdiFormDev.bmp">
+    </Content>
+    <Content Include="Images\MdiForm_ntt.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MdiForm_ntt1.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MdiForm_ntt2.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="FormDownloadVPN.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormDownloadVPN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoadError.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormLoadError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSettingVPN.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormSettingVPN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\MessageEn.gif" />
+    <Content Include="Images\MessageJr.gif" />
+    <Content Include="Images\MessageKo.gif" />
+    <EmbeddedResource Include="Images\MessageVi.gif" />
+    <Content Include="Images\NewLoginForm122015.gif" />
+    <Content Include="Images\NUR.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\NURI.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\NURO.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\NUTS.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\OCS.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\OCSA.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\OCSI.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\OCSO.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\OCSP.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\OPRS.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\OUTS.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\pfe0301u52_1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\pfe0301u52_2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\PFES.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\PHYS.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\SCHS.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\SetTimeForm.gif">
+    </Content>
+    <EmbeddedResource Include="Images\StartingFormEn.gif" />
+    <Content Include="Images\Setting.ico" />
+    <Content Include="Images\StartingFormJr.gif" />
+    <Content Include="Images\StartingFormKo.gif" />
+    <EmbeddedResource Include="Images\StartingFormVi.gif" />
+    <Content Include="Images\trans.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\TSTS.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Images\WarningFormEn.gif" />
+    <None Include="Images\Update.gif" />
+    <Content Include="Images\WarningFormJr.gif" />
+    <Content Include="Images\WarningFormKo.gif" />
+    <EmbeddedResource Include="Images\WarningFormVi.gif" />
+    <Content Include="Images\XRTS.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="index.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="INJS\DataWindow.dll" />
+    <Content Include="INJS\DataWindowInterop.dll" />
+    <Content Include="INJS\en\INJS.INJ0101U00.resources.dll" />
+    <Content Include="INJS\en\INJS.INJ0101U01.resources.dll" />
+    <Content Include="INJS\en\INJS.INJ1001U01.resources.dll" />
+    <Content Include="INJS\en\INJS.INJ1002R01.resources.dll" />
+    <Content Include="INJS\en\INJS.INJ1002U01.resources.dll" />
+    <Content Include="INJS\en\INJS.resources.dll" />
+    <Content Include="INJS\INJS.exe" />
+    <Content Include="INJS\INJS.INJ0000Q00.dll" />
+    <Content Include="INJS\INJS.INJ0101U00.dll" />
+    <Content Include="INJS\INJS.INJ0101U01.dll" />
+    <Content Include="INJS\INJS.INJ1001U01.dll" />
+    <Content Include="INJS\INJS.INJ1002R01.dll" />
+    <Content Include="INJS\INJS.INJ1002U01.dll" />
+    <Content Include="INJS\Interop.Excel.dll" />
+    <Content Include="INJS\Interop.Office.dll" />
+    <Content Include="INJS\Interop.VBIDE.dll" />
+    <Content Include="INJS\ja-JP\INJS.INJ0000Q00.resources.dll" />
+    <Content Include="INJS\ja-JP\INJS.INJ0101U00.resources.dll" />
+    <Content Include="INJS\ja-JP\INJS.INJ0101U01.resources.dll" />
+    <Content Include="INJS\ja-JP\INJS.INJ1001U01.resources.dll" />
+    <Content Include="INJS\ja-JP\INJS.INJ1002R01.resources.dll" />
+    <Content Include="INJS\ja-JP\INJS.INJ1002U01.resources.dll" />
+    <Content Include="INJS\ja-JP\INJS.resources.dll" />
+    <Content Include="INJS\Microsoft.Ink.dll" />
+    <Content Include="INJS\PBDATA100.dll" />
+    <Content Include="INJS\vi-VN\INJS.INJ0101U00.resources.dll" />
+    <Content Include="INJS\vi-VN\INJS.INJ0101U01.resources.dll" />
+    <Content Include="INJS\vi-VN\INJS.INJ1001U01.resources.dll" />
+    <Content Include="INJS\vi-VN\INJS.INJ1002R01.resources.dll" />
+    <Content Include="INJS\vi-VN\INJS.INJ1002U01.resources.dll" />
+    <Content Include="INJS\vi-VN\INJS.resources.dll" />
+    <Content Include="INPS\INPS.INP1001Q00.dll" />
+    <Content Include="INPS\ja-JP\INPS.INP1001Q00.resources.dll" />
+    <Content Include="INSO\en\INSO.resources.dll" />
+    <Content Include="INSO\INSO.exe" />
+    <Content Include="INSO\ja-JP\INSO.resources.dll" />
+    <Content Include="INSO\vi-VN\INSO.resources.dll" />
+    <Content Include="INVS\DataWindow.dll" />
+    <Content Include="INVS\DataWindowInterop.dll" />
+    <Content Include="INVS\en\INVS.INV0101U00.resources.dll" />
+    <Content Include="INVS\en\INVS.INV0101U01.resources.dll" />
+    <Content Include="INVS\en\INVS.INV0110Q00.resources.dll" />
+    <Content Include="INVS\en\INVS.INV2003U00.resources.dll" />
+    <Content Include="INVS\en\INVS.INV4001U00.resources.dll" />
+    <Content Include="INVS\en\INVS.INV6000U00.resources.dll" />
+    <Content Include="INVS\en\INVS.INV6002U00.resources.dll" />
+    <Content Include="INVS\en\INVS.resources.dll" />
+    <Content Include="INVS\Interop.Excel.dll" />
+    <Content Include="INVS\Interop.Office.dll" />
+    <Content Include="INVS\Interop.VBIDE.dll" />
+    <Content Include="INVS\INVS.exe" />
+    <Content Include="INVS\INVS.INV0101U00.dll" />
+    <Content Include="INVS\INVS.INV0101U01.dll" />
+    <Content Include="INVS\INVS.INV0110Q00.dll" />
+    <Content Include="INVS\INVS.INV2003U00.dll" />
+    <Content Include="INVS\INVS.INV4001U00.dll" />
+    <Content Include="INVS\INVS.INV6000U00.dll" />
+    <Content Include="INVS\INVS.INV6002U00.dll" />
+    <Content Include="INVS\INVS.Libs.dll" />
+    <Content Include="INVS\INVS.Libs.pdb" />
+    <Content Include="INVS\ja-JP\INVS.INV0101U00.resources.dll" />
+    <Content Include="INVS\ja-JP\INVS.INV0101U01.resources.dll" />
+    <Content Include="INVS\ja-JP\INVS.INV0110Q00.resources.dll" />
+    <Content Include="INVS\ja-JP\INVS.INV2003U00.resources.dll" />
+    <Content Include="INVS\ja-JP\INVS.INV4001U00.resources.dll" />
+    <Content Include="INVS\ja-JP\INVS.INV6000U00.resources.dll" />
+    <Content Include="INVS\ja-JP\INVS.INV6002U00.resources.dll" />
+    <Content Include="INVS\ja-JP\INVS.resources.dll" />
+    <Content Include="INVS\Microsoft.Ink.dll" />
+    <Content Include="INVS\PBDATA100.dll" />
+    <Content Include="INVS\vi-VN\INVS.INV0101U00.resources.dll" />
+    <Content Include="INVS\vi-VN\INVS.INV0101U01.resources.dll" />
+    <Content Include="INVS\vi-VN\INVS.INV0110Q00.resources.dll" />
+    <Content Include="INVS\vi-VN\INVS.INV2003U00.resources.dll" />
+    <Content Include="INVS\vi-VN\INVS.INV4001U00.resources.dll" />
+    <Content Include="INVS\vi-VN\INVS.INV6000U00.resources.dll" />
+    <Content Include="INVS\vi-VN\INVS.INV6002U00.resources.dll" />
+    <Content Include="INVS\vi-VN\INVS.resources.dll" />
+    <Content Include="ja-JP\IHIS.BizObjects.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ja-JP\IHIS.Common.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ja-JP\IHIS.Controls.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ja-JP\IHIS.Forms.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="FormSelectHospCode.en.resx">
+      <DependentUpon>FormSelectHospCode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectHospCode.ja-JP.resx">
+      <DependentUpon>FormSelectHospCode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectHospCode.resx">
+      <DependentUpon>FormSelectHospCode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.en.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.ja-JP.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.vi-VN.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.en.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.ja-JP.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.vi-VN.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mml23\Table\MML23Table.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.vi-VN.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.vi-VN.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarningForm.ja-JP.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WarningForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="ja-JP\KCCK.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="js\app.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="js\common.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="js\handlebars.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="js\jquery.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="js\kendo\calendar-select.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="js\kendo\cultures\kendo.culture.ja-JP.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="js\kendo\kendo-multi-calendar.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="js\kendo\kendo-multi-date-select.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="js\kendo\kendo.common.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="js\kendo\kendo.default.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="js\kendo\kendo.ui.core.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="js\kendo\sprite.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="js\modernizr-2.8.3.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="js\moment.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="js\pikaday.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="js\togetherjs.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BarCodeFont\3OF9_NEW.TTF">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="IHIS_TemporaryKey.pfx" />
+    <Content Include="KCCK.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mml23\xsd\Address.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mml23\xsd\BaseClinic.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mml23\xsd\claimAmountModule.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mml23\xsd\claimModule.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mml23\xsd\Common.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mml23\xsd\CreatorInfo.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mml23\xsd\Department.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mml23\xsd\Facility.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mml23\xsd\FirstClinic.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mml23\xsd\HealthInsurance.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mml23\xsd\Lifestyle.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mml23\xsd\MML23.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mml23\xsd\Name.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mml23\xsd\PatientInfo.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mml23\xsd\PersonalizedInfo.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mml23\xsd\Phone.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mml23\xsd\ProgressCourse.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mml23\xsd\Referral.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mml23\xsd\RegisteredDiagnosis.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mml23\xsd\report.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mml23\xsd\Security.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mml23\xsd\Summary.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mml23\xsd\Surgery.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mml23\xsd\test.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mml23\Table\MML23Table.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="OCSO\cpls.cpl2010u00.pbd" />
+    <None Include="OCSO\injs.inj1001u01.pbd" />
+    <None Include="OCSO\ocso.doc2001u00.pbd" />
+    <None Include="OCSO\ocso.doc4003u00.pbd" />
+    <None Include="OCSO\ocso.ocs1003p01.pbd" />
+    <None Include="OCSO\ocso.ocs1003r00.pbd" />
+    <None Include="OCSO\ocso.ocs1003r02.pbd" />
+    <None Include="OCSO\ocso.ocs1003r02.pbl" />
+    <None Include="OCSO\ocso.ocs1003r02.pbr" />
+    <None Include="publishment\css\ihis.css" />
+    <None Include="publishment\js\jquery-latest.min.js" />
+    <None Include="publishment\publish.htm" />
+    <None Include="SofiaMedix Co.,Ltd.pfx" />
+    <Content Include="NURI\DataWindow.dll" />
+    <Content Include="NURI\DataWindowInterop.dll" />
+    <Content Include="NURI\en\NURI.NUR0101U01.resources.dll" />
+    <Content Include="NURI\en\NURI.NUR1016U00.resources.dll" />
+    <Content Include="NURI\en\NURI.NUR1017U00.resources.dll" />
+    <Content Include="NURI\en\NURI.NUR7001U00.resources.dll" />
+    <Content Include="NURI\en\NURI.resources.dll" />
+    <Content Include="NURI\Interop.Excel.dll" />
+    <Content Include="NURI\Interop.Office.dll" />
+    <Content Include="NURI\Interop.VBIDE.dll" />
+    <Content Include="NURI\ja-JP\NURI.NUR0101U01.resources.dll" />
+    <Content Include="NURI\ja-JP\NURI.NUR1016U00.resources.dll" />
+    <Content Include="NURI\ja-JP\NURI.NUR1017U00.resources.dll" />
+    <Content Include="NURI\ja-JP\NURI.NUR7001U00.resources.dll" />
+    <Content Include="NURI\ja-JP\NURI.resources.dll" />
+    <Content Include="NURI\Microsoft.Ink.dll" />
+    <Content Include="NURI\NURI.exe" />
+    <Content Include="NURI\NURI.INP1001D00.dll" />
+    <Content Include="NURI\NURI.INP1001D01.dll" />
+    <Content Include="NURI\NURI.INP1001Q05.dll" />
+    <Content Include="NURI\NURI.INP1001R04.dll" />
+    <Content Include="NURI\NURI.INP1001U01.dll" />
+    <Content Include="NURI\NURI.INP1003Q00.dll" />
+    <Content Include="NURI\NURI.INP1003U00.dll" />
+    <Content Include="NURI\NURI.INP1003U01.dll" />
+    <Content Include="NURI\NURI.INP2001U02.dll" />
+    <Content Include="NURI\NURI.INP2004Q00.dll" />
+    <Content Include="NURI\NURI.INP3003U00.dll" />
+    <Content Include="NURI\NURI.INPBATCHTRANS.dll" />
+    <Content Include="NURI\NURI.INPORDERTRANS.dll" />
+    <Content Include="NURI\NURI.Lib.dll" />
+    <Content Include="NURI\NURI.Lib.SystemDelegator.dll" />
+    <Content Include="NURI\NURI.NUR0101U00.dll" />
+    <Content Include="NURI\NURI.NUR0101U01.dll" />
+    <Content Include="NURI\NURI.NUR0104U00.dll" />
+    <Content Include="NURI\NURI.NUR0401U00.dll" />
+    <Content Include="NURI\NURI.NUR0401U01.dll" />
+    <Content Include="NURI\NURI.NUR0402U00.dll" />
+    <Content Include="NURI\NURI.NUR0403U00.dll" />
+    <Content Include="NURI\NURI.NUR0901U00.dll" />
+    <Content Include="NURI\NURI.NUR1001R07.dll" />
+    <Content Include="NURI\NURI.NUR1001R09.dll" />
+    <Content Include="NURI\NURI.NUR1001U00.dll" />
+    <Content Include="NURI\NURI.NUR1005P01.dll" />
+    <Content Include="NURI\NURI.NUR1010Q00.dll" />
+    <Content Include="NURI\NURI.NUR1010U00.dll" />
+    <Content Include="NURI\NURI.NUR1014R00.dll" />
+    <Content Include="NURI\NURI.NUR1014U00.dll" />
+    <Content Include="NURI\NURI.NUR1016U00.dll" />
+    <Content Include="NURI\NURI.NUR1017U00.dll" />
+    <Content Include="NURI\NURI.NUR1020Q00.dll" />
+    <Content Include="NURI\NURI.NUR1020U00.dll" />
+    <Content Include="NURI\NURI.NUR1035U00.dll" />
+    <Content Include="NURI\NURI.NUR1123U00.dll" />
+    <Content Include="NURI\NURI.NUR2004U00.dll" />
+    <Content Include="NURI\NURI.NUR2004U01.dll" />
+    <Content Include="NURI\NURI.NUR2004U02.dll" />
+    <Content Include="NURI\NURI.NUR2005U00.dll" />
+    <Content Include="NURI\NURI.NUR2017Q00.dll" />
+    <Content Include="NURI\NURI.NUR2017U01.dll" />
+    <Content Include="NURI\NURI.NUR4001U00.dll" />
+    <Content Include="NURI\NURI.NUR4002R00.dll" />
+    <Content Include="NURI\NURI.NUR4002U00.dll" />
+    <Content Include="NURI\NURI.NUR4002U01.dll" />
+    <Content Include="NURI\NURI.NUR4005U00.dll" />
+    <Content Include="NURI\NURI.NUR4005U01.dll" />
+    <Content Include="NURI\NURI.NUR5020U00.dll" />
+    <Content Include="NURI\NURI.NUR6001U00.dll" />
+    <Content Include="NURI\NURI.NUR6005U00.dll" />
+    <Content Include="NURI\NURI.NUR6011U01.dll" />
+    <Content Include="NURI\NURI.NUR7001U00.dll" />
+    <Content Include="NURI\NURI.NUR8003Q00.dll" />
+    <Content Include="NURI\NURI.NUR8003U00.dll" />
+    <Content Include="NURI\NURI.NUR8023U00.dll" />
+    <Content Include="NURI\NURI.NUR8050R00.dll" />
+    <Content Include="NURI\NURI.NUR8050U00.dll" />
+    <Content Include="NURI\NURI.NUR9001Q00.dll" />
+    <Content Include="NURI\NURI.NUR9001Q01.dll" />
+    <Content Include="NURI\NURI.NUR9001R00.dll" />
+    <Content Include="NURI\NURI.NUR9001U00.dll" />
+    <Content Include="NURI\NURI.NUR9002U00.dll" />
+    <Content Include="NURI\NURI.NUR9999R11.dll" />
+    <Content Include="NURI\NURI.NUR9999R12.dll" />
+    <Content Include="NURI\NURI.OCS2005R01.dll" />
+    <Content Include="NURI\NURI.OCS2005R02.dll" />
+    <Content Include="NURI\PBDATA100.dll" />
+    <Content Include="NURI\vi-VN\NURI.NUR0101U01.resources.dll" />
+    <Content Include="NURI\vi-VN\NURI.NUR1016U00.resources.dll" />
+    <Content Include="NURI\vi-VN\NURI.NUR1017U00.resources.dll" />
+    <Content Include="NURI\vi-VN\NURI.NUR7001U00.resources.dll" />
+    <Content Include="NURI\vi-VN\NURI.resources.dll" />
+    <Content Include="NURO\CsvHelper.dll" />
+    <Content Include="NURO\DataWindow.dll" />
+    <Content Include="NURO\DataWindowInterop.dll" />
+    <Content Include="NURO\DevExpress.BonusSkins.v11.1.dll" />
+    <Content Include="NURO\DevExpress.Charts.v11.1.Core.dll" />
+    <Content Include="NURO\DevExpress.Data.v11.1.dll" />
+    <Content Include="NURO\DevExpress.DXCore.Controls.Data.v6.3.dll" />
+    <Content Include="NURO\DevExpress.DXCore.Controls.Utils.v6.3.dll" />
+    <Content Include="NURO\DevExpress.DXCore.Controls.XtraEditors.v6.3.dll" />
+    <Content Include="NURO\DevExpress.DXCore.Controls.XtraRichTextEdit.v6.3.dll" />
+    <Content Include="NURO\DevExpress.OfficeSkins.v11.1.dll" />
+    <Content Include="NURO\DevExpress.PivotGrid.v11.1.Core.dll" />
+    <Content Include="NURO\DevExpress.Printing.v11.1.Core.dll" />
+    <Content Include="NURO\DevExpress.RichEdit.v11.1.Core.dll" />
+    <Content Include="NURO\DevExpress.Utils.v11.1.dll" />
+    <Content Include="NURO\DevExpress.XtraBars.v11.1.dll" />
+    <Content Include="NURO\DevExpress.XtraCharts.v11.1.dll" />
+    <Content Include="NURO\DevExpress.XtraEditors.v11.1.dll" />
+    <Content Include="NURO\DevExpress.XtraGrid.v11.1.dll" />
+    <Content Include="NURO\DevExpress.XtraLayout.v11.1.dll" />
+    <Content Include="NURO\DevExpress.XtraPivotGrid.v11.1.dll" />
+    <Content Include="NURO\DevExpress.XtraPrinting.v11.1.dll" />
+    <Content Include="NURO\DevExpress.XtraReports.v11.1.dll" />
+    <Content Include="NURO\DevExpress.XtraRichEdit.v11.1.dll" />
+    <Content Include="NURO\DevExpress.XtraRichEdit.v11.1.Extensions.dll" />
+    <Content Include="NURO\DevExpress.XtraTreeList.v11.1.dll" />
+    <Content Include="NURO\en\IHIS.BizObjects.resources.dll" />
+    <Content Include="NURO\en\IHIS.CloudConnector.resources.dll" />
+    <Content Include="NURO\en\IHIS.Controls.resources.dll" />
+    <Content Include="NURO\en\IHIS.DbControls.resources.dll" />
+    <Content Include="NURO\en\IHIS.Forms.resources.dll" />
+    <Content Include="NURO\en\NURO.BIL0001U00.resources.dll" />
+    <Content Include="NURO\en\NURO.BIL0101R00.resources.dll" />
+    <Content Include="NURO\en\NURO.BIL0101U00.resources.dll" />
+    <Content Include="NURO\en\NURO.BIL0102U00.resources.dll" />
+    <Content Include="NURO\en\NURO.BIL0103U00.resources.dll" />
+    <Content Include="NURO\en\NURO.NUR1001R00.resources.dll" />
+    <Content Include="NURO\en\NURO.NUR1001R98.resources.dll" />
+    <Content Include="NURO\en\NURO.NUR2001U04.resources.dll" />
+    <Content Include="NURO\en\NURO.NUR2016Q00.resources.dll" />
+    <Content Include="NURO\en\NURO.NUR2016U02.resources.dll" />
+    <Content Include="NURO\en\NURO.NUR2016U03.resources.dll" />
+    <Content Include="NURO\en\NURO.ORDERTRANS.resources.dll" />
+    <Content Include="NURO\en\NURO.OUT0101Q01.resources.dll" />
+    <Content Include="NURO\en\NURO.OUT0101U02.resources.dll" />
+    <Content Include="NURO\en\NURO.OUT0101U04.resources.dll" />
+    <Content Include="NURO\en\NURO.OUT0106U00.resources.dll" />
+    <Content Include="NURO\en\NURO.OUT1001P01.resources.dll" />
+    <Content Include="NURO\en\NURO.OUT1001P03.resources.dll" />
+    <Content Include="NURO\en\NURO.OUT1001Q10.resources.dll" />
+    <Content Include="NURO\en\NURO.OUT1001U01.resources.dll" />
+    <Content Include="NURO\en\NURO.OUT1101Q01.resources.dll" />
+    <Content Include="NURO\en\NURO.RES0102U00.resources.dll" />
+    <Content Include="NURO\en\NURO.RES1001U00.resources.dll" />
+    <Content Include="NURO\en\NURO.resources.dll" />
+    <Content Include="NURO\en\ORCA.resources.dll" />
+    <Content Include="NURO\EO.Base.dll" />
+    <Content Include="NURO\EO.WebBrowser.dll" />
+    <Content Include="NURO\EO.WebEngine.dll" />
+    <Content Include="NURO\GhostscriptSharp.dll" />
+    <Content Include="NURO\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="NURO\Iesi.Collections.dll" />
+    <Content Include="NURO\Interop.Excel.dll" />
+    <Content Include="NURO\Interop.Office.dll" />
+    <Content Include="NURO\Interop.VBIDE.dll" />
+    <Content Include="NURO\Interop.WIA.dll" />
+    <Content Include="NURO\Ionic.Zip.dll" />
+    <Content Include="NURO\ja-JP\IHIS.BizObjects.resources.dll" />
+    <Content Include="NURO\ja-JP\IHIS.CloudConnector.resources.dll" />
+    <Content Include="NURO\ja-JP\IHIS.Controls.resources.dll" />
+    <Content Include="NURO\ja-JP\IHIS.DbControls.resources.dll" />
+    <Content Include="NURO\ja-JP\IHIS.Forms.resources.dll" />
+    <Content Include="NURO\ja-JP\NUR2015U01.resources.dll" />
+    <Content Include="NURO\ja-JP\NURO.BIL0001U00.resources.dll" />
+    <Content Include="NURO\ja-JP\NURO.BIL0101R00.resources.dll" />
+    <Content Include="NURO\ja-JP\NURO.BIL0101U00.resources.dll" />
+    <Content Include="NURO\ja-JP\NURO.BIL0102U00.resources.dll" />
+    <Content Include="NURO\ja-JP\NURO.BIL0103U00.resources.dll" />
+    <Content Include="NURO\ja-JP\NURO.NUR1001R00.resources.dll" />
+    <Content Include="NURO\ja-JP\NURO.NUR1001R98.resources.dll" />
+    <Content Include="NURO\ja-JP\NURO.NUR1018R03.resources.dll" />
+    <Content Include="NURO\ja-JP\NURO.NUR2001U04.resources.dll" />
+    <Content Include="NURO\ja-JP\NURO.NUR2016Q00.resources.dll" />
+    <Content Include="NURO\ja-JP\NURO.NUR2016U02.resources.dll" />
+    <Content Include="NURO\ja-JP\NURO.NUR2016U03.resources.dll" />
+    <Content Include="NURO\ja-JP\NURO.NUR5010U00.resources.dll" />
+    <Content Include="NURO\ja-JP\NURO.ORDERTRANS.resources.dll" />
+    <Content Include="NURO\ja-JP\NURO.OUT0101Q01.resources.dll" />
+    <Content Include="NURO\ja-JP\NURO.OUT0101U02.resources.dll" />
+    <Content Include="NURO\ja-JP\NURO.OUT0101U04.resources.dll" />
+    <Content Include="NURO\ja-JP\NURO.OUT0106U00.resources.dll" />
+    <Content Include="NURO\ja-JP\NURO.OUT1001P01.resources.dll" />
+    <Content Include="NURO\ja-JP\NURO.OUT1001P03.resources.dll" />
+    <Content Include="NURO\ja-JP\NURO.OUT1001Q10.resources.dll" />
+    <Content Include="NURO\ja-JP\NURO.OUT1001R01.resources.dll" />
+    <Content Include="NURO\ja-JP\NURO.OUT1001U01.resources.dll" />
+    <Content Include="NURO\ja-JP\NURO.OUT1101Q01.resources.dll" />
+    <Content Include="NURO\ja-JP\NURO.OUT1101R01.resources.dll" />
+    <Content Include="NURO\ja-JP\NURO.RES0102U00.resources.dll" />
+    <Content Include="NURO\ja-JP\NURO.RES1001U00.resources.dll" />
+    <Content Include="NURO\ja-JP\NURO.resources.dll" />
+    <Content Include="NURO\ja-JP\ORCA.resources.dll" />
+    <Content Include="NURO\Microsoft.Ink.dll" />
+    <Content Include="NURO\Microsoft.Practices.EnterpriseLibrary.Caching.dll" />
+    <Content Include="NURO\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="NURO\Microsoft.Practices.ObjectBuilder.dll" />
+    <Content Include="NURO\Newtonsoft.Json.dll" />
+    <Content Include="NURO\NReco.PdfGenerator.dll" />
+    <Content Include="NURO\NUR2015U01.exe" />
+    <Content Include="NURO\NURO.BIL0001U00.dll" />
+    <Content Include="NURO\NURO.BIL0101R00.dll" />
+    <Content Include="NURO\NURO.BIL0101U00.dll" />
+    <Content Include="NURO\NURO.BIL0102U00.dll" />
+    <Content Include="NURO\NURO.BIL0102U00.pdb" />
+    <Content Include="NURO\NURO.BIL0103U00.dll" />
+    <Content Include="NURO\NURO.exe" />
+    <Content Include="NURO\NURO.Lib.dll" />
+    <Content Include="NURO\NURO.MisaLib.dll" />
+    <Content Include="NURO\NURO.NUR1001R00.dll" />
+    <Content Include="NURO\NURO.NUR1001R98.dll" />
+    <Content Include="NURO\NURO.NUR1018R03.dll" />
+    <Content Include="NURO\NURO.NUR2001U04.dll" />
+    <Content Include="NURO\NURO.NUR2016Q00.dll" />
+    <Content Include="NURO\NURO.NUR2016U02.dll" />
+    <Content Include="NURO\NURO.NUR2016U03.dll" />
+    <Content Include="NURO\NURO.NUR5010U00.dll" />
+    <Content Include="NURO\NURO.ORDERTRANS.dll" />
+    <Content Include="NURO\NURO.OUT0000U00.dll" />
+    <Content Include="NURO\NURO.OUT0101Q01.dll" />
+    <Content Include="NURO\NURO.OUT0101U02.dll" />
+    <Content Include="NURO\NURO.OUT0101U04.dll" />
+    <Content Include="NURO\NURO.OUT0106U00.dll" />
+    <Content Include="NURO\NURO.OUT1001P01.dll" />
+    <Content Include="NURO\NURO.OUT1001P03.dll" />
+    <Content Include="NURO\NURO.OUT1001P03.pdb" />
+    <Content Include="NURO\NURO.OUT1001Q10.dll" />
+    <Content Include="NURO\NURO.OUT1001R01.dll" />
+    <Content Include="NURO\NURO.OUT1001U01.dll" />
+    <Content Include="NURO\NURO.OUT1101Q01.dll" />
+    <Content Include="NURO\NURO.OUT1101R01.dll" />
+    <Content Include="NURO\NURO.RES0102U00.dll" />
+    <Content Include="NURO\NURO.RES1001U00.dll" />
+    <Content Include="NURO\ORCA.dll" />
+    <Content Include="NURO\Otis.dll" />
+    <Content Include="NURO\PaintDotNet.Data.dll" />
+    <Content Include="NURO\PaintDotNet.dll" />
+    <Content Include="NURO\PaintDotNet.Effects.dll" />
+    <Content Include="NURO\PaintDotNet.Resources.dll" />
+    <Content Include="NURO\PaintDotNet.StylusReader.dll" />
+    <Content Include="NURO\PaintDotNet.SystemLayer.dll" />
+    <Content Include="NURO\PBDATA100.dll" />
+    <Content Include="NURO\PdnLib.dll" />
+    <Content Include="NURO\protobuf-net.dll" />
+    <Content Include="NURO\vi-VN\IHIS.BizObjects.resources.dll" />
+    <Content Include="NURO\vi-VN\IHIS.CloudConnector.resources.dll" />
+    <Content Include="NURO\vi-VN\IHIS.Controls.resources.dll" />
+    <Content Include="NURO\vi-VN\IHIS.DbControls.resources.dll" />
+    <Content Include="NURO\vi-VN\IHIS.Forms.resources.dll" />
+    <Content Include="NURO\vi-VN\NURO.BIL0001U00.resources.dll" />
+    <Content Include="NURO\vi-VN\NURO.BIL0101R00.resources.dll" />
+    <Content Include="NURO\vi-VN\NURO.BIL0101U00.resources.dll" />
+    <Content Include="NURO\vi-VN\NURO.BIL0102U00.resources.dll" />
+    <Content Include="NURO\vi-VN\NURO.BIL0103U00.resources.dll" />
+    <Content Include="NURO\vi-VN\NURO.NUR1001R00.resources.dll" />
+    <Content Include="NURO\vi-VN\NURO.NUR1001R98.resources.dll" />
+    <Content Include="NURO\vi-VN\NURO.NUR2001U04.resources.dll" />
+    <Content Include="NURO\vi-VN\NURO.NUR2016Q00.resources.dll" />
+    <Content Include="NURO\vi-VN\NURO.NUR2016U02.resources.dll" />
+    <Content Include="NURO\vi-VN\NURO.NUR2016U03.resources.dll" />
+    <Content Include="NURO\vi-VN\NURO.ORDERTRANS.resources.dll" />
+    <Content Include="NURO\vi-VN\NURO.OUT0101Q01.resources.dll" />
+    <Content Include="NURO\vi-VN\NURO.OUT0101U02.resources.dll" />
+    <Content Include="NURO\vi-VN\NURO.OUT0101U04.resources.dll" />
+    <Content Include="NURO\vi-VN\NURO.OUT0106U00.resources.dll" />
+    <Content Include="NURO\vi-VN\NURO.OUT1001P01.resources.dll" />
+    <Content Include="NURO\vi-VN\NURO.OUT1001Q10.resources.dll" />
+    <Content Include="NURO\vi-VN\NURO.OUT1001U01.resources.dll" />
+    <Content Include="NURO\vi-VN\NURO.OUT1101Q01.resources.dll" />
+    <Content Include="NURO\vi-VN\NURO.RES0102U00.resources.dll" />
+    <Content Include="NURO\vi-VN\NURO.RES1001U00.resources.dll" />
+    <Content Include="NURO\vi-VN\NURO.resources.dll" />
+    <Content Include="NURO\vi-VN\ORCA.resources.dll" />
+    <Content Include="NURO\WebSocket4Net.dll" />
+    <Content Include="NUTS\DataWindow.dll" />
+    <Content Include="NUTS\DataWindowInterop.dll" />
+    <Content Include="NUTS\en\NUTS.NUT0001U00.resources.dll" />
+    <Content Include="NUTS\en\NUTS.resources.dll" />
+    <Content Include="NUTS\Interop.Excel.dll" />
+    <Content Include="NUTS\Interop.Office.dll" />
+    <Content Include="NUTS\Interop.VBIDE.dll" />
+    <Content Include="NUTS\ja-JP\NUTS.NUT0001U00.resources.dll" />
+    <Content Include="NUTS\ja-JP\NUTS.resources.dll" />
+    <Content Include="NUTS\Microsoft.Ink.dll" />
+    <Content Include="NUTS\NUTS.exe" />
+    <Content Include="NUTS\NUTS.NUT0001U00.dll" />
+    <Content Include="NUTS\NUTS.NUT9001Q01.dll" />
+    <Content Include="NUTS\NUTS.NUT9001U00.dll" />
+    <Content Include="NUTS\PBDATA100.dll" />
+    <Content Include="NUTS\vi-VN\NUTS.NUT0001U00.resources.dll" />
+    <Content Include="NUTS\vi-VN\NUTS.resources.dll" />
+    <Content Include="OCS.LIb\DataWindow.dll" />
+    <Content Include="OCS.LIb\DataWindowInterop.dll" />
+    <Content Include="OCS.LIb\en\OCS.Lib.ColumnControl.resources.dll" />
+    <Content Include="OCS.LIb\en\OCS.Lib.CommonForms.resources.dll" />
+    <Content Include="OCS.LIb\en\OCS.Lib.HangmogInfo.resources.dll" />
+    <Content Include="OCS.LIb\en\OCS.Lib.OrderBiz.resources.dll" />
+    <Content Include="OCS.LIb\en\OCS.Lib.OrderFunc.resources.dll" />
+    <Content Include="OCS.LIb\en\OCS.Lib.PatientLinking.resources.dll" />
+    <Content Include="OCS.LIb\en\OCS.Lib.WebBrowser.resources.dll" />
+    <Content Include="OCS.LIb\Interop.Excel.dll" />
+    <Content Include="OCS.LIb\Interop.Office.dll" />
+    <Content Include="OCS.LIb\Interop.VBIDE.dll" />
+    <Content Include="OCS.LIb\ja-JP\OCS.Lib.ColumnControl.resources.dll" />
+    <Content Include="OCS.LIb\ja-JP\OCS.Lib.CommonForms.resources.dll" />
+    <Content Include="OCS.LIb\ja-JP\OCS.Lib.HangmogInfo.resources.dll" />
+    <Content Include="OCS.LIb\ja-JP\OCS.Lib.OrderBiz.resources.dll" />
+    <Content Include="OCS.LIb\ja-JP\OCS.Lib.OrderFunc.resources.dll" />
+    <Content Include="OCS.LIb\ja-JP\OCS.Lib.PatientLinking.resources.dll" />
+    <Content Include="OCS.LIb\ja-JP\OCS.Lib.WebBrowser.resources.dll" />
+    <Content Include="OCS.LIb\Microsoft.Ink.dll" />
+    <Content Include="OCS.LIb\Newtonsoft.Json.dll" />
+    <Content Include="OCS.LIb\OCS.Lib.ColumnControl.dll" />
+    <Content Include="OCS.LIb\OCS.Lib.CommonForms.dll" />
+    <Content Include="OCS.LIb\OCS.Lib.HangmogInfo.dll" />
+    <Content Include="OCS.LIb\OCS.Lib.InputControl.dll" />
+    <Content Include="OCS.LIb\OCS.Lib.KinkiCheck.dll" />
+    <Content Include="OCS.LIb\OCS.Lib.OrderBiz.dll" />
+    <Content Include="OCS.LIb\OCS.Lib.OrderFunc.dll" />
+    <Content Include="OCS.LIb\OCS.Lib.OrderInterface.dll" />
+    <Content Include="OCS.LIb\OCS.Lib.OrderVariables.dll" />
+    <Content Include="OCS.LIb\OCS.Lib.PatientInfo.dll" />
+    <Content Include="OCS.LIb\OCS.Lib.PatientLinking.dll" />
+    <Content Include="OCS.LIb\OCS.Lib.WebBrowser.dll" />
+    <Content Include="OCS.LIb\PBDATA100.dll" />
+    <Content Include="OCS.LIb\vi-VN\OCS.Lib.ColumnControl.resources.dll" />
+    <Content Include="OCS.LIb\vi-VN\OCS.Lib.CommonForms.resources.dll" />
+    <Content Include="OCS.LIb\vi-VN\OCS.Lib.HangmogInfo.resources.dll" />
+    <Content Include="OCS.LIb\vi-VN\OCS.Lib.OrderBiz.resources.dll" />
+    <Content Include="OCS.LIb\vi-VN\OCS.Lib.OrderFunc.resources.dll" />
+    <Content Include="OCS.LIb\vi-VN\OCS.Lib.PatientLinking.resources.dll" />
+    <Content Include="OCS.LIb\vi-VN\OCS.Lib.WebBrowser.resources.dll" />
+    <Content Include="OCSA\DataWindow.dll" />
+    <Content Include="OCSA\DataWindowInterop.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0101U00.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0103Q00.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0103U00.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0103U10.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0103U12.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0103U13.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0103U14.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0103U15.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0103U16.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0103U17.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0103U18.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0103U19.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0108U00.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0113U00.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0118U00.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0131U00.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0131U01.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0133U00.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0150U00.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0203U00.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0204Q00.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0204U00.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0208Q00.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0208Q01.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0208U00.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0221Q01.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0221U00.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0223U00.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0270Q00.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0301Q09.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0301U00.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0304U00.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0311Q00.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0311U00.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0503Q00.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0503Q01.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0503U00.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0503U01.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0801U00.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS0803U00.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCS3003Q10.resources.dll" />
+    <Content Include="OCSA\en\OCSA.OCSAPPROVE.resources.dll" />
+    <Content Include="OCSA\en\OCSA.resources.dll" />
+    <Content Include="OCSA\en\OCSO.DOC4003U00.resources.dll" />
+    <Content Include="OCSA\Iesi.Collections.dll" />
+    <Content Include="OCSA\Interop.Excel.dll" />
+    <Content Include="OCSA\Interop.Office.dll" />
+    <Content Include="OCSA\Interop.VBIDE.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0101U00.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0103Q00.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0103U00.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0103U10.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0103U11.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0103U12.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0103U13.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0103U14.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0103U15.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0103U16.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0103U17.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0103U18.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0103U19.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0108U00.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0113U00.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0118U00.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0131U00.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0131U01.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0133U00.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0150U00.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0203U00.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0204Q00.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0204U00.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0208Q00.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0208Q01.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0208U00.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0221Q01.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0221U00.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0223U00.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0270Q00.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0301Q09.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0301U00.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0304U00.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0311Q00.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0311U00.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0503Q00.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0503Q01.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0503U00.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0503U01.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0801U00.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS0803U00.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCS3003Q10.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.OCSAPPROVE.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSA.resources.dll" />
+    <Content Include="OCSA\ja-JP\OCSO.DOC4003U00.resources.dll" />
+    <Content Include="OCSA\Microsoft.Ink.dll" />
+    <Content Include="OCSA\Microsoft.Practices.EnterpriseLibrary.Caching.dll" />
+    <Content Include="OCSA\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="OCSA\Microsoft.Practices.ObjectBuilder.dll" />
+    <Content Include="OCSA\OCS.Lib.ColumnControl.dll" />
+    <Content Include="OCSA\OCS.Lib.CommonForms.dll" />
+    <Content Include="OCSA\OCS.Lib.HangmogInfo.dll" />
+    <Content Include="OCSA\OCS.Lib.InputControl.dll" />
+    <Content Include="OCSA\OCS.Lib.KinkiCheck.dll" />
+    <Content Include="OCSA\OCS.Lib.OrderBiz.dll" />
+    <Content Include="OCSA\OCS.Lib.OrderFunc.dll" />
+    <Content Include="OCSA\OCS.Lib.OrderInterface.dll" />
+    <Content Include="OCSA\OCS.Lib.OrderVariables.dll" />
+    <Content Include="OCSA\OCS.Lib.PatientInfo.dll" />
+    <Content Include="OCSA\OCSA.DATAMODIFY.dll" />
+    <Content Include="OCSA\OCSA.exe" />
+    <Content Include="OCSA\OCSA.Lib.Images.dll" />
+    <Content Include="OCSA\OCSA.OCS0100U00.dll" />
+    <Content Include="OCSA\OCSA.OCS0101U00.dll" />
+    <Content Include="OCSA\OCSA.OCS0103Q00.dll" />
+    <Content Include="OCSA\OCSA.OCS0103Q01.dll" />
+    <Content Include="OCSA\OCSA.OCS0103Q10.dll" />
+    <Content Include="OCSA\OCSA.OCS0103Q11.dll" />
+    <Content Include="OCSA\OCSA.OCS0103Q12.dll" />
+    <Content Include="OCSA\OCSA.OCS0103Q15.dll" />
+    <Content Include="OCSA\OCSA.OCS0103Q16.dll" />
+    <Content Include="OCSA\OCSA.OCS0103U00.dll" />
+    <Content Include="OCSA\OCSA.OCS0103U10.dll" />
+    <Content Include="OCSA\OCSA.OCS0103U11.dll" />
+    <Content Include="OCSA\OCSA.OCS0103U12.dll" />
+    <Content Include="OCSA\OCSA.OCS0103U13.dll" />
+    <Content Include="OCSA\OCSA.OCS0103U14.dll" />
+    <Content Include="OCSA\OCSA.OCS0103U15.dll" />
+    <Content Include="OCSA\OCSA.OCS0103U16.dll" />
+    <Content Include="OCSA\OCSA.OCS0103U17.dll" />
+    <Content Include="OCSA\OCSA.OCS0103U18.dll" />
+    <Content Include="OCSA\OCSA.OCS0103U19.dll" />
+    <Content Include="OCSA\OCSA.OCS0108U00.dll" />
+    <Content Include="OCSA\OCSA.OCS0113U00.dll" />
+    <Content Include="OCSA\OCSA.OCS0116U00.dll" />
+    <Content Include="OCSA\OCSA.OCS0118U00.dll" />
+    <Content Include="OCSA\OCSA.OCS0122U00.dll" />
+    <Content Include="OCSA\OCSA.OCS0131U00.dll" />
+    <Content Include="OCSA\OCSA.OCS0131U01.dll" />
+    <Content Include="OCSA\OCSA.OCS0133U00.dll" />
+    <Content Include="OCSA\OCSA.OCS0142U00.dll" />
+    <Content Include="OCSA\OCSA.OCS0150U00.dll" />
+    <Content Include="OCSA\OCSA.OCS0201U00.dll" />
+    <Content Include="OCSA\OCSA.OCS0203U00.dll" />
+    <Content Include="OCSA\OCSA.OCS0204Q00.dll" />
+    <Content Include="OCSA\OCSA.OCS0204U00.dll" />
+    <Content Include="OCSA\OCSA.OCS0206U00.dll" />
+    <Content Include="OCSA\OCSA.OCS0208Q00.dll" />
+    <Content Include="OCSA\OCSA.OCS0208Q01.dll" />
+    <Content Include="OCSA\OCSA.OCS0208U00.dll" />
+    <Content Include="OCSA\OCSA.OCS0221Q01.dll" />
+    <Content Include="OCSA\OCSA.OCS0221U00.dll" />
+    <Content Include="OCSA\OCSA.OCS0223U00.dll" />
+    <Content Include="OCSA\OCSA.OCS0270Q00.dll" />
+    <Content Include="OCSA\OCSA.OCS0301Q00.dll" />
+    <Content Include="OCSA\OCSA.OCS0301Q01.dll" />
+    <Content Include="OCSA\OCSA.OCS0301Q09.dll" />
+    <Content Include="OCSA\OCSA.OCS0301U00.dll" />
+    <Content Include="OCSA\OCSA.OCS0304Q00.dll" />
+    <Content Include="OCSA\OCSA.OCS0304U00.dll" />
+    <Content Include="OCSA\OCSA.OCS0311Q00.dll" />
+    <Content Include="OCSA\OCSA.OCS0311U00.dll" />
+    <Content Include="OCSA\OCSA.OCS0323Q00.dll" />
+    <Content Include="OCSA\OCSA.OCS0503Q00.dll" />
+    <Content Include="OCSA\OCSA.OCS0503Q01.dll" />
+    <Content Include="OCSA\OCSA.OCS0503U00.dll" />
+    <Content Include="OCSA\OCSA.OCS0503U01.dll" />
+    <Content Include="OCSA\OCSA.OCS0801U00.dll" />
+    <Content Include="OCSA\OCSA.OCS0803U00.dll" />
+    <Content Include="OCSA\OCSA.OCS3003Q10.dll" />
+    <Content Include="OCSA\OCSA.OCSAPPROVE.dll" />
+    <Content Include="OCSA\OCSO.DOC4003U00.dll" />
+    <Content Include="OCSA\Otis.dll" />
+    <Content Include="OCSA\PBDATA100.dll" />
+    <Content Include="OCSA\protobuf-net.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0101U00.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0103Q00.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0103U00.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0103U10.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0103U11.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0103U12.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0103U13.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0103U14.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0103U15.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0103U16.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0103U17.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0103U18.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0103U19.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0108U00.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0113U00.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0118U00.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0131U00.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0131U01.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0133U00.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0150U00.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0203U00.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0204Q00.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0204U00.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0208Q00.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0208Q01.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0208U00.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0221Q01.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0221U00.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0223U00.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0270Q00.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0301Q09.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0301U00.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0304U00.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0311Q00.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0311U00.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0503Q00.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0503Q01.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0503U00.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0503U01.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0801U00.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS0803U00.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCS3003Q10.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.OCSAPPROVE.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSA.resources.dll" />
+    <Content Include="OCSA\vi-VN\OCSO.DOC4003U00.resources.dll" />
+    <Content Include="OCSA\WebSocket4Net.dll" />
+    <Content Include="OCSEMR\DataWindow.dll" />
+    <Content Include="OCSEMR\DataWindowInterop.dll" />
+    <Content Include="OCSEMR\DevExpress.BonusSkins.v11.1.dll" />
+    <Content Include="OCSEMR\DevExpress.Charts.v11.1.Core.dll" />
+    <Content Include="OCSEMR\DevExpress.Data.v11.1.dll" />
+    <Content Include="OCSEMR\DevExpress.OfficeSkins.v11.1.dll" />
+    <Content Include="OCSEMR\DevExpress.PivotGrid.v11.1.Core.dll" />
+    <Content Include="OCSEMR\DevExpress.Printing.v11.1.Core.dll" />
+    <Content Include="OCSEMR\DevExpress.RichEdit.v11.1.Core.dll" />
+    <Content Include="OCSEMR\DevExpress.Utils.v11.1.dll" />
+    <Content Include="OCSEMR\DevExpress.XtraBars.v11.1.dll" />
+    <Content Include="OCSEMR\DevExpress.XtraCharts.v11.1.dll" />
+    <Content Include="OCSEMR\DevExpress.XtraEditors.v11.1.dll" />
+    <Content Include="OCSEMR\DevExpress.XtraGrid.v11.1.dll" />
+    <Content Include="OCSEMR\DevExpress.XtraLayout.v11.1.dll" />
+    <Content Include="OCSEMR\DevExpress.XtraPivotGrid.v11.1.dll" />
+    <Content Include="OCSEMR\DevExpress.XtraPrinting.v11.1.dll" />
+    <Content Include="OCSEMR\DevExpress.XtraReports.v11.1.dll" />
+    <Content Include="OCSEMR\DevExpress.XtraRichEdit.v11.1.dll" />
+    <Content Include="OCSEMR\DevExpress.XtraRichEdit.v11.1.Extensions.dll" />
+    <Content Include="OCSEMR\DevExpress.XtraTreeList.v11.1.dll" />
+    <Content Include="OCSEMR\DRGS.DRUGPRESCRIPTION.dll" />
+    <Content Include="OCSEMR\EmrDocker.dll" />
+    <Content Include="OCSEMR\EmrDockerS.dll" />
+    <Content Include="OCSEMR\en\EmrDocker.resources.dll" />
+    <Content Include="OCSEMR\en\EmrDockerS.resources.dll" />
+    <Content Include="OCSEMR\en\NURO.NUR2015U01.resources.dll" />
+    <Content Include="OCSEMR\en\OCSA.OCS0103U10.resources.dll" />
+    <Content Include="OCSEMR\en\OCSA.OCS0103U12.resources.dll" />
+    <Content Include="OCSEMR\en\OCSA.OCS0103U13.resources.dll" />
+    <Content Include="OCSEMR\en\OCSA.OCS0103U14.resources.dll" />
+    <Content Include="OCSEMR\en\OCSA.OCS0103U15.resources.dll" />
+    <Content Include="OCSEMR\en\OCSA.OCS0103U16.resources.dll" />
+    <Content Include="OCSEMR\en\OCSA.OCS0103U17.resources.dll" />
+    <Content Include="OCSEMR\en\OCSA.OCS0103U18.resources.dll" />
+    <Content Include="OCSEMR\en\OCSA.OCS0103U19.resources.dll" />
+    <Content Include="OCSEMR\en\OCSO.OCS2015U00.resources.dll" />
+    <Content Include="OCSEMR\en\OCSO.OCS2015U30.resources.dll" />
+    <Content Include="OCSEMR\en\OCSO.OCS2015U31.resources.dll" />
+    <Content Include="OCSEMR\en\OCSO.OCS2016U02.resources.dll" />
+    <Content Include="OCSEMR\EO.Base.dll" />
+    <Content Include="OCSEMR\EO.WebBrowser.dll" />
+    <Content Include="OCSEMR\EO.WebEngine.dll" />
+    <Content Include="OCSEMR\GhostscriptSharp.dll" />
+    <Content Include="OCSEMR\gsdll32.dll" />
+    <Content Include="OCSEMR\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="OCSEMR\Interop.Excel.dll" />
+    <Content Include="OCSEMR\Interop.Office.dll" />
+    <Content Include="OCSEMR\Interop.VBIDE.dll" />
+    <Content Include="OCSEMR\ja-JP\EmrDocker.resources.dll" />
+    <Content Include="OCSEMR\ja-JP\EmrDockerS.resources.dll" />
+    <Content Include="OCSEMR\ja-JP\NURO.NUR2015U01.resources.dll" />
+    <Content Include="OCSEMR\ja-JP\OCSA.OCS0103U10.resources.dll" />
+    <Content Include="OCSEMR\ja-JP\OCSA.OCS0103U11.resources.dll" />
+    <Content Include="OCSEMR\ja-JP\OCSA.OCS0103U12.resources.dll" />
+    <Content Include="OCSEMR\ja-JP\OCSA.OCS0103U13.resources.dll" />
+    <Content Include="OCSEMR\ja-JP\OCSA.OCS0103U14.resources.dll" />
+    <Content Include="OCSEMR\ja-JP\OCSA.OCS0103U15.resources.dll" />
+    <Content Include="OCSEMR\ja-JP\OCSA.OCS0103U16.resources.dll" />
+    <Content Include="OCSEMR\ja-JP\OCSA.OCS0103U17.resources.dll" />
+    <Content Include="OCSEMR\ja-JP\OCSA.OCS0103U18.resources.dll" />
+    <Content Include="OCSEMR\ja-JP\OCSA.OCS0103U19.resources.dll" />
+    <Content Include="OCSEMR\ja-JP\OCSO.OCS2015U00.resources.dll" />
+    <Content Include="OCSEMR\ja-JP\OCSO.OCS2015U30.resources.dll" />
+    <Content Include="OCSEMR\ja-JP\OCSO.OCS2015U31.resources.dll" />
+    <Content Include="OCSEMR\ja-JP\OCSO.OCS2016U02.resources.dll" />
+    <Content Include="OCSEMR\Microsoft.Ink.dll" />
+    <Content Include="OCSEMR\Newtonsoft.Json.dll" />
+    <Content Include="OCSEMR\NReco.PdfGenerator.dll" />
+    <Content Include="OCSEMR\NURO.NUR2015U01.dll" />
+    <Content Include="OCSEMR\OCS.Lib.ColumnControl.dll" />
+    <Content Include="OCSEMR\OCS.Lib.CommonForms.dll" />
+    <Content Include="OCSEMR\OCS.Lib.HangmogInfo.dll" />
+    <Content Include="OCSEMR\OCS.Lib.InputControl.dll" />
+    <Content Include="OCSEMR\OCS.Lib.KinkiCheck.dll" />
+    <Content Include="OCSEMR\OCS.Lib.OrderBiz.dll" />
+    <Content Include="OCSEMR\OCS.Lib.OrderFunc.dll" />
+    <Content Include="OCSEMR\OCS.Lib.OrderInterface.dll" />
+    <Content Include="OCSEMR\OCS.Lib.OrderVariables.dll" />
+    <Content Include="OCSEMR\OCS.Lib.PatientInfo.dll" />
+    <Content Include="OCSEMR\OCS.Lib.PatientLinking.dll" />
+    <Content Include="OCSEMR\OCS.Lib.WebBrowser.dll" />
+    <Content Include="OCSEMR\OCSA.OCS0103U10.dll" />
+    <Content Include="OCSEMR\OCSA.OCS0103U11.dll" />
+    <Content Include="OCSEMR\OCSA.OCS0103U12.dll" />
+    <Content Include="OCSEMR\OCSA.OCS0103U13.dll" />
+    <Content Include="OCSEMR\OCSA.OCS0103U14.dll" />
+    <Content Include="OCSEMR\OCSA.OCS0103U15.dll" />
+    <Content Include="OCSEMR\OCSA.OCS0103U16.dll" />
+    <Content Include="OCSEMR\OCSA.OCS0103U17.dll" />
+    <Content Include="OCSEMR\OCSA.OCS0103U18.dll" />
+    <Content Include="OCSEMR\OCSA.OCS0103U19.dll" />
+    <Content Include="OCSEMR\OCSO.OCS2015U00.dll" />
+    <Content Include="OCSEMR\OCSO.OCS2015U30.dll" />
+    <Content Include="OCSEMR\OCSO.OCS2015U31.dll" />
+    <Content Include="OCSEMR\OCSO.OCS2016U02.dll" />
+    <Content Include="OCSEMR\PaintDotNet.dll" />
+    <Content Include="OCSEMR\PaintDotNet.StylusReader.dll" />
+    <Content Include="OCSEMR\PaintDotNet.SystemLayer.dll" />
+    <Content Include="OCSEMR\PBDATA100.dll" />
+    <Content Include="OCSEMR\PdnLib.dll" />
+    <Content Include="OCSEMR\protobuf-net.dll" />
+    <Content Include="OCSEMR\vi-VN\EmrDocker.resources.dll" />
+    <Content Include="OCSEMR\vi-VN\EmrDockerS.resources.dll" />
+    <Content Include="OCSEMR\vi-VN\NURO.NUR2015U01.resources.dll" />
+    <Content Include="OCSEMR\vi-VN\OCSA.OCS0103U10.resources.dll" />
+    <Content Include="OCSEMR\vi-VN\OCSA.OCS0103U11.resources.dll" />
+    <Content Include="OCSEMR\vi-VN\OCSA.OCS0103U12.resources.dll" />
+    <Content Include="OCSEMR\vi-VN\OCSA.OCS0103U13.resources.dll" />
+    <Content Include="OCSEMR\vi-VN\OCSA.OCS0103U14.resources.dll" />
+    <Content Include="OCSEMR\vi-VN\OCSA.OCS0103U15.resources.dll" />
+    <Content Include="OCSEMR\vi-VN\OCSA.OCS0103U16.resources.dll" />
+    <Content Include="OCSEMR\vi-VN\OCSA.OCS0103U17.resources.dll" />
+    <Content Include="OCSEMR\vi-VN\OCSA.OCS0103U18.resources.dll" />
+    <Content Include="OCSEMR\vi-VN\OCSA.OCS0103U19.resources.dll" />
+    <Content Include="OCSEMR\vi-VN\OCSO.OCS2015U00.resources.dll" />
+    <Content Include="OCSEMR\vi-VN\OCSO.OCS2015U30.resources.dll" />
+    <Content Include="OCSEMR\vi-VN\OCSO.OCS2015U31.resources.dll" />
+    <Content Include="OCSEMR\vi-VN\OCSO.OCS2016U02.resources.dll" />
+    <Content Include="OCSI\en\OCSI.resources.dll" />
+    <Content Include="OCSI\ja-JP\OCSI.OCS1024U00.resources.dll" />
+    <Content Include="OCSI\ja-JP\OCSI.resources.dll" />
+    <Content Include="OCSI\OCS.Lib.KinkiCheck.dll" />
+    <Content Include="OCSI\OCS.Lib.OrderInterface.dll" />
+    <Content Include="OCSI\OCSI.exe" />
+    <Content Include="OCSI\OCSI.OCS1024U00.dll" />
+    <Content Include="OCSI\OCSI.OCS2003P01.dll" />
+    <Content Include="OCSI\OCSI.OCS2003Q00.dll" />
+    <Content Include="OCSI\OCSI.OCS2003Q02.dll" />
+    <Content Include="OCSI\OCSI.OCS2003Q03.dll" />
+    <Content Include="OCSI\OCSI.OCS2003Q11.dll" />
+    <Content Include="OCSI\OCSI.OCS2003R00.dll" />
+    <Content Include="OCSI\OCSI.OCS2003U01.dll" />
+    <Content Include="OCSI\OCSI.OCS2003U03.dll" />
+    <Content Include="OCSI\OCSI.OCS2003U10.dll" />
+    <Content Include="OCSI\OCSI.OCS2003U99.dll" />
+    <Content Include="OCSI\OCSI.OCS2004U00.dll" />
+    <Content Include="OCSI\OCSI.OCS2005U00.dll" />
+    <Content Include="OCSI\OCSI.OCS2005U02.dll" />
+    <Content Include="OCSI\OCSI.OCS6000U00.dll" />
+    <Content Include="OCSI\OCSI.OCS6000U01.dll" />
+    <Content Include="OCSI\OCSI.OCS6010U00.dll" />
+    <Content Include="OCSI\OCSI.OCS6010U10.dll" />
+    <Content Include="OCSI\vi-VN\OCSI.resources.dll" />
+    <Content Include="OCSO\000000112_OCS4001U00.html" />
+    <Content Include="OCSO\000000112_OCS4004U00.html" />
+    <Content Include="OCSO\000000112_OCS4005U00.html" />
+    <Content Include="OCSO\000000112_OCS4006U00.html" />
+    <Content Include="OCSO\000000112_OCS4010U00.html" />
+    <Content Include="OCSO\000000122_OCS4002U00.html" />
+    <Content Include="OCSO\000000122_OCS4003U00.html" />
+    <Content Include="OCSO\000000666_OCS4007U00.html" />
+    <Content Include="OCSO\000000666_OCS4008U00.html" />
+    <Content Include="OCSO\000000666_OCS4009U00.html" />
+    <Content Include="OCSO\DataWindow.dll" />
+    <Content Include="OCSO\DataWindowInterop.dll" />
+    <Content Include="OCSO\DevExpress.BonusSkins.v11.1.dll" />
+    <Content Include="OCSO\DevExpress.Charts.v11.1.Core.dll" />
+    <Content Include="OCSO\DevExpress.Data.v11.1.dll" />
+    <Content Include="OCSO\DevExpress.OfficeSkins.v11.1.dll" />
+    <Content Include="OCSO\DevExpress.PivotGrid.v11.1.Core.dll" />
+    <Content Include="OCSO\DevExpress.Printing.v11.1.Core.dll" />
+    <Content Include="OCSO\DevExpress.RichEdit.v11.1.Core.dll" />
+    <Content Include="OCSO\DevExpress.Utils.v11.1.dll" />
+    <Content Include="OCSO\DevExpress.XtraBars.v11.1.dll" />
+    <Content Include="OCSO\DevExpress.XtraCharts.v11.1.dll" />
+    <Content Include="OCSO\DevExpress.XtraEditors.v11.1.dll" />
+    <Content Include="OCSO\DevExpress.XtraGrid.v11.1.dll" />
+    <Content Include="OCSO\DevExpress.XtraLayout.v11.1.dll" />
+    <Content Include="OCSO\DevExpress.XtraPivotGrid.v11.1.dll" />
+    <Content Include="OCSO\DevExpress.XtraPrinting.v11.1.dll" />
+    <Content Include="OCSO\DevExpress.XtraReports.v11.1.dll" />
+    <Content Include="OCSO\DevExpress.XtraRichEdit.v11.1.dll" />
+    <Content Include="OCSO\DevExpress.XtraRichEdit.v11.1.Extensions.dll" />
+    <Content Include="OCSO\DevExpress.XtraTreeList.v11.1.dll" />
+    <Content Include="OCSO\DRGS.DRUGPRESCRIPTION.dll" />
+    <Content Include="OCSO\DRGS.DRUGPRESCRIPTION.pdb" />
+    <Content Include="OCSO\EmrDocker.dll" />
+    <Content Include="OCSO\EmrDockerS.dll" />
+    <Content Include="OCSO\en\EmrDocker.resources.dll" />
+    <Content Include="OCSO\en\EmrDockerS.resources.dll" />
+    <Content Include="OCSO\en\IHIS.BizObjects.resources.dll" />
+    <Content Include="OCSO\en\IHIS.CloudConnector.resources.dll" />
+    <Content Include="OCSO\en\IHIS.Controls.resources.dll" />
+    <Content Include="OCSO\en\IHIS.DbControls.resources.dll" />
+    <Content Include="OCSO\en\IHIS.Forms.resources.dll" />
+    <Content Include="OCSO\en\NURI.NUR1016U00.resources.dll" />
+    <Content Include="OCSO\en\NURO.NUR2015U01.resources.dll" />
+    <Content Include="OCSO\en\OCS.Lib.WebBrowser.resources.dll" />
+    <Content Include="OCSO\en\OCSA.OCS0103U10.resources.dll" />
+    <Content Include="OCSO\en\OCSA.OCS0103U12.resources.dll" />
+    <Content Include="OCSO\en\OCSA.OCS0103U13.resources.dll" />
+    <Content Include="OCSO\en\OCSA.OCS0103U14.resources.dll" />
+    <Content Include="OCSO\en\OCSA.OCS0103U15.resources.dll" />
+    <Content Include="OCSO\en\OCSA.OCS0103U16.resources.dll" />
+    <Content Include="OCSO\en\OCSA.OCS0103U17.resources.dll" />
+    <Content Include="OCSO\en\OCSA.OCS0103U18.resources.dll" />
+    <Content Include="OCSO\en\OCSA.OCS0103U19.resources.dll" />
+    <Content Include="OCSO\en\OCSA.OCS0503U00.resources.dll" />
+    <Content Include="OCSO\en\OCSA.OCS0503U01.resources.dll" />
+    <Content Include="OCSO\en\OCSO.Controls.resources.dll" />
+    <Content Include="OCSO\en\OCSO.DOC4003U00.resources.dll" />
+    <Content Include="OCSO\en\OCSO.OCS1003P01.resources.dll" />
+    <Content Include="OCSO\en\OCSO.OCS1003Q02.resources.dll" />
+    <Content Include="OCSO\en\OCSO.OCS1003Q05.resources.dll" />
+    <Content Include="OCSO\en\OCSO.OCS1003Q09.resources.dll" />
+    <Content Include="OCSO\en\OCSO.OCS1003R00.resources.dll" />
+    <Content Include="OCSO\en\OCSO.OCS1003R02.resources.dll" />
+    <Content Include="OCSO\en\OCSO.OCS1023U00.resources.dll" />
+    <Content Include="OCSO\en\OCSO.OCS2015U00.resources.dll" />
+    <Content Include="OCSO\en\OCSO.OCS2015U30.resources.dll" />
+    <Content Include="OCSO\en\OCSO.OCS2015U31.resources.dll" />
+    <Content Include="OCSO\en\OCSO.OCS2016U00.resources.dll" />
+    <Content Include="OCSO\en\OCSO.OCS2016U02.resources.dll" />
+    <Content Include="OCSO\en\OCSO.OCSACT.resources.dll" />
+    <Content Include="OCSO\en\OCSO.OCSACT2.resources.dll" />
+    <Content Include="OCSO\en\OCSO.OUTSANGQ00.resources.dll" />
+    <Content Include="OCSO\en\OCSO.OUTSANGU00.resources.dll" />
+    <Content Include="OCSO\en\OCSO.resources.dll" />
+    <Content Include="OCSO\EO.Base.dll" />
+    <Content Include="OCSO\EO.WebBrowser.dll" />
+    <Content Include="OCSO\EO.WebEngine.dll" />
+    <Content Include="OCSO\GhostscriptSharp.dll" />
+    <Content Include="OCSO\gsdll32.dll" />
+    <Content Include="OCSO\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="OCSO\Iesi.Collections.dll" />
+    <Content Include="OCSO\Interop.Excel.dll" />
+    <Content Include="OCSO\Interop.Office.dll" />
+    <Content Include="OCSO\Interop.VBIDE.dll" />
+    <Content Include="OCSO\ja-JP\EmrDocker.resources.dll" />
+    <Content Include="OCSO\ja-JP\EmrDockerS.resources.dll" />
+    <Content Include="OCSO\ja-JP\IHIS.BizObjects.resources.dll" />
+    <Content Include="OCSO\ja-JP\IHIS.CloudConnector.resources.dll" />
+    <Content Include="OCSO\ja-JP\IHIS.Controls.resources.dll" />
+    <Content Include="OCSO\ja-JP\IHIS.DbControls.resources.dll" />
+    <Content Include="OCSO\ja-JP\IHIS.Forms.resources.dll" />
+    <Content Include="OCSO\ja-JP\NURI.NUR1016U00.resources.dll" />
+    <Content Include="OCSO\ja-JP\NURO.NUR2015U01.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCS.Lib.WebBrowser.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSA.OCS0103U10.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSA.OCS0103U11.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSA.OCS0103U12.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSA.OCS0103U13.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSA.OCS0103U14.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSA.OCS0103U15.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSA.OCS0103U16.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSA.OCS0103U17.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSA.OCS0103U18.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSA.OCS0103U19.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSA.OCS0503U00.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSA.OCS0503U01.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSO.Controls.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSO.DOC4003U00.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSO.OCS1003P01.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSO.OCS1003Q02.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSO.OCS1003Q05.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSO.OCS1003Q09.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSO.OCS1003R00.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSO.OCS1003R02.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSO.OCS1023U00.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSO.OCS1801U00.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSO.OCS2015U00.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSO.OCS2015U30.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSO.OCS2015U31.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSO.OCS2016U00.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSO.OCS2016U02.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSO.OCSACT.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSO.OCSACT2.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSO.OUTSANGQ00.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSO.OUTSANGU00.resources.dll" />
+    <Content Include="OCSO\ja-JP\OCSO.resources.dll" />
+    <Content Include="OCSO\Microsoft.Ink.dll" />
+    <Content Include="OCSO\Microsoft.Practices.EnterpriseLibrary.Caching.dll" />
+    <Content Include="OCSO\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="OCSO\Microsoft.Practices.ObjectBuilder.dll" />
+    <Content Include="OCSO\MySql.Data.dll" />
+    <Content Include="OCSO\Newtonsoft.Json.dll" />
+    <Content Include="OCSO\NReco.PdfGenerator.dll" />
+    <Content Include="OCSO\NURI.NUR1016U00.dll" />
+    <Content Include="OCSO\NURO.NUR2015U01.dll" />
+    <Content Include="OCSO\OCS.Lib.ColumnControl.dll" />
+    <Content Include="OCSO\OCS.Lib.CommonForms.dll" />
+    <Content Include="OCSO\OCS.Lib.HangmogInfo.dll" />
+    <Content Include="OCSO\OCS.Lib.InputControl.dll" />
+    <Content Include="OCSO\OCS.Lib.KinkiCheck.dll" />
+    <Content Include="OCSO\OCS.Lib.OrderBiz.dll" />
+    <Content Include="OCSO\OCS.Lib.OrderFunc.dll" />
+    <Content Include="OCSO\OCS.Lib.OrderInterface.dll" />
+    <Content Include="OCSO\OCS.Lib.OrderVariables.dll" />
+    <Content Include="OCSO\OCS.Lib.PatientInfo.dll" />
+    <Content Include="OCSO\OCS.Lib.PatientLinking.dll" />
+    <Content Include="OCSO\OCS.Lib.WebBrowser.dll" />
+    <Content Include="OCSO\OCSA.OCS0103U00.dll" />
+    <Content Include="OCSO\OCSA.OCS0103U10.dll" />
+    <Content Include="OCSO\OCSA.OCS0103U11.dll" />
+    <Content Include="OCSO\OCSA.OCS0103U12.dll" />
+    <Content Include="OCSO\OCSA.OCS0103U13.dll" />
+    <Content Include="OCSO\OCSA.OCS0103U14.dll" />
+    <Content Include="OCSO\OCSA.OCS0103U15.dll" />
+    <Content Include="OCSO\OCSA.OCS0103U16.dll" />
+    <Content Include="OCSO\OCSA.OCS0103U17.dll" />
+    <Content Include="OCSO\OCSA.OCS0103U18.dll" />
+    <Content Include="OCSO\OCSA.OCS0103U19.dll" />
+    <Content Include="OCSO\OCSA.OCS0503U00.dll" />
+    <Content Include="OCSO\OCSA.OCS0503U01.dll" />
+    <Content Include="OCSO\OCSO.Controls.dll" />
+    <Content Include="OCSO\OCSO.DOC4003U00.dll" />
+    <Content Include="OCSO\OCSO.exe" />
+    <Content Include="OCSO\OCSO.OCS1003P01.dll" />
+    <Content Include="OCSO\OCSO.OCS1003Q02.dll" />
+    <Content Include="OCSO\OCSO.OCS1003Q05.dll" />
+    <Content Include="OCSO\OCSO.OCS1003Q07.dll" />
+    <Content Include="OCSO\OCSO.OCS1003Q09.dll" />
+    <Content Include="OCSO\OCSO.OCS1003R00.dll" />
+    <Content Include="OCSO\OCSO.OCS1003R02.dll" />
+    <Content Include="OCSO\OCSO.OCS1023U00.dll" />
+    <Content Include="OCSO\OCSO.OCS1801U00.dll" />
+    <Content Include="OCSO\OCSO.OCS2015U00.dll" />
+    <Content Include="OCSO\OCSO.OCS2015U30.dll" />
+    <Content Include="OCSO\OCSO.OCS2015U31.dll" />
+    <Content Include="OCSO\OCSO.OCS2016U00.dll" />
+    <Content Include="OCSO\OCSO.OCS2016U02.dll" />
+    <Content Include="OCSO\OCSO.OCS4000U00.dll" />
+    <Content Include="OCSO\OCSO.OCS4000U00.pdb" />
+    <Content Include="OCSO\OCSO.OCS4001U00.dll" />
+    <Content Include="OCSO\OCSO.OCS4001U00.pdb" />
+    <Content Include="OCSO\OCSO.OCS4002U00.dll" />
+    <Content Include="OCSO\OCSO.OCS4002U00.pdb" />
+    <Content Include="OCSO\OCSO.OCS4003U00.dll" />
+    <Content Include="OCSO\OCSO.OCS4003U00.pdb" />
+    <Content Include="OCSO\OCSO.OCS4004U00.dll" />
+    <Content Include="OCSO\OCSO.OCS4004U00.pdb" />
+    <Content Include="OCSO\OCSO.OCS4005U00.dll" />
+    <Content Include="OCSO\OCSO.OCS4005U00.pdb" />
+    <Content Include="OCSO\OCSO.OCS4006U00.dll" />
+    <Content Include="OCSO\OCSO.OCS4006U00.pdb" />
+    <Content Include="OCSO\OCSO.OCS4007U00.dll" />
+    <Content Include="OCSO\OCSO.OCS4007U00.pdb" />
+    <Content Include="OCSO\OCSO.OCS4008U00.dll" />
+    <Content Include="OCSO\OCSO.OCS4008U00.pdb" />
+    <Content Include="OCSO\OCSO.OCS4009U00.dll" />
+    <Content Include="OCSO\OCSO.OCS4009U00.pdb" />
+    <Content Include="OCSO\OCSO.OCS4010U00.dll" />
+    <Content Include="OCSO\OCSO.OCS4010U00.pdb" />
+    <Content Include="OCSO\OCSO.OCSACT.dll" />
+    <Content Include="OCSO\OCSO.OCSACT2.dll" />
+    <Content Include="OCSO\OCSO.OUTSANGQ00.dll" />
+    <Content Include="OCSO\OCSO.OUTSANGU00.dll" />
+    <Content Include="OCSO\Otis.dll" />
+    <Content Include="OCSO\PaintDotNet.dll" />
+    <Content Include="OCSO\PaintDotNet.StylusReader.dll" />
+    <Content Include="OCSO\PaintDotNet.SystemLayer.dll" />
+    <Content Include="OCSO\PBDATA100.dll" />
+    <Content Include="OCSO\PdnLib.dll" />
+    <Content Include="OCSO\protobuf-net.dll" />
+    <Content Include="OCSO\vi-VN\EmrDocker.resources.dll" />
+    <Content Include="OCSO\vi-VN\EmrDockerS.resources.dll" />
+    <Content Include="OCSO\vi-VN\IHIS.BizObjects.resources.dll" />
+    <Content Include="OCSO\vi-VN\IHIS.CloudConnector.resources.dll" />
+    <Content Include="OCSO\vi-VN\IHIS.Controls.resources.dll" />
+    <Content Include="OCSO\vi-VN\IHIS.DbControls.resources.dll" />
+    <Content Include="OCSO\vi-VN\IHIS.Forms.resources.dll" />
+    <Content Include="OCSO\vi-VN\NURI.NUR1016U00.resources.dll" />
+    <Content Include="OCSO\vi-VN\NURO.NUR2015U01.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCS.Lib.WebBrowser.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSA.OCS0103U10.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSA.OCS0103U11.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSA.OCS0103U12.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSA.OCS0103U13.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSA.OCS0103U14.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSA.OCS0103U15.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSA.OCS0103U16.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSA.OCS0103U17.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSA.OCS0103U18.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSA.OCS0103U19.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSA.OCS0503U00.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSA.OCS0503U01.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSO.Controls.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSO.DOC4003U00.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSO.OCS1003P01.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSO.OCS1003Q02.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSO.OCS1003Q05.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSO.OCS1003Q09.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSO.OCS1003R00.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSO.OCS1003R02.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSO.OCS1023U00.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSO.OCS2015U00.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSO.OCS2015U30.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSO.OCS2015U31.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSO.OCS2016U00.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSO.OCS2016U02.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSO.OCSACT.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSO.OCSACT2.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSO.OUTSANGQ00.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSO.OUTSANGU00.resources.dll" />
+    <Content Include="OCSO\vi-VN\OCSO.resources.dll" />
+    <Content Include="OCSO\WebSocket4Net.dll" />
+    <Content Include="OCSO\_OCS4001U00.html" />
+    <Content Include="OCSO\_OCS4002U00.html" />
+    <Content Include="OCSO\_OCS4003U00.html" />
+    <Content Include="OCSO\_OCS4004U00.html" />
+    <Content Include="OCSO\_OCS4005U00.html" />
+    <Content Include="OCSO\_OCS4006U00.html" />
+    <Content Include="OCSO\_OCS4007U00.html" />
+    <Content Include="OCSO\_OCS4008U00.html" />
+    <Content Include="OCSO\_OCS4009U00.html" />
+    <Content Include="OCSO\_OCS4010U00.html" />
+    <Content Include="OPRS\en\OPRS.resources.dll" />
+    <Content Include="OPRS\ja-JP\OPRS.resources.dll" />
+    <Content Include="OPRS\OPRS.exe" />
+    <Content Include="OPRS\vi-VN\OPRS.resources.dll" />
+    <Content Include="ORCA\en\ORCA.resources.dll" />
+    <Content Include="ORCA\ja-JP\ORCA.resources.dll" />
+    <Content Include="ORCA\ORCA.dll" />
+    <Content Include="ORCA\ORCA.exe" />
+    <Content Include="ORCA\vi-VN\ORCA.resources.dll" />
+    <Content Include="OUTS\en\OUTS.resources.dll" />
+    <Content Include="OUTS\ja-JP\OUTS.resources.dll" />
+    <Content Include="OUTS\OUTS.exe" />
+    <Content Include="OUTS\vi-VN\OUTS.resources.dll" />
+    <Content Include="PFES\DataWindow.dll" />
+    <Content Include="PFES\DataWindowInterop.dll" />
+    <Content Include="PFES\en\PFES.END1000U02.resources.dll" />
+    <Content Include="PFES\en\PFES.PFE0101U00.resources.dll" />
+    <Content Include="PFES\en\PFES.PFE0101U01.resources.dll" />
+    <Content Include="PFES\en\PFES.PFE7001Q01.resources.dll" />
+    <Content Include="PFES\en\PFES.PFE7001Q02.resources.dll" />
+    <Content Include="PFES\en\PFES.resources.dll" />
+    <Content Include="PFES\Interop.Excel.dll" />
+    <Content Include="PFES\Interop.Office.dll" />
+    <Content Include="PFES\Interop.VBIDE.dll" />
+    <Content Include="PFES\ja-JP\PFES.END1000U02.resources.dll" />
+    <Content Include="PFES\ja-JP\PFES.PFE0101U00.resources.dll" />
+    <Content Include="PFES\ja-JP\PFES.PFE0101U01.resources.dll" />
+    <Content Include="PFES\ja-JP\PFES.PFE7001Q01.resources.dll" />
+    <Content Include="PFES\ja-JP\PFES.PFE7001Q02.resources.dll" />
+    <Content Include="PFES\ja-JP\PFES.resources.dll" />
+    <Content Include="PFES\Microsoft.Ink.dll" />
+    <Content Include="PFES\PBDATA100.dll" />
+    <Content Include="PFES\PFES.END1000U02.dll" />
+    <Content Include="PFES\PFES.exe" />
+    <Content Include="PFES\PFES.PFE0101U00.dll" />
+    <Content Include="PFES\PFES.PFE0101U01.dll" />
+    <Content Include="PFES\PFES.PFE7001Q01.dll" />
+    <Content Include="PFES\PFES.PFE7001Q02.dll" />
+    <Content Include="PFES\vi-VN\PFES.END1000U02.resources.dll" />
+    <Content Include="PFES\vi-VN\PFES.PFE0101U00.resources.dll" />
+    <Content Include="PFES\vi-VN\PFES.PFE0101U01.resources.dll" />
+    <Content Include="PFES\vi-VN\PFES.PFE7001Q01.resources.dll" />
+    <Content Include="PFES\vi-VN\PFES.PFE7001Q02.resources.dll" />
+    <Content Include="PFES\vi-VN\PFES.resources.dll" />
+    <Content Include="PHYS\DataWindow.dll" />
+    <Content Include="PHYS\DataWindowInterop.dll" />
+    <Content Include="PHYS\en\PHYS.PHY0001U00.resources.dll" />
+    <Content Include="PHYS\en\PHYS.PHY2001U04.resources.dll" />
+    <Content Include="PHYS\en\PHYS.PHY8002U00.resources.dll" />
+    <Content Include="PHYS\en\PHYS.PHY8002U01.resources.dll" />
+    <Content Include="PHYS\en\PHYS.resources.dll" />
+    <Content Include="PHYS\Iesi.Collections.dll" />
+    <Content Include="PHYS\Interop.Excel.dll" />
+    <Content Include="PHYS\Interop.Office.dll" />
+    <Content Include="PHYS\Interop.VBIDE.dll" />
+    <Content Include="PHYS\ja-JP\PHYS.PHY0001U00.resources.dll" />
+    <Content Include="PHYS\ja-JP\PHYS.PHY2001U04.resources.dll" />
+    <Content Include="PHYS\ja-JP\PHYS.PHY8002U00.resources.dll" />
+    <Content Include="PHYS\ja-JP\PHYS.PHY8002U01.resources.dll" />
+    <Content Include="PHYS\ja-JP\PHYS.resources.dll" />
+    <Content Include="PHYS\Microsoft.Ink.dll" />
+    <Content Include="PHYS\Microsoft.Practices.EnterpriseLibrary.Caching.dll" />
+    <Content Include="PHYS\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="PHYS\Microsoft.Practices.ObjectBuilder.dll" />
+    <Content Include="PHYS\OCS.Lib.OrderBiz.dll" />
+    <Content Include="PHYS\OCS.Lib.OrderVariables.dll" />
+    <Content Include="PHYS\OCS.Lib.PatientInfo.dll" />
+    <Content Include="PHYS\Otis.dll" />
+    <Content Include="PHYS\PBDATA100.dll" />
+    <Content Include="PHYS\PHYS.exe" />
+    <Content Include="PHYS\PHYS.Lib.Images.dll" />
+    <Content Include="PHYS\PHYS.Lib.RehaBiz.dll" />
+    <Content Include="PHYS\PHYS.PHY0001U00.dll" />
+    <Content Include="PHYS\PHYS.PHY1000U00.dll" />
+    <Content Include="PHYS\PHYS.PHY2001U04.dll" />
+    <Content Include="PHYS\PHYS.PHY8002U00.dll" />
+    <Content Include="PHYS\PHYS.PHY8002U01.dll" />
+    <Content Include="PHYS\protobuf-net.dll" />
+    <Content Include="PHYS\vi-VN\PHYS.PHY0001U00.resources.dll" />
+    <Content Include="PHYS\vi-VN\PHYS.PHY2001U04.resources.dll" />
+    <Content Include="PHYS\vi-VN\PHYS.PHY8002U00.resources.dll" />
+    <Content Include="PHYS\vi-VN\PHYS.PHY8002U01.resources.dll" />
+    <Content Include="PHYS\vi-VN\PHYS.resources.dll" />
+    <Content Include="PHYS\WebSocket4Net.dll" />
+    <Content Include="SCHS\DataWindow.dll" />
+    <Content Include="SCHS\DataWindowInterop.dll" />
+    <Content Include="SCHS\DevExpress.Charts.v11.1.Core.dll" />
+    <Content Include="SCHS\DevExpress.Data.v11.1.dll" />
+    <Content Include="SCHS\DevExpress.PivotGrid.v11.1.Core.dll" />
+    <Content Include="SCHS\DevExpress.Printing.v11.1.Core.dll" />
+    <Content Include="SCHS\DevExpress.RichEdit.v11.1.Core.dll" />
+    <Content Include="SCHS\DevExpress.Utils.v11.1.dll" />
+    <Content Include="SCHS\DevExpress.XtraCharts.v11.1.dll" />
+    <Content Include="SCHS\DevExpress.XtraEditors.v11.1.dll" />
+    <Content Include="SCHS\DevExpress.XtraPivotGrid.v11.1.dll" />
+    <Content Include="SCHS\DevExpress.XtraReports.v11.1.dll" />
+    <Content Include="SCHS\DevExpress.XtraRichEdit.v11.1.dll" />
+    <Content Include="SCHS\en\SCHS.resources.dll" />
+    <Content Include="SCHS\en\SCHS.SCH0109U00.resources.dll" />
+    <Content Include="SCHS\en\SCHS.SCH0109U01.resources.dll" />
+    <Content Include="SCHS\en\SCHS.SCH0201Q01.resources.dll" />
+    <Content Include="SCHS\en\SCHS.SCH0201Q02.resources.dll" />
+    <Content Include="SCHS\en\SCHS.SCH0201Q04.resources.dll" />
+    <Content Include="SCHS\en\SCHS.SCH0201Q05.resources.dll" />
+    <Content Include="SCHS\en\SCHS.SCH0201Q12.resources.dll" />
+    <Content Include="SCHS\en\SCHS.SCH0201U10.resources.dll" />
+    <Content Include="SCHS\en\SCHS.SCH0201U99.resources.dll" />
+    <Content Include="SCHS\en\SCHS.SCH3001U00.resources.dll" />
+    <Content Include="SCHS\Iesi.Collections.dll" />
+    <Content Include="SCHS\Interop.Excel.dll" />
+    <Content Include="SCHS\Interop.Office.dll" />
+    <Content Include="SCHS\Interop.VBIDE.dll" />
+    <Content Include="SCHS\ja-JP\SCHS.resources.dll" />
+    <Content Include="SCHS\ja-JP\SCHS.SCH0109U00.resources.dll" />
+    <Content Include="SCHS\ja-JP\SCHS.SCH0109U01.resources.dll" />
+    <Content Include="SCHS\ja-JP\SCHS.SCH0201Q01.resources.dll" />
+    <Content Include="SCHS\ja-JP\SCHS.SCH0201Q02.resources.dll" />
+    <Content Include="SCHS\ja-JP\SCHS.SCH0201Q04.resources.dll" />
+    <Content Include="SCHS\ja-JP\SCHS.SCH0201Q05.resources.dll" />
+    <Content Include="SCHS\ja-JP\SCHS.SCH0201Q12.resources.dll" />
+    <Content Include="SCHS\ja-JP\SCHS.SCH0201U10.resources.dll" />
+    <Content Include="SCHS\ja-JP\SCHS.SCH0201U99.resources.dll" />
+    <Content Include="SCHS\ja-JP\SCHS.SCH3001U00.resources.dll" />
+    <Content Include="SCHS\Microsoft.Ink.dll" />
+    <Content Include="SCHS\Microsoft.Practices.EnterpriseLibrary.Caching.dll" />
+    <Content Include="SCHS\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="SCHS\Microsoft.Practices.ObjectBuilder.dll" />
+    <Content Include="SCHS\NURO.RES0102U00.dll" />
+    <Content Include="SCHS\ORCA.dll" />
+    <Content Include="SCHS\Otis.dll" />
+    <Content Include="SCHS\PBDATA100.dll" />
+    <Content Include="SCHS\protobuf-net.dll" />
+    <Content Include="SCHS\SCHS.exe" />
+    <Content Include="SCHS\SCHS.SCH0109U00.dll" />
+    <Content Include="SCHS\SCHS.SCH0109U01.dll" />
+    <Content Include="SCHS\SCHS.SCH0201Q01.dll" />
+    <Content Include="SCHS\SCHS.SCH0201Q02.dll" />
+    <Content Include="SCHS\SCHS.SCH0201Q04.dll" />
+    <Content Include="SCHS\SCHS.SCH0201Q05.dll" />
+    <Content Include="SCHS\SCHS.SCH0201Q12.dll" />
+    <Content Include="SCHS\SCHS.SCH0201U00.dll" />
+    <Content Include="SCHS\SCHS.SCH0201U01.dll" />
+    <Content Include="SCHS\SCHS.SCH0201U10.dll" />
+    <Content Include="SCHS\SCHS.SCH0201U99.dll" />
+    <Content Include="SCHS\SCHS.SCH3001U00.dll" />
+    <Content Include="SCHS\vi-VN\SCHS.resources.dll" />
+    <Content Include="SCHS\vi-VN\SCHS.SCH0109U00.resources.dll" />
+    <Content Include="SCHS\vi-VN\SCHS.SCH0109U01.resources.dll" />
+    <Content Include="SCHS\vi-VN\SCHS.SCH0201Q01.resources.dll" />
+    <Content Include="SCHS\vi-VN\SCHS.SCH0201Q02.resources.dll" />
+    <Content Include="SCHS\vi-VN\SCHS.SCH0201Q04.resources.dll" />
+    <Content Include="SCHS\vi-VN\SCHS.SCH0201Q05.resources.dll" />
+    <Content Include="SCHS\vi-VN\SCHS.SCH0201Q12.resources.dll" />
+    <Content Include="SCHS\vi-VN\SCHS.SCH0201U10.resources.dll" />
+    <Content Include="SCHS\vi-VN\SCHS.SCH0201U99.resources.dll" />
+    <Content Include="SCHS\vi-VN\SCHS.SCH3001U00.resources.dll" />
+    <Content Include="SCHS\WebSocket4Net.dll" />
+    <Content Include="SQLiteDB\kinki.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Print_EMR.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQLiteDB\kcck.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\AdminLoginForm.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TSTS\en\TSTS.resources.dll" />
+    <Content Include="TSTS\ja-JP\TSTS.resources.dll" />
+    <Content Include="TSTS\TSTS.exe" />
+    <Content Include="TSTS\vi-VN\TSTS.resources.dll" />
+    <Content Include="vi-VN\IHIS.BizObjects.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="vi-VN\IHIS.Common.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="vi-VN\IHIS.Controls.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="vi-VN\IHIS.BizObjects.resources.dll" />
+    <Content Include="vi-VN\IHIS.Common.resources.dll" />
+    <Content Include="vi-VN\IHIS.Controls.resources.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <Private>False</Private>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="DataWindow.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="DataWindowInterop.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="EnvDTE">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="en\IHIS.BizObjects.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="en\IHIS.Controls.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="Iesi.Collections">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="IHIS.BizObjects">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="IHIS.CloudConnector">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="IHIS.ComFunc">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="IHIS.Controls">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="IHIS.DbControls">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="IHIS.Forms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="IHIS.MedicalInterface">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="IHIS.Service">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="IHIS.StartModules">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="IHIS.Win32">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="IHIS.X.Magic">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Interop.Excel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Interop.Office">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Interop.VBIDE">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Ionic.Zip">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="ja-JP\IHIS.BizObjects.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="ja-JP\IHIS.Controls.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="ja-JP\IHIS.Forms.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja-JP\KCCK.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.Ink">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.Practices.EnterpriseLibrary.Caching">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.Practices.ObjectBuilder">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="MySql.Data">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Otis">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="PBDATA100.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="protobuf-net">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="stdole">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="System.Data.SQLite">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="vi-VN\IHIS.BizObjects.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="vi-VN\IHIS.Controls.resources.dll">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="WebSocket4Net">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ADMM\en\" />
+    <Folder Include="ADMM\ja-JP\" />
+    <Folder Include="ADMM\vi-VN\" />
+    <Folder Include="Down\" />
+    <Folder Include="INPS\en\" />
+    <Folder Include="INPS\vi-VN\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IHIS.StartModules\IHIS.StartModules.csproj">
+      <Project>{a1194753-1970-4159-94f2-94f6a3583588}</Project>
+      <Name>IHIS.StartModules</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>$(SolutionDir)IHISFrameworkBuild.bat PRE $(SolutionDir) $(TargetDir) $(SolutionName) $(TargetFileName)</PreBuildEvent>
+    <PostBuildEvent>$(SolutionDir)IHISFrameworkBuild.bat POST $(SolutionDir) $(TargetDir) $(SolutionName) $(TargetFileName)</PostBuildEvent>
+  </PropertyGroup>
+</Project>

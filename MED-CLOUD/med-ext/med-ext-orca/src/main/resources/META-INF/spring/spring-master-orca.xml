@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:batch="http://www.springframework.org/schema/batch"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+	   http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+	   http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch.xsd">
+
+	<context:property-placeholder location="file:${configPath}/configs.properties" />
+
+	<bean id="fileServer" class="nta.med.orca.gw.socket.NioFileServer"
+		init-method="start" destroy-method="stop">
+		<constructor-arg name="bossCount" value="${gateway.bossCount}" />
+		<constructor-arg name="workerCount" value="${gateway.workerCount}" />
+		<constructor-arg name="host" value="${gateway.host}" />
+		<constructor-arg name="port" value="${gateway.port}" />
+		<constructor-arg name="folderPath" value="${gateway.claim_file}" />
+		<constructor-arg name="syncHandler" ref="syncHandler" />
+	</bean>
+
+	<bean id="api.rpc.transport" class="nta.med.ext.support.rpc.RpcExtTransport.FactoryImpl">
+		<property name="connectTimeout" value="10000" />
+		<property name="reconnectInterval" value="15000" />
+		<property name="host" value="${socket.host}" />
+		<property name="port" value="${socket.port}" />
+	</bean>
+
+	<bean id="api.rpc.service" abstract="true">
+		<property name="strict" value="true" />
+	</bean>
+
+	<bean id="patientHandler"
+		class="nta.med.orca.gw.service.patient.impl.PatientAdministratorImpl.ListenerImpl"
+		p:verbose="true" />
+
+	<bean id="systemRpcService" parent="api.rpc.service"
+		class="nta.med.ext.support.service.system.impl.SystemRpcServiceImpl" />
+		
+	<bean id="patientRpcService" parent="api.rpc.service"
+		class="nta.med.ext.support.service.patient.impl.PatientRpcServiceImpl">
+		<property name="listener" ref="patientHandler" />
+		<property name="service" ref="patientAdministrator" />
+	</bean>
+
+	<bean id="bookingRpcService" parent="api.rpc.service"
+		class="nta.med.ext.support.service.booking.impl.BookingRpcServiceImpl">
+		<property name="service" ref="patientAdministrator" />
+	</bean>
+	
+	<bean id="orderRpcService" parent="api.rpc.service"
+		class="nta.med.ext.support.service.order.impl.OrderRpcServiceImpl">
+		<property name="service" ref="orderAdministrator" />
+	</bean>
+	
+	<bean id="api.rpc.exporter" class="nta.med.ext.support.rpc.RpcExtExporter"
+		init-method="start">
+		<constructor-arg name="authRetryIntervalInSeconds"
+			value="10" />
+		<constructor-arg name="hospCode" value="${kcck.hospCode}" />
+		<constructor-arg name="username" value="${kcck.username}" />
+		<constructor-arg name="password" value="${kcck.password}" />
+		<constructor-arg name="eventStoreFile" value="${configPath}/eventstore.dat" />
+		<property name="soSendBufferSize" value="131072" />
+		<property name="soRecvBufferSize" value="131072" />
+		<property name="soSendBufferLowWaterMark" value="131072" />
+		<property name="soSendBufferHighWaterMark" value="524288" />
+		<property name="transportFactory" ref="api.rpc.transport" />
+		<property name="systemRpcService" ref="systemRpcService" />
+		<property name="services">
+			<list>
+				<ref bean="systemRpcService" />
+				<ref bean="patientRpcService" />
+				<ref bean="bookingRpcService" />
+				<ref bean="orderRpcService" />
+			</list>
+		</property>
+		<property name="subscribers">
+			<list>
+				<ref bean="patientHandler" />
+			</list>
+		</property>
+		<property name="capabilities">
+			<list>
+				<util:constant static-field="nta.med.ext.support.glossary.Capability.BOOK_EXAM" />
+				<util:constant static-field="nta.med.ext.support.glossary.Capability.CREATE_PATIENT" />
+				<util:constant static-field="nta.med.ext.support.glossary.Capability.APPOINT_EXAM" />
+				<util:constant static-field="nta.med.ext.support.glossary.Capability.ORDER_TRANSFER" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="syncHandler" class="nta.med.orca.gw.socket.SyncHandler"
+		init-method="start" destroy-method="stop">
+		<constructor-arg name="deleteClaimFile" value="${gateway.deleteClaimFile}" />
+		<constructor-arg name="decisionThreshold" value="${gateway.decisionThreshold}" />
+	</bean>
+
+	<context:annotation-config />
+
+	<context:component-scan base-package="nta.med.orca.gw">
+		<context:exclude-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+
+	<!--<context:component-scan base-package="nta.med.orca.gw"> -->
+	<context:component-scan base-package="nta.med.orca">
+		<context:exclude-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+
+	<!-- Enable @AspectJ support -->
+	<aop:aspectj-autoproxy proxy-target-class="true" />
+	<aop:config>
+		<aop:pointcut id="pointcut"
+			expression="execution(* nta.med.orca..*(..)) &amp;&amp; !within(nta.med.common.glossary.Lifecyclet+)" />
+		<aop:advisor advice-ref="monitorInterceptor" pointcut-ref="pointcut" />
+	</aop:config>
+
+	<bean id="monitorInterceptor" class="nta.med.core.common.interceptor.MonitorInterceptor"
+		p:enterMessage="Entering $[targetClassShortName].$[methodName]($[arguments])."
+		p:exitMessage="Leaving $[targetClassShortName].$[methodName](..) with return value $[returnValue], took $[invocationTime]ms."
+		p:hideProxyClassNames="true" c:ignoreExceptions="false" />
+
+	<tx:annotation-driven proxy-target-class="true" />
+
+	<bean class="nta.med.core.infrastructure.SpringBeanFactory" />
+
+	<bean id="velocityEngine"
+		class="org.springframework.ui.velocity.VelocityEngineFactoryBean"
+		p:resourceLoaderPath="classpath:orca-templates"
+		p:preferFileSystemAccess="false" />
+
+
+	<!-- [SYNC ORCA BATCH] -->
+
+	<batch:job id="job" job-repository="jobRepository">
+		<batch:step id="step">
+			<batch:tasklet>
+				<bean class="nta.med.orca.gw.task.SyncOrcaInfoTask">
+
+				</bean>
+			</batch:tasklet>
+		</batch:step>
+	</batch:job>
+
+	<bean id="jobDetail"
+		class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+		<property name="jobClass" value="nta.med.orca.gw.batch.QuartzLauncher" />
+	</bean>
+
+	<bean id="jobDetailTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="jobDetail" />
+		<property name="cronExpression" value="${sync.tasklet.cron.expression}" />
+	</bean>
+
+	<bean id="schedulerFactoryBean" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="jobDetailTrigger" />
+			</list>
+		</property>
+		<property name="jobFactory">
+			<bean class="org.springframework.scheduling.quartz.SpringBeanJobFactory" />
+		</property>
+		<property name="schedulerContextAsMap">
+			<map>
+				<entry key="job" value-ref="job" />
+				<entry key="jobLauncher" value-ref="jobLauncher" />
+			</map>
+		</property>
+	</bean>
+
+	<bean id="jobRepository" class="org.springframework.batch.core.repository.support.MapJobRepositoryFactoryBean">
+		<property name="transactionManager" ref="transactionManager" />
+	</bean>
+
+	<bean id="transactionManager" class="org.springframework.batch.support.transaction.ResourcelessTransactionManager" />
+
+	<bean id="jobLauncher" class="org.springframework.batch.core.launch.support.SimpleJobLauncher">
+		<property name="jobRepository" ref="jobRepository" />
+	</bean>
+
+</beans>

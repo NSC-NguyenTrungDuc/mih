@@ -1,0 +1,425 @@
+syntax = "proto2";
+
+//
+message LoginRequest {
+	required string login_id = 1;
+	required string password = 2;
+}
+
+message LoginResponse {
+	required Result result = 1;
+	enum Result {
+		SUCCESS = 0;
+		INVALID_IDENTITY = 1;
+		INTERNAL_ERROR = 99; 
+	}
+}
+
+//Main menu request
+message MainMenuRequest {
+	required string msg_user_yn = 1;
+	required string admin_user_yn = 2;
+}
+
+//Main menu response
+message MainMenuResponse {
+	repeated MainMenuItemInfo menu_item = 1;
+}
+
+// Combo List by Code Type Request
+message ComboListByCodeTypeRequest {
+	required string code_type = 1;
+	required bool is_all = 2;
+}
+
+// Combo List by Code Type Response
+message ComboListByCodeTypeResponse {
+	repeated ComboListItemInfo combo_list_item = 1;
+}
+
+// Update Response
+message UpdateResponse {
+	required bool result = 1;
+	optional string msg = 2;
+}
+
+// Combo List Response 
+message ComboListResponse {
+	repeated ComboListItemInfo combo_list_item = 1;
+}
+
+message UserNameListRequest {
+	optional string user_id = 1;
+}
+
+message UserNameListResponse {
+	repeated string user_nm = 1;
+}
+
+// FindPatientForm request
+message FindPatientFromRequest
+{
+	required string patient_name2 = 1;
+	required string sex = 2;
+	required string brith = 3;
+	required string tel = 4; 
+	required string patient_code = 5;
+}
+
+// FindPatientForm Response
+message FindPatientFromResponse
+{
+	repeated FindPatientInfo patient_info_item = 1;
+}
+
+ // XPaInfoBox request
+message XPaInfoBoxRequest
+{
+optional string patient_code = 1;
+}
+
+// [Start] XPaInfoBox response
+message XPaInfoBoxResponse
+{
+repeated XPaInfoBoxInfo patient_info_item = 1;
+}
+
+message GetPatientInfoRequest
+{
+        optional string bunho = 1;
+}
+
+
+message GetPatientInfoResponse 
+{
+        optional string delete_yn = 1;
+        optional string jubsubreak = 2;
+        optional string jubsubreakreason = 3;
+        optional string jaewonpatient_yn = 4;
+		optional string mPkinp1001= 5;
+}
+// [End] XPaInfoBox response
+
+// Grid visit info
+message DetailPaInfoFormGridVisitListRequest
+{
+	required string patient_code = 1;
+}
+// Grid visit info
+message DetailPaInfoFormGridVisitListResponse
+{
+	repeated DetailPaInfoFormGridVisitListInfo grid_visit_item = 1;
+}
+
+// Grid comment
+message DetailPaInfoFormGridCommentRequest
+{
+	required string patient_code = 1;
+}
+
+// Grid comment
+message DetailPaInfoFormGridCommentResponse
+{
+	repeated DetailPaInfoFormGridCommentInfo comment_item = 1;
+}
+
+// Grid Insure
+message DetailPaInfoFormGridInsureRequest
+{
+	required string patient_code = 1;
+}
+// Grid Insure
+message DetailPaInfoFormGridInsureResponse
+{
+	repeated DetailPaInfoFormGridInsureInfo grid_insure_item = 1;
+}
+
+// Grid Insure
+message DetailPaInfoFormGridInsureRequest
+{
+	required string patient_code = 1;
+}
+// Grid Insure
+message DetailPaInfoFormGridInsureResponse
+{
+	repeated DetailPaInfoFormGridInsureInfo grid_insure_item = 1;
+}
+
+
+message BuseoListRequest
+{
+	required string buseo_gubun = 1;
+}
+
+message BuseoListResponse
+{
+	repeated BuseoInfo BuseoList = 1;
+}
+
+// Start IHIS.Framework IHIS.Form
+message UserInfoCheckUserSubRequest {
+    optional UserRequestInfo user_info = 1;
+}
+
+message UserInfoCheckUserSubResponse {
+    optional UserItemInfo user_item_info = 1;
+    optional string error_message = 2;
+}
+
+message UserInfoCheckUserSubDoctorRequest
+{
+     optional string gwa = 1;
+
+     optional UserRequestInfo user_info = 2;
+}
+
+message UserInfoCheckUserSubDoctorResponse
+{
+    optional UserItemInfo user_item_info = 1;
+    optional string error_message = 2;
+    
+    repeated ComboListItemInfo cbo_list = 3;
+}
+
+message CheckUserDoctorLoginRequest
+{
+    optional string gwa = 1;
+
+    optional UserRequestInfo user_info = 2;
+}
+
+message CheckUserDoctorLoginResponse
+{
+    optional string gwa_name = 1;
+
+    optional UserItemInfo user_item_info = 2;
+    optional string error_message = 3;
+    
+    repeated ComboListItemInfo cbo_list = 4;
+}
+
+message CheckUserLoginRequest {
+    required string user_id = 1;
+    required string system_id = 2;
+    optional UserRequestInfo user_info = 3;
+}
+
+message CheckUserLoginResponse {
+    required string sub_part_doctor = 1;
+    optional UserItemInfo user_item_info = 2;
+    optional string error_message = 3;
+}
+
+message UserInfoSetSystemUserToRegistryRequest
+{
+	optional string user_id = 1;
+	optional string system_id = 2;
+	optional string ip_addr = 3;
+}
+
+message FormGwaListRequest {
+	required string user_id = 1;
+}
+
+message FormGwaListResponse {
+	repeated FormGwaItemInfo item_info = 1;
+}
+
+// End IHIS.Framework IHIS.Form
+
+message AdmMessageCallRequest {
+	optional string sender_id = 1;
+	optional string reciever_gubun = 2;
+	optional string reciever_id = 3;
+	optional string title = 4;
+	optional string data = 5;
+	optional string user_id = 6;
+}
+message AdmMessageCallResponse{
+	optional string err_flag = 1;
+	optional string send_seq = 2;
+}
+
+message UdpHelperSendMsgToID2Request{
+	optional string sender_id = 1;
+	optional string send_seq = 2;
+}
+
+message UdpHelperSendMsgToID2Response{
+	repeated UdpHelperSendInfo info1 = 1;
+	repeated DataStringListItemInfo lst_ip_addr = 2;
+}
+
+//Cache combobox
+
+message CboSearchConditionRequest{
+}
+
+message CboSearchConditionResponse{
+        repeated ComboListItemInfo info1 = 1;
+}
+
+//End Cache combobox
+message FormScreenListRequest{
+	required string screen_id = 1;
+}
+
+message FormScreenListResponse{
+	repeated FormScreenInfo form_screen_info = 1;
+}
+
+message FormEnvironInfoMessageRequest {
+	required string msg_num = 1;
+}
+
+message FormEnvironInfoSysDateRequest {
+}
+
+message FormEnvironInfoSysDateTimeRequest {
+}
+
+message StringResponse{
+    required string result = 1;
+}
+
+message FormUserInfoUnRegisterSystemUserRequest {
+    required string user_id = 1;
+    required string system_id = 2;
+    required string ip_addr = 3;
+}
+
+message MenuViewFormRequest{
+    required string user_id = 1;
+}
+
+message MenuViewFormResponse{
+    required bool result = 1;
+    optional string msg = 2;
+
+    repeated MenuViewFormItemInfo menu_view_form_item_info = 3;
+}
+
+// End IHIS.Framework IHIS.Form
+
+// Start IHIS.Framework IHIS.Form Mdi Form
+
+message MdiFormSystemMenuRequest {
+    optional string user_id = 1;
+    optional string system_id = 2;
+}
+
+message MdiFormSystemMenuResponse {
+    required bool result = 1;
+    optional string msg = 2;
+
+    repeated MdiFormMenuItemInfo menu_item_info = 3;
+}
+
+message MdiFormMainMenuRequest {
+    optional string user_id = 1;
+    optional string system_id = 2;
+}
+
+message MdiFormMainMenuResponse {
+    required bool result = 1;
+    optional string msg = 2;
+
+    repeated MdiFormMenuItemInfo menu_item_info = 3;
+
+    repeated MdiFormMainMenuItemInfo main_menu_item_info = 4;
+}
+// End IHIS.Framework IHIS.Form Mdi Form
+
+// Start Combo
+message ComboSangEndSayuRequest
+{        
+} 
+message ComboDoctorGwaRequest
+{        
+	optional string memb = 1;
+}
+message ComboOrdDanuiRequest
+{        
+}
+message ComboSearchConditionRequest {
+	optional string code_type = 1        
+}
+// End Combo
+
+message LayConstantInfoRequest
+{
+}
+
+message LayConstantInfoResponse
+{
+	repeated LayConstantInfo lay_constant_item = 1;
+}
+
+message ComboBarCodeRequest
+{
+   optional string code_type = 1;
+}
+message ComboResultFormRequest
+{
+	optional string code_type = 1;
+}
+message ComboSpcialNameRequest
+{
+	optional string code_type = 1;
+}
+message ComboInOutGubunRequest
+{
+	optional string code_type = 1;
+}
+
+message CboHospJinGubunRequest {
+	optional string code_type = 1;
+}
+
+message BASSFwkBuseoGubunRequest{
+    
+}
+
+message BASSCboInputGubunRequest{
+    
+}
+message CheckAdminUserRequest{
+	optional string user_id = 1;
+}
+
+message CheckAdminUserResponse {
+	repeated CheckAdminUserInfo user_info = 1;
+}
+
+message ComboOrdDanuiRequest
+{
+	optional bool is_all = 1;
+}
+
+message ComboNuGroupRequest
+{
+	optional bool is_all = 1;
+}
+
+message ComboAdminGubunRequest {
+	optional string code_type = 1;
+}
+
+message ComboNur0101Request {
+
+}
+
+message CreateGwaComboRequest{
+
+}
+
+message AdmLoginOnBehalfOfRequest
+{
+    required string session_id = 1;
+}
+
+message AdmLoginFormCheckLoginUserResponse
+{
+ repeated AdmLoginFormCheckLoginUserInfo user_info_item = 1;
+    optional string session_id = 2;
+}

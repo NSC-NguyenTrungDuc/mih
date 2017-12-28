@@ -1,0 +1,52 @@
+import "rpc.proto";
+import "clis_model.proto";
+import "system_model.proto";
+
+// --- [START] CLIS2015U02 ---
+//get grdProtocol
+message CLIS2015U02GrdProtocolRequest
+{
+	optional string protocol_code = 1;
+	optional string protocol_name = 2;
+	optional string from_date = 3;
+	optional string to_date = 4;
+	optional string protocol_status = 5;
+	optional string patient_code = 6;
+}
+
+
+
+message CLIS2015U02GrdProtocolResponse
+{
+	repeated CLIS2015U02GrdProtocolInfo grdProtocol_list = 1;
+}
+
+
+//get grdStatus
+message CLIS2015U02GrdStatusRequest
+{
+	optional string protocol_id = 1;
+}
+
+
+
+message CLIS2015U02GrdStatusResponse
+{
+	repeated CLIS2015U02GrdStatusInfo grdStatus_list = 1;
+}
+
+//get combo cboStatus
+message CLIS2015U02CboStatusRequest
+{
+}
+
+
+//saveLayout
+message CLIS2015U02SaveLayoutRequest
+{
+	optional CLIS2015U02GrdProtocolInfo grdProtocol_list = 1;
+	repeated CLIS2015U02GrdStatusInfo grdStatus_list = 2;
+}
+
+
+// --- [End] CLIS2015U02 ---

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<xs:schema xmlns:mmlDp="uri:mmlDp" xmlns:claimA="uri:claimA" xmlns:mmlHi="uri:mmlHi" elementFormDefault="qualified" targetNamespace="uri:claimA" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="uri:mmlDp" />
+  <xs:import namespace="uri:mmlHi" />
+  <xs:element name="ClaimAmountModule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="claimA:amountInformation" />
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="claimA:bundle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="amountInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="claimA:patientDepartment" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="claimA:patientWard" />
+        <!--<xs:element minOccurs="0" maxOccurs="1" xmlns:q1="uri:mmlHi" ref="q1:insuranceClass" />-->
+        <xs:element minOccurs="0" maxOccurs="1" ref="mmlHi:insuranceClass" />
+      </xs:sequence>
+      <xs:attribute name="status" type="xs:string" use="required" />
+      <xs:attribute name="oderTime" type="xs:string" />
+      <xs:attribute name="appointTime" type="xs:string" />
+      <xs:attribute name="registTime" type="xs:string" />
+      <xs:attribute name="performTime" type="xs:string" />
+      <xs:attribute name="accountTime" type="xs:string" />
+      <xs:attribute name="admitFlag" type="xs:string" use="required" />
+      <xs:attribute name="timeClass" type="xs:string" />
+      <xs:attribute name="insuranceUid" type="xs:string" />
+      <xs:attribute name="defaultTableId" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="bundle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="claimA:className" />
+        <xs:element ref="claimA:claimBundlePoint" />
+        <xs:element ref="claimA:claimBundleRate" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="claimA:administration" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="claimA:admMemo" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="claimA:bundleNumber" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="claimA:methodPoint" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="claimA:materialPoint" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="claimA:drugPoint" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="claimA:ppsClass" />
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="claimA:item" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="claimA:memo" />
+      </xs:sequence>
+      <xs:attribute name="classCode" type="xs:string" />
+      <xs:attribute name="classCodeId" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="patientDepartment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mmlDp:Department" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="patientWard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mmlDp:Department" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="className" type="xs:string" />
+  <xs:element name="claimBundlePoint" type="xs:string" />
+  <xs:element name="claimBundleRate" type="xs:string" />
+  <xs:element name="administration">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="adminCode" type="xs:string" />
+          <xs:attribute name="adminCodeId" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="admMemo" type="xs:string" />
+  <xs:element name="bundleNumber" type="xs:string" />
+  <xs:element name="methodPoint" type="xs:string" />
+  <xs:element name="materialPoint" type="xs:string" />
+  <xs:element name="drugPoint" type="xs:string" />
+  <xs:element name="ppsClass" type="xs:string" />
+  <xs:element name="item">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="claimA:name" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="claimA:number" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="claimA:claimPoint" />
+        <xs:element ref="claimA:claimRate" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="claimA:duration" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="claimA:location" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="claimA:film" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="claimA:event" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="claimA:memo" />
+      </xs:sequence>
+      <xs:attribute name="subclassCode" type="xs:string" />
+      <xs:attribute name="subclassCodeId" type="xs:string" />
+      <xs:attribute name="code" type="xs:string" use="required" />
+      <xs:attribute name="tableId" type="xs:string" />
+      <xs:attribute name="aliasCode" type="xs:string" />
+      <xs:attribute name="aliasTableId" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="name" type="xs:string" />
+  <xs:element name="number">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="numberCode" type="xs:string" use="required" />
+          <xs:attribute name="numberCodeId" type="xs:string" use="required" />
+          <xs:attribute name="unit" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="claimPoint" type="xs:string" />
+  <xs:element name="claimRate" type="xs:string" />
+  <xs:element name="duration" type="xs:string" />
+  <xs:element name="location" type="xs:string" />
+  <xs:element name="film">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="claimA:filmSize" />
+        <xs:element ref="claimA:filmNumber" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="event">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="eventStart" type="xs:string" />
+          <xs:attribute name="eventEnd" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="memo" type="xs:string" />
+  <xs:element name="filmSize">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="sizeCode" type="xs:string" />
+          <xs:attribute name="sizeCodeId" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="filmNumber" type="xs:string" />
+</xs:schema>

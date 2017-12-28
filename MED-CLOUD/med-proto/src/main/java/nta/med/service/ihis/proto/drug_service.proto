@@ -1,0 +1,278 @@
+import "rpc.proto";
+import "drug_model.proto";
+import "common_model.proto";
+
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "DrugServiceProto";
+option (version) = "1.0.0";
+option (service) = "drug";
+
+message DRGOCSCHKGrdOcsChkRequest{
+    optional string jaeryo_code = 1;
+    optional string jaeryo_name = 2;
+    optional string pre_small_code = 3;
+    optional string small_code = 4;
+    optional string drg_pack_yn = 5;
+    optional string phamarcy_yn = 6;
+    optional string powder_yn = 7;
+    optional string hubal_yn = 8;
+    optional string mayak_yn = 9;
+    optional string before_use_yn = 10;
+	optional string page_number = 11;
+}
+
+message DRGOCSCHKGrdOcsChkResponse{
+    repeated DRGOCSCHKGrdOcsChkInfo list_item = 1;
+}
+
+message DRGOCSCHKPreSmallCodeDataValidatingRequest{
+    optional string code = 1;
+}
+
+message DRGOCSCHKPreSmallCodeDataValidatingResponse{
+    optional string code_name = 1;
+}
+
+message DRGOCSCHKCautionCodeDataValidatingRequest{
+    optional string caution_code = 1;
+}
+
+message DRGOCSCHKCautionCodeDataValidatingResponse{
+    optional string caution_name = 1;
+}
+
+message DRGOCSCHKGetCautionListRequest{
+}
+
+message DRGOCSCHKGetCautionListResponse{
+    repeated ComboListItemInfo list_item = 1;
+}
+
+message DRGOCSCHKSmallCodeDataValidatingRequest{
+    optional string code_1 = 1;
+}
+
+message DRGOCSCHKSmallCodeDataValidatingResponse{
+    optional string code_name_1 = 1;
+}
+
+message DRGOCSCHKSUpdateInv0110Request{
+    optional string row_state = 1;
+    optional string hangmog_code = 2;      
+    optional string hangmog_name = 3;
+    optional string drg_pack_yn = 4;                                   
+    optional string phamarcy = 5;
+    optional string powder_yn = 6;
+    optional string hubal_change_yn = 7;
+    optional string bunryu2 = 8;
+    optional string small_code = 9;
+    optional string caution_code = 10;
+    optional string user_id = 11;
+}
+
+
+// ----[START] DRG0102U00 --------
+message DRG0102U00GrdMasterRequest{
+	optional string code_type = 1;
+	optional string code_type_name = 2;
+}
+
+
+message DRG0102U00GrdMasterResponse{
+	repeated ComboListItemInfo list_info = 1;
+}
+
+message DRG0102U00GrdDetailRequest{
+	optional string code_type = 1;
+}
+
+message DRG0102U00GrdDetailResponse{
+	repeated DRG0102U00GrdDetailInfo list_info = 1;
+}
+
+message DRG0102U00GrdMasterGridColumnChangedRequest{
+    optional string code_type = 1;
+} 
+
+message DRG0102U00GrdMasterGridColumnChangedResponse{
+    optional string x = 1;
+}
+
+message DRG0102U00GrdDetailGridColumnChangedRequest{
+    optional string code_type = 1;
+    optional string code = 2;
+}
+
+message DRG0102U00GrdDetailGridColumnChangedResponse{
+    optional string x = 1;
+}
+
+message DRG0102U00UpdateInv0101Request{
+    optional string row_state = 1;
+    optional string user_id = 2;
+    optional string code_type_name = 3;
+    optional string code_type = 4;
+}
+
+message DRG0102U00GrdDetailSaveLayoutRequest{
+	optional string user_id = 1;
+	repeated DRG0102U00GrdDetailInfo input_list = 2;
+}
+
+
+// ----[END] DRG0102U00 -------
+
+// ----- [START] DRG0120U00 -----
+message DRG0120U00ComboListRequest{
+	optional string param_32 = 1;
+	optional string param_33 = 2;
+	optional string param_34 = 3;
+	optional string param_35 = 4;
+	optional string param_UA = 5;
+	optional string hosp_code = 6;
+}
+
+message DRG0120U00ComboListResponse{
+	repeated ComboListItemInfo cbo_list_32 = 1;
+	repeated ComboListItemInfo cbo_list_33 = 2;
+	repeated ComboListItemInfo cbo_list_34 = 3;
+	repeated ComboListItemInfo cbo_list_35 = 4;
+	repeated ComboListItemInfo cbo_list_UA = 5;
+}
+message DRG0120U00GrdDrg0120Request{
+	optional string bunryu1 = 1;
+	optional string hosp_code = 2;
+}
+
+message DRG0120U00GrdDrg0120Response{
+	repeated DRG0120U00GrdDrg0120ItemInfo list_info = 1;
+}
+
+message DRG0120U00GrdDrg0120Item1Request{
+	optional string bunryu1 = 1;
+	optional string hosp_code = 2;
+}
+
+message DRG0120U00GrdDrg0120Item1Response{
+	repeated DRG0120U00GrdDrg0120Item1Info list_info = 1;
+}
+
+message DRG0120U00GrdNaebogRequest{
+	optional string hosp_code = 1;
+}
+
+message DRG0120U00GrdNaebogResponse{
+	repeated DRG0120U00Grd0120Item2Info grdNaebog_list = 1;
+}
+message DRG0120U00GrdYoiyongRequest{
+	optional string hosp_code = 1;
+}
+
+message DRG0120U00GrdYoiyongResponse{
+	repeated DRG0120U00Grd0120Item3Info grdYoiyong_list = 1;
+}
+
+message DRG0120U00SaveLayoutRequest{
+	optional string user_id = 1;
+	optional string hosp_code = 2;
+	repeated DRG0120U00GrdDrg0120ItemInfo input_list = 3;
+}
+message DRG0120U00UpdateDRG0120Request{
+    optional string row_state = 1;
+    optional string user_id = 2;
+    optional string bogyong_code = 3;         
+    optional string bogyong_name = 4;                 
+    optional string pattern = 5;                      
+    optional string bogyong_gubun = 6;                
+    optional string drg_grp = 7;                      
+    optional string bogyong_name_2 = 8;               
+    optional string bogyong_gubun_default = 9;        
+    optional string prt_gubun = 10;                   
+    optional string bunryu1 = 11;                     
+    optional string bogyong_code_full = 12;           
+    optional string sp_bogyong_yn = 13;               
+    optional string block_gubun = 14;                 
+    optional string banghyang = 15;                   
+    optional string chiryo_gubun = 16;                
+    optional string donbog_yn = 17;                   
+    optional string hosp_code = 18;                   
+    optional string bogyong_jo_flag = 19;             
+    optional string bogyong_ju_flag = 20;             
+    optional string bogyong_seok_flag = 21;           
+    optional string bogyong_time1_flag = 22;          
+    optional string bogyong_time2_flag = 23;          
+    optional string bogyong_time3_flag = 24;          
+    optional string bogyong_time4_flag = 25;          
+    optional string bogyong_time5_flag = 26;          
+    optional string bogyong_time6_flag = 27;          
+    optional string bogyong_time7_flag = 28;          
+}
+
+// ----- [START] DRG0120U00 -----
+message DRG9001R02GetLay9001Request{
+    optional string date = 1;
+}
+
+message DRG9001GetLay9001Response{
+    repeated DRG9001GetLay9001Info list_item = 1;
+}
+
+message DRG9001R01GetLay9001Request{
+    optional string date = 1;
+}
+
+
+message DRGOCSCHKSaveLayoutRequest{
+    repeated DRGOCSCHKGrdOcsChkInfo input_list = 1;
+    optional string user_id = 2;
+}
+
+message DRGOCSCHKgrdOCS0108Request
+{
+        optional string hosp_code = 1;
+        optional string hangmog_code = 2;
+        optional string hangmog_startdate = 3;
+}
+
+message DRGOCSCHKgrdOCS0108Response
+{
+        repeated DRGOCSCHKgrdOCS0108Info list_info = 1;
+}
+
+message DRGOCSCHKGrdOcsChkFullRequest
+{
+optional string jaeryo_code = 1;
+optional string jaeryo_name = 2;
+optional string pre_small_code = 3;
+optional string small_code = 4;
+optional string drg_pack_yn = 5;
+optional string phamarcy_yn = 6;
+optional string powder_yn = 7;
+optional string hubal_yn = 8;
+optional string mayak_yn = 9;
+optional string stock_yn = 10;
+optional string before_use_yn = 11; 
+optional string wonnae_drg_yn = 12;
+optional string jaeryo_gubun = 13;
+optional string page_number = 14;
+optional string offset = 15;   
+}
+
+message DRGOCSCHKGrdOcsChkFullResponse{
+    repeated DRGOCSCHKGrdOcsChkFullInfo list_item = 1;
+}
+
+message DRGOCSCHKSaveGrdOcsChkRequest
+{
+optional string hangmog_code = 1;
+repeated DRGOCSCHKGrdOcsChkFullInfo list_info = 2;
+}
+
+message DRGOCSCHKSaveGrdOcs0108Request
+{
+optional string hangmog_code = 1;
+repeated DRGOCSCHKgrdOCS0108Info list_info = 2;
+}
+
+message DRGOCSCHKLoadCbxCHKRequest {
+}

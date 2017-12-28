@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WebviewController">
+            <connections>
+                <outlet property="btnClose" destination="bEY-Fg-cD3" id="eZq-gm-OqQ"/>
+                <outlet property="loading" destination="gA3-pG-YbL" id="gCM-uv-dKZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webview" destination="gAV-c0-Qpf" id="w3O-rQ-OgR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gAV-c0-Qpf">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                </webView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEY-Fg-cD3">
+                    <rect key="frame" x="520" y="30" width="70" height="30"/>
+                    <color key="backgroundColor" red="0.28235294119999998" green="0.67843137249999996" blue="0.31764705879999999" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="QPy-T8-vpF"/>
+                        <constraint firstAttribute="width" constant="70" id="goo-n9-aro"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="Close">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="actionClose:" destination="-1" eventType="touchUpInside" id="soR-oo-8AA"/>
+                    </connections>
+                </button>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gA3-pG-YbL">
+                    <rect key="frame" x="274" y="251" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="bEY-Fg-cD3" secondAttribute="trailing" constant="10" id="4iz-fk-J5u"/>
+                <constraint firstItem="gA3-pG-YbL" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="4v1-yn-Ri7"/>
+                <constraint firstItem="bEY-Fg-cD3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="GjN-Nq-wc8"/>
+                <constraint firstAttribute="bottom" secondItem="gAV-c0-Qpf" secondAttribute="bottom" id="J94-rX-8b2"/>
+                <constraint firstItem="gA3-pG-YbL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="QHO-n1-G3f"/>
+                <constraint firstItem="gAV-c0-Qpf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="i1U-SB-yQx"/>
+                <constraint firstAttribute="trailing" secondItem="gAV-c0-Qpf" secondAttribute="trailing" id="lgd-VV-whc"/>
+                <constraint firstItem="gAV-c0-Qpf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="r5T-fm-1Sz"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="481" y="331"/>
+        </view>
+    </objects>
+</document>

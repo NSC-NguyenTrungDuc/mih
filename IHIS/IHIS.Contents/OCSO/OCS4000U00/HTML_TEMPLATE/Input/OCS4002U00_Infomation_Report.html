@@ -1,0 +1,668 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Infomation Report</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	  <script src="../js/moment.min.js"></script>
+      <script src="../js/pikaday.js"></script>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/handlebars.min.js"></script>	
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/app.js"></script>
+	<link rel="stylesheet" href="../css/style.css">
+  <style>
+  	body{
+  		font-size: 15px;
+  	}
+    hr{
+      border-width: 0;
+      height: 1px;
+      background-color: #ccc;
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+  	
+  	.wrapper{
+  		width: 820px;
+  		margin-top: 0;
+  		margin-right: auto;
+  		margin-left: auto;
+  		margin-bottom: 0;
+  	}
+    .page-title{
+      font-size: 40px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+    .text-center{
+      text-align: center;
+    }
+    .text-right{
+      text-align: right;
+    }
+    .uppercase{
+      text-transform: uppercase;
+    }
+    .table {
+      border-spacing: 0;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    .table .td-title{
+      width: 200px;
+      padding-right: 20px;
+    }
+    .table .td-content {
+      width: 600px;
+    }
+    .table tr th {
+      text-align: left;
+      vertical-align: top;    
+    }
+    .table tr td {
+      vertical-align: top;
+    }
+    .table tr.row > td,
+    .table tr.row > th{
+      padding-bottom: 20px;
+    }
+
+    .label{
+      margin-top: 3px;
+      margin-bottom: 7px;
+    }
+    .input{
+      border-width: 1px;
+      border-style: solid;
+      border-color: #ccc;
+      padding-top: 7px;
+      padding-left: 12px;
+      padding-right: 12px;
+      padding-bottom: 7px;
+    }
+    .input:focus{
+      border-color: #666;
+    }
+    .input:disabled{
+      background-color: #f5f5f5;
+      color: #666;
+    }
+    .table .td-content .input-block{
+      width: 574px;
+    }
+    select.input{
+      padding-left: 11px;
+      padding-right: 11px;
+    }
+    .table .td-content .select-block {
+      width: 100%;
+    }
+    select.input option {
+      padding-left: 13px;
+      padding-right: 13px;
+    }
+    .box{
+      background-color: #f5f5f5;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-width: 1px;
+      border-style: dashed;
+      border-color: #ccc;
+    }
+    .button{
+      font-size: 18px;
+      background-color: #2a75a9;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 25px;
+      padding-right: 25px;
+      color: #fff;
+      border-width: 0;
+      cursor: pointer;
+    }
+    .pika-single {
+        z-index: 9999;
+        display: block;
+        position: relative;
+        color: #333;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-bottom-color: #bbb;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    /*
+    clear child float (pika-lendar), using the famous micro clearfix hack
+    http://nicolasgallagher.com/micro-clearfix-hack/
+    */
+    .pika-single:before,
+    .pika-single:after {
+        content: " ";
+        display: table;
+    }
+    .pika-single:after { clear: both }
+    .pika-single { *zoom: 1 }
+
+    .pika-single.is-hidden {
+        display: none;
+    }
+
+    .pika-single.is-bound {
+        position: absolute;
+        box-shadow: 0 5px 15px -5px rgba(0,0,0,.5);
+    }
+
+    .pika-lendar {
+        float: left;
+        width: 240px;
+        margin: 8px;
+    }
+
+    .pika-title {
+        position: relative;
+        text-align: center;
+    }
+
+    .pika-label {
+        display: inline-block;
+        *display: inline;
+        position: relative;
+        z-index: 9999;
+        overflow: hidden;
+        margin: 0;
+        padding: 5px 3px;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: bold;
+        background-color: #fff;
+    }
+    .pika-title select {
+        cursor: pointer;
+        position: absolute;
+        z-index: 9998;
+        margin: 0;
+        left: 0;
+        top: 5px;
+        filter: alpha(opacity=0);
+        opacity: 0;
+    }
+
+    .pika-prev,
+    .pika-next {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        outline: none;
+        border: 0;
+        padding: 0;
+        width: 20px;
+        height: 30px;
+        /* hide text using text-indent trick, using width value (it's enough) */
+        text-indent: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        background-color: transparent;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 75% 75%;
+        opacity: .5;
+        *position: absolute;
+        *top: 0;
+    }
+
+    .pika-prev:hover,
+    .pika-next:hover {
+        opacity: 1;
+    }
+
+    .pika-prev,
+    .is-rtl .pika-next {
+        float: left;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAUklEQVR42u3VMQoAIBADQf8Pgj+OD9hG2CtONJB2ymQkKe0HbwAP0xucDiQWARITIDEBEnMgMQ8S8+AqBIl6kKgHiXqQqAeJepBo/z38J/U0uAHlaBkBl9I4GwAAAABJRU5ErkJggg==');
+        *left: 0;
+    }
+
+    .pika-next,
+    .is-rtl .pika-prev {
+        float: right;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAU0lEQVR42u3VOwoAMAgE0dwfAnNjU26bYkBCFGwfiL9VVWoO+BJ4Gf3gtsEKKoFBNTCoCAYVwaAiGNQGMUHMkjGbgjk2mIONuXo0nC8XnCf1JXgArVIZAQh5TKYAAAAASUVORK5CYII=');
+        *right: 0;
+    }
+
+    .pika-prev.is-disabled,
+    .pika-next.is-disabled {
+        cursor: default;
+        opacity: .2;
+    }
+
+    .pika-select {
+        display: inline-block;
+        *display: inline;
+    }
+
+    .pika-table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 0;
+    }
+
+    .pika-table th,
+    .pika-table td {
+        width: 14.285714285714286%;
+        padding: 0;
+    }
+
+    .pika-table th {
+        color: #999;
+        font-size: 12px;
+        line-height: 25px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .pika-button {
+        cursor: pointer;
+        display: block;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        outline: none;
+        border: 0;
+        margin: 0;
+        width: 100%;
+        padding: 5px;
+        color: #666;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: right;
+        background: #f5f5f5;
+    }
+
+    .pika-week {
+        font-size: 11px;
+        color: #999;
+    }
+
+    .is-today .pika-button {
+        color: #33aaff;
+        font-weight: bold;
+    }
+
+    .is-selected .pika-button {
+        color: #fff;
+        font-weight: bold;
+        background: #33aaff;
+        box-shadow: inset 0 1px 3px #178fe5;
+        border-radius: 3px;
+    }
+
+    .is-inrange .pika-button {
+        background: #D5E9F7;
+    }
+
+    .is-startrange .pika-button {
+        color: #fff;
+        background: #6CB31D;
+        box-shadow: none;
+        border-radius: 3px;
+    }
+
+    .is-endrange .pika-button {
+        color: #fff;
+        background: #33aaff;
+        box-shadow: none;
+        border-radius: 3px;
+    }
+
+    .is-disabled .pika-button {
+        pointer-events: none;
+        cursor: default;
+        color: #999;
+        opacity: .3;
+    }
+
+    .pika-button:hover {
+        color: #fff;
+        background: #ff8000;
+        box-shadow: none;
+        border-radius: 3px;
+    }
+
+    /* styling for abbr */
+    .pika-table abbr {
+        border-bottom: none;
+        cursor: help;
+    }
+    mark {
+	    background-color: #effeff;
+	    color: #000000;
+			padding:5px;
+		}
+  </style>
+</head>
+<body>
+<form id="myform" action="" method="post">
+ 	<div>	
+		<div id="data-template">
+		</div>
+	</div>
+	
+	<script id="some-template" type="text/x-handlebars-template">	
+	<div class="wrapper">
+    <h1 class="page-title text-center">居宅介護支援事業者向け診療情報提供書</h1>
+    <hr>
+    <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+        <tr class="row">
+            <th class="td-title">
+                <div class="label">&nbsp;</div>
+            </th>
+            <td class="td-content">
+                <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td>
+                      <div class="label">作成日</div>
+                      <input id="make-date" name="make-date" type="text" value="{{make-date}}" class="input date-picker" style="width: 266px" />
+                    </td>
+                    <td style="width: 14px">&nbsp;</td>
+                    <td>
+                      <div class="label">有効期間</div>
+                      <input id="valid-date" name="valid-date" type="text" value="{{valid-date}}" class="input date-picker" style="width: 266px" />
+                    </td>
+                  </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    
+	<table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+		<tr class="row">
+			<th class="td-title"><div class="label">郵便番号</div></th>
+			<td class="td-content"><input type="text" name="item_2_20" value="{{item_2_20}}" class="input input-block"></td>
+		</tr>
+		<tr class="row">
+			<th class="td-title"><div class="label">宛先</div></th>
+			<td class="td-content"><input type="text"  name="item_2_21" value="{{item_2_21}}" class="input input-block"></td>
+		</tr>
+		<tr class="row">
+			<th class="td-title"><div class="label">事業所名</div></th>
+			<td class="td-content"><input type="text"  name="item_2_22" value="{{item_2_22}}" class="input input-block"></td>
+		</tr>
+		<tr class="row">
+			<th class="td-title"><div class="label">宛名</div></th>
+			<td class="td-content"><input type="text"  name="item_2_23" value="{{item_2_23}}" class="input input-block"></td>
+		</tr>
+	  
+	  
+      <tr class="row">
+        <th class="td-title"><div class="label">患者氏名</div></th>
+        <td class="td-content">
+        	<mark style="width: 534px;display: inline-block;">{{PatientName1}}</mark>          
+          <div style="width: 30px;text-align: right;display: inline-block;">様</div>
+        </td>
+      </tr>
+      <tr class="row">
+        <th class="td-title"><div class="label">生年月日（18）</div></th>
+        <td class="td-content"><mark>{{Birth}}({{YearAge}})</mark></td>
+      </tr>
+      <tr class="row">
+        <th class="td-title"><div class="label">性別</div></th>
+        <td class="td-content">
+			<div class="label"><input type="checkbox" name="Sex" value="M" {{{setChecked 'M' Sex}}} disabled="disabled"> 男性 &nbsp;&nbsp;
+			<input type="checkbox" name="gender" value="F" {{{setChecked 'F' Sex}}} disabled="disabled"> 女性</div>
+        </td>
+      </tr>
+      <tr class="row">
+        <th class="td-title"><div class="label">傷病名</div></th>
+        <td class="td-content">
+        	{{#each Diseases}}
+        		<mark>{{this}}</mark>
+        	{{/each}}
+		</td>
+      </tr>
+    </table>
+    <hr>
+    <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+      <tr class="row">
+        <th class="td-title"><div class="label">寝たきり度</div></th>
+        <td class="td-content">
+          <select name="item_1_16" id="item_1_16" class="input select-block">
+			{{#select item_1_16}}
+				<option value="(J)一部自立　何らかの障害を有するが、日常生活はほぼ自立しており自力で外出する。">(J)一部自立　何らかの障害を有するが、日常生活はほぼ自立しており自力で外出する。</option>
+				<option value="(A) 準寝たきり 屋内での生活は概ね自立しているが、介助なしには外出しない。">(A) 準寝たきり 屋内での生活は概ね自立しているが、介助なしには外出しない。</option>
+				<option value="(B) 寝たきり1 屋内での生活は何らかの介護を要し、日中もベッドの上の生活が主体であるが座位を保つ。">(B) 寝たきり1 屋内での生活は何らかの介護を要し、日中もベッドの上の生活が主体であるが座位を保つ。</option>
+				<option value="(C) 寝たきり2 1日中ベッドの上で過ごし、排泄、食事、着替において介助を要する。">(C) 寝たきり2 1日中ベッドの上で過ごし、排泄、食事、着替において介助を要する。</option>
+			{{/select}}
+          </select>
+        </td>
+      </tr>
+      <tr class="row">
+        <th class="td-title"><div class="label"></div></th>
+        <td class="td-content">
+			<table class="table">
+				<tr>
+					<td><div class="label" style="width: 70px; padding-top:3px;"><input type="checkbox" name="item_1_16_Other" value="その他" {{{setChecked 'その他' item_1_16_Other}}}/>その他</div></td>
+					<td style="width:100%"><div><input style="width:500px" type="text" group="item_1_16_Other" name="item_1_16_OtherText" value="{{item_1_16_OtherText}}" class="input"/></div></td>
+				</tr>
+			</table>	
+        </td>
+      </tr>
+	  
+      <tr class="row">
+        <th class="td-title"><div class="label">日常生活活動(ADL)の状況</div></th>
+        <td class="td-content">
+          <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+            <tr>
+              <td>
+                移動
+              </td>
+              <td>
+                <select name="item_1_17" id="item_1_17" class="input select-block">
+					{{#select item_1_17}}
+					  <option value="">---</option>
+					  <option value="自立">自立</option>
+					  <option value="一部介助">一部介助</option>
+					  <option value="全面介助">全面介助</option>
+					{{/select}}
+                </select>
+              </td>
+              <td style="width: 20px;">&nbsp;</td>
+              <td>
+                排泄
+              </td>
+              <td>
+                <select name="item_1_18" id="item_1_18" class="input select-block">
+					{{#select item_1_18}}
+					  <option value="">---</option>
+					  <option value="自立">自立</option>
+					  <option value="一部介助">一部介助</option>
+					  <option value="全面介助">全面介助</option>
+					{{/select}}
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="5">&nbsp;</td>
+            </tr> 
+            <tr>
+              <td>
+                着替え
+              </td>
+              <td>
+                <select name="item_1_19" id="item_1_19" class="input select-block">
+					{{#select item_1_19}}
+					  <option value="">---</option>
+					  <option value="自立">自立</option>
+					  <option value="一部介助">一部介助</option>
+					  <option value="全面介助">全面介助</option>
+					{{/select}}
+                </select>
+              </td>
+              <td style="width: 20px;">&nbsp;</td>
+              <td>
+                食事
+              </td>
+              <td>
+                <select name="item_1_20" id="item_1_20" class="input select-block">
+					{{#select item_1_20}}
+					  <option value="">---</option>
+					  <option value="自立">自立</option>
+					  <option value="一部介助">一部介助</option>
+					  <option value="全面介助">全面介助</option>
+					{{/select}}
+                </select>
+              </td>
+            </tr> 
+            <tr>
+              <td colspan="5">&nbsp;</td>
+            </tr>
+            <tr>
+              <td>
+                入浴
+              </td>
+              <td>
+                <select name="item_1_21" id="item_1_21" class="input select-block">
+					{{#select item_1_21}}
+					  <option value="">---</option>
+					  <option value="自立">自立</option>
+					  <option value="一部介助">一部介助</option>
+					  <option value="全面介助">全面介助</option>
+					{{/select}}
+                </select>
+              </td>
+              <td style="width: 20px;">&nbsp;</td>
+              <td>
+                整容
+              </td>
+              <td>
+				<select name="item_1_22" id="item_1_22" class="input select-block">
+					{{#select item_1_22}}
+					  <option value="">---</option>
+					  <option value="自立">自立</option>
+					  <option value="一部介助">一部介助</option>
+					  <option value="全面介助">全面介助</option>
+					{{/select}}
+                </select>
+              </td>
+            </tr>  
+          </table>
+        </td>
+      </tr>
+      <tr class="row">
+        <th class="td-title"><div class="label"></div></th>
+        <td class="td-content">
+			<table class="table">
+				<tr>
+					<td><div class="label" style="width: 70px; padding-top:3px;"><input type="checkbox" name="item_1_Other" value="その他" {{{setChecked 'その他' item_1_Other}}}/>その他</div></td>
+					<td style="width:100%"><div><input style="width:500px" type="text" group="item_1_Other" name="item_1_OtherText" value="{{item_1_OtherText}}" class="input"/></div></td>
+				</tr>
+			</table>	
+        </td>
+      </tr>
+	  
+      <tr class="row">
+        <th class="td-title"><div class="label">認知症老人の<br>日常生活自立度</div></th>
+        <td class="td-content">
+          <select name="item_2_1" id="item_2_1" class="input select-block">
+			{{#select item_2_1}}
+				<option value="I. 何らかの痴呆を有するが、日常生活は家庭内及び社会的にほぼ自立している。">I. 何らかの痴呆を有するが、日常生活は家庭内及び社会的にほぼ自立している。</option>
+				<option value="II. 日常生活に支障を来すような症状、行動や意思疎通の困難さが多少見られても、誰かが注意していれば自立可能。">II. 日常生活に支障を来すような症状、行動や意思疎通の困難さが多少見られても、誰かが注意していれば自立可能。</option>
+				<option value="III. 日常生活に支障を来すような症状、行動や意思疎通の困難さが時々見られ、介護を必要とする。">III. 日常生活に支障を来すような症状、行動や意思疎通の困難さが時々見られ、介護を必要とする。</option>
+				<option value="IV. 日常生活に支障を来すような症状、行動や意思疎通の困難さが頻繁に見られ、常に介護が必要。">IV. 日常生活に支障を来すような症状、行動や意思疎通の困難さが頻繁に見られ、常に介護が必要。</option>
+				<option value="M　著しい精神症状や問題行動あるいは、重篤な身体疾患が見られ、専門医療を必要とする。">M　著しい精神症状や問題行動あるいは、重篤な身体疾患が見られ、専門医療を必要とする。</option>
+			{{/select}}
+          </select>
+		  <br /><br />
+			<table class="table">
+				<tr>
+					<td><div class="label" style="width: 70px; padding-top:3px;"><input type="checkbox" name="item_2_1_Other" value="その他" {{{setChecked 'その他' item_2_1_Other}}}/>その他</div></td>
+					<td style="width:100%"><div><input style="width:500px" type="text" group="item_2_1_Other" name="item_2_1_OtherText" value="{{item_2_1_OtherText}}" class="input"/></div></td>
+				</tr>
+			</table>
+        </td>
+      </tr>
+	  
+      <tr class="row">
+        <th class="td-title">
+          <div class="label">病状・既往歴・治療内容・退院の年月日等<br>最近の寝たきり度、ADL状況 認知症度の変化</div>
+        </th>
+        <td class="td-content">          
+          <input type="text" name = "item_2_2" value="{{item_2_2}}" class="input input-block" />
+          <div>&nbsp;</div>
+		  <table class = "table">
+		  <tr>
+		  <td>
+				<div class="label"><input type="checkbox" name="item_2_3_1" value="訪問診療" {{{setChecked '訪問診療' item_2_3_1}}}/> 訪問診療</div>
+				
+					 <input type="radio" group-radio-textbox="RadioText1" name="item_2_3_1_1" value="有" group="item_2_3_1" group-value="訪問診療" {{{setChecked '有' item_2_3_1_1}}}/> 有 &nbsp;&nbsp;
+				 （月<input type="text" group-radio-textbox="RadioText1" groupTextBox="item_2_3_1_1" groupTextBoxVal="有" disabled  style ="width : 50px" name = "item_2_3_1_1_1" group="item_2_3_1_1" group-value="有" value="{{item_2_3_1_1_1}}" class="input input-block" />回程度）
+				 </br>
+					<input type="radio" name="item_2_3_1_1" value="無" group="item_2_3_1" group-value="訪問診療" {{{setChecked '無' item_2_3_1_1}}}/> 無
+					
+				
+			</td>
+			<td>
+				<div class="label"><input type="checkbox" name="item_2_3_2" value="訪問看護" {{{setChecked '訪問看護' item_2_3_2}}}/> 訪問看護</div>
+				
+				<input type="radio" disabled group-radio-textbox="RadioText2" name="item_2_3_2_1" value="有" group="item_2_3_2" group-value="訪問診療" {{{setChecked '有' item_2_3_2_1}}}/> 有 &nbsp;&nbsp;
+				（月<input type="text" groupTextBox="item_2_3_2_1" group-radio-textbox="RadioText2" groupTextBoxVal="有" disabled group="item_2_3_2_1" group-value="有" style ="width : 50px" name = "item_2_3_2_1_1" value="{{item_2_3_2_1_1}}" class="input input-block" />回程度）
+				</br>
+					<input type="radio" disabled name="item_2_3_2_1" value="無" group="item_2_3_2" group-value="訪問診療" {{{setChecked '無' item_2_3_2_1}}}/> 無
+		  </td>
+		  </tr>
+		  </table>
+			<table class="table">
+				<tr>
+					<td><div class="label" style="width: 70px; padding-top:3px;"><input type="checkbox" name="item_2_3_Other" value="その他" {{{setChecked 'その他' item_2_3_Other}}}/>その他</div></td>
+					<td style="width:100%"><div><input style="width:500px" type="text" group="item_2_3_Other" name="item_2_3_OtherText" value="{{item_2_3_OtherText}}" class="input"/></div></td>
+				</tr>
+			</table>	
+        </td>
+      </tr>
+	  
+      <tr class="row">
+        <th class="td-title"><div class="label">必要と考える保健福祉サービスの内容</div></th>
+        <td class="td-content">
+          <table class="table" border="0" align="" cellpadding="0" cellspacing="0">
+            <tr>
+              <td><div class="label"><input type="checkbox" name="item_2_4_1" value="1.訪問看護" {{{setChecked '1.訪問看護' item_2_4_1}}}/> 1.訪問看護</div></td>
+              <td><div class="label"><input type="checkbox" name="item_2_4_2" value="2.訪問入浴介護" {{{setChecked '2.訪問入浴介護' item_2_4_2}}}/> 2.訪問入浴介護</div></td>
+              <td><div class="label"><input type="checkbox" name="item_2_4_3" value="3.通所リハビリ" {{{setChecked '3.通所リハビリ' item_2_4_3}}}/> 3.通所リハビリ</div></td>
+              <td><div class="label"><input type="checkbox" name="item_2_4_4" value="4.短期入所" {{{setChecked '4.短期入所' item_2_4_4}}}/> 4.短期入所</div></td>
+            </tr>
+            <tr>
+              <td><div class="label"><input type="checkbox" name="item_2_4_5" value="5.訪問介護" {{{setChecked '5.訪問介護' item_2_4_5}}}/> 5.訪問介護</div></td>
+              <td><div class="label"><input type="checkbox" name="item_2_4_6" value="6.福祉用具貸与" {{{setChecked '6.福祉用具貸与' item_2_4_6}}}/> 6.福祉用具貸与</div></td>
+              <td><div class="label"><input type="checkbox" name="item_2_4_7" value="7.通所介護" {{{setChecked '7.通所介護' item_2_4_7}}}/> 7.通所介護</div></td>
+              <td><div class="label"><input type="checkbox" name="item_2_4_8" value="8.訪問栄養指導" {{{setChecked '8.訪問栄養指導' item_2_4_8}}}/> 8.訪問栄養指導</div></td>
+            </tr>
+            <tr>
+              <td><div class="label"><input type="checkbox" name="item_2_4_9" value="9.訪問薬剤指導" {{{setChecked '9.訪問薬剤指導' item_2_4_9}}}/> 9.訪問薬剤指導</div></td>
+              <td><div class="label"><input type="checkbox" name="item_2_4_10" value="10.訪問診療" {{{setChecked '10.訪問診療' item_2_4_10}}}/> 10.訪問診療</div></td>
+              <td><div class="label"><input type="checkbox" name="item_2_4_11" value="11.その他" {{{setChecked '11.その他' item_2_4_11}}}/> 11.その他</div>
+              	<input type="text" name="item_2_4_11_1" group="item_2_4_11" value="{{item_2_4_11_1}}" style="width:80px" class="input input-block" />
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="row">
+        <th class="td-title"><div class="label">上記サービス利用上での問題点等</div></th>
+        <td class="td-content"><input type="text" name = "item_2_5" value="{{item_2_5}}" class="input input-block" /></td>
+      </tr>
+      <tr class="row">
+        <th class="td-title"><div class="label">担当ケアマネージャーへの一言アドバイス</div></th>
+        <td class="td-content"><input type="text" name = "item_2_6" value="{{item_2_6}}" class="input input-block" /></td>
+      </tr>
+    </table>
+    <hr>
+    
+	</div>
+		</script>
+ 
+</form>
+</body>
+</html>

@@ -1,0 +1,397 @@
+import "rpc.proto";
+import "invs_model.proto";
+import "common_model.proto";
+
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "InvsServiceProto";
+option (version) = "1.0.0";
+option (service) = "invs";
+
+message LoadGrdMasterINV0101Request
+{
+    optional string code_type = 1;        
+}
+
+message LoadGrdMasterINV0101Response
+{
+	repeated LoadGrdMasterINV0101Info list_master = 1;
+}
+
+message LoadGrdDetailINV0101Request
+{
+    optional string code_type = 1;        
+}
+
+message LoadGrdDetailINV0101Response
+{
+	repeated LoadGrdDetailINV0101Info list_detail = 1;
+}
+
+message LoadComboINV0101Request
+{
+
+}
+
+message SaveLayoutINV0101Request
+{
+    repeated LoadGrdMasterINV0101Info list_master 	= 1;
+    repeated LoadGrdDetailINV0101Info list_detail 	= 2;
+    optional string user_id  						= 3;
+}
+
+//[START] INV4001U00
+message INV4001U00Grd4001Request
+{
+        optional string f_from_date = 1;
+        optional string f_to_date = 2;
+        optional string f_ipgo_type = 3;
+}
+message INV4001U00Grd4001Response
+{
+	repeated INV4001U00Grd4001Info lst = 1;
+}
+message INV4001U00Grd4002Request
+{
+	optional string f_fkinv4001 = 1;
+}
+message INV4001U00Grd4002Response
+{
+	repeated INV4001U00Grd4002Info lst = 1;
+}
+message INV4001U00DrugUserRequest
+{
+}
+message INV4001U00DrugUserResponse
+{
+	repeated INV4001U00DrugUserInfo lst = 1;
+}
+message INV4001U00LoadCodeNameRequest
+{
+}
+message INV4001U00LoadCodeNameResponse
+{
+	repeated INV4001U00LoadCodeNameInfo lst = 1;
+}
+message INV4001SaveLayoutRequest
+{
+	repeated INV4001U00Grd4001Info inv4001 = 1;
+	repeated INV4001U00Grd4002Info inv4002 = 2;
+}
+message INV4001NextSeqRequest
+{
+}
+message INV4001NextSeqResponse
+{
+	optional string next_val = 1;
+}
+message INV4001LoadBuseoRequest
+{
+}
+message INV4001LoadBuseoResponse
+{
+	repeated INV4001LoadBuseoInfo lst = 1;
+}
+message INV4001U00ExportRequest
+{
+	optional string start_date = 1;
+	optional string end_date   = 2;
+}
+message INV4001U00ExportResponse
+{
+	optional bytes data = 2;
+}
+// [END] INV4001U00
+//START INV6000U00U
+message INV6000U00UserLstRequest
+{
+	optional string hosp_code = 1;
+}
+message INV6000U00GrdINV6001Request
+{
+optional string hosp_code = 1;
+optional string fkinv6000 = 2;
+optional string jaeryo_code = 3;
+optional string page_number = 4;
+optional string offset = 5; 
+optional string difference = 6; 
+}
+message INV6000U00GrdINV6001Response
+{
+	repeated INV6000U00GrdINV6001Info grd_inv_6001 = 1;
+}
+message INV6000U00LaySummaryDetailRequest
+{
+	optional string hosp_code                     = 1;
+	optional string magam_month                   = 2;
+}
+message INV6000U00LayINV6000Request
+{
+	optional string hosp_code = 1;
+	optional string month           = 2;
+}
+message INV6000U00LayINV6000Response
+{
+	repeated INV6000U00LayINV6000Info lay_inv_6000 = 1;
+}
+message INV6000U00LaySummaryDetailResponse
+{
+	repeated INV6000U00LaySummaryDetailInfo lay_summary_d         = 1;
+}
+
+message INV6000U00SaveLayoutRequest
+{
+	optional string proc                        = 1;
+	optional string month                       = 2;
+	optional string user_id                     = 3;
+	optional string input_user                  = 4;
+	optional string input_date                  = 5;
+	optional string remark                      = 6;
+}
+message INV6000U00LaySummaryMasterRequest
+{
+	optional string hosp_code                     = 1;
+	optional string magam_month                   = 2;
+}
+message INV6000U00LaySummaryMasterResponse
+{
+	repeated INV6000U00LaySummaryMasterInfo lay_summary_m = 1;
+}
+
+message INV6002U00GrdINV6002LoadCbxJaeryoGubunRequest{
+}
+
+message INV6002U00GrdINV6002LoadcbxActorRequest{
+}
+
+message INV6002U00GrdINV6002LoadcbxActorResponse
+{
+        repeated INV6002U00GrdINV6002LoadcbxActorInfo item = 1;
+}
+
+//END INV6000U00U
+// INV2003U00
+message INV2003U00GrdINV2003Request
+{
+	optional string hosp_code = 1;
+	optional string from_date = 2;
+	optional string to_date = 3;
+	optional string chulgo_type = 4;
+}
+
+message INV2003U00GrdINV2003Response
+{
+	repeated INV2003U00GrdINV2003Info list_info = 1;
+}
+message INV2003U00GrdINV2004Request
+{
+	optional string hosp_code = 1;
+	optional string fkinv2003 = 2;
+}
+
+message INV2003U00GrdINV2004Response
+{
+	repeated INV2003U00GrdINV2004Info list_info = 1;
+}
+message INV2003U00CbxBuseoRequest
+{
+	optional string hosp_code = 1;
+	optional string buseo_code = 2;
+}
+
+message INV2003U00CbxActorRequest
+{
+	optional string hosp_code = 1;
+	optional string user_group = 2;
+	optional string user_end_ymd = 3;
+}
+
+message INV2003U00CbxActorResponse
+{
+	optional string user_id = 1;
+	optional string user_nm = 2;
+}
+
+message INV2003U00SaveLayoutRequest
+{
+    repeated INV2003U00GrdINV2003Info info2003 = 1;
+    repeated INV2003U00GrdINV2004Info info2004 = 2;
+}
+
+message INV2003U00GetCbxChulgoTypeRequest
+{
+	optional string hosp_code = 1;
+	optional string code_type = 2;
+}
+message INV2003U00GetCbxChulgoTypeResponse
+{
+	repeated INV2003U00GetCbxChulgoTypeInfo list_info = 1;
+}
+message GetPkINV2003Request
+{
+}
+message GetPkINV2003Response
+{
+	optional string pkinv2003 = 1;
+}
+
+message INV2003U00ExportCSVRequest
+{
+optional string hosp_code = 1;
+optional string start_date = 2;
+optional string end_date = 3;
+}
+ 
+ message INV2003U00ExportCSVResponse
+{
+repeated INV2003U00ExportCSVInfo list_info = 1;
+}
+
+//END  INV2003U00
+
+//INV4001U00
+message INV4001U00ExportCSVRequest
+{
+        optional string start_date = 1;
+        optional string end_date = 2;
+}
+
+message INV4001U00ExportCSVResponse
+{
+        repeated INV4001U00ExportCSVInfo csv_item = 1;
+}
+
+message INV4001U00Grd4001GenImportCodeRequest
+{
+}
+//END INV4001U00
+
+message CheckDuplicateDataINV0101Request
+{
+	optional string code_type = 1;
+	optional string code      = 2;
+	optional string is_master = 3;
+}
+
+message CheckDuplicateDataINV0101Response
+{
+	optional string check_master = 1;
+    optional string check_detail = 2;        
+}
+
+//START INV6002U00
+message INV6002U00GrdINV6002BeforeRequest
+{
+    optional string hosp_code		= 1;
+    optional string month           = 2;
+    optional string jaeryo_gubun    = 3;
+	optional string page_number = 4;
+	optional string offset = 5;
+}
+
+message INV6002U00grdINV6002BeforeResponse
+{
+	repeated INV6002U00GrdINV6002BeforeInfo item = 1;
+}
+
+message INV6002U00GrdINV6002AfterRequest
+{
+    optional string	hosp_code 		= 1;
+    optional string month 			= 2;
+    optional string jaeryo_gubun    = 3;
+	optional string page_number = 4;
+	optional string offset = 5;
+}
+
+message INV6002U00GrdINV6002AfterResponse
+{
+	repeated INV6002U00GrdINV6002AfterInfo item = 1;
+}
+
+message INV6002U00GrdINV6002Request
+{
+	optional string gubun                    = 1;
+	optional string hosp_code                = 2;
+	optional string month                    = 3;
+	optional string jaeryo_gubun             = 4;
+	optional string magam_month              = 5;
+	optional string page_number              = 6;
+	optional string offset                   = 7;
+	optional string jaeryo_code 			 = 8;
+}
+message INV6002U00GrdINV6002Response
+{
+	repeated INV6002U00GrdINV6002Info grd_item = 1;
+}
+//END INV6002U00
+
+message LoadINV0110Q00Request
+{
+	optional string jaeryo_name_inx  = 1;
+	optional string page_number =2;
+	optional string off_set = 3;
+}
+
+message LoadINV0110Q00Response
+{
+    repeated LoadINV0110Q00Info list_item  = 1;
+}
+
+// [START] INV0101U01
+message INV0101U01GridMasterRequest
+{        
+        optional string code_type = 1;
+}
+
+message INV0101U01GridMasterResponse
+{
+        repeated INV0101U01GridMasterInfo grd_master_info = 1;
+}
+
+message INV0101U01GridDetailRequest
+{
+        optional string code_type = 1;
+}
+
+message INV0101U01GridDetailResponse
+{
+        repeated INV0101U01GridDetailInfo grd_detail_info = 1;
+}
+
+message CheckData0101U01Request
+{
+        optional string code_type = 1;
+        optional string code      = 2;
+}
+
+message CheckData0101U01Response
+{
+        optional string check_master = 1;
+        optional string del_detail = 2;
+        optional string check_detail = 3;
+}
+
+message SaveLayoutINV0101U01Request
+{
+        repeated INV0101U01GridMasterInfo list_master = 1;
+        repeated INV0101U01GridDetailInfo list_detail = 2;
+        optional string user_id  = 3;        
+}
+
+ message INV0101U01LoadComboRequest
+ {
+ 
+ }
+// [END] INV0101U01
+
+message INV6002U00GrdINV6002ExcuteRequest
+{
+	repeated INV6002U00GrdINV6002ExcuteInfo item = 1;
+}
+message INV6000U00ExportCSVRequest
+{
+	optional string month = 1;
+}
+message INV6000U00ExportCSVResponse
+{
+	repeated INV6000U00ExportCSVInfo csv_item = 1;
+}

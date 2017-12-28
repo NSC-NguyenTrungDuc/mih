@@ -1,0 +1,57 @@
+import "rpc.proto";
+import "emrapi_model.proto";
+import "common_model.proto";
+
+option java_package = "nta.med.service.emr.proto";
+option java_outer_classname = "EmrapiServiceProto";
+option (version) = "1.0.0";
+option (service) = "emrapi";
+
+message GetEmrPatientRequest
+{
+    required string bunho = 1;
+}
+
+message GetEmrPatientResponse
+{
+    optional EmrPatientInfo patient_info = 1;
+}
+
+message UpdateEmrPatientRequest
+{
+    required EmrPatientInfo patient_info = 1;
+}
+
+message GetEmrRequest
+{
+    required string bunho = 1;
+}
+message GetEmrResponse
+{
+    optional EmrRecordInfo emr_record = 1;
+}
+
+message UpdateEmrRequest
+{
+    required EmrRecordInfo emr_record = 1;
+}
+
+message GetEmrHistoryRequest
+{
+    required string bunho = 1;
+    required string revision = 2;
+}
+message GetEmrHistoryResponse
+{
+    optional EmrHistoryListItemInfo item_info = 1;
+    repeated ExaminationItemInfo examinations = 2;
+}
+
+message GetEmrHistoryListRequest
+{
+    required string bunho = 1;
+}
+message GetEmrHistoryListResponse
+{
+    repeated EmrHistoryListItemInfo item_info = 1;
+}

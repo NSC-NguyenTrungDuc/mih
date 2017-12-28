@@ -1,0 +1,91 @@
+option java_package = "nta.med.kcck.api.rpc.proto";
+option java_outer_classname = "HospitalModelProto";
+
+message Department {
+    required string department_id = 1;
+    required string department_code = 2;
+    required string department_name = 3;
+    optional string avg_time = 4;
+}
+
+message Doctor {
+    required string doctor_id               = 1;
+    required string doctor_code             = 2;
+    required string doctor_name             = 3;
+    optional string doctor_grade            = 4;
+    required string department_id           = 5;
+    optional string hosp_code               = 6;
+    optional string department_code         = 7;
+}
+
+message DoctorSchedule {
+    optional string start_date   = 1;
+    optional string end_date   = 2;
+    optional string time_frame = 3;
+    optional string other_slot = 4;
+    optional string total_slot = 5;
+    repeated DoctorScheduleDetail details = 6;
+}
+
+message DoctorScheduleDetail {
+    required DayOfWeek dow = 1;
+    optional string start_am                = 2;
+    optional string end_am                  = 3;
+    optional string start_pm                = 4;
+    optional string end_pm                  = 5;
+    enum DayOfWeek { SUNDAY = 0; MONDAY = 1; TUESDAY = 2; WEDNESDAY = 3; THURSDAY = 4; FRIDAY = 5; SATURDAY = 6;}
+}
+
+message BookingSchedule {
+    required string doctor_code 		= 1;
+    optional string booking_date 		= 2; //yymmdd
+    optional string total_slots			= 3;
+    optional string other_slots 		= 4;
+    optional string doctor_grade 		= 5;
+	optional string avg_time			= 6;
+	optional string res_am_start_hhmm	= 7;
+	optional string res_am_end_hhmm		= 8;
+	optional string res_pm_start_hhmm	= 9;
+	optional string res_pm_end_hhmm		= 10;
+	repeated BookingScheduleDetail period = 11;
+}
+
+message BookingScheduleDetail {
+    optional string start_time 				= 1; //hh:mm
+    optional string end_time 				= 2; //hh:mm
+    optional string total_booked_in_self 	= 3;
+    optional string total_booked_in_other 	= 4;
+    optional string total_booked_out 		= 5;
+}
+
+
+message HospitalDetailInfo
+{
+	optional string hosp_code 		= 1;
+	optional string hosp_name 		= 2;
+	optional string address 		= 3;
+	optional string tel 			= 4;
+	optional string country_code 	= 5;
+}
+//[START] GetHospitalInfo
+message HospitalInfomation{
+	optional string hosp_code = 1;
+	optional string hosp_name = 2;
+	optional string logo      = 3;
+	optional string address   = 4;
+	optional string locale    = 5;
+}
+// [END] GetHospitalInfo
+
+// [BEGIN] ACCOUNT INFO
+message AccountInfo {
+    optional string user_id		 		= 1;
+    optional string user_name 			= 2;
+}
+// [END] ACCOUNT INFO
+
+message MbsConfig {
+    optional string use_movie_talk   = 1;
+    optional string use_survey = 2;
+    optional string locale = 3;
+}

@@ -1,0 +1,229 @@
+/*
+html,
+body{
+    min-height: 100%;
+    font-family: "微軟正黑體";
+}
+
+.menu{
+    padding: 20px;
+    position: fixed;
+}
+.menu .downloadWrap{
+    display: inline-block;
+    margin-left: 5px;
+    padding-left: 10px;
+    border-left: 5px solid #ccc;
+}
+.menu .fileName{
+    font-size: inherit;
+    padding: 6px 7px;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+    outline: none;
+    vertical-align: middle;
+}
+#downloadLinkWrap{
+    display: inline-block;
+}
+.menu .loadFile{
+    position: relative;
+}
+.menu .loadFile input{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+*/
+.minMapWrap,
+.mindMap{
+    width: 100%;
+    height: 700px;
+}
+.mindMap{
+    /*background: #eee;*/
+    background: #FFFFFF;
+}
+rect {
+    fill: none;
+    pointer-events: all;
+}
+line {
+    stroke: #000;
+    stroke-width: 1.5px;
+}
+.node circle {
+    fill: #fff;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+    /*fill: #FFA07A !important;
+    stroke: red;
+    stroke-width: 1px;*/
+}
+.node {
+    position: relative;
+    display: inline-block;
+    /*font: 11px sans-serif;*/
+
+    font-family: Verdana, Helvetica;
+    font-size: 12px;
+    font-weight: bold;
+}
+path.link {
+    /*fill: none;
+    stroke: #ccc !important;
+    stroke-width: 1.5px;*/
+    stroke-linecap: round;
+    /*stroke: rgb(253, 141, 60) !important;*/
+    stroke: rgb(253, 141, 60);
+    stroke-opacity: 0.35;
+    stroke-width: 5.89759;
+
+    fill: none;
+    font-family: Roboto;
+    pointer-events: visible;
+}
+
+path.link0 {
+    stroke-linecap: round;
+    stroke: rgb(240, 59, 32)!important;
+    /*stroke-opacity: 0.35;*/
+    stroke-width: 5.89759;
+
+    fill: none;
+    font-family: Roboto;
+    pointer-events: visible;
+}
+
+path.link1 {
+    stroke-linecap: round;
+    stroke: rgb(254, 204, 92)!important;
+    stroke-opacity: 0.35;
+    stroke-width: 13.5119;
+
+    fill: none;
+    font-family: Roboto;
+    pointer-events: visible;
+}
+
+path.link2 {
+    stroke-linecap: round;
+    stroke: rgb(240, 59, 32)!important;
+    stroke-opacity: 0.35;
+    stroke-width: 7.59039;
+
+    fill: none;
+    font-family: Roboto;
+    pointer-events: visible;
+}
+
+path.link3 {
+    stroke-linecap: round;
+    stroke: rgb(87, 37, 170)!important;
+    stroke-opacity: 0.35;
+    stroke-width: 5.35942;
+
+    fill: none;
+    font-family: Roboto;
+    pointer-events: visible;
+}
+
+path.link4 {
+    stroke-linecap: round;
+    stroke: rgb(253, 141, 60)!important;
+    stroke-opacity: 0.15;
+    stroke-width: 3;
+
+    fill: none;
+    font-family: Roboto;
+    pointer-events: visible;
+}
+
+path.link5 {
+    stroke-linecap: round;
+    stroke: rgb(105, 45, 167)!important;
+    stroke-opacity: 0.35;
+    stroke-width: 3.12811;
+
+    fill: none;
+    font-family: Roboto;
+    pointer-events: visible;
+}
+
+
+
+/*.link2 {
+    *//*fill: none;
+    stroke: #154890;
+    stroke-width: 2.3px;*//*
+    fill: none;
+    stroke: #ccc !important;
+    stroke-width: 1.5px;
+}*/
+.function-btn{
+    opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.function-btn.add{
+    fill: #57D37E;
+}
+.function-btn.remove{
+    fill: #E97979;
+}
+.function-btn.edit{
+    fill: #79AFE9;
+}
+g:hover > .function-btn{
+    opacity: 1;
+}
+.function-bg{
+    cursor: pointer;
+}
+
+.text_answer {
+    font-weight: normal;
+    fill: #007DAB;
+}
+
+.text_answer_input {
+    font-weight: normal;
+    fill: red;
+}
+
+.text_terminate {
+    fill: red;
+}
+
+.text_existing_question {
+    fill: #00AF3F;
+}
+
+/* Loading*/
+.loading {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+.loading-content {
+    margin-top: 10%;
+    margin-left: 50%
+}
+
+.text-loading {
+    color: #f4f4f4;
+}

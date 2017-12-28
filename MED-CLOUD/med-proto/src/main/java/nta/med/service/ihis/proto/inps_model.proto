@@ -1,0 +1,1063 @@
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "InpsModelProto";
+
+message INP2004Q01grdINP2004Info{
+	optional string fkinp1001 		= 1;
+	optional string bunho 			= 2;
+	optional string suname 			= 3;
+	optional string sex 			= 4;
+	optional string age				= 5;
+	optional string birth			= 6;
+	optional string start_date		= 7;
+	optional string from_ho_dong1	= 8;
+	optional string from_ho_code1	= 9;
+	optional string from_bed_no		= 10;
+	optional string to_ho_dong1		= 11;
+	optional string to_ho_code1		= 12;
+	optional string to_bed_no		= 13;
+	optional string ipwon_date		= 14;
+	optional string toiwon_date		= 15;
+}
+
+message INP1001Q00grdINP1001Info {
+	optional string pkinp1001 	= 1;
+	optional string ipwon_date 	= 2;
+	optional string toiwon_date = 3;
+	optional string gwa 		= 4;
+	optional string gwa_name	= 5;
+	optional string doctor		= 6;
+	optional string doctor_name =7;
+	optional string ho_dong1	= 8;
+	optional string ho_dong_name	= 9;
+	optional string ho_code1		= 10;
+	optional string bed_no			= 11;
+	optional string jaewon_days		= 12;
+	optional string jaewon_flag		= 13;
+}
+
+message INP2001U02grdOcs2003Info
+{
+	optional string pk_ocs2003 			= 1;
+	optional string order_gubun_name 	= 2;
+	optional string hangmog_code 		= 3;
+	optional string hangmog_name 		= 4;
+	optional string sur_yang 			= 5;
+	optional string ord_danui_name 		= 6;
+	optional string dv_time 			= 7;
+	optional string dv 					= 8;
+	optional string nalsu 				= 9;
+	optional string specimen_name 		= 10;
+}
+
+message INP2001U02layNuGroupInfo
+{
+	optional string pk_out1001 	= 1;
+	optional string gwa_name 	= 2;
+	optional string naewon_date = 3;
+	optional string jubsu_gubun = 4;
+}
+
+message INP2001U02grdOcs1003Info
+{
+	optional string pk_ocs1003 		= 1;
+	optional string pk_out1001 		= 2;
+	optional string order_gubun_name = 3;
+	optional string hangmog_code 	= 4;
+	optional string hangmog_name 	= 5;
+	optional string sur_yang 		= 6;
+	optional string ord_danui_name 	= 7;
+	optional string dv_time 		= 8;
+	optional string dv 				= 9;
+	optional string nalsu 			= 10;
+	optional string specimen_name 	= 11;
+	optional string select_yn 		= 12;
+	optional string order_gubun_bas = 13;
+	optional string sunab_yn 		= 14;
+}
+
+message INP1001D01grdINP1001Info
+{
+    optional string pk_inp1001 			= 1;
+    optional string bunho 				= 2;
+    optional string suname 				= 3;
+    optional string gwa 				= 4;
+    optional string gwa_name 			= 5;
+    optional string doctor 				= 6;
+    optional string doctor_name 		= 7;
+    optional string ho_dong 			= 8;
+    optional string ho_dong_name 		= 9;
+    optional string ho_code 			= 10;
+    optional string bed_no 				= 11;
+    optional string ipwon_date 			= 12;
+    optional string toiwon_goji_date 	= 13;
+    optional string toi_res 			= 14;
+}
+
+//[START] INP1001R04
+message INP1001R04grdIpToiListInfo
+{
+	optional string query_date           = 1;
+	optional string ip_toi_gubun         = 2;
+	optional string ip_toi_gubun_name    = 3;
+	optional string bunho                = 4;
+	optional string suname               = 5;
+	optional string gubun_name           = 6;
+	optional string ipwon_date           = 7;
+	optional string toiwon_date          = 8;
+	optional string ho_dong1             = 9;
+	optional string ho_dong_name1        = 10;
+	optional string ho_code1             = 11;
+	optional string sex                  = 12;
+	optional string tel                  = 13;
+	optional string address1             = 14;
+	optional string siksa_magam_date     = 15;
+	optional string ki_gubun             = 16;
+	optional string result               = 17;
+	optional string cont_key 			 = 18;
+}
+//[END] INP1001R04
+
+
+message INP1003Q00fwkHoDongInfo{
+        optional string gwa 		= 1;
+        optional string gwa_name 	= 2;
+        optional string buseo_code	=3;
+}
+
+message INP1003Q00grdINP1003Info{
+        optional string bunho 				= 1;
+        optional string suname 				= 2;
+        optional string reser_date 			= 3;
+        optional string tel2				= 4;
+        optional string gwa					= 5;
+        optional string gwa_name			= 6;
+        optional string doctor				= 7;
+        optional string doctor_name			= 8;
+        optional string reser_end_type		= 9;
+        optional string reser_fkinp1001		= 10;
+        optional string sang_bigo			= 11;
+        optional string ho_dong_name		= 12;
+        optional string age					= 13;
+        optional string ipwon_mokjuk		= 14;
+        optional string ipwon_rtn2			= 15;
+        optional string sogye_yn			= 16;
+        optional string hope_room			= 17;
+        optional string remark				= 18;
+        optional string user_name			= 19;
+}
+
+message INP2004Q00grdHoCodeListInfo{
+        optional string ho_code 			= 1;
+}
+
+message INP2004Q00grdINP2004Info{
+        optional string pkinp1001 			= 1;
+        optional string bunho 				= 2;
+        optional string suname 				= 3;
+        optional string sex 				= 4;
+        optional string age 				= 5;
+        optional string birth 				= 6;
+        optional string bed_no 				= 7;
+        optional string ipwon_date 			= 8;
+        optional string toiwon_date 		= 9;
+        optional string order_date 			= 10;
+}
+
+message INP1001U01FwkGubunInfo {
+	optional string gubun 		= 1;
+	optional string gubun_name 	= 2;
+	optional string sys_date 	= 3;
+	optional string gongbi_yn 	= 4;
+	optional string johap_gubun = 5;
+	optional string johap_name 	= 6;
+}
+
+message INP1001U01GrdInp1001Info{
+	optional string pkinp1001 			= 1;
+	optional string bunho 				= 2;
+	optional string ipwon_date 			= 3;
+	optional string ipwon_type 			= 4;
+	optional string ipwon_time 			= 5;
+	optional string suname 				= 6;
+	optional string birth 				= 7;
+	optional string sex 				= 8;
+	optional string ipwon_gwa 			= 9;
+	optional string gwa 				= 10;
+	optional string doctor 				= 11;
+	optional string resident 			= 12;
+	optional string ho_code1 			= 13;
+	optional string ho_dong1 			= 14;
+	optional string ho_code2 			= 15;
+	optional string ho_dong2 			= 16;
+	optional string ipwon_rtn2 			= 17;
+	optional string ipwon_rtn2_remark 	= 18;
+	optional string chojae 				= 19;
+	optional string baby_status 		= 20;
+	optional string inp_trans_yn 		= 21;
+	optional string fkout1001 			= 22;
+	optional string jaewon_flag 		= 23;
+	optional string toiwon_goji_yn 		= 24;
+	optional string toiwon_res_date 	= 25;
+	optional string ga_toiwon_date 		= 26;
+	optional string toiwon_date 		= 27;
+	optional string toiwon_time 		= 28;
+	optional string result 				= 29;
+	optional string sigi_magam_yn 		= 30;
+	optional string simsa_magam_yn 		= 31;
+	optional string cancel_date 		= 32;
+	optional string cancel_user 		= 33;
+	optional string cancel_yn 			= 34;
+	optional string fkinp1003 			= 35;
+	optional string team 				= 36;
+	optional string ipwon_gwa_name 		= 37;
+	optional string gwa_name 			= 38;
+	optional string doctor_name 		= 39;
+	optional string resident_name 		= 40;
+	optional string hodong_name 		= 41;
+	optional string doctor_special_yn 	= 42;
+	optional string gisan_ipwon_date 	= 43;
+	optional string bed_no 				= 44;
+	optional string gisan_jaewon_ilsu 	= 45;
+	optional string jisi_doctor 		= 46;
+	optional string jisi_doctor_name 	= 47;
+	optional string ipwon_type_name 	= 48;
+	optional string empty_value_1 		= 49;
+	optional string empty_value_2 		= 50;
+	optional string retrieve_yn 		= 51;
+	optional string gubun 				= 52;
+	optional string ho_grade1 			= 53;
+	optional string emergency_gubun 	= 54;
+	optional string emergency_detail 	= 55;
+	optional string kaikei_hodong 		= 56;
+	optional string kaikei_hocode 		= 57;
+	optional string data_row_state 		= 58;
+}
+
+message INP1001U01GrdInp1004Info{
+	optional string priority 			= 1;
+	optional string bunho 				= 2;
+	optional string name 				= 3;
+	optional string zip_code1 			= 4;
+	optional string zip_code2 			= 5;
+	optional string address1 			= 6;
+	optional string address2 			= 7;
+	optional string tel1 				= 8;
+	optional string tel2 				= 9;
+	optional string tel3 				= 10;
+	optional string bigo 				= 11;
+	optional string bonin_gubun 		= 12;
+	optional string bonin_gubun_name 	= 13;
+	optional string seq_1 				= 14;
+	optional string tel_gubun 			= 15;
+	optional string tel_gubun2 			= 16;
+	optional string tel_gubun3 			= 17;
+	optional string retrieve_yn 		= 18;
+	optional string name2 				= 19;
+	optional string birth 				= 20;
+	optional string age 				= 21;
+	optional string with_yn 			= 22;
+	optional string live_yn 			= 23;
+	optional string seq_2 				= 24;
+	optional string data_row_state 		= 25;
+}
+
+
+message INP1001U01GrdInp1008Info{
+	optional string n_value 		= 1;
+	optional string gongbi_code 	= 2;
+	optional string gongbi_name 	= 3;
+	optional string fkinp1002 		= 4;
+	optional string bunho 			= 5;
+	optional string gubun 			= 6;
+	optional string gubun_name 		= 7;
+	optional string ipwon_date 		= 8;
+	optional string data_row_state 	= 9;
+}
+
+message INP1001U01EtcIpwongrdHistoryInfo{
+    optional string pkinp1001 		= 1;
+    optional string ipwon_date 		= 2;
+    optional string toiwon_date		= 3;
+    optional string gwa				= 4;
+    optional string doctor			= 5;
+    optional string ipwon_type		= 6;
+    optional string data_row_state	= 7;
+}
+
+//[START] INP3003U00
+message INP3003U00grdINP1001Info{
+	optional string pkinp1001 = 1;
+	optional string bunho = 2;
+	optional string ipwon_date = 3;
+	optional string ipwon_time = 4;
+	optional string ipwon_type = 5;
+	optional string ipwon_gwa = 6;
+	optional string gwa = 7;
+	optional string ho_dong1 = 8;
+	optional string ho_code1 = 9;
+	optional string bed_no = 10;
+	optional string simsa_magam_date = 11;
+	optional string simsa_magam_time = 12;
+	optional string simsaja = 13;
+	optional string simsaja_name = 14;
+	optional string ga_toiwon_date = 15;
+	optional string toiwon_date = 16;
+	optional string toiwon_time = 17;
+	optional string simsa_magam_yn = 18;
+	optional string drg_yn = 19;
+	optional string drg_no = 20;
+	optional string date_from = 21;
+	optional string date_to = 22;
+	optional string gwa_name = 23;
+	optional string jaewon_ilsu = 24;
+	optional string jaewon_flag = 25;
+	optional string old_simsa_magam_yn = 26;
+	optional string old_simsa_magam_date = 27;
+	optional string old_simsa_magam_time = 28;
+	optional string old_ga_toiwon_date = 29;
+	optional string old_toiwon_date = 30;
+	optional string old_toiwon_time = 31;
+	optional string ho_dong1_name = 32;
+	optional string ho_grade1 = 33;
+	optional string doctor = 34;
+	optional string toiwon_res_date = 35;
+	optional string toiwon_res_time = 36;
+	optional string result_after_dis = 37;
+	optional string result_after_dis_remark = 38;
+	optional string data_row_state=39;
+}
+message INP3003U00grdINP1001PastInfo{
+	optional string pkinp1001        = 1;
+	optional string ipwon_date       = 2;
+	optional string ipwon_type       = 3;
+	optional string ipwon_type_name  = 4;
+	optional string gwa              = 5;
+	optional string gwa_name         = 6;
+	optional string doctor           = 7;
+	optional string doctor_name      = 8;
+	optional string jaewon_ilsu      = 9;
+	optional string result_code      = 10;
+	optional string result           = 11;
+	optional string toiwon_date      = 12;
+	optional string toiwon_res_date  = 13;
+	
+}
+message INP3003U00grdINP2002Info{
+	optional string ju_sang_yn      = 1;
+	optional string sang_code       = 2;
+	optional string sang_name       = 3;
+	optional string sang_start_date = 4;
+	optional string sang_end_date   = 5;
+	optional string sang_end_sayu   = 6;
+}
+message INP3003U00layLoadToiwonResDateInfo{
+	optional string toiwon_res_date = 1;
+	optional string toiwon_res_time = 2;
+	optional string sigi_magam_date = 3;
+	optional string sys_date        = 4;
+	optional string sys_time        = 5;
+}
+
+message INP1001U01GrdOut0103Info{
+	optional string gwa_name 		= 1;
+	optional string doctor 			= 2;
+	optional string gubun_name 		= 3;
+	optional string naewon_date 	= 4;
+	optional string toiwon_date 	= 5;
+	optional string data_row_state 	= 6;
+}
+
+message INP1001U01GrdOut0106Info{
+	optional string ser 			= 1;
+	optional string comment 		= 2;
+	optional string bunho 			= 3;
+	optional string data_row_state 	= 4;
+}
+
+message INP1001U01LayInp1002Info{
+	optional string gubun 				= 1;
+	optional string gubun_name 			= 2;
+	optional string pkinp1002 			= 3;
+	optional string gubun_ipwon_date 	= 4;
+	optional string data_row_state 		= 5;
+}
+
+message INP1001U01LoadIpwonTypeListInfo{
+	optional string pkinp1001 	= 1;
+	optional string ipwon_type 	= 2;
+	optional string code_name 	= 3;
+	optional string japan_date 	= 4;
+	optional string cont_key 	= 5;        
+}
+
+message INP1001U01LoadBoheomChildListInfo{
+	optional string pkinp1002 	= 1;
+	optional string gubun 		= 2;
+	optional string gubun_name 	= 3;
+	optional string ipwon_date 	= 4;
+}
+
+message INP1001U01ChangeGubunGrdHistoryInfo{
+	optional string gubun 				= 1;
+	optional string gubun_name 			= 2;
+	optional string gubun_ipwon_date_1 	= 3;
+	optional string pkinp1002 			= 4;
+	optional string gubun_ipwon_date_2 	= 5;
+	optional string fkinp1001 			= 6;
+}
+//[END] INP3003U00
+
+message INPBATCHTRANSlayOut0101Info{
+    optional string suname 			= 1;
+    optional string suname2 		= 2;
+    optional string birth			= 3;
+    optional string tel				= 4;
+    optional string sex				= 5;
+    optional string age				= 6;
+    optional string if_valid_yn 	= 7;
+}
+
+message INPBATCHTRANSisJaewonPatientInfo{
+    optional string jaewon_yn = 1;
+}
+
+message INPBATCHTRANSOrderTransInfo{
+    optional string pkifs3014 = 1;
+}
+
+message INPBATCHTRANSgrdInpListQueryStartingrbnMiTransInfo{
+    optional string pkinp1001 		= 1;
+    optional string bunho 			= 2;
+    optional string suname 			= 3;
+    optional string suname2 		= 4;
+    optional string gwa 			= 5;
+    optional string gwa_name 		= 6;
+    optional string doctor 			= 7;
+    optional string doctor_name 	= 8;
+    optional string ho_dong1 		= 9;
+    optional string ho_dong1_name 	= 10;
+    optional string ho_code1 		= 11;
+    optional string ipwon_date 		= 12;
+    optional string toiwon_res_date = 13;
+    optional string trans_ord_yn 	= 14;
+    optional string act_ord_yn 		= 15;
+    optional string trans_date 		= 16;
+    optional string inp_flag 		= 17;
+}
+
+message INPBATCHTRANSgrdInpListQueryStartingrbnTransInfo{
+    optional string gwa 			= 1;
+    optional string gwa_name 		= 2;
+    optional string doctor 			= 3;
+    optional string doctor_name 	= 4;
+    optional string ho_dong1 		= 5;
+    optional string ho_dong1_name 	= 6;
+    optional string ho_code1 		= 7;
+    optional string ipwon_date 		= 8;
+    optional string toiwon_res_date = 9;
+    optional string trans_ord_yn 	= 10;
+    optional string act_ord_yn 		= 11;
+    optional string trans_date 		= 12;
+    optional string inp_flag 		= 13;
+}
+
+//[BEGIN] INP1003U01
+
+message INP1003U01grdINP1003Info
+{
+        optional string reser_date 			= 1;
+        optional string bunho 				= 2;
+        optional string suname 				= 3;
+        optional string gwa 				= 4;
+        optional string gwa_name 			= 5;
+        optional string doctor 				= 6;
+        optional string doctor_name 		= 7;
+        optional string tel1 				= 8;
+        optional string tel2 				= 9;
+        optional string reser_fkinp1001 	= 10;
+        optional string pkinp1003 			= 11;
+        optional string remark 				= 12;
+        optional string ipwon_mokjuk 		= 13;
+        optional string ipwonsi_order_yn 	= 14;
+        optional string sang_bigo 			= 15;
+        optional string jisi_doctor 		= 16;
+        optional string jisi_doctor_name 	= 17;
+        optional string sex 				= 18;
+        optional string ho_dong 			= 19;
+        optional string ho_dong_name 		= 20;
+        optional string ho_code 			= 21;
+        optional string bed_no 				= 22;
+        optional string reser_yn 			= 23;
+        optional string doc_yn 				= 24;
+        optional string emergency_gubun 	= 25;
+        optional string emergency_detail 	= 26;
+        optional string data_row_state 		= 27;
+}
+
+message INP1003U01layBunhoValidationInfo
+{
+        optional string suname 				= 1;
+        optional string tel 				= 2;
+        optional string tel2 				= 3;
+        optional string delete_yn 			= 4;
+        optional string jubsu_break 		= 5;
+        optional string code_name 			= 6;
+        optional string sex 				= 7;
+        optional string flag 				= 8;
+}
+
+message INP1003U01cboEmergencyInfo
+{
+        optional string code 				= 1;
+        optional string code_name 			= 2;
+        optional string number 				= 3;
+}
+
+message INP1003U01fbxInp1003Info
+{
+        optional string output1 			= 1;
+        optional string output2 			= 2;
+        optional string output3 			= 3;
+}
+
+message INP1003U01layDeleteInfo
+{
+        optional string bunho 				= 1;
+        optional string reser_date 			= 2;
+        optional string reser_fkinp1001 	= 3;
+}
+
+message INP1003U01layIpWonInfo
+{
+        optional string ipwon_mokjuk 		= 1;
+        optional string ipwonsi_order_yn 	= 2;
+}
+//[END] INP1003U01
+
+message INP1001U01EtcIpwonlayCommonDoctorInfo{
+    optional string doctor = 1;
+}
+
+message INP1001U01IpwonSelectFormgrdIpwonHistoryInfo{
+    optional string pkinp1001 				= 1;
+    optional string bunho 					= 2;
+    optional string suname					= 3;
+    optional string ipwon_date				= 4;
+    optional string ipwon_time				= 5;
+    optional string gisan_ipwon_date		= 6;
+    optional string ipwon_type				= 7;
+    optional string ipwon_rtn2 				= 8;
+    optional string gwa 					= 9;
+    optional string gwa_name				= 10;
+    optional string doctor					= 11;
+    optional string doctor_name				= 12;
+    optional string ho_dong					= 13;
+    optional string ho_dong_name			= 14;
+    optional string ho_code 				= 15;
+    optional string bed_no 					= 16;
+    optional string ho_grade				= 17;
+    optional string ho_grade_name			= 18;
+    optional string kaikei_hodong			= 19;
+    optional string kaikei_hocode			= 20;
+}
+
+message INP1003U00grdCSC0108Info {
+    optional string code 				 = 1;
+    optional string code_name 			 = 2;
+    optional string n 					 = 3;
+}
+
+message INP1003U00fwkDoctorInfo {
+    optional string doctor 				= 1;
+    optional string doctor_name 		= 2;
+    optional string gwa_name			= 3;
+}
+
+message INP1003U00fwkGwaInfo {
+    optional string gwa 				= 1;
+    optional string gwa_name			= 2;
+    optional string buseo_code			= 3;
+}
+
+message INP1003U00grdInpReserInfo {
+    optional string reser_date 			= 1;
+    optional string bunho				= 2;
+    optional string suname				= 3;
+    optional string gwa					= 4;
+    optional string gwa_name			= 5;
+    optional string ho_code				= 6;
+    optional string doctor				= 7;
+    optional string doctor_name			= 8;
+    optional string ipwon_rtn2			= 9;
+    optional string ipwon_rtn_name		= 10;
+    optional string tel1				= 11;
+    optional string tel2				= 12;
+    optional string reser_end_type		= 13;
+    optional string susul_reser_yn		= 14;
+    optional string remark				= 15;
+    optional string pkinp1003			= 16;
+    optional string junpyo_date			= 17;
+    optional string ho_dong				= 18;
+    optional string bed_no				= 19;
+    optional string ipwon_mokjuk		= 20;
+    optional string reser_fkinp1001		= 21;
+    optional string ipwonsi_order_yn	= 22;
+    optional string jisi_doctor			= 23;
+    optional string jisi_doctor_name	= 24;
+    optional string sang_bigo			= 25;
+    optional string sogye_yn			= 26;
+    optional string hope_room			= 27;
+    optional string user_id				= 28;
+    optional string data_row_state		= 29;
+}
+
+message INP1003U00grdInpReserGridColumnChangeddtBunhoInfo {
+    optional string suname 				= 1;
+    optional string tel 				= 2;
+    optional string delete_yn			= 3;
+}
+
+message INP1003U00grdInpReserGridColumnChangeddtReserInfo {
+    optional string y 					= 1;
+}
+message INP1003U00grdInpReserGridColumnChangedrtnresultInfo {
+    optional string y 					= 1;
+}
+message INP1003U00grdInpReserGridColumnChangeddtGwaInfo{
+    optional string gwa_name			= 1;
+}
+message INP1003U00grdInpReserGridColumnChangedrtndoctornameInfo {
+	optional string  jisi_doctor_name	= 1;
+}
+
+// [START] INPORDERTRAN
+message INPORDERTRANSGrdWoiChulInfo{
+        optional string fkinp1001_one     = 1;
+        optional string fkinp1001_two     = 2;
+        optional string bunho             = 3;
+        optional string out_date          = 4;
+        optional string out_time          = 5;
+        optional string in_hope_date      = 6;
+        optional string in_hope_time      = 7;
+        optional string in_true_date      = 8;
+        optional string in_true_time      = 9;
+        optional string out_object_text   = 10;
+        optional string start_date        = 11;
+        optional string end_date          = 12;
+        optional string acting_yn         = 13;
+        optional string select_yn         = 14;
+        optional string send_yn           = 15;
+        optional string seq               = 16;
+}
+message INPORDERTRANSLayOut0101Info{
+        optional string suname      = 1;
+        optional string suname2     = 2;
+        optional string birth       = 3;
+        optional string tel         = 4;
+        optional string sex         = 5;
+        optional string age         = 6;
+        optional string if_valid_yn = 7;
+}
+message INPORDERTRANSSetProcessGongbiInfo{
+        optional string gongbi_code = 1;
+        optional string priority    = 2;
+}
+message INPORDERTRANSGrdOutSangInfo{
+        optional string bunho                 = 1;
+        optional string gwa                   = 2;
+        optional string fn_bas_load_gwa_name  = 3;
+        optional string io_gubun              = 4;
+        optional string pk_seq                = 5;
+        optional string ser                   = 6;
+        optional string sang_code             = 7;
+        optional string mix_modifier_name     = 8;
+        optional string sang_name             = 9;
+        optional string pre_modifier1         = 10;
+        optional string pre_modifier2         = 11;
+        optional string pre_modifier3         = 12;
+        optional string pre_modifier4         = 13;
+        optional string pre_modifier5         = 14;
+        optional string pre_modifier6         = 15;
+        optional string pre_modifier7         = 16;
+        optional string pre_modifier8         = 17;
+        optional string pre_modifier9         = 18;
+        optional string pre_modifier10        = 19;
+        optional string pre_modifier_name     = 20;
+        optional string post_modifier1        = 21;
+        optional string post_modifier2        = 22;
+        optional string post_modifier3        = 23;
+        optional string post_modifier4        = 24;
+        optional string post_modifier5        = 25;
+        optional string post_modifier6        = 26;
+        optional string post_modifier7        = 27;
+        optional string post_modifier8        = 28;
+        optional string post_modifier9        = 29;
+        optional string post_modifier10       = 30;
+        optional string post_modifier_name    = 31;
+        optional string sang_start_date       = 32;
+        optional string convert_sang_start_date = 33;
+        optional string sang_end_date           = 34;
+        optional string convert_sang_end_date   = 35;
+        optional string sang_end_sayu           = 36;
+        optional string load_code_name_sang_end_sayu = 37;
+        optional string ju_sang_yn                   = 38;
+        optional string cont_key                     = 39;
+}
+message INPORDERTRANSGrdOCS2003Info{
+	optional string pkinp3010 = 1;
+	optional string pkocs = 2;
+	optional string group_ser = 3;
+	optional string group_inp1001 = 4;
+	optional string order_gubun_name = 5;
+	optional string hangmog_code = 6;
+	optional string hangmog_name = 7;
+	optional string specimen_code = 8;
+	optional string specimen_name = 9;
+	optional string suryang = 10;
+	optional string ord_danui = 11;
+	optional string ord_danui_name = 12;
+	optional string dv_time = 13;
+	optional string dv = 14;
+	optional string nalsu = 15;
+	optional string jusa = 16;
+	optional string jusa_name = 17;
+	optional string jusa_spd_name = 18;
+	optional string bogyong_code = 19;
+	optional string bogyong_name = 20;
+	optional string emergency = 21;
+	optional string jundal_part = 22;
+	optional string wonyoi_order_yn = 23;
+	optional string dangil_gumsa_order_yn = 24;
+	optional string ocs_flag = 25;
+	optional string order_gubun = 26;
+	optional string bunho = 27;
+	optional string order_date = 28;
+	optional string gwa = 29;
+	optional string doctor = 30;
+	optional string seq = 31;
+	optional string fkocs1003 = 32;
+	optional string sub_susul = 33;
+	optional string acting_date = 34;
+	optional string hope_date = 35;
+	optional string sunab_date = 36;
+	optional string home_care_yn = 37;
+	optional string regular_yn = 38;
+	optional string hubal_change_yn = 39;
+	optional string bun_code = 40;
+	optional string input_control = 41;
+	optional string order_gubun_bas = 42;
+	optional string acting_yn = 43;
+	optional string select_yn = 44;
+	optional string send_yn = 45;
+	optional string if_flag = 46;
+	optional string fkifs3014 = 47;
+	optional string order_by_key = 48;
+}
+message INPORDERTRANSGrdSiksaInfo{
+	optional string pkocs = 1;
+	optional string fkinp1001 = 2;
+	optional string group_inp1001 = 3;
+	optional string order_date = 4;
+	optional string drt_date = 5;
+	optional string time_gubun1 = 6;
+	optional string time_gubun2 = 7;
+	optional string time_gubun3 = 8;
+	optional string select_yn = 9;
+}
+message INPORDERTRANSSelectListSQL0Info{
+	optional string pkinp1001 = 1;
+	optional string bunho = 2;
+	optional string suname = 3;
+	optional string ipwon_date = 4;
+	optional string ipwon_time = 5;
+	optional string gwa = 6;
+	optional string doctor = 7;
+	optional string gwa_name = 8;
+	optional string doctor_name = 9;
+	optional string ho_dong = 10;
+	optional string ho_code = 11;
+	optional string gubun = 12;
+	optional string order_date = 13;
+	optional string acting_date = 14;
+	optional string pkinp3010 = 15;
+	optional string send_date = 16;
+	optional string toiwon_yn = 17;
+}
+message INPORDERTRANSSelectListSQL1Info{
+	optional string pkinp1001 = 1;
+	optional string bunho     = 2;
+	optional string suname = 3;
+	optional string ipwon_date = 4;
+	optional string ipwon_time = 5;
+	optional string gwa = 6;
+	optional string doctor = 7;
+	optional string gwa_name = 8;
+	optional string doctor_name = 9;
+	optional string ho_dong = 10;
+	optional string ho_code = 11;
+	optional string send_date = 12;
+	optional string trans_yn = 13;
+}
+message INPORDERTRANSSelectListSQL3Info{
+	optional string fkinp1001 = 1;
+	optional string bunho = 2;
+	optional string suname = 3;
+	optional string ipwon_date = 4;
+	optional string ipwon_time = 5;
+	optional string gwa = 6;
+	optional string doctor = 7;
+	optional string gwa_name = 8;
+	optional string doctor_name = 9;
+	optional string gubun = 10;
+	optional string gubun_name = 11;
+	optional string gongbi_yn = 12;
+	optional string chojae = 13;
+	optional string chojae_name = 14;
+	optional string pkinp1002 = 15;
+	optional string acting_date = 16;
+	optional string order_date = 17;
+	optional string gubun_old = 18;
+	optional string chojae_old = 19;
+	optional string gongbi_code1 = 20;
+	optional string gongbi_code2 = 21;
+	optional string gongbi_code3 = 22;
+	optional string gongbi_code4 = 23;
+	optional string gongbi_code1_name = 24;
+	optional string gongbi_code2_name = 25;
+	optional string gongbi_code3_name = 26;
+	optional string gongbi_code4_name = 27;
+	optional string pkout = 28;
+	optional string send_date = 29;
+	optional string sanjung_gubun = 30;
+	optional string sanjung_gubun_name = 31;
+	optional string if_valid_yn = 32;
+}
+// [END] INPORDERTRAN
+
+//[BEGIN] INP1001U01grdINP1003Info
+message INP1001U01ReserSelectgrdINP1003Info
+{
+	optional string exist_yn = 1;
+	optional string gwa = 2;
+	optional string doctor = 3;
+	optional string ho_dong = 4;
+	optional string ho_code = 5;
+	optional string ipwon_rtn2 = 6;
+	optional string reser_date = 7;
+	optional string pkinp1003 = 8;
+	optional string bed_no = 9;
+	optional string ho_grade = 10;
+	optional string ho_status = 11;
+	optional string reser_fkinp1001 = 12;
+	optional string remark = 13;
+	optional string ipwon_mokjuk = 14;
+	optional string reser_date_jp = 15;
+	optional string gwa_name = 16;
+	optional string doctor_name = 17;
+	optional string ho_dong_name = 18;
+	optional string jisi_doctor = 19;
+	optional string jisi_doctor_name = 20;
+	optional string emergency_gubun = 21;
+	optional string emergency_detail = 22;
+	optional string select_yn = 23;
+	optional string emergency_text = 24;
+	optional string fkout1001 = 25;                
+}
+
+//[END] INP1001U01
+message INP1001U01DoubleGrdINP1002Info{
+        optional string pkinp1002 = 1;
+        optional string fkinp1001 = 2;
+        optional string bunho = 3;
+        optional string gubun = 4;
+        optional string seq = 5;
+        optional string gubun_trans_date = 6;
+        optional string gubun_ipwon_date = 7;
+        optional string gubun_trans_cnt = 8;
+        optional string gubun_trans_yn = 9;
+        optional string gwa = 10;
+        optional string doctor = 11;
+        optional string ipwon_type = 12;
+        optional string johap = 13;
+        optional string gaein = 14;
+        optional string bonin_gubun = 15;
+        optional string piname = 16;
+        optional string from_jy_date = 17;
+        optional string to_jy_date = 18;
+        optional string simsa_magam_yn = 19;
+        optional string johap_gubun = 20;
+        optional string gaein_no = 21;
+        optional string last_check_date = 22;
+        optional string johap_name = 23;
+        optional string gubun_name = 24;
+        optional string gwa_name = 25;
+        optional string doctor_name = 26;
+        optional string ipwon_type_name = 27;
+        optional string ipwon_date = 28;
+        optional string data_gubun = 29;
+        optional string ho_dong1 = 30;
+        optional string ho_code1 = 31;
+        optional string ho_grade1 = 32;
+        optional string bed_no = 33;
+        optional string data_row_state = 34;
+}
+message INP1001U01DoubleGrdINP1008Info{
+    optional string n_value = 1;
+        optional string gongbi_code = 2;
+        optional string gongbi_name = 3;
+        optional string fkinp1002 = 4;
+        optional string bunho = 5;
+        optional string gubun = 6;
+        optional string gubun_name = 7;
+        optional string empty_value = 8;
+        optional string data_row_state = 9;
+}
+
+message INP1001U01DoubleLayINP1001Info{
+        optional string pkinp1001           = 1 ;
+        optional string bunho               = 2 ;
+        optional string ipwon_date          = 3 ;
+        optional string sil_ipwon_date      = 4 ;
+        optional string ipwon_type          = 5 ;
+        optional string ipwon_time          = 6 ;
+        optional string cht_ipwon_date      = 7 ;
+        optional string suname              = 8 ;
+        optional string birth               = 9 ;
+        optional string sex                 = 10;
+        optional string ipwon_gwa           = 11;
+        optional string gwa                 = 12;
+        optional string doctor              = 13;
+        optional string resident            = 14;
+        optional string ho_code1            = 15;
+        optional string ho_dong1            = 16;
+        optional string ho_grade1           = 17;
+        optional string ho_status1          = 18;
+        optional string ho_code2            = 19;
+        optional string ho_dong2            = 20;
+        optional string ho_grade2           = 21;
+        optional string ho_status2          = 22;
+        optional string ipwon_rtn1          = 23;
+        optional string ipwon_rtn2          = 24;
+        optional string chojae              = 25;
+        optional string baby_status         = 26;
+        optional string sanmo_bunho         = 27;
+        optional string inp_trans_yn        = 28;
+        optional string fkout1001           = 29;
+        optional string special_yn          = 30;
+        optional string jaewon_flag         = 31;
+        optional string old_ilsu            = 32;
+        optional string icu_old_ilsu        = 33;
+        optional string junggan_bil_cnt     = 34;
+        optional string toiwon_goji_yn      = 35;
+        optional string toiwon_res_date     = 36;
+        optional string ga_toiwon_date      = 37;
+        optional string toiwon_date         = 38;
+        optional string toiwon_time         = 39;
+        optional string cht_toiwon_date     = 40;
+        optional string result              = 41;
+        optional string sigi_magam_yn       = 42;
+        optional string simsa_magam_gubun   = 43;
+        optional string cancel_date         = 44;
+        optional string cancel_user         = 45;
+        optional string cancel_yn           = 46;
+        optional string toiwon_drg_ilsu     = 47;
+        optional string fkinp1003           = 48;
+        optional string toiwon_gubun_yn     = 49;
+        optional string er_wait_yn          = 50;
+        optional string ipwon_gasan_yn      = 51;
+        optional string toiwon_gasan_yn     = 52;
+        optional string team                = 53;
+        optional string wonyoi_order_yn     = 54;
+        optional string wonnae_sayu_code    = 55;
+        optional string gwanri_patient_yn   = 56;
+        optional string sabun               = 57;
+        optional string incu_yn             = 58;
+        optional string zip_code1           = 59;
+        optional string zip_code2           = 60;
+        optional string gisan_ipwon_date    = 61;
+        optional string bed_no              = 62;
+        optional string source_pkinp1001    = 63;
+        optional string gisan_jaewon_ilsu   = 64;
+        optional string jisi_doctor         = 65;
+        optional string data_row_state      = 66;
+}
+
+message INP1001U01DoubleLayINP1002Info{
+    	optional string pkinp1002          = 1 ;
+        optional string fkinp1001          = 2 ;
+        optional string bunho              = 3 ;
+        optional string gubun              = 4 ;
+        optional string seq                = 5 ;
+        optional string gubun_trans_date   = 6 ;
+        optional string gubun_ipwon_date   = 7 ;
+        optional string gubun_trans_cnt    = 8 ;
+        optional string gubun_trans_yn     = 9 ;
+        optional string gwa                = 10;
+        optional string doctor             = 11;
+        optional string ipwon_type         = 12;
+        optional string hunab_gubun        = 13;
+        optional string dis_gubun          = 14;
+        optional string johap              = 15;
+        optional string gaein              = 16;
+        optional string bonin_gubun        = 17;
+        optional string piname             = 18;
+        optional string from_jy_date       = 19;
+        optional string to_jy_date         = 20;
+        optional string slip_magam_yn      = 21;
+        optional string simsa_magam_yn     = 22;
+        optional string toiwon_gubun_yn    = 23;
+        optional string johap_gubun        = 24;
+        optional string gaein_no           = 25;
+        optional string last_check_date    = 26;
+        optional string relation_code      = 27;
+        optional string sunwon_gubun       = 28;
+        optional string hasun_date         = 29;
+        optional string sunwon_end_date    = 30;
+        optional string hi_age_gubun       = 31;
+        optional string budamja_bunho      = 32;
+        optional string sugubja_bunho      = 33;
+        optional string siksa_bon_gubun    = 34;
+        optional string self_hando_gubun   = 35;
+        optional string johap_name         = 36;
+        optional string hunab_gubun_name   = 37;
+        optional string dis_gubun_name     = 38;
+        optional string gubun_name         = 39;
+        optional string gwa_name           = 40;
+        optional string doctor_name        = 41;
+        optional string ipwon_type_name    = 42;
+        optional string data_gubun         = 43;
+        optional string ipwon_date         = 44;
+        optional string org_ho_dong1       = 45;
+        optional string org_ho_code1       = 46;
+        optional string org_ho_grade1      = 47;
+        optional string org_ho_status1     = 48;
+        optional string org_bed_no         = 49;
+        optional string last_check         = 50;
+        optional string patient_gubun      = 51;
+        optional string iud_gubun          = 52;
+}
+
+message INPORDERTRANSAccountCompleteInfo{
+	optional string pkocs2003 	= 1;
+	optional string sunab_date 	= 2;
+	optional string acting_date = 3;
+}
+
+message INP1001D00grdINP1001Info{
+        optional string pkinp1001 			= 1;
+        optional string bunho 				= 2;
+        optional string suname 				= 3;
+        optional string gwa 				= 4;
+        optional string gwa_date 			= 5;
+        optional string doctor 				= 6;
+        optional string doctor_date 		= 7;
+        optional string ho_dong1 			= 8;
+        optional string ho_dong1_date 		= 9;
+        optional string ho_code1 			= 10;
+        optional string bed_no 				= 11;
+        optional string ipwon_type 			= 12;
+        optional string toiwon_goji_yn 		= 13;
+        optional string same_name_yn 		= 14;
+        optional string order_status 		= 15;
+        optional string send_yn 			= 16;
+}

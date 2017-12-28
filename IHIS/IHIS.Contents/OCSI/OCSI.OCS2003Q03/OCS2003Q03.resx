@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="ImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="grdNoConfirm.QuerySQL" xml:space="preserve">
+    <value>SELECT A.PKINP1001    PKINP1001
+     , C.ORDER_DATE   ORDER_DATE
+     , A.BUNHO        BUNHO
+     , A.HO_DONG1     HO_DONG
+     , A.HO_CODE1     HO_CODE
+     , A.TEAM         HO_TEAM
+     , A.SUNAME       SUNAME
+     , A.SUNAME2      SUNAME2
+     , A.GWA          GWA
+     , A.DOCTOR       DOCTOR
+     , A.IPWON_TYPE   IPWON_TYPE
+     , CASE WHEN C.DC_GUBUN = 'Y' THEN 'B'
+            WHEN C.NALSU    &lt; 0   THEN 'D'
+            ELSE 'A'
+       END  CONFIRM_GUBUN
+     , FN_OCSI_LOAD_OCS0132_CODE_NAME('NOCONFIRM_GUBUN', CASE WHEN C.DC_GUBUN = 'Y' THEN 'B'
+                                                              WHEN C.NALSU    &lt; 0   THEN 'D'
+                                                              ELSE 'A'
+                                                         END) CONFIRM_GUBUN_NAME
+     , A.HO_DONG1||A.HO_CODE1||A.BUNHO||
+       TO_CHAR(C.ORDER_DATE,'YYYYMMDD')||TO_CHAR(A.PKINP1001) CONT_KEY
+  FROM OCS2003 C
+     , VW_OCS_INP1001_RES A
+ WHERE A.HO_DONG1       = :f_ho_dong
+   AND A.GA_TOIWON_DATE IS NULL
+   AND A.TOIWON_DATE    IS NULL
+   AND NVL(A.TEAM,' ')  LIKE TRIM(:f_ho_team)||'%'
+   AND A.BUNHO          = C.BUNHO
+   AND A.PKINP1001      = C.FKINP1001
+   AND C.ORDER_DATE BETWEEN TO_DATE(:f_from_order_date, 'YYYY/MM/DD')
+                        AND TO_DATE(:f_to_order_date,   'YYYY/MM/DD')
+   AND C.INPUT_GUBUN	LIKE 'D%'
+   AND SUBSTR(C.ORDER_GUBUN, 2, 1) IN ('B', 'C', 'D')
+   AND C.INPUT_GUBUN    != 'D6'
+   AND C.PRN_YN         != 'Y'
+   AND NVL(C.TEL_YN, 'N') = 'N'
+   AND (( NVL(C.NDAY_YN, 'N') = 'N' AND C.NURSE_PICKUP_DATE IS NULL )
+        OR
+        (C.NURSE_CONFIRM_DATE IS NOT NULL
+         AND NVL(C.DC_GUBUN,'N')  = 'Y'
+         AND NVL(C.DC_YN,'N')    = 'N'
+         AND C.NALSU &gt; 0))
+ UNION
+SELECT A.PKINP1001    PKINP1001
+     , C.ORDER_DATE   ORDER_DATE
+     , A.BUNHO        BUNHO
+     , A.HO_DONG1     HO_DONG
+     , A.HO_CODE1     HO_CODE
+     , A.TEAM         HO_TEAM
+     , A.SUNAME       SUNAME
+     , A.SUNAME2      SUNAME2
+     , A.GWA          GWA
+     , A.DOCTOR       DOCTOR
+     , A.IPWON_TYPE   IPWON_TYPE
+     , 'G'            CONFIRM_GUBUN
+     , FN_OCSI_LOAD_OCS0132_CODE_NAME('NOCONFIRM_GUBUN','G')                                       CONFIRM_GUBUN_NAME
+     , A.HO_DONG1||A.HO_CODE1||A.BUNHO||
+       TO_CHAR(C.ORDER_DATE,'YYYYMMDD')||TO_CHAR(A.PKINP1001) CONT_KEY
+  FROM OCS2015 C
+     , VW_OCS_INP1001_RES A
+ WHERE A.HO_DONG1       = :f_ho_dong
+   AND A.GA_TOIWON_DATE IS NULL
+   AND A.TOIWON_DATE    IS NULL
+   AND NVL(A.TEAM,' ')  LIKE TRIM(:f_ho_team)||'%'
+   AND A.BUNHO          = C.BUNHO
+   AND A.PKINP1001      = C.FKINP1001
+   AND C.ORDER_DATE	    BETWEEN TO_DATE(:f_from_order_date, 'YYYY/MM/DD')
+   AND TO_DATE(:f_to_order_date,   'YYYY/MM/DD')       AND C.INPUT_GUBUN LIKE 'D%'
+   AND C.INPUT_GUBUN  NOT IN ('D0', 'D3', 'D6', 'D7')
+   AND C.ACT_ID   IS NULL
+   AND C.ACT_DATE IS NULL
+ ORDER BY 4, 5, 3, 2, 1        </value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnQuery.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhEAAQAIUAAFhbiLW1tZSdvpG/8P///////v7///z//+uYRaxwZImo3v7//sva/92XUL/e/9T/
+        /77e/q/N9bbc/6zL9aO32bbk+OT//sL1/7zS9v/+/7Tf86/Y/sn7/8jk/7Dj/qijyb7p9rrf/8zd97nk
+        9tf+/rLX/+3//rjf/6G02bLL9tT+/rna/7js/8Tf/8jt/rXc7MTW9LXp/9Hl/83m/83k/9/8/Mnh/7PP
+        9s7+/tbs/7/V9tDw/7/g/2rD/v///wAAACH/C05FVFNDQVBFMi4wAwEBAAAh+QQBAAA+ACwAAAAAEAAQ
+        AAAIrQB9CBxIsODAAQgTIgSgwEcGggMKEJhIEcCAhhAlSpy4AECPixkLLCAgoCSAkwAyElgg4ICLCgIY
+        MAAQ4KDEljticAAhQAZNmyRHeMBhgYQAGj8FRjQgQAMLFSZqCLCR1MdSASguPDhwQECLqgMMGEAggMKL
+        rhAcgB2b4ENJATxOrKjaAEECATlmdAghYUOJpHXvioChA8ONCBNSJLUrAKVjlDUHBphMufJkHwEBADs=
+</value>
+  </data>
+  <metadata name="timerQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>124, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>66</value>
+  </metadata>
+</root>

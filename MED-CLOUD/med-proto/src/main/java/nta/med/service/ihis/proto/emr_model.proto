@@ -1,0 +1,540 @@
+import "common_model.proto";
+
+option java_package = "nta.med.service.emr.proto";
+option java_outer_classname = "EmrModelProto";
+
+//[START]OCS2015U06
+message OCS2015U06EmrRecordInfo {
+    optional string record_id = 1;
+    optional string bunho= 2;
+    optional string pkout1001 = 3;
+    optional string naewon_date = 4;
+    optional string content = 5;
+    optional string metadata = 6;
+    optional string version = 7;
+    optional string created = 8;
+    optional string updated = 9;
+    optional string gwa = 10;
+}
+
+message OCS2015U06EmrTagInfo {
+    optional string tag_id	 = 1;
+    optional string tag_code	      = 2;
+    optional string tag_name	 = 3;
+    optional string tag_level      = 4;
+    optional string tag_parent	= 5;
+    optional string description = 6;
+    optional string user_id       = 7;
+    optional string filter_flg	= 8; 
+    optional string created = 9; 
+    optional string updated = 10; 
+}
+
+message OCS2015U06EmrTemplateTypeInfo {
+    optional string template_type_id	 = 1;
+    optional string type_code	      = 2;
+    optional string type_name	 = 3;
+    optional string type_tag      = 4;
+    optional string description	= 5;
+    optional string active_flg = 6;
+    optional string created = 7;
+    optional string updated = 8; 
+}
+
+message OCS2015U06EmrTemplateInfo {
+    optional string template_id	 = 1;
+    optional string template_type_id	     = 2;
+    optional string template_code	 = 3;
+    optional string template_name      = 4;
+    optional string template_content	= 5;
+    optional string hosp_code = 6;
+    optional string gwa       = 7;
+    optional string user_id = 8; 
+    optional string permission_type = 9; 
+    optional string created = 10; 
+    optional string updated = 11; 
+}
+//[END]OCS2015U06
+
+//[START]OCS2015U30
+message OCS2015U30EmrTagGetTagInfo{
+	optional string tag_id           = 1;
+	optional string tag_code         = 2;
+	optional string tag_name         = 3;
+	optional string tag_display_text = 4;
+	optional string description      = 5;
+	optional string tag_level        = 6;
+	optional string filter_flg       = 7;
+	optional string tag_parent       = 8;
+	optional string sys_id           = 9;
+}
+message OCS2015U30EmrTagSaveLayoutInfo{
+    optional string tag_id                 = 1;
+	optional string tag_name               = 2;
+	optional string tag_code               = 3;
+	optional string tag_display_text       = 4;
+	optional string description            = 5;
+	optional string tag_level              = 6;
+	optional string tag_parent             = 7;
+	optional string filter_flg             = 8;
+	optional string row_state              = 9;
+	optional string sys_id                 = 10;
+}
+//[END]OCS2015U30
+//[START]OCS2015U31
+message OCS2015U31EmrTagGetTagInfo{
+	optional string tag_id = 1;
+	optional string tag_code = 2;
+	optional string tag_name = 3;
+	optional string tag_display_text = 4;
+}
+message OCS2015U31EmrTemplateInfo
+{
+	optional string template_id = 1;
+	optional string template_type_id = 2;
+	optional string template_name = 3;
+	optional string template_content = 4;
+	optional string description = 5;
+	optional string permission_type = 6; 
+	optional string hosp_code = 7;
+	optional string type_name = 8;
+	optional string sys_id = 9;
+}
+message OCS2015U31EmrTemplateTypeInfo{
+	optional string template_type_id = 1;
+	optional string type_code = 2;
+	optional string type_name = 3;
+	optional string description = 4;
+}
+message OCS2015U31EmrTemplateSaveLayoutInfo
+{
+	optional string template_id = 1;
+	optional string template_type_id = 2;
+	optional string template_name = 3;
+	optional string template_content = 4;
+	optional string description = 5;
+	optional string permission_type = 6; 
+	optional string hosp_code = 7;
+	optional string row_state  = 8;
+	optional string sys_id  = 9;
+}
+message OCS2015U31EmrTagGetTemplateTagsInfo{
+	optional string tag_id                = 1;
+	optional string tag_code              = 2;
+	optional string tag_name              = 3;
+	optional string type                  = 4;
+    optional string default_content       = 5;
+	optional string tag_display_text      = 6;
+	optional string description           = 7;
+	optional string filter_flg            = 8;
+	optional string tag_parent            = 9;
+	optional string sys_id                = 10;
+}
+//[END]OCS2015U31
+
+
+// -----[START] OCS2015U40 ---------
+message OCS2015U40EmrHistoryMedicalRecordInfo{
+    optional string sys_id = 1;
+    optional string created = 2;
+    optional string memo = 3;
+    optional string active_flg = 4;
+    optional string version = 5;
+    optional string author = 6;
+     optional string emr_record_id = 7;
+}
+// -----[END] OCS2015U40 ---------
+
+// ----- [START] OCS2015U00 ------
+message OcsEmrPatientReceptionHistoryListItemInfo {
+    required string coming_date = 1;
+    required string exam_date = 2;
+    required string exam_time = 3;
+    required string department_code = 4;
+    required string doctor = 5;
+    optional string insur_type = 6;
+    optional string sunnab_status = 7;
+    optional string exam_status = 8;
+    optional string coming_status = 9;
+    optional string patient_code = 10;
+    optional string reception_time = 11;
+    optional string department_name = 12;
+    optional string sujin_no = 13;
+    optional string doku_status = 14;
+    optional string cont_key = 15;
+    optional string pkout1001 = 16;
+	repeated OCS2015U03OrderGubunInfo order_gubun = 17;
+}
+message OCS2015U00LoadPatientMedicalRecordInfo
+{
+	optional string emr_record_id = 1;
+	optional string content = 2;
+	optional string metadata = 3;
+	optional string version = 4;
+	optional string record_log = 5;
+	optional string lock_flg = 6;
+	optional string hosp_code  = 7;
+	optional string bunho = 8;
+	optional string sys_id = 9;
+	optional string upd_id = 10;
+	optional string created = 11;
+	optional string updated = 12;
+}
+message OCS2015U00GetDoctorPatientReportInfo {
+        optional string doctor_name    = 1;
+        optional string gwa_name       = 2;
+        optional string yotang_name    = 3;
+        optional string adress_doc     = 4;
+        optional string tel_doc        = 5;
+        optional string seqvalue       = 6;
+        optional string suname         = 7;
+        optional string birth          = 8;
+        optional string sex            = 9;
+        optional string adress_pa      = 10;
+        optional string tel_pa         = 11;
+        optional string fax_doc        = 12;
+		optional string website        = 13; 
+        
+}
+message OCS2015U00GetDiseaseReportInfo {
+        optional string sang_code = 1;
+        optional string sang_name = 2;
+}
+message OCS2015U00GetOrderReportInfo {
+        optional string hangmog_code   = 1;
+        optional string hangmog_name   = 2;
+        optional string suryang        = 3;
+        optional string dv             = 4;
+        optional string nalsu          = 5;
+        optional string bogyong_name   = 6;
+        optional string code_name      = 7;
+        optional string dv_quantity    = 8;
+}
+// ----- [START] OCS2015U00 ------
+
+// -----[START] OCS2015U04 ---------
+message OCS2015U04LoadBookmarkByPk0ut1001Info
+{
+	optional string emr_bookmark_id = 1;
+	optional string emr_record_id = 2;
+	optional string pkout1001 = 3;
+	optional string bookmark_text = 4;
+	optional string naewon_date = 5;
+	optional string sys_id = 6;
+	optional string upd_id = 7;
+	optional string created = 8;
+	optional string updated = 9;
+	optional string active_flg = 10;
+}
+message OCS2015U04EmrRecordLoadBookmarkContentInfo
+{
+	optional string emr_bookmark_id = 1;
+	optional string bookmark_text = 2;
+	optional string naewon_date = 3;
+	optional string sys_id = 4;
+	optional string user_nm = 5;
+	optional string gwa = 6;
+	optional string gwa_name = 7;
+}
+message OCS2015U04LoadExaminationInfo
+{
+	optional string pkout1001 = 1;
+	optional string naewon_date = 2;
+	optional string gwa = 3;
+}
+
+message NUR2001U04CheckExistMedicalRecordInfo {
+    optional string emr_record_id = 1;
+    optional string content = 2;
+    optional string metadata = 3;
+    optional string version = 4;
+    optional string record_log = 5;
+    optional string lock_flg = 6;
+    optional string hosp_code = 7;
+    optional string bunho = 8;
+    optional string sys_id = 9;
+    optional string upd_id = 10;
+    optional string created = 11;
+    optional string updated = 12;
+}
+// -----[END] OCS2015U04 ---------
+
+// -----[START] OCS2015U09 ---------
+message OCS2015U09EmrBookmarkInfo
+{
+     optional string bookmark_text = 1;
+     optional string naewon_date = 2;
+     optional string pkout1001 = 3;
+}
+message OCS2015U09GetTemplateComboBoxInfo
+{
+	optional string emr_template_id = 1;
+	optional string emr_template_type_id = 2;
+	optional string template_name = 3;
+	optional string template_content = 4;
+	optional string description = 5;
+	optional string permission_type = 6;
+	optional string sys_id = 7;
+	optional string upd_id = 8;
+	optional string default_yn = 9;
+	repeated OCS2015U31EmrTagGetTemplateTagsInfo tags = 10;
+}
+message OCS2015U09GetTagsForContextInfo
+{
+	optional string emr_tag_id = 1;
+	optional string tag_code = 2;
+	optional string tag_name = 3;
+	optional string tag_level = 4;
+	optional string tag_display_text = 5;
+	optional string tag_parent = 6;
+	optional string description = 7;
+	optional string permission_type = 8;
+	optional string sys_id = 9;
+	optional string upd_id = 10;
+}
+// -----[END] OCS2015U09 ---------
+
+// -----[START] OCS2015U07 ---------
+message OCS2015U07TagChildInfo
+{
+	optional string tag_code = 1;
+	optional string tag_name = 2;
+	optional string tag_display_text = 3;
+}
+// -----[END] OCS2015U07 ---------
+
+//[START] OCS2015U03
+message OCS2015U03OrderGubunInfo
+{
+	optional string order_gubun = 1;
+}
+message OcsEmrHistoryClinicReferItemInfo
+{
+	optional string hops_code = 1;
+	optional string hops_name = 2;
+	repeated OcsEmrPatientReceptionHistoryListItemInfo lst = 3;	
+}
+//[END] OCS2015U03
+
+// [START] OCS2015U06
+message OCS2015U06OrderTypeComboInfo{
+    optional string code_name = 1;
+}
+// [END] OCS2015U06
+
+/*message NuriNUR7001U00MeasurePhysicalConditionListItemInfo {
+	optional string bunho = 1;
+	optional string measure_date = 2;
+	optional string seq  = 3;
+	optional string height   = 4;
+	optional string weight  = 5;
+	optional string bp_from  = 6;
+	optional string bp_to  = 7;
+	optional string body_heat = 8;
+	optional string pulse = 9;
+	optional string suname = 10;
+	optional string spo2 = 11;
+	optional string measure_time = 12;
+	optional string breath = 13;
+	optional string upd_id = 14;
+	optional string row_state = 15;      
+}*/
+
+/*
+message NuroManagePatientInfo {
+	optional string patient_code = 1;
+	optional string patient_name1 = 2;
+	optional string patient_name2 = 3;
+	optional string birth = 4;
+	optional string sex = 5;
+	optional string zip_code1 = 6;
+	optional string zip_code2 = 7;
+	optional string address1 = 8;
+	optional string address2 = 9;
+	optional string tel = 10;
+	optional string tel1 = 11;
+	optional string tel_hp = 12;
+	optional string tel_type = 13;
+	optional string tel_type2 = 14;
+	optional string tel_type3 = 15;
+	optional string e_mail = 16;
+	optional string pace_maker_yn = 17;
+	optional string self_pace_maker = 18;
+}*/
+
+/*message PatientInfo{
+    optional string patient_name1 = 1;
+    optional string patient_name2 = 2;
+    optional string sex = 3;
+    optional string year_age = 4;
+    optional string month_age = 5;
+    optional string type = 6;
+    optional string code_nm = 7;
+    optional string birth = 8;
+    optional string tel = 9;
+    optional string tel1 = 10;
+    optional string tel_hp = 11; 
+    optional string email = 12;
+    optional string zip_code1 = 13;
+    optional string zip_code2 = 14;
+    optional string address1 = 15;
+    optional string address2 = 16;        
+}*/
+/*
+message NuroPatientReceptionHistoryListItemInfo {
+    required string coming_date = 1;
+    required string exam_date = 2;
+    required string exam_time = 3;
+    required string department_code = 4;
+    required string doctor = 5;
+    optional string insur_type = 6;
+    optional string sunnab_status = 7;
+    optional string exam_status = 8;
+    optional string coming_status = 9;
+    optional string patient_code = 10;
+    optional string reception_time = 11;
+    optional string department_name = 12;
+    optional string sujin_no = 13;
+    optional string doku_status = 14;
+    optional string cont_key = 15;
+}*/
+
+// Request info
+message OCS2015U21SelectedPatientInfo{
+	optional string bunho                   = 1;
+	optional string naewon_key              = 2;
+	optional string naewon_date             = 3;
+	optional string gwa                     = 4;
+	optional string doctor                  = 5;
+	optional string approve_doctor          = 6;
+}
+
+/*message OcsoOCS1003P01LayPatInfo {
+    optional string gwa = 1;
+    optional string bunho = 2;
+    optional string doctor = 3;
+    optional string group_key = 4;
+    optional string naewon_yn = 5;
+}*/
+message EMRGetLatestWarningStatusInfo{
+	optional string clis_protocol_id = 1;
+	optional string status_id = 2;
+	optional string code_name = 3;
+	optional string updated = 4;
+	optional string display_flg = 5;
+}
+
+//  ----- [START] OCS2015U31- NEW --------
+message OCS2015U31GetADM3200UserInfo{
+	optional string user_id = 1;
+	optional string sys_id = 2;
+	optional string user_group = 3;
+	optional string user_nm = 4;
+}
+
+message OCS2015U31GetEmrTemplateInfo
+{
+	optional string template_id = 1;
+	optional string template_code = 2;
+	optional string template_name = 3;
+	optional string description = 4;
+	optional string type_id = 5;
+	optional string sys_id = 6;
+	optional string default_flg = 7;
+	optional string template_type_id = 8;
+	optional string row_state = 9;
+	optional string use_yn	  = 10;
+}
+
+
+message OCS2015U31GetTemplateTagsInfo{
+	optional string tag_id          = 1;
+	optional string tag_code        = 2;
+	optional string tag_name        = 3;
+	optional string type            = 4;
+    optional string default_content = 5;
+	optional string tag_parent      = 6;
+	optional string tag_child       = 7;
+	optional string tag_level       = 8;
+	optional string template_id     = 9;
+	optional string row_state       = 10;
+}
+//  ----- [END] OCS2015U31- NEW --------
+
+
+// [BEGIN] EMR TAG
+message EmrTagInfo {
+    optional string tag_code	 		= 1;
+    optional string tag_name 			= 2;
+}
+// [END] EMR TAG
+
+message OCS2015U31LoadGridDepartAndDoctorInfo{
+	optional ComboListItemInfo depart_info = 1;
+	optional ComboListItemInfo doctor_info = 2;
+}
+
+message OCS2015U00GetDataDoctorInfo
+{
+        optional string doctor_code = 1;
+        optional string doctor_name = 2;
+}
+
+message OCS2015U00GetDataDosageInfo
+{
+        optional string fkout1001 = 1;
+        optional string inputtab_and_groupser = 2;
+        optional string bogyong_name = 3;
+}
+
+message OCS2015U00GetDataInsPersonInfo
+{
+        optional string ins_person_no = 1;
+        optional string recipient_no = 2;
+}
+
+message OCS2015U00GetDataInsProviderInfo
+{
+        optional string ins_provider_no = 1;
+        optional string ins_code = 2;
+        optional string number = 3;
+        optional string expire_date = 4;
+        optional string ins_institutional_name = 5;
+        optional string effective_date = 6;
+        optional string ins_name = 7;
+}
+
+message OCS2015U21GrdPatientListItemInfo{
+	optional string bunho = 1;
+	optional string naewon_date = 2;
+	optional string gwa = 3;
+	optional string doctor = 4;
+	optional string naewon_type = 5;
+	optional string reser_yn = 6;
+	optional string jubsu_time = 7;
+	optional string arrive_time = 8;
+	optional string suname = 9;
+	optional string suname2 = 10;
+	optional string sex = 11;
+	optional string age = 12;
+	optional string gubun_name = 13;
+	optional string gwa_name = 14;
+	optional string doctor_name = 15;
+	optional string chojae_name = 16;
+	optional string jinryo_end_yn = 17;
+	optional string pk_naewon = 18;
+	optional string naewon_yn = 19;
+	optional string sunnab_yn = 20;
+	optional string jubsu_gubun1 = 21;
+	optional string other_gwa = 22;
+	optional string consult_yn = 23;
+	optional string jubsu_gubun2 = 24;
+	optional string common_doctor_yn = 25;
+	optional string gubun = 26;
+	optional string group_key = 27;
+	optional string kensa_yn = 28;
+	optional string unapprove_yn = 29;
+	optional string sys_id = 30;
+	optional string hide_yn = 31;
+}
+

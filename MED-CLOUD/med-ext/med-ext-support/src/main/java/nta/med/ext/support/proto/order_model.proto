@@ -1,0 +1,69 @@
+option java_package = "nta.med.ext.support.proto";
+option java_outer_classname = "OrderModelProto";
+
+message DiseaseInformation {
+	optional string disease_in_out				= 1;
+	optional string disease_code				= 2;
+	optional string disease_name				= 3;
+	optional string disease_suspected_flag		= 4;
+	optional string disease_start_date			= 5;
+	optional string disease_end_date			= 6;
+	optional string disease_out_come			= 7;
+	optional string disease_supplement			= 8;
+	optional string disease_scode1				= 9;
+	optional string disease_scode2				= 10;
+	optional string disease_scode3				= 11;
+	optional string disease_sname				= 12;
+	optional string disease_category			= 13;
+}
+
+message MedicationInfo {
+	optional string medication_code				= 1;
+	optional string medication_name				= 2;
+	optional string medication_number			= 3;
+	optional string medication_generic_flg		= 4;
+}
+
+message MedicalInformation {
+    optional string medical_class			= 1;
+	optional string medical_class_name		= 2;
+	optional string medical_class_number	= 3;
+	repeated MedicationInfo medication_info	= 4;
+}
+
+message PublicInsuranceInfo {
+	optional string public_insurance_class			= 1;
+	optional string public_insurance_name			= 2;
+	optional string public_insurer_number			= 3;
+	optional string public_insured_person_number	= 4;
+	optional string certificate_issued_date			= 5;
+	optional string certificate_expired_date		= 6;
+}
+
+message HealthInsuranceInfo {
+	optional string insurance_combination_rate_admission	= 1;
+	optional string insurance_combination_rate_outpatient	= 2;
+	optional string health_insured_person_assistance_name	= 3;
+	optional string insurance_check_date					= 4;
+	optional string insurance_combination_number			= 5;
+	optional string insurance_provider_class				= 6;
+	optional string insurance_provider_number				= 7;
+	optional string insurance_provider_whole_name			= 8;
+	optional string health_insured_person_symbol			= 9;
+	optional string health_insured_person_number			= 10;
+	optional string health_insured_person_continuation		= 11;
+	optional string health_insured_person_assistance		= 12;
+	optional string relation_to_insured_person				= 13;
+	optional string health_insured_person_whole_name		= 14;
+	optional string certificate_start_date					= 15;
+	optional string certificate_expired_date				= 16;
+	repeated PublicInsuranceInfo public_insurance			= 17;
+}
+
+message DiagnosisInformation {
+     optional string department_code 						= 1;
+     optional string physician_code 						= 2;
+	 optional HealthInsuranceInfo health_insurance_info 	= 3;
+	 repeated MedicalInformation medical_information		= 4;
+	 repeated DiseaseInformation disease_information		= 5;
+}

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:cache="http://www.springframework.org/schema/cache"
+       xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd
+       	http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+	   http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <context:property-placeholder location="file:${configPath}/configs.properties"/>
+
+    <context:component-scan base-package="nta.med" >
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Service"/>
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Component"/>
+
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+    <bean id="api.rpc.service" abstract="true">
+        <property name="strict" value="true"/>
+    </bean>
+    <bean id="api.rpc.transport" class="nta.med.ext.support.rpc.RpcExtTransport.FactoryImpl">
+        <property name="connectTimeout" value="10000" />
+        <property name="reconnectInterval" value="15000" />
+        <property name="host" value="${socket.host}" />
+        <property name="port" value="${socket.port}" />
+    </bean>
+
+    <bean id="api.rpc.exporter" class="nta.med.ext.support.rpc.RpcExtExporter" init-method="start">
+        <constructor-arg name="authRetryIntervalInSeconds" value="10"/>
+        <constructor-arg name="hospCode" value="${kcck.hospCode}" />
+        <constructor-arg name="username" value="${kcck.username}" />
+        <constructor-arg name="password" value="${kcck.password}" />
+        <constructor-arg name="eventStoreFile" value="${configPath}/eventstore.dat" />
+        <property name="soSendBufferSize" value="131072"/>
+        <property name="soRecvBufferSize" value="131072"/>
+        <property name="soSendBufferLowWaterMark" value="131072"/>
+        <property name="soSendBufferHighWaterMark" value="524288"/>
+        <property name="transportFactory" ref="api.rpc.transport" />
+        <property name="systemRpcService" ref="systemRpcService" />
+        <property name="services">
+            <list>
+                <ref bean="hospitalRpcService"/>
+                <ref bean="systemRpcService"/>
+                <ref bean="bookingRpcService"/>
+                <ref bean="patientRpcService"/>
+            </list>
+        </property>
+       <property name="subscribers">
+        <list>
+            <ref bean="bookingHandler"/>
+            <ref bean="hospitalHandler"/>
+            <ref bean="userHandler"/>
+        </list>
+     </property>
+    </bean>
+    <bean id="systemRpcService" parent="api.rpc.service" class="nta.med.ext.support.service.system.impl.SystemRpcServiceImpl" />
+    <bean id="hospitalRpcService" parent="api.rpc.service" class="nta.med.ext.support.service.hospital.impl.HospitalRpcServiceImpl">
+        <property name="listener" ref="hospitalHandler" />
+    </bean>
+    <bean id="bookingRpcService" parent="api.rpc.service" class="nta.med.ext.support.service.booking.impl.BookingRpcServiceImpl">
+        <property name="listener" ref="bookingHandler" />
+    </bean>
+    <bean id="bookingHandler" class="nta.med.ext.mss.service.impl.BookingServiceImpl.ListenerImpl" p:verbose="true"/>
+    <bean id="hospitalHandler" class="nta.med.ext.mss.service.impl.DepartmentServiceImpl.ListenerImpl" p:verbose="true"/>
+    <bean id="userHandler" class="nta.med.ext.mss.service.impl.PatientServiceImpl.ListenerImpl" p:verbose="true"/>
+    <bean id="patientRpcService" parent="api.rpc.service" class="nta.med.ext.support.service.patient.impl.PatientRpcServiceImpl">
+        <property name="userEventListener" ref="userHandler" />
+   </bean>
+    <!--<bean id="restApplication" class="nta.med.ext.mss.restful.RestApplication" destroy-method="stop" depends-on="beanFactory">
+        <constructor-arg name="baseUri" value="${rest.baseUri}" />
+        <constructor-arg name="env" value="${api.env}" />
+        <constructor-arg name="useSsl" value="${rest.useSsl}" />
+        <constructor-arg name="sslPassword" value="${rest.sslPassword}" />
+    </bean>-->
+	
+    <context:annotation-config/>
+    <!-- Enable @AspectJ support -->
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+    <tx:annotation-driven transaction-manager="mssTransactionManager" />
+
+    <aop:config>
+        <aop:pointcut id="pointcut" expression="execution(* nta.med.ext..*(..)) &amp;&amp; !within(nta.med.common.glossary.Lifecyclet+)" />
+        <aop:advisor advice-ref="monitorInterceptor" pointcut-ref="pointcut" />
+    </aop:config>
+
+    <!--<context:component-scan base-package="nta.sfd.core.phr" />-->
+    <jpa:repositories base-package="nta.med.data.dao.mss" entity-manager-factory-ref="mssEntityManagerFactory" transaction-manager-ref="mssTransactionManager"/>
+
+    <bean id="monitorInterceptor" class="nta.med.core.common.interceptor.MonitorInterceptor"
+          p:enterMessage="Entering $[targetClassShortName].$[methodName]($[arguments])."
+          p:exitMessage="Leaving $[targetClassShortName].$[methodName](..) with return value $[returnValue], took $[invocationTime]ms."
+          p:hideProxyClassNames="true" c:ignoreExceptions="false" />
+
+    <tx:annotation-driven proxy-target-class="true"/>
+
+    <bean id="beanFactory" class="nta.med.core.infrastructure.SpringBeanFactory" />
+
+
+
+    <cache:annotation-driven mode="proxy" cache-manager="cacheManager" />
+
+
+    <bean id="abstractDataSource" abstract="true">
+        <property name="driverClassName" value="${jdbc.driverClassName}"/>
+        <property name="maxActive" value="${jdbc.maxActive}"/>
+        <property name="maxIdle" value="${jdbc.maxIdle}"/>
+        <property name="testOnBorrow" value="true"/>
+        <property name="testOnReturn" value="true"/>
+        <property name="validationQuery" value="select 1"/>
+        <property name="minEvictableIdleTimeMillis" value="${jdbc.minEvictableIdleTimeMillis}" />
+        <property name="timeBetweenEvictionRunsMillis" value="${jdbc.timeBetweenEvictionRunsMillis}" />
+        <property name="removeAbandoned" value="true" />
+    </bean>
+
+    <!--phr DataSource Config-->
+    <bean id="mssDataSource" parent="abstractDataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="url" value="${jdbc.mss.url}"/>
+        <property name="username" value="${jdbc.mss.username}"/>
+        <property name="password" value="${jdbc.mss.password}"/>
+    </bean>
+
+    <bean id="mssEntityManagerFactory"
+          class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="dataSource" ref="mssDataSource"/>
+        <property name="jpaVendorAdapter">
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+                <property name="databasePlatform" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
+                <property name="generateDdl" value="false"/>
+                <property name="showSql" value="true"/>
+            </bean>
+        </property>
+        <property name="packagesToScan" value="nta.med.core.domain" />
+    </bean>
+
+    <bean id="mssTransactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="mssEntityManagerFactory"/>
+    </bean>
+
+
+    <bean id="cacheManager" class="org.springframework.cache.support.SimpleCacheManager">
+        <property name="caches">
+            <set>
+                <bean class="org.springframework.cache.concurrent.ConcurrentMapCacheFactoryBean" p:name="DOCTOR_DEPARTMENT" />
+            </set>
+        </property>
+    </bean>
+    
+    <!-- Mail sender configured for using Gmail -->
+    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl"
+          p:host="${mail.smtp.host}"
+          p:username="${mail.username}"
+          p:password="${mail.password}"
+          p:port="${mail.smtp.port}">
+        <property name="javaMailProperties">
+            <props>
+                <prop key="mail.smtp.auth">${mail.smtp.auth}</prop>
+                <prop key="mail.smtp.starttls.enable">${mail.smtp.starttls.enable}</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="templateMessage" class="org.springframework.mail.SimpleMailMessage"
+          p:from="${mail.sender}" p:bcc="${mail.bcc}" />
+</beans>

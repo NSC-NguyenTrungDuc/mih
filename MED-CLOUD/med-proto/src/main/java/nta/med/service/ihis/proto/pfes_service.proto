@@ -1,0 +1,136 @@
+import "rpc.proto";
+import "pfes_model.proto";
+import "common_model.proto";
+
+option java_package = "nta.med.service.ihis.proto";
+option java_outer_classname = "PfesServiceProto";
+option (version) = "1.0.0";
+option (service) = "pfes";
+//---Common Upadate Reponse
+
+//[START]PFE0101U00
+message PFE0101U00GrdMCodeRequest
+{
+	optional string code_type = 1;
+}
+message PFE0101U00GrdMCodeResponse
+{
+	repeated PFE0101U00GrdMCodeInfo mcode_item = 1;
+}
+message PFE0101U00GrdDCodeRequest
+{
+	optional string code_type         = 1;
+	optional string code              = 2;
+	optional string code_name         = 3;
+}
+message PFE0101U00GrdDCodeResponse
+{
+	repeated PFE0101U00GrdDCodeInfo dcode_item = 1;
+}
+message PFE0101U00LayDupDRequest
+{
+	optional string code_type         = 1;
+	optional string code              = 2;
+}
+message PFE0101U00LayDupDResponse
+{
+	optional string result = 1;
+}
+message PFE0101U00LayDupMRequest
+{
+	optional string code_type         = 1;
+}
+message PFE0101U00LayUserNameRequest
+{
+	optional string code = 1;
+}
+message PFE0101U00LayUserNameResponse
+{
+	optional string user_name = 1;
+}
+message PFE0101U00GrdDcodeColumnChangedRequest
+{
+	optional string row_state          = 1;
+	optional string col_name           = 2;
+	optional string code_type          = 3;
+	optional string code               = 4;
+	optional bool m_code_type        = 5;
+}
+message PFE0101U00GrdDcodeColumnChangedResponse
+{
+	optional string dup_yn = 1;
+	optional string user_name = 2;
+}
+message PFE0101U00SaveLayoutRequest
+{
+	optional string user_id = 1;
+	repeated PFE0101U00SaveLayoutInfo save_layout_item = 2;
+}
+//[START]PFE0101U00
+//[START] PFE7001Q01
+message PFE7001Q01LayDailyReportRequest
+{
+	optional string kensa_date        = 1;
+	optional string io_gubun          = 2;
+	optional string part_code         = 3;
+}
+message PFE7001Q01LayDailyReportResponse
+{
+	repeated PFE7001Q01LayDailyReportInfo daily_report_item = 1;
+}
+message PFE7001Q02LayMonthlyReportRequest
+{
+	optional string from_date      = 1;
+	optional string to_date        = 2;
+	optional string io_gubun       = 3;
+	optional string part_code      = 4;
+}
+message PFE7001Q02LayMonthlyReportResponse
+{
+	repeated PFE7001Q02LayMonthlyReportInfo monthly_report_item = 1;
+}
+//[END] PFE7001Q01
+
+//[START] PFE0101U01
+message PFE0101U01GrdDCodeRequest
+{
+	optional string code_type        = 1;
+	optional string code             = 2;
+	optional string code_name        = 3;
+}
+message PFE0101U01GrdDCodeResponse
+{
+	repeated PFE0101U01GrdDCodeInfo grd_dcode_item = 1;
+}
+message PFE0101U01GrdMCodeRequest
+{
+	optional string code_type = 1;
+}
+message PFE0101U01GrdMCodeResponse
+{
+	repeated PFE0101U01GrdMCodeInfo grd_mcode_item = 1;
+}
+message PFE0101U01LayDupDRequest
+{
+	optional string code_type         = 1;
+	optional string code              = 2;
+}
+message PFE0101U01StringResponse
+{
+	optional string res_str = 1;
+}
+message PFE0101U01LayDupMRequest
+{
+	optional string code_type = 1;
+}
+message PFE0101U01LayUserNameRequest
+{
+	optional string code = 1;
+}
+message PFE0101U01SaveLayoutRequest
+{
+	optional string user_id = 1;
+	repeated PFE0101U01GrdDCodeInfo grd_dcode_item = 2; // callerID = 2
+	repeated PFE0101U01GrdMCodeInfo grd_mcode_item = 3; // callerID = 1
+}
+//[END] PFE0101U01

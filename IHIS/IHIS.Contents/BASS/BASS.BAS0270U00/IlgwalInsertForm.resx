@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>250, 4</value>
+  </data>
+  <data name="btnList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 34</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnList.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnList.Name" xml:space="preserve">
+    <value>btnList</value>
+  </data>
+  <data name="&gt;&gt;btnList.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButtonList, IHIS.BizObjects, Version=1.0.5446.25681, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnList.Parent" xml:space="preserve">
+    <value>xPanel1</value>
+  </data>
+  <data name="&gt;&gt;btnList.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="xPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="xPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 192</value>
+  </data>
+  <data name="xPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>416, 40</value>
+  </data>
+  <data name="xPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;xPanel1.Name" xml:space="preserve">
+    <value>xPanel1</value>
+  </data>
+  <data name="&gt;&gt;xPanel1.Type" xml:space="preserve">
+    <value>IHIS.Framework.XPanel, IHIS.Controls, Version=1.0.5448.29010, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;xPanel1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dtpDoctorYMD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>290, 154</value>
+  </data>
+  <data name="dtpDoctorYMD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 20</value>
+  </data>
+  <data name="dtpDoctorYMD.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;dtpDoctorYMD.Name" xml:space="preserve">
+    <value>dtpDoctorYMD</value>
+  </data>
+  <data name="&gt;&gt;dtpDoctorYMD.Type" xml:space="preserve">
+    <value>IHIS.Framework.XDatePicker, IHIS.Controls, Version=1.0.5448.29010, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dtpDoctorYMD.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="&gt;&gt;dtpDoctorYMD.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtMayakLicense.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 154</value>
+  </data>
+  <data name="txtMayakLicense.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 20</value>
+  </data>
+  <data name="txtMayakLicense.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;txtMayakLicense.Name" xml:space="preserve">
+    <value>txtMayakLicense</value>
+  </data>
+  <data name="&gt;&gt;txtMayakLicense.Type" xml:space="preserve">
+    <value>IHIS.Framework.XTextBox, IHIS.Controls, Version=1.0.5448.29010, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtMayakLicense.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="&gt;&gt;txtMayakLicense.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cbxReserYN.Location" type="System.Drawing.Point, System.Drawing">
+    <value>296, 132</value>
+  </data>
+  <data name="cbxReserYN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 14</value>
+  </data>
+  <data name="cbxReserYN.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;cbxReserYN.Name" xml:space="preserve">
+    <value>cbxReserYN</value>
+  </data>
+  <data name="&gt;&gt;cbxReserYN.Type" xml:space="preserve">
+    <value>IHIS.Framework.XCheckBox, IHIS.Controls, Version=1.0.5448.29010, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbxReserYN.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="&gt;&gt;cbxReserYN.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="cbxJubsuYN.Location" type="System.Drawing.Point, System.Drawing">
+    <value>110, 132</value>
+  </data>
+  <data name="cbxJubsuYN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 14</value>
+  </data>
+  <data name="cbxJubsuYN.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;cbxJubsuYN.Name" xml:space="preserve">
+    <value>cbxJubsuYN</value>
+  </data>
+  <data name="&gt;&gt;cbxJubsuYN.Type" xml:space="preserve">
+    <value>IHIS.Framework.XCheckBox, IHIS.Controls, Version=1.0.5448.29010, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbxJubsuYN.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="&gt;&gt;cbxJubsuYN.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cboDoctorGrade.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 9pt</value>
+  </data>
+  <data name="cboDoctorGrade.Location" type="System.Drawing.Point, System.Drawing">
+    <value>290, 102</value>
+  </data>
+  <data name="cboDoctorGrade.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 20</value>
+  </data>
+  <data name="cboDoctorGrade.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;cboDoctorGrade.Name" xml:space="preserve">
+    <value>cboDoctorGrade</value>
+  </data>
+  <data name="&gt;&gt;cboDoctorGrade.Type" xml:space="preserve">
+    <value>IHIS.Framework.XDictComboBox, IHIS.DbControls, Version=1.0.5448.27112, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cboDoctorGrade.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="&gt;&gt;cboDoctorGrade.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cboDoctorGwa.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 9pt</value>
+  </data>
+  <data name="cboDoctorGwa.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 102</value>
+  </data>
+  <data name="cboDoctorGwa.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 20</value>
+  </data>
+  <data name="cboDoctorGwa.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;cboDoctorGwa.Name" xml:space="preserve">
+    <value>cboDoctorGwa</value>
+  </data>
+  <data name="&gt;&gt;cboDoctorGwa.Type" xml:space="preserve">
+    <value>IHIS.Framework.XDictComboBox, IHIS.DbControls, Version=1.0.5448.27112, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cboDoctorGwa.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="&gt;&gt;cboDoctorGwa.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="emkDoctorSeq.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 50</value>
+  </data>
+  <data name="emkDoctorSeq.MaxLength" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="emkDoctorSeq.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 20</value>
+  </data>
+  <data name="emkDoctorSeq.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="emkDoctorSeq.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;emkDoctorSeq.Name" xml:space="preserve">
+    <value>emkDoctorSeq</value>
+  </data>
+  <data name="&gt;&gt;emkDoctorSeq.Type" xml:space="preserve">
+    <value>IHIS.Framework.XEditMask, IHIS.Controls, Version=1.0.5448.29010, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;emkDoctorSeq.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="&gt;&gt;emkDoctorSeq.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="xLabel9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 154</value>
+  </data>
+  <data name="xLabel9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 20</value>
+  </data>
+  <data name="xLabel9.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="xLabel9.Text" xml:space="preserve">
+    <value>Ngày áp dụng</value>
+  </data>
+  <data name="xLabel9.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;xLabel9.Name" xml:space="preserve">
+    <value>xLabel9</value>
+  </data>
+  <data name="&gt;&gt;xLabel9.Type" xml:space="preserve">
+    <value>IHIS.Framework.XLabel, IHIS.Controls, Version=1.0.5448.29010, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xLabel9.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="&gt;&gt;xLabel9.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="xLabel8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 154</value>
+  </data>
+  <data name="xLabel8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 20</value>
+  </data>
+  <data name="xLabel8.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="xLabel8.Text" xml:space="preserve">
+    <value>CN thuốc mê</value>
+  </data>
+  <data name="xLabel8.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;xLabel8.Name" xml:space="preserve">
+    <value>xLabel8</value>
+  </data>
+  <data name="&gt;&gt;xLabel8.Type" xml:space="preserve">
+    <value>IHIS.Framework.XLabel, IHIS.Controls, Version=1.0.5448.29010, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xLabel8.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="&gt;&gt;xLabel8.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="xLabel7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 128</value>
+  </data>
+  <data name="xLabel7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 20</value>
+  </data>
+  <data name="xLabel7.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="xLabel7.Text" xml:space="preserve">
+    <value>Hẹn</value>
+  </data>
+  <data name="xLabel7.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;xLabel7.Name" xml:space="preserve">
+    <value>xLabel7</value>
+  </data>
+  <data name="&gt;&gt;xLabel7.Type" xml:space="preserve">
+    <value>IHIS.Framework.XLabel, IHIS.Controls, Version=1.0.5448.29010, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xLabel7.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="&gt;&gt;xLabel7.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="xLabel6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 102</value>
+  </data>
+  <data name="xLabel6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 20</value>
+  </data>
+  <data name="xLabel6.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="xLabel6.Text" xml:space="preserve">
+    <value>Hạng BS</value>
+  </data>
+  <data name="xLabel6.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;xLabel6.Name" xml:space="preserve">
+    <value>xLabel6</value>
+  </data>
+  <data name="&gt;&gt;xLabel6.Type" xml:space="preserve">
+    <value>IHIS.Framework.XLabel, IHIS.Controls, Version=1.0.5448.29010, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xLabel6.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="&gt;&gt;xLabel6.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="xLabel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 128</value>
+  </data>
+  <data name="xLabel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 20</value>
+  </data>
+  <data name="xLabel5.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="xLabel5.Text" xml:space="preserve">
+    <value>Tiếp nhận</value>
+  </data>
+  <data name="xLabel5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;xLabel5.Name" xml:space="preserve">
+    <value>xLabel5</value>
+  </data>
+  <data name="&gt;&gt;xLabel5.Type" xml:space="preserve">
+    <value>IHIS.Framework.XLabel, IHIS.Controls, Version=1.0.5448.29010, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xLabel5.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="&gt;&gt;xLabel5.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="xLabel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 102</value>
+  </data>
+  <data name="xLabel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 20</value>
+  </data>
+  <data name="xLabel4.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="xLabel4.Text" xml:space="preserve">
+    <value>Khoa tr.thuộc</value>
+  </data>
+  <data name="xLabel4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;xLabel4.Name" xml:space="preserve">
+    <value>xLabel4</value>
+  </data>
+  <data name="&gt;&gt;xLabel4.Type" xml:space="preserve">
+    <value>IHIS.Framework.XLabel, IHIS.Controls, Version=1.0.5448.29010, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xLabel4.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="&gt;&gt;xLabel4.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="txtDoctorName2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>KatakanaHalf</value>
+  </data>
+  <data name="txtDoctorName2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>246, 76</value>
+  </data>
+  <data name="txtDoctorName2.MaxLength" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="txtDoctorName2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 20</value>
+  </data>
+  <data name="txtDoctorName2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txtDoctorName2.Name" xml:space="preserve">
+    <value>txtDoctorName2</value>
+  </data>
+  <data name="&gt;&gt;txtDoctorName2.Type" xml:space="preserve">
+    <value>IHIS.Framework.XTextBox, IHIS.Controls, Version=1.0.5448.29010, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtDoctorName2.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="&gt;&gt;txtDoctorName2.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="txtDoctorName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Hiragana</value>
+  </data>
+  <data name="txtDoctorName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 76</value>
+  </data>
+  <data name="txtDoctorName.MaxLength" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="txtDoctorName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 20</value>
+  </data>
+  <data name="txtDoctorName.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtDoctorName.Name" xml:space="preserve">
+    <value>txtDoctorName</value>
+  </data>
+  <data name="&gt;&gt;txtDoctorName.Type" xml:space="preserve">
+    <value>IHIS.Framework.XTextBox, IHIS.Controls, Version=1.0.5448.29010, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtDoctorName.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="&gt;&gt;txtDoctorName.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="xLabel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 76</value>
+  </data>
+  <data name="xLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 20</value>
+  </data>
+  <data name="xLabel3.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="xLabel3.Text" xml:space="preserve">
+    <value>Họ Tên</value>
+  </data>
+  <data name="xLabel3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;xLabel3.Name" xml:space="preserve">
+    <value>xLabel3</value>
+  </data>
+  <data name="&gt;&gt;xLabel3.Type" xml:space="preserve">
+    <value>IHIS.Framework.XLabel, IHIS.Controls, Version=1.0.5448.29010, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xLabel3.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="&gt;&gt;xLabel3.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="xLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 50</value>
+  </data>
+  <data name="xLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 20</value>
+  </data>
+  <data name="xLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="xLabel2.Text" xml:space="preserve">
+    <value>Thứ tự</value>
+  </data>
+  <data name="xLabel2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;xLabel2.Name" xml:space="preserve">
+    <value>xLabel2</value>
+  </data>
+  <data name="&gt;&gt;xLabel2.Type" xml:space="preserve">
+    <value>IHIS.Framework.XLabel, IHIS.Controls, Version=1.0.5448.29010, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xLabel2.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="&gt;&gt;xLabel2.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="xLabel1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhEAAQAIMAABRJpQJlzSmH4TuW6xl52Qtt0kql8lix+kqk8xp62TuW6kuk8ymI4mK5/xl62f//
+        /yH/C05FVFNDQVBFMi4wAwEBAAAh+QQBAAAPACwAAAAAEAAQAAAIXwAfCBwIoKBBAAMTEnRQIEAAhAoV
+        Amj4MGJCAAQoQrQIQECCghU5DmAAsSBHAwo2WnwA4AAClRwbHFgw4CBMljYHCCAQciXLnT1XdiRwU6LO
+        ohcN1PQpsKUBpAQNrgwIADs=
+</value>
+  </data>
+  <data name="xLabel1.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="xLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 12</value>
+  </data>
+  <data name="xLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 21</value>
+  </data>
+  <data name="xLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="xLabel1.Text" xml:space="preserve">
+    <value>  ĐK đ.loạt BS</value>
+  </data>
+  <data name="&gt;&gt;xLabel1.Name" xml:space="preserve">
+    <value>xLabel1</value>
+  </data>
+  <data name="&gt;&gt;xLabel1.Type" xml:space="preserve">
+    <value>IHIS.Framework.XLabel, IHIS.Controls, Version=1.0.5448.29010, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xLabel1.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="&gt;&gt;xLabel1.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="xDisplayBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 42</value>
+  </data>
+  <data name="xDisplayBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>398, 142</value>
+  </data>
+  <data name="xDisplayBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;xDisplayBox2.Name" xml:space="preserve">
+    <value>xDisplayBox2</value>
+  </data>
+  <data name="&gt;&gt;xDisplayBox2.Type" xml:space="preserve">
+    <value>IHIS.Framework.XDisplayBox, IHIS.Controls, Version=1.0.5448.29010, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xDisplayBox2.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="&gt;&gt;xDisplayBox2.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="xDisplayBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 6</value>
+  </data>
+  <data name="xDisplayBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>398, 32</value>
+  </data>
+  <data name="xDisplayBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;xDisplayBox1.Name" xml:space="preserve">
+    <value>xDisplayBox1</value>
+  </data>
+  <data name="&gt;&gt;xDisplayBox1.Type" xml:space="preserve">
+    <value>IHIS.Framework.XDisplayBox, IHIS.Controls, Version=1.0.5448.29010, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xDisplayBox1.Parent" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="&gt;&gt;xDisplayBox1.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="xPanel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="xPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="xPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>416, 192</value>
+  </data>
+  <data name="xPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;xPanel2.Name" xml:space="preserve">
+    <value>xPanel2</value>
+  </data>
+  <data name="&gt;&gt;xPanel2.Type" xml:space="preserve">
+    <value>IHIS.Framework.XPanel, IHIS.Controls, Version=1.0.5448.29010, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xPanel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;xPanel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleBaseSize" type="System.Drawing.Size, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>416, 254</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Đăng ký hàng loạt</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>IlgwalInsertForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>IHIS.Framework.XForm, IHIS.Forms, Version=1.0.5446.25681, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+</root>

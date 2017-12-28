@@ -1,0 +1,526 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnDelete.Text" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="btnProcess.Text" xml:space="preserve">
+    <value>選択</value>
+  </data>
+  <data name="cbxGeneric_YN.Text" xml:space="preserve">
+    <value>一般名表示</value>
+  </data>
+  <data name="grdOCS1023.QuerySQL" xml:space="preserve">
+    <value>SELECT A.BUNHO                                                     BUNHO             ,
+       A.GWA                                                       GWA               ,
+       A.PKOCS1023                                                 PKOCS1023         ,
+       NULL                                                        GROUP_SER         ,
+       A.SEQ                                                       SEQ               ,
+       A.HANGMOG_CODE                                              HANGMOG_CODE      ,
+       DECODE(:f_generic_yn, 'N', B.HANGMOG_NAME,
+                                  DECODE(A.GENERAL_DISP_YN, 'Y', I.GENERIC_NAME,
+                                                                 B.HANGMOG_NAME)) HANGMOG_NAME,
+--       B.HANGMOG_NAME                                              HANGMOG_NAME      ,
+       A.SPECIMEN_CODE                                             SPECIMEN_CODE     ,
+       DECODE(SUBSTR(LTRIM(TO_CHAR(A.SURYANG)), 1, 1), '.', '0'||LTRIM(TO_CHAR(A.SURYANG)), LTRIM(TO_CHAR(A.SURYANG)))
+                                                                   SURYANG           ,
+       A.ORD_DANUI                                                 ORD_DANUI         ,
+       FN_OCS_LOAD_CODE_NAME('ORD_DANUI', A.ORD_DANUI)
+                                                                   ORD_DANUI_NAME    ,
+       A.DV_TIME                                                   DV_TIME           ,
+       NVL(A.DV  , 0)                                              DV                ,
+       NVL(A.DV_1, 0)                                              DV_1              ,
+       NVL(A.DV_2, 0)                                              DV_2              ,
+       NVL(A.DV_3, 0)                                              DV_3              ,
+       NVL(A.DV_4, 0)                                              DV_4              ,
+       A.NALSU                                                     NALSU             ,
+       A.JUSA                                                      JUSA              ,
+       A.BOGYONG_CODE                                              BOGYONG_CODE      ,
+       NULL                                                        EMERGENCY         ,
+       NULL                                                        PAY               ,
+       NULL                                                        FLUID_YN          ,
+       NULL                                                        TPN_YN            ,
+       A.ANTI_CANCER_YN                                            ANTI_CANCER_YN    ,
+       A.PORTABLE_YN                                               PORTABLE_YN       ,
+       A.POWDER_YN                                                 POWDER_YN         ,
+       NULL                                                        SPECIAL_YN        ,
+       NULL                                                        ACT_DOCTOR        ,
+       NULL                                                        MUHYO             ,
+       NULL                                                        SYMYA             ,
+       NULL                                                        SPECIAL_RATE      ,
+       NULL                                                        ACT_DOCTOR_NAME   ,
+       NULL                                                        PRN_YN            ,
+       NULL                                                        PREPARE_YN        ,
+       A.ORDER_GUBUN                                               ORDER_GUBUN       ,
+       B.ORDER_GUBUN                                               ORDER_GUBUN_BAS   ,
+       NVL(FN_OCS_LOAD_CODE_NAME('ORDER_GUBUN', A.ORDER_GUBUN), 'Etc')
+                                                                   ORDER_GUBUN_NAME  ,
+       NULL                                                        ORDER_REMARK      ,
+       NULL                                                        NURSE_REMARK      ,
+       NULL                                                        MIX_GROUP         ,
+       NULL                                                        WONYOI_ORDER_YN   ,
+       NULL                                                        WONNAE_SAYU_CODE  ,
+       B.INPUT_CONTROL                                             INPUT_CONTROL     ,
+       B.SUGA_YN                                                   SUGA_YN           ,
+       B.JAERYO_YN                                                 JAERYO_YN         ,
+       NULL                                                        SPECIAL_CHECK     ,
+       NULL                                                        PRIS_NAME         ,
+       B.SLIP_CODE                                                 SLIP_CODE         ,
+       DECODE(NVL(B.EMERGENCY, 'Z'),'Y','N','N','N','Y')
+                                                                   EMERGENCY_CHECK   ,
+       B.SPECIMEN_YN                                               SPECIMEN_YN       ,
+       'N'                                                         MULTI_GUMSA_YN    ,
+       C.SPECIMEN_CR_YN                                            SPECIMEN_CR_YN    ,
+       C.SURYANG_CR_YN                                             SURYANG_CR_YN     ,
+       C.ORD_DANUI_CR_YN                                           ORD_DANUI_CR_YN   ,
+       'N'                                                         DV_TIME_CR_YN     ,
+       C.DV_CR_YN                                                  DV_CR_YN          ,
+       C.NALSU_CR_YN                                               NALSU_CR_YN       ,
+       C.JUSA_CR_YN                                                JUSA_CR_YN        ,
+       C.BOGYONG_CODE_CR_YN                                        BOGYONG_CODE_CR_YN,
+       C.TOIWON_DRG_CR_YN                                          TOIWON_DRG_CR_YN  ,
+       'N'                                                         TPN_CR_YN         ,
+       'N'                                                         ANTI_CANCER_CR_YN ,
+       'N'                                                         FLUID_CR_YN       ,
+       'N'                                                         PORTABLE_CR_YN    ,
+       'N'                                                         DONER_CR_YN       ,
+       C.AMT_CR_YN                                                 AMT_CR_YN         ,
+       FN_OCS_LOAD_SPECIMEN_NAME(A.SPECIMEN_CODE)                  SPECIMEN_NAME     ,
+       FN_OCS_LOAD_CODE_NAME('JUSA', A.JUSA)                       JUSA_NAME         ,
+       NULL                                                        PAY_NAME          ,
+       FN_OCS_LOAD_BOGYONG_COL_NAME(B.ORDER_GUBUN, A.BOGYONG_CODE) BOGYONG_NAME      ,
+       D.BUN_CODE                                                  BUN_CODE          ,
+ --      D.SG_GESAN                                                  SG_GESAN        ,
+       B.LIMIT_SURYANG                                             LIMIT_SURYANG     ,
+       B.LIMIT_NALSU                                               LIMIT_NALSU       ,
+       FN_OCS_BULYONG_CHECK_OUT(A.HANGMOG_CODE, SYSDATE)           BULYONG_CHECK     ,
+       A.INPUT_TAB                                                 INPUT_TAB         ,
+       NVL(A.DV_5, 0)                                              DV_5              ,
+       NVL(A.DV_6, 0)                                              DV_6              ,
+       NVL(A.DV_7, 0)                                              DV_7              ,
+       NVL(A.DV_8, 0)                                              DV_8              ,
+       NVL(A.GENERAL_DISP_YN, 'N')                                 GENERAL_DISP_YN   ,
+       I.GENERIC_NAME
+  FROM OCS1023 A,
+       OCS0103 B,
+       OCS0133 C,
+       ( SELECT A.SG_CODE
+              , A.SG_NAME
+              , A.BUN_CODE 
+              , A.HOSP_CODE
+           FROM BAS0310 A
+          WHERE A.HOSP_CODE = :f_hosp_code
+            AND A.SG_YMD = ( SELECT MAX(B.SG_YMD)
+                               FROM BAS0310 B
+                              WHERE B.HOSP_CODE = A.HOSP_CODE
+                                AND B.SG_CODE   = A.SG_CODE
+                                AND B.SG_YMD   &lt;= TRUNC(SYSDATE) ) ) D,
+       OCS0132 E,
+       OCS0109 I
+ WHERE A.HOSP_CODE     = :f_hosp_code
+   AND A.BUNHO         = :f_bunho
+   AND A.GWA           = :f_gwa
+   AND A.INPUT_TAB  LIKE :f_input_tab
+   AND B.HOSP_CODE     = A.HOSP_CODE
+   AND B.HANGMOG_CODE  = A.HANGMOG_CODE
+   AND TRUNC(SYSDATE) BETWEEN B.START_DATE AND B.END_DATE
+   AND C.HOSP_CODE     = B.HOSP_CODE
+   AND C.INPUT_CONTROL = B.INPUT_CONTROL
+   AND D.HOSP_CODE(+)  = B.HOSP_CODE
+   AND D.SG_CODE(+)    = B.SG_CODE
+   AND E.HOSP_CODE     = A.HOSP_CODE
+   AND E.CODE          = A.ORDER_GUBUN
+   AND E.CODE_TYPE     = 'ORDER_GUBUN'
+   AND I.HOSP_CODE   (+) = B.HOSP_CODE
+   AND I.GENERIC_CODE(+) = SUBSTR(B.YAK_KIJUN_CODE, 1, 9)
+ ORDER BY NVL(E.SORT_KEY, 99), A.SEQ</value>
+  </data>
+  <data name="lblSelectOrder.Text" xml:space="preserve">
+    <value> 全体選択</value>
+  </data>
+  <data name="xEditGridCell1.HeaderText" xml:space="preserve">
+    <value>選択</value>
+  </data>
+  <data name="xEditGridCell10.HeaderText" xml:space="preserve">
+    <value>bunho</value>
+  </data>
+  <data name="xEditGridCell100.HeaderText" xml:space="preserve">
+    <value>注射</value>
+  </data>
+  <data name="xEditGridCell101.HeaderText" xml:space="preserve">
+    <value>pay_name</value>
+  </data>
+  <data name="xEditGridCell102.HeaderText" xml:space="preserve">
+    <value>用法</value>
+  </data>
+  <data name="xEditGridCell103.HeaderText" xml:space="preserve">
+    <value>M
+I
+X</value>
+  </data>
+  <data name="xEditGridCell104.HeaderText" xml:space="preserve">
+    <value>bun_code</value>
+  </data>
+  <data name="xEditGridCell106.HeaderText" xml:space="preserve">
+    <value>order_gubun</value>
+  </data>
+  <data name="xEditGridCell107.HeaderText" xml:space="preserve">
+    <value>hope_date</value>
+  </data>
+  <data name="xEditGridCell108.HeaderText" xml:space="preserve">
+    <value>limit_suryang</value>
+  </data>
+  <data name="xEditGridCell109.HeaderText" xml:space="preserve">
+    <value>limit_nalsu</value>
+  </data>
+  <data name="xEditGridCell11.HeaderText" xml:space="preserve">
+    <value>gwa</value>
+  </data>
+  <data name="xEditGridCell116.HeaderText" xml:space="preserve">
+    <value>wonnae_sayu_code</value>
+  </data>
+  <data name="xEditGridCell12.HeaderText" xml:space="preserve">
+    <value>pkocs1023</value>
+  </data>
+  <data name="xEditGridCell13.HeaderText" xml:space="preserve">
+    <value>G
+R</value>
+  </data>
+  <data name="xEditGridCell14.HeaderText" xml:space="preserve">
+    <value>seq</value>
+  </data>
+  <data name="xEditGridCell15.HeaderText" xml:space="preserve">
+    <value>オ―ダコード</value>
+  </data>
+  <data name="xEditGridCell16.HeaderText" xml:space="preserve">
+    <value>オ―ダ名</value>
+  </data>
+  <data name="xEditGridCell17.HeaderText" xml:space="preserve">
+    <value>検体</value>
+  </data>
+  <data name="xEditGridCell18.HeaderText" xml:space="preserve">
+    <value>数量</value>
+  </data>
+  <data name="xEditGridCell19.HeaderText" xml:space="preserve">
+    <value>単位</value>
+  </data>
+  <data name="xEditGridCell2.HeaderText" xml:space="preserve">
+    <value>bulyong_check</value>
+  </data>
+  <data name="xEditGridCell20.HeaderText" xml:space="preserve">
+    <value>DV類型</value>
+  </data>
+  <data name="xEditGridCell21.HeaderText" xml:space="preserve">
+    <value>回数</value>
+  </data>
+  <data name="xEditGridCell22.HeaderText" xml:space="preserve">
+    <value>日数</value>
+  </data>
+  <data name="xEditGridCell23.HeaderText" xml:space="preserve">
+    <value>注射</value>
+  </data>
+  <data name="xEditGridCell24.HeaderText" xml:space="preserve">
+    <value>用法</value>
+  </data>
+  <data name="xEditGridCell25.HeaderText" xml:space="preserve">
+    <value>緊
+急</value>
+  </data>
+  <data name="xEditGridCell26.HeaderText" xml:space="preserve">
+    <value>請求
+区分</value>
+  </data>
+  <data name="xEditGridCell27.HeaderText" xml:space="preserve">
+    <value>輸液</value>
+  </data>
+  <data name="xEditGridCell28.HeaderText" xml:space="preserve">
+    <value>TPN</value>
+  </data>
+  <data name="xEditGridCell29.HeaderText" xml:space="preserve">
+    <value>抗癌剤</value>
+  </data>
+  <data name="xEditGridCell3.HeaderText" xml:space="preserve">
+    <value>input_tab</value>
+  </data>
+  <data name="xEditGridCell30.HeaderText" xml:space="preserve">
+    <value>移動
+撮影</value>
+  </data>
+  <data name="xEditGridCell31.HeaderText" xml:space="preserve">
+    <value>粉
+砕</value>
+  </data>
+  <data name="xEditGridCell32.HeaderText" xml:space="preserve">
+    <value>特診</value>
+  </data>
+  <data name="xEditGridCell33.HeaderText" xml:space="preserve">
+    <value>特診医師</value>
+  </data>
+  <data name="xEditGridCell34.HeaderText" xml:space="preserve">
+    <value>無
+効</value>
+  </data>
+  <data name="xEditGridCell35.HeaderText" xml:space="preserve">
+    <value>symya</value>
+  </data>
+  <data name="xEditGridCell36.HeaderText" xml:space="preserve">
+    <value>special_rate</value>
+  </data>
+  <data name="xEditGridCell37.HeaderText" xml:space="preserve">
+    <value>特診医師名</value>
+  </data>
+  <data name="xEditGridCell38.HeaderText" xml:space="preserve">
+    <value>prn_yn</value>
+  </data>
+  <data name="xEditGridCell39.HeaderText" xml:space="preserve">
+    <value>prepare_yn</value>
+  </data>
+  <data name="xEditGridCell4.HeaderText" xml:space="preserve">
+    <value>dv_5</value>
+  </data>
+  <data name="xEditGridCell40.HeaderText" xml:space="preserve">
+    <value>order_gubun_bas</value>
+  </data>
+  <data name="xEditGridCell41.HeaderText" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="xEditGridCell42.HeaderText" xml:space="preserve">
+    <value>看護
+Comment</value>
+  </data>
+  <data name="xEditGridCell43.HeaderText" xml:space="preserve">
+    <value>input_control</value>
+  </data>
+  <data name="xEditGridCell44.HeaderText" xml:space="preserve">
+    <value>suga_yn</value>
+  </data>
+  <data name="xEditGridCell45.HeaderText" xml:space="preserve">
+    <value>jaeryo_yn</value>
+  </data>
+  <data name="xEditGridCell46.HeaderText" xml:space="preserve">
+    <value>special_check</value>
+  </data>
+  <data name="xEditGridCell47.HeaderText" xml:space="preserve">
+    <value>pris_name</value>
+  </data>
+  <data name="xEditGridCell48.HeaderText" xml:space="preserve">
+    <value>slip_code</value>
+  </data>
+  <data name="xEditGridCell49.HeaderText" xml:space="preserve">
+    <value>emergency_check</value>
+  </data>
+  <data name="xEditGridCell5.HeaderText" xml:space="preserve">
+    <value>dv_6</value>
+  </data>
+  <data name="xEditGridCell50.HeaderText" xml:space="preserve">
+    <value>specimen_yn</value>
+  </data>
+  <data name="xEditGridCell51.HeaderText" xml:space="preserve">
+    <value>multi_gumsa_yn</value>
+  </data>
+  <data name="xEditGridCell52.HeaderText" xml:space="preserve">
+    <value>specimen_cr_yn</value>
+  </data>
+  <data name="xEditGridCell53.HeaderText" xml:space="preserve">
+    <value>suryang_cr_yn</value>
+  </data>
+  <data name="xEditGridCell54.HeaderText" xml:space="preserve">
+    <value>ord_danui_cr_yn</value>
+  </data>
+  <data name="xEditGridCell55.HeaderText" xml:space="preserve">
+    <value>dv_time_cr_yn</value>
+  </data>
+  <data name="xEditGridCell56.HeaderText" xml:space="preserve">
+    <value>dv_cr_yn</value>
+  </data>
+  <data name="xEditGridCell57.HeaderText" xml:space="preserve">
+    <value>nalsu_cr_yn</value>
+  </data>
+  <data name="xEditGridCell58.HeaderText" xml:space="preserve">
+    <value>jusa_cr_yn</value>
+  </data>
+  <data name="xEditGridCell59.HeaderText" xml:space="preserve">
+    <value>bogyong_code_cr_yn</value>
+  </data>
+  <data name="xEditGridCell6.HeaderText" xml:space="preserve">
+    <value>dv_7</value>
+  </data>
+  <data name="xEditGridCell60.HeaderText" xml:space="preserve">
+    <value>toiwon_drg_cr_yn</value>
+  </data>
+  <data name="xEditGridCell61.HeaderText" xml:space="preserve">
+    <value>tpn_cr_yn</value>
+  </data>
+  <data name="xEditGridCell62.HeaderText" xml:space="preserve">
+    <value>anti_cancer_cr_yn</value>
+  </data>
+  <data name="xEditGridCell63.HeaderText" xml:space="preserve">
+    <value>fluid_cr_yn</value>
+  </data>
+  <data name="xEditGridCell64.HeaderText" xml:space="preserve">
+    <value>portable_cr_yn</value>
+  </data>
+  <data name="xEditGridCell65.HeaderText" xml:space="preserve">
+    <value>doner_cr_yn</value>
+  </data>
+  <data name="xEditGridCell66.HeaderText" xml:space="preserve">
+    <value>amt_cr_yn</value>
+  </data>
+  <data name="xEditGridCell67.HeaderText" xml:space="preserve">
+    <value>オ―ダ区分</value>
+  </data>
+  <data name="xEditGridCell68.HeaderText" xml:space="preserve">
+    <value>一般名</value>
+  </data>
+  <data name="xEditGridCell7.HeaderText" xml:space="preserve">
+    <value>dv_8</value>
+  </data>
+  <data name="xEditGridCell8.HeaderText" xml:space="preserve">
+    <value>ord_danui</value>
+  </data>
+  <data name="xEditGridCell9.HeaderText" xml:space="preserve">
+    <value>一般名
+  表示</value>
+  </data>
+  <data name="xEditGridCell94.HeaderText" xml:space="preserve">
+    <value>dv_1</value>
+  </data>
+  <data name="xEditGridCell95.HeaderText" xml:space="preserve">
+    <value>dv_2</value>
+  </data>
+  <data name="xEditGridCell96.HeaderText" xml:space="preserve">
+    <value>dv_3</value>
+  </data>
+  <data name="xEditGridCell97.HeaderText" xml:space="preserve">
+    <value>dv_4</value>
+  </data>
+  <data name="xEditGridCell98.HeaderText" xml:space="preserve">
+    <value>院
+外</value>
+  </data>
+  <data name="xEditGridCell99.HeaderText" xml:space="preserve">
+    <value>specimen_name</value>
+  </data>
+  <data name="xGridHeader1.HeaderText" xml:space="preserve">
+    <value>回数</value>
+  </data>
+  <data name="xGridHeader2.HeaderText" xml:space="preserve">
+    <value>回数</value>
+  </data>
+</root>

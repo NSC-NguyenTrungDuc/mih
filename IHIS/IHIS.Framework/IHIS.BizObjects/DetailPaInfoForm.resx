@@ -1,0 +1,982 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="grdVisitList.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+  <data name="&gt;&gt;dbxGaein.Type" xml:space="preserve">
+    <value>IHIS.Framework.XDisplayBox, IHIS.Controls, Version=1.0.6033.133, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xGridCell1.Type" xml:space="preserve">
+    <value>IHIS.Framework.XGridCell, IHIS.DbControls, Version=1.0.6033.133, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="xPanel7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>647, 237</value>
+  </data>
+  <data name="&gt;&gt;dbxAddress.Name" xml:space="preserve">
+    <value>dbxAddress</value>
+  </data>
+  <data name="xGridCell13.HeaderText" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;dbxJohapName.Parent" xml:space="preserve">
+    <value>gbxInsure</value>
+  </data>
+  <data name="&gt;&gt;grdVisitList.Parent" xml:space="preserve">
+    <value>tabVisitList</value>
+  </data>
+  <data name="&gt;&gt;dbxGaein.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;xGridCell11.Name" xml:space="preserve">
+    <value>xGridCell11</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pnlTabTop.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;dbxGaeinNo.Parent" xml:space="preserve">
+    <value>gbxInsure</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>pnlTabTop</value>
+  </data>
+  <data name="pnlTop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 2</value>
+  </data>
+  <data name="&gt;&gt;dbxZipCode.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="xPanel7.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gbxInsure.Size" type="System.Drawing.Size, System.Drawing">
+    <value>647, 173</value>
+  </data>
+  <data name="&gt;&gt;tabNormal.Type" xml:space="preserve">
+    <value>IHIS.X.Magic.Controls.TabPage, IHIS.X.Magic, Version=1.0.6033.132, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="grdVisitList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;dbxLastCheckDate.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;xGridCell3.Type" xml:space="preserve">
+    <value>IHIS.Framework.XGridCell, IHIS.DbControls, Version=1.0.6033.133, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tabComment.Name" xml:space="preserve">
+    <value>tabComment</value>
+  </data>
+  <data name="&gt;&gt;dbxTel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Parent" xml:space="preserve">
+    <value>pnlTop</value>
+  </data>
+  <data name="dbxPaInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>564, 21</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 34</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;gbxInsure.Name" xml:space="preserve">
+    <value>gbxInsure</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>pnlTabTop</value>
+  </data>
+  <data name="&gt;&gt;xPanel7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;xGridCell9.Name" xml:space="preserve">
+    <value>xGridCell9</value>
+  </data>
+  <data name="&gt;&gt;xGridCell5.Type" xml:space="preserve">
+    <value>IHIS.Framework.XGridCell, IHIS.DbControls, Version=1.0.6033.133, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="dbxZipCode.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="&gt;&gt;dbxAddress.Parent" xml:space="preserve">
+    <value>pnlTabTop</value>
+  </data>
+  <data name="&gt;&gt;grdCmmt.Type" xml:space="preserve">
+    <value>IHIS.Framework.XGrid, IHIS.DbControls, Version=1.0.6033.133, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="dbxZipCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>446, 8</value>
+  </data>
+  <data name="tabVisitList.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>記号</value>
+  </data>
+  <data name="&gt;&gt;xGridCell1.Name" xml:space="preserve">
+    <value>xGridCell1</value>
+  </data>
+  <data name="grdCmmt.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dbxPaInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>372, 136</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>番号</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 8</value>
+  </data>
+  <data name="grdInsure.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 23</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="dbxLastCheckDate.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="&gt;&gt;dbxTel1.Parent" xml:space="preserve">
+    <value>pnlTabTop</value>
+  </data>
+  <data name="&gt;&gt;grdVisitList.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="grdInsure.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 16</value>
+  </data>
+  <data name="pnlTabTop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>647, 64</value>
+  </data>
+  <data name="&gt;&gt;dbxGaeinNo.Type" xml:space="preserve">
+    <value>IHIS.Framework.XDisplayBox, IHIS.Controls, Version=1.0.6033.133, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="tabComment.Title" xml:space="preserve">
+    <value>患者特異事項</value>
+  </data>
+  <data name="tabNormal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 25</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>DetailPaInfoForm</value>
+  </data>
+  <data name="grdVisitList.QuerySQL" xml:space="preserve">
+    <value>SELECT A.NAEWON_DATE
+      ,FN_BAS_LOAD_GWA_NAME(A.GWA, TRUNC(SYSDATE)) GWA_NAME
+      ,FN_BAS_LOAD_CODE_NAME('IN_OUT_GUBUN', A.IN_OUT_GUBUN) GUBUN_NAME
+      ,FN_BAS_LOAD_DOCTOR_NAME(A.DOCTOR,TRUNC(SYSDATE)) DOCTOR_NAME
+      ,A.TOIWON_DATE
+  FROM OUT0103 A
+ WHERE A.HOSP_CODE = FN_ADM_LOAD_HOSP_CODE()
+   AND A.BUNHO = :f_bunho
+ ORDER BY A.NAEWON_DATE DESC</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 23</value>
+  </data>
+  <data name="&gt;&gt;tabVisitList.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;dbxTel.Name" xml:space="preserve">
+    <value>dbxTel</value>
+  </data>
+  <data name="&gt;&gt;gbxInsure.Parent" xml:space="preserve">
+    <value>tabNormal</value>
+  </data>
+  <data name="dbxGaein.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="grdInsure.Size" type="System.Drawing.Size, System.Drawing">
+    <value>365, 154</value>
+  </data>
+  <data name="grdCmmt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>患者の詳細情報</value>
+  </data>
+  <data name="dbxAddress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>69, 8</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>住所</value>
+  </data>
+  <data name="dbxZipCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 21</value>
+  </data>
+  <data name="xGridCell5.HeaderText" xml:space="preserve">
+    <value>退院日</value>
+  </data>
+  <data name="xGridCell11.HeaderText" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="grdVisitList.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="xGridCell10.HeaderText" xml:space="preserve">
+    <value>特異事項</value>
+  </data>
+  <data name="tabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 28</value>
+  </data>
+  <data name="xGridCell9.HeaderText" xml:space="preserve">
+    <value>有効期限</value>
+  </data>
+  <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="dbxGaeinNo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 21</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Name" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;dbxJohapName.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tabComment.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="xGridCell4.HeaderText" xml:space="preserve">
+    <value>診療医師</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="grdVisitList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;tabControl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;xGridCell12.Name" xml:space="preserve">
+    <value>xGridCell12</value>
+  </data>
+  <data name="&gt;&gt;dbxTel.Parent" xml:space="preserve">
+    <value>pnlTabTop</value>
+  </data>
+  <data name="&gt;&gt;xGridCell6.Name" xml:space="preserve">
+    <value>xGridCell6</value>
+  </data>
+  <data name="&gt;&gt;pnlTop.Name" xml:space="preserve">
+    <value>pnlTop</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="grdCmmt.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;gbxInsure.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;xGridCell2.Type" xml:space="preserve">
+    <value>IHIS.Framework.XGridCell, IHIS.DbControls, Version=1.0.6033.133, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dbxTel1.Type" xml:space="preserve">
+    <value>IHIS.Framework.XDisplayBox, IHIS.Controls, Version=1.0.6033.133, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;pnlTabTop.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabComment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>647, 237</value>
+  </data>
+  <data name="&gt;&gt;xGridCell10.Type" xml:space="preserve">
+    <value>IHIS.Framework.XGridCell, IHIS.DbControls, Version=1.0.6033.133, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="dbxJohapName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 34</value>
+  </data>
+  <data name="&gt;&gt;grdInsure.Name" xml:space="preserve">
+    <value>grdInsure</value>
+  </data>
+  <data name="grdCmmt.ParamList" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5
+        c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVi
+        bGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAI
+        CAkCAAAAAAAAAAAAAAARAgAAAAAAAAAL
+</value>
+  </data>
+  <data name="gbxInsure.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="xGridCell2.HeaderText" xml:space="preserve">
+    <value>診療科</value>
+  </data>
+  <data name="&gt;&gt;xPanel7.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>372, 102</value>
+  </data>
+  <data name="&gt;&gt;dbxZipCode.Name" xml:space="preserve">
+    <value>dbxZipCode</value>
+  </data>
+  <data name="&gt;&gt;tabVisitList.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;tabNormal.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;dbxZipCode.Type" xml:space="preserve">
+    <value>IHIS.Framework.XDisplayBox, IHIS.Controls, Version=1.0.6033.133, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;grdInsure.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;dbxAddress.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="&gt;&gt;xGridCell11.Type" xml:space="preserve">
+    <value>IHIS.Framework.XGridCell, IHIS.DbControls, Version=1.0.6033.133, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btnClose.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="tabComment.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="dbxGaeinNo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>446, 102</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>Manual</value>
+  </data>
+  <data name="&gt;&gt;xGridCell13.Type" xml:space="preserve">
+    <value>IHIS.Framework.XGridCell, IHIS.DbControls, Version=1.0.6033.133, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;grdVisitList.Name" xml:space="preserve">
+    <value>grdVisitList</value>
+  </data>
+  <data name="&gt;&gt;xGridCell2.Name" xml:space="preserve">
+    <value>xGridCell2</value>
+  </data>
+  <data name="&gt;&gt;dbxZipCode.Parent" xml:space="preserve">
+    <value>pnlTabTop</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 21</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>gbxInsure</value>
+  </data>
+  <data name="&gt;&gt;dbxGaeinNo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;grdInsure.Type" xml:space="preserve">
+    <value>IHIS.Framework.XGrid, IHIS.DbControls, Version=1.0.6033.133, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="pnlTop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>647, 26</value>
+  </data>
+  <data name="pnlTop.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;pnlTabTop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabNormal.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="tabNormal.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;dbxPaInfo.Parent" xml:space="preserve">
+    <value>pnlTop</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>372, 68</value>
+  </data>
+  <data name="&gt;&gt;xGridCell4.Name" xml:space="preserve">
+    <value>xGridCell4</value>
+  </data>
+  <data name="btnClose.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 26</value>
+  </data>
+  <data name="dbxJohapName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>263, 21</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Name" xml:space="preserve">
+    <value>btnClose</value>
+  </data>
+  <data name="tabComment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 25</value>
+  </data>
+  <data name="xGridCell12.HeaderText" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="dbxTel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>69, 36</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 23</value>
+  </data>
+  <data name="dbxTel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 21</value>
+  </data>
+  <data name="tabVisitList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>647, 237</value>
+  </data>
+  <data name="&gt;&gt;dbxPaInfo.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="&gt;&gt;dbxTel.Type" xml:space="preserve">
+    <value>IHIS.Framework.XDisplayBox, IHIS.Controls, Version=1.0.6033.133, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="label4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;xPanel7.Parent" xml:space="preserve">
+    <value>tabComment</value>
+  </data>
+  <data name="&gt;&gt;xGridCell8.Name" xml:space="preserve">
+    <value>xGridCell8</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>gbxInsure</value>
+  </data>
+  <data name="&gt;&gt;btnClose.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dbxTel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>251, 36</value>
+  </data>
+  <data name="&gt;&gt;dbxLastCheckDate.Type" xml:space="preserve">
+    <value>IHIS.Framework.XDisplayBox, IHIS.Controls, Version=1.0.6033.133, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="gbxInsure.Text" xml:space="preserve">
+    <value>保険事項</value>
+  </data>
+  <data name="&gt;&gt;grdVisitList.Type" xml:space="preserve">
+    <value>IHIS.Framework.XGrid, IHIS.DbControls, Version=1.0.6033.133, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>最終確認日</value>
+  </data>
+  <data name="&gt;&gt;xPanel7.Name" xml:space="preserve">
+    <value>xPanel7</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 9.75pt</value>
+  </data>
+  <data name="grdVisitList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>647, 237</value>
+  </data>
+  <data name="&gt;&gt;grdCmmt.Parent" xml:space="preserve">
+    <value>xPanel7</value>
+  </data>
+  <data name="&gt;&gt;dbxTel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="dbxPaInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 2</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>保険者番号</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 14</value>
+  </data>
+  <data name="dbxGaein.Location" type="System.Drawing.Point, System.Drawing">
+    <value>446, 68</value>
+  </data>
+  <data name="grdInsure.QuerySQL" xml:space="preserve">
+    <value>SELECT A.START_DATE
+      ,FN_BAS_LOAD_GUBUN_NAME(A.GUBUN, TRUNC(SYSDATE))  GUBUN_NAME
+      ,A.END_DATE
+      ,A.JOHAP||' '||NVL(B.JOHAP_NAME,' ') JOHAP_NAME
+      ,A.GAEIN
+      ,A.GAEIN_NO
+      ,A.LAST_CHECK_DATE
+  FROM OUT0102 A, BAS0110 B
+ WHERE A.HOSP_CODE = FN_ADM_LOAD_HOSP_CODE()
+   AND A.BUNHO = :f_bunho
+   AND B.HOSP_CODE(+) = A.HOSP_CODE
+   AND B.JOHAP(+) = A.JOHAP
+   AND NVL(A.END_DATE, TRUNC(SYSDATE)) &gt;= TRUNC(SYSDATE)</value>
+  </data>
+  <data name="&gt;&gt;xGridCell3.Name" xml:space="preserve">
+    <value>xGridCell3</value>
+  </data>
+  <data name="dbxAddress.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="&gt;&gt;pnlTop.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="xPanel7.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;dbxLastCheckDate.Name" xml:space="preserve">
+    <value>dbxLastCheckDate</value>
+  </data>
+  <data name="&gt;&gt;dbxAddress.Type" xml:space="preserve">
+    <value>IHIS.Framework.XDisplayBox, IHIS.Controls, Version=1.0.6033.133, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="pnlTop.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="xGridCell1.HeaderText" xml:space="preserve">
+    <value>来院/入院日</value>
+  </data>
+  <data name="&gt;&gt;xGridCell7.Name" xml:space="preserve">
+    <value>xGridCell7</value>
+  </data>
+  <data name="&gt;&gt;grdCmmt.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabVisitList.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButton, IHIS.Controls, Version=1.0.6033.133, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="dbxGaeinNo.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="&gt;&gt;pnlTop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grdCmmt.Name" xml:space="preserve">
+    <value>grdCmmt</value>
+  </data>
+  <data name="&gt;&gt;xGridCell5.Name" xml:space="preserve">
+    <value>xGridCell5</value>
+  </data>
+  <data name="xGridCell7.HeaderText" xml:space="preserve">
+    <value>取得日付</value>
+  </data>
+  <data name="grdCmmt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>647, 237</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 23</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>gbxInsure</value>
+  </data>
+  <data name="&gt;&gt;dbxGaein.Name" xml:space="preserve">
+    <value>dbxGaein</value>
+  </data>
+  <data name="&gt;&gt;dbxJohapName.Type" xml:space="preserve">
+    <value>IHIS.Framework.XDisplayBox, IHIS.Controls, Version=1.0.6033.133, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="tabNormal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>647, 237</value>
+  </data>
+  <data name="&gt;&gt;tabNormal.Name" xml:space="preserve">
+    <value>tabNormal</value>
+  </data>
+  <data name="btnClose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhEAAQAIUAANSuKUKJI/3+sv3liI7wW3bgS/7pj/3pj/31pP3xnVLINP3kiP7tl/38rv7hgf7k
+        iP7tlv32pP7de/7liP38r/7hgv7xnf7dfP72o/3tlvLVkf3hgS6yHf3ynf7ynf3ulv78rlHJM1LJNP37
+        ry6xHP7ggf7adv3adv///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEBAAAh+QQBAAAoACwAAAAAEAAQ
+        AAAIjwBRCBxIsKBAAAgTItRgEAUAAQoTNnwoAKLCiRUrXgxQEACFBg0ojACBEEUAjgMBIMCAIEIEBCcD
+        FAiB0mGHBBYSJPAQgACBAgo4oAQA4UMGBgwg9PwpgsTQAwagRo0JtCaAAQMeDJiwoORJglezbu0KwGRH
+        ABU2lHDgoGRDhwAuSJDg9q1DEyfK2k1Zl2BAADs=
+</value>
+  </data>
+  <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="dbxTel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 21</value>
+  </data>
+  <data name="tabVisitList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 25</value>
+  </data>
+  <data name="&gt;&gt;tabComment.Type" xml:space="preserve">
+    <value>IHIS.X.Magic.Controls.TabPage, IHIS.X.Magic, Version=1.0.6033.132, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xGridCell9.Type" xml:space="preserve">
+    <value>IHIS.Framework.XGridCell, IHIS.DbControls, Version=1.0.6033.133, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="grdInsure.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tabVisitList.Type" xml:space="preserve">
+    <value>IHIS.X.Magic.Controls.TabPage, IHIS.X.Magic, Version=1.0.6033.132, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dbxTel1.Name" xml:space="preserve">
+    <value>dbxTel1</value>
+  </data>
+  <data name="xGridCell8.HeaderText" xml:space="preserve">
+    <value>種別名称</value>
+  </data>
+  <data name="xGridCell3.HeaderText" xml:space="preserve">
+    <value>外来/入院</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>連絡先</value>
+  </data>
+  <data name="&gt;&gt;grdInsure.Parent" xml:space="preserve">
+    <value>gbxInsure</value>
+  </data>
+  <data name="label6.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;xGridCell12.Type" xml:space="preserve">
+    <value>IHIS.Framework.XGridCell, IHIS.DbControls, Version=1.0.6033.133, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tabComment.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;dbxGaein.Parent" xml:space="preserve">
+    <value>gbxInsure</value>
+  </data>
+  <data name="pnlTabTop.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="dbxTel1.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>651, 292</value>
+  </data>
+  <data name="&gt;&gt;gbxInsure.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gbxInsure.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 64</value>
+  </data>
+  <data name="&gt;&gt;dbxJohapName.Name" xml:space="preserve">
+    <value>dbxJohapName</value>
+  </data>
+  <data name="tabControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="grdInsure.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="dbxJohapName.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="btnClose.Text" xml:space="preserve">
+    <value>閉じる</value>
+  </data>
+  <data name="&gt;&gt;dbxPaInfo.Name" xml:space="preserve">
+    <value>dbxPaInfo</value>
+  </data>
+  <data name="gbxInsure.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;xGridCell6.Type" xml:space="preserve">
+    <value>IHIS.Framework.XGridCell, IHIS.DbControls, Version=1.0.6033.133, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;pnlTabTop.Name" xml:space="preserve">
+    <value>pnlTabTop</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>gbxInsure</value>
+  </data>
+  <data name="label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="dbxAddress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>370, 21</value>
+  </data>
+  <data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>647, 262</value>
+  </data>
+  <data name="label3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;xGridCell8.Type" xml:space="preserve">
+    <value>IHIS.Framework.XGridCell, IHIS.DbControls, Version=1.0.6033.133, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tabComment.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;dbxLastCheckDate.Parent" xml:space="preserve">
+    <value>gbxInsure</value>
+  </data>
+  <data name="dbxLastCheckDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>446, 136</value>
+  </data>
+  <data name="&gt;&gt;xGridCell13.Name" xml:space="preserve">
+    <value>xGridCell13</value>
+  </data>
+  <data name="&gt;&gt;pnlTop.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="tabVisitList.Title" xml:space="preserve">
+    <value>来院事項</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="tabNormal.Title" xml:space="preserve">
+    <value>人的/保険事項</value>
+  </data>
+  <data name="dbxLastCheckDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 21</value>
+  </data>
+  <data name="pnlTabTop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Type" xml:space="preserve">
+    <value>IHIS.Framework.XTabControl, IHIS.Controls, Version=1.0.6033.133, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;xGridCell4.Type" xml:space="preserve">
+    <value>IHIS.Framework.XGridCell, IHIS.DbControls, Version=1.0.6033.133, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tabVisitList.Name" xml:space="preserve">
+    <value>tabVisitList</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;xGridCell7.Type" xml:space="preserve">
+    <value>IHIS.Framework.XGridCell, IHIS.DbControls, Version=1.0.6033.133, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="xPanel7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;dbxGaeinNo.Name" xml:space="preserve">
+    <value>dbxGaeinNo</value>
+  </data>
+  <data name="&gt;&gt;pnlTabTop.Parent" xml:space="preserve">
+    <value>tabNormal</value>
+  </data>
+  <data name="dbxTel.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="btnClose.Location" type="System.Drawing.Point, System.Drawing">
+    <value>574, 0</value>
+  </data>
+  <data name="&gt;&gt;xGridCell10.Name" xml:space="preserve">
+    <value>xGridCell10</value>
+  </data>
+  <data name="dbxGaein.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 21</value>
+  </data>
+  <data name="&gt;&gt;dbxPaInfo.Type" xml:space="preserve">
+    <value>IHIS.Framework.XDisplayBox, IHIS.Controls, Version=1.0.6033.133, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 23</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="dbxLastCheckDate.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="xGridCell6.HeaderText" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Japanese (Japan)</value>
+  </metadata>
+</root>

@@ -1,0 +1,283 @@
+<header ng-include="'templates/header.html'"></header>
+<section id="patientSurvey">
+    <div class="leftpanel" ng-include="'templates/left_menu.html'"></div>
+    <div class="mainpanel">
+        <div class="contentpanel">
+            <ol class="breadcrumb breadcrumb-quirk">
+                <li><a href="#/"><i class="fa fa-home mr5"></i>
+                    <translate>Dashboard</translate>
+                </a></li>
+                <li class="active">
+                    <translate>Patient Survey</translate>
+                </li>
+            </ol>
+            <!-- BEGIN Well -->
+            <div id="search-form" class="well well-asset-options clearfix well-form">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <select id="department-select" ng-model="selectedId" data-placeholder="{{'Select department'|translate}}" style="width: 100%" ui-select2>
+                                <option></option>
+                                <option ng-bind="'All' | translate" value="-1"></option>
+                                <option ng-repeat="option in departmentList" value="{{option.department_code}}" ng-selected="option.department_code == selectedId">{{ option.department_name}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <button class="btn btn-success btn-block" ng-click="searchDepartmentSurvey()">
+                            <translate>Search</translate>
+                        </button>
+                    </div>
+                </div>
+            </div><!-- END Well -->
+
+            <!-- BEGIN PANEL -->
+            <div class="panel">
+                <div class="panel-heading">
+                    <div class="clearfix" id="clearfix">
+                        <div class="pull-left">
+                            <h3 class="panel-title">
+                                <h5 class="panel-title mb5">
+                                    <translate>Search result</translate>
+                                </h5>
+                                <p class="mb20">
+                                    <translate>Total <strong class="highlight">{{recordsTotal}}</strong> results</translate>
+                                </p>
+                            </h3>
+                        </div>
+                        <div class="pull-right">
+                            <button class="btn btn-success" ng-click="saveDepartmentSurveyRule()"><!--<i class="fa fa-plus"></i>-->
+                                <translate>Save setting</translate>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <!-- BEGIN Table -->
+                    <div class="table-responsive">
+
+                        <table id="table-result" datatable="" dt-options="dtOptions" dt-columns="dtColumns" dt-column-defs="dtColumnDefs" dt-instance="dtInstance" class="table table-bordered nomargin table-kk ng-isolate-scope no-footer dataTable" style="display: table; width: 1604px;" aria-describedby="table-result_info" role="grid">
+                            <thead>
+                            <tr role="row">
+                                <th class="text-center sorting" tabindex="0" aria-controls="table-result" rowspan="1" colspan="1" style="width: 500px;" aria-label="Khoa khám: activate to sort column ascending">
+                                    <span class="ng-scope"><translate>Department</translate></span>
+                                </th>
+                                <th class="text-center sorting_asc" style="width:150px;" tabindex="0" aria-controls="table-result" rowspan="1" colspan="1" aria-label="Examination type">
+                                    <span class="ng-scope"><translate>Examination type</translate></span>
+                                </th>
+                                <th class="text-center sorting_disabled" style="width:140px;" tabindex="0" aria-controls="table-result" rowspan="1" colspan="1" aria-label="Duration (months)">
+                                    <span class="ng-scope"><translate>Duration</translate></span>
+                                </th>
+                                <th class="text-center sorting_disabled" tabindex="0" aria-controls="table-result" rowspan="1" colspan="1" style="width: 570px;" aria-label="Send Survey">
+                                    <span class="ng-scope"><translate>Send survey</translate></span>
+                                </th>
+                                <th style="width:90px;" class="sorting_disabled" tabindex="0" aria-controls="table-result" rowspan="1" colspan="1" aria-label="&amp;nbsp;">
+                                    &nbsp;
+                                </th>
+                            </tr>
+                            </thead>
+
+                            <tbody ng-repeat="department in surveyRuleList" style="background-color:#5c6ce3 !important;">
+                            <!--<tr>
+                                <td class="text-center" style="vertical-align: middle" rowspan="2">
+                                    {{department.department_name}}
+                                </td>
+                                <td>
+                                    <div>
+                                        <input type="text" style="width: 100%;" value="{{'First examination'| translate }}" class="form-control" readonly/>
+                                    </div>
+                                </td>
+                                <td>
+                                    <input type="text" style="width: 100%;" value="0" class="form-control" required disabled/>
+                                </td>
+                                <td>
+                                    <select name="sendSurvey" class="form-control" id="sendSurvey_{{department.department_code}}_{{$index}}">
+                                        <option ng-repeat="surveyDepartment in surveyDepartmentList" ng-if="surveyDepartment.departmentCode == department.department_code" value="{{surveyDepartment.surveyId}}"
+                                                ng-selected="surveyDepartment.surveyId == survey.survey_id" ng-click="changeSurveyRule(department, survey)">
+                                            {{surveyDepartment.title}}
+                                        </option>
+                                    </select>
+                                </td>
+                                <td></td>
+                            </tr>-->
+
+                            <tr ng-if="department.survey_list == null || department.survey_list.length == 0">
+                                <td class="text-center" style="vertical-align: middle; font-weight: bold; color: #333333" rowspan="{{1}}">
+                                    {{department.department_name}}
+                                </td>
+                                <td>
+                                    <input type="text" style="width: 100%;" value="{{'First examination'| translate }}" class="form-control" readonly/>
+                                </td>
+                                <td>
+                                    <input type="text" style="width: 100%;" value="0" class="form-control" required disabled/>
+                                </td>
+                                <td>
+                                    <select name="sendSurvey" class="form-control" id="sendSurvey_{{department.department_code}}_{{$index}}">
+                                        <option value="0" ng-selected="true" ng-click="changeSurveyRule(department, survey)">-- {{'No survey'| translate }}</option>
+                                        <!--<option ng-repeat="surveyDepartment in surveyDepartmentList" ng-if="surveyDepartment.departmentCode == department.department_code" value="{{surveyDepartment.surveyId}}"
+                                                ng-selected="surveyDepartment.surveyId == survey.survey_id" ng-click="changeSurveyRule(department, survey)">
+                                            {{surveyDepartment.title}}
+                                        </option>-->
+                                        <!--<option ng-repeat="surveyDepartment in surveyDepartmentList" ng-if="surveyDepartment.departmentCode == department.department_code" value="{{surveyDepartment.surveyId}}"
+                                                ng-click="changeSurveyRule(department, survey)">
+                                            {{surveyDepartment.title}}
+                                        </option>-->
+                                    </select>
+                                </td>
+                                <td></td>
+                            </tr>
+
+
+
+
+                            <tr ng-repeat-start="survey in department.survey_list" ng-if="$first">
+                                <!--<td class="text-center" style="vertical-align: middle" rowspan="{{department.survey_list.length + 1}}">-->
+                                <td class="text-center" style="vertical-align: middle; font-weight: bold; color: #333333" rowspan="{{department.survey_list.length}}">
+                                    {{department.department_name}}
+                                </td>
+                                <td>
+                                    <div ng-if="survey.examination_type == 1">
+                                        <input type="text" style="width: 100%;" value="{{'First examination'| translate }}" class="form-control" readonly/>
+                                    </div>
+                                    <div ng-if="survey.examination_type == 2">
+                                        <input type="text" style="width: 100%;" value="{{'Reexamination'| translate }}" class="form-control" readonly/>
+                                    </div>
+                                </td>
+                                <td>
+                                    <input type="text" style="width: 100%;" ng-model="survey.duration" class="form-control" required disabled/>
+                                </td>
+                                <td>
+                                    <select name="sendSurvey" class="form-control" id="sendSurvey_{{department.department_code}}_{{$index}}">
+                                        <!--<select name="sendSurvey" class="form-control" id="sendSurvey_{{department.department_code}}_{{$index}}" ng-change="changeSurveyRule2(department, survey)">-->
+                                        <option value="0" ng-selected="0 == survey.survey_id" ng-click="changeSurveyRule2()">-- {{'No survey'| translate }}</option>
+                                        <option ng-repeat="surveyDepartment in surveyDepartmentList" ng-if="surveyDepartment.departmentCode == department.department_code" value="{{surveyDepartment.surveyId}}"
+                                                ng-selected="surveyDepartment.surveyId == survey.survey_id" ng-click="changeSurveyRule2()">
+                                            {{surveyDepartment.title}}
+                                        </option>
+                                    </select>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr ng-repeat-end ng-if="!$first">
+                                <td style="border-left: 1px solid #ffffff;">
+                                    <div ng-if="survey.examination_type == 1">
+                                        <input type="text" style="width: 100%;" value="First examination" class="form-control" readonly/>
+                                    </div>
+                                    <div ng-if="survey.examination_type == 2">
+                                        <input type="text" style="width: 100%;" value="{{'Reexamination'| translate }}" class="form-control" readonly/>
+                                    </div>
+                                </td>
+                                <td>
+                                    <input type="text" style="width: 100%;" ng-model="survey.duration" id="duration_{{department.department_code}}_{{survey.survey_rule_id}}" ng-change="changeDuration(department, survey, $index)" class="form-control" required min="0" max="60" ng-pattern="/^[0-9]{1,7}$/"/>
+                                </td>
+                                <td>
+                                    <select name="singleSelect" class="form-control" id="sendSurvey_{{department.department_code}}_{{$index}}">
+                                        <option value="0" ng-selected="0 == survey.survey_id" ng-click="changeSurveyRule2()">-- {{'No survey'| translate }}</option>
+                                        <option ng-repeat="surveyDepartment in surveyDepartmentList" ng-if="surveyDepartment.departmentCode == department.department_code" value="{{surveyDepartment.surveyId}}"
+                                                ng-selected="surveyDepartment.surveyId == survey.survey_id">
+                                            {{surveyDepartment.title}}
+                                        </option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <!--<button ng-click="deleteSendSurvey($index, department, survey)" class="btn btn-danger btn-xs btn-status act285">
+                                        <span class="ng-scope"><translate>Delete setting</translate></span>
+                                    </button>-->
+                                    <button ng-click="confirmSettingSurrvey($index, department, survey)" class="btn btn-danger btn-xs btn-status act285">
+                                        <span class="ng-scope"><translate>Delete setting</translate></span>
+                                    </button>
+                                    <div class="modal bounceIn animated modal-kk" id="setting-delete" tabindex="-1" role="dialog"
+                                         aria-labelledby="question-delete" aria-hidden="FALSE">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                    <h4 class="modal-title" id="survey-delete-title">
+                                                        <translate>Delete this survey setting</translate>
+                                                    </h4>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <div class="form-group">
+                                                        <input type="hidden" id="hd_idx" value=""/>
+                                                        <input type="hidden" id="hd_department_code" value=""/>
+                                                        <input type="hidden" id="hd_survey_rule_id" value=""/>
+                                                        <!--<button class="btn btn-danger" ng-click="deleteSendSurvey($index, department, survey);">-->
+                                                        <button class="btn btn-danger" ng-click="deleteSendSurvey2();">
+                                                            <translate>Delete</translate>
+                                                        </button>
+                                                        <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">
+                                                            <translate>Cancel</translate>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!--<tr ng-if="department.survey_list !== null && department.survey_list.length > 0">-->
+                            <tr>
+                                <!--<tr>-->
+                                <!--<td colspan="2"></td>-->
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td align="right">
+                                    <button class="btn btn-info btn-xs" ng-click="addSetting(department)">
+                                        <i class="fa fa-plus"></i>&nbsp;
+                                        <span class="ng-scope"><translate>Add setting</translate></span>
+                                    </button>
+                                </td>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div><!-- END Table -->
+                </div>
+            </div><!-- END PANEL -->
+
+            <!-- content goes here... -->
+
+        </div><!-- contentpanel -->
+    </div><!-- mainpanel -->
+</section>
+<style>
+    #table-result_wrapper table {
+        width: 100% !important;
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('.dataTables_empty').parent().parent().remove();
+
+        var scope = angular.element($("#patientSurvey")).scope();
+        if (scope.dtInstance) {
+            scope.dtInstance.rerender();
+        }
+
+        var localStorage = window.localStorage.getItem('cms.hospitalObj');
+        var hospitalToObj = $.parseJSON(localStorage);
+        var locale = hospitalToObj.data.locale.toLowerCase();
+        if (typeof(locale) != 'undefined') {
+            var languageDate = locale;
+        } else {
+            languageDate = 'ja';
+        }
+
+        // Formating return data for datatable
+        function formatRepo(repo) {
+            if (repo.loading) return repo.name;
+            var res = '<span>' + repo.name + '</span>';
+            return res;
+        }
+
+        function formatRepoSelection(repo) {
+            if (repo.id === '') { // adjust for custom placeholder values
+                return 'Select patient';
+            }
+            return repo.patient_code || repo.name;
+        }
+    });
+</script>

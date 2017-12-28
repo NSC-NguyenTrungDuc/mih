@@ -1,0 +1,741 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnAllCopyAndNewGroupPaste.Text" xml:space="preserve">
+    <value>New copy</value>
+  </data>
+  <data name="btnAllCopyAndNewGroupPaste.ToolTip" xml:space="preserve">
+    <value>Copies all the order of the current group to the new group. (Please select a date if there is a desired date.)</value>
+  </data>
+  <data name="btnDoOrder.Text" xml:space="preserve">
+    <value>Do Order</value>
+  </data>
+  <data name="btnHope_date.Text" xml:space="preserve">
+    <value>Dates bulk</value>
+  </data>
+  <data name="btnInsert.Text" xml:space="preserve">
+    <value>Order entry</value>
+  </data>
+  <data name="btnNewSelect.Text" xml:space="preserve">
+    <value>Add group</value>
+  </data>
+  <data name="btnNextDay.Text" xml:space="preserve">
+    <value>next time</value>
+  </data>
+  <data name="btnSelect.Text" xml:space="preserve">
+    <value>add to</value>
+  </data>
+  <data name="btnSetOrder.Text" xml:space="preserve">
+    <value>Set Order</value>
+  </data>
+  <data name="btnSpecificComment.Text" xml:space="preserve">
+    <value>Request</value>
+  </data>
+  <data name="rbnOftenOrder.Text" xml:space="preserve">
+    <value>Regular order</value>
+  </data>
+  <data name="rbnSearchOrder.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="rbnOftenOrder.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="rbnSlipHangmog.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="rbnCommon.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="xLabel2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="cboQueryCon.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="txtSearch.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="cboSearchCondition.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+
+  <data name="xLabel5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 8.75pt</value>
+  </data>
+  <data name="rbnSearchOrder.Text" xml:space="preserve">
+    <value>Order Search</value>
+  </data>
+  <data name="rbnSlipHangmog.Text" xml:space="preserve">
+    <value>Inspection by Kind</value>
+  </data>
+  <data name="xComboItem1.DisplayItem" xml:space="preserve">
+    <value>Overall</value>
+  </data>
+  <data name="xComboItem2.DisplayItem" xml:space="preserve">
+    <value>Hosp drugs</value>
+  </data>
+  <data name="xComboItem3.DisplayItem" xml:space="preserve">
+    <value>Generation</value>
+  </data>
+  <data name="xComboItem4.DisplayItem" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="xComboItem5.DisplayItem" xml:space="preserve">
+    <value>Approval</value>
+  </data>
+  <data name="xComboItem6.DisplayItem" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="xEditGridCell1.HeaderText" xml:space="preserve">
+    <value>child_yn</value>
+  </data>
+  <data name="xEditGridCell188.HeaderText" xml:space="preserve">
+    <value>slip_code</value>
+  </data>
+  <data name="xEditGridCell189.HeaderText" xml:space="preserve">
+    <value>position</value>
+  </data>
+  <data name="xEditGridCell19.HeaderText" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="xEditGridCell190.HeaderText" xml:space="preserve">
+    <value>seq</value>
+  </data>
+  <data name="xEditGridCell191.HeaderText" xml:space="preserve">
+    <value>Item code</value>
+  </data>
+  <data name="xEditGridCell192.HeaderText" xml:space="preserve">
+    <value>item name</value>
+  </data>
+  <data name="xEditGridCell193.HeaderText" xml:space="preserve">
+    <value>Specimen</value>
+  </data>
+  <data name="xEditGridCell194.HeaderText" xml:space="preserve">
+    <value>group_yn</value>
+  </data>
+  <data name="xEditGridCell195.HeaderText" xml:space="preserve">
+    <value>bulyong_check</value>
+  </data>
+  <data name="xEditGridCell196.HeaderText" xml:space="preserve">
+    <value>specimen_base</value>
+  </data>
+  <data name="xEditGridCell197.HeaderText" xml:space="preserve">
+    <value>emergency</value>
+  </data>
+  <data name="xEditGridCell198.HeaderText" xml:space="preserve">
+    <value>Choice</value>
+  </data>
+  <data name="xEditGridCell21.HeaderText" xml:space="preserve">
+    <value>Order name</value>
+  </data>
+  <data name="xEditGridCell29.HeaderText" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="xEditGridCell31.HeaderText" xml:space="preserve">
+    <value>Order name</value>
+  </data>
+  <data name="xEditGridCell32.HeaderText" xml:space="preserve">
+    <value>Foreign
+Acts department </value>
+  </data>
+  <data name="xEditGridCell34.HeaderText" xml:space="preserve">
+    <value>memb</value>
+  </data>
+  <data name="xEditGridCell35.HeaderText" xml:space="preserve">
+    <value>yaksok_code</value>
+  </data>
+  <data name="xEditGridCell351.HeaderText" xml:space="preserve">
+    <value>pkocskey</value>
+  </data>
+  <data name="xEditGridCell358.HeaderText" xml:space="preserve">
+    <value>bunho</value>
+  </data>
+  <data name="xEditGridCell359.HeaderText" xml:space="preserve">
+    <value>in_out_key</value>
+  </data>
+  <data name="xEditGridCell360.HeaderText" xml:space="preserve">
+    <value>order_date</value>
+  </data>
+  <data name="xEditGridCell361.HeaderText" xml:space="preserve">
+    <value>order_time</value>
+  </data>
+  <data name="xEditGridCell362.HeaderText" xml:space="preserve">
+    <value>gwa</value>
+  </data>
+  <data name="xEditGridCell363.HeaderText" xml:space="preserve">
+    <value>doctor</value>
+  </data>
+  <data name="xEditGridCell364.HeaderText" xml:space="preserve">
+    <value>resident</value>
+  </data>
+  <data name="xEditGridCell365.HeaderText" xml:space="preserve">
+    <value>naewon_type</value>
+  </data>
+  <data name="xEditGridCell366.HeaderText" xml:space="preserve">
+    <value>input_id</value>
+  </data>
+  <data name="xEditGridCell367.HeaderText" xml:space="preserve">
+    <value>input_part</value>
+  </data>
+  <data name="xEditGridCell368.HeaderText" xml:space="preserve">
+    <value>input_gwa</value>
+  </data>
+  <data name="xEditGridCell369.HeaderText" xml:space="preserve">
+    <value>input_doctor</value>
+  </data>
+  <data name="xEditGridCell37.HeaderText" xml:space="preserve">
+    <value>Hospital
+Acts dept </value>
+  </data>
+  <data name="xEditGridCell370.HeaderText" xml:space="preserve">
+    <value>input_gubun</value>
+  </data>
+  <data name="xEditGridCell371.HeaderText" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="xEditGridCell372.HeaderText" xml:space="preserve">
+    <value>G
+R </value>
+  </data>
+  <data name="xEditGridCell373.HeaderText" xml:space="preserve">
+    <value>input_tab</value>
+  </data>
+  <data name="xEditGridCell374.HeaderText" xml:space="preserve">
+    <value>input_tab_name</value>
+  </data>
+  <data name="xEditGridCell375.HeaderText" xml:space="preserve">
+    <value>order_gubun</value>
+  </data>
+  <data name="xEditGridCell376.HeaderText" xml:space="preserve">
+    <value>Order Type</value>
+  </data>
+  <data name="xEditGridCell377.HeaderText" xml:space="preserve">
+    <value>group_yn</value>
+  </data>
+  <data name="xEditGridCell378.HeaderText" xml:space="preserve">
+    <value>seq</value>
+  </data>
+  <data name="xEditGridCell379.HeaderText" xml:space="preserve">
+    <value>slip_code</value>
+  </data>
+  <data name="xEditGridCell380.HeaderText" xml:space="preserve">
+    <value>Order code</value>
+  </data>
+  <data name="xEditGridCell384.HeaderText" xml:space="preserve">
+    <value>Order name</value>
+  </data>
+  <data name="xEditGridCell385.HeaderText" xml:space="preserve">
+    <value>Item</value>
+  </data>
+  <data name="xEditGridCell386.HeaderText" xml:space="preserve">
+    <value>Item name</value>
+  </data>
+  <data name="xEditGridCell387.HeaderText" xml:space="preserve">
+    <value>quantity</value>
+  </data>
+  <data name="xEditGridCell388.HeaderText" xml:space="preserve">
+    <value>sunab_suryang</value>
+  </data>
+  <data name="xEditGridCell389.HeaderText" xml:space="preserve">
+    <value>subul_suryang</value>
+  </data>
+  <data name="xEditGridCell39.HeaderText" xml:space="preserve">
+    <value>donbog_yn</value>
+  </data>
+  <data name="xEditGridCell390.HeaderText" xml:space="preserve">
+    <value>ord_danui</value>
+  </data>
+  <data name="xEditGridCell391.HeaderText" xml:space="preserve">
+    <value>unit</value>
+  </data>
+  <data name="xEditGridCell392.HeaderText" xml:space="preserve">
+    <value>DV type</value>
+  </data>
+  <data name="xEditGridCell393.HeaderText" xml:space="preserve">
+    <value>Times</value>
+  </data>
+  <data name="xEditGridCell394.HeaderText" xml:space="preserve">
+    <value>dv_1</value>
+  </data>
+  <data name="xEditGridCell395.HeaderText" xml:space="preserve">
+    <value>dv_2</value>
+  </data>
+  <data name="xEditGridCell396.HeaderText" xml:space="preserve">
+    <value>dv_3</value>
+  </data>
+  <data name="xEditGridCell397.HeaderText" xml:space="preserve">
+    <value>dv_4</value>
+  </data>
+  <data name="xEditGridCell398.HeaderText" xml:space="preserve">
+    <value>Days</value>
+  </data>
+  <data name="xEditGridCell399.HeaderText" xml:space="preserve">
+    <value>sunab_nalsu</value>
+  </data>
+  <data name="xEditGridCell40.HeaderText" xml:space="preserve">
+    <value>order_gubun_bas_name</value>
+  </data>
+  <data name="xEditGridCell400.HeaderText" xml:space="preserve">
+    <value>injection</value>
+  </data>
+  <data name="xEditGridCell401.HeaderText" xml:space="preserve">
+    <value>Inj name</value>
+  </data>
+  <data name="xEditGridCell402.HeaderText" xml:space="preserve">
+    <value>Ml
+hr </value>
+  </data>
+  <data name="xEditGridCell403.HeaderText" xml:space="preserve">
+    <value>Usage code</value>
+  </data>
+  <data name="xEditGridCell404.HeaderText" xml:space="preserve">
+    <value>Usage name</value>
+  </data>
+  <data name="xEditGridCell405.HeaderText" xml:space="preserve">
+    <value>Frettage
+Sudden</value>
+  </data>
+  <data name="xEditGridCell406.HeaderText" xml:space="preserve">
+    <value>jaeryo_jundal_yn</value>
+  </data>
+  <data name="xEditGridCell407.HeaderText" xml:space="preserve">
+    <value>jundal_table</value>
+  </data>
+  <data name="xEditGridCell408.HeaderText" xml:space="preserve">
+    <value>action
+Department</value>
+  </data>
+  <data name="xEditGridCell409.HeaderText" xml:space="preserve">
+    <value>move_part</value>
+  </data>
+  <data name="xEditGridCell41.HeaderText" xml:space="preserve">
+    <value>specific_comment_pgm_id</value>
+  </data>
+  <data name="xEditGridCell410.HeaderText" xml:space="preserve">
+    <value>Move
+Shooting </value>
+  </data>
+  <data name="xEditGridCell411.HeaderText" xml:space="preserve">
+    <value>powder
+Crushed </value>
+  </data>
+  <data name="xEditGridCell412.HeaderText" xml:space="preserve">
+    <value>Subsequent
+No </value>
+  </data>
+  <data name="xEditGridCell413.HeaderText" xml:space="preserve">
+    <value>Easy
+Easy </value>
+  </data>
+  <data name="xEditGridCell414.HeaderText" xml:space="preserve">
+    <value>one
+Wrapped </value>
+  </data>
+  <data name="xEditGridCell415.HeaderText" xml:space="preserve">
+    <value>Nothing
+Efficiency </value>
+  </data>
+  <data name="xEditGridCell416.HeaderText" xml:space="preserve">
+    <value>P
+R
+N </value>
+  </data>
+  <data name="xEditGridCell417.HeaderText" xml:space="preserve">
+    <value>Withdrawal
+/
+Outside </value>
+  </data>
+  <data name="xEditGridCell418.HeaderText" xml:space="preserve">
+    <value>prn_nurse</value>
+  </data>
+  <data name="xEditGridCell419.HeaderText" xml:space="preserve">
+    <value>append_yn</value>
+  </data>
+  <data name="xEditGridCell42.HeaderText" xml:space="preserve">
+    <value>specific_comment_not_null</value>
+  </data>
+  <data name="xEditGridCell420.HeaderText" xml:space="preserve">
+    <value>comment</value>
+  </data>
+  <data name="xEditGridCell421.HeaderText" xml:space="preserve">
+    <value>Nurse
+Comment </value>
+  </data>
+  <data name="xEditGridCell422.HeaderText" xml:space="preserve">
+    <value>mix_group</value>
+  </data>
+  <data name="xEditGridCell423.HeaderText" xml:space="preserve">
+    <value>Money</value>
+  </data>
+  <data name="xEditGridCell424.HeaderText" xml:space="preserve">
+    <value>Claim
+Classification </value>
+  </data>
+  <data name="xEditGridCell425.HeaderText" xml:space="preserve">
+    <value>Council
+Outside </value>
+  </data>
+  <data name="xEditGridCell426.HeaderText" xml:space="preserve">
+    <value>On the day
+Enforcement </value>
+  </data>
+  <data name="xEditGridCell427.HeaderText" xml:space="preserve">
+    <value>Solstice
+Sudden</value>
+  </data>
+  <data name="xEditGridCell428.HeaderText" xml:space="preserve">
+    <value>bom_occur_yn</value>
+  </data>
+  <data name="xEditGridCell429.HeaderText" xml:space="preserve">
+    <value>bom_source_key</value>
+  </data>
+  <data name="xEditGridCell43.HeaderText" xml:space="preserve">
+    <value>specific_comment_table_id</value>
+  </data>
+  <data name="xEditGridCell430.HeaderText" xml:space="preserve">
+    <value>display_yn</value>
+  </data>
+  <data name="xEditGridCell431.HeaderText" xml:space="preserve">
+    <value>sunab_yn</value>
+  </data>
+  <data name="xEditGridCell432.HeaderText" xml:space="preserve">
+    <value>sunab_date</value>
+  </data>
+  <data name="xEditGridCell433.HeaderText" xml:space="preserve">
+    <value>sunab_time</value>
+  </data>
+  <data name="xEditGridCell434.HeaderText" xml:space="preserve">
+    <value>Preferred date</value>
+  </data>
+  <data name="xEditGridCell435.HeaderText" xml:space="preserve">
+    <value>Hope
+time</value>
+  </data>
+  <data name="xEditGridCell436.HeaderText" xml:space="preserve">
+    <value>nurse_confirm_user</value>
+  </data>
+  <data name="xEditGridCell437.HeaderText" xml:space="preserve">
+    <value>nurse_confirm_date</value>
+  </data>
+  <data name="xEditGridCell438.HeaderText" xml:space="preserve">
+    <value>nurse_confirm_time</value>
+  </data>
+  <data name="xEditGridCell439.HeaderText" xml:space="preserve">
+    <value>nurse_pickup_user</value>
+  </data>
+  <data name="xEditGridCell44.HeaderText" xml:space="preserve">
+    <value>specific_comment_col_id</value>
+  </data>
+  <data name="xEditGridCell440.HeaderText" xml:space="preserve">
+    <value>nurse_pickup_date</value>
+  </data>
+  <data name="xEditGridCell441.HeaderText" xml:space="preserve">
+    <value>nurse_pickup_time</value>
+  </data>
+  <data name="xEditGridCell442.HeaderText" xml:space="preserve">
+    <value>nurse_hold_user</value>
+  </data>
+  <data name="xEditGridCell443.HeaderText" xml:space="preserve">
+    <value>nurse_hold_date</value>
+  </data>
+  <data name="xEditGridCell444.HeaderText" xml:space="preserve">
+    <value>nurse_hold_time</value>
+  </data>
+  <data name="xEditGridCell445.HeaderText" xml:space="preserve">
+    <value>reser_date</value>
+  </data>
+  <data name="xEditGridCell446.HeaderText" xml:space="preserve">
+    <value>reser_time</value>
+  </data>
+  <data name="xEditGridCell447.HeaderText" xml:space="preserve">
+    <value>jubsu_date</value>
+  </data>
+  <data name="xEditGridCell448.HeaderText" xml:space="preserve">
+    <value>jubsu_time</value>
+  </data>
+  <data name="xEditGridCell449.HeaderText" xml:space="preserve">
+    <value>acting_date</value>
+  </data>
+  <data name="xEditGridCell45.HeaderText" xml:space="preserve">
+    <value>act_doctor</value>
+  </data>
+  <data name="xEditGridCell450.HeaderText" xml:space="preserve">
+    <value>acting_time</value>
+  </data>
+  <data name="xEditGridCell451.HeaderText" xml:space="preserve">
+    <value>acting_day</value>
+  </data>
+  <data name="xEditGridCell452.HeaderText" xml:space="preserve">
+    <value>result_date</value>
+  </data>
+  <data name="xEditGridCell453.HeaderText" xml:space="preserve">
+    <value>Return
+Indication </value>
+  </data>
+  <data name="xEditGridCell454.HeaderText" xml:space="preserve">
+    <value>dc_yn</value>
+  </data>
+  <data name="xEditGridCell455.HeaderText" xml:space="preserve">
+    <value>bannab_yn</value>
+  </data>
+  <data name="xEditGridCell456.HeaderText" xml:space="preserve">
+    <value>bannab_confirm</value>
+  </data>
+  <data name="xEditGridCell457.HeaderText" xml:space="preserve">
+    <value>source_ord_key</value>
+  </data>
+  <data name="xEditGridCell458.HeaderText" xml:space="preserve">
+    <value>ocs_flag</value>
+  </data>
+  <data name="xEditGridCell459.HeaderText" xml:space="preserve">
+    <value>sg_code</value>
+  </data>
+  <data name="xEditGridCell46.HeaderText" xml:space="preserve">
+    <value>act_buseo</value>
+  </data>
+  <data name="xEditGridCell460.HeaderText" xml:space="preserve">
+    <value>sg_ymd</value>
+  </data>
+  <data name="xEditGridCell461.HeaderText" xml:space="preserve">
+    <value>io_gubun</value>
+  </data>
+  <data name="xEditGridCell464.HeaderText" xml:space="preserve">
+    <value>after_act_yn</value>
+  </data>
+  <data name="xEditGridCell465.HeaderText" xml:space="preserve">
+    <value>Distribution
+Location </value>
+  </data>
+  <data name="xEditGridCell466.HeaderText" xml:space="preserve">
+    <value>drg_bunho</value>
+  </data>
+  <data name="xEditGridCell467.HeaderText" xml:space="preserve">
+    <value>sub_susul</value>
+  </data>
+  <data name="xEditGridCell468.HeaderText" xml:space="preserve">
+    <value>print_yn</value>
+  </data>
+  <data name="xEditGridCell469.HeaderText" xml:space="preserve">
+    <value>chisik</value>
+  </data>
+  <data name="xEditGridCell47.HeaderText" xml:space="preserve">
+    <value>act_gwa</value>
+  </data>
+  <data name="xEditGridCell470.HeaderText" xml:space="preserve">
+    <value>sanmo_fkinp1001</value>
+  </data>
+  <data name="xEditGridCell471.HeaderText" xml:space="preserve">
+    <value>TEL</value>
+  </data>
+  <data name="xEditGridCell472.HeaderText" xml:space="preserve">
+    <value>order_gubun_bas</value>
+  </data>
+  <data name="xEditGridCell473.HeaderText" xml:space="preserve">
+    <value>input_control</value>
+  </data>
+  <data name="xEditGridCell474.HeaderText" xml:space="preserve">
+    <value>suga_yn</value>
+  </data>
+  <data name="xEditGridCell475.HeaderText" xml:space="preserve">
+    <value>jaeryo_yn</value>
+  </data>
+  <data name="xEditGridCell476.HeaderText" xml:space="preserve">
+    <value>wonyoi_check</value>
+  </data>
+  <data name="xEditGridCell477.HeaderText" xml:space="preserve">
+    <value>emergency_check</value>
+  </data>
+  <data name="xEditGridCell478.HeaderText" xml:space="preserve">
+    <value>specimen_check</value>
+  </data>
+  <data name="xEditGridCell479.HeaderText" xml:space="preserve">
+    <value>portable_check</value>
+  </data>
+  <data name="xEditGridCell48.HeaderText" xml:space="preserve">
+    <value>Jae
+home</value>
+  </data>
+  <data name="xEditGridCell480.HeaderText" xml:space="preserve">
+    <value>bulyong_check</value>
+  </data>
+  <data name="xEditGridCell481.HeaderText" xml:space="preserve">
+    <value>sunab_check</value>
+  </data>
+  <data name="xEditGridCell482.HeaderText" xml:space="preserve">
+    <value>dc_check</value>
+  </data>
+  <data name="xEditGridCell483.HeaderText" xml:space="preserve">
+    <value>dc_gubun_check</value>
+  </data>
+  <data name="xEditGridCell484.HeaderText" xml:space="preserve">
+    <value>confirm_check</value>
+  </data>
+  <data name="xEditGridCell485.HeaderText" xml:space="preserve">
+    <value>reser_yn_out</value>
+  </data>
+  <data name="xEditGridCell486.HeaderText" xml:space="preserve">
+    <value>chisik_check</value>
+  </data>
+  <data name="xEditGridCell487.HeaderText" xml:space="preserve">
+    <value>nday_yn</value>
+  </data>
+  <data name="xEditGridCell488.HeaderText" xml:space="preserve">
+    <value>default_jaeryo_jundal_yn</value>
+  </data>
+  <data name="xEditGridCell489.HeaderText" xml:space="preserve">
+    <value>default_wonyoi_order_yn</value>
+  </data>
+  <data name="xEditGridCell49.HeaderText" xml:space="preserve">
+    <value>Constant
+Time</value>
+  </data>
+  <data name="xEditGridCell490.HeaderText" xml:space="preserve">
+    <value>specific_comments</value>
+  </data>
+  <data name="xEditGridCell491.HeaderText" xml:space="preserve">
+    <value>specific_comment_name</value>
+  </data>
+  <data name="xEditGridCell492.HeaderText" xml:space="preserve">
+    <value>specific_comment_sys_id</value>
+  </data>
+  <data name="xEditGridCell493.HeaderText" xml:space="preserve">
+    <value>specific_comment_sys_id</value>
+  </data>
+  <data name="xEditGridCell5.HeaderText" xml:space="preserve">
+    <value>if_input_control</value>
+  </data>
+  <data name="xEditGridCell53.HeaderText" xml:space="preserve">
+    <value>sort_fkocskey</value>
+  </data>
+  <data name="xEditGridCell56.HeaderText" xml:space="preserve">
+    <value>Generation</value>
+  </data>
+  <data name="xEditGridCell57.HeaderText" xml:space="preserve">
+    <value>Approval</value>
+  </data>
+  <data name="xLabel2.Text" xml:space="preserve">
+    <value>Hosp adoption</value>
+  </data>
+  <data name="xLabel3.Text" xml:space="preserve">
+    <value>emergency</value>
+  </data>
+  <data name="xLabel5.Text" xml:space="preserve">
+    <value>Search term</value>
+  </data>
+</root>

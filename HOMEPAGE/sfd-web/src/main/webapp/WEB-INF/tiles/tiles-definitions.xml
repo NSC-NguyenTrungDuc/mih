@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<definition name="Default.Web" template="/WEB-INF/jsp/front/layout/layout-default.jsp">		
+		<put-attribute name="menu" value="/WEB-INF/jsp/front/layout/menu.jsp" />
+		<put-attribute name="header" value="/WEB-INF/jsp/front/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/front/layout/footer.jsp" />
+		<put-attribute name="menu-sub-title" value=""/>
+		
+		<put-list-attribute name="js">
+			<add-attribute value="/assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js" />
+			<add-attribute value="/assets/js/vendor/jquery-1.11.2.min.js" />
+			<add-attribute value="/assets/js/vendor/bootstrap.min.js" />
+			<add-attribute value="/assets/js/scrollReveal.min.js" />
+			<add-attribute value="/assets/js/responsive-img.min.js" />
+			<add-attribute value="/assets/js/jquery.mmenu.min.all.js" />
+			<add-attribute value="/assets/js/jquery.idTabs.min.js" />
+			<add-attribute value="/assets/js/main.js" />
+			<add-attribute value="/assets/js/error-script.js" />
+		</put-list-attribute>
+		<put-list-attribute name="css">
+			<add-attribute value="/assets/css/bootstrap.min.css" />
+			<add-attribute value="/assets/css/bootstrap-theme.min.css" />
+			<add-attribute value="/assets/css/font-awesome.min.css" />
+			<add-attribute value="/assets/css/animate.css" />
+			<add-attribute value="/assets/css/jquery.mmenu.all.css" />
+			<add-attribute value="/assets/css/main.css" />
+		</put-list-attribute>
+	</definition>
+
+	<definition name="Default.Web.Inner" template="/WEB-INF/jsp/front/layout/layout-inner.jsp">
+
+		<put-attribute name="menu-sub-title" value=""/>
+
+		<put-list-attribute name="js">
+		</put-list-attribute>
+		<put-list-attribute name="css">
+			<add-attribute value="/assets/css/bootstrap.min.css" />
+			<add-attribute value="/assets/css/bootstrap-theme.min.css" />
+			<add-attribute value="/assets/css/font-awesome.min.css" />
+			<add-attribute value="/assets/css/animate.css" />
+			<add-attribute value="/assets/css/jquery.mmenu.all.css" />
+			<add-attribute value="/assets/css/main.css" />
+		</put-list-attribute>
+	</definition>
+
+	<definition name="Default.Homepage" template="/WEB-INF/jsp/front/layout/layout-homepage.jsp">
+		<put-attribute name="menu" value="/WEB-INF/jsp/front/layout/menu.jsp" />		
+		<put-attribute name="header" value="/WEB-INF/jsp/front/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/front/layout/footer.jsp" />
+		
+		<put-list-attribute name="js">
+			<add-attribute value="/assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js" />
+			<add-attribute value="/assets/js/vendor/jquery-1.11.2.min.js" />
+			<add-attribute value="/assets/js/vendor/bootstrap.min.js" />
+			<add-attribute value="/assets/js/scrollReveal.min.js" />
+			<add-attribute value="/assets/js/responsive-img.min.js" />
+			<add-attribute value="/assets/js/jquery.mmenu.min.all.js" />
+			<add-attribute value="/assets/js/jquery.idTabs.min.js" />
+			<add-attribute value="/assets/js/main.js" />
+		</put-list-attribute>
+		<put-list-attribute name="css">
+			<add-attribute value="/assets/css/bootstrap.min.css" />
+			<add-attribute value="/assets/css/bootstrap-theme.min.css" />
+			<add-attribute value="/assets/css/font-awesome.min.css" />
+			<add-attribute value="/assets/css/animate.css" />
+			<add-attribute value="/assets/css/jquery.mmenu.all.css" />
+			<add-attribute value="/assets/css/main.css" />
+		</put-list-attribute>
+	</definition>
+	<definition name="Default.Web.phr" template="/WEB-INF/jsp/front/layout/phr_confirmation.jsp">
+
+	</definition>
+	<definition name="index" extends="Default.Homepage">
+        <put-attribute name="body" value="/WEB-INF/jsp/front/view/HP001.jsp"/>
+	</definition>
+	
+	<definition name="service/function-intro" extends="Default.Web">
+		<put-attribute name="menu-main-title" value="hp101.menu.main.title"/>
+		<put-attribute name="menu-sub-title" value="hp101.menu.sub.title"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/front/view/HP101.jsp"/>
+    </definition>
+	<definition name="service/method-procedure-intro" extends="Default.Web">
+		<put-attribute name="menu-main-title" value="hp102.menu.main.title"/>
+		<put-attribute name="menu-sub-title" value="hp102.menu.sub.title"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/front/view/HP102.jsp"/>
+    </definition>
+	<definition name="service/manual-guide" extends="Default.Web">
+		<put-attribute name="menu-main-title" value="hp103.menu.main.title"/>
+		<put-attribute name="menu-sub-title" value="hp103.menu.sub.title"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/front/view/HP103.jsp"/>
+    </definition>
+	<definition name="service/about-connected-peripheral-equipment" extends="Default.Web">
+		<put-attribute name="menu-main-title" value="hp104.menu.main.title"/>
+		<put-attribute name="menu-sub-title" value="hp104.menu.sub.title"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/front/view/HP104.jsp"/>
+    </definition>
+	<definition name="service/registration-for-test" extends="Default.Web">
+		<put-attribute name="menu-main-title" value="hp105.menu.main.title"/>
+		<put-attribute name="menu-sub-current" value="1" />
+        <put-attribute name="body" value="/WEB-INF/jsp/front/view/HP105.jsp"/>
+    </definition>
+
+	<definition name="service/registration-for-test-inner" extends="Default.Web.Inner">
+		<put-attribute name="menu-main-title" value="hp105.menu.main.title"/>
+		<put-attribute name="menu-sub-current" value="1" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/HP105_Inner.jsp"/>
+	</definition>
+
+	<definition name="service/manual-for-test" extends="Default.Web">
+		<put-attribute name="menu-main-title" value="hp106.menu.main.title"/>
+		<put-attribute name="menu-sub-title" value="hp106.menu.sub.title"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/front/view/HP106.jsp"/>
+    </definition>
+	<definition name="service/manual-for-test2" extends="Default.Web">
+		<put-attribute name="menu-main-title" value="hp107.menu.main.title"/>
+		<put-attribute name="menu-sub-title" value="hp107.menu.sub.title"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/front/view/HP107.jsp"/>
+    </definition>
+    <definition name="service/registration-for-test/success" extends="Default.Web">
+    	<put-attribute name="menu-sub-title" value="hp109.menu.sub.title"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/front/view/HP109.jsp"/>
+    </definition>
+
+	<definition name="service/registration-for-test-inner/success" extends="Default.Web.Inner">
+		<put-attribute name="menu-sub-title" value="hp109.menu.sub.title"/>
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/HP109.jsp"/>
+	</definition>
+
+    <definition name="service/registration-complete" extends="Default.Web">
+    	<put-attribute name="menu-sub-title" value="hp108.menu.sub.title.success"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/front/view/HP108.jsp"/>
+    </definition>
+    <definition name="service/expired" extends="Default.Web">
+    	<put-attribute name="menu-sub-title" value="hp108.menu.sub.title.failure"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/front/view/HP108.jsp"/>
+    </definition>
+	<definition name="it-organization/related-medical-agent" extends="Default.Web">
+		<put-attribute name="menu-main-title" value="hp201.menu.main.title"/>
+		<put-attribute name="menu-sub-title" value="hp201.menu.sub.title"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/front/view/HP201.jsp"/>
+    </definition>
+	<definition name="it-organization/trial-service" extends="Default.Web">
+		<put-attribute name="menu-main-title" value="hp202.menu.main.title"/>
+		<put-attribute name="menu-sub-title" value="hp202.menu.sub.title"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/front/view/HP202.jsp"/>
+    </definition>
+	<definition name="it-organization/radiation-system" extends="Default.Web">
+		<put-attribute name="menu-main-title" value="hp203.menu.main.title"/>
+		<put-attribute name="menu-sub-title" value="hp203.menu.sub.title"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/front/view/HP203.jsp"/>
+    </definition>
+	<definition name="it-organization/dispensed-service" extends="Default.Web">
+		<put-attribute name="menu-main-title" value="hp204.menu.main.title"/>
+		<put-attribute name="menu-sub-title" value="hp204.menu.sub.title"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/front/view/HP204.jsp"/>
+    </definition>
+	<definition name="it-organization/contact-us" extends="Default.Web">
+		<put-attribute name="menu-main-title" value="hp205.menu.main.title"/>
+		<put-attribute name="menu-sub-current" value="2" />
+        <put-attribute name="body" value="/WEB-INF/jsp/front/view/HP205.jsp"/>
+    </definition>
+
+	<definition name="it-organization/contact-us-inner" extends="Default.Web.Inner">
+		<put-attribute name="menu-main-title" value="hp205.menu.main.title"/>
+		<put-attribute name="menu-sub-current" value="2" />
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/HP205_Inner.jsp"/>
+	</definition>
+
+    <definition name="it-organization/contact-us/success" extends="Default.Web">
+		<put-attribute name="menu-sub-title" value="hp206.menu.sub.title"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/front/view/HP206.jsp"/>
+    </definition>
+
+	<definition name="it-organization/contact-us-inner/success" extends="Default.Web.Inner">
+		<put-attribute name="menu-sub-title" value="hp206.menu.sub.title"/>
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/HP206.jsp"/>
+	</definition>
+
+	<definition name="to-patient/about-electronic-medical-record" extends="Default.Web">
+		<put-attribute name="menu-main-title" value="hp301.menu.main.title"/>
+		<put-attribute name="menu-sub-title" value="hp301.menu.sub.title"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/front/view/HP301.jsp"/>
+    </definition>
+	<definition name="to-patient/patient-register" extends="Default.Web">
+		<put-attribute name="menu-main-title" value="hp302.menu.main.title"/>
+		<put-attribute name="menu-sub-current" value="3" />
+        <put-attribute name="body" value="/WEB-INF/jsp/front/view/HP302.jsp"/>
+    </definition>
+	<definition name="about-us" extends="Default.Web">
+		<put-attribute name="menu-main-title" value="hp401.menu.main.title"/>
+		<put-attribute name="menu-sub-title" value="hp401.menu.sub.title"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/front/view/HP401.jsp"/>
+    </definition>
+    <definition name="privacy-policy" extends="Default.Web">
+		<put-attribute name="menu-sub-title" value="hp601.menu.sub.title"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/front/view/HP601.jsp"/>
+    </definition>
+    <definition name="guidelines" extends="Default.Web">
+		<put-attribute name="menu-sub-title" value="hp602.menu.sub.title"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/front/view/HP602.jsp"/>
+    </definition>
+
+	<definition name="confirm-phr-account" extends="Default.Web.phr">
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/confirm-phr-account.jsp"/>
+	</definition>
+	<definition name="confirm-phr-password" extends="Default.Web.phr">
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/confirm-phr-password.jsp"/>
+	</definition>
+
+	<definition name="error-phr" extends="Default.Web.phr">
+		<put-attribute name="body" value="/WEB-INF/jsp/front/view/error-phr.jsp"/>
+	</definition>
+
+    <definition name="term-of-service" extends="Default.Web">
+		<put-attribute name="menu-sub-title" value="hp603.menu.sub.title"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/front/view/HP603.jsp"/>
+    </definition>
+    <definition name="error" extends="Default.Web">
+    	<put-attribute name="menu-sub-title" value="error.menu.sub.title"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/front/error/error.jsp"/>
+    </definition>
+    <definition name="page-not-found" extends="Default.Web">
+    	<put-attribute name="menu-sub-title" value="error.menu.sub.title"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/front/error/page-not-found.jsp"/>
+    </definition>
+</tiles-definitions>

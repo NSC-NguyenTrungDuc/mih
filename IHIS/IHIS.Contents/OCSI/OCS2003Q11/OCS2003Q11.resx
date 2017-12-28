@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="ImageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="ImageList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADE
+        CAAAAk1TRnQBSQFMAwEBAAEIAQABKAEAARABAAEQAQAE/wEJARAI/wFCAU0BNgEEBgABNgEEAgABKAMA
+        AUADAAEQAwABAQEAAQgGAAEEGAABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHAAdwBwAEA
+        AfABygGmAQABMwUAATMBAAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANCAQADOQEA
+        AYABfAH/AQACUAH/AQABkwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/ATMDAAFm
+        AwABmQMAAcwCAAEzAwACMwIAATMBZgIAATMBmQIAATMBzAIAATMB/wIAAWYDAAFmATMCAAJmAgABZgGZ
+        AgABZgHMAgABZgH/AgABmQMAAZkBMwIAAZkBZgIAApkCAAGZAcwCAAGZAf8CAAHMAwABzAEzAgABzAFm
+        AgABzAGZAgACzAIAAcwB/wIAAf8BZgIAAf8BmQIAAf8BzAEAATMB/wIAAf8BAAEzAQABMwEAAWYBAAEz
+        AQABmQEAATMBAAHMAQABMwEAAf8BAAH/ATMCAAMzAQACMwFmAQACMwGZAQACMwHMAQACMwH/AQABMwFm
+        AgABMwFmATMBAAEzAmYBAAEzAWYBmQEAATMBZgHMAQABMwFmAf8BAAEzAZkCAAEzAZkBMwEAATMBmQFm
+        AQABMwKZAQABMwGZAcwBAAEzAZkB/wEAATMBzAIAATMBzAEzAQABMwHMAWYBAAEzAcwBmQEAATMCzAEA
+        ATMBzAH/AQABMwH/ATMBAAEzAf8BZgEAATMB/wGZAQABMwH/AcwBAAEzAv8BAAFmAwABZgEAATMBAAFm
+        AQABZgEAAWYBAAGZAQABZgEAAcwBAAFmAQAB/wEAAWYBMwIAAWYCMwEAAWYBMwFmAQABZgEzAZkBAAFm
+        ATMBzAEAAWYBMwH/AQACZgIAAmYBMwEAA2YBAAJmAZkBAAJmAcwBAAFmAZkCAAFmAZkBMwEAAWYBmQFm
+        AQABZgKZAQABZgGZAcwBAAFmAZkB/wEAAWYBzAIAAWYBzAEzAQABZgHMAZkBAAFmAswBAAFmAcwB/wEA
+        AWYB/wIAAWYB/wEzAQABZgH/AZkBAAFmAf8BzAEAAcwBAAH/AQAB/wEAAcwBAAKZAgABmQEzAZkBAAGZ
+        AQABmQEAAZkBAAHMAQABmQMAAZkCMwEAAZkBAAFmAQABmQEzAcwBAAGZAQAB/wEAAZkBZgIAAZkBZgEz
+        AQABmQEzAWYBAAGZAWYBmQEAAZkBZgHMAQABmQEzAf8BAAKZATMBAAKZAWYBAAOZAQACmQHMAQACmQH/
+        AQABmQHMAgABmQHMATMBAAFmAcwBZgEAAZkBzAGZAQABmQLMAQABmQHMAf8BAAGZAf8CAAGZAf8BMwEA
+        AZkBzAFmAQABmQH/AZkBAAGZAf8BzAEAAZkC/wEAAcwDAAGZAQABMwEAAcwBAAFmAQABzAEAAZkBAAHM
+        AQABzAEAAZkBMwIAAcwCMwEAAcwBMwFmAQABzAEzAZkBAAHMATMBzAEAAcwBMwH/AQABzAFmAgABzAFm
+        ATMBAAGZAmYBAAHMAWYBmQEAAcwBZgHMAQABmQFmAf8BAAHMAZkCAAHMAZkBMwEAAcwBmQFmAQABzAKZ
+        AQABzAGZAcwBAAHMAZkB/wEAAswCAALMATMBAALMAWYBAALMAZkBAAPMAQACzAH/AQABzAH/AgABzAH/
+        ATMBAAGZAf8BZgEAAcwB/wGZAQABzAH/AcwBAAHMAv8BAAHMAQABMwEAAf8BAAFmAQAB/wEAAZkBAAHM
+        ATMCAAH/AjMBAAH/ATMBZgEAAf8BMwGZAQAB/wEzAcwBAAH/ATMB/wEAAf8BZgIAAf8BZgEzAQABzAJm
+        AQAB/wFmAZkBAAH/AWYBzAEAAcwBZgH/AQAB/wGZAgAB/wGZATMBAAH/AZkBZgEAAf8CmQEAAf8BmQHM
+        AQAB/wGZAf8BAAH/AcwCAAH/AcwBMwEAAf8BzAFmAQAB/wHMAZkBAAH/AswBAAH/AcwB/wEAAv8BMwEA
+        AcwB/wFmAQAC/wGZAQAC/wHMAQACZgH/AQABZgH/AWYBAAFmAv8BAAH/AmYBAAH/AWYB/wEAAv8BZgEA
+        ASEBAAGlAQADXwEAA3cBAAOGAQADlgEAA8sBAAOyAQAD1wEAA90BAAPjAQAD6gEAA/EBAAP4AQAB8AH7
+        Af8BAAGkAqABAAOAAwAB/wIAAf8DAAL/AQAB/wMAAf8BAAH/AQAC/wIAA/8CAAH/AQcCrgH3Af8DAAH1
+        Ae0BZwHtAfUyAAHuAY4DbwH3Af8BAAH/Ae8BjgFpAWgB9wH/MQABjQHjAhcBRgFoAfQBAAH0AY0BlAEX
+        AUYBaAH0MQABjQHjARcBAQE+AWcB9AEAAfQBjQGUAekBAQFnAfQxAAGNAeMBFwJGAW4B9AEAAfQBjgEW
+        AUYBQAFoAfQxAAGNAeMBFwFGAUUBbgH0AQAB9AGOAZQBRgHpAWgB9DEAAY0B4wEXAkUB6wH0AQAB9AGT
+        AZQBRgHpAWcB9DEAAY0B4wIXAUcBbgH0AQAB9AGTAb0BFwFGAW4B9DEAAfcBFgHjAkUBjQH0AQAB9AEH
+        ARsBFgFpAY0B9DEAAbUBlAEWAeMBFwGOAfQBAAH0AQkB9QIZAbsB9DEAAQkC8wK9AQkB9AEAAfQBCQH1
+        AhkBCQH0MQABCQH0Av8B9QEJAfQBAAH0AQkB9QIZAQkB9DAAAbUGCQG7AQABtQEJAd0DCQG0MAAEtQK0
+        ArUBAAG1AgkCtQEJAbUwAAH0Aa4DZgHvAWwB8QEAB/QxAAauAfQ4AAFCAU0BPgcAAT4DAAEoAwABQAMA
+        ARADAAEBAQABAQUAAYAXAAP/AQABgQHBBgACgAYAAoAGAAKABgACgAYAAoAGAAKABgACgAYAAoAGAAKA
+        BgACgAYAAoAHAAGABwABgAcAAYAGAAGAAf8cAAs=
+</value>
+  </data>
+  <metadata name="dataLayoutMIO.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>122, 17</value>
+  </metadata>
+  <data name="dataLayoutMIO.QuerySQL" xml:space="preserve">
+    <value>-- 기본지시
+SELECT '0'            SORT_GUBUN
+     , 'Z'            ORDER_GUBUN
+     , '['||FN_ADM_MSG(3233)||']' ORDER_GUBUN_NAME
+     , A.HO_CODE1     HO_CODE1
+     , A.BUNHO        BUNHO
+     , A.SUNAME       SUNAME
+     , A.SUNAME2      SUNAME2
+     , ''             HANGMOG_CODE
+     , TRIM(B.NUR_MD_NAME)||'-&gt;'||TRIM(REPLACE(REPLACE(C.DIRECT_TEXT,CHR(13),''),CHR(10),'')) HANGMOG_NAME -- 지시명
+     , ''             INPUT_GUBUN
+     , ''             INPUT_GUBUN_NAME
+     , C.PK_SEQ       PKOCS2003
+     , ''             COMMENTS
+  FROM OCS2005 C        -- 기본지시
+     , NUR0111 B
+     , VW_OCS_INP1001 A -- 재원 정보
+ WHERE A.BUNHO          = C.BUNHO
+   AND A.HOSP_CODE      = C.HOSP_CODE
+   AND A.HO_DONG1       = :f_ho_dong
+   AND A.HOSP_CODE      = :f_hosp_code
+   AND A.HO_CODE1 IN (SELECT D.HO_CODE
+                      FROM BAS0250 D
+                     WHERE D.HO_DONG     = A.HO_DONG1
+                       AND TRUNC(SYSDATE) BETWEEN D.START_DATE AND D.END_DATE
+                       AND D.HOSP_CODE   = A.HOSP_CODE
+                       AND D.HO_CODE IN (SELECT F.HO_CODE
+                                           FROM NUR0104 F
+                                          WHERE F.HO_DONG      = D.HO_DONG
+                                            AND F.HO_SESSION   = :f_session
+                                            AND F.HO_TEAM      = :f_ho_team
+                                            AND F.HOSP_CODE    = :f_hosp_code
+                                            AND F.JUKYONG_DATE = (SELECT MAX(G.JUKYONG_DATE)
+                                                                    FROM NUR0104 G
+                                                                   WHERE G.HO_DONG      = F.HO_DONG
+                                                                     AND G.HO_CODE      = F.HO_CODE
+                                                                     AND G.HO_SESSION   = F.HO_SESSION
+                                                                     AND G.HOSP_CODE    = F.HOSP_CODE
+                                                                     AND G.JUKYONG_DATE &lt;= TRUNC(SYSDATE)))
+                   )
+   AND B.NUR_MD_CODE    = C.DIRECT_CODE
+   AND B.HOSP_CODE      = C.HOSP_CODE
+   AND NVL(B.WORKLIST_DISP_YN,'N') = 'Y'
+   ------------------------------------------------------------
+   AND C.ORDER_DATE  = TO_DATE(:f_order_date, 'YYYY/MM/DD')
+   ------------------------------------------------------------
+UNION
+-- 기본지시
+SELECT '0'            SORT_GUBUN
+     , 'Z'            ORDER_GUBUN
+     , '['||FN_ADM_MSG(3233)||']' ORDER_GUBUN_NAME
+     , A.HO_CODE1     HO_CODE1
+     , A.BUNHO        BUNHO
+     , A.SUNAME       SUNAME
+     , A.SUNAME2      SUNAME2
+     , ''             HANGMOG_CODE
+     , TRIM(D.NUR_MD_NAME)||'-&gt;'||TRIM(REPLACE(REPLACE(B.DIRECT_TEXT,CHR(13),''),CHR(10),'')) HANGMOG_NAME -- 지시명
+     , ''             INPUT_GUBUN
+     , ''             INPUT_GUBUN_NAME
+     , B.PK_SEQ       PKOCS2003
+     , '' COMMENTS
+  FROM OCS6010 C
+     , OCS6015 B
+     , NUR0111 D
+     , VW_OCS_INP1001 A -- 재원 정보
+ WHERE :f_order_date       &gt; TRUNC(SYSDATE)
+   AND A.HO_DONG1          = :f_ho_dong
+   AND A.HOSP_CODE         = :f_hosp_code
+   AND A.HO_CODE1 IN (SELECT E.HO_CODE
+                        FROM BAS0250 E
+                       WHERE E.HO_DONG     = A.HO_DONG1
+                         AND TRUNC(SYSDATE) BETWEEN E.START_DATE AND E.END_DATE
+                         AND E.HOSP_CODE   = A.HOSP_CODE
+                         AND E.HO_CODE IN (SELECT G.HO_CODE
+                                             FROM NUR0104 G
+                                            WHERE G.HO_DONG      = E.HO_DONG
+                                              AND G.HO_SESSION   = :f_session
+                                              AND G.HO_TEAM      = :f_ho_team
+                                              AND G.HOSP_CODE    = E.HOSP_CODE
+                                              AND G.JUKYONG_DATE = (SELECT MAX(H.JUKYONG_DATE)
+                                                                      FROM NUR0104 H
+                                                                     WHERE H.HO_DONG      = G.HO_DONG
+                                                                       AND H.HO_CODE      = G.HO_CODE
+                                                                       AND H.HO_SESSION   = G.HO_SESSION
+                                                                       AND H.HOSP_CODE    = G.HOSP_CODE
+                                                                       AND H.JUKYONG_DATE &lt;= TRUNC(SYSDATE)))
+                   )
+   AND A.PKINP1001         = C.FKINP1001
+   AND A.HOSP_CODE         = C.HOSP_CODE
+   AND B.FKOCS6010         = C.PKOCS6010
+   AND B.HOSP_CODE         = C.HOSP_CODE
+   AND B.DIRECT_CODE       = D.NUR_MD_CODE
+   AND B.HOSP_CODE         = D.HOSP_CODE
+   AND B.PLAN_FROM_DATE   &lt;= :f_order_date
+   AND NVL(D.WORKLIST_DISP_YN,'N') = 'Y'
+   AND NVL(B.PLAN_TO_DATE, TO_DATE('99991231', 'YYYYMMDD'))
+                           &gt;= DECODE(SIGN( TO_DATE(:f_order_date, 'YYYY/MM/DD') - TRUNC(SYSDATE)),
+                            1, TO_DATE(:f_order_date, 'YYYY/MM/DD')
+                             , TRUNC(SYSDATE ) + 1)
+UNION
+-- 처치 데이타
+SELECT '1'            SORT_GUBUN
+     , SUBSTR(C.ORDER_GUBUN,2,1) ORDER_GUBUN
+     , '['||FN_OCS_LOAD_CODE_NAME('ORDER_GUBUN_BAS', SUBSTR(C.ORDER_GUBUN,2,1))||']' ORDER_GUBUN_NAME
+     , A.HO_CODE1     HO_CODE1
+     , A.BUNHO        BUNHO
+     , A.SUNAME       SUNAME
+     , A.SUNAME2      SUNAME2
+     , C.HANGMOG_CODE HANGMOG_CODE
+     , D.HANGMOG_NAME HANGMOG_NAME
+     , C.INPUT_GUBUN  INPUT_GUBUN
+     , FN_OCS_LOAD_CODE_NAME('INPUT_GUBUN_DISP', C.INPUT_GUBUN) INPUT_GUBUN_NAME
+     , C.PKOCS2003    PKOCS2003
+     , DECODE(TRIM(C.NURSE_REMARK), NULL, NULL,FN_ADM_MSG(3123)||C.NURSE_REMARK) COMMENTS
+  FROM OCS0103 D        -- 항목 마스터
+     , OCS2003 C        -- 입원 처방
+     , VW_OCS_INP1001 A -- 재원 정보
+ WHERE A.PKINP1001      = C.FKINP1001
+   AND A.BUNHO          = C.BUNHO
+   AND A.HOSP_CODE      = C.HOSP_CODE
+   AND A.HO_DONG1       = :f_ho_dong
+   AND A.HOSP_CODE      = :f_hosp_code
+   AND A.HO_CODE1 IN (SELECT E.HO_CODE
+                      FROM BAS0250 E
+                     WHERE E.HO_DONG     = A.HO_DONG1
+                       AND TRUNC(SYSDATE) BETWEEN E.START_DATE AND E.END_DATE
+                       AND E.HOSP_CODE   = A.HOSP_CODE
+                       AND E.HO_CODE IN (SELECT G.HO_CODE
+                                           FROM NUR0104 G
+                                          WHERE G.HO_DONG      = E.HO_DONG
+                                            AND G.HO_SESSION   = :f_session
+                                            AND G.HO_TEAM      = :f_ho_team
+                                            AND G.HOSP_CODE    = E.HOSP_CODE
+                                            AND G.JUKYONG_DATE = (SELECT MAX(H.JUKYONG_DATE)
+                                                                    FROM NUR0104 H
+                                                                   WHERE H.HO_DONG      = G.HO_DONG
+                                                                     AND H.HO_CODE      = G.HO_CODE
+                                                                     AND H.HO_SESSION   = G.HO_SESSION
+                                                                     AND H.HOSP_CODE    = G.HOSP_CODE
+                                                                     AND H.JUKYONG_DATE &lt;= TRUNC(SYSDATE)))
+                   )
+   ------------------------------------------------------------
+   AND C.ORDER_DATE     = TO_DATE(:f_order_date, 'YYYY/MM/DD')
+   AND (C.INPUT_GUBUN LIKE 'D%' OR C.INPUT_GUBUN = 'NR')
+   AND SUBSTR(C.ORDER_GUBUN,2,1) IN('H','K') -- 처치,재료
+   ------------------------------------------------------------
+   AND NVL(C.DC_YN,'N') = 'N'
+   AND C.NALSU          &gt; 0
+   AND C.NURSE_CONFIRM_DATE IS NOT NULL
+   AND C.HANGMOG_CODE = D.HANGMOG_CODE(+)
+   AND C.HOSP_CODE    = D.HOSP_CODE   (+)
+ UNION
+-- 당일 검사들
+SELECT '2'            SORT_GUBUN
+     , SUBSTR(C.ORDER_GUBUN,2,1) ORDER_GUBUN
+     , '['||FN_ADM_MSG(3131)||'-'||
+        FN_OCS_LOAD_CODE_NAME('ORDER_GUBUN_BAS', SUBSTR(C.ORDER_GUBUN,2,1))||']' ORDER_GUBUN_NAME
+     , A.HO_CODE1     HO_CODE1
+     , A.BUNHO        BUNHO
+     , A.SUNAME       SUNAME
+     , A.SUNAME2      SUNAME2
+     , C.HANGMOG_CODE HANGMOG_CODE
+     , D.HANGMOG_NAME HANGMOG_NAME
+     , C.INPUT_GUBUN  INPUT_GUBUN
+     , FN_OCS_LOAD_CODE_NAME('INPUT_GUBUN_DISP', C.INPUT_GUBUN) INPUT_GUBUN_NAME
+     , C.PKOCS2003    PKOCS2003
+     -- 간호Comment, 시행여부, 이동촬영, 응급
+     , DECODE(TRIM(C.NURSE_REMARK), NULL, NULL, FN_ADM_MSG(3123)||C.NURSE_REMARK)||
+       DECODE(C.ACTING_DATE,          NULL, '', '['||FN_ADM_MSG(3132)||']')||
+       DECODE(NVL(C.PORTABLE_YN,'N'), 'N',  '', '['||FN_OCS_LOAD_CODE_NAME('PORTABLE_YN',C.PORTABLE_YN)||']')||
+       DECODE(NVL(C.EMERGENCY,'N'),   'N',  '', '['||FN_ADM_MSG(3134)||']') COMMENTS
+  FROM OCS0103 D        -- 항목 마스터
+     , OCS2003 C        -- 입원 처방
+     , VW_OCS_INP1001 A -- 재원 정보
+ WHERE A.PKINP1001      = C.FKINP1001
+   AND A.BUNHO          = C.BUNHO
+   AND A.HOSP_CODE      = C.HOSP_CODE
+   AND A.HO_DONG1       = :f_ho_dong
+   AND A.HOSP_CODE      = :f_hosp_code
+   AND A.HO_CODE1 IN (SELECT E.HO_CODE
+                      FROM BAS0250 E
+                     WHERE E.HO_DONG     = A.HO_DONG1
+                       AND TRUNC(SYSDATE) BETWEEN E.START_DATE AND E.END_DATE
+                       AND E.HOSP_CODE   = A.HOSP_CODE
+                       AND E.HO_CODE IN (SELECT G.HO_CODE
+                                           FROM NUR0104 G
+                                          WHERE G.HO_DONG      = E.HO_DONG
+                                            AND G.HO_SESSION   = :f_session
+                                            AND G.HO_TEAM      = :f_ho_team
+                                            AND G.HOSP_CODE    = E.HOSP_CODE
+                                            AND G.JUKYONG_DATE = (SELECT MAX(H.JUKYONG_DATE)
+                                                                    FROM NUR0104 H
+                                                                   WHERE H.HO_DONG      = G.HO_DONG
+                                                                     AND H.HO_CODE      = G.HO_CODE
+                                                                     AND H.HO_SESSION   = G.HO_SESSION
+                                                                     AND H.HOSP_CODE    = G.HOSP_CODE
+                                                                     AND H.JUKYONG_DATE &lt;= TRUNC(SYSDATE)))
+                   )
+   ------------------------------------------------------------
+   AND C.ORDER_DATE     = TO_DATE(:f_order_date, 'YYYY/MM/DD')
+   AND (C.INPUT_GUBUN LIKE 'D%' OR C.INPUT_GUBUN = 'NR')
+   AND SUBSTR(C.ORDER_GUBUN,2,1) IN ('E', 'F', 'I')  -- 화상진단,방사선,리허빌리
+   AND C.RESER_DATE IS NULL
+   ------------------------------------------------------------
+   AND NVL(C.DC_YN,'N') = 'N'
+   AND C.NALSU          &gt; 0
+   AND C.NURSE_CONFIRM_DATE IS NOT NULL
+   AND C.HANGMOG_CODE = D.HANGMOG_CODE(+)
+   AND C.HOSP_CODE    = D.HOSP_CODE   (+)
+UNION
+-- 2일 앞까지의 예약 검사들
+SELECT '3'            SORT_GUBUN
+     , SUBSTR(C.ORDER_GUBUN,2,1) ORDER_GUBUN
+     , '['||FN_ADM_MSG(3135)||'-'||
+        FN_OCS_LOAD_CODE_NAME('ORDER_GUBUN_BAS', SUBSTR(C.ORDER_GUBUN,2,1))||']' ORDER_GUBUN_NAME
+     , A.HO_CODE1     HO_CODE1
+     , A.BUNHO        BUNHO
+     , A.SUNAME       SUNAME
+     , A.SUNAME2      SUNAME2
+     , C.HANGMOG_CODE HANGMOG_CODE
+     , D.HANGMOG_NAME HANGMOG_NAME
+     , C.INPUT_GUBUN  INPUT_GUBUN
+     , FN_OCS_LOAD_CODE_NAME('INPUT_GUBUN_DISP', C.INPUT_GUBUN) INPUT_GUBUN_NAME
+     , C.PKOCS2003    PKOCS2003
+     -- 간호Comment, [예약-예약일자], 시행여부, 이동촬영, 응급
+     , DECODE(TRIM(C.NURSE_REMARK), NULL, NULL, FN_ADM_MSG(3123)||C.NURSE_REMARK)||
+       '['||FN_ADM_MSG(3135)||'-'||TO_CHAR(FN_SCH_LOAD_RESER_DATE('I',C.PKOCS2003),'YYYY/MM/DD HH:MI')||']'||
+       DECODE(C.ACTING_DATE,          NULL, '', '['||FN_ADM_MSG(3132)||']')||
+       DECODE(NVL(C.PORTABLE_YN,'N'), 'N',  '', '['||FN_OCS_LOAD_CODE_NAME('PORTABLE_YN',C.PORTABLE_YN)||']')||
+       DECODE(NVL(C.EMERGENCY,'N'),   'N',  '', '['||FN_ADM_MSG(3134)||']') COMMENTS
+  FROM OCS0103 D        -- 항목 마스터
+     , OCS2003 C        -- 입원 처방
+     , VW_OCS_INP1001 A -- 재원 정보
+ WHERE A.PKINP1001      = C.FKINP1001
+   AND A.BUNHO          = C.BUNHO
+   AND A.HOSP_CODE      = C.HOSP_CODE
+   AND A.HO_DONG1       = :f_ho_dong
+   AND A.HOSP_CODE      = :f_hosp_code
+   AND A.HO_CODE1 IN (SELECT E.HO_CODE
+                      FROM BAS0250 E
+                     WHERE E.HO_DONG     = A.HO_DONG1
+                       AND TRUNC(SYSDATE) BETWEEN E.START_DATE AND E.END_DATE
+                       AND E.HOSP_CODE   = A.HOSP_CODE
+                       AND E.HO_CODE IN (SELECT G.HO_CODE
+                                           FROM NUR0104 G
+                                          WHERE G.HO_DONG      = E.HO_DONG
+                                            AND G.HO_SESSION   = :f_session
+                                            AND G.HO_TEAM      = :f_ho_team
+                                            AND G.HOSP_CODE    = E.HOSP_CODE
+                                            AND G.JUKYONG_DATE = (SELECT MAX(H.JUKYONG_DATE)
+                                                                    FROM NUR0104 H
+                                                                   WHERE H.HO_DONG      = G.HO_DONG
+                                                                     AND H.HO_CODE      = G.HO_CODE
+                                                                     AND H.HO_SESSION   = G.HO_SESSION
+                                                                     AND H.HOSP_CODE    = G.HOSP_CODE
+                                                                     AND H.JUKYONG_DATE &lt;= TRUNC(SYSDATE)))
+                   )
+   AND (
+         C.RESER_DATE = TO_DATE(:f_order_date, 'YYYY/MM/DD')      OR
+         C.RESER_DATE = TO_DATE(:f_order_date, 'YYYY/MM/DD') + 1 OR
+         C.RESER_DATE = TO_DATE(:f_order_date, 'YYYY/MM/DD') + 2
+       )
+   AND (C.INPUT_GUBUN LIKE 'D%' OR C.INPUT_GUBUN = 'NR')
+   AND SUBSTR(C.ORDER_GUBUN,2,1) IN ('E', 'F', 'I') -- 화상진단,방사선,리허빌리
+   AND C.RESER_DATE IS NOT NULL
+   ------------------------------------------------------------
+   AND NVL(C.DC_YN,'N') = 'N'
+   AND C.NALSU          &gt; 0
+   AND C.NURSE_CONFIRM_DATE IS NOT NULL
+   AND C.HANGMOG_CODE = D.HANGMOG_CODE(+)
+   AND C.HOSP_CODE    = D.HOSP_CODE   (+)
+ UNION
+-- TPN/항암제
+SELECT '4'            SORT_GUBUN
+     , 'Z'            ORDER_GUBUN
+    , DECODE(NVL(C.ANTI_CANCER_YN,'N'),'Y','['||FN_ADM_MSG(3131)||']')
+                      ORDER_GUBUN_NAME
+--              DECODE(NVL(C.TPN_YN,'N'), 'Y','[TPN]')) ORDER_GUBUN_NAME
+     , A.HO_CODE1     HO_CODE1
+     , A.BUNHO        BUNHO
+     , A.SUNAME       SUNAME
+     , A.SUNAME2      SUNAME2
+     , C.HANGMOG_CODE HANGMOG_CODE
+     , D.HANGMOG_NAME HANGMOG_NAME
+     , C.INPUT_GUBUN  INPUT_GUBUN
+     , FN_OCS_LOAD_CODE_NAME('INPUT_GUBUN_DISP', C.INPUT_GUBUN) INPUT_GUBUN_NAME
+     , C.PKOCS2003    PKOCS2003
+     , DECODE(TRIM(C.NURSE_REMARK), NULL, NULL, FN_ADM_MSG(3123)||C.NURSE_REMARK) COMMENTS
+  FROM OCS0103 D        -- 항목 마스터
+     , OCS2003 C        -- 입원 처방
+     , VW_OCS_INP1001 A -- 재원 정보
+ WHERE A.PKINP1001      = C.FKINP1001
+   AND A.BUNHO          = C.BUNHO
+   AND A.HOSP_CODE      = C.HOSP_CODE
+   AND A.HO_DONG1       = :f_ho_dong
+   AND A.HOSP_CODE      = :f_hosp_code
+   AND A.HO_CODE1 IN (SELECT E.HO_CODE
+                      FROM BAS0250 E
+                     WHERE E.HO_DONG     = A.HO_DONG1
+                       AND TRUNC(SYSDATE) BETWEEN E.START_DATE AND E.END_DATE
+                       AND E.HOSP_CODE   = A.HOSP_CODE
+                       AND E.HO_CODE IN (SELECT G.HO_CODE
+                                           FROM NUR0104 G
+                                          WHERE G.HO_DONG      = E.HO_DONG
+                                            AND G.HO_SESSION   = :f_session
+                                            AND G.HO_TEAM      = :f_ho_team
+                                            AND G.HOSP_CODE    = E.HOSP_CODE
+                                            AND G.JUKYONG_DATE = (SELECT MAX(H.JUKYONG_DATE)
+                                                                    FROM NUR0104 H
+                                                                   WHERE H.HO_DONG      = G.HO_DONG
+                                                                     AND H.HO_CODE      = G.HO_CODE
+                                                                     AND H.HO_SESSION   = G.HO_SESSION
+                                                                     AND H.HOSP_CODE    = G.HOSP_CODE
+                                                                     AND H.JUKYONG_DATE &lt;= TRUNC(SYSDATE)))
+                   )
+   ------------------------------------------------------------
+   AND C.ORDER_DATE     = TO_DATE(:f_order_date, 'YYYY/MM/DD')
+   AND (C.INPUT_GUBUN LIKE 'D%' OR C.INPUT_GUBUN = 'NR')
+   ------------------------------------------------------------
+   AND NVL(C.DC_YN,'N') = 'N'
+   AND C.NALSU          &gt; 0
+   AND C.NURSE_CONFIRM_DATE IS NOT NULL 
+   AND C.HANGMOG_CODE = D.HANGMOG_CODE(+)
+   AND C.HOSP_CODE    = D.HOSP_CODE   (+)
+ UNION
+-- 수술예정
+SELECT '5'            SORT_GUBUN
+     , 'Z'            ORDER_GUBUN
+    , '['||FN_ADM_MSG(3137)||']' ORDER_GUBUN_NAME
+     , A.HO_CODE1     HO_CODE1
+     , A.BUNHO        BUNHO
+     , A.SUNAME       SUNAME
+     , A.SUNAME2      SUNAME2
+     , ''             HANGMOG_CODE
+     , NVL(TRIM(C.POST_OP_NAME1),TRIM(C.PRE_OP_NAME1)) HANGMOG_NAME -- 수술명
+     , ''             INPUT_GUBUN
+     , ''             INPUT_GUBUN_NAME
+     , C.PKOPR1001    PKOCS2003
+     -- 수술예정일, 종료여부
+     , '['||FN_ADM_MSG(3137)||'-'||TO_CHAR(C.OP_RESER_DATE,'YYYYMMDD')||']'||
+       DECODE(NVL(C.OP_END_YN,'N'), 'N',  '', '['||FN_ADM_MSG(3138)||']') COMMENTS
+  FROM OPR1001 C        -- 수술 예정
+     , VW_OCS_INP1001 A -- 재원 정보
+ WHERE A.BUNHO          = C.BUNHO
+   AND A.HOSP_CODE      = C.HOSP_CODE
+   AND A.HO_DONG1       = :f_ho_dong
+   AND A.HOSP_CODE      = :f_hosp_code
+   AND A.HO_CODE1 IN (SELECT E.HO_CODE
+                      FROM BAS0250 E
+                     WHERE E.HO_DONG     = A.HO_DONG1
+                       AND TRUNC(SYSDATE) BETWEEN E.START_DATE AND E.END_DATE
+                       AND E.HOSP_CODE   = A.HOSP_CODE
+                       AND E.HO_CODE IN (SELECT G.HO_CODE
+                                           FROM NUR0104 G
+                                          WHERE G.HO_DONG      = E.HO_DONG
+                                            AND G.HO_SESSION   = :f_session
+                                            AND G.HO_TEAM      = :f_ho_team
+                                            AND G.HOSP_CODE    = E.HOSP_CODE
+                                            AND G.JUKYONG_DATE = (SELECT MAX(H.JUKYONG_DATE)
+                                                                    FROM NUR0104 H
+                                                                   WHERE H.HO_DONG      = G.HO_DONG
+                                                                     AND H.HO_CODE      = G.HO_CODE
+                                                                     AND H.HO_SESSION   = G.HO_SESSION
+                                                                     AND H.HOSP_CODE    = G.HOSP_CODE
+                                                                     AND H.JUKYONG_DATE &lt;= TRUNC(SYSDATE)))
+                   )
+   ------------------------------------------------------------
+   AND C.OP_RESER_DATE  = TO_DATE(:f_order_date, 'YYYY/MM/DD')
+   ------------------------------------------------------------
+ ORDER BY 1, 2, 4, 5, 8, 10, 12</value>
+  </data>
+  <metadata name="layQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>260, 17</value>
+  </metadata>
+  <data name="layQuery.QuerySQL" xml:space="preserve">
+    <value>SELECT A.BUNHO             ,
+       A.SUNAME            ,
+       A.HO_CODE           ,
+       A.FKINP1001         ,
+       A.FKOCS6010         ,
+       A.CP_NAME           ,
+       A.ORDER_DATE        ,
+       A.ORDER_END_DATE    ,
+       A.INPUT_GUBUN       ,
+       A.INPUT_GUBUN_NAME  ,
+       A.ORDER_GUBUN       ,
+       A.ORDER_GUBUN_NAME  ,
+       A.HANGMOG_CODE      ,
+       A.HANGMOG_NAME      ,
+       A.SURYANG           ,
+       A.NALSU             ,
+       A.DETAIL            ,
+       A.ORDER_REMARK      ,
+       A.NURSE_REMARK      ,
+       A.TEL_YN            ,
+       A.EMERGENCY         ,
+       A.JUSA_NAME         ,
+       A.BOGYONG_NAME      ,
+       A.JAEWONIL          ,
+       A.PK                ,
+       A.GROUP_SER         ,
+       A.MIX_GROUP         ,
+       A.TABLE_ID          ,
+       A.CONFIRM_YN        ,
+       A.ACTING_YN         ,
+       A.CAN_PLAN_CHANGE_YN,
+       A.CAN_CONFIRM_YN    ,
+       A.CAN_ACTING_YN     ,
+       A.CAN_PLAN_APP_YN   ,
+       A.INPUT_NAME        ,
+       A.INPUT_SEQ         ,
+       A.CONFIRM_NAME      ,
+       A.INJ_ACT_YN        ,
+       A.BULYONG_CHECK     ,
+       A.CONT_KEY
+  FROM (SELECT A.BUNHO                                       BUNHO             ,
+               I.SUNAME                                      SUNAME            ,
+               I.HO_CODE1 ||  '号室'                 HO_CODE           ,
+               A.FKINP1001                                   FKINP1001         ,
+               0                                             FKOCS6010         ,
+               NULL                                          CP_NAME           ,
+               (CASE WHEN SUBSTR(A.ORDER_GUBUN, 2, 1) IN ('F', 'E')
+                     THEN NVL(A.ACTING_DATE, NVL(A.RESER_DATE, NVL(A.HOPE_DATE, A.ORDER_DATE)))
+                     ELSE NVL(A.RESER_DATE, NVL(A.HOPE_DATE, A.ORDER_DATE)) END )
+                                                                     ORDER_DATE        ,
+               (CASE WHEN SUBSTR(A.ORDER_GUBUN, 2, 1) IN ('F', 'E')
+                     THEN NVL(A.ACTING_DATE, NVL(A.RESER_DATE, NVL(A.HOPE_DATE, A.ORDER_DATE)))
+                     ELSE NVL(A.RESER_DATE, NVL(A.HOPE_DATE, A.ORDER_DATE)) END )
+                                                                     ORDER_END_DATE    ,
+               A.INPUT_GUBUN                                 INPUT_GUBUN       ,
+               E.CODE_NAME                                   INPUT_GUBUN_NAME  ,
+               SUBSTR(A.ORDER_GUBUN, 2, 1)                   ORDER_GUBUN       ,
+               FN_OCS_LOAD_CODE_NAME('ORDER_GUBUN_BAS', SUBSTR(A.ORDER_GUBUN, 2, 1) )
+                                                                     ORDER_GUBUN_NAME  ,
+               A.HANGMOG_CODE                                HANGMOG_CODE      ,
+               DECODE(A.BANNAB_YN, 'Y', '['||TRIM(FN_ADM_MSG(3142))||']', DECODE(SIGN(A.NALSU), -1, '['||TRIM(FN_ADM_MSG(3154))||']', DECODE( A.DC_GUBUN, 'Y', '['||TRIM(FN_ADM_MSG(3239))||']', '')))||
+               (CASE WHEN A.PORTABLE_YN = '0' THEN '['||TRIM(FN_ADM_MSG(3488))||']'
+                     WHEN A.PORTABLE_YN = '1' THEN '['||TRIM(FN_ADM_MSG(3489))||']'
+                     ELSE '' END )||
+               C.HANGMOG_NAME                                HANGMOG_NAME      ,
+               A.SURYANG                                     SURYANG           ,
+               A.NALSU                                       NALSU             ,
+               (CASE WHEN C.INPUT_CONTROL = '1' THEN DECODE(SUBSTR(LTRIM(TO_CHAR(A.SURYANG)), 1, 1), '.', '0'||LTRIM(TO_CHAR(A.SURYANG)), LTRIM(TO_CHAR(A.SURYANG)))
+                     WHEN C.INPUT_CONTROL = 'C' THEN DECODE(SUBSTR(LTRIM(TO_CHAR(A.SURYANG)), 1, 1), '.', '0'||LTRIM(TO_CHAR(A.SURYANG)), LTRIM(TO_CHAR(A.SURYANG)))
+                     WHEN C.INPUT_CONTROL = '2' THEN DECODE(SUBSTR(LTRIM(TO_CHAR(A.SURYANG)), 1, 1), '.', '0'||LTRIM(TO_CHAR(A.SURYANG)), LTRIM(TO_CHAR(A.SURYANG)))
+                     WHEN C.INPUT_CONTROL = '3' THEN DECODE(SUBSTR(LTRIM(TO_CHAR(A.SURYANG)), 1, 1), '.', '0'||LTRIM(TO_CHAR(A.SURYANG)), LTRIM(TO_CHAR(A.SURYANG)))
+                     WHEN C.INPUT_CONTROL = '6' THEN DECODE(SUBSTR(LTRIM(TO_CHAR(A.SURYANG)), 1, 1), '.', '0'||LTRIM(TO_CHAR(A.SURYANG)), LTRIM(TO_CHAR(A.SURYANG)))
+                     WHEN C.INPUT_CONTROL = '7' THEN DECODE(SUBSTR(LTRIM(TO_CHAR(A.SURYANG)), 1, 1), '.', '0'||LTRIM(TO_CHAR(A.SURYANG)), LTRIM(TO_CHAR(A.SURYANG)))
+                    ELSE '' END)                              ||
+               (CASE WHEN C.ORDER_GUBUN         = 'K' THEN FN_OCS_LOAD_CODE_NAME('ORD_DANUI', A.ORD_DANUI)
+                     WHEN C.INPUT_CONTROL       = '1' THEN FN_OCS_LOAD_CODE_NAME('ORD_DANUI', A.ORD_DANUI)
+                     WHEN C.INPUT_CONTROL       = 'C' THEN FN_OCS_LOAD_CODE_NAME('ORD_DANUI', A.ORD_DANUI)
+                     WHEN C.INPUT_CONTROL       = '2' THEN FN_OCS_LOAD_CODE_NAME('ORD_DANUI', A.ORD_DANUI)
+                     WHEN C.INPUT_CONTROL       = '3' AND NVL(D.BUN_CODE, 'XX') = 'T2'
+                     THEN FN_ADM_MSG(3185)
+                     WHEN C.INPUT_CONTROL       = '3' THEN FN_ADM_MSG(3182)
+                     WHEN C.INPUT_CONTROL       = '6'
+                     THEN DECODE(FN_OCS_LOAD_CODE_NAME('ORD_DANUI', A.ORD_DANUI), '', FN_ADM_MSG(3186), FN_OCS_LOAD_CODE_NAME('ORD_DANUI', A.ORD_DANUI))
+                     WHEN C.INPUT_CONTROL       = '7'
+                     THEN DECODE(FN_OCS_LOAD_CODE_NAME('ORD_DANUI', A.ORD_DANUI), '', FN_ADM_MSG(3186), FN_OCS_LOAD_CODE_NAME('ORD_DANUI', A.ORD_DANUI))
+                     ELSE '' END )                            ||
+               (CASE WHEN C.INPUT_CONTROL = '1' THEN FN_OCS_LOAD_CODE_NAME('DV_TIME', A.DV_TIME)
+                     WHEN C.INPUT_CONTROL = '2' THEN FN_OCS_LOAD_CODE_NAME('DV_TIME', A.DV_TIME)
+                     ELSE '' END )                            ||
+               (CASE WHEN C.INPUT_CONTROL = '1' THEN TRIM(TO_CHAR(A.DV, '99'))
+                     WHEN C.INPUT_CONTROL = '2' THEN TRIM(TO_CHAR(A.DV, '99'))
+                     ELSE '' END )                            ||
+               (CASE WHEN C.INPUT_CONTROL = '1' THEN '  '||DECODE(A.NALSU, 1, '', LTRIM(TO_CHAR(A.NALSU, '9999'))||FN_ADM_MSG(3184))
+                     WHEN C.INPUT_CONTROL = '2' THEN '  '||DECODE(A.NALSU, 1, '', LTRIM(TO_CHAR(A.NALSU, '9999'))||FN_ADM_MSG(3184))
+                     WHEN C.INPUT_CONTROL = '3' THEN '  '||LTRIM(TO_CHAR(A.NALSU, '9999'))||FN_ADM_MSG(3183)
+                     WHEN C.INPUT_CONTROL = '7' THEN '  '||DECODE(A.NALSU, 1, '', LTRIM(TO_CHAR(A.NALSU, '9999'))||FN_ADM_MSG(3184))
+                     WHEN C.INPUT_CONTROL = '8' THEN '  '||DECODE(A.NALSU, 1, '', LTRIM(TO_CHAR(A.NALSU, '9999'))||FN_ADM_MSG(3184))
+                    ELSE '' END)                            DETAIL            ,
+               (CASE WHEN SUBSTR(A.ORDER_GUBUN, 2, 1) IN ('A', 'B', 'C', 'D')
+                    AND A.ACTING_DATE IS NOT NULL
+                    AND A.NALSU &gt; 0
+                    THEN ''
+                    --THEN DECODE( FN_OCSI_HOISU_SPECIAL_DRUG(A.BUNHO, A.FKINP1001, A.ORDER_DATE, A.ACTING_DATE, A.ACTING_TIME, A.HANGMOG_CODE ), 0, '',
+                    --             FN_ADM_MSG(3455)||TO_CHAR(FN_OCSI_HOISU_SPECIAL_DRUG(A.BUNHO,A.FKINP1001, A.ORDER_DATE, A.ACTING_DATE, A.ACTING_TIME, A.HANGMOG_CODE ))||CHR(13)||CHR(10)||'        ')
+                    ELSE '' END)
+                    ||TRIM(A.ORDER_REMARK)                          ORDER_REMARK      ,
+               TRIM(A.NURSE_REMARK)                          NURSE_REMARK      ,
+               A.TEL_YN                                      TEL_YN            ,
+               A.EMERGENCY                                   EMERGENCY         ,
+               FN_OCS_LOAD_CODE_NAME('JUSA', A.JUSA)         JUSA_NAME         ,
+               (CASE WHEN NVL(A.SPECIMEN_CODE, '*') &lt;&gt; '*'
+                     THEN FN_OCS_LOAD_SPECIMEN_NAME(A.SPECIMEN_CODE)
+                     ELSE FN_OCS_LOAD_BOGYONG_COL_NAME(C.ORDER_GUBUN, A.BOGYONG_CODE) END )
+                                                                     BOGYONG_NAME      ,
+               0                                             JAEWONIL          ,
+               A.PKOCS2003                                   PK                ,
+               A.GROUP_SER                                   GROUP_SER         ,
+               A.MIX_GROUP                                   MIX_GROUP         ,
+               'OCS2003'                                     TABLE_ID          ,
+               ( CASE WHEN A.NURSE_CONFIRM_DATE IS NULL
+                      THEN 'N'
+                      ELSE 'Y' END )                         CONFIRM_YN        ,
+               DECODE(A.OCS_FLAG, '3', 'Y', 'N')             ACTING_YN         ,
+               'N'                                           CAN_PLAN_CHANGE_YN,
+               ( CASE WHEN SUBSTR(A.INPUT_GUBUN, 1, 1) IN ('D', 'N')
+                      AND FN_OCS_BULYONG_CHECK(A.HANGMOG_CODE, A.ORDER_DATE) = 'N'
+                      AND A.OCS_FLAG &lt;&gt; '3' AND A.OCS_FLAG &lt;&gt; '2'
+                      THEN 'Y'
+                      ELSE 'N' END )                         CAN_CONFIRM_YN    ,
+               'N'                                           CAN_ACTING_YN     ,
+               'N'                                           CAN_PLAN_APP_YN   ,
+               /*TO_CHAR(NVL(G.JUBSU_DATE, A.ORDER_DATE), 'YYYY/MM/DD')||' '||*/FN_ADM_LOAD_USER_NM(A.INPUT_ID, A.ORDER_DATE)
+                                                             INPUT_NAME        ,
+               NVL(E.SORT_KEY, 99)                           INPUT_SEQ         ,
+               (CASE WHEN NVL(H.USER_GUBUN, '3') = '2' THEN  FN_ADM_LOAD_USER_NM(H.USER_ID, A.ORDER_DATE)
+                     ELSE '' END )                           CONFIRM_NAME      ,
+
+               (CASE WHEN SUBSTR(A.ORDER_GUBUN, 2, 1) IN ('A', 'B' )
+                    THEN FN_OCS_INJECT_CHECK_INP(A.PKOCS2003)
+                    ELSE 'N' END)                            INJ_ACT_YN        ,
+               (CASE WHEN FN_OCS_BULYONG_CHECK(A.HANGMOG_CODE, A.ORDER_DATE) = 'Y'
+                    AND A.ACTING_DATE IS NULL
+                    THEN 'Y'
+                    ELSE 'N' END)                            BULYONG_CHECK     ,
+               F.HO_SORT||I.HO_CODE1||A.BUNHO||SUBSTR(A.ORDER_GUBUN, 2, 1)||
+               TRIM(TO_CHAR(A.GROUP_SER, '000'))||NVL(A.MIX_GROUP, '  ')||
+               TO_CHAR(NVL(A.RESER_DATE, NVL(A.HOPE_DATE, A.ORDER_DATE)), 'YYYYMMDD')||
+               TO_CHAR(E.SORT_KEY)||TO_CHAR(A.SEQ, '0000')||TO_CHAR(A.PKOCS2003, '0000000000')
+                                                                     CONT_KEY
+          FROM OCS2003 A,
+               OCS2004 B,
+               OCS0103 C,
+               ( SELECT A.SG_CODE
+                      , A.SG_NAME
+                      , A.BUN_CODE
+                      , A.HOSP_CODE
+                   FROM BAS0310 A
+                  WHERE A.SG_YMD = ( SELECT MAX(Z.SG_YMD)
+                                       FROM BAS0310 Z
+                                      WHERE Z.SG_CODE = A.SG_CODE
+                                        AND Z.SG_YMD &lt;= TO_DATE(:f_query_date, 'YYYY/MM/DD') )
+               ) D,
+               OCS0132 E,
+               BAS0250 F,
+               DRG3010 G,
+               ADM3200 H,
+               VW_OCS_INP1001 I
+         WHERE (CASE WHEN SUBSTR(A.ORDER_GUBUN, 2, 1) IN ('F', 'E')
+                     THEN NVL(A.ACTING_DATE, NVL(A.RESER_DATE, NVL(A.HOPE_DATE, A.ORDER_DATE)))
+                     ELSE NVL(A.RESER_DATE, NVL(A.HOPE_DATE, A.ORDER_DATE)) END ) = TO_DATE(:f_query_date, 'YYYY/MM/DD')
+           AND NVL(A.DISPLAY_YN,'Y')  = 'Y'
+           AND NVL(A.PRN_YN,'N')      = 'N'
+           AND (  NVL(A.INSTEAD_YN, 'N') = 'N'
+                  OR (NVL(A.INSTEAD_YN, 'N') = 'Y' 
+                      AND NVL(A.APPROVE_YN, 'N') = 'Y') 
+               )
+           --반납원Order는 보이도록 한다.
+           AND ( NVL(A.DC_YN,'N')     = 'N' OR ( NVL(A.DC_YN,'N') = 'Y' AND A.BANNAB_YN = 'Y' ))
+           AND SUBSTR(A.ORDER_GUBUN, 2, 1) IN ('H', 'O', 'N', 'E', 'G')
+           AND B.BUNHO      (+)       = A.BUNHO
+           AND B.FKINP1001  (+)       = A.FKINP1001
+           AND B.ORDER_DATE (+)       = A.ORDER_DATE
+           AND B.INPUT_GUBUN(+)       = A.INPUT_GUBUN
+           AND B.HOSP_CODE  (+)       = A.HOSP_CODE
+           AND C.HANGMOG_CODE         = A.HANGMOG_CODE
+           AND C.HOSP_CODE            = A.HOSP_CODE
+           AND D.SG_CODE    (+)       = C.SG_CODE
+           AND D.HOSP_CODE  (+)       = C.HOSP_CODE
+           AND E.CODE_TYPE            = 'INPUT_GUBUN'
+           AND E.CODE                 = A.INPUT_GUBUN
+           AND E.HOSP_CODE            = A.HOSP_CODE
+           AND G.FKOCS2003  (+)       = A.PKOCS2003
+           AND G.HOSP_CODE  (+)       = A.HOSP_CODE
+           AND H.USER_ID    (+)       = A.NURSE_CONFIRM_USER
+           AND H.HOSP_CODE  (+)       = A.HOSP_CODE
+           AND A.BUNHO                = I.BUNHO
+           AND A.FKINP1001            = I.PKINP1001
+           AND A.HOSP_CODE            = I.HOSP_CODE
+           AND I.HO_DONG1             = :f_ho_dong
+           AND I.HOSP_CODE            = :f_hosp_code
+           AND F.HOSP_CODE            = I.HOSP_CODE
+           AND F.HO_DONG              = I.HO_DONG1
+           AND F.HO_CODE              = I.HO_CODE1
+           AND ((NVL(:f_a, 'N') = 'Y' and F.TEAM = 'A') OR
+                (NVL(:f_b, 'N') = 'Y' and F.TEAM = 'B') OR
+                (NVL(:f_c, 'N') = 'Y' and F.TEAM = 'C') OR
+                (NVL(:f_d, 'N') = 'Y' and F.TEAM = 'D') OR        
+                (NVL(:f_a, 'N') = 'N' AND 
+                 NVL(:f_b, 'N') = 'N' AND
+                 NVL(:f_c, 'N') = 'N' AND
+                 NVL(:f_d, 'N') = 'N' ))
+           
+           
+           --AND NVL(I.TEAM,' ')  LIKE TRIM(:f_ho_team)||'%'   
+           ) A
+ ORDER BY A.CONT_KEY</value>
+  </data>
+  <metadata name="layData.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>361, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>56</value>
+  </metadata>
+</root>

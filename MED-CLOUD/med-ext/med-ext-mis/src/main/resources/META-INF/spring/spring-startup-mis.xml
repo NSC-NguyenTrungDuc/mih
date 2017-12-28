@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:property-placeholder location="file:${configPath}/configs.properties"/>
+
+    <bean id="restApplication" class="nta.med.ext.cms.restful.RestApplication" init-method="start">
+        <constructor-arg name="baseUri" value="${rest.baseUri}" />
+        <constructor-arg name="env" value="${api.env}" />
+        <constructor-arg name="useSsl" value="${rest.useSsl}" />
+        <constructor-arg name="sslPassword" value="${rest.sslPassword}" />
+    </bean>
+</beans>

@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="xButton5.TabIndex" type="System.Int32, mscorlib">
+    <value>280</value>
+  </data>
+  <data name="&gt;&gt;btnOrderCancel.Parent" xml:space="preserve">
+    <value>panelBtnCPL</value>
+  </data>
+  <data name="btnReInjActScrip.Text" xml:space="preserve">
+    <value>注射実施箋出力</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnListCPL.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="&gt;&gt;btnPrintSetupCPL.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;xDataWindow1.Name" xml:space="preserve">
+    <value>xDataWindow1</value>
+  </data>
+  <data name="&gt;&gt;btnInjActScrip.Name" xml:space="preserve">
+    <value>btnInjActScrip</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnListCPL.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;btnChkAllJubsuCPL.Parent" xml:space="preserve">
+    <value>panelBtnCPL</value>
+  </data>
+  <data name="xButtonList1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnOrderPrint.TabIndex" type="System.Int32, mscorlib">
+    <value>291</value>
+  </data>
+  <data name="&gt;&gt;btnListCPL.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;btnChkAllJubsu.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButton, IHIS.Controls, Version=1.0.5968.26142, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btnOrderPrint.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="xDataWindow1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>302, 112</value>
+  </data>
+  <data name="&gt;&gt;btnOrderCancel.Name" xml:space="preserve">
+    <value>btnOrderCancel</value>
+  </data>
+  <data name="&gt;&gt;btnInjActScrip.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;btnReInjActScrip.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButton, IHIS.Controls, Version=1.0.5968.26142, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;panelBtnCPL.Name" xml:space="preserve">
+    <value>panelBtnCPL</value>
+  </data>
+  <data name="&gt;&gt;btnListCPL.Parent" xml:space="preserve">
+    <value>panelBtnCPL</value>
+  </data>
+  <data name="btnReLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="btnChkAllJubsuCPL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 27</value>
+  </data>
+  <data name="&gt;&gt;btnInjActScrip.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButton, IHIS.Controls, Version=1.0.5968.26142, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="dw1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>302, 112</value>
+  </data>
+  <data name="&gt;&gt;btnOrderCancel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnReser.Name" xml:space="preserve">
+    <value>btnReser</value>
+  </data>
+  <data name="btnOrderCancel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnOrderCancel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="panelBtnCPL.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="btnLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 28</value>
+  </data>
+  <data name="btnBarcode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 27</value>
+  </data>
+  <data name="&gt;&gt;btnLabel.Parent" xml:space="preserve">
+    <value>panelBtnINJ</value>
+  </data>
+  <data name="&gt;&gt;btnPrintSetup.Parent" xml:space="preserve">
+    <value>panelBtnINJ</value>
+  </data>
+  <data name="btnChangeTime.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="panelBtnINJ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1423, 36</value>
+  </data>
+  <data name="&gt;&gt;xButtonList1.Name" xml:space="preserve">
+    <value>xButtonList1</value>
+  </data>
+  <data name="&gt;&gt;xDataWindow1.Type" xml:space="preserve">
+    <value>IHIS.Framework.XDataWindow, IHIS.DbControls, Version=1.0.5968.26143, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="dw1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btnListCPL.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButtonList, IHIS.BizObjects, Version=1.0.5968.26146, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="xButtonList1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 9pt</value>
+  </data>
+  <data name="&gt;&gt;panelBtnCPL.Type" xml:space="preserve">
+    <value>IHIS.Framework.XPanel, IHIS.Controls, Version=1.0.5968.26142, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnChkAllJubsu.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnChkAllJubsuCPL.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButton, IHIS.Controls, Version=1.0.5968.26142, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>UCBtnList</value>
+  </data>
+  <data name="btnPrintSetupCPL.Text" xml:space="preserve">
+    <value>バーコードプリンタ設定</value>
+  </data>
+  <data name="&gt;&gt;btnChkAllJubsuCPL.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnBarcode.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="xButton5.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnReInjActScrip.Parent" xml:space="preserve">
+    <value>panelBtnINJ</value>
+  </data>
+  <data name="&gt;&gt;btnChangeTime.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnPrintSetupCPL.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="btnReLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 28</value>
+  </data>
+  <data name="btnOrderCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>419, 4</value>
+  </data>
+  <data name="&gt;&gt;xButton5.Name" xml:space="preserve">
+    <value>xButton5</value>
+  </data>
+  <data name="&gt;&gt;panelBtnCPL.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnListINJ.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1174, 0</value>
+  </data>
+  <data name="btnBarcode.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="btnInjActScrip.Text" xml:space="preserve">
+    <value>注射実施箋出力</value>
+  </data>
+  <data name="btnListCPL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 36</value>
+  </data>
+  <data name="&gt;&gt;btnListCPL.Name" xml:space="preserve">
+    <value>btnListCPL</value>
+  </data>
+  <data name="xButton5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 28</value>
+  </data>
+  <data name="btnInjActScrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 28</value>
+  </data>
+  <data name="&gt;&gt;xButton5.Parent" xml:space="preserve">
+    <value>panelBtnCPL</value>
+  </data>
+  <data name="&gt;&gt;btnBarcode.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButton, IHIS.Controls, Version=1.0.5968.26142, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btnOrderPrint.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="panelBtnINJ.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 38</value>
+  </data>
+  <data name="&gt;&gt;btnLabel.Name" xml:space="preserve">
+    <value>btnLabel</value>
+  </data>
+  <data name="&gt;&gt;xButton5.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;panelBtnCPL.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnReInjActScrip.Name" xml:space="preserve">
+    <value>btnReInjActScrip</value>
+  </data>
+  <data name="btnLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>292</value>
+  </data>
+  <data name="xButtonList1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1418, 0</value>
+  </data>
+  <data name="&gt;&gt;xButtonList1.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButtonList, IHIS.BizObjects, Version=1.0.5968.26146, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btnLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>457, 4</value>
+  </data>
+  <data name="xButton5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhEAAQAIQAAKurq+Dg4P///8HBwUxNUsPh/6rX/peXubnS8eLy/6mpqb7F3fD5/7Gyy/H5/+Px
+        /+Py/7zB2Li50MHh//b2+ez0/KyxzZubvL3Z+NPZ6Pj5+6+xy6Kpybi+1qGmxv///yH/C05FVFNDQVBF
+        Mi4wAwEBAAAh+QQBAAAfACwAAAAAEAAQAAAIhAA/CBxIsODABgcSJrwggYLBDxoaMHDggEGFDBsefoiw
+        AEKCBwkSWOigccEEDAhSIvBQsoDLlxwKApg504DNmzMFAhAQoCfNnzk/AFDQs6jRogCEKhDAtKnTpjOX
+        +gSAlGoAATR5Hj2KVSiAAWDDih0QICnQszQHAiDAtq3bpATR/hQYEAA7
+</value>
+  </data>
+  <data name="btnReser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 28</value>
+  </data>
+  <data name="btnBarcode.Text" xml:space="preserve">
+    <value>バーコード再出力</value>
+  </data>
+  <data name="btnListINJ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 34</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnInjActScrip.Parent" xml:space="preserve">
+    <value>panelBtnINJ</value>
+  </data>
+  <data name="&gt;&gt;btnOrderPrint.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panelBtnCPL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 0</value>
+  </data>
+  <data name="xDataWindow1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>484, 186</value>
+  </data>
+  <data name="dw1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>174, 186</value>
+  </data>
+  <data name="&gt;&gt;btnReLabel.Name" xml:space="preserve">
+    <value>btnReLabel</value>
+  </data>
+  <data name="&gt;&gt;btnOrderPrint.Name" xml:space="preserve">
+    <value>btnOrderPrint</value>
+  </data>
+  <data name="&gt;&gt;btnListINJ.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnChkAllJubsu.Text" xml:space="preserve">
+    <value>一括チェック</value>
+  </data>
+  <data name="btnInjActScrip.TabIndex" type="System.Int32, mscorlib">
+    <value>291</value>
+  </data>
+  <data name="&gt;&gt;btnListINJ.Name" xml:space="preserve">
+    <value>btnListINJ</value>
+  </data>
+  <data name="&gt;&gt;btnPrintSetupCPL.Parent" xml:space="preserve">
+    <value>panelBtnCPL</value>
+  </data>
+  <data name="btnReLabel.Text" xml:space="preserve">
+    <value>ラベル再出力</value>
+  </data>
+  <data name="dw1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnPrintSetup.Text" xml:space="preserve">
+    <value>ラベルプリンター設定</value>
+  </data>
+  <data name="&gt;&gt;btnPrintSetup.Name" xml:space="preserve">
+    <value>btnPrintSetup</value>
+  </data>
+  <data name="btnListINJ.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 9pt</value>
+  </data>
+  <data name="&gt;&gt;btnOrderPrint.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButton, IHIS.Controls, Version=1.0.5968.26142, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btnPrintSetupCPL.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhEAAQAIUAAP///9PT05XB8paWlgBsvhZ+DYfU/3SGmR+U8Tms/RGl/wB+5CCnDXGAjsvk86LU
+        98bk/rPW83SGmMHe78fp/3KCj3SFldPq/mZzeMrm/3F/jq3a9nGAj47wW6/V6sDd97zh/cfm+63T86jX
+        +HiNoMvm+6HW97jZ7bPb9nWGmb/g/b6+vsPDw7LT87LV68ri+P///wAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEBAAAh+QQBAAAwACwAAAAAEAAQ
+        AAAInwBhCBxIsKDAAAgTKkQ4YGAAABAjSgTQ8CAABRgXLCDAkQBFhxcNGBBAkiSCjxYXiBQgMQGCijAe
+        EjBAgCWAAgBcIgA5s+bNDgUSCN0ZE0BHAQUYKC1A4UIFixFt4iwR4kUDgSsGaB3AMkMBCCpAfNBQMAAL
+        mxBRbIjAgeBWtCMemBBx1aAABw4mnHDhoYUFgzAOHJAgOMUBEhgAKxYYEAA7
+</value>
+  </data>
+  <data name="&gt;&gt;dw1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnOrderPrint.Location" type="System.Drawing.Point, System.Drawing">
+    <value>626, 4</value>
+  </data>
+  <data name="btnPrintSetupCPL.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="btnBarcode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>293, 4</value>
+  </data>
+  <data name="btnOrderPrint.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 27</value>
+  </data>
+  <data name="btnListCPL.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <data name="&gt;&gt;xButton5.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButton, IHIS.Controls, Version=1.0.5968.26142, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnPrintSetup.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnOrderPrint.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhEAAQAIQAAKurq+Dg4P///8HBwUxNUsPh/6rX/peXubnS8eLy/6mpqb7F3fD5/7Gyy/H5/+Px
+        /+Py/7zB2Li50MHh//b2+ez0/KyxzZubvL3Z+NPZ6Pj5+6+xy6Kpybi+1qGmxv///yH/C05FVFNDQVBF
+        Mi4wAwEBAAAh+QQBAAAfACwAAAAAEAAQAAAIhAA/CBxIsODABgcSJrwggYLBDxoaMHDggEGFDBsefoiw
+        AEKCBwkSWOigccEEDAhSIvBQsoDLlxwKApg504DNmzMFAhAQoCfNnzk/AFDQs6jRogCEKhDAtKnTpjOX
+        +gSAlGoAATR5Hj2KVSiAAWDDih0QICnQszQHAiDAtq3bpATR/hQYEAA7
+</value>
+  </data>
+  <data name="&gt;&gt;dw1.Type" xml:space="preserve">
+    <value>IHIS.Framework.XDataWindow, IHIS.DbControls, Version=1.0.5968.26143, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btnInjActScrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 4</value>
+  </data>
+  <data name="btnChkAllJubsuCPL.Text" xml:space="preserve">
+    <value>一括受付</value>
+  </data>
+  <data name="&gt;&gt;btnOrderPrint.Parent" xml:space="preserve">
+    <value>panelBtnCPL</value>
+  </data>
+  <data name="&gt;&gt;btnReser.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;dw1.Name" xml:space="preserve">
+    <value>dw1</value>
+  </data>
+  <data name="btnReser.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 4</value>
+  </data>
+  <data name="btnPrintSetupCPL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 4</value>
+  </data>
+  <data name="&gt;&gt;btnLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;dw1.Parent" xml:space="preserve">
+    <value>panelBtnINJ</value>
+  </data>
+  <data name="&gt;&gt;btnReser.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButton, IHIS.Controls, Version=1.0.5968.26142, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btnReLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnBarcode.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhEAAQAIQAAKurq+Dg4P///8HBwUxNUsPh/6rX/peXubnS8eLy/6mpqb7F3fD5/7Gyy/H5/+Px
+        /+Py/7zB2Li50MHh//b2+ez0/KyxzZubvL3Z+NPZ6Pj5+6+xy6Kpybi+1qGmxv///yH/C05FVFNDQVBF
+        Mi4wAwEBAAAh+QQBAAAfACwAAAAAEAAQAAAIhAA/CBxIsODABgcSJrwggYLBDxoaMHDggEGFDBsefoiw
+        AEKCBwkSWOigccEEDAhSIvBQsoDLlxwKApg504DNmzMFAhAQoCfNnzk/AFDQs6jRogCEKhDAtKnTpjOX
+        +gSAlGoAATR5Hj2KVSiAAWDDih0QICnQszQHAiDAtq3bpATR/hQYEAA7
+</value>
+  </data>
+  <data name="&gt;&gt;btnBarcode.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="xDataWindow1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;xButtonList1.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="btnReInjActScrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 28</value>
+  </data>
+  <data name="&gt;&gt;btnChangeTime.Name" xml:space="preserve">
+    <value>btnChangeTime</value>
+  </data>
+  <data name="&gt;&gt;btnChkAllJubsuCPL.Name" xml:space="preserve">
+    <value>btnChkAllJubsuCPL</value>
+  </data>
+  <data name="btnOrderCancel.Text" xml:space="preserve">
+    <value>オーダ取消</value>
+  </data>
+  <data name="&gt;&gt;xDataWindow1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;btnListINJ.Parent" xml:space="preserve">
+    <value>panelBtnINJ</value>
+  </data>
+  <data name="btnChangeTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 27</value>
+  </data>
+  <data name="btnChkAllJubsu.TabIndex" type="System.Int32, mscorlib">
+    <value>290</value>
+  </data>
+  <data name="btnReLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnPrintSetup.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhEAAQAIUAAP///9PT05XB8paWlgBsvhZ+DYfU/3SGmR+U8Tms/RGl/wB+5CCnDXGAjsvk86LU
+        98bk/rPW83SGmMHe78fp/3KCj3SFldPq/mZzeMrm/3F/jq3a9nGAj47wW6/V6sDd97zh/cfm+63T86jX
+        +HiNoMvm+6HW97jZ7bPb9nWGmb/g/b6+vsPDw7LT87LV68ri+P///wAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEBAAAh+QQBAAAwACwAAAAAEAAQ
+        AAAInwBhCBxIsKDAAAgTKkQ4YGAAABAjSgTQ8CAABRgXLCDAkQBFhxcNGBBAkiSCjxYXiBQgMQGCijAe
+        EjBAgCWAAgBcIgA5s+bNDgUSCN0ZE0BHAQUYKC1A4UIFixFt4iwR4kUDgSsGaB3AMkMBCCpAfNBQMAAL
+        mxBRbIjAgeBWtCMemBBx1aAABw4mnHDhoYUFgzAOHJAgOMUBEhgAKxYYEAA7
+</value>
+  </data>
+  <data name="btnReInjActScrip.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;btnReLabel.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButton, IHIS.Controls, Version=1.0.5968.26142, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btnPrintSetupCPL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 27</value>
+  </data>
+  <data name="&gt;&gt;btnReInjActScrip.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="btnListINJ.TabIndex" type="System.Int32, mscorlib">
+    <value>293</value>
+  </data>
+  <data name="btnReInjActScrip.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="btnReser.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btnChkAllJubsu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 9.75pt, style=Bold</value>
+  </data>
+  <data name="btnPrintSetup.TabIndex" type="System.Int32, mscorlib">
+    <value>274</value>
+  </data>
+  <data name="&gt;&gt;xDataWindow1.Parent" xml:space="preserve">
+    <value>panelBtnINJ</value>
+  </data>
+  <data name="btnLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="btnInjActScrip.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnChangeTime.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="btnReser.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="btnOrderCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>287</value>
+  </data>
+  <data name="btnPrintSetup.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="btnChkAllJubsuCPL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>521, 4</value>
+  </data>
+  <data name="&gt;&gt;panelBtnINJ.Type" xml:space="preserve">
+    <value>IHIS.Framework.XPanel, IHIS.Controls, Version=1.0.5968.26142, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnChangeTime.Parent" xml:space="preserve">
+    <value>panelBtnCPL</value>
+  </data>
+  <data name="btnOrderCancel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhEAAQAIU9APclAPQrAfEmAPEnAPaFafs4B/iBYvy1o+VHIPq5qOQkAPWagO+aheVCHdoaAN5N
+        Lt8dAOyDatcXANMTANEXAO89E/B+Y98YAO1hQuNnSvdyUN4wBuRePvhpRvRQKPaKb+0vBPYlAPAmAOFJ
+        JPfBtNkXAOcgAPcwAOt+YNcjAO5dN/iGa+8kAPluTORAGeBBGfytmvUqAOh9ZPvb0+s0B/goAPBtTdxU
+        MuMjAPyRdeU9EfuCZdUeAP///wAAAAAAACH/C05FVFNDQVBFMi4wAwEBAAAh+QQBAAA9ACwAAAAAEAAQ
+        AAAIagB7CBxIsKDBgwgTGgRQY4fCgR1ihDBAMEeBgxoGCFghsMUJGAg/iGBBwEOAAwoX0ABRIcHDHipM
+        2Hg4AwMOHQosJCSB4EKDHi4gRDjIYIODFwNHlEBhMAWPBwU5SJBRkMKNgxkmvNyaMCAAOw==
+</value>
+  </data>
+  <data name="btnListINJ.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="btnPrintSetup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 28</value>
+  </data>
+  <data name="btnLabel.Text" xml:space="preserve">
+    <value>ラベル出力</value>
+  </data>
+  <data name="&gt;&gt;btnChkAllJubsu.Parent" xml:space="preserve">
+    <value>panelBtnINJ</value>
+  </data>
+  <data name="btnChkAllJubsu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>676, 4</value>
+  </data>
+  <data name="btnPrintSetup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>146, 4</value>
+  </data>
+  <data name="&gt;&gt;btnBarcode.Name" xml:space="preserve">
+    <value>btnBarcode</value>
+  </data>
+  <data name="btnChkAllJubsuCPL.TabIndex" type="System.Int32, mscorlib">
+    <value>289</value>
+  </data>
+  <data name="btnChangeTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 4</value>
+  </data>
+  <data name="btnChangeTime.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhEAAQAIYAAM/NwjJdhxeK37q5r4B4Zv7//cvs/OH0/bLj+3ikz9/y9Pn//4qNnsDM5L/k9Jtk
+        E6ff+6Gtyur4/OyNHIm92mJkcLPk/Ov9+7bg9LXk/OiJGqy7z6ng+5vN5dHz+FZVV67Y+qKpwKTO4/7K
+        XrXR4bu80prM3pyfsu6SIsbm8MPo+e7s1Jmz1aCpyYWs2PPxyPb0wK++q25taXBwdrzc7sns/LK+i9Xw
+        /Nf1//D///Xyx4aMnY7D3WhodNbu9P7OZKHc+9/z/NPv/MyaXYqLorfY63FcO9e7hbKwp6fW6V+Gn8Pp
+        8pDH37vi9PH0+JlhEfL7/Kq1yfn9/ej3/P7Wa+zs9s/O0PP//7/o/NXo8Nfw/Nv09dbz9L3m/Lne8aRm
+        DoCYwLXR0v///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEBAAAh+QQB
+        AABiACwAAAAAEAAQAAAIqADFCBxIsKBBgQISKhRwUEyCAgWkQJFwQEuAg2BcxLAxJcgNAwEAFIywIEcG
+        ECyE1MASkmAIHFdUdGBSpEQXCy0HbkjCA4MDL00aIOCQU2AUExSWcNniIQwEIEXFnKAhIoWCCz6UBNgq
+        UuAKKy1IZHFShcgHAGgHvqAyZEaFHQx6yOg6UMePCV8IIEGbliCMERoeEBjQUOARFE8GFxY4wIjixYwJ
+        QxYTEAA7
+</value>
+  </data>
+  <data name="btnReLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>566, 4</value>
+  </data>
+  <data name="&gt;&gt;btnReser.Parent" xml:space="preserve">
+    <value>panelBtnINJ</value>
+  </data>
+  <data name="&gt;&gt;btnChangeTime.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButton, IHIS.Controls, Version=1.0.5968.26142, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnBarcode.Parent" xml:space="preserve">
+    <value>panelBtnCPL</value>
+  </data>
+  <data name="xDataWindow1.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;btnPrintSetupCPL.Name" xml:space="preserve">
+    <value>btnPrintSetupCPL</value>
+  </data>
+  <data name="btnChangeTime.Text" xml:space="preserve">
+    <value>時間変更</value>
+  </data>
+  <data name="panelBtnINJ.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;btnReLabel.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;btnLabel.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButton, IHIS.Controls, Version=1.0.5968.26142, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnReLabel.Parent" xml:space="preserve">
+    <value>panelBtnINJ</value>
+  </data>
+  <data name="btnInjActScrip.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="xButtonList1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;panelBtnINJ.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnChkAllJubsuCPL.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="&gt;&gt;xButtonList1.Parent" xml:space="preserve">
+    <value>panelBtnINJ</value>
+  </data>
+  <data name="xButton5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>334, 4</value>
+  </data>
+  <data name="&gt;&gt;btnOrderCancel.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButton, IHIS.Controls, Version=1.0.5968.26142, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btnListCPL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1176, 0</value>
+  </data>
+  <data name="xButton5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="btnReser.Text" xml:space="preserve">
+    <value>予約変更</value>
+  </data>
+  <data name="btnListINJ.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <data name="xButton5.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnReInjActScrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>291, 4</value>
+  </data>
+  <data name="btnOrderCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 27</value>
+  </data>
+  <data name="panelBtnCPL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1422, 38</value>
+  </data>
+  <data name="xButtonList1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <data name="xButtonList1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1, 34</value>
+  </data>
+  <data name="&gt;&gt;panelBtnINJ.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnBarcode.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="&gt;&gt;btnPrintSetupCPL.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButton, IHIS.Controls, Version=1.0.5968.26142, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnChkAllJubsu.Name" xml:space="preserve">
+    <value>btnChkAllJubsu</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="btnChkAllJubsu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 28</value>
+  </data>
+  <data name="&gt;&gt;panelBtnINJ.Name" xml:space="preserve">
+    <value>panelBtnINJ</value>
+  </data>
+  <data name="btnOrderPrint.Text" xml:space="preserve">
+    <value>オーダ内訳</value>
+  </data>
+  <data name="btnListCPL.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;btnListINJ.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButtonList, IHIS.BizObjects, Version=1.0.5968.26146, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnPrintSetup.Type" xml:space="preserve">
+    <value>IHIS.Framework.XButton, IHIS.Controls, Version=1.0.5968.26142, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="panelBtnINJ.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 2, 0</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1423, 113</value>
+  </data>
+  <data name="btnChkAllJubsuCPL.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>

@@ -1,0 +1,1737 @@
+import "rpc.proto";
+import "cpls_model.proto";
+import "system_model.proto";
+
+// --- [START] CPL0108U00 ---
+message CPL0108U00GrdDetailRequest{
+	optional string code_type = 2;
+}
+
+message CPL0108U00GrdDetailResponse{
+	repeated CPL0108U00InitGrdDetailListItemInfo grd_detail = 1;
+}
+
+message CPL0108U00GrdMasterRequest{
+	optional string code_type_name = 1;
+}
+
+message CPL0108U00GrdMasterResponse{
+	repeated CPL0108U00InitGrdMasterListItemInfo grd_master = 1;
+}
+
+
+message CPL0108U00CheckItemGrdMasterRequest{
+	optional string code_type = 1;
+}
+
+message CPL0108U00CheckItemGrdMasterResponse{
+	optional string check_item = 1;
+}
+
+message CPL0108U00CheckItemGrdDetailRequest{
+	optional string code = 1;
+    optional string code_type = 2;
+}
+
+message CPL0108U00CheckItemGrdDetailResponse{
+        optional string check_item = 1;
+}
+message CPL0108U00TransactionalRequest{
+	optional string caller_id = 1;
+	optional string data_row_state = 2;
+	optional string user_id = 3;
+	optional string code_type = 4;
+	optional string code_type_name = 5;
+	optional string code = 6;
+	optional string code_name = 7;
+	optional string code_name_re = 8;
+	optional string system_gubun = 9;
+	optional string code_value = 10;
+}	
+
+message UpdateRespone {
+	required bool result = 1;
+}
+// --- [END] CPLSCPL0108U00 ---
+
+
+// --- [START] CPL0104U00 ---
+
+message CPL0104U00GrdDetailRequest{
+	optional string hangmog_code = 1;
+	optional string specimen_code = 2;
+	optional string emergency = 3;
+}
+
+message CPL0104U00GrdDetailResponse{
+	repeated CPL0104U00GrdDetailListItemInfo detail_list = 1;
+}
+
+
+message CPL0104U00GrdMasterRequest{
+	optional string hangmog_code = 1;
+	optional string specimen_code = 2;
+	optional string emergency = 3;
+	optional string gumsa_name = 4;
+}
+
+message CPL0104U00GrdMasterResponse{
+	repeated CPL0104U00GrdMasterListItemInfo master_list = 1;
+}
+
+//Execute CPL0104
+message CPL0104U00ExecuteCPL0104Request{
+	optional string user_id = 1;
+	optional string hangmog_code = 2;
+	optional string specimen_code = 3;
+	optional string emergency = 4;
+	optional string sex = 5;
+	optional string from_age = 6;
+	optional string to_age = 7;
+	optional string from_standard = 8;
+	optional string to_standard = 9;
+	optional string nai_from = 10;
+	optional string nai_to = 11;
+	optional string row_state = 12;
+}
+
+
+
+
+// --- [END] CPL0104U00 ---
+
+
+// --- [START] CPL2010R01 ---
+
+message CPL2010R01InitializeRequest{
+	optional string ho_dong_layReserDate = 1;
+	optional string from_date_layReserDate = 2;
+	optional string to_date_layReserDate = 3;
+	optional string ho_dong_laySpecimen = 4;
+	optional string reser_date_laySpecimen = 5;
+}
+
+message CPL2010R01InitializeResponse{
+	repeated ComboListItemInfo cbxHoDong_list;
+	repeated string reser_date;
+	repeated CPL2010R01LaySpecimenListItemInfo laySpecimen_list;
+}
+
+// --- [END] CPL2010R01 ---
+
+
+
+// --- [START] CPL2010U00 ---
+
+message CPL2010U00ChangeTimeGrdSpecimenRequest{
+	optional string order_date = 1;
+	optional string bunho = 2;
+	optional string gwa = 3;
+	optional string gubun = 4;
+	optional string doctor = 5;
+	optional string in_out_gubun = 6;
+}
+
+message CPL2010U00ChangeTimeGrdSpecimenResponse{
+	repeated CPL2010U00ChangeTimeGrdSpecimenListItemInfo grdSpecimen_list = 1;
+}
+
+//update to CPL2010
+message CPL2010U00ChangeTimeUpdateCPL2010Request{
+	optional string user_id = 1;
+	optional string order_time = 2;
+	optional string pkcpl2010 = 3;
+}
+
+message CPL2010U00InitializeRequest{
+	optional string order_date_fwkPa = 1;
+	optional string jubsu_yn_fwkPa = 2;
+	optional string bunho_fwkPa = 3;
+	optional string suname_fwkPa = 4;
+	optional string gwa_name_fwkPa = 5;
+	optional string order_time_fwkPa = 6;
+	
+	optional string mijubsu_grdOrder = 7;
+	optional string reser_yn_grdOrder = 8;
+	optional string from_date_grdOrder = 9;
+	optional string to_date_grdOrder = 10;
+	optional string doctor = 11;
+	optional string emergency_yn = 12;
+	
+	optional string jubsu_date_grdTube = 13;
+	optional string jubsu_time_grdTube = 14;
+	
+	optional string specimen_ser_layBarcodeTemp2 = 15;
+	optional string reser_date_layChkName = 16;
+	optional string code_vsvJubsuja = 17;
+	optional string ip_addr_layPrintName = 18;
+}
+
+message CPL2010U00InitializeResponse{
+	repeated ComboListItemInfo cbxActor_list = 1;
+	repeated CPL2010U00FwkPaListItemInfo fwkPa_list = 2;
+	repeated CPL2010U00GrdOrderListItemInfo grdOrder_list = 3;
+	repeated CPL2010U00GrdTubeListItemInfo grdTube_list = 4;
+	repeated CPL2010U00LayBarcodeTempListItemInfo layBarcodeTemp_list = 5;
+	repeated CPL2010U00LayBarcodeTempListItemInfo layBarcodeTemp2_list = 6;
+	repeated CPL2010U00LayChkNameListItemInfo layChkName_list = 7;
+	optional string user_nm_vsvjubsuja = 8;
+	optional string suname_vsvPa = 9;
+	optional string b_print_name_layPrintName = 10;
+	repeated ComboListItemInfo cboTime_list = 11;
+	repeated ComboListItemInfo fwkActor_list = 12;
+	
+}
+
+message CPL2010U00MlayConstantInfoRequest{
+	optional string code_type = 1;
+}
+
+message CPL2010U00MlayConstantInfoResponse{
+	repeated CPL2010U00MlayConstantInfoListItemInfo mLayConstantInfo_list = 1;
+}
+
+message CPL2010U00GetYValueRequest{
+	optional string code = 1;
+}
+
+message CPL2010U00GetYValueResponse{
+	optional string y_value = 1;
+}
+
+message CPL2010U00PrCplMakeSpecimenSerRequest{
+	optional string order_date = 1;
+	optional string bunho = 2;
+	optional string jubsuja = 3;
+	optional string jubsu_flag = 4;
+	optional string jubsu_gubun = 5;
+	optional string jubsu_date = 6;
+	optional string jubsu_time = 7;
+	
+}
+
+message CPL2010U00PrCplMakeSpecimenSerResponse{
+	optional string io_flag = 1;
+}
+
+message CPL2010U00PrCplPartJubsuRequest{
+	optional string specimen_ser = 1;
+	optional string jundal_gubun = 2;
+	optional string part_jubsu_date = 3;
+	optional string part_jubsu_time = 4;
+	optional string part_jubsuja = 5;
+	optional string user_id = 6;
+}
+
+message CPL2010U00PrCplPartJubsuResponse{
+	optional string io_flag = 1;
+}
+
+message CPL2010U00PrCplBunhoLoadMinRequest{
+	optional string bunho = 1;
+}
+
+message CPL2010U00PrCplBunhoLoadMinResponse{
+	optional string io_flag = 1;
+	optional string suname = 2;
+	optional string sujumin1 = 3;
+	optional string sujumin2 = 4;
+	optional string sex = 5;
+	optional string age = 6;
+	optional string birth = 7;
+	optional string address = 8;
+	optional string ho_dong = 9;
+	optional string ho_code = 10;
+	optional string gwa = 11;
+	optional string gwa_name = 12;
+	optional string doctor = 13;
+	optional string doctor_name = 14;
+	optional string resident = 15;
+	optional string resident_name = 16;
+	optional string in_out_gubun = 17;
+	optional string tel = 18;
+	optional string jubsu_date = 19;
+	optional string jubsu_time = 20;
+	optional string jubsuja = 21;
+	optional string part_jubsu_date = 22;
+	optional string part_jubsu_time = 23;
+	optional string part_jubsuja = 24;
+	optional string tat1 = 25;
+	optional string tat2 = 26;
+	optional string pa_note = 27;
+	
+}
+
+message CPL2010U00GrdSpecimenRequest{
+	optional string mJubsu_yn = 1;
+	optional string order_date = 2;
+	optional string bunho = 3;
+	optional string gwa = 4;
+	optional string order_time = 5;
+	optional string doctor = 6;
+	optional string reser_date = 7;
+	optional string jubsu_date = 8;
+	optional string jubsu_time = 9;
+	optional string jubsuja = 10;
+	optional string group_ser = 11;
+	optional string reser_yn = 12;
+	optional string emergency_yn = 13;
+	
+}
+
+message CPL2010U00GrdSpecimenResponse{
+	repeated CPL2010U00GrdSpecimenListItemInfo grdSpecimen_list = 1;
+}
+
+message CPL2010U00SetPrintRequest{
+	optional string user_id = 1;
+	optional string b_print_name = 2;
+	optional string ip_addr = 3;
+}
+
+message CPL2010U00CheckInjCplOrderRequest{
+	optional string io_gubun = 1;
+	optional string bunho = 2;
+	optional string order_date = 3;
+}
+
+message CPL2010U00CheckInjCplOrderResponse{
+	optional string fn_inj_cpl_chk_yn = 1;
+}
+
+message CPL2010U00LayBarcodeTempQueryEndRequest{
+	optional string jubsu_date = 1;
+	optional string bunho = 2;
+}
+
+message CPL2010U00GrdTubeQueryStartingRequest{
+	optional bool rbxJubsu_checked = 1;
+	optional bool rbxMijubsu_checked = 2;
+	optional string order_date = 3;
+	optional string order_time = 4;
+	optional string bunho = 5;
+}
+
+message CPL2010U00GrdTubeQueryStartingResponse{
+	repeated CPL2010U00GrdTubeListItemInfo grdTube_list = 1;
+}
+
+message CPL2010U00ExecuteSelectInOutGubunRequest{
+	optional string pkcpl2010 = 1;
+}
+
+message CPL2010U00ExecuteSelectInOutGubunResponse{
+	optional string in_out_gubun = 1;
+}
+
+//update cpl2010 in execute method
+message CPL2010U00ExecuteUpdateCPL2010Request{
+	optional string user_id = 1;
+	optional string dummy = 2;
+	optional string pkcpl2010 = 3;
+}
+
+message CPL2010U00ExecuteGetYValueRequest{
+	optional string pkcpl2010 = 1;
+}
+
+message CPL2010U00ExecuteGetYValueResponse{
+	optional string y_value = 1;
+}
+
+message CPL2010U00GrdPaListRequest{
+	optional bool rbxJubsu_checked = 1;
+	optional string from_date = 2;
+	optional string to_date = 3;
+	optional string bunho = 4;
+}
+
+message CPL2010U00GrdPaListResponse{
+	repeated CPL2010U00GrdPaListItemInfo grdPalist_list = 1;
+}
+
+message CPL2010U00OrderCancelGrdOrderRequest{
+	optional string bunho = 1;
+	optional string order_date = 2;
+}
+
+message CPL2010U00OrderCancelGrdOrderResponse{
+	repeated CPL2010U00OrderCancelGrdOrderListItemInfo grdOrder_list = 1;
+}
+
+message CPL2010U00OrderCancelGetYNRequest{
+	optional string fkocs1003 = 1;
+}
+
+message CPL2010U00OrderCancelGetYNResponse{
+	optional string yn_value = 1;
+}
+
+message CPL2010U00OrderCancelDeleteCPL3020Request{
+	optional string pkcpl2010 = 1;
+	optional string specimen_ser = 2;
+	optional string fkocs1003 = 3;
+}
+
+message CPL2010U00OrderCancelUpdateCPL2010Request{
+	optional string fkocs1003 = 1;
+}
+
+message CPL2010U00PaqryGrdPaRequest{
+        optional string suname = 1;
+        optional string order_date = 2;
+        optional string jubsu_yn = 3;
+        optional string bunho = 4;
+        optional string gwa_name = 5;
+        optional string order_time = 6;
+        optional string mJubsuYn = 7;
+}
+
+message CPL2010U00PaqryGrdPaResponse{
+	repeated CPL2010U00PaqryGrdPaListItemInfo grdPa_list = 1;
+}
+
+// --- [END] CPL2010U00 ---
+
+
+// --- [START] CPL3010U00 ---
+
+message CPL3010U00InitializeRequest{
+	optional string specimen_ser = 1;
+	optional string gubun = 2;
+	optional string fkocs = 3;
+	optional string in_out_gubun = 4;
+	optional string part_jubsu_date = 5;
+	optional string code = 6;
+	optional string code_type = 7;
+	optional string ip_addr = 8;
+}
+
+message CPL3010U00InitializeResponse{
+	repeated ComboListItemInfo cbxActor_list = 1;
+	repeated CPL3010U00DsvUrineListItemInfo dsvUrine_list = 2;
+	repeated CPL3010U00GrdGumListItemInfo grdGum_list = 3;
+	repeated CPL3010U00GrdPartListItemInfo grdPart_list = 4;
+	repeated CPL3010U00LayBarCodeTempListItemInfo layBarCodeTemp_list = 5;
+	repeated CPL3010U00LayBarCodeTemp2ListItemInfo layBarCodeTemp2_list = 6;
+	optional string laySpcialName_yn = 7;
+	repeated CPL3010U00LaySpecimenInfoListItemInfo laySpecimen_list = 8;
+	optional string user_nm = 9;
+	optional string code_name = 10;
+	optional string b_print_name = 11;
+}
+
+message CPL3010U00PrCplPartJubsuCancelRequest{
+	optional string user_id = 1;
+	optional string gubun = 2;
+	optional string specimen_ser = 3;
+	optional string fkcpl2010 = 4;
+}
+
+message CPL3010U00PrCplPartJubsuCancelResponse{
+	optional string io_flag = 1;
+}
+
+message CPL3010U00BtnUrineClickRequest{
+}
+
+message CPL3010U00BtnUrineClickResponse{
+	optional string value = 1;
+}
+
+message CPL3010U00QuerySpecimenBySerRequest{
+	optional string specimen_ser = 1;
+}
+
+message CPL3010U00QuerySpecimenBySerResponse{
+	repeated CPL3010U00GrdPartListItemInfo grdPart_list = 1;
+}
+
+message CPL3010U00GetYValueRequest{
+	optional string specimen_ser = 1;
+	optional bool is_null = 2;
+}
+
+message CPL3010U00GetYValueResponse{
+	optional string y_value = 1;
+}
+
+message CPL3010U00QueryLaySpecimenReadUpdateRequest{
+	optional string gum_jubsu_date = 1;
+	optional string gum_jubsu_time = 2;
+	optional string part_jubsuja = 3;
+	optional string specimen_ser = 4;
+}
+
+message CPL3010U00QueryLaySpecimenReadSelectJundalGubunRequest{
+	optional string specimen_ser = 1;
+}
+
+message CPL3010U00QueryLaySpecimenReadSelectJundalGubunResponse{
+	optional string jundal_gubun = 1;
+}
+
+message CPL3010U00GetZValueRequest{
+	optional string specimen_ser = 1;
+}
+
+message CPL3010U00GetZValueResponse{
+	optional string z_value = 1;
+}
+
+message CPL3010U00ExecuteRequest{
+	optional string callerID = 1;
+	optional string specimen_ser = 2;
+	optional string user_id_store = 3;
+	optional string fkcpl2010 = 4;
+	optional string gubun = 5;
+	optional string part_jubsuja = 6;
+	
+	optional string user_id_case3 = 7;
+	optional string urine_ryang = 8;
+	optional string stability_yn = 9;
+	optional string pkcpl1000 = 10;
+	
+}
+
+message CPL3010U00ExecuteResponse{
+	optional string case1_decode = 1;
+	optional bool case1_update_result = 2;
+	optional bool pr_cpl_part_jubsu_cancel_result = 3;
+	optional string pr_cpl_part_jubsu_cancel_output = 4;
+	optional bool case3_result = 5;
+	
+}
+
+message CPL3010U00GrdGumQueryEndRequest{
+	optional string fkcpl2010 = 1;
+}
+
+message CPL3010U00GrdGumQueryEndResponse{
+	optional string value = 1;
+}
+
+// --- [END] CPL3010U00 ---
+
+
+// --- [START] CPL0000Q00 ---
+
+message CPL0000Q00InitializeRequest{
+	optional string specimen_ser = 1;
+	optional string hangmog_code = 2;
+	optional string specimen_code = 3;
+	optional string emergency = 4;
+	optional string group_hangmog = 5;
+	optional string bunho = 6;
+	
+}
+
+message CPL0000Q00InitializeResponse{
+	repeated CPL0000Q00LayJungboListItemInfo layJungbo_list = 1;
+	repeated CPL0000Q00LaySigeyulTempListItemInfo laySigeyul_list = 2;
+	repeated CPL0000Q00LaySubHangmogListItemInfo laySubHangmog_list = 3;
+	repeated ComboListItemInfo laymakeTabPage_list = 4;
+}
+
+message CPL0000Q00ScreenOpenUpdateRequest{
+	optional string user_id = 1;
+	optional string doctor = 2;
+	optional string bunho = 3;
+	optional string jundal_table = 4;
+}
+
+message CPL0000Q00LayOrderRequest{
+	optional string bunho = 1;
+}
+
+message CPL0000Q00LayOrderResponse{
+	optional CPL0000Q00LayOrderListItemInfo layOrder_list = 1;
+}
+
+message CPL0000Q00LayOrderResultListQueryRequest{
+	optional string bunho = 1;
+}
+
+message CPL0000Q00LayOrderJubsuListQueryRequest{
+	optional string bunho = 1;
+}
+
+message CPL0000Q00LayResultListTempRequest{
+	optional string gubunFlag = 1;
+	optional string bunho = 2;
+	optional string order_date = 3;
+	optional string jundal_gubun = 4;
+	optional string gwa = 5;
+	optional string doctor = 6;
+	optional string result_date = 7;
+	optional string jubsu_date = 8;
+}
+
+message CPL0000Q00LayResultListTempResponse{
+	repeated CPL0000Q00LayResultListTempListItemInfo layResult_list = 1;
+}
+
+message CPL0000Q00ResultListQuerySelect1Request{
+	optional string specimen_ser = 1;
+	optional string srl_code = 2;
+	optional string jundal_gubun = 3;
+}
+
+message CPL0000Q00ResultListQuerySelect1Response{
+	repeated CPL0000Q00ResultListQuerySelect1ListItemInfo result_list = 1;
+}
+
+message CPL0000Q00ResultListQuerySelect2Request{
+	optional string specimen_ser = 1;
+	optional string kyun_code = 2;
+	optional string serial = 3;
+}
+
+message CPL0000Q00ResultListQuerySelect2Response{
+	repeated CPL0000Q00ResultListQuerySelect2ListItemInfo result_list = 1;
+}
+
+message CPL0000Q00DeleteAndSelectRequest{
+	optional string bunho = 1;
+	optional string user_id = 2;
+}
+
+message CPL0000Q00DeleteAndSelectResponse{
+	optional bool delete_result = 1;
+	repeated CPL0000Q00SelectOUT0101ListItemInfo select_result = 2;
+}
+
+message CPL0000Q00InsertCPLTEMPRequest{
+	optional string user_id = 1;
+	optional string i = 2;
+	optional string hangmog_code = 3;
+}
+
+message CPL0000Q00GetSigeyulDataSelect1Request{
+	optional string bunho = 1;
+	optional string user_id = 2;
+}
+
+message CPL0000Q00GetSigeyulDataSelect1Response{
+	repeated CPL0000Q00GetSigeyulDataSelect1ListItemInfo result_list = 1;
+}
+
+message CPL0000Q00GetSigeyulDataSelect2Request{
+	optional string bunho = 1;
+	optional string hangmog_code = 2;
+	optional string jubsu_date = 3;
+	optional string jubsu_time = 4;
+}
+
+message CPL0000Q00GetSigeyulDataSelect2Response{
+	repeated CPL0000Q00GetSigeyulDataSelect2ListItemInfo result_list = 1;
+}
+
+message CPL0000Q00FrmGraphGetSigeyulRequest{
+	optional string bunho = 1;
+	optional string user_id = 2;
+	optional string base_date = 3;
+	optional string condition_value = 4;
+}
+
+message CPL0000Q00FrmGraphGetSigeyulResponse{
+	repeated CPL0000Q00GetSigeyulDataSelect1ListItemInfo result_list = 1;
+}
+
+message CPL0000Q00FrmSigeyulDelCplTempRequest{
+    optional string user_id = 1;
+}
+
+
+message CPL0000Q00LayJungboRequest {
+	optional string specimen_ser = 1;
+	optional string hangmog_code = 2;
+	optional string specimen_code = 3;
+	optional string emergency = 4;
+}
+
+message  CPL0000Q00LayJungboResponse {
+	repeated CPL0000Q00LayJungboListItemInfo jungbo_item = 1;
+}
+
+message CPL0000Q00LaySigeyulTempRequest {
+	optional string group_hangmog = 1;
+	optional string specimen_code = 2;
+	optional string hangmog_code = 3;
+}
+
+message CPL0000Q00LaySigeyulTempResponse {
+	repeated CPL0000Q00LaySigeyulTempListItemInfo sigeyul_temp_item = 1;
+}
+
+message CPL0000Q00LaySubHangmogRequest {
+	optional string bunho = 1;
+	optional string hangmog_code = 2;
+}
+
+message CPL0000Q00LaySubHangmogResponse {
+   repeated CPL0000Q00LaySubHangmogListItemInfo sub_hangmog_item = 1;
+}
+
+// --- [END] CPL0000Q00 ---
+
+
+// --- [START] CPL0106U00 ---
+
+message CPL0106U00InitializeRequest{
+	optional string find1 = 1;
+	optional string group_gubun_grdCode = 2;
+	optional string hangmog_code_grdCode = 3;
+	optional string specimen_code_grdCode = 4;
+	optional string emergency_grdCode = 5;
+	optional string code_type_grdCode = 6;
+	optional string gumsa_name = 7;
+	optional string group_gubun_grdSubGroup = 8;
+	optional string hangmog_code_grdSubGroup = 9;
+	optional string specimen_code_grdSubGroup = 10;
+	optional string emergency_grdSubGroup = 11;
+	optional string code_type_grdSubGroup = 12;
+	optional string hangmog_code_grdGroup = 13;
+}
+
+message CPL0106U00InitializeResponse{
+    repeated CPL0106U00FwkGumsaListItemInfo fwkGumsa_list = 1;
+    repeated CPL0106U00GrdListItemInfo grdCode_list = 2;
+    repeated CPL0106U00GrdGroupListItemInfo grdGroup_list = 3;
+    repeated CPL0106U00GrdListItemInfo grdSubGroup_list = 4;
+        
+}
+
+message CPL0106U00ExecuteRequest{
+	optional string row_state = 1;
+	optional string user_id = 2;
+	optional string group_gubun = 3;
+	optional string hangmog_code = 4;
+	optional string specimen_code = 5;
+	optional string emergency = 6;
+	optional string sub_hangmog_code = 7;
+	optional string sub_specimen_code = 8;
+	optional string sub_emergency = 9;
+	optional string continue_yn = 10;
+	
+}
+
+message CPL0106U00GridColumnChangeRequest{
+	optional string code = 1;
+}
+
+message CPL0106U00GridColumnChangeResponse{
+	repeated CPL0106U00FwkGumsaListItemInfo result_list = 1;
+}
+
+// --- [END] CPL0106U00 ---
+
+
+// --- [START] CPL3010U01 ---
+
+message CPL3010U01InitializeRequest{
+	optional string request_key = 1;
+	optional string specimen_ser = 2;
+}
+
+message CPL3010U01InitializeResponse{
+	repeated CPL3010U01GrdHangmogListItemInfo grdHangmog_list = 1;
+	repeated CPL3010U01GrdResultListItemInfo grdResult_list = 2;
+	repeated CPL3010U01LaySpecimenInfoListItemInfo laySpecimen_list = 3;
+}
+
+message CPL3010U01PrCplInsertCpl9000Request{
+	optional string center_code = 1;
+	optional string gubun = 2;
+	optional string part_jubsu_time = 3;
+	optional string part_jubsu_date = 4;
+	optional string bunho = 5;
+	optional string irai_key = 6;
+	optional string create_time = 7;
+	optional string create_date = 8;
+	optional string create_user = 9;
+}
+
+message CPL3010U01PrCplInsertCpl9000Response{
+	optional string output_result = 1;
+}
+
+message CPL3010U01SearchMaxInfoRequest{
+	optional string from_part_jubsu_date = 1;
+	optional string to_part_jubsu_date = 2;
+	optional string from_seq = 3;
+	optional string to_seq = 4;
+	optional string from_specimen_ser = 5;
+	optional string to_specimen_ser = 6;
+	optional bool infoGb = 7;
+}
+
+message CPL3010U01SearchMaxInfoResponse{
+	repeated CPL3010U01MaxInfoListItemInfo maxInfo_list = 1;
+}
+
+message CPL3010U01UpdateMaxInfoRequest{
+	optional string user_id = 1;
+	optional string max_specimen_ser = 2;
+	optional string part_jubsu_date = 3;
+	optional string part_jubsu_time = 4;
+}
+
+message CPL3010U01IsWriteFileSelectCodeValueRequest{
+
+}
+
+message CPL3010U01IsWriteFileSelectCodeValueResponse{
+	optional string code_value = 1;
+}
+
+message CPL3010U01IsWriteFileUpdateNoParamRequest{
+
+}
+
+message CPL3010U01GetYValueRequest{
+	optional string request_key = 1;
+}
+
+message CPL3010U01GetYValueResponse{
+	optional string y_value = 1;
+}
+
+message CPL3010U01IsWriteFileSelectOrUpdateRequest{
+	optional string retVal = 1;
+	optional string user_id = 2;
+	optional string bunho = 3;
+	optional string jubsu_date = 4;
+	optional string jubsu_time = 5;
+	optional string hangmog_cnt = 6;
+	optional string urine = 7;
+	optional string send_yn = 8;
+	optional string request_key = 9;
+}
+
+message CPL3010U01LayPrint2Request{
+	optional bool cbxJubsuDate_checked = 1;
+	optional string from_part_jubsu_date = 2;
+	optional string from_seq = 3;
+	optional string to_part_jubsu_date = 4;
+	optional string to_seq = 5;
+	optional string from_specimen_ser = 6;
+	optional string to_specimen_ser = 7;
+}
+
+message CPL3010U01LayPrint2Response{
+	repeated CPL3010U01LayPrint2ListItemInfo layPrint2_list = 1;
+}
+
+message CPL3010U01GrdPaRequest{
+	optional bool cbxJubsuDate_checked = 1;
+	optional string from_part_jubsu_date = 2;
+	optional string from_seq = 3;
+	optional string to_part_jubsu_date = 4;
+	optional string to_seq = 5;
+	optional string from_specimen_ser = 6;
+	optional string to_specimen_ser = 7;
+}
+
+message CPL3010U01GrdPaResponse{
+	repeated CPL3010U01GrdPaListItemInfo grdPa_list = 1;
+}
+
+message CPL3010U01BtnPrePrintClickRequest{
+	optional string iraiStr = 1;
+}
+
+message CPL3010U01BtnPrePrintClickResponse{
+	repeated CPL3010U01LayPrint2ListItemInfo result_list = 1;
+}
+
+message CPL3010U01ExecuteUpdateCPL3020Request{
+	optional string cpl_result = 1;
+	optional string standard_yn = 2;
+	optional string comments1 = 3;
+	optional string comments2 = 4;
+	optional string user_id = 5;
+	optional string request_key = 6;
+	optional string bml_code = 7;
+}
+
+message CPL3010U01ExecuteUpdateCPL3010Request{
+	optional string user_id = 1;
+	optional string request_key = 2;
+}
+
+// --- [END] CPL3010U01 ---
+
+
+// --- [START] CPL3020U00 ---
+
+message CPL3020U00InitializeRequest{
+	optional string specimen_ser_dsvNote = 1;
+	optional string jundal_gubun_dsvNote = 2;
+	optional string code_type_fwkJundalGubun = 3;
+	optional string find1_fwkJundalGubun = 4;
+	optional string jundal_gubun_fwkNote = 5;
+	optional string find1_fwkNote = 6;
+	optional string gubun_grdPa = 7;
+	optional string jundal_gubun_grdPa = 8;
+	optional string from_date_grdPa = 9;
+	optional string to_date_grdPa = 10;
+	optional string lab_no_grdResult = 11;
+	optional string specimen_ser_grdResult = 12;
+	optional string jundal_gubun_grdResult = 13;
+	optional string code_type_grdResult = 14;
+	optional string user_group_fwkActor = 15;
+	optional string code_vsvJubsuja = 16;
+	optional string code_type_vsvJundalGubun = 17;
+	optional string code_vsvJundalGubun = 18;
+	optional string jundal_gubun_vsvNote = 19;
+	optional string code_vsvNote = 20;
+	
+}
+
+message CPL3020U00InitializeResponse{
+	repeated CPL3020U00DsvNoteListItemInfo dsvNote_list = 1;
+	repeated ComboListItemInfo fwkJundalGubun_list = 2;
+	repeated ComboListItemInfo fwkNote_list = 3;
+	repeated CPL3020U00GrdPaListItemInfo grdPa_list = 4;
+	repeated CPL3020U00GrdResultListItemInfo grdResult_list = 5;
+	repeated ComboListItemInfo fwkActor_list = 6;
+	optional string user_nm_vsvJubsuja = 7;
+	optional string code_name_vsvJundalGubun = 8;
+	optional string note_vsvNote = 9;
+}
+
+message CPL3020U00PrCplSpecimenInfoResultRequest{
+	optional string speciment_ser = 1;
+}
+
+message CPL3020U00PrCplSpecimenInfoResultResponse{
+	optional CPL3020U00PrCplSpecimenInfoResultListItemInfo result_list = 1;
+}
+
+message CPL3020U00PrOcsoChkResultMsgRequest{
+	optional string ocskey = 1;
+	optional string user_id = 2;
+}
+
+message CPL3020U00PrOcsoChkResultMsgResponse{
+	optional CPL3020U00PrOcsoChkResultMsgListItemInfo result_list = 1;
+}
+
+message CPL3020U00GetSpecimenInfoRequest{
+	optional string gwa = 1;
+	optional string order_date = 2;
+	optional string ho_dong = 3;
+}
+
+message CPL3020U00GetSpecimenInfoResponse{
+	repeated CPL3020U00GetSpecimenInfoListItemInfo result_list = 1;
+}
+
+message CPL3020U00ExecuteUpdateConfirmYNRequest{
+	optional string confirm_yn = 1;
+	optional string user_id = 2;
+	optional string gumsaja = 3;
+	optional string pkcpl3020 = 4;
+}
+
+message CPL3020U00SelectInOutGubunRequest{
+	optional string fkcpl2010 = 1;
+}
+
+message CPL3020U00SelectInOutGubunResponse{
+	repeated CPL3020U00SelectInOutGubunListItemInfo result_list = 1;
+}
+
+message CPL3020U00ExecuteUpdateCplResultRequest{
+	optional string lab_no = 1;
+	optional string user_id = 2;
+	optional string specimen_ser = 3;
+	optional string pkcpl3020 = 4;
+}
+
+message CPL3020U00PrOcsUpdateResultRequest{
+	optional string in_out_gubun = 1;
+	optional string fkocs = 2;
+	optional string result_buseo = 3;
+	optional string result_date = 4;
+}
+
+message CPL3020U00SelectFromStandardRequest{
+	optional string pkcpl3020 = 1;
+}
+
+message CPL3020U00SelectFromStandardResponse{
+	repeated CPL3020U00SelectFromStandardListItemInfo result_list = 1;
+}
+
+message CPL3020U00Execute2ProceduresCheckRequest{
+	optional string result_cpl_num = 1;
+	optional string from_standard_cpl_num = 2;
+	optional string to_standard_cpl_num = 3;
+	optional string bunho_cpl_panic = 4;
+	optional string order_date_cpl_panic = 5;
+	optional string gumsa_code_cpl_panic = 6;
+	optional string specimen_code_cpl_panic = 7;
+	optional string emergency_cpl_panic = 8;
+	optional string result_cpl_panic = 9;
+}
+
+message CPL3020U00Execute2ProceduresCheckResponse{
+	optional string standard_cpl_num = 1;
+	optional string panic_yn_cpl_panic = 2;
+}
+
+message CPL3020U00ExecuteUpdateCpl3020ElseRequest{
+	optional string user_id = 1;
+	optional string standard_yn = 2;
+	optional string panic_yn = 3;
+	optional string cpl_result = 4;
+	optional string pkcpl3020 = 5;
+}
+
+message CPL3020U00ExecuteUpdateCpl3010ElseRequest{
+	optional string user_id = 1;
+	optional string lab_no = 2;
+	optional string specimen_ser = 3;
+}
+
+message CPL3020U00ExecuteUpdateCpl3020FinalRequest{
+	optional string user_id = 1;
+	optional string comments = 2;
+	optional string display_yn = 3;
+	optional string pkcpl3020 = 4;
+}
+
+message CPL3020U00PrCplCalInsertBaseResultRequest{
+	optional string specimen_ser = 1;
+	optional string hangmog_code = 2;
+	optional string result = 3;
+}
+
+message CPL3020U00ExecuteGetYValueRequest{
+	optional string specimen_ser = 1;
+	optional string jundal_gubun = 2;
+}
+
+message CPL3020U00ExecuteGetYValueResponse{
+	optional string y_value = 1;
+}
+
+message CPL3020U00ExecuteUpdateCpl2090Request{
+	optional string user_id = 1;
+	optional string note = 2;
+	optional string code = 3;
+	optional string etc_comment = 4;
+	optional string jundal_gubun = 5;
+	optional string specimen_ser = 6;
+	
+}
+
+message CPL3020U00ExecuteInsertCpl2090Request{
+	optional string user_id = 1;
+	optional string note = 2;
+	optional string code = 3;
+	optional string etc_comment = 4;
+	optional string jundal_gubun = 5;
+	optional string specimen_ser = 6;
+	
+}
+
+message CPL3020U00FwkResultGetYRequest{
+	optional string result_form = 1;
+}
+
+message CPL3020U00FwkResultGetYResponse{
+	optional string y_value = 1;
+}
+
+message CPL3020U00FwkResultInputSQLRequest{
+    optional string dummy = 1;
+    optional string find1 = 2;
+    optional string result_form = 3;
+    optional string code_type = 4;
+}
+
+message CPL3020U00FwkResultInputSQLResponse{
+	repeated ComboListItemInfo fwkResult_list = 1;
+}
+
+message CPL3020U00LayCommonRequest{
+	optional string user_id = 1;
+}
+
+message CPL3020U00LayCommonResponse{
+	optional string user_name = 1;
+}
+
+message CPL3020U00ResultInsertLaySayuRequest{
+	optional string lab_no = 1;
+	optional string hangmog_code = 2;
+	optional string emergency = 3;
+	optional string specimen_code = 4;
+}
+
+message CPL3020U00ResultInsertLaySayuResponse{
+	repeated CPL3020U00ResultInsertLaySayuListItemInfo laySayu_list = 1;
+}
+
+message CPL3020U00ResultUpdateUpdateCPL3020Request{
+	optional string user_id = 1;
+	optional string pkcpl3020 = 2;
+}
+
+// --- [END] CPL3020U00 ---
+
+
+
+// --- [START] CPL3020U02 ---
+
+message CPL3020U02InitializeRequest{
+	optional string specimen_ser_dsvNote = 1;
+	optional string jundal_gubun_dsvNote = 2;
+	
+	optional string jundal_gubun_fwkNote = 3;
+	optional string find1_fwkNote = 4;
+	
+	optional string from_date_grdPa = 5;
+	optional string to_date_grdPa = 6;
+	optional string jangbi_code_grdPa = 7;
+	
+	optional string specimen_ser_grdResult = 8;
+	optional string lab_no_grdResult = 9;
+	optional string jundal_gubun_grdResult = 10;
+	
+	optional string jundal_gubun_vsvNote = 11;
+	optional string code_vsvNote = 12;
+	
+	optional string code_vsvJubsuja = 13;
+}
+
+message CPL3020U02InitializeResponse{
+	repeated ComboListItemInfo cbxActor_list = 1;
+	repeated ComboListItemInfo cbxJangbiCode_list = 2;
+	repeated CPL3020U02DsvNoteListItemInfo dsvNote_list = 3;
+	repeated ComboListItemInfo fwkNote_list = 4;
+	repeated CPL3020U02GrdPaListItemInfo grdPa_list = 5;
+	repeated CPL3020U02GrdResultListItemInfo grdResult_list = 6;
+	optional string note_vsvNote = 7;
+	optional string user_nm_vsvJubsuja = 8;
+}
+
+message CPL3020U02SetAutoConfirmCheckedRequest{
+	optional string code_type = 1;
+	optional string code = 2;
+}
+
+message CPL3020U02SetAutoConfirmCheckedResponse{
+	optional string code_value = 1;
+}
+
+message CPL3020U02PrCplSpecimenInfoResultRequest{
+	optional string specimen_ser = 1;
+}
+
+message CPL3020U02PrCplSpecimenInfoResultResponse{
+	optional string switch = 1;
+	optional string bunho = 2;
+	optional string suname = 3;
+	optional string sex = 4;
+	optional string birth = 5;
+	optional string sujumin1 = 6;
+	optional string sujumin2 = 7;
+	optional string gwa = 8;
+	optional string doctor_name = 9;
+	optional string ho_dong = 10;
+	optional string ho_code = 11;
+	optional string order_date = 12;
+	optional string jubsu_date = 13;
+	optional string part_jubsu_date = 14;
+	optional string jubsu_time = 15;
+	optional string part_jubsu_time = 16;
+	optional string jubsuja = 17;
+	optional string in_out_gubun = 18;
+	optional string jundal_gubun = 19;
+	optional string specimen_code = 20;
+	optional string specimen_name = 21;
+	optional string tat1 = 22;
+	optional string tat2 = 23;
+	optional string age = 24;
+}
+
+message CPL3020U02GetSpecimenInfoSelectRequest{
+	optional string gwa = 1;
+	optional string ho_dong = 2;
+	optional string order_date = 3;
+}
+
+message CPL3020U02GetSpecimenInfoSelectResponse{
+	repeated CPL3020U02GetSpecimenInfoSelectListItemInfo result_list = 1;
+}
+
+message CPL3020U02PrOcsoChkResultMsgRequest{
+	optional string ocskey = 1;
+	optional string user_id = 2;
+}
+
+message CPL3020U02PrOcsoChkResultMsgResponse{
+	optional string ip_value = 1;
+	optional string text = 2;
+	optional string err_flag = 3;
+}
+
+message CPL3020U02ExecuteConfirmYNUpdateRequest{
+	optional string confirm_yn = 1;
+	optional string user_id = 2;
+	optional string gumsaja = 3;
+	optional string pkcpl3020 = 4;
+}
+
+message CPL3020U02ExecuteSelectInOutGubunRequest{
+	optional string fkcpl2010 = 1;
+}
+
+message CPL3020U02ExecuteSelectInOutGubunResponse{
+	repeated CPL3020U02ExecuteSelectInOutGubunListItemInfo result_list = 1;
+}
+
+message CPL3020U02ExecuteCplResulUpdateRequest{
+	optional string cpl_result = 1;
+	optional string user_id = 2;
+	optional string pkcpl3020 = 3;
+	optional string lab_no = 4;
+	optional string specimen_ser = 5;
+	optional string standard_yn = 6;
+	optional string panic_yn = 7;
+	
+	
+	//input for store procedure
+	optional string in_out_gubun = 8;
+	optional string fkocs = 9;
+	optional string result_buseo = 10;
+	optional string result_date = 11;
+}
+
+message CPL3020U02ExecuteCplResulUpdateResponse{
+	optional bool update3020_result = 1;
+	optional bool update3010_result = 2;
+	optional bool pr_ocs_update_result = 3;
+}
+
+message CPL3020U02ExecuteCase1FinalUpdateCPL3020Request{
+	optional string user_id = 1;
+	optional string comments = 2;
+	optional string display_yn = 3;
+	optional string pkcpl3020 = 4;
+}
+
+message CPL3020U02ExecuteCase2Request{
+	optional string jundal_gubun = 1;
+	optional string specimen_ser = 2;
+	optional string user_id = 3;
+	optional string note = 4;
+	optional string code = 5;
+	optional string etc_comment = 6;
+}
+
+message CPL3020U02ExecuteCase2Response{
+	optional bool updateCPL2090_result = 1;
+	optional bool insertCPL2090_result = 2;
+}
+
+message CPL3020U02FwkResultQueryStartingRequest{
+	optional string result_form = 1;
+	optional string find1 = 2;
+}
+
+message CPL3020U02FwkResultQueryStartingResponse{
+	repeated ComboListItemInfo fwkResult_list = 1;
+}
+
+message CPL3020U02RESULTINSERTInitializeRequest{
+	optional string find1_fwkDummy = 1;
+	
+	optional string lab_no_laySayu = 2;
+	optional string hangmog_code_laySayu = 3;
+	optional string specimen_code_laySayu = 4;
+	optional string emergency_laySayu = 5;
+}
+
+message CPL3020U02RESULTINSERTInitializeResponse{
+	optional ComboListItemInfo fwkDummy_list = 1;
+	repeated CPL3020U02RESULTINSERTLaySayuListItemInfo laySayu_list = 2;
+}
+
+message CPL3020U02RESULTMAPInitializeRequest{
+	optional string jangbi_code_grdIDList = 1;
+	optional string specimen_ser_grdIDList = 2;
+	optional string from_date_grdIDList = 3;
+	optional string to_date_grdIDList = 4;
+	optional string all_yn_grdIDList = 5;
+	
+	optional string jangbi_code_grdResultList = 6;
+	optional string result_date_grdResultList = 7;
+	optional string sample_id_grdResultList = 8;
+	
+}
+
+message CPL3020U02RESULTMAPInitializeResponse{
+	repeated CPL3020U02RESULTMAPGrdIDListItemInfo grdID_list = 1;
+	repeated CPL3020U02RESULTMAPGrdResultListItemInfo grdResult_list = 2;
+}
+
+message CPL3020U02RESULTMAPPrCplResultMatchProcRequest{
+	optional string proc_gubun = 1;
+	optional string hosp_code = 2;
+	optional string specimen_ser = 3;
+	optional string hangmog_code = 4;
+	optional string result_val = 5;
+	optional string jangbi_code = 6;
+	optional string result_date = 7;
+	optional string sample_id = 8;
+	optional string result_code = 9;
+}
+
+message CPL3020U02RESULTUPDATEInitializeRequest{
+	optional string find1_fwkDummy = 1;
+	
+	optional string lab_no_grdUpdateSayu = 2;
+	optional string hangmog_code_grdUpdateSayu = 3;
+	optional string specimen_code_grdUpdateSayu = 4;
+	optional string emergency_grdUpdateSayu = 5;
+	
+	optional string code_vsvJubsuja = 6;
+}
+
+message CPL3020U02RESULTUPDATEInitializeResponse{
+	repeated ComboListItemInfo fwkDummy_list = 1;
+	repeated CPL3020U02RESULTUPDATEGrdUpdateSayuListItemInfo grdUpdateSayu_list = 2;
+	optional string mt_name_vsvJubsuja = 3;
+}
+
+message CPL3020U02RESULTUPDATEExecuteRequest{
+	optional string row_state = 1;
+	
+	optional string user_id = 2;
+	optional string lab_no = 3;
+	optional string specimen_code = 4;
+	optional string emergency = 5;
+	optional string gumsaja = 6;
+	optional string ref_comment = 7;
+	optional string hangmog_code = 8;
+	optional string before_gumsaja = 9;
+	optional string before_result = 10;
+	optional string pkcpl3020 = 11;
+}
+
+message CPL3020U02RESULTUPDATEExecuteResponse{
+	optional bool cpl3088_result = 1;
+	optional bool cpl3020_result = 2;
+}
+
+message CPL3020U02TestFileLoadCPLSANRITUIFS7203SelectRequest{
+	
+}
+
+message CPL3020U02TestFileLoadCPLSANRITUIFS7203SelectResponse{
+	optional string next_val = 1;
+}
+
+message CPL3020U02TestFileLoadCPLSANRITUIFS7203InsertRequest{
+	optional string primaryKey = 1;
+	optional string record_gubun = 2;
+	optional string senta_code = 3;
+	optional string irai_key = 4;
+	optional string karute_no = 5;
+	optional string kanjamei = 6;
+	optional string koumokusuu = 7;
+	optional string houkokubi = 8;
+	optional string yobi1 = 9;
+	optional string yobi2 = 10;
+}
+
+message CPL3020U02TestFileLoadCPLSANRITUIFS7204SelectRequest{
+	
+}
+
+message CPL3020U02TestFileLoadCPLSANRITUIFS7204SelectResponse{
+	optional string next_val = 1;
+}
+
+message CPL3020U02TestFileLoadCPLSANRITUIFS7204InsertRequest{
+	optional string primaryKey = 1;
+	optional string record_gubun = 2;
+	optional string senta_code = 3;
+	optional string irai_key = 4;
+	optional string hangmog_code = 5;
+	optional string result_code = 6;
+	optional string specimen_ser = 7;
+	optional string result_val = 8;
+	optional string danui = 9;
+	optional string from_standard = 10;
+	optional string to_standard = 11;
+	optional string emergency = 12;
+	optional string yobi1 = 13;
+	optional string fk = 14;
+}
+
+message CPL3020U02CbxJangbiRequest {
+}
+
+message CPL3020U02CbxJangbiResponse {
+        repeated ComboListItemInfo cbx_jangbi_item = 1;
+}
+
+message CPL3020U02GrdPaRequest{
+        optional string from_date = 1;
+        optional string to_date = 2;
+        optional string jangbi_code = 3;
+}
+
+message CPL3020U02GrdPaResponse{
+        repeated CPL3020U02GrdPaItemInfo grd_pa_item_info = 1;
+}
+
+message CPL3020U02GrdResultRequest{
+        optional string lab_no = 1;
+        optional string specimen_ser = 2;
+        optional string jundal_gubun = 3;
+}
+
+message CPL3020U02GrdResultResponse{
+        repeated CPL3020U02GrdResultItemInfo grd_result_item_info = 1;
+}
+
+// --- [END] CPL3020U02 ---
+
+// --- [Start] ---
+
+message CPL0101U00InitRequest
+{
+        optional string txtHangmog = 1;
+        optional string io_gubun = 2;
+}
+
+message CPL0101U00InitResponse
+{
+        optional CPL0101U00InitListItemInfo init_info = 1;
+}
+
+message CPL0101U00MakeValSerViceRequest
+{
+       optional string aCtl_name = 1;
+        optional string code_type = 2;
+        optional string code = 3;
+}
+
+message CPL0101U00MakeValSerViceResponse
+{
+       optional string name = 1;
+}
+
+message CPL0101U00MakeFindWorkerRequest
+{
+      optional string aCtr_name = 1;
+      optional string code_type = 2;
+      optional string find1 = 3;
+      optional string find2 = 4;
+      optional string system_gubun = 5;
+}
+
+// --- [End] ---
+
+// --- [Start] CPL3010U00 ---
+message CPL3010U00GrdPartRequest 
+{
+	optional string part_jubsu_date = 1;
+}
+
+message CPL3010U00GrdPartResponse
+{
+	repeated CPL3010U00GrdPartListItemInfo grd_part_info = 1;
+}
+message CPL3010U00GrdGumRequest 
+{
+	optional string specimen_ser = 1;
+}
+
+message CPL3010U00GrdGumResponse
+{
+	repeated CPL3010U00GrdGumListItemInfo grd_gum_item = 1;
+}
+
+message CPL3010U00DsvUrineRequest {
+	optional string specimen_ser = 1;
+	optional string fkocs = 2;
+	optional string in_out_gubun = 3; 
+	optional string gubun = 4;
+}
+
+message CPL3010U00DsvUrineResponse {
+	repeated CPL3010U00DsvUrineListItemInfo dsv_urine_item = 1;
+}
+message CPL3010U00LayBarCodeTempRequest
+{
+        optional string specimen_ser = 1;
+}
+message CPL3010U00LayBarCodeTempResponse
+{
+        repeated CPL3010U00LayBarCodeTempListItemInfo lay_bar_code_temp_item = 1;
+}
+message CPL3010U00LayBarCodeTemp2Request
+{
+        optional string specimen_ser = 1;
+}
+
+message CPL3010U00LayBarCodeTemp2Response
+{
+        repeated CPL3010U00LayBarCodeTemp2ListItemInfo lay_bar_code_temp2 = 1;
+}
+message CPL3010U00LaySpecimenReadRequest
+{
+        optional string specimen_ser = 1;
+}
+
+message CPL3010U00LaySpecimenReadResponse
+{
+        optional string y_value = 1;
+}
+
+message CPL3010U00LaySpecimenRequest {
+	optional string specimen_ser = 1;
+}
+
+message CPL3010U00LaySpecimenResponse {
+	repeated CPL3010U00LaySpecimenInfoListItemInfo lay_specimen_info = 1;
+}
+
+message CPL3010U00VSVJubsujaRequest
+{
+        optional string user_id = 1;
+}
+
+message CPL3010U00VSVJubsujaResponse
+{
+        optional string user_name = 1;
+}
+
+message CPL3010U00VSVJundalGubunRequest
+{
+        optional string code = 1;
+        optional string code_type = 2;
+}
+
+message CPL3010U00VSVJundalGubunResponse
+{
+        optional string code_name = 1;
+}
+
+message CPL3010U00BtnUrineClickRequest{
+
+}
+
+message CPL3010U00BtnUrineClickResponse{
+        optional string value = 1;
+}
+
+message CPL3010U00QuerySpecimenBySerRequest{
+        optional string specimen_ser = 1;
+}
+
+message CPL3010U00QuerySpecimenBySerResponse{
+        repeated CPL3010U00GrdPartListItemInfo grdPart_list = 1;
+}
+
+message CPL3010U00QueryLaySpecimenReadRequest {
+	optional string specimen_read_value = 1;
+	optional string part_jubsuja = 2;
+	optional string gum_jubsu_date = 3;
+}
+
+message CPL3010U00QueryLaySpecimenReadResponse {
+	optional string insert_ok = 1;
+	optional string already_jubsu = 2;
+	optional string flag = 3;
+}
+
+message  CPL3010U00SaveLayUrineRequest
+{
+    repeated CPL3010U00LayUrineInfo urine_info = 1;
+	optional string user_id = 2;
+}
+
+message CPL3010U00SaveLayoutRequest
+{
+	repeated CPL3010U00GrdPartListItemInfo grd_part_info = 1;
+	repeated CPL3010U00GrdGumListItemInfo grd_gum_info = 2;
+	optional string user_id = 4;
+}
+
+message CPL3010U00GetPrintNameRequest{
+	optional string ip_addr = 1;
+}
+message CPL3010U00GetPrintNameResponse{
+	repeated DataStringListItemInfo addr = 1;
+}
+
+// --- [End] CPL3010U00 ---
+
+// --- [Start] CPL3020U00 ---
+message CPL3020U00GrdPaRowFocusChangedRequest
+{
+	optional string speciment_ser = 1;
+	optional string specimen_ser = 2;
+	optional string jundal_gubun = 3;
+}
+				
+message CPL3020U00GrdPaRowFocusChangedResponse
+{
+	repeated CPL3020U00CplSpecimenInfo cpl_specimen_item = 1;
+	optional string gwa_name = 2;
+	optional string ho_dong_name = 3;
+	repeated CPL3020U00DsvNoteListItemInfo dsv_note_item = 4;
+}
+
+message CPL3020U00FwkJundalGubunRequest {
+	optional string code_type = 1;
+	optional string find1 = 2;
+}
+
+message CPL3020U00FwkNoteGubunRequest {
+	optional string jundal_gubun = 1;
+	optional string find1 = 2;
+}
+
+message CPL3020U00GrdPaRequest{
+	optional string gubun = 1;
+	optional string jundal_gubun = 2;
+	optional string from_date = 3;
+	optional string to_date = 4;
+}
+message CPL3020U00GrdPaResponse {
+	repeated CPL3020U00GrdPaListItemInfo grd_pa_item = 1;
+}
+
+message CPL3020U00GrdResultRequest {
+	optional string specimen_ser = 1;
+	optional string lab_no = 2;
+	optional string jundal_gubun = 3;
+	optional string code_type = 4;
+}
+
+message CPL3020U00GrdResultResponse {
+	repeated CPL3020U00GrdResultListItemInfo grd_result_item = 1;
+}
+
+message CPL3020U00PrOcsoChkResultMsgRequest{
+	optional string ocskey = 1;
+	optional string user_id = 2;
+}
+
+message CPL3020U00PrOcsoChkResultMsgResponse{
+	optional CPL3020U00PrOcsoChkResultMsgListItemInfo result_list = 1;
+}
+
+message CPL3020U00FwkResultGetYRequest{
+	optional string result_form = 1;
+}
+
+message CPL3020U00FwkResultGetYResponse{
+	optional string y_value = 1;
+}
+
+message ComboListItemInfo {
+	required string code = 1;
+	required string code_name = 2;
+}
+
+message CPL3020U00FwkResultInputSQLRequest{
+	optional string dummy = 1;
+	optional string find1 = 2;
+	optional string result_form = 3;
+	optional string code_type = 4;
+}
+
+message CPL3020U00FwkResultInputSQLResponse{
+	repeated ComboListItemInfo fwkResult_list = 1;
+}
+
+message CPL3020U00LayCommonRequest{
+	optional string user_id = 1;
+}
+
+message CPL3020U00LayCommonResponse{
+	optional string user_name = 1;
+}
+
+message CPL3020U00VsvNoteRequest {
+	optional string jundal_gubun = 1;
+	optional string code = 2;
+}
+
+message CPL3020U00VsvNoteResponse {
+	optional string note = 1;
+}
+message CPLFINDLIBGrdFindRequest {
+    optional string isExist= 1;
+	optional string result_form = 2;
+	optional string find = 3;
+	optional string code_type = 4;
+}
+// --- [End] CPL3020U00 ---
+
+// --- [Start] CPL3020U02 ---
+message CPL3020U02SaveRequest{
+	repeated CPL3020U00GrdResultListItemInfo grd_result_item_info = 1;
+	repeated CPL3020U00GrdNoteUpdateInfo grd_note_update_item_info = 2;
+	repeated CPL3020U00GrdPaListItemInfo grd_pa_item_info = 3;
+	optional string user_id = 4;
+	optional string  gumsaja = 5;
+}
+
+message MultiResultViewLayPaInfoRequest 
+{
+	optional string bunho = 1;
+}
+
+message MultiResultViewLayPaInfoResponse {
+	repeated MultiResultViewLayPaInfo lay_pa_info = 1;
+}
+
+message MultiResultViewGrdSigeyul1Request {
+	optional string bunho = 1;
+	optional string group_hangmog = 2;
+}
+
+message MultiResultViewGrdSigeyul2Request{
+	optional string bunho = 1;
+	optional string group_hangmog = 2;
+}
+
+message MultiResultViewGrdSigeyulResponse{
+	repeated MultiResultViewGrdSigeyulInfo grd_sigeyul_info = 1;
+}
+
+
+message MultiResultViewGetJubsuSigeyulRequest {
+	repeated MultiResultViewGrdSigeyulInfo grd_sigeyul_item = 1;
+	optional string user_id = 2;
+}
+
+message MultiResultViewGetPreJubsuSigeyulRequest {
+	repeated MultiResultViewGrdSigeyulInfo grd_sigeyul_item = 1;
+	optional string user_id = 2;
+}
+
+message MultiResultViewLaySigeyulResponse{
+	repeated MultiResultViewLaySigeyulInfo lay_sigeyul_info = 1;
+}
+
+message MultiResultViewGrdSigeyulInfo{
+	optional string bunho = 1;
+	optional string hangmog_code = 2;
+	optional string gumsa_name = 3;
+	optional string gubun = 4;
+	optional string base_date = 5;
+}
+// --- [End] CPL3020U02 ---
